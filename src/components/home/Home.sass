@@ -1,0 +1,120 @@
+@import "../../assests/sass/var"
+@import "../../assests/sass/flex"
+
+.main-home
+    margin-top: 35px
+
+.home-box
+    @extend %flex--center
+    position: relative
+    height: 700px
+    padding-right: 25px
+    position: relative
+    text-decoration: none
+    @media (max-width: 1220px) 
+        padding: 0px
+    .logo
+        position: absolute
+        left: 0%
+        opacity: 0.06
+        transform: rotate(-20deg)
+    .home-box-2
+        transform: translateY(3%)
+        border: 0.9px solid rgba(255 255 255/40% )
+        width: 70%
+        height: 500px
+        padding: 20px 30px
+        @media (max-width: 1220px) 
+            width: 100%    
+        
+        .box-code
+            border-left: 9px solid green
+            height: 340px
+            z-index: 999
+         
+        .h1
+            direction: ltr
+            font-size: 45px
+            text-shadow: 5px 2px 2px black    
+        p   
+            font-size: 27px
+            color: white
+            padding-top: 20px
+            text-shadow: 2.5px 2px 2px black
+            @media (max-width: 900px) 
+                font-size: 20px
+
+
+
+.home-box-html
+    background-image: linear-gradient(to left, rgb(20, 20, 20), $html-color , rgb(20, 20, 20))
+.h1_html
+    color: $html-color
+.img-html
+    width: 700px
+
+
+//css
+.home-box-css
+    background-image: linear-gradient(to left, rgb(20, 20, 20), $css-color , rgb(20, 20, 20))
+.h1_css
+    color: $css-color
+.img-css
+    width: 450px
+
+//js
+.home-box-js
+    background-image: linear-gradient(to left, rgb(20, 20, 20), $js-color , rgb(20, 20, 20))
+.h1_js
+    color:$js-color
+.img-js
+    width: 550px
+
+//React.js
+.home-box-react
+    background-image: linear-gradient(to left, rgb(20, 20, 20), $react-color , rgb(20, 20, 20))
+.h1_react
+    color: $react-color
+.img-react
+    width: 550px
+
+//Vue.js
+.home-box-vue
+    background-image: linear-gradient(to left, rgb(20, 20, 20), $vue-color , rgb(20, 20, 20))
+.h1_vue
+    color: $vue-color
+.img-vue
+    width: 550px
+    
+
+//PHP
+.home-box-php
+    background-image: linear-gradient(to left, rgb(20, 20, 20), $php-color , rgb(20, 20, 20))
+.h1_php
+    color: $php-color
+.img-php
+    width: 550px
+
+//Laravel
+.home-box-laravel
+    background-image: linear-gradient(to left, rgb(20, 20, 20), $laravel-color , rgb(20, 20, 20))
+.h1_laravel
+    color: $laravel-color
+.img-laravel
+    width: 550px
+
+//Python
+.home-box-python
+    background-image: linear-gradient(to left, rgb(20, 20, 20), $python-color , rgb(20, 20, 20))
+.h1_python
+    color: $python-color
+.img-python
+    width: 550px
+
+//Django
+.home-box-django
+    background-image: linear-gradient(to left, rgb(20, 20, 20), $django-color , rgb(20, 20, 20))
+.h1_django
+    color: $django-color
+.img-django
+    width: 550px

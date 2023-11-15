@@ -1,0 +1,33 @@
+@import "../../assests/sass/var"
+
+.aside 
+    width: 265px
+    position: fixed
+    height: calc(100vh - 86px)
+    left: 0px
+    background-color: #202123
+    direction: ltr
+    padding: 13px
+    overflow-y: auto
+    font-size: 14px 
+    &::-webkit-scrollbar 
+        box-sizing: border-box
+        width: 8px
+    &::-webkit-scrollbar-track 
+        background: black
+       
+    &::-webkit-scrollbar-thumb 
+        background: white
+        border: 1px solid yellow
+        -webkit-border-radius: 10px  
+        border-radius: 8px
+    li
+        border: none
+        background-color: #202123 
+        &:hover
+            background-color: rgba(32 33 35 / 50%)
+    a
+        color: white
+        text-decoration: none
+    h5
+        color: $html-color
