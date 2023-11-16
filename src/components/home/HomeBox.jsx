@@ -11,7 +11,11 @@ export default function HomeBox(props){
             <p className='style_p col-7'> 
               {props.paragraph}
             </p>
-            <CodeHighlighter code={props.code} language={props.language} /> 
+            <CodeHighlighter 
+              code={props.code} 
+              language={props.language} 
+              addClass="col-5"
+            /> 
         </article>
     </Link>
     )

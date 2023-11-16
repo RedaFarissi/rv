@@ -1,0 +1,208 @@
+import html_sub from "../../assests/images/html/html sub.png"
+import html0_Introduction from "../../assests/images/html/html0_Introduction.png"
+import html10_abbr from "../../assests/images/html/html10_abbr.png"       
+import html11_blockquote from "../../assests/images/html/html11_blockquote.png" 
+import html12_a1_2 from "../../assests/images/html/html12_a1 2.png"       
+import html12_a1_3 from "../../assests/images/html/html12_a1 3.png"       
+import html12_a1 from "../../assests/images/html/html12_a1.png"
+import html12_a2_2 from "../../assests/images/html/html12_a2 2.png"       
+import html12_a2_3 from "../../assests/images/html/html12_a2 3.png"       
+import html12_a2 from "../../assests/images/html/html12_a2.png"
+import html12_a3_2 from "../../assests/images/html/html12_a3 2.png"       
+import html12_a3_3 from "../../assests/images/html/html12_a3 3.png"       
+import html12_a3 from "../../assests/images/html/html12_a3.png"
+import html12_a4_2 from "../../assests/images/html/html12_a4 2.png"       
+import html12_a4 from "../../assests/images/html/html12_a4.png"
+import html12_a5 from "../../assests/images/html/html12_a5.png"
+import html12_a6_code1_2 from "../../assests/images/html/html12_a6_code1 2.png" 
+import html12_a6_code1 from "../../assests/images/html/html12_a6_code1.png"   
+import html12_a6_code2_2 from "../../assests/images/html/html12_a6_code2 2.png" 
+import html12_a6_code2 from "../../assests/images/html/html12_a6_code2.png"   
+import html12_a7_code1_2 from "../../assests/images/html/html12_a7_code1 2.png" 
+import html12_a7_code1 from "../../assests/images/html/html12_a7_code1.png"  
+import html12_a7_code2_2 from "../../assests/images/html/html12_a7_code2 2.png"
+import html12_a7_code2 from "../../assests/images/html/html12_a7_code2.png"  
+import html13_sub from "../../assests/images/html/html13_sub.png"       
+import html14_br_2 from "../../assests/images/html/html14_br 2.png"      
+import html14_br from "../../assests/images/html/html14_br.png"        
+import html15_hr_2 from "../../assests/images/html/html15_hr 2.png"      
+import html15_hr from "../../assests/images/html/html15_hr.png"        
+import html16_p from "../../assests/images/html/html16_p.png"
+import html17_mark_2 from "../../assests/images/html/html17_mark 2.png"
+import html17_mark from "../../assests/images/html/html17_mark.png"
+import html18_q_2 from "../../assests/images/html/html18_q 2.png"
+import html18_q from "../../assests/images/html/html18_q.png"
+import html19_pre_2 from "../../assests/images/html/html19_pre 2.png"
+import html19_pre from "../../assests/images/html/html19_pre.png"
+import html1_h1_2 from "../../assests/images/html/html1_h1 2.png"
+import html1_h1 from "../../assests/images/html/html1_h1.png"
+import html2 from "../../assests/images/html/html2.png"
+import html20_img_2 from "../../assests/images/html/html20_img 2.png"
+import html20_img from "../../assests/images/html/html20_img.png"
+import html20_img2_2 from "../../assests/images/html/html20_img2 2.png"
+import html20_img2 from "../../assests/images/html/html20_img2.png"
+import html21_div_2 from "../../assests/images/html/html21_div 2.png"
+import html21_div from "../../assests/images/html/html21_div.png"
+import html22_span from "../../assests/images/html/html22_span.png"
+import html23_audio_2 from "../../assests/images/html/html23_audio 2.png"
+import html23_audio from "../../assests/images/html/html23_audio.png"
+import html23_audio2 from "../../assests/images/html/html23_audio2.png"
+import html23_audio3 from "../../assests/images/html/html23_audio3.png"
+import html23_audio4 from "../../assests/images/html/html23_audio4.png"
+import html23_audio5 from "../../assests/images/html/html23_audio5.png"
+import html23_audio6 from "../../assests/images/html/html23_audio6.png"
+import html24_video_2 from "../../assests/images/html/html24_video 2.png"
+import html24_video from "../../assests/images/html/html24_video.png"
+import html24_video2 from "../../assests/images/html/html24_video2.png"
+import html24_video3 from "../../assests/images/html/html24_video3.png"
+import html24_video4 from "../../assests/images/html/html24_video4.png"
+import html24_video5 from "../../assests/images/html/html24_video5.png"
+import html24_video6 from "../../assests/images/html/html24_video6.png"
+import html24_video7 from "../../assests/images/html/html24_video7.png"
+import html25_details_3 from "../../assests/images/html/html25_details 3.png"
+import html25_details from "../../assests/images/html/html25_details.png"
+import html26_bdi from "../../assests/images/html/html26_bdi.png"
+import html27_bdo from "../../assests/images/html/html27_bdo.png"
+import html28_ol from "../../assests/images/html/html28_ol.png"
+import html28_ol2 from "../../assests/images/html/html28_ol2.png"
+import html28_ol3 from "../../assests/images/html/html28_ol3.png"
+import html28_ol4 from "../../assests/images/html/html28_ol4.png"
+import html29_ul from "../../assests/images/html/html29_ul.png"
+import html29_ul2 from "../../assests/images/html/html29_ul2.png"
+import html29_ul3 from "../../assests/images/html/html29_ul3.png"
+import html2_br_2 from "../../assests/images/html/html2_br 2.png"
+import html2_br from "../../assests/images/html/html2_br.png"
+import html30_dl_2 from "../../assests/images/html/html30_dl 2.png"
+import html30_dl from "../../assests/images/html/html30_dl.png"
+import html31_table from "../../assests/images/html/html31_table.png"
+import html31_table2 from "../../assests/images/html/html31_table2.png"
+import html31_table3 from "../../assests/images/html/html31_table3.png"
+import html31_table4 from "../../assests/images/html/html31_table4.png"
+import html31_table5 from "../../assests/images/html/html31_table5.png"
+import html31_table6 from "../../assests/images/html/html31_table6.png"
+import html31_table7 from "../../assests/images/html/html31_table7.png"
+import html32_form_2 from "../../assests/images/html/html32_form 2.png"
+import html32_form_3 from "../../assests/images/html/html32_form 3.png"
+import html32_form_4 from "../../assests/images/html/html32_form 4.png"
+import html32_form from "../../assests/images/html/html32_form.png"
+import html33_input from "../../assests/images/html/html33_input.png"
+import html33_input10 from "../../assests/images/html/html33_input10.png"
+import html33_input11 from "../../assests/images/html/html33_input11.png"
+import html33_input12 from "../../assests/images/html/html33_input12.png"
+import html33_input13 from "../../assests/images/html/html33_input13.png"
+import html33_input14 from "../../assests/images/html/html33_input14.png"
+import html33_input15 from "../../assests/images/html/html33_input15.png"
+import html33_input16_2 from "../../assests/images/html/html33_input16 2.png"
+import html33_input16 from "../../assests/images/html/html33_input16.png"
+import html33_input2 from "../../assests/images/html/html33_input2.png"
+import html33_input3 from "../../assests/images/html/html33_input3.png"
+import html33_input4 from "../../assests/images/html/html33_input4.png"
+import html33_input5 from "../../assests/images/html/html33_input5.png"
+import html33_input6 from "../../assests/images/html/html33_input6.png"
+import html33_input7 from "../../assests/images/html/html33_input7.png"
+import html33_input8 from "../../assests/images/html/html33_input8.png"
+import html33_input9 from "../../assests/images/html/html33_input9.png"
+import html34_button_2 from "../../assests/images/html/html34_button 2.png"
+import html34_button from "../../assests/images/html/html34_button.png"
+import html34_button2_2 from "../../assests/images/html/html34_button2 2.png"
+import html34_button2 from "../../assests/images/html/html34_button2.png"
+import html34_button3_2 from "../../assests/images/html/html34_button3 2.png"
+import html34_button3 from "../../assests/images/html/html34_button3.png"
+import html35_select_3 from "../../assests/images/html/html35_select 3.png"
+import html35_select from "../../assests/images/html/html35_select.png"
+import html35_select2 from "../../assests/images/html/html35_select2.png"
+import html36_fieldset_2 from "../../assests/images/html/html36_fieldset 2.png"
+import html36_fieldset from "../../assests/images/html/html36_fieldset.png"
+import html36_fieldset2_2 from "../../assests/images/html/html36_fieldset2 2.png"
+import html36_fieldset2 from "../../assests/images/html/html36_fieldset2.png"
+import html37_iframe_2 from "../../assests/images/html/html37_iframe 2.png"
+import html37_iframe from "../../assests/images/html/html37_iframe.png"
+import html38_meter_2 from "../../assests/images/html/html38_meter 2.png"
+import html38_meter from "../../assests/images/html/html38_meter.png"
+import html38_meter2_2 from "../../assests/images/html/html38_meter2 2.png"
+import html38_meter2 from "../../assests/images/html/html38_meter2.png"
+import html39_textarea from "../../assests/images/html/html39_textarea.png"
+import html39_textarea2 from "../../assests/images/html/html39_textarea2.png"
+import html3_hr_2 from "../../assests/images/html/html3_hr 2.png"
+import html3_hr from "../../assests/images/html/html3_hr.png"
+import html40_style_2 from "../../assests/images/html/html40_style 2.png"
+import html40_style from "../../assests/images/html/html40_style.png"
+import html40_style2_2 from "../../assests/images/html/html40_style2 2.png"
+import html40_style2 from "../../assests/images/html/html40_style2.png"
+import html41_link_2 from "../../assests/images/html/html41_link 2.png"
+import html41_link from "../../assests/images/html/html41_link.png"
+import html41_link2_2 from "../../assests/images/html/html41_link2 2.png"
+import html41_link2 from "../../assests/images/html/html41_link2.png"
+import html42_meta from "../../assests/images/html/html42_meta.png"
+import html42_meta2 from "../../assests/images/html/html42_meta2.png"
+import html42_meta3 from "../../assests/images/html/html42_meta3.png"
+import html42_meta4 from "../../assests/images/html/html42_meta4.png"
+import html42_meta5 from "../../assests/images/html/html42_meta5.png"
+import html43_dialog_2 from "../../assests/images/html/html43_dialog 2.png"
+import html43_dialog from "../../assests/images/html/html43_dialog.png"
+import html4_small_big_2 from "../../assests/images/html/html4_small_big 2.png"
+import html4_small_big from "../../assests/images/html/html4_small_big.png"
+import html5_u from "../../assests/images/html/html5_u.png"
+import html6_i_2 from "../../assests/images/html/html6_i 2.png"
+import html6_i from "../../assests/images/html/html6_i.png"
+import html7_b_2 from "../../assests/images/html/html7_b 2.png"
+import html7_b from "../../assests/images/html/html7_b.png"
+import html8_del from "../../assests/images/html/html8_del.png"
+import html9_sup from "../../assests/images/html/html9_sup.png"
+import html_Attributes_2 from "../../assests/images/html/html_ Attributes 2.png"
+import html_Attributes from "../../assests/images/html/html_ Attributes.png"
+import html_Attributes2 from "../../assests/images/html/html_ Attributes2.png"
+import html_Attributes3 from "../../assests/images/html/html_ Attributes3.png"
+import html_Attributes4_2 from "../../assests/images/html/html_ Attributes4 2.png"
+import html_Attributes4 from "../../assests/images/html/html_ Attributes4.png"
+import html_Editor_10 from "../../assests/images/html/html_Editor 10.png"
+import html_Editor_11 from "../../assests/images/html/html_Editor 11.png"
+import html_Editor_12 from "../../assests/images/html/html_Editor 12.png"
+import html_Editor_2 from "../../assests/images/html/html_Editor 2.png"
+import html_Editor_3 from "../../assests/images/html/html_Editor 3.png"
+import html_Editor_4 from "../../assests/images/html/html_Editor 4.png"
+import html_Editor_5 from "../../assests/images/html/html_Editor 5.png"
+import html_Editor_6 from "../../assests/images/html/html_Editor 6.png"
+import html_Editor_7 from "../../assests/images/html/html_Editor 7.png"
+import html_Editor_8 from "../../assests/images/html/html_Editor 8.png"
+import html_Editor_9 from "../../assests/images/html/html_Editor 9.png"
+
+const images = {
+
+    html_sub, html0_Introduction, html10_abbr, html11_blockquote, html12_a1_2, 
+    html12_a1_3, html12_a1, html12_a2_2, html12_a2_3, html12_a2, html12_a3_2, 
+    html12_a3_3, html12_a3, html12_a4_2, html12_a4, html12_a5, html12_a6_code1_2, 
+    html12_a6_code1, html12_a6_code2_2, html12_a6_code2, html12_a7_code1_2, 
+    html12_a7_code1, html12_a7_code2_2, html12_a7_code2, html13_sub, html14_br_2, 
+    html14_br, html15_hr_2, html15_hr, html16_p, html17_mark_2, html17_mark, 
+    html18_q_2, html18_q, html19_pre_2, html19_pre, html1_h1_2, html1_h1, html2, 
+    html20_img_2, html20_img, html20_img2_2, html20_img2, html21_div_2, html21_div, 
+    html22_span, html23_audio_2, html23_audio, html23_audio2, html23_audio3, 
+    html23_audio4, html23_audio5, html23_audio6, html24_video_2, html24_video, 
+    html24_video2, html24_video3, html24_video4, html24_video5, html24_video6, 
+    html24_video7, html25_details_3, html25_details, html26_bdi, html27_bdo, 
+    html28_ol, html28_ol2, html28_ol3, html28_ol4, html29_ul, html29_ul2, 
+    html29_ul3, html2_br_2, html2_br, html30_dl_2, html30_dl, html31_table, 
+    html31_table2, html31_table3, html31_table4, html31_table5, html31_table6, 
+    html31_table7, html32_form_2, html32_form_3, html32_form_4, html32_form, 
+    html33_input, html33_input10, html33_input11, html33_input12, html33_input13, 
+    html33_input14, html33_input15, html33_input16_2, html33_input16, html33_input2, 
+    html33_input3, html33_input4, html33_input5, html33_input6, html33_input7, 
+    html33_input8, html33_input9, html34_button_2, html34_button, html34_button2_2,
+    html34_button2, html34_button3_2, html34_button3, html35_select_3, html35_select,
+    html35_select2, html36_fieldset_2, html36_fieldset, html36_fieldset2_2, 
+    html36_fieldset2, html37_iframe_2, html37_iframe, html38_meter_2, html38_meter, 
+    html38_meter2_2, html38_meter2, html39_textarea, html39_textarea2, html3_hr_2, 
+    html3_hr, html40_style_2, html40_style, html40_style2_2, html40_style2, 
+    html41_link_2, html41_link, html41_link2_2, html41_link2, html42_meta, 
+    html42_meta2, html42_meta3, html42_meta4, html42_meta5, html43_dialog_2, 
+    html43_dialog, html4_small_big_2, html4_small_big, html5_u, html6_i_2, 
+    html6_i, html7_b_2, html7_b, html8_del, html9_sup, html_Attributes_2, 
+    html_Attributes, html_Attributes2, html_Attributes3, html_Attributes4_2,
+    html_Attributes4, html_Editor_10, html_Editor_11, html_Editor_12, 
+    html_Editor_2, html_Editor_3, html_Editor_4, html_Editor_5, html_Editor_6,
+    html_Editor_7, html_Editor_8, html_Editor_9
+    
+}
+
+export default images ;

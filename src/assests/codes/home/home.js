@@ -4,123 +4,103 @@ constructor(){
     this.dir = this.language === "arabic" ? "rtl" : "ltr";       
 }
 HomeHtml(){
-return `    <!DOCTYPE html>
-    <html>
-       <head>
-          <title> Page Title </title>
-          <meta name="viewport" 
-                content="width=device-width, 
-                initial-scale=1" />
-       </head >
-       <body>
-         <h1> HTML Content </h1>
-       </body>
-    </html>`
+return `<!DOCTYPE html>
+<html>
+ <head>
+  <title> Page Title </title>
+ </head >
+ <body>
+  <h1> HTML Content </h1>
+ </body>
+</html>`
 }
 
 HomeCss(){
-return `
-    body{
-        background-color: red;
-        color: white;
-        border: 2px solid rgb(255 255 255);
-    }
+return `body{
+    background-color: red;
+    color: white;
+    border: 2px solid rgb(255 255 255);
+}
 
-    h1{
-        font-size: 23px;
-        position: relative;
-    }`
+h1{
+    font-size: 23px;
+    position: relative;
+}`
 }
 HomeJs(){
-    return `
-function getRandomColor() {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-      color += letters[
-        Math.floor(Math.random() * 16)
-    ];
-    }
-    alert(color)
-    return color;
+ return `function getRandomColor() {
+ const letters = '0123456789ABCDEF';
+ let color = '#';
+ for (let i = 0; i < 6; i++) {
+   color += letters[
+     Math.floor(Math.random() * 16)
+ ];
+ }
+ return color;
 }`
 }
 HomeReact(){
-    return `
-import "./ComonentName.css"
+    return `import "./ComonentName.css"
 const ComonentName = (props) => {
-  return (
-    <p dir={props.language}>
-      {props.text}
-    </p>
-  );
+ return (
+   <p dir={props.language}>
+     {props.text}
+   </p>
+ );
 };
 export default ComonentName`
 }
 HomeVue(){
-    return `
-    <template>
-        <p :dir="language"> {{ text }} </p>
-    </template>
-  
-    <script>
-        export default {
-            props: {
-                text: String , language: String
-            }
-        };
-    </script>`
+    return `<template>
+    <p :dir="language"> {{ text }} </p>
+</template>
+<script>
+    export default {
+        props: {
+            text: String , language: String
+        }
+    };
+</script>`
 }
 HomePhp(){
-    return `
-    $message = "Hello, World!";
-    $number = 42;
-
-    echo "The answer is: " . $number;
-
-    if ($number > 0) {
-        echo "<br>Positive number!";
-    } else {
-        echo "<br>Non-positive number!";
-    }`
+    return `$message = "Hello, World!";
+$number = 42;
+echo "The answer is: " . $number;
+if ($number > 0) {
+    echo "<br>Positive number!";
+} else {
+    echo "<br>Non-positive number!";
+}`
 }
 
 HomeLaravel(){
-    return `
-    namespace App\Http\Controllers;
-    use Illuminate\Http\Request;
-    class MyController extends Controller
-    {
-        public function index(){
-            $message = "Hello, Laravel!";
-            return view('myview', [
-                'message' => $message
-            ]);
-        }
-    }`
+    return `namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+class MyController extends Controller{
+    public function index(){
+    $message = "Hello, Laravel!";
+    return view('myview', [
+        'message' => $message
+    ]);
+  }
+}`
 }
 
 
 HomePython(){
-    return `
-    def subtract(x, y):
-        return x - y
-
-    def multiply(x, y):
-        return x * y
-
-    def divide(x, y):
-        if y != 0:
-            return x / y
-        else:
-            return "Cannot divide by zero"`
+    return `def subtract(x, y):
+    return x - y
+def multiply(x, y):
+    return x * y
+def divide(x, y):
+    if y != 0:
+        return x / y
+    else:
+        return "Cannot divide by zero"`
 }
 
-
 HomeDjango(){
-    return `
-    
-from django.shortcuts import render
+    return `from django.shortcuts import render
 from .models import Book
 
 def book_list(request):

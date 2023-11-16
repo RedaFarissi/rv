@@ -1,3 +1,5 @@
+@import "./assests/sass/var"
+
 * 
     margin: 0
     padding: 0
@@ -9,8 +11,32 @@
 body    
     background-color: rgb(20 20 20) 
     overflow-x: hidden
+    color: $light
+    font-size: 19px
     &::-webkit-scrollbar 
-        width: 12px
+        width: 10px   
+    &::-webkit-scrollbar-thumb 
+        //background-image: liner-gardient(to left , red, gree, yellow)
+        border: 0.6px solid gray
+        -webkit-border-radius: 10px  
+        border-radius: 8px
+    ul
+        margin: 0 35px
+
+
+.aside 
+    width: 265px
+    position: fixed
+    height: calc(100vh - 86px)
+    left: 0px
+    background-color: #202123
+    direction: ltr
+    padding: 13px
+    overflow-y: auto
+    font-size: 14px 
+    &::-webkit-scrollbar 
+        box-sizing: border-box
+        width: 8px
     &::-webkit-scrollbar-track 
         background: black
        
@@ -19,3 +45,69 @@ body
         border: 1px solid yellow
         -webkit-border-radius: 10px  
         border-radius: 8px
+    li
+        border: none
+        background-color: #202123 
+        &:hover
+            background-color: rgba(32 33 35 / 50%)
+    a
+        color: white
+        text-decoration: none
+    h5
+        color: $html-color
+
+
+
+
+
+
+
+
+// 
+
+.section-conetent
+    width: calc( 100% - 365px )
+    margin: 0 50px
+    padding: 40px 0 
+    .heading-style-html
+        direction: ltr
+        -webkit-text-stroke: 0.9px #e83e30
+        font-style: italic
+        text-decoration: underline
+        font-size: 60px
+        text-shadow: 0.9px 0.9px 9px #e83e30
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    .img
+        width: 100%
+        margin: 20px  0
+    .style_divv
+        background-color: #181818
+        border: 0.8px solid brown
+        padding: 20px
+        border-radius: 3px
+        margin-bottom: 24px 
+        font-style: italic
+        word-spacing: 3px 
+    .title-h2
+        font-size: 37px
+        color: aqua
+    .style-result
+        direction: ltr
+        background-color: white
+        color: black
+        padding: 20px
+        margin: 20px 0 
+    
+    .addClass
+        width: 75%
+
+    .button-copie
+        background-color: #212529
+        color: white
+        position: absolute
+        right: 18px
+        top: 14px
+        border: none
+        outline: none
+        font-size: 15px
+            
