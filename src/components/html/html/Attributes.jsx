@@ -1,5 +1,5 @@
 import images from "../images";
-import { CodeHighlighter } from "../path";
+import { CodeHighlighter } from "../pathHtml";
 
 export default function Attributes() {
 const code1 = `<img src="name_image.type">`; 
@@ -17,8 +17,8 @@ const code12 = `<div dir="rtl"> content </div>`;
 const code13 = `<span dir="auto"> content </span>`; 
 return(
 <section className="section-conetent">
-    <h1 className="heading-style-html"> HTML attributes </h1>
-    <article>
+    <h1 className="heading-style-html"> HTML Attributes </h1>
+    <article className="mt-5">
         <h2 className="title-h2">1. ما هو attribute </h2>
         <div className="style_divv">
         تحدد السمات <b>(Attributes)</b> خصائص إضافية مثل عرض الصورة وارتفاعها. توضع السمات دائمًا في وسم البدء (أو وسم الفتح) <code> &lt; &gt; </code> وعادة ما تكون على شكل أزواج اسم و قيمة وتكتب بالشكل التالي : <q>name=</q>value . يجب دائمًا إحاطة قيم السمات بعلامات اقتباس.<br/>

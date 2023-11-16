@@ -35,8 +35,8 @@ const CodeHighlighter = ({ code, language , addClass , copie}) => {
   };
 
   return (
-    <div className={`${addClass} position-relative`}>
-      <SyntaxHighlighter language={language} style={solarizedlight} className={`bg-dark box-code`}>
+    <div className={`${addClass} position-relative mt-2`}>
+      <SyntaxHighlighter language={language} style={solarizedlight} className={`box-code`}>
         {code}
       </SyntaxHighlighter>
       <button onClick={handleCopyClick} className={`button-copie ${(copie)?"d-block":"d-none"}`}>

@@ -1,5 +1,5 @@
 import images from "../images";
-import { CodeHighlighter } from "../path";
+import { CodeHighlighter } from "../pathHtml";
 
 export default function Introduction(){
     const code = `<!DOCTYPE html>
@@ -37,7 +37,7 @@ export default function Introduction(){
         <p className="style_divv">
         التعليق (Comment) عبارة عن وسم خاص يمكنك وضعه في أي مكان تريد في الصفحة بهدف كتابة ملاحظات تساعدك في الشرح أو لتذكر سبب استخدام الوسوم في حال أردت مستقبلاً مراجعة كود الصفحة و التعديل عليه.
         لوضع تعليق إستخدم الوسم و أكتب النص بداخله كالتالي.<br/>
-        <span style={{color:"green"}}>&lt;-- Comment --!&gt;</span>
+        <span className="green">&lt;-- Comment --!&gt;</span>
         </p>
     </article>
     <article>
@@ -101,9 +101,9 @@ export default function Introduction(){
         مثال عن بنية مستند <b>HTML</b> بسيط يظهر فيه العنصر <kbd>&lt;body&gt;</kbd>، مع العنصر <kbd>&lt;head&gt;</kbd> الذي يحتوي على عنوان المستند العنصر <kbd>&lt;title&gt;</kbd> :
         </p>
         <div className="sum_exemple_style">
-            <h4 style={{color:"green"}}> الكود </h4>
+            <h4 className="green"> الكود </h4>
             <img src={images.html0_Introduction} className="img" />
-            <h4 style={{color:"green"}}>  بعد تشغيل الكود </h4>
+            <h4 className="green">  بعد تشغيل الكود </h4>
             <div className="style-result">reda Eskouni</div>
         </div>
         <ul>
