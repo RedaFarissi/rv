@@ -10,14 +10,14 @@
 .grenn
     color: green
 body    
-    background-color: rgb(20 20 20) 
+    
+    background-color: rgb(28, 28, 28) 
     overflow-x: hidden
     color: $light
     font-size: 19px
     &::-webkit-scrollbar 
-        width: 10px   
+        width: 8px   
     &::-webkit-scrollbar-thumb 
-        //background-image: liner-gardient(to left , red, gree, yellow)
         border: 0.6px solid gray
         -webkit-border-radius: 10px  
         border-radius: 8px
@@ -28,22 +28,22 @@ body
 .aside 
     width: 265px
     position: fixed
-    height: calc(100vh - 86px)
+    height: calc(100vh - 130px)
     left: 0px
-    background-color: #202123
+    bottom: 0
+    background-color: rgb(20 20 20)
     direction: ltr
     padding: 9x
     overflow-y: auto
     font-size: 14px 
     &::-webkit-scrollbar 
         box-sizing: border-box
-        width: 8px
+        width: 3px
     &::-webkit-scrollbar-track 
-        background: black
+        background: rgb(20 20 20)
        
     &::-webkit-scrollbar-thumb 
-        background: white
-        border: 1px solid yellow
+        background:  #313336
         -webkit-border-radius: 10px  
         border-radius: 8px
     ul
@@ -52,7 +52,7 @@ body
     li
         border: none
         padding: 0
-        background-color: #202123 
+        background-color: rgb(20 20 20)
         cursor: pointer
         &:hover
             background-color: #3b3d40 
@@ -64,7 +64,6 @@ body
             margin: 0
             color: white
             text-decoration: none
-
     h5
         color: $html-color
 
@@ -80,7 +79,8 @@ body
 .section-conetent
     width: calc( 100% - 365px )
     margin: 0 50px
-    padding: 40px 0 
+    padding: 40px 0
+    margin-top: 140px 
     .heading-style-html
         direction: ltr
         -webkit-text-stroke: 0.9px #e83e30
@@ -93,7 +93,7 @@ body
         width: 100%
         margin: 20px  0
     .style_divv
-        background-color: #181818
+        background-color:  #202123
         border: 0.8px solid brown
         padding: 20px
         border-radius: 3px

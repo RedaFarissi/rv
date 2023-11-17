@@ -1,15 +1,131 @@
-$bodyBgColor: #0d1117
-$headerBgColor: #212529
+@import "../../assests/sass/var"
 
-header
-    background-color: $headerBgColor
-    height: 86px
-    padding: 9px
-    direction: ltr
-    .navbar-brand
-        font-weight: 655
-        
-    .logo
-        font-family: 'Amiri', serif
-        font-family: 'Cedarville Cursive', cursive
-        font-family: 'Dancing Script', cursive
+.header
+    position: fixed
+    top:0
+    z-index: 999
+    width: 100%
+    background-color: rgba( 6 6 6)
+    .header-logo 
+        font-family: 'Arial', sans-serif
+        font-size: 24px
+        font-weight: bold
+        color: white
+        text-decoration: none
+        text-shadow: 3px 3px 2px black
+        text-transform: uppercase
+        letter-spacing: 5px
+        @media (max-width: 500px)
+            display: none        
+
+.header-main
+    
+    border-bottom: 0.5px solid rgba(255 255 255/40%) 
+    .container
+        display: flex
+        justify-content: space-between
+        align-items: center
+    .header-search-container
+        width: 57%
+        height: 70px
+        .search-field 
+            margin-top: 12px
+            margin-left: 0px
+            font-size: 0.875rem
+            color: rgba(255 255 255/90%)
+            padding: 10px 15px
+            padding-right: 30px
+            padding-left: 30px
+            border: 1px solid gray
+            border-radius: 10px
+            background-color: rgb(35 35 35)
+            width: 100%
+
+    .desktop-menu-category-list
+        margin: 0 35px
+
+
+//Nav
+.desktop-navigation-menu
+    padding: 0px
+    display: flex
+    justify-content: center
+    border-bottom: 0.5px solid rgba(255 255 255/40%) 
+    align-items: center
+    @media (max-width: 900px) 
+        justify-content: start
+        overflow-x: auto 
+    
+    .desktop-menu-category-list
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0
+        margin: 0
+        .menu-category
+            font-size: 14px
+            font-weight: 600
+            padding: 18px 0
+            display: block
+            margin: 0 2px
+            animation: hover-on 0.2s ease  
+            text-transform: uppercase
+            list-style-type: none
+            position: relative
+            a
+                display: inline-block
+                -webkit-background-clip: text
+                color: transparent
+                padding: 0px 9px
+                text-decoration: none
+                width: max-content
+
+
+
+
+@mixin create-line($color)
+    background: linear-gradient(to right, white, white )
+    &:hover
+        background: linear-gradient(to right, $color, white )
+    &::after
+        content: ""
+        width: 0
+        height: 3px
+        -webkit-background-clip: text
+        background: linear-gradient(to right, $color, white )
+        color: white
+        position: absolute
+        bottom: 11px
+        left: 8px
+    &:hover::after
+        animation: link-prog 0.5s forwards
+        @keyframes link-prog 
+            100%
+                width: calc(100% - 16px)
+
+.color-html-nav
+    @include create-line($html-color)
+
+.color-css-nav
+    @include create-line($css-color)
+
+.color-js-nav
+    @include create-line($js-color)
+
+.color-react-nav
+    @include create-line($react-color)
+
+.color-vue-nav
+    @include create-line($vue-color)
+
+.color-php-nav
+    @include create-line($php-color)
+
+.color-laravel-nav
+    @include create-line($laravel-color)
+
+.color-python-nav
+    @include create-line($python-color)
+
+.color-django-nav
+    @include create-line($django-color)

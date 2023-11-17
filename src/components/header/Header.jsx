@@ -1,34 +1,34 @@
 import { Link } from "react-router-dom";
-import "./Header.css"
+import "./Header.sass"
 
 
 export default function Header(){
   const programing = [
-    {name:"HTML" , link:"html"},
-    {name:"CSS" , link:"css"},
-    {name:"JAVASCRIPT" , link:"js"},
-    {name:"REACT.js" , link:"react"},
-    {name:"VUE.js" , link:"vue"},
-    {name:"PYTHON" , link:"python"},
-    {name:"DJANGO" , link:"django"},
-    {name:"DJANGO API" , link:"django_api"},
-    {name:"PHP" , link:"php"},
-    {name:"LARAVEL" , link:"laravel"},
-    {name:"LARAVEL API" , link:"laravel_api"},
+    {name:"HTML" , link:"html" , color:"color-html-nav"},
+    {name:"CSS" , link:"css" , color:"color-css-nav"},
+    {name:"JAVASCRIPT" , link:"js" , color:"color-js-nav"},
+    {name:"REACT.js" , link:"react" , color:"color-react-nav"},
+    {name:"VUE.js" , link:"vue" , color:"color-vue-nav"},
+    {name:"PYTHON" , link:"python" , color:"color-python-nav"},
+    {name:"DJANGO" , link:"django" , color:"color-django-nav"},
+    {name:"DJANGO API" , link:"django_api" , color:"color-django-nav"},
+    {name:"PHP" , link:"php" , color:"color-php-nav"},
+    {name:"LARAVEL" , link:"laravel" , color:"color-laravel-nav"} ,
+    {name:"LARAVEL API" , link:"laravel_api" , color:"color-laravel-nav"},
   ]
   const links = programing.map(e=> 
             <li className="menu-category">
-                <Link to={e.link} className="menu-title">
+                <Link to={e.link} className={`menu-title ${e.color}`}>
                   {e.name}
                 </Link>
             </li>)
     return(
-<header>
-<div className="header-main">
+<header className="header p-0" dir="ltr">
+    <div className="header-main">
         <div className="container">
             <div className="d-flex justify-content-around">
                <Link to='/' className="header-logo">  
-                 <img src="" alt="logo" width="100" height="36"/> 
+                  <div class="logo">Logo</div>
                </Link> &nbsp;&nbsp;
             </div>
 
@@ -44,19 +44,14 @@ export default function Header(){
             <div className={`header-user-actions`} id="header-icon">          
                 <Link to='/login'>
                   <div  className='rounded-circle d-flex justify-content-center align-items-center' style={{width:"38px",height:"38px",color:"black"}}>
-                    <div className={`fas fa-user`}></div>
+                    <div className={`fas fa-user text-light`}></div>
                   </div>
                 </Link> 
-                <Link  to='/create_post' >
-                  <div className='rounded-circle d-flex justify-content-center align-items-center' style={{width:"38px",height:"38px",color:"black"}}>
-                    <div className={`fa-solid fa-shop`}></div>
-                  </div>
-                </Link>
             </div>
         </div> 
     </div>
     <nav className="desktop-navigation-menu" >
-        <div className="container">
+        <div className="container-fliud p-0">
           <ul className="desktop-menu-category-list">
             
             { links  }
