@@ -8,11 +8,11 @@ export default function Subscript(){
     <section className="section-conetent">
         <h1 className="heading-style-html"> HTML Subscript (sub) </h1>
         <article>
-            <div className="style_divv mt-5">
+            <p className="style_divv mt-5">
                 يُمثِّل العنصر <kbd>&lt;sub&gt;</kbd>  جزءًا من النص الذي يجب أن يُعرَض في مستوى أدنى (وغالبًا ما يكون أصغر) من المستوى الرئيسي للنص.
                 مثال عن استخدام العنصر <kbd>&lt;sub&gt;</kbd> لكتابة الصيغة الكيميائية للماء H<sub>2</sub>O     
-                <CodeHighlighter  code={code} language="html"  addClass="mt-3 mb-3" copie={true}/>
-            </div>
+            </p>
+            <CodeHighlighter  code={code} language="html"  addClass="mt-3 mb-3" copie={true}/>
             <div className="sum_exemple_style">
                 <div className="mital">مثال : </div>
                 <h4 className="green"> الكود </h4>

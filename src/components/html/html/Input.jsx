@@ -26,21 +26,21 @@ export default function Italic(){
             يحدد الوسم <bdi><strong>&lt;input&gt;</strong></bdi> حقل إدخال حيث يمكن للمستخدم إدخال البيانات وهو وسم فردي . <br/>
             يعتبر الوسم <bdi><strong>&lt;input&gt;</strong></bdi> عنصر النموذج الأكثر أهمية . بحيت يمكننا من إختيار نوع الإدخال الذي سيقوم به المستخدم وذالك من خلال السمة <b>type</b>.<br/>
             يمكن التعديل على تصميم حقل الإدخال عبر لغة <b>CSS</b>
-            <CodeHighlighter  code={code1} language="html"  addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code2} language="html"  addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code3} language="html"  addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code4} language="html"  addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code5} language="html"  addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code6} language="html"  addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code7} language="html"  addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code8} language="html"  addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code9} language="html"  addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code10} language="html" addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code11} language="html" addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code12} language="html" addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code13} language="html" addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code14} language="html" addclassName="mt-3 mb-3" copie={true}/>
         </p>
+        <CodeHighlighter  code={code1} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code2} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code3} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code4} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code5} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code6} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code7} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code8} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code9} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code10} language="html" addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code11} language="html" addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code12} language="html" addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code13} language="html" addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code14} language="html" addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>

@@ -10,18 +10,18 @@ export default function Small(){
     <h1 className="heading-style-html">HTML Small and Big</h1>
     <article>
         <h2 className="title-h2">1. تصغير الخط </h2>
-        <div className="style_divv">
+        <p className="style_divv">
             نستخدم الوسم <kbd>&lt;small&gt;</kbd>   لعرض الكلام الثانوية أو الذي يعتبر أقل أهمية بحجم خط أصغر . <br/>
             يكتب الوسم <b>small</b> على شكل التالي : 
-            <CodeHighlighter  code={code1} language="html"  addclassName="mt-3 mb-3" copie={true}/>
-        </div>
+        </p>
+        <CodeHighlighter  code={code1} language="html"  addclassName="mt-3 mb-3" copie={true}/>
     </article>
     <article>
         <h2 className="title-h2">2. تكبير الخط </h2>
-        <div className="style_divv">
+        <p className="style_divv">
             تُستخدم علامة <kbd>&lt;big&gt;</kbd> في <b>HTML</b> لزيادة حجم النص المحدد بمقدار واحد أكبر من النص المحيط. في <b>HTML 5</b> ، تجدر الإشارة إلى أنه تم إهمال العنصر <kbd>&lt;big&gt;</kbd> في HTML5، ولا يُنصح باستخدامه. بدلاً من ذلك، يوصى باستخدام CSS للتحكم في حجم النص.
-            <CodeHighlighter  code={code2} language="html"  addclassName="mt-3 mb-3" copie={true}/>
-        </div>
+        </p>
+        <CodeHighlighter  code={code2} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>

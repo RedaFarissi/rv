@@ -15,14 +15,13 @@ export default function Heading(){
     <p className="style_divv">
         العناوين في لغة <b>HTML</b> من أهم الوسوم التي تسخدم في <b>HTML</b> فالعناوين معرّفة بوسوم من :<br/>
         <kbd>&lt;h1&gt;</kbd> الى ... <kbd>&lt;h1&gt;</kbd> . <kbd>&lt;h6&gt;</kbd> هو أكبر مقاس للعنوان بينما نجد أن الوسم <kbd>&lt;h6&gt;</kbd> هو أصغر مقاس للعناوين.
-        <br/>
-        <CodeHighlighter  code={code1} language="html"  addClass="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code2} language="html"  addClass="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code3} language="html"  addClass="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code4} language="html"  addClass="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code5} language="html"  addClass="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code6} language="html"  addClass="mt-3 mb-3" copie={true}/>
     </p>
+    <CodeHighlighter  code={code1} language="html"  addClass="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter  code={code2} language="html"  addClass="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter  code={code3} language="html"  addClass="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter  code={code4} language="html"  addClass="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter  code={code5} language="html"  addClass="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter  code={code6} language="html"  addClass="mt-3 mb-3" copie={true}/>
     <div className="sum_exemple_style">
         <div className="mital">مثال : </div>
         <ul><li> <i>  لاحظ ان كل العناوين تقوم بالعودة إلى سطر تلقائيا </i></li></ul>

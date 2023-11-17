@@ -11,8 +11,8 @@ export default function Italic(){
         <p className="style_divv">
             الوسم  <kbd>&lt;i&gt;</kbd>  في <b>HTML</b> يستخدم لعرض المحتوى بأسلوب مائل. يستخدم هذا الوسم عمومًا لعرض المصطلح التقني والعبارة والكلمة المهمة بلغة مختلفة .<br/>
             الوسم <kbd>&lt;i&gt;</kbd>  هو وسم زوجي يحتوي على علامة الفتح والمحتوى وعلامة الإغلاق .
-            <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         </p>
+        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>

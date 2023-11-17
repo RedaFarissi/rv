@@ -9,15 +9,15 @@ export default function Italic(){
     <article>
         <h2 className="title-h2">1. الوسم textarea </h2>
         <p className="style_divv">
-        يعرف الوسم  <kbd>&lt;textarea&gt;</kbd> عنصر تحكم إدخال نص متعدد الأسطر و هو وسم زوجي  . <br/>
-        غالبا ما يستخدم <kbd>&lt;textarea&gt;</kbd> في نموذج ، لجمع مدخلات المستخدم مثل التعليقات  .<br/>
-        يمكن أن تحتفظ منطقة النص بعدد غير محدود من الأحرف، ويتم عرض النص بخط ثابت العرض (عادة Courier).
-        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+            يعرف الوسم  <kbd>&lt;textarea&gt;</kbd> عنصر تحكم إدخال نص متعدد الأسطر و هو وسم زوجي  . <br/>
+            غالبا ما يستخدم <kbd>&lt;textarea&gt;</kbd> في نموذج ، لجمع مدخلات المستخدم مثل التعليقات  .<br/>
+            يمكن أن تحتفظ منطقة النص بعدد غير محدود من الأحرف، ويتم عرض النص بخط ثابت العرض (عادة Courier).
         </p>
+        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html39_textarea} className="img"/>
+            <img src={images.html39_textarea} alt="textarea code" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 Review codding : <textarea>default text</textarea> <button>OK</button>
@@ -53,7 +53,7 @@ export default function Italic(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html39_textarea2} className="img"/>
+            <img src={images.html39_textarea2} alt="textarea code" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 <textarea maxlength="20" placeholder="entrez votre email ici"></textarea>

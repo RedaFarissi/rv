@@ -15,8 +15,8 @@ export default function Abbreviation(){
                 <li style={{marginBottom:"12px"}}>مكان الكلمة <b>hidden</b> نضع النص الذي نريده أن يظهر عند تمرير الماوس فوقه النص الظاهر في الصفحة.</li>
                 <li style={{marginBottom:"12px"}}>يملك سمة واحدة هي ال <b>Attribute title</b> التي نضيفها له لكتابة النص المخفي الذي سيتم إظهاره عند تمرير الماوس فوق الوسم.</li>
             </ul>
-            <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         </div>
+        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <ul><li>عند تمرير الماوس فوق العنصر سيضهر title</li></ul>

@@ -15,13 +15,12 @@ export default function Audio(){
         <p className="style_divv">
             الوسم  <kbd>&lt;audio&gt;</kbd> يُستخدم عندما نريد وضع ملف صوتي في الموقع ونضيف دائما له اثنان <b>attribute</b> خاص به:
             <ul>
-    <h1 className="heading-style-html">HTML Audio</h1>
                 <li><b>controls</b> : لعرض عناصر التحكم في الصوت وبدونه لا يظهر الملف الصوتي في الصفحة.</li>
                 <li><b>src</b> : وتكون قيمته عبارة عن مسار وإسم الملف الصوتي.</li>
                 <li>دائما استخدم امتداد <b>mp3</b> لأن جميع المتصفحات تدعمه.</li>
             </ul>
-            <CodeHighlighter  code={code1} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         </p>
+        <CodeHighlighter  code={code1} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
@@ -35,8 +34,8 @@ export default function Audio(){
         <p className="style_divv">
             يُحدِّد العنصر <kbd>&lt;source&gt;</kbd> عدِّة مصادر لملفات الوسائط المتعددة ضمن العنصر <kbd>&lt;picture&gt;</kbd> أو <kbd>&lt;audio&gt;</kbd> أو <kbd>&lt;video&gt;</kbd> وهذا العنصر فارغ، وأكثر استخدام شائع له هو توفير محتوى الوسائط المتعددة نفسه لكن بصيغ مختلفة لكي يستطيع المتصفح تشغيل أنسبها .
             <ul><li>يحتوي على ,<b>attribute</b> أساسي هو src وتكون قيمته عبارة عن مسار واسم الملف الصوتي. وهو من العناصر التي ليس لها نهاية وسم (closing tag).</li></ul>
-            <CodeHighlighter  code={code2} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         </p>
+        <CodeHighlighter  code={code2} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <ul><li>يبيّن هذه المثال كيفية تضمين مقطع صوتي باستخدام العنصر <strong>&lt;audio&gt;</strong> وله أكثر من مصدر، أحدها بصيغة <b>ogg</b> والآخر بصيغة <b>mp3</b></li></ul>

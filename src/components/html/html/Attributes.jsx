@@ -20,18 +20,18 @@ return(
     <h1 className="heading-style-html"> HTML Attributes </h1>
     <article className="mt-5">
         <h2 className="title-h2">1. ما هو attribute </h2>
-        <div className="style_divv">
-        تحدد السمات <b>(Attributes)</b> خصائص إضافية مثل عرض الصورة وارتفاعها. توضع السمات دائمًا في وسم البدء (أو وسم الفتح) <code> &lt; &gt; </code> وعادة ما تكون على شكل أزواج اسم و قيمة وتكتب بالشكل التالي : <q>name=</q>value . يجب دائمًا إحاطة قيم السمات بعلامات اقتباس.<br/>
-        أيضا ، بعض السمات َضرورية لعمل عناصر معينة. على سبيل المثال ، يجب أن يحتوي الوسم <kbd>&lt;img&gt;</kbd> على سمات <b>src</b> و <b>alt</b>
+        <p className="style_divv">
+            تحدد السمات <b>(Attributes)</b> خصائص إضافية مثل عرض الصورة وارتفاعها. توضع السمات دائمًا في وسم البدء (أو وسم الفتح) <code> &lt; &gt; </code> وعادة ما تكون على شكل أزواج اسم و قيمة وتكتب بالشكل التالي : <q>name=</q>value . يجب دائمًا إحاطة قيم السمات بعلامات اقتباس.<br/>
+            أيضا ، بعض السمات َضرورية لعمل عناصر معينة. على سبيل المثال ، يجب أن يحتوي الوسم <kbd>&lt;img&gt;</kbd> على سمات <b>src</b> و <b>alt</b>
             <ul>
                 <li>يمكن أن تحتوي جميع عناصر <b>HTML</b> على <b>attributes</b></li>
                 <li> يتم تحديد  <b>attributes</b> دائمًا في بداية الوسم</li>
             </ul>
-            <CodeHighlighter  code={code1} language="html"  addClass="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code2} language="html"  addClass="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code3} language="html"  addClass="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code4} language="html"  addClass="mt-3 mb-3" copie={true}/>
-        </div>
+        </p>
+        <CodeHighlighter  code={code1} language="html"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code2} language="html"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code3} language="html"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code4} language="html"  addClass="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital"> متال :</div>
             <h4 style={{color: "green"}}> الكود </h4>
@@ -48,7 +48,7 @@ return(
     </article>
     <article>
         <h2 className="title-h2">2. السمة <small>(HTML id Attributes)</small>  </h2>
-        <div className="style_divv">
+        <p className="style_divv">
             يُمكن إضافته <b>id Attributes</b>  الى أي عنصر <b>html</b> وتكون قيمته عبارة عن اسم خاص (قم بختيار الإسم بنفسك) . ونستخدم هذا الاسم لتنسيق العُنصر بواسطة اكواد لغة <b>CSS</b> او نستخدم هذا الاسم لعمل بعض التغيرات على العنصر بواسطة لغة <b>JavaScript</b>.
             <ul>
                 <li style={{marginBottom:"15px"}}> تحدد السمة <b>id</b> معرفًا فريدًا لعنصر <b>HTML</b>. يجب أن تكون قيمة سمة المعرف فريدة داخل مستند <b>HTML</b>.<br/>ويعني ذالك انه لا يمكنك إعطاء نفس ال <b>id</b> لعنصر <b>HTML</b> أخر .</li>
@@ -56,10 +56,10 @@ return(
                 <li> يمكنك إستعمال عدد غير محدد من <b>id</b> داخل صفحتك ولاكن بقيم مختلفة. </li>
                 <li>نقوم بتحديد ال <b>id</b> بوضع <small>(#)</small> قبل اسم ال <b>id</b> </li>
             </ul>
-            <CodeHighlighter  code={code5} language="html"  addClass="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code6} language="html"  addClass="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code7} language="html"  addClass="mt-3 mb-3" copie={true}/>
-        </div>
+        </p>
+        <CodeHighlighter  code={code5} language="html"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code6} language="html"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code7} language="html"  addClass="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital"> مثال: </div>
             في المثال التالي لدينا عنصر <kbd>&lt;h2&gt;</kbd> يشير إلى اسم المعرف "coder_reda". سيتم تصميم عنصر <kbd>&lt;h2&gt;</kbd> هذا وفقًا لتعريف نمط coder_reda# في قسم الرأس:
@@ -72,16 +72,16 @@ return(
     </article>
     <article>
         <h2 className="title-h2">3. السمة <small>(HTML class Attributes)</small>  </h2>
-        <div className="style_divv">
+        <p className="style_divv">
             يُمكن إضافته <b>attribute</b>  الى أي عنصر <b>html</b> وتكون قيمته عبارة عن اسم خاص (قم بختيار الإسم بنفسك) . ونستخدم هذا الاسم لتنسيق العُنصر بواسطة اكواد لغة <b>CSS</b> او نستخدم هذا الاسم لعمل بعض التغيرات على العنصر بواسطة لغة <b>JavaScript</b>.
             <ul>
                 <li>يُمكننا إضافة نفس ال <b>class</b> في أكثر من وسم عكس ال id الذي يكون في وسم واحد فقط .</li>
                 <li>نقوم بتحديد ال <b>class</b> بوضع (نقطة) قبل اسم لكلاس</li>
             </ul>
-            <CodeHighlighter  code={code8} language="html"  addClass="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code9} language="html"  addClass="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code10} language="html"  addClass="mt-3 mb-3" copie={true}/>
-        </div>
+        </p>
+        <CodeHighlighter  code={code8} language="html"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code9} language="html"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code10} language="html"  addClass="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital"> مثال: </div>
             في المثال التالي لدينا ثلاثة عناصر <kbd>&lt;h2&gt;</kbd> مع سمة <b>class</b> بقيمة "class_tile". سيتم تصميم جميع عناصر <kbd>&lt;h2&gt;</kbd> الثلاثة بالتساوي لقسم الرأس
@@ -98,7 +98,7 @@ return(
     </article>
     <article>
         <h2 className="title-h2">4. السمة <small>(HTML dir Attributes)</small>  </h2>
-        <div className="style_divv">
+        <p className="style_divv">
             السمة <b>dir</b>  هي سمة مقيدة تشير إلى اتجاه النص الموجود في العنصر.<br/>
             القيم المسموح بها لهذه السمة هي:<br/>
             <ul>
@@ -106,10 +106,10 @@ return(
                 <li style={{marginBottom:"9px"}}><b>rtl</b> وتعني من اليمين إلى اليسار ، وتستخدم للغات المكتوبة من اليمين إلى اليسار (مثل العربية على سبيل المثال).</li>
                 <li style={{marginBottom:"9px"}}><b>auto</b> الذي يفوض وكيل المستخدم القرار. الخوارزمية المستخدمة بسيطة نسبيًا: يتم تحليل المحتوى النصي وعندما يتم مواجهة الحرف الأول الذي له اتجاه "قوي" ، يتم أخذ هذا الاتجاه للعنصر بأكمله.</li>
             </ul>
-            <CodeHighlighter  code={code11} language="html"  addClass="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code12} language="html"  addClass="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code13} language="html"  addClass="mt-3 mb-3" copie={true}/>
-        </div>
+        </p>
+        <CodeHighlighter  code={code11} language="html"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code12} language="html"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code13} language="html"  addClass="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital"> مثال: </div>
             <h4 style={{color: "green"}}> الكود </h4>

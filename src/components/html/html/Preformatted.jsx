@@ -12,8 +12,8 @@ export default function Preformatted(){
                 تحدد العلامة <kbd>&lt;pre&gt;</kbd> النص المنسق مسبقًا.  <br/>
                 يتم عرض النص الموجود في عنصر <kbd> &lt;pre&gt;</kbd> بخط ذو عرض ثابت ، ويحافظ النص على كل من المسافات وفواصل الأسطر. سيتم عرض النص تمامًا كما هو مكتوب في شفرة مصدر <b>HTML</b><br/>
                 يكتب الوسم <b>pre</b> على شكل التالي :     
-                <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
             </p>
+            <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
             <div className="mital"> متال :</div>
             <h4 className="green"> الكود </h4>
             <img src={images.html19_pre} className="img"/>

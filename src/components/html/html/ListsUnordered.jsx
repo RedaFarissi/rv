@@ -12,11 +12,11 @@ export default function ListsUnordered(){
     <h1 className="heading-style-html"> HTML Lists Unordered ul </h1>
     <article>
         <h2 className="title-h2">1. شرح الوسم ul </h2>
-        <div className="style_divv">
+        <p className="style_divv">
             نستخدم الوسم <kbd>&lt;ul&gt;</kbd>  لإنشاء  قائمة (نقطية) غير مرتبة.<br/>
             نستخدم الوسم <kbd>&lt;li&gt;</kbd>  داخل الو سم <kbd>&lt;ul&gt;</kbd> لتفرقة بين المحتوى 
-            <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
-        </div>
+        </p>
+        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>

@@ -5,7 +5,6 @@ export default function Horizontal(){
     return(
 <section className="section-conetent">
     <h1 className="heading-style-html">HTML Horizontal Line (hr) </h1>
-    
     <div className="style_divv mt-5">
         عندما نقوم بكتابة الفقرات و نريد ان نفصل بينها بخط فاننا نقوم بوضع خط افقي لكي 
         نفرق بين هاته الفقرات و الخط الفاصل لا نستطيع وضعه هكذا بل يلزمنا وسم نستعمله 

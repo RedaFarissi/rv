@@ -27,8 +27,8 @@ export default function Table(){
             يتكون جدول <b>HTML</b> من الوسم <kbd>&lt;table&gt;</kbd> وعنصر واحد أو أكثر من عناصر <kbd>&lt;tr&gt;</kbd> و  <kbd>&lt;th&gt;</kbd>و <kbd>&lt;td&gt;</kbd>.<br/>
             يحدد العنصر <kbd>&lt;tr&gt;</kbd> عدد أسطر الجدول  ، ويحدد العنصر <kbd>&lt;th&gt;</kbd> رأس الجدول ، ويحدد العنصر <kbd>&lt;td&gt;</kbd> أعمدة أو خلية الجدول.<br/>
             قد يتضمن جدول <b>HTML</b> أيضًا عناصر <kbd>&lt;caption&gt;</kbd> و <kbd>&lt;colgroup&gt;</kbd> و <kbd>&lt;thead&gt;</kbd> و <kbd>&lt;tfoot&gt;</kbd> و <kbd>&lt;tbody&gt;</kbd>.
-            <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         </p>
+        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>

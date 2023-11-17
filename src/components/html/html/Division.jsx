@@ -8,7 +8,7 @@ export default function Division(){
 <section className="section-conetent">
     <h1 className="heading-style-html">HTML Division (div)</h1>
     <article>
-        <div className="style_divv mt-5">
+        <p className="style_divv mt-5">
             الوسم <b>div</b> هو وسم زوجي يكتب على الشكل التالي :  <kbd>&lt;div&gt; content &lt;/div&gt;</kbd>
             <ul>
                 <li>يستخدم الوسم <kbd>&lt;div&gt;</kbd> كحاوية لعناصر <b>HTML</b> - تنسيق تنسيقها بعد ذلك باستخدام <b>CSS</b>. أو معالجتها باستخدام <b>JavaScript</b>.</li>
@@ -16,8 +16,8 @@ export default function Division(){
                 <li>عند بداية الوسم <kbd>&lt;div&gt;</kbd> يتم بدأ في سطر جديد .</li>
                 <li>عند نهاية الوسم <kbd>&lt;div&gt;</kbd> يتم العودة إلى سطر جديد .  </li>
             </ul>
-            <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
-        </div>
+        </p>
+        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
             <h4 className="green"> الكود </h4>

@@ -41,11 +41,11 @@ export default function From(){
     <article>
         <h2 className="title-h2">1. الوسم form</h2>
         <p className="style_divv">
-        يستخدم الوسم  <kbd>&lt;form&gt;</kbd> لإرسال المعلومات إلى الخادم وهو مهم جدا للأشخاص المهتمة بلغة <u><b>php</b> ولغات أخرى </u>.<br/>
-        الوسم <kbd>&lt;form&gt;</kbd> في العادة عبارة عن مجموعة عناصر توضع في الصفحة بهدف جعل المستخدم يدخل بيانات فيها. من الأمثلة الشائعة التي نتعامل فيها مع نماذج, هي صفحات تسجيل الدخول, صفحات إنشاء حساب جديد, إضافة تعليق, إضافة منشور إلخ.. <br/>
-        الوسم <kbd>&lt;form&gt;</kbd>  بحد ذاته ليس شيئاً يتم عرضه في الصفحة بل هو بمثابة حاوية للوسوم التي نضعها فيه.<br/>
-            <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+            يستخدم الوسم  <kbd>&lt;form&gt;</kbd> لإرسال المعلومات إلى الخادم وهو مهم جدا للأشخاص المهتمة بلغة <u><b>php</b> ولغات أخرى </u>.<br/>
+            الوسم <kbd>&lt;form&gt;</kbd> في العادة عبارة عن مجموعة عناصر توضع في الصفحة بهدف جعل المستخدم يدخل بيانات فيها. من الأمثلة الشائعة التي نتعامل فيها مع نماذج, هي صفحات تسجيل الدخول, صفحات إنشاء حساب جديد, إضافة تعليق, إضافة منشور إلخ.. <br/>
+            الوسم <kbd>&lt;form&gt;</kbd>  بحد ذاته ليس شيئاً يتم عرضه في الصفحة بل هو بمثابة حاوية للوسوم التي نضعها فيه.<br/>
         </p>
+        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" number={true} copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>

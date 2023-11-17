@@ -15,8 +15,8 @@ export default function Dialog(){
             يسهّل عنصر <b>dialog</b> إنشاء مربعات حوار وشروط منبثقة على صفحة ويب. <br/>
             لستعمال الوسم <b>dialog</b> يجب إستخدام السمة <b>open</b> والتي هي الأخرى تستقبل قيمتين <b>true</b> و <b>false</b>
             عند إستخدام الوسم <b>dialog</b> بدون السمة <b>open</b> ستكون العناصر داخل الوسم مخفية 
-            <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         </p>
+        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>

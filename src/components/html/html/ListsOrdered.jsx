@@ -15,8 +15,8 @@ export default function ListsOrdered(){
         <p className="style_divv">
             نستخدم الوسم <kbd>&lt;ol&gt;</kbd> لعرض قائمة مرتبة <b>Ordered List</b> في الصفحة و نقصد بذلك عرض مجموعة عناصر مع إظهار رقم كل عنصر تم إدخاله فيها. من أهم ما يميز هذه القوائم أنه يمكنك عرض الترقيم بالشكل الذي تريده, فمثلاً يمكنك عرض أرقام عادية, أحرف أبجدية, أرقام رومانية <br/>
             يجب كتابة محتوى الفقرات أو العناوين  الذي تريد ترقيمها داخل الوسم <kbd>&lt;li&gt;</kbd>
-            <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         </p>
+        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>

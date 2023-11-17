@@ -26,8 +26,8 @@ export default function Anchor(){
                 <li>مكان الكلمة <b>link_name</b>&nbsp; نضع النص الذي نريده أن يظهر في الصفحة و الذي يمكن النقر عليه.</li>
                 <li>مكان الكلمة <b>url</b> نضع الرابط الذي نريد توجيه المستخدم إليه عند النقر على النص الذي يظهر في الصفحة.</li>
             </ul> 
-            <CodeHighlighter code={code1} language="html" addclassName="mt-3 mb-3" copie={true}/>
         </p>
+        <CodeHighlighter code={code1} language="html" addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital"> متال:</div>
             <h4 className="green"> الكود </h4>
@@ -44,8 +44,8 @@ export default function Anchor(){
         <h2 className="title-h2">3. تحديد أين سيتم فتح الرابط</h2>
         <p className="style_divv">
             ماذا لو أحببت أن تفتح الروابط الخارجية في تبويبات جديدة في المتصفح، بدلاً من تحميلها في نفس التبويب كي تضمن أن موقعك مازال مفتوحاً أمام الزائر. هذا هو دور الخاصية <b>target</b>
-            <CodeHighlighter code={code2} language="html" addclassName="mt-3 mb-3" copie={true}/>
         </p>
+        <CodeHighlighter code={code2} language="html" addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
             <h4 className="green"> الكود </h4>
@@ -62,8 +62,8 @@ export default function Anchor(){
         <h2 className="title-h2">4. إظهار عنوان عند تمرير الماوس فوق الرابط</h2>
         <p className="style_divv">    
             في حال أردت إظهار تلميح عند تمرير الماوس فوق الرابط فيمكنك إضافة الخاصية title في الوسم <kbd> &lt;a&gt;</kbd> و تمرير التلميح الذي تريد عرضه كقيمة لها.
-            <CodeHighlighter code={code3} language="html" addclassName="mt-3 mb-3" copie={true}/>
         </p>
+        <CodeHighlighter code={code3} language="html" addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
             <h4 className="green"> الكود </h4>
@@ -78,8 +78,8 @@ export default function Anchor(){
         <h2 className="title-h2">5. الروابط داخل نفس الصفحة</h2>
         <p className="style_divv">
             في حال أردت وضع رابط يوجه المستخدم لوسم محدد موجود في نفس الصفحة  يمكنك إعطاء الوسم <b>id</b> و عندها الرابط الذي نريده أن يوجه المستخدم لذاك الوسم يجب أن نضع في نهايته الرمز # يليه <b>id</b> العنصر. في المثال التالي قمنا بوضع رابط عند النقر عليه يقوم بنقل المستخدم لوسم محدد في نفس الصفحة.
-            <CodeHighlighter code={code4} language="html" addclassName="mt-3 mb-3" copie={true}/>
         </p>
+        <CodeHighlighter code={code4} language="html" addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
             <ul><li>قم بنقر للفهم على الروابط أسفله للفهم بشكل أفضل .</li></ul>
@@ -91,7 +91,6 @@ export default function Anchor(){
                 <a href="#title2">title2</a>&nbsp;&nbsp;
                 <a href="#title3">title3</a>&nbsp;&nbsp;
                 <a href="#title4">title4</a>&nbsp;&nbsp;
-
                 <h2 id="title1">title1</h2>
                 <p> paragraph1.<br/> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, adipisci? Illum et esse ratione labore consequatur recusandae earum inventore sit laboriosam nemo dicta vero mollitia temporibus eaque sed, a aut! Eius iure est maioreseostemporibus consequatur inventore suscipit sit illum? Quos quia tempore molestiae rerum, ab sapiente odit necessitatibus molestias magnam similique iusto corporis. Aspernatur enim consequuntur voluptas rerum delectus. Necessitatibus ab officiisatnobis a repudiandae maiores totam dolor quo aliquam fugiat, ipsam corporis pariatur accusantium animi porro esse unde tenetur magnam minus. Ipsum dolore magnam mollitia eaque commodi praesentium reiciendis veniam, animi atque aliquam nesciuntexcepturiquam autem quas libero a asperiores facilis id dicta minus consectetur? Dolore explicabo quasi repellendus veniam nam est maiores minima in non? Blanditiis eius accusantium minima dolorem amet aut natus vitae incidunt reiciendis consecteturaliquidrem doloribus adipisci tempora voluptas impedit quia non quibusdam mollitia, similique tempore? Ut aspernatur accusamus enim nisi impedit cum quia maxime voluptas accusantium, optio, natus aperiam tempora. Voluptas, tempore dolor natusdebitisex, omnis nesciunt quaerat, non soluta porro nulla suscipit laboriosam beatae quidem accusantium. Odit, provident aliquam sit velit ex fuga saepe, molestias modi reiciendis facilis vel! Enim, saepe! Harum quae ut molestiae voluptatem cupiditatetotammodi fuga corrupti autem laborum illo dolorem, sequi accusamus dignissimos in. Animi, corrupti officiis cumque similique recusandae necessitatibus iusto quas dolorem, reprehenderit repellat ullam sed inventore sint dolorum tempora eaqueporro exrem. Tempora, aliquid quod numquam, aliquam quas, illum saepe corrupti earum molestiae perferendis officiis unde dolores! Ducimus rem, maxime animi numquam debitis officiis suscipit in ex explicabo quaerat ipsa? Iste nihil asperioresnesciunt,consequuntur ab, dolores facere minima nisi aperiam beatae neque commodi suscipit saepe modi voluptatibus minus perspiciatis vel quia quaerat cum obcaecati, expedita harum. Illum harum, nihil quaerat soluta cumque atque rem perferendisveritatissaepe hic laborum mollitia earum alias incidunt inventore ab eligendi recusandae odio quis accusamus voluptatem. Molestias unde amet totam fugiat veritatis? Qui non voluptatum ullam eos. Soluta minus voluptatum veritatis perspiciatis,ducimus quamhic ea sit autem eligendi blanditiis optio at ipsam. Provident pariatur vel eos tempora velit numquam debitis corrupti sit, earum consequuntur praesentium! Mollitia velit ad corporis molestias?</p>
                 <h2 id="title2">title2</h2>
@@ -107,8 +106,8 @@ export default function Anchor(){
         <h2 className="title-h2">6. ربط صفحة  بصفحة اخرى داخل موقعك </h2>
         <p className="style_divv">
             في حال أردت وضع رابط يوجه المستخدم لصفحة أخرا داخل موقعك عند نقر قم بوضع مصار الصفحة التانية وإسم ومتداد الملف داخل السمة <b>href</b>  
-            <CodeHighlighter code={code5} language="html" addclassName="mt-3 mb-3" copie={true}/>
         </p>
+        <CodeHighlighter code={code5} language="html" addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
             <h4 className="green">  الكود </h4>
@@ -128,8 +127,8 @@ export default function Anchor(){
         <h2 className="title-h2">7. ربط صفحة ب id  موجود بصفحة اخرى داخل موقعك </h2>
         <p className="style_divv">
             في حال أردت وضع رابط يوجه المستخدم لوسم محدد موجود صفحة أخرى  يمكنك إعطاء الوسم السمة <b>id</b> و عندها الرابط الذي نريده أن يوجه المستخدم لذاك الوسم يجب أن نضع في نهايته الرمز # يليه <b>id</b>.
-            <CodeHighlighter code={code6} language="html" addclassName="mt-3 mb-3" copie={true}/>
         </p>
+        <CodeHighlighter code={code6} language="html" addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
             <h4 className="green">  الكود </h4>

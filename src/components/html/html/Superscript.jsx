@@ -8,11 +8,11 @@ export default function Superscript(){
 <section className="section-conetent">
     <h1 className="heading-style-html"> HTML Superscript (sup) </h1>
     <article>
-        <div className="style_divv mt-5">
+        <p className="style_divv mt-5">
             تحدد العلامة <kbd>&lt;sup&gt;</kbd> النص المرتفع. يظهر النص المرتفع بنصف حرف فوق السطر العادي ، ويتم تقديمه أحيانًا بخط أصغر. يمكن استخدام النص المرتفع للحواشي السفلية ، مثل
             1<sup>er</sup>  
-            <CodeHighlighter  code={code} language="html"  addClass="mt-3 mb-3" copie={true}/>
-        </div>
+        </p>
+        <CodeHighlighter  code={code} language="html"  addClass="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
         <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>

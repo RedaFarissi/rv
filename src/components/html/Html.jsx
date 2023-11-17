@@ -5,7 +5,7 @@ import {
     Quotation , Mark , Deleted , Preformatted , Small , Anchor , Image , Division , 
     Span , Audio , Video , Details , BiDirectionalIsolation , BiDirectionalOverride ,
     ListsOrdered , ListsUnordered , ListsDefinitionul , Table , Input , From , 
-    Textarea , Button , Fieldset , Dialog , 
+    Textarea , Button , Fieldset , Dialog , Iframe , Meter , Style , HtmlLink , Meta
 } from './pathHtml.js';
 
 export default function Html(){
@@ -63,6 +63,12 @@ export default function Html(){
                 <Route path='from' element={<From />} /> 
                 <Route path='fieldset' element={<Fieldset />} /> 
                 <Route path='dialog' element={<Dialog />} /> 
+                <Route path='iframe' element={<Iframe />} /> 
+                <Route path='meter' element={<Meter />} /> 
+                <Route path='style' element={<Style />} /> 
+                <Route path='style' element={<Style />} /> 
+                <Route path='link' element={<HtmlLink />} /> 
+                <Route path='meta' element={<Meta />} /> 
             </Routes>
     </main>
     )

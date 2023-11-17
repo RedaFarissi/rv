@@ -11,12 +11,12 @@ export default function Button(){
     <h1 className="heading-style-html">HTML Button</h1>
     <article>
         <h2 className="title-h2"> 1. الوسم button</h2>
-        <div className="style_divv">
+        <p className="style_divv">
             يستخدم الوسم <kbd>&lt;button&gt;</kbd>  في لغة <b>HTML</b> لإنشاء زر قابل للنقر وهو وسم زوجي اي يحتوي على علامة فتح وعلامة إغلاق.<br/>
             داخل <kbd>&lt;button&gt;</kbd> يمكنك وضع نص (و وسم مثل <kbd>&lt;i&gt;</kbd> <kbd>&lt;b&gt;</kbd> <kbd>&lt;strong&gt;</kbd> <kbd>&lt;br&gt;</kbd> <kbd>&lt;img&gt;</kbd> وما إلى ذلك).
-            <CodeHighlighter  code={code1} language="html"  addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter  code={code2} language="html"  addclassName="mt-3 mb-3" copie={true}/>
-        </div>
+        </p>
+        <CodeHighlighter  code={code1} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code2} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <ul><li> في هاده الحالة تم إنشاء زر عند النقر عليه  لا يحدت أي شيء .</li></ul>

@@ -13,8 +13,8 @@ export default function Blockquote(){
             <br/>
             <li style={{marginBottom:"12px"}}>إذا أردت العرض النص مقتبس على سطر منفرد مع عرض هامش حوله من كل الجهات, يمكنك وضع النص بداخل <br/><kbd>&lt;blockquote&gt; &lt;/blockquote&gt;</kbd>.</li>
             <li style={{marginBottom:"12px"}}>إذا كان الإقتباس الموضوع في الصفحة مأخوذ من موقع آخر, قم بذكر رابط الموقع الذي نسخت الإقتباس منه بداخل الخاصية <b>cite</b> التي يملكها الوسم <kbd> &lt;blockquote&gt;</kbd> لأن هذا الأمر سيجعل الموقع المقتبس منه ذو أهمية أكثر بالنسبة لمحركات البحث و بالتالي تكون تفيد الموقع الذي نسخت الإقتباس منه</li>
-            <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         </div>
+        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
             <h4 className="green"> الكود </h4>    

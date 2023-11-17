@@ -12,8 +12,8 @@ export default function BiDirectionalIsolation(){
             <b>BDI</b> تعني العزلة ثنائية الاتجاه.<br/>
             تعزل العلامة <kbd>&lt;bdi&gt;</kbd> جزءًا من النص يمكن تنسيقه في اتجاه مختلف عن النص الآخر خارجه.
             يكون هذا العنصر مفيدًا عند تضمين محتوى من إنشاء المستخدم مع اتجاه نص غير معروف.
-            <CodeHighlighter code={code} language="html" addclassName="mt-3 mb-3" copie={true}/>
         </p>
+        <CodeHighlighter code={code} language="html" addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>

@@ -21,8 +21,8 @@ export default function ListsDefinitionul(){
                 <li style={{marginBottom:"9px"}}>يستخدم الوسم  <kbd>&lt;dt&gt;</kbd> في <b>HTML</b> لتحديد عناوين  قائمة الوصف. يتم استخدامه داخل الوسم <kbd>&lt;dl&gt;</kbd>. وعادة ما يتبعه الوسم <kbd>&lt;dd&gt;</kbd></li>
                 <li style={{marginBottom:"9px"}}>تشير العلامة <kbd>&lt;dd&gt;</kbd> في <b>HTML</b> إلى وصف التعريف وتستخدم للإشارة إلى وصف أو تعريف عنصر في قائمة الوصف. يمكن إدراج الفقرات وفواصل الأسطر والصور والروابط والقوائم داخل علامة <kbd>&lt;dd&gt;</kbd></li>
             </ul>
-            <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         </p>
+        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>

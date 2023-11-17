@@ -12,9 +12,8 @@ export default function Mark(){
         يستخدم الوسم <b>mark</b>   في <b>HTML</b> لتمييز النص ذي الأهمية الخاصة أو الملاءمة في مستند <b>HTML</b>.<br/>
             تعرض المتصفحات تقليديًا النص الموجود داخل الوسم <kbd>&lt;mark&gt;</kbd> كنص بلون خلفية أصفر. <br/>
         يكتب الوسم <b>mrak</b> على شكل التالي : 
-            <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
-        
         </p>
+        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital"> متال :</div>
             <h4 className="green"> الكود </h4>
