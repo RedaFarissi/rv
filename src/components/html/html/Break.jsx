@@ -14,9 +14,9 @@ export default function Break(){
             <div className="sum_exemple_style">
                 <div className="mital">متال : </div>
                 <h4 className="green"> الكود </h4>
-                <img src={images.html14_br} className="img"/>
+                <img src={images.html14_br} alt="break exemple" className="img"/>
                 <h4 className="green"> بعد تشغيل الكود </h4>
-                <img src={images.html14_br_2} className="img"/>
+                <img src={images.html14_br_2} alt="break result" className="img"/>
             </div>
         </article>
     </section>

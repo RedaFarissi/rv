@@ -10,7 +10,7 @@
         font-family: 'Arial', sans-serif
         font-size: 24px
         font-weight: bold
-        color: white
+        color: #f0fff0
         text-decoration: none
         text-shadow: 3px 3px 2px black
         text-transform: uppercase
@@ -52,7 +52,7 @@
     justify-content: center
     border-bottom: 0.5px solid rgba(255 255 255/40%) 
     align-items: center
-    @media (max-width: 900px) 
+    @media (max-width: 930px) 
         justify-content: start
         overflow-x: auto 
     
@@ -63,7 +63,7 @@
         padding: 0
         margin: 0
         .menu-category
-            font-size: 14px
+            font-size: 15px
             font-weight: 600
             padding: 18px 0
             display: block
@@ -84,16 +84,16 @@
 
 
 @mixin create-line($color)
-    background: linear-gradient(to right, white, white )
+    background: linear-gradient(to right, #f0fff0, #f0fff0 )
     &:hover
-        background: linear-gradient(to right, $color, white )
+        background: linear-gradient(to right, $color, #f0fff0 )
     &::after
         content: ""
         width: 0
         height: 3px
         -webkit-background-clip: text
-        background: linear-gradient(to right, $color, white )
-        color: white
+        background: linear-gradient(to right, $color, #f0fff0 )
+        color: #f0fff0
         position: absolute
         bottom: 11px
         left: 8px
