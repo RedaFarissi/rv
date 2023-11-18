@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Audio(){
@@ -24,9 +24,9 @@ export default function Audio(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html23_audio} alt={images.html23_audio} className="img"/>
+            <img src={images.html23_audio} alt="audio" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html23_audio_2} alt={images.html23_audio_2} className="img"/>
+            <img src={images.html23_audio_2} alt="audio" className="img"/>
         </div>
     </article>
     <article>
@@ -40,9 +40,9 @@ export default function Audio(){
             <div className="mital">مثال : </div>
             <ul><li>يبيّن هذه المثال كيفية تضمين مقطع صوتي باستخدام العنصر <strong>&lt;audio&gt;</strong> وله أكثر من مصدر، أحدها بصيغة <b>ogg</b> والآخر بصيغة <b>mp3</b></li></ul>
             <h4 className="green"> الكود </h4>
-            <img src={images.html23_audio2} alt={images.html23_audio2} className="img"/>
+            <img src={images.html23_audio2} alt="audio" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html23_audio_2} alt={images.html23_audio_2} className="img"/>
+            <img src={images.html23_audio_2} alt="audio" className="img"/>
         </div>
     </article>
     <article>
@@ -56,7 +56,7 @@ export default function Audio(){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <img src={images.html23_audio3} alt={images.html23_audio3} className="img"/>
+            <img src={images.html23_audio3} alt="audio" className="img"/>
         </div>
 
         <h5>السمة autoplay </h5>
@@ -67,7 +67,7 @@ export default function Audio(){
         </div>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <img src={images.html23_audio4} alt={images.html23_audio4} className="img"/>
+            <img src={images.html23_audio4} alt="audio" className="img"/>
         </div>
 
         <h5>السمة loop </h5>
@@ -79,7 +79,7 @@ export default function Audio(){
         </div>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <img src={images.html23_audio5} alt={images.html23_audio5} className="img"/>
+            <img src={images.html23_audio5} alt="audio" className="img"/>
         </div>
 
         <h5>السمة preload </h5>
@@ -93,7 +93,7 @@ export default function Audio(){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <img src={images.html23_audio6} alt={images.html23_audio6} className="img"/>
+            <img src={images.html23_audio6} alt="audio" className="img"/>
         </div>
     </article>
 </section>

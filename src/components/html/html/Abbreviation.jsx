@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Abbreviation(){

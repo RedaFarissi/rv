@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Heading(){
@@ -12,7 +12,7 @@ export default function Heading(){
     return(
 <section className="section-conetent">
     <h1 className="heading-style-html">HTML Heading</h1>
-    <p className="style_divv">
+    <p className="style_divv mt-5">
         العناوين في لغة <b>HTML</b> من أهم الوسوم التي تسخدم في <b>HTML</b> فالعناوين معرّفة بوسوم من :<br/>
         <kbd>&lt;h1&gt;</kbd> الى ... <kbd>&lt;h1&gt;</kbd> . <kbd>&lt;h6&gt;</kbd> هو أكبر مقاس للعنوان بينما نجد أن الوسم <kbd>&lt;h6&gt;</kbd> هو أصغر مقاس للعناوين.
     </p>
@@ -26,9 +26,9 @@ export default function Heading(){
         <div className="mital">مثال : </div>
         <ul><li> <i>  لاحظ ان كل العناوين تقوم بالعودة إلى سطر تلقائيا </i></li></ul>
         <h4 className="green"> الكود </h4>
-        <img src={images.html1_h1} className="img" />
+        <img src={images.html1_h1} alt="h1" className="img" />
         <h4 className="green"> بعد تشغيل الكود </h4>
-        <img src={images.html1_h1_2} className="img" />
+        <img src={images.html1_h1_2} alt="h1" className="img" />
     </div>
 
 </section>

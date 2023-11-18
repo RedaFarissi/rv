@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Subscript(){
@@ -16,7 +16,7 @@ export default function Subscript(){
             <div className="sum_exemple_style">
                 <div className="mital">مثال : </div>
                 <h4 className="green"> الكود </h4>
-                <img src={images.html13_sub} className="img"/>
+                <img src={images.html13_sub} alt="sub code" className="img"/>
                 <h4 className="green">  بعد تشغيل الكود  </h4>
                 <div className="style-result"> 
                     <h2>H<sub>2</sub>O</h2><hr/><h2> text <sub>sub</sub> </h2>

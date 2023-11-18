@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function BiDirectionalIsolation(){
@@ -17,7 +17,7 @@ export default function BiDirectionalIsolation(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html26_bdi} alt={images.html26_bdi} className="img"/>
+            <img src={images.html26_bdi} alt="bdi code" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 <b>

@@ -1,5 +1,5 @@
 import { Routes, Route , Link } from "react-router-dom";
-import { Introduction } from './path.js';
+import { Introduction } from './pathJs.js';
 import "./Js.sass"
 
 export default function Js(){

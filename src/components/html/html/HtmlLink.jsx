@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function HtmlLink(){
@@ -7,7 +7,7 @@ export default function HtmlLink(){
 <section className="section-conetent">
     <h1 className="heading-style-html">HTML Link </h1>
     <article>
-        <p className="style_divv">
+        <p className="style_divv mt-5">
             يحدد الوسم <kbd>&lt;link&gt;</kbd> العلاقة بين المستند الحالي ومورد خارجي  .<br/>
             غالبا ما يستخدم الوسم <kbd>&lt;link&gt;</kbd> للارتباط بأوراق الأنماط الخارجية أو لإضافة رمز <b>favicon</b> إلى موقعك على الويب.<br/>
             يتم وضع الوسم <kbd>&lt;link&gt;</kbd>  داخل الوسم <kbd>&lt;head&gt;</kbd>  و هو وسم فارغ، يحتوي على السمات فقط.

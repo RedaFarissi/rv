@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Division(){
@@ -21,9 +21,9 @@ export default function Division(){
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html21_div} className="img"/>
+            <img src={images.html21_div} alt="div code" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html21_div_2} className="img"/>
+            <img src={images.html21_div_2} alt="div result" className="img"/>
         </div>
     </article>
 </section>

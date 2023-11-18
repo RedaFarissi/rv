@@ -7,8 +7,6 @@
     font-family: 'Roboto', sans-serif
     box-sizing: border-box
    
-.green
-    color: green
 body
     background-color: #171717
     overflow-x: hidden
@@ -34,6 +32,7 @@ body
     direction: ltr
     padding: 9x
     overflow-y: auto
+    overflow-x: hidden
     font-size: 14px 
     &::-webkit-scrollbar 
         box-sizing: border-box
@@ -47,7 +46,6 @@ body
         border-radius: 8px
     ul
         width: 100%
-        
     li
         border: none
         padding: 0
@@ -108,3 +106,25 @@ body
     .mital
         color: yellow
         font-size: 23px
+
+
+    
+    
+    
+    
+.green
+    color: green
+
+
+.overflow-x
+    overflow: auto
+    &::-webkit-scrollbar 
+        box-sizing: border-box
+        height: 7px
+    &::-webkit-scrollbar-track 
+        background: rgb(20 20 20)
+       
+    &::-webkit-scrollbar-thumb 
+        background:  #313336
+        -webkit-border-radius: 10px  
+        border-radius: 8px

@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 
 export default function Editor() {
 
@@ -25,21 +25,21 @@ return(
             <li>بعد نقر على رابط ستجد </li>
         </ul>
         <ul><li> الأن قم بتحميل على حسب نوع النضام الذي لديك بم أنني أستعمل <b>windows</b> سأنقر على زر <b>windows</b></li></ul>
-        <img src={images.html_Editor_2} className="img"/>
+        <img src={images.html_Editor_2} alt="Editor" className="img"/>
         <ul>
             <li> عند النقر سيبدأ تحميل تلقائيا </li>
             <li> بعد نتهاء تحميل قم بنقر على controls google كما مبين في صورة أسفله   </li>
         </ul>
-        <img src={images.html_Editor_3} className="img"/>
+        <img src={images.html_Editor_3} alt="Editor" className="img"/>
         <ul><li>    بعد نقر توجه إلى التحميلات   </li></ul>
-        <img src={images.html_Editor_4} className="img"/>
+        <img src={images.html_Editor_4} alt="Editor" className="img"/>
         <ul><li>    بعد نقر على التحميلات ستضهر عندك صفحة بهذا الشكل   </li></ul>
-        <img src={images.html_Editor_5} className="img"/>
+        <img src={images.html_Editor_5} alt="Editor" className="img"/>
         <ul>
             <li>  الأن قم بنقر على ذالك رابط وافق على شروط تم قم بضغط على next حتي ينتهي تحميل .</li>
             <li>  الأن بعد إنتهاء التحميل عند فتح البرنامج سيكون شكل كتالي : </li>
         </ul>
-        <img src={images.html_Editor_6} className="img"/>
+        <img src={images.html_Editor_6} alt="Editor" className="img"/>
     </article>
     <article>
         <h2 className="title-h2">3. إنشاء ملف HTML</h2>
@@ -47,23 +47,23 @@ return(
             <li> لإنشاء ملف <b>HTML</b> قم بنقر على <b>File</b> </li>
             <li> بعد نقر على على <b>File</b>  ستضهر قائمة كما في المتال التالي : </li>
         </ul>
-        <img src={images.html_Editor_7} className="img"/>
+        <img src={images.html_Editor_7} alt="Editor" className="img"/>
         <ul><li> قم بنقر على <b>New File</b> كتالي :</li></ul>
-        <img src={images.html_Editor_8} className="img"/>
+        <img src={images.html_Editor_8} alt="editor exemple" className="img"/>
         <ul><li> عند نقر سيتم فتح صفحة جديدة فارغة .</li></ul>
-        <img src={images.html_Editor_9} className="img"/>
+        <img src={images.html_Editor_9} alt="editor exemple" className="img"/>
         <ul>
             <li> قم بنقر على <b>File</b> من جديد وقم بتحديد خيار <b>Save As</b>.</li>   
         </ul> 
-        <img src={images.html_Editor_10} className="img"/>
+        <img src={images.html_Editor_10} alt="Editor" className="img"/>
         <ul> 
             <li>عند نقر على Save As سيمكنك إختيار إسم لملف وإمتداده بما أننا في كورس <b>HTML</b> سنضيف إمتداد <b>html</b></li>
             <li> في المتال التالي قمنا بتسمية ملف  <b>HTML</b> بإسم coder_reda والإمتداد يأتي بعد النقطة وهو html </li>
             <li> قمنا بتحديد مكان حفض الملف داخل <b>Desktop</b></li>
         </ul>
-        <img src={images.html_Editor_11} className="img"/>
+        <img src={images.html_Editor_11} alt="Editor" className="img"/>
         <ul><li>عند تحول شكل الملف كتالي إعلم أن كل شيء يعمل بشكل جيد</li></ul>
-        <img src={images.html_Editor_12} className="img"/> 
+        <img src={images.html_Editor_12} alt="Editor" className="img"/> 
     </article>
 
 </section>

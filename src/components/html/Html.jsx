@@ -1,19 +1,16 @@
 import { Routes, Route , Link } from "react-router-dom";
 import { 
-    Introduction , Editor , Attributes , Heading , Paragraph , Break , Horizontal ,
-    Superscript ,  Subscript , Underline , Italic , Abbreviation , Blockquote ,  
-    Quotation , Mark , Deleted , Preformatted , Small , Anchor , Image , Division , 
-    Span , Audio , Video , Details , BiDirectionalIsolation , BiDirectionalOverride ,
-    ListsOrdered , ListsUnordered , ListsDefinitionul , Table , Input , From , 
-    Textarea , Button , Fieldset , Dialog , Iframe , Meter , Style , HtmlLink , Meta
+    Introduction ,Editor ,Attributes ,Heading ,Paragraph ,Break ,Horizontal ,
+    Superscript ,Subscript ,Underline ,Italic ,Abbreviation ,Blockquote ,Header
+    ,Quotation ,Mark ,Deleted ,Preformatted ,Small ,Anchor ,Image ,Division , 
+    Span ,Audio ,Video ,Details ,BiDirectionalIsolation ,BiDirectionalOverride ,
+    ListsOrdered ,ListsUnordered ,ListsDefinitionul ,Table ,Input ,Select ,From , 
+    Textarea ,Button ,Fieldset ,Dialog ,Iframe ,Meter ,Style ,HtmlLink ,Meta , 
 } from './pathHtml.js';
 
-export default function Html(){
-    const html_list = [
-        "Introduction","Editor","Attributes","Heading (h1)","Paragraph (p)" ,"Break (br)","Horizontal (hr)","Superscript (sup)","Subscript (sub)","Underline (u)","Italic (i)","Abbreviation (abbr)","Blockquote","Quotation (q)","Mark","Deleted (del)","Preformatted (pre)","Small","Anchor (a)","Image (img)","Division (div)","Span","Audio","Video","Details","Bi-Directional Isolation (bdi)","Bi-Directional Override (bdo)","Lists Ordered (ol)","Lists Unordered (ul)","Lists Definitionul (dl)","Table","Input","Textarea","From","Button","Fieldset","Dialog",
-        "Iframe","Meter","Style","Link","Meta"
-    ]
-    const arrays = html_list.map(e => <li className="list-group-item">
+export default function Html(props){
+    
+    const arrays = props.html_list.map(e => <li className="list-group-item">
         <Link to={`/html/${e.toLowerCase().replace(/\s/g, '-')}`}>HTML {e}</Link>
     </li>)
     return(    
@@ -58,9 +55,11 @@ export default function Html(){
                 <Route path='lists-definitionul-(dl)' element={<ListsDefinitionul />} /> 
                 <Route path='table' element={<Table />} /> 
                 <Route path='input' element={<Input />} /> 
+                <Route path='select' element={<Select />} /> 
                 <Route path='textarea' element={<Textarea />} /> 
                 <Route path='button' element={<Button />} /> 
                 <Route path='from' element={<From />} /> 
+                <Route path='header' element={<Header />} /> 
                 <Route path='fieldset' element={<Fieldset />} /> 
                 <Route path='dialog' element={<Dialog />} /> 
                 <Route path='iframe' element={<Iframe />} /> 

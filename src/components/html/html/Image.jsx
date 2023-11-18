@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Image(){
@@ -19,9 +19,9 @@ export default function Image(){
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html20_img} className="img"/>
+            <img src={images.html20_img} alt="code" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html20_img_2} className="img"/>
+            <img src={images.html20_img_2} alt="result" className="img"/>
             <ul>  
                 <li> يمكنك تحكم بحجم صورة وتعديل على شكلها بستخدام <b>CSS</b> . </li>
                 <li> السمة <b>alt</b> تستعمل  لإضهار رسالة للمستعمل في حالة حدت مشكل ولم يتمكن لمتصفح من عرض الصورة .</li>
@@ -31,9 +31,9 @@ export default function Image(){
             <div className="mital">متال 2 : </div>
             <ul><li>قمنا بكتابة مسار خاطئ لصورة لتتمكن من رؤية فائدة <b>alt</b></li></ul>
             <h4 className="green"> الكود </h4> 
-            <img src={images.html20_img2} className="img"/>
+            <img src={images.html20_img2} alt="code" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html20_img2_2} className="img"/>
+            <img src={images.html20_img2_2} alt="result" className="img"/>
         </div>
     </article>
 </section>

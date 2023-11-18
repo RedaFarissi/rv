@@ -1,5 +1,5 @@
 
-import images from "../images";
+import images from "../imagesHtml";
 
 export default function Horizontal(){
     return(
@@ -15,9 +15,9 @@ export default function Horizontal(){
     <div className="sum_exemple_style">
         <div className="mital">متال : </div>
         <h4 className="green"> الكود </h4>
-        <img src={images.html15_hr} className="img"/>
+        <img src={images.html15_hr} alt="hr" className="img"/>
         <h4 className="green"> بعد تشغيل الكود </h4>
-        <img src={images.html15_hr_2} className="img"/>
+        <img src={images.html15_hr_2} alt="hr" className="img"/>
     </div>
     <div className="green"> ملاحظة :</div>
     <ul><li> يتم إضافة القليل من الفراغ فوق السطر وأسفله يمكنك التعديل وجعله كيفما تريده بستعمال CSS ( ستتعلم ذالك في دروس CSS).</li></ul>

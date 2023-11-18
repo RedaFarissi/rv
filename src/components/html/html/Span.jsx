@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Span(){
@@ -20,7 +20,7 @@ export default function Span(){
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html22_span} className="img"/>
+            <img src={images.html22_span} alt="span code" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 <span style={{fontSize:"xx-large"}}>My</span> mother has <span style={{color:"blue"}}>blue</span> eyes.

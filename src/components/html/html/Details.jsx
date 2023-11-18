@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 import html_logo from "../../../assests/images/logo/html_logo.png"
 import css_logo from "../../../assests/images/logo/css_logo.png"
@@ -22,7 +22,7 @@ export default function Details(){
     <div className="sum_exemple_style">
     <div className="mital">مثال : </div>
     <h4 className="green"> الكود </h4>
-    <img src={images.html25_details} alt={images.html25_details} className="img"/>
+    <img src={images.html25_details} alt="details" className="img"/>
     <h4 className="green"> بعد تشغيل الكود </h4>
     <div className="style-result">
         <details>
@@ -31,7 +31,7 @@ export default function Details(){
                <div>
                    <center>
                         <h2><u>html</u></h2>
-                        <img src={html_logo} width="20%" alt="html logo"/>
+                        <img src={html_logo} alt="logo html" width="20%" />
                    </center>
                </div>
             </div>
@@ -49,7 +49,7 @@ export default function Details(){
         </details>
     </div>
     <h4 className="green"> عند نقر على العنوانين سيضهر محتوى details</h4>
-        <img src={images.html25_details_3} alt={images.html25_details_3} className="img"/>
+        <img src={images.html25_details_3} alt="details" className="img"/>
         <ul><li>عند إعادة الضغط سيعود المتصفح لشكل الأول</li></ul>
     </div>
 </section>

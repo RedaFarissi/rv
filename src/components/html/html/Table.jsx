@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 import "./Table.css"
 
@@ -32,7 +32,7 @@ export default function Table(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html31_table} className="img"/>
+            <img src={images.html31_table} alt="table code" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 <table id="a_tablE"><tr> <th>Month</th> <th>Savings</th> </tr>  <tr> <td>January</td> <td>$100</td> </tr></table>
@@ -49,7 +49,7 @@ export default function Table(){
         <div className="sum_exemple_style">
             <div className="mital">مثال 2 : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html31_table2} className="img"/>
+            <img src={images.html31_table2} alt="table code" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 <table className="b_tablE"><tr> <th>Month</th> <th>Savings</th> </tr>  <tr> <td>January</td> <td>$100</td> </tr> <tr> <td>February</td> <td>$80</td> </tr></table>
@@ -68,7 +68,7 @@ export default function Table(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html31_table3} className="img"/> 
+            <img src={images.html31_table3} alt="table code" className="img"/> 
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 <table className="b_tablE ml-0" >
@@ -95,7 +95,7 @@ export default function Table(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html31_table4} className="img"/>
+            <img src={images.html31_table4} alt="table code" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 <h2 style={{marginBottom:"32px",fontWeight:"790"}}>HTML colgroup tag</h2>
@@ -131,7 +131,7 @@ export default function Table(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html31_table5} className="img"/> 
+            <img src={images.html31_table5} alt="table code" className="img"/> 
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 <table id="e_table">
@@ -153,7 +153,7 @@ export default function Table(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html31_table6} className="img"/>
+            <img src={images.html31_table6} alt="table code" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 <table id="f_table">
@@ -171,7 +171,7 @@ export default function Table(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html31_table7} className="img"/>
+            <img src={images.html31_table7} alt="table code" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 <table id="f_table">

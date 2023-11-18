@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Paragraph(){
@@ -20,7 +20,7 @@ export default function Paragraph(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html16_p} className="img"/>
+            <img src={images.html16_p} alt="Paragraph code" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className='style-result'>
                 <p dir="rtl">هذه فقرة</p>

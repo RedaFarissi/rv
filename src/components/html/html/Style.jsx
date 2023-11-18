@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Style(){
@@ -32,16 +32,16 @@ export default function Style(){
     <div className="sum_exemple_style">
     <div className="mital">مثال : </div>
       <h4 className="green"> الكود </h4>
-      <img src={images.html40_style} className="img"/>
+      <img src={images.html40_style} alt="style code" className="img"/>
       <h4 className="green"> بعد تشغيل الكود </h4>
-      <img src={images.html40_style_2} className="img"/>
+      <img src={images.html40_style_2} alt="style result" className="img"/>
     </div>
     <div className="sum_exemple_style">
       <div className="mital">مثال 2 : </div>
       <h4 className="green"> الكود </h4>
-      <img src={images.html40_style2} className="img"/>
+      <img src={images.html40_style2} alt="style code" className="img"/>
       <h4 className="green"> بعد تشغيل الكود </h4>
-      <img src={images.html40_style2_2} className="img"/>
+      <img src={images.html40_style2_2} alt="style result" className="img"/>
     </div>
   </article>
 </section>

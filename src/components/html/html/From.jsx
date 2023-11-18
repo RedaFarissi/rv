@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function From(){
@@ -49,13 +49,13 @@ export default function From(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html32_form} className="img"/>
+            <img src={images.html32_form} alt="form" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html32_form_2} className="img"/>
+            <img src={images.html32_form_2} alt="form" className="img"/>
             <ul><li>الان سنقوم بكتابة إسم والنقر على الزر OK  </li></ul>
-            <img src={images.html32_form_3} className="img"/>
+            <img src={images.html32_form_3} alt="form" className="img"/>
             <ul><li> عند النقر على الزر OK سيتم إرسال البيانات إلى الخادم .  </li></ul>
-            <img src={images.html32_form_4} className="img"/>
+            <img src={images.html32_form_4} alt="form" className="img"/>
         </div>
         <ul>    
             <li> لا تقلق إن لم تفهم الوسم <kbd>&lt;input&gt;</kbd> و الوسم <kbd>&lt;button&gt;</kbd> سنشرح ذالك في دروس القادمة . </li>

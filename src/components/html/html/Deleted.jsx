@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Deleted(){
@@ -17,7 +17,7 @@ export default function Deleted(){
         <div className="sum_exemple_style">
             <div className="mital"> متال :</div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html8_del} className="img"/>
+            <img src={images.html8_del} alt="del" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 <del>100DH</del> <strong>70 dh</strong>

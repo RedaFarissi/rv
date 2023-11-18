@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Italic(){
@@ -7,7 +7,7 @@ export default function Italic(){
     return(
 <section className="section-conetent">
     <h1 className="heading-style-html">HTML Italic (i)</h1>
-    <article className="mt-4">
+    <article className="mt-5">
         <p className="style_divv">
             الوسم  <kbd>&lt;i&gt;</kbd>  في <b>HTML</b> يستخدم لعرض المحتوى بأسلوب مائل. يستخدم هذا الوسم عمومًا لعرض المصطلح التقني والعبارة والكلمة المهمة بلغة مختلفة .<br/>
             الوسم <kbd>&lt;i&gt;</kbd>  هو وسم زوجي يحتوي على علامة الفتح والمحتوى وعلامة الإغلاق .
@@ -16,7 +16,7 @@ export default function Italic(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html6_i} className="img"/>
+            <img src={images.html6_i}  alt="italic code" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 italique <br/> <i>italique</i> <hr/> <i>italique</i>

@@ -15,6 +15,8 @@ export default function Header(){
     {name:"PHP" , link:"php" , color:"color-php-nav"},
     {name:"LARAVEL" , link:"laravel" , color:"color-laravel-nav"} ,
     {name:"LARAVEL API" , link:"laravel_api" , color:"color-laravel-nav"},
+    {name:"Git" , link:"git" , color:"color-powerShell-nav"},
+    {name:"powerShell" , link:"power-shell" , color:"color-powerShell-nav"},
   ]
   const links = programing.map(e=> 
             <li className="menu-category">

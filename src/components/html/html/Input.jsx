@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Italic(){
@@ -44,7 +44,7 @@ export default function Italic(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html33_input} className="img"/>
+            <img src={images.html33_input} alt="input" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result"><b>entrer votre Prénom:</b> <input type="text"/></div>
         </div>
@@ -60,7 +60,7 @@ export default function Italic(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html33_input2} className="img"/>
+            <img src={images.html33_input2} alt="input" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 First name: <input type="text"/>
@@ -76,7 +76,7 @@ export default function Italic(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html33_input3} className="img"/>
+            <img src={images.html33_input3} alt="input" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result"><input type="hidden"/> <button>OK</button></div>
         </div>
@@ -92,7 +92,7 @@ export default function Italic(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html33_input4} className="img"/>
+            <img src={images.html33_input4} alt="input" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                  <input type="radio" name="test-raddio"/> HTML <br/>
@@ -111,7 +111,7 @@ export default function Italic(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html33_input5} className="img"/>
+            <img src={images.html33_input5} alt="input" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                  <input type="checkbox" name="radiditese"/> HTML <br/>
@@ -126,7 +126,7 @@ export default function Italic(){
         </p>
         <div className="sum_exemple_style">
             <h4 className="green"> الكود </h4>
-            <img src={images.html33_input6} className="img"/>
+            <img src={images.html33_input6} alt="input" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 input email : <input type="email"/><button type="submit">OK</button>
@@ -141,7 +141,7 @@ export default function Italic(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html33_input7} className="img"/>
+            <img src={images.html33_input7} alt="input" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 input your email : <input type="email"/><br/>
@@ -157,7 +157,7 @@ export default function Italic(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html33_input8} className="img"/>
+            <img src={images.html33_input8} alt="input" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                insert phone number : <input type="tel"/>
@@ -171,7 +171,7 @@ export default function Italic(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html33_input9} className="img"/>
+            <img src={images.html33_input9} alt="input" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                <input type="button" value="Click me"/>
@@ -185,7 +185,7 @@ export default function Italic(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html33_input10} className="img"/>
+            <img src={images.html33_input10} alt="input" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 Birthday: <input type="date"/>
@@ -198,7 +198,7 @@ export default function Italic(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html33_input11} className="img"/>
+            <img src={images.html33_input11} alt="input" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
               Select a time : <input type="time"/>
@@ -219,7 +219,7 @@ export default function Italic(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html33_input12} className="img"/> 
+            <img src={images.html33_input12} alt="input" className="img"/> 
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 Quantity (between 1 and 5): <input type="number" min="1" max="5"/>
@@ -237,7 +237,7 @@ export default function Italic(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html33_input13} className="img"/>
+            <img src={images.html33_input13} alt="input" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 Select a time : <input type="time" value="00:00"/><input type="button" value="OK"/> <input type="reset" value="Annuler"/>
@@ -250,7 +250,7 @@ export default function Italic(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html33_input14} className="img"/>
+            <img src={images.html33_input14} alt="input" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 Add your homepage  <input type="url"/>
@@ -270,7 +270,7 @@ export default function Italic(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html33_input15} className="img"/>
+            <img src={images.html33_input15} alt="input" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 Points (between 0 and 10): <input type="range" min="0" max="10"/>
@@ -285,9 +285,9 @@ export default function Italic(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4> 
-            <img src={images.html33_input16} className="img"/>
+            <img src={images.html33_input16} alt="input" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html33_input16_2} className="img"/>
+            <img src={images.html33_input16_2} alt="input reult" className="img"/>
         </div>
     </article>
     <article>

@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function ListsUnordered(){
@@ -20,7 +20,7 @@ export default function ListsUnordered(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html29_ul} className="img"/>
+            <img src={images.html29_ul}  alt="ul code" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 <ul style={{fontWeight:"500"}}><li className='text-dark'>html</li><li className='text-dark'>css</li><li className='text-dark'>js</li><li className='text-dark'>php</li></ul>
@@ -35,7 +35,7 @@ export default function ListsUnordered(){
             <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html29_ul2} className="img"/>
+            <img src={images.html29_ul2} alt="ul code" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 <ul type="circle" style={{fontWeight: "500"}}><li className='text-dark'>html</li><li className='text-dark'>css</li><li className='text-dark'>js</li><li className='text-dark'>php</li></ul>
@@ -43,7 +43,7 @@ export default function ListsUnordered(){
                 <ul type="disc" style={{fontWeight: "500"}}><li className='text-dark'>html</li><li className='text-dark'>css</li><li className='text-dark'>js</li><li className='text-dark'>php</li></ul>
             </div>  
             <ul><li> معلومة : يمكن كتابة قوائم متداخلة كما هو موضح في الصورة أسفله .</li></ul>
-            <img src={images.html29_ul3} className="img"/>
+            <img src={images.html29_ul3} alt="ul" className="img"/>
         </div>
     </article>
 </section>

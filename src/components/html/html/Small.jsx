@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Small(){
@@ -25,9 +25,9 @@ export default function Small(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html4_small_big} alt={images.html4_small_big} className="img"/>
+            <img src={images.html4_small_big} alt="big code" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html4_small_big_2} alt={images.html4_small_big_2} className="img"/>
+            <img src={images.html4_small_big_2} alt="big result" className="img"/>
         </div>
         <ul>
             <li>لا تلقي بالا لذالك  لأنه يمكنك ستعمال <b>CSS</b> في تحكم بحجم زر كما تريد <small><small>(ستتعلم دالك خلال دروس CSS)</small></small></li>

@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Introduction(){
@@ -103,7 +103,7 @@ export default function Introduction(){
         </p>
         <div className="sum_exemple_style">
             <h4 className="green"> الكود </h4>
-            <img src={images.html0_Introduction} className="img" />
+            <img src={images.html0_Introduction} alt="Introduction" className="img" />
             <h4 className="green">  بعد تشغيل الكود </h4>
             <div className="style-result">reda Eskouni</div>
         </div>

@@ -8,13 +8,9 @@ import laravel_logo from '../assests/images/logo/laravel_logo.svg'
 import python_logo from '../assests/images/logo/python_logo.svg'
 import django_logo from '../assests/images/logo/django_logo.svg'
 
-
-
 const images = {
     //logo
     html_logo , css_logo , js_logo , react_logo, vue_logo , php_logo , laravel_logo , python_logo,  django_logo,
-
-
 }
 
 export default images ;

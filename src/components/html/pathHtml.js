@@ -41,5 +41,5 @@ export {default as Meter} from './html/Meter';
 export {default as Style} from './html/Style';
 export {default as HtmlLink} from './html/HtmlLink';
 export {default as Meta} from './html/Meta';
-//export {default as } from './html/';
-//export {default as } from './html/';
+export {default as Select} from './html/Select';
+export {default as Header} from './html/Header';

@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Fieldset(){
@@ -20,16 +20,16 @@ export default function Fieldset(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html36_fieldset} className="img"/>
+            <img src={images.html36_fieldset} alt="fieldset"  className="img"/>
             <h4 className="green">  بعد تشغيل الكود  </h4>
-            <img src={images.html36_fieldset_2} className="img"/>
+            <img src={images.html36_fieldset_2} alt="fieldset" className="img"/>
         </div>
         <div className="sum_exemple_style">
             <div className="mital">مثال 2 : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html36_fieldset2} className="img"/>
+            <img src={images.html36_fieldset2} alt="fieldset" className="img"/>
             <h4 className="green">  بعد تشغيل الكود  </h4>
-            <img src={images.html36_fieldset2_2} className="img"/>
+            <img src={images.html36_fieldset2_2} alt="fieldset" className="img"/>
         </div>
     </article>
 </section>

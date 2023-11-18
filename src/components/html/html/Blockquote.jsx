@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Blockquote(){
@@ -18,7 +18,7 @@ export default function Blockquote(){
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
             <h4 className="green"> الكود </h4>    
-            <img src={images.html11_blockquote} className="img"/>
+            <img src={images.html11_blockquote} alt="Blockquote" className="img"/>
             <h4 className="green">  بعد تشغيل الكود  </h4>
             <div className="style-result">
                 <blockquote cite="https://www.google.com/"> google</blockquote>

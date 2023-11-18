@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Anchor(){
@@ -31,11 +31,11 @@ export default function Anchor(){
         <div className="sum_exemple_style">
             <div className="mital"> متال:</div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html12_a1} className="img" />
+            <img src={images.html12_a1} alt='a link' className="img" />
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html12_a2_2} className="img" />
+            <img src={images.html12_a2_2} alt='a link' className="img" />
             <h4 className="green">عند النقر على رابط  يتم توجيه المستخدم إلى google </h4>
-            <img src={images.html12_a1_3} className="img" />
+            <img src={images.html12_a1_3} alt='a link' className="img" />
             <h4 className="mital">ملاحطة :</h4>
             <ul><li> عند النقر على رابط موجود في الصفحة نجد أنه يتم فتح الصفحة الجديدة مكان الصفحة الحالية كما لاحظنا في المثال.</li></ul>
         </div>
@@ -49,11 +49,11 @@ export default function Anchor(){
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html12_a2} className="img"/>
+            <img src={images.html12_a2} alt='a link' className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html12_a2_2} className="img"/>
+            <img src={images.html12_a2_2} alt='a link' className="img"/>
             <h4 className="green">عند النقر على رابط  يتم توجيه المستخدم إلى google </h4>
-            <img src={images.html12_a2_3} className="img"/>
+            <img src={images.html12_a2_3} alt='a link' className="img"/>
             <h4 className="mital">ملاحطة :</h4>
             <ul><li> عند النقر على رابط موجود في الصفحة نجد أنه يتم فتح الصفحة الجديدة والإحتفاظ بصفحة الخاصة بي. قم بتحديد ما يناسبك  </li></ul>
         </div>
@@ -67,11 +67,11 @@ export default function Anchor(){
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html12_a3} className="img"/>    
+            <img src={images.html12_a3} alt='a link' className="img"/>    
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html12_a3_2} className="img"/>
+            <img src={images.html12_a3_2} alt='a link' className="img"/>
             <h4 className="green">عند النقر على رابط  يتم توجيه المستخدم إلى google </h4>
-            <img src={images.html12_a3_3} className="img"/>
+            <img src={images.html12_a3_3} alt='a link' className="img"/>
         </div>
     </article>
     <article>
@@ -84,7 +84,7 @@ export default function Anchor(){
             <div className="mital">متال : </div>
             <ul><li>قم بنقر للفهم على الروابط أسفله للفهم بشكل أفضل .</li></ul>
             <h4 className="green"> الكود </h4>
-            <img src={images.html12_a5} className="img"/>
+            <img src={images.html12_a5} alt='a link' className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result" style={{height:"540px",overflow:"auto"}}>
                 <a href="#title1">title1</a>&nbsp;&nbsp;
@@ -111,12 +111,12 @@ export default function Anchor(){
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
             <h4 className="green">  الكود </h4>
-            <img src={images.html12_a6_code1} className="img"/>
-            <img src={images.html12_a6_code2} className="img"/>
+            <img src={images.html12_a6_code1} alt='a link' className="img"/>
+            <img src={images.html12_a6_code2} alt='a link' className="img"/>
             <h4 className="green">  بعد تشغيل كود الصفحة html2.html </h4>
-            <img src={images.html12_a6_code1_2} className="img"/>
+            <img src={images.html12_a6_code1_2} alt='a link' className="img"/>
             <h4 className="green">  عند نقر على رابط </h4>
-            <img src={images.html12_a6_code2_2} className="img"/>
+            <img src={images.html12_a6_code2_2} alt='a link' className="img"/>
         </div>
         <ul>
             <li> بعد النقر على الرابط الذي يحمل <q>href=</q>html.html يتم توجيه إلى html.html .</li>
@@ -132,13 +132,13 @@ export default function Anchor(){
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
             <h4 className="green">  الكود </h4>
-            <img src={images.html12_a7_code1} className="img"/>
-            <img src={images.html12_a7_code2} className="img"/>
+            <img src={images.html12_a7_code1} alt='a link' className="img"/>
+            <img src={images.html12_a7_code2} alt='a link' className="img"/>
             <h4 className="green">  بعد تشغيل كود الصفحة html2.html </h4>
             <ul><li>  بعد النقر على الرابط الذي يحمل <q>href=</q>./html.html#title3 يتم توجيه إلى العنوان الذي يحمل <q>id=</q>title3  في صفحة html.html  </li></ul>
-            <img src={images.html12_a7_code1_2} className="img"/>
+            <img src={images.html12_a7_code1_2} alt='a link' className="img"/>
             <h4 className="green">  عند نقر على رابط title3</h4>
-            <img src={images.html12_a7_code2_2} className="img"/>
+            <img src={images.html12_a7_code2_2} alt='a link' className="img"/>
         </div>
     </article>
     <article>
@@ -148,9 +148,9 @@ export default function Anchor(){
         </p>
         <div className="mital">متال : </div>
         <h4 className="green">  الكود </h4>
-        <img src={images.html12_a4} className="img"/>
+        <img src={images.html12_a4} alt='a link' className="img"/>
         <h4 className="green"> بعد تشغيل الكود </h4>
-        <img src={images.html12_a4_2} className="img"/>
+        <img src={images.html12_a4_2} alt='a link' className="img"/>
     </article>
 </section>
 )

@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Preformatted(){
@@ -16,9 +16,9 @@ export default function Preformatted(){
             <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
             <div className="mital"> متال :</div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html19_pre} className="img"/>
+            <img src={images.html19_pre} alt="pre code" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html19_pre_2} className="img"/>
+            <img src={images.html19_pre_2} alt="pre result" className="img"/>
         </article>
     </section>
     )

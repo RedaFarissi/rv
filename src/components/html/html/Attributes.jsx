@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Attributes() {
@@ -35,13 +35,13 @@ return(
         <div className="sum_exemple_style">
             <div className="mital"> متال :</div>
             <h4 style={{color: "green"}}> الكود </h4>
-            <img src={images.html_Attributes} className="img" alt={images.html_Attributes} />
+            <img src={images.html_Attributes} alt='Attributes' className="img" />
             <ol>
                 <li>في المثال أعلاه <b>src</b> داخل الوسم <kbd>&lt;img&gt;</kbd> هو سمة <small>(Attributes)</small> ومسار الصورة المقدمة هو قيمة السمة <small>(value)</small>.</li>
                 <li>ايضا <b>href</b> داخل الوسم <strong>&lt;a&gt;</strong> هي سمة <small>(Attributes)</small> والرابط المقدم هو قيمته <small>(value)</small>، وهكذا</li>
             </ol>
             <h4 style={{color: "green"}}> بعد تشغيل الكود </h4>
-            <img src={images.html_Attributes_2} className="img" alt={images.html_Attributes_2} />
+            <img src={images.html_Attributes_2} className="img" alt='Attributes' />
         </div>
         <div style={{color:"blueviolet"}}> ملاحظة  </div>
         <small><ul><li>لا تقلق إن لم تفهم الوسم <kbd>&lt;img&gt;</kbd> و الوسم <kbd>&lt;a&gt;</kbd> ستجد كل شيء مشروح في دروس القادمة  </li></ul></small>
@@ -64,7 +64,7 @@ return(
             <div className="mital"> مثال: </div>
             في المثال التالي لدينا عنصر <kbd>&lt;h2&gt;</kbd> يشير إلى اسم المعرف "coder_reda". سيتم تصميم عنصر <kbd>&lt;h2&gt;</kbd> هذا وفقًا لتعريف نمط coder_reda# في قسم الرأس:
             <h4 style={{color: "green"}}> الكود </h4>
-            <img src={images.html_Attributes2} className="img" alt={images.html_Attributes2}/>
+            <img src={images.html_Attributes2} className="img" alt='Attributes' />
             <h4 style={{color: "green"}}>  بعد تشغيل الكود </h4>
             <div className="style-result"><h2 style={{color:"green",fontSize:"45px"}}> title </h2> paragraph </div>
         </div>
@@ -86,7 +86,7 @@ return(
             <div className="mital"> مثال: </div>
             في المثال التالي لدينا ثلاثة عناصر <kbd>&lt;h2&gt;</kbd> مع سمة <b>class</b> بقيمة "class_tile". سيتم تصميم جميع عناصر <kbd>&lt;h2&gt;</kbd> الثلاثة بالتساوي لقسم الرأس
             <h4 style={{color: "green"}}> الكود </h4>
-            <img src={images.html_Attributes3} className="img" alt={images.html_Attributes3}/>
+            <img src={images.html_Attributes3} className="img" alt='Attributes' />
             <h4 style={{color: "green"}}>  بعد تشغيل الكود </h4>
             <div className="style-result"> 
                 <h2 style={{color:"green",fontSize:"35px"}}>title</h2> 

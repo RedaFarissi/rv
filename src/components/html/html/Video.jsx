@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Audio(){
@@ -92,7 +92,7 @@ export default function Audio(){
         </div>
         <div className="sum_exemple_style">
         <div className="mital">مثال : </div>
-        <img src={images.html24_video6} alt={images.html24_video6} className="img"/>
+        <img src={images.html24_video6} alt="video code" className="img"/>
         </div>
         <h4>السمة poster </h4>
         <div className="style_divv">
@@ -104,7 +104,7 @@ export default function Audio(){
         </div>
         <div className="sum_exemple_style">
         <div className="mital">مثال : </div>
-        <img src={images.html24_video7} alt={images.html24_video7} className="img"/>
+        <img src={images.html24_video7} alt="code_video" className="img"/>
         </div>
     </article>
 </section>

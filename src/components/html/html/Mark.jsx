@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Mark(){
@@ -17,9 +17,9 @@ export default function Mark(){
         <div className="sum_exemple_style">
             <div className="mital"> متال :</div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html17_mark}   className="img"/>
+            <img src={images.html17_mark} alt="mark code"  className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html17_mark_2} className="img"/>  
+            <img src={images.html17_mark_2} alt="mark result" className="img"/>  
         </div>
     </article>
 </section>

@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Italic(){
@@ -36,7 +36,7 @@ export default function Italic(){
     </div>
     <div className="sum_exemple_style">
     <h4 className="green"> طريقة الإستعمال  </h4>
-    <img src={images.html42_meta} className="img"/>
+    <img src={images.html42_meta} alt="meta code" className="img"/>
     </div>
 </article>
 <article>
@@ -52,7 +52,7 @@ export default function Italic(){
     </div>
     <div className="sum_exemple_style">
     <h4 className="green"> طريقة الإستعمال  </h4>
-    <img src={images.html42_meta2} className="img"/>
+    <img src={images.html42_meta2} alt="meta" className="img"/>
     </div>
     <h5>2.  وصف صفحة الويب الخاصة  </h5>
     <div className="style_divv">
@@ -61,7 +61,7 @@ export default function Italic(){
     </div>
     <div className="sum_exemple_style">
     <h4 className="green"> طريقة الإستعمال  </h4>
-    <img src={images.html42_meta3} className="img"/>
+    <img src={images.html42_meta3}  alt="meta" className="img"/>
     </div>
     <h5>3.  مؤلف صفحة </h5>
     <div className="style_divv">
@@ -70,7 +70,7 @@ export default function Italic(){
     </div>
     <div className="sum_exemple_style">
     <h4 className="green"> طريقة الإستعمال  </h4>
-    <img src={images.html42_meta4} className="img"/>
+    <img src={images.html42_meta4} alt="meta" className="img"/>
     </div>
     <h5>4.  موقع متجاوب مع جميع الأجهزة </h5>
     <div className="style_divv">
@@ -79,7 +79,7 @@ export default function Italic(){
     </div>
     <div className="sum_exemple_style">
     <h4 className="green"> طريقة الإستعمال  </h4>
-    <img src={images.html42_meta5} className="img"/>
+    <img src={images.html42_meta5} alt="meta" className="img"/>
     </div>
     <h5>4.   تحديد كيف يتم عرض موقعك في فيس بوك </h5>
     تستخدم الخاصية <b>meta</b> مع السمة <b><bdi>property="og:title"</bdi></b> لتحديد عنوان لموقعك عند مشاركته على فيس بوك . يتم تحدي العناون داخل الخاصية <b>content</b> 

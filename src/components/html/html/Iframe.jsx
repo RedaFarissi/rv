@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 
 export default function Iframe(){
    
@@ -21,9 +21,9 @@ export default function Iframe(){
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html37_iframe} className="img"/>
+            <img src={images.html37_iframe} alt="iframe"  className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html37_iframe_2} className="img"/>
+            <img src={images.html37_iframe_2} alt="iframe" className="img"/>
         </div>
     </article>
     <article>

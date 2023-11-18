@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function Quotation(){
@@ -15,9 +15,9 @@ export default function Quotation(){
         <div className="sum_exemple_style">
             <div className="mital"> متال :</div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html18_q} alt={images.html18_q} className="img"/>
+            <img src={images.html18_q} alt="q code"  className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html18_q_2} alt={images.html18_q_2} className="img"/>
+            <img src={images.html18_q_2} alt="q result" className="img"/>
         </div>
     </article>
 </section>

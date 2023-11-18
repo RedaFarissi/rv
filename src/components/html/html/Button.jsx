@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 import "./Button.css"
 
@@ -21,9 +21,9 @@ export default function Button(){
             <div className="mital">مثال : </div>
             <ul><li> في هاده الحالة تم إنشاء زر عند النقر عليه  لا يحدت أي شيء .</li></ul>
             <h4 className="green"> الكود </h4>
-            <img src={images.html34_button} className="img"/>
+            <img src={images.html34_button} alt="button" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html34_button_2} className="img"/>
+            <img src={images.html34_button_2} alt="button" className="img"/>
         </div>
     </article>
     <article>
@@ -37,9 +37,9 @@ export default function Button(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html34_button2} className="img"/>
+            <img src={images.html34_button2} alt="button" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html34_button2_2} className="img"/>
+            <img src={images.html34_button2_2} alt="button" className="img"/>
         </div>
         <h5> 2. القيمة reset </h5>
         <div className="style_divv">
@@ -48,9 +48,9 @@ export default function Button(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html34_button3} className="img"/>
+            <img src={images.html34_button3} alt="button" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html34_button3_2} className="img"/>
+            <img src={images.html34_button3_2} alt="button" className="img"/>
         </div>
     </article>
     <article>

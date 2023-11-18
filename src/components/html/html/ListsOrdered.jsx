@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function ListsOrdered(){
@@ -20,7 +20,7 @@ export default function ListsOrdered(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html28_ol} className="img"/>
+            <img src={images.html28_ol}  alt="ol code" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
             <div className="style-result">
                 <ol style={{fontWeight: "500"}}>
@@ -48,7 +48,7 @@ export default function ListsOrdered(){
     <div className="sum_exemple_style">
         <div className="mital">مثال : </div>
         <h4 className="green"> الكود </h4>
-        <img src={images.html28_ol2} className="img"/>
+        <img src={images.html28_ol2} alt="ol code" className="img"/>
         <h4 className="green"> بعد تشغيل الكود </h4>
         <div className="style-result">
             <h2><bdi>type="I"</bdi></h2>
@@ -69,7 +69,7 @@ export default function ListsOrdered(){
     <div className="sum_exemple_style">
         <div className="mital">مثال : </div>
         <h4 className="green"> الكود </h4>
-        <img src={images.html28_ol3} className="img"/>
+        <img src={images.html28_ol3} alt="ol code" className="img"/>
         <h4 className="green"> بعد تشغيل الكود </h4>
         <div className="style-result">
             <ol start="7" style={{fontWeight: "500"}}><li className='text-dark'>html</li><li className='text-dark'>css</li><li className='text-dark'>js</li><li className='text-dark'>php</li></ol><hr/>
@@ -84,7 +84,7 @@ export default function ListsOrdered(){
     <div className="sum_exemple_style">
         <div className="mital">مثال : </div>
         <h4 className="green"> الكود </h4>
-        <img src={images.html28_ol4} className="img"/>
+        <img src={images.html28_ol4} alt="ol code" className="img"/>
         <h4 className="green"> بعد تشغيل الكود </h4>
         <div className="style-result">
             <ol reversed style={{fontWeight: "500"}}>

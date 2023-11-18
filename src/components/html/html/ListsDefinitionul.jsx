@@ -1,4 +1,4 @@
-import images from "../images";
+import images from "../imagesHtml";
 import { CodeHighlighter } from "../pathHtml";
 
 export default function ListsDefinitionul(){
@@ -26,9 +26,9 @@ export default function ListsDefinitionul(){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
-            <img src={images.html30_dl} className="img"/>
+            <img src={images.html30_dl}  alt="dl code" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html30_dl_2} className="img"/>
+            <img src={images.html30_dl_2}  alt="dl result" className="img"/>
         </div>
         <ul>
             <li> يمكن إستخدام <b>CSS</b> لتصميم شكل جميل <small> ستتعلم ذالك خلال دروس <b>CSS</b></small> </li>
