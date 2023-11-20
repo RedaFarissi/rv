@@ -1,0 +1,41 @@
+const codes = [
+    {
+      title:"Introduction", 
+      What_is_React:"",
+      How_react_work:"",
+      What_you_need_to_get_started:"",
+      ES6:"",
+      Create_React_App:"",
+      Run_React_App:""
+    },
+    { React_Render_HTML:"" },
+    { JSX:"" },
+    {
+      title:"Component",
+      function_Component:"",
+      function_Component_props:"",
+      class_Component_this_props:"",
+      Components_in_Components:"",
+    },
+    {Event:""},
+    {state:""},
+    {this_state:""},
+    {Lists:""},
+    {hindle_file_images_react:""},
+    {hindle_import:""},
+    {props_children:""},
+    {
+      title:"hooks",
+      useNavigate:"",
+      useParams:""
+    },
+    {
+      title:"packages",
+      npm_ls:"",
+      Router:"",
+      axios:"",
+      react_paypal_js:"",
+      react_sass:"",
+      react_syntax_highlighter:""
+    }
+  ]

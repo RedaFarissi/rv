@@ -1,0 +1,55 @@
+import react8 from "../../assests/images/reactjs/react8.png"
+import react9  from "../../assests/images/reactjs/react9.png"
+import react10  from "../../assests/images/reactjs/react10.png"
+
+import react15  from "../../assests/images/reactjs/react15.png"
+import react16  from "../../assests/images/reactjs/react16.png"
+import react18  from "../../assests/images/reactjs/react18.png"
+import react19  from "../../assests/images/reactjs/react19.png"
+import react20  from "../../assests/images/reactjs/react20.png"
+import react21  from "../../assests/images/reactjs/react21.png"
+import react22  from "../../assests/images/reactjs/react22.png"
+import react23  from "../../assests/images/reactjs/react23.png"
+import react24  from "../../assests/images/reactjs/react24.png"
+import react25  from "../../assests/images/reactjs/react25.png"
+import react26  from "../../assests/images/reactjs/react26.png"
+import react27  from "../../assests/images/reactjs/react27.png"
+import react28  from "../../assests/images/reactjs/react28.png"
+import react29  from "../../assests/images/reactjs/react29.png"
+import react30  from "../../assests/images/reactjs/react30.png"
+import react31  from "../../assests/images/reactjs/react31.png"
+import react32  from "../../assests/images/reactjs/react32.png"
+import react33  from "../../assests/images/reactjs/react33.png"
+import react34  from "../../assests/images/reactjs/react34.png"
+import react35  from "../../assests/images/reactjs/react35.png"
+import react36  from "../../assests/images/reactjs/react36.png"
+import react37  from "../../assests/images/reactjs/react37.png"
+import react38  from "../../assests/images/reactjs/react38.png"
+import react39  from "../../assests/images/reactjs/react39.png"
+import react40  from "../../assests/images/reactjs/react40.png"
+import react41  from "../../assests/images/reactjs/react41.png"
+import react42  from "../../assests/images/reactjs/react42.png"
+import react43  from "../../assests/images/reactjs/react43.png"
+import react44  from "../../assests/images/reactjs/react44.png"
+import react45  from "../../assests/images/reactjs/react45.png"
+import react46  from "../../assests/images/reactjs/react46.png"
+import react47  from "../../assests/images/reactjs/react47.png"
+import react48  from "../../assests/images/reactjs/react48.png"
+import react49  from "../../assests/images/reactjs/react49.png"
+import react50  from "../../assests/images/reactjs/react50.png"
+import react51  from "../../assests/images/reactjs/react51.png"
+import react52  from "../../assests/images/reactjs/react52.png"
+import react53  from "../../assests/images/reactjs/react53.png"
+import react54  from "../../assests/images/reactjs/react54.png"
+import react55  from "../../assests/images/reactjs/react55.png"
+import react56  from "../../assests/images/reactjs/react56.png"
+import react57  from "../../assests/images/reactjs/react57.png" 
+const images = {
+    react8,react9,react10,react15,react16,
+    react18,react19,react20,react21,react22,react23,react24,react25,react26,react27,
+    react28,react29,react30,react31,react32,react33,react34,react35,react36,react37,
+    react38,react39,react40,react41,react42,react43,react44,react45,react46,react47,
+    react48,react49,react50,react51,react52,react53,react54,react55,react56,react57,
+}
+
+export default images ;
