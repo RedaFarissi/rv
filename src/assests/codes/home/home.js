@@ -110,6 +110,28 @@ def book_list(request):
         'books': books
     })`
 }
+HomeGit(){
+    return `project>git init
+
+project>git add .
+
+project>git commit -m "my app"
+
+project>git status
+
+project>git push origin main`
+}
+HomePowerSehll(){
+    return `mkdir App
+    
+rmdir /s folder_name
+
+attrib -hs *
+
+type nul > index.html
+
+del index.html`
+}
  
 }
 
@@ -123,10 +145,13 @@ const home_php = get_code.HomePhp()
 const home_laravel = get_code.HomeLaravel()
 const home_python = get_code.HomePython()
 const home_django = get_code.HomeDjango()
+const home_git = get_code.HomeGit()
+const home_powerSehll = get_code.HomePowerSehll()
 
 const home = {
-    home_html , home_css , home_js , home_react , home_vue , 
-    home_php , home_laravel , home_python ,home_django ,
+    home_html , home_css , home_js , home_react , home_vue , home_php , 
+    home_laravel ,home_python ,home_django ,home_git ,home_powerSehll,
+
 };
 
 export default home;

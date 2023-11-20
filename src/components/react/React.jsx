@@ -170,7 +170,7 @@ return(
   </article>
 
   <article id="JSX">
-    <h2 className="title-h2">3 - JSX</h2>
+    <h2 className="title-h2">3 - ما هو (JSX)</h2>
     <p className="style_divv">
       JSX تسمح لنا بكتابة عناصر HTML في JavaScript ووضعها في DOM بدون أي أساليب createElement() أو appendChild().<br/><br/>
       JSX يحول علامات HTML إلى عناصر React.<br/><br/>
