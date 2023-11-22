@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import "./CodeCommand.sass"
-export default function CodeCommand(props){
 
+
+export default function CodeCommand(props){
     const [copySuccess, setCopySuccess] = useState(false);
     const handleCopyClick = () => {
       const textArea = document.createElement('textarea');
@@ -30,7 +31,7 @@ export default function CodeCommand(props){
 
     return(
         <div className="alert bg-dark text-light my-3 pb-0">
-            <pre className='positon-relative'>
+            <pre className='positon-relative' style={{overflow:"hidden"}}>
                 {props.children}
             </pre>
             <button onClick={handleCopyClick} className={`btn bg-dark position-absolute text-light btn-CodeCommand`}>  

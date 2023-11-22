@@ -9,7 +9,7 @@ export default function Css(){
     <>
      <main>
         <aside className="aside">
-            <h5 className="ms-2 mt-3">CSS Tutorials</h5>
+            <h5 className="mt-3">CSS Tutorials</h5>
             <ul className="list-group m-0">
                 {arrays}
             </ul>

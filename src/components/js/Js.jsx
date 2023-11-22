@@ -22,31 +22,31 @@ return(
 <>
  <main>
     <aside className="aside">
-        <h5 className="ms-2">JavaScript Tutorials</h5>
+        <h5 className="mt-3">JavaScript Tutorials</h5>
         <ul className="list-group m-0">
             {arrays1}
         </ul><br/>
-        <h5 className="ms-2">Functions Tutorials</h5>
+        <h5>Functions Tutorials</h5>
         <ul className="list-group m-0">
             {arrays2}
         </ul><br/>
-        <h5 className="ms-2">Class Tutorials</h5>
+        <h5>Class Tutorials</h5>
         <ul className="list-group m-0">
             {arrays3}
         </ul><br/>
-        <h5 className="ms-2">Window Tutorials</h5>
+        <h5>Window Tutorials</h5>
         <ul className="list-group m-0">
             {arrays4}
         </ul><br/>
-        <h5 className="ms-2">DOM Tutorials</h5>
+        <h5>DOM Tutorials</h5>
         <ul className="list-group m-0">
             {arrays5}
         </ul><br/>
-        <h5 className="ms-2">Events Tutorials</h5>
+        <h5>Events Tutorials</h5>
         <ul className="list-group m-0">
             {arrays6}
         </ul><br/>
-        <h5 className="ms-2">API Tutorials</h5>
+        <h5>API Tutorials</h5>
         <ul className="list-group m-0">
             {arrays7}
         </ul><br/>

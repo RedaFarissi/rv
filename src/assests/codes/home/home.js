@@ -151,7 +151,6 @@ const home_powerSehll = get_code.HomePowerSehll()
 const home = {
     home_html , home_css , home_js , home_react , home_vue , home_php , 
     home_laravel ,home_python ,home_django ,home_git ,home_powerSehll,
-
 };
 
 export default home;

@@ -1,5 +1,5 @@
 import { BrowserRouter as Router , Routes, Route } from "react-router-dom";
-import { Header , Home , Html , Css, Js , React , PowerShell , Git} from './components/path';
+import { Header , Home , Html , Css, Js , React , Cmd , Git} from './components/path';
 import "./App.sass"
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
             <Route path='/css/*' element={<Css />} /> 
             <Route path='/js/*' element={<Js />} /> 
             <Route path='/react/*' element={<React />} /> 
-            <Route path='/power-shell' element={<PowerShell />} /> 
+            <Route path='/power-shell' element={<Cmd />} /> 
             <Route path='/git' element={<Git />} /> 
         </Routes>  
     </Router> 

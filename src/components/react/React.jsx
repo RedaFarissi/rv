@@ -23,7 +23,7 @@ function React(){
 return(
  <main>
   <aside  className="aside">
-      <h5 className="ms-2 mt-3">React Tutorials</h5>
+      <h5 className="mt-3">React Tutorials</h5>
       <dl className="list-group m-0">
         {arrays}
       </dl>

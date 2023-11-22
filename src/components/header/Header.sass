@@ -86,13 +86,13 @@
 @mixin create-line($color)
     background: linear-gradient(to right, #f0fff0, #f0fff0 )
     &:hover
-        background: linear-gradient(to right, $color, #f0fff0 )
+        background: linear-gradient(to right, aqua , $color, aqua)
     &::after
         content: ""
         width: 0
         height: 3px
         -webkit-background-clip: text
-        background: linear-gradient(to right, $color, #f0fff0 )
+        background: linear-gradient(to right, aqua , $color, aqua )
         color: #f0fff0
         position: absolute
         bottom: 11px
@@ -102,33 +102,6 @@
         @keyframes link-prog 
             100%
                 width: calc(100% - 16px)
-
-.color-html-nav
-    @include create-line($html-color)
-
-.color-css-nav
-    @include create-line($css-color)
-
-.color-js-nav
-    @include create-line($js-color)
-
-.color-react-nav
-    @include create-line($react-color)
-
-.color-vue-nav
-    @include create-line($vue-color)
-
-.color-php-nav
-    @include create-line($php-color)
-
-.color-laravel-nav
-    @include create-line($laravel-color)
-
-.color-python-nav
-    @include create-line($python-color)
-
-.color-django-nav
-    @include create-line($django-color)
     
-.color-powerShell-nav
+.color-link-nav-light
     @include create-line($light)

@@ -16,7 +16,7 @@ export default function Html(props){
     return(    
     <main>
         <aside className="aside">
-            <h5 className="ms-2 mt-3">HTML Tutorials</h5>
+            <h5 className="mt-3">HTML Tutorials</h5>
             <ul className="list-group m-0">
                 {arrays}
             </ul>
