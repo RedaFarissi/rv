@@ -15,3 +15,5 @@ export {default as PowerShell} from './powerShell/PowerShell';
 export {default as Git} from './git/Git';
 
 export {default as CodeHighlighter} from './codeHighlighter/CodeHighlighter';
+
+export {default as CodeCommand} from './/codeCommand/CodeCommand';

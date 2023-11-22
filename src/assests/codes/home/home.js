@@ -122,7 +122,7 @@ project>git status
 project>git push origin main`
 }
 HomePowerSehll(){
-    return `mkdir App
+    return `mkdir folder_name
     
 rmdir /s folder_name
 

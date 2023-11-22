@@ -5,7 +5,6 @@ import { useState } from 'react';
 
 const CodeHighlighter = ({ code, language , addClass , copie , number=false}) => {
   const [copySuccess, setCopySuccess] = useState(false);
-
   const handleCopyClick = () => {
     const textArea = document.createElement('textarea');
     textArea.value = code;
