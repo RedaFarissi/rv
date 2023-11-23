@@ -6,7 +6,7 @@ export default function Division(){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html">HTML Division (div)</h1>
+    <h1 className="heading-style heading-style-html-color">HTML Division (div)</h1>
     <article>
         <p className="style_divv mt-5">
             الوسم <b>div</b> هو وسم زوجي يكتب على الشكل التالي :  <kbd>&lt;div&gt; content &lt;/div&gt;</kbd>

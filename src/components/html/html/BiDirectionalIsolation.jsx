@@ -6,7 +6,7 @@ export default function BiDirectionalIsolation(){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html"> HTML Bi-Directional Isolation (bdi)</h1>
+    <h1 className="heading-style heading-style-html-color"> HTML Bi-Directional Isolation (bdi)</h1>
     <article>
         <p className="style_divv mt-5">
             <b>BDI</b> تعني العزلة ثنائية الاتجاه.<br/>

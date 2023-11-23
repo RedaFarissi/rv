@@ -37,7 +37,7 @@ export default function From(){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html">HTML Form</h1>
+    <h1 className="heading-style heading-style-html-color">HTML Form</h1>
     <article>
         <h2 className="title-h2">1. الوسم form</h2>
         <p className="style_divv">

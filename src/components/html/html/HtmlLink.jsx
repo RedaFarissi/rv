@@ -5,7 +5,7 @@ export default function HtmlLink(){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html">HTML Link </h1>
+    <h1 className="heading-style heading-style-html-color">HTML Link </h1>
     <article>
         <p className="style_divv mt-5">
             يحدد الوسم <kbd>&lt;link&gt;</kbd> العلاقة بين المستند الحالي ومورد خارجي  .<br/>

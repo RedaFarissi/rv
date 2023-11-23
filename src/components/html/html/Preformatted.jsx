@@ -6,7 +6,7 @@ export default function Preformatted(){
     
     return(
     <section className="section-conetent">
-        <h1 className="heading-style-html"> HTML Preformatted (pre)</h1>
+        <h1 className="heading-style heading-style-html-color"> HTML Preformatted (pre)</h1>
         <article>
             <p className="style_divv mt-5">
                 تحدد العلامة <kbd>&lt;pre&gt;</kbd> النص المنسق مسبقًا.  <br/>

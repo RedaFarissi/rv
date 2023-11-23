@@ -21,7 +21,7 @@ export default function Style(){
     
     return(
 <section className="section-conetent">
-  <h1 className="heading-style-html">HTML Style </h1>
+  <h1 className="heading-style heading-style-html-color">HTML Style </h1>
   <article>
     <p className="style_divv mt-5">
         يتم استخدام الوسم <kbd>&lt;style&gt;</kbd>  في <b>HTML</b>  داخل الوسم <kbd>&lt;head&gt;</kbd> لإضافة أنماط إلى عنصر، مثل اللون والخط والحجم والمزيد .<br/>

@@ -9,7 +9,7 @@ export default function Fieldset(){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html"> HTML fieldset </h1>
+    <h1 className="heading-style heading-style-html-color"> HTML fieldset </h1>
     <article>
         <p className="style_divv mt-5">
             يتم استخدام العلامة <kbd>&lt;fieldset&gt;</kbd> لتجميع العناصر ذات الصلة في نموذج.<br/>

@@ -19,7 +19,7 @@ export default function Table(){
  </table>`
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html">HTML table</h1>
+    <h1 className="heading-style heading-style-html-color">HTML table</h1>
     <article>
         <h2 className="title-h2">1. الوسم table </h2>
         <p className="style_divv">

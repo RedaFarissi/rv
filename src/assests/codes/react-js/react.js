@@ -46,8 +46,60 @@ console.log(\`\${key}: \${person[key]}\`);
   },
   {//code [1]
     title:"Component",
-    JSX:"",
-    function_Component:"",
+    JSX:[
+`function App() {
+let a = 2, b = 9;
+
+const myElement = (
+  <ul>
+    <li> a = {a} </li>
+    <li> b = {b} </li>
+    <li> a+b = {a+b} </li>
+  </ul>
+);
+
+return (
+  <>
+    {myElement}
+  </>
+);
+}
+
+export default App;
+`
+    ],
+    function_Component:[
+`import React from "react";
+
+const ComponentH2 = () => {
+  return (
+    <h2>
+      Component haeding
+    </h2>
+  );
+};
+
+const Paragraph = () => {
+  return (
+    <p className="p">
+      Component paragraph
+    </p>
+  );
+};
+
+function App() {
+  return (
+    <>
+      <ComponentH2 />
+      <br />
+      <Paragraph />
+      <br />
+    </>
+  );
+}
+
+export default App;`,
+    ],
     function_Component_props:[`import React from 'react';
 
 // Define a function component using props

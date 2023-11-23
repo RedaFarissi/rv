@@ -8,7 +8,7 @@ export default function Dialog(){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html">HTML Dialog</h1>
+    <h1 className="heading-style heading-style-html-color">HTML Dialog</h1>
     <article>
         <p className="style_divv mt-5">
             تحدد الوسم <b>dialog</b> مربع صندوق أو نافذة فرعية.<br/>

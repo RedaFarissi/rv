@@ -15,7 +15,7 @@ export default function Introduction(){
 </html>`
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html"> HTML Introduction </h1>
+    <h1 className="heading-style heading-style-html-color"> HTML Introduction </h1>
     <article>
         <h2 className="title-h2">1. ما هي HTML ؟</h2>
         <p className="style_divv">

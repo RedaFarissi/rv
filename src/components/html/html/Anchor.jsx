@@ -10,7 +10,7 @@ export default function Anchor(){
     const code6 = `<a href="name_file.html#id_name"> content </span>`    
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html">HTML Anchor (a)</h1>
+    <h1 className="heading-style heading-style-html-color">HTML Anchor (a)</h1>
     <article>
         <h2 className="title-h2">1. مفهوم الروابط</h2>
         <p className="style_divv">

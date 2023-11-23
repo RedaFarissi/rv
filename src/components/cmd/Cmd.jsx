@@ -18,7 +18,7 @@ export default function Cmd(props){
             </ul>
         </aside>
         <section className="section-conetent">
-            <h1 className="heading-style-html"> Command Pormpt (Windows) </h1>            
+            <h1 className="heading-style heading-style-html-color"> Command Pormpt (Windows) </h1>            
             <article className="mt-5">
                 <h3 className="title-h3"  id="Create_Folder">1 - إنشاء مجلد </h3>
                 <CodeCommand>mkdir folder_name</CodeCommand>
@@ -62,7 +62,7 @@ export default function Cmd(props){
                 <CodeCommand>curl --request POST --data "username=johndoe&password=secret" https://www.example.com/login</CodeCommand>
                 <h3 className="title-h3" id="Copy_Files_to_another_Folder">13 - نسخ جميع الملفات بامتداد معين إلى مجلد آخر </h3>
                 <p className="style_divv">في هذا المثال، نقوم بنسخ جميع الملفات بامتداد <kbd>.php</kbd> من المجلد <kbd>C:\xampp\htdocs\js\js\</kbd> ونلصقها في <kbd>"C:\Users\SURFACE BOOK\Desktop\all_course_dj_env\project\templates\js"</kbd></p>
-                <CodeCommand>for %F in (C:\xampp\htdocs\js\js\*.php) do copy "%F" "C:\Users\SURFACE BOOK\Desktop\all_course_dj_env\project\templates\js"</CodeCommand>
+                <CodeCommand>for %F in ("C:\xampp\htdocs\js\js\*.php") do copy "%F" "C:\Users\SURFACE BOOK\Desktop\all_course_dj_env\project\templates\js"</CodeCommand>
                 <h3 className="title-h3" id="Change_extension"> 14 - تغيير امتداد الملفات من php إلى html </h3>
                 <p className="style_divv">  انتقل أولاً إلى مسار المجلد الذي يحتوى الملفات.<br/>قم بتغيير كل الملفات ذات الامتداد <kbd>.php</kbd> بالامتداد <kbd>.html</kbd> </p>
                 <CodeCommand>for %i in (*.php) do ren "%i" "*.html"</CodeCommand>

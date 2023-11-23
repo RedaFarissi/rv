@@ -6,7 +6,7 @@ export default function Image(){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html">HTML img</h1>
+    <h1 className="heading-style heading-style-html-color">HTML img</h1>
     <article>
         <p className="style_divv mt-5">
             الوسم  <kbd>&lt;img&gt;</kbd> هو وسم  فردي اي ليس له وسم إغلاق . ويستعمل لإضافة الصور لموقعك .  <br/>

@@ -13,7 +13,7 @@ export default function ListsDefinitionul(){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html">HTML dl</h1>
+    <h1 className="heading-style heading-style-html-color">HTML dl</h1>
     <article>
         <p className="style_divv mt-5">
             يستخدم الوسم <kbd>&lt;dl&gt;</kbd> في <b>HTML</b> لتمثيل قائمة الوصف. يستخدم هذا الوسم مع الوسم <kbd>&lt;dt&gt;</kbd> و <kbd>&lt;dd&gt;</kbd> . 

@@ -6,7 +6,7 @@ export default function Subscript(){
     
     return(
     <section className="section-conetent">
-        <h1 className="heading-style-html"> HTML Subscript (sub) </h1>
+        <h1 className="heading-style heading-style-html-color"> HTML Subscript (sub) </h1>
         <article>
             <p className="style_divv mt-5">
                 يُمثِّل العنصر <kbd>&lt;sub&gt;</kbd>  جزءًا من النص الذي يجب أن يُعرَض في مستوى أدنى (وغالبًا ما يكون أصغر) من المستوى الرئيسي للنص.

@@ -6,7 +6,7 @@ export default function Abbreviation(){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html"> HTML Abbreviation (abbr)</h1>
+    <h1 className="heading-style heading-style-html-color"> HTML Abbreviation (abbr)</h1>
     <article className="mt-5">
         <div className="style_divv">
             نستخدم الوسم <kbd>&lt;abbr&gt;</kbd> على هذا النحو <kbd>&lt;abbr title="hidden"&gt; visible &lt;/abbr&gt;</kbd> لوضع إسم مختصر <small><small>(Abbreviation)</small></small> بدل الإسم الكامل و عند تمرير الفأرة فوقه يقوم المتصفح بإظهار الإسم الكامل كلميح فوقها.

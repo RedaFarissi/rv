@@ -6,7 +6,7 @@ export default function Quotation(){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html">  HTML Quotation (q) </h1>
+    <h1 className="heading-style heading-style-html-color">  HTML Quotation (q) </h1>
     <article>
         <p className="style_divv mt-5">
             يشير عنصر <kbd>&lt;q&gt;</kbd> في لغة HTML إلى أن النص المتضمن عبارة عن اقتباس قصير مضمّن. تنفذ معظم المتصفحات الحديثة ذلك من خلال إحاطة النص بعلامات اقتباس. هذا العنصر مخصص للاقتباسات القصيرة التي لا تتطلب فواصل فقرات ؛ لعروض الأسعار الطويلة ، استخدم الوسم  <kbd>&lt;blockquote&gt;</kbd>

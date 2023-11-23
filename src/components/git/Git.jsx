@@ -19,7 +19,7 @@ export default function Git(props){
                 </ul>
             </aside>
             <section className="section-conetent">
-                <h1 className="heading-style-html"> Git and  github</h1>
+                <h1 className="heading-style heading-style-git-color"> Git and  github</h1>
                 <article id="Introduction">
                     <h2 className="title-h2 mt-5">1 - مقدمة عن Git</h2>
                     <p className="style_divv">

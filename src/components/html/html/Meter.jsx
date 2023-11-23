@@ -6,7 +6,7 @@ export default function Meter(){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html"> HTML Meter </h1>
+    <h1 className="heading-style heading-style-html-color"> HTML Meter </h1>
     <article>
         <h2 className="title-h2">1. الوسم meter</h2>
         <p className="style_divv">

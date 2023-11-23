@@ -6,7 +6,7 @@ export default function Mark(){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html">HTML mark</h1>
+    <h1 className="heading-style heading-style-html-color">HTML mark</h1>
     <article>
         <p className="style_divv">
         يستخدم الوسم <b>mark</b>   في <b>HTML</b> لتمييز النص ذي الأهمية الخاصة أو الملاءمة في مستند <b>HTML</b>.<br/>

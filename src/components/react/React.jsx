@@ -1,5 +1,5 @@
 import images from "./imagesReact";
-import { CodeHighlighter , CodeCommand } from "../path";
+import { CodeHighlighter , CodeCommand , Result } from "../path";
 import react_logo from "../../assests/images/logo/react_logo.svg";
 import ThisState from "./exemple/ThisState"
 import codes from "../../assests/codes/react-js/react"
@@ -29,7 +29,7 @@ return(
       </dl>
   </aside>
   <section className="section-conetent">
-  <h1 className="heading-style-html"> REACT JS </h1>
+  <h1 className="heading-style heading-style-react-color"> REACT JS </h1>
   <article id="Introduction">
         <h2 className="title-h2 mt-5"> 1 -مقدمة حول React.js  </h2>
         <h3 id="What_is_React" className="title-h3">1 - ما هو React  </h3>
@@ -104,7 +104,7 @@ return(
         تعريف المكوّن (Component) في سياق React:<br/><br/>
         في React، يُعتبر المكوّن هو قطعة أساسية في بناء وتنظيم واجهة المستخدم (UI). يُمثل كل مكوّن جزءًا من واجهة المستخدم، ويمكن استخدامه لإنشاء وإدارة العناصر المختلفة داخل التطبيق.
       </p>
-      <h3 className="title-h3">1 - ما هو (JSX)</h3>
+      <h3 className="title-h3" id="JSX">1 - ما هو (JSX)</h3>
       <p className="style_divv">
         JSX تسمح لنا بكتابة عناصر HTML في JavaScript ووضعها في DOM بدون أي أساليب createElement() أو appendChild().<br/><br/>
         JSX يحول علامات HTML إلى عناصر React.<br/><br/>
@@ -112,8 +112,14 @@ return(
         في React، يمكنك كتابة JSX في علامة HTML واحدة. إذا كنت ترغب في استخدام العديد من العلامات، استخدم <bdi>{"<>"} ..... {"</>"}</bdi>
       </p>         
       <div className="mital">متال : </div>
-      <img src={images.react15} alt="react"  className="img"/>
-      <img src={images.react16} alt="react"  className="img"/>
+      <CodeHighlighter  code={codes[1].JSX[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+      <Result title={'React App'} logo={react_logo} route="localhost:3000">
+        <ul className="m-2">
+          <li> a = 2 </li>
+          <li> b = 9 </li>
+          <li> a+b = 11 </li>
+        </ul>
+      </Result>
       <h3 className="title-h3" id="function_Component">2 - مكوّن الدالة (Function Component):</h3>
       <ul>
         <li>هو نوع من المكوّنات يُنشئ باستخدام دالة.</li>
@@ -125,25 +131,29 @@ return(
         <li>لاستخدام المكون، يلزمك استخدام خيار الاستيراد والتصدير الافتراضي. </li>
         <li>في مكون التطبيق نستخدم ComponentH2 و Paragraph. </li>
       </ul>
-      <img src={images.react18} alt="react" className="img"/>
-      <img src={images.react19} alt="react" className="img"/>
+      <CodeHighlighter  code={codes[1].function_Component[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+      <Result title={'React App'} logo={react_logo} route="localhost:3000">
+        <h1>  Component haeding</h1><br />
+        <p className="p"> Component paragraph </p><br />
+      </Result>
       <h3 className="title-h3" id="function_Component_props">3 - مكوّن الدالة الذي يقبل خصائص (props).</h3>
       <ul>
         <li> في React، يمكن تمرير البيانات إلى المكوّنات باستخدام الخصائص (props). الخصائص تمثل معلومات إضافية يمكن تمريرها من المكوّن الأب إلى المكوّن الابن. إليك كيفية تعريف واستخدام مكوّن دالة (Function Component) مع خصائص .</li>
       </ul>
       <CodeHighlighter  code={codes[1].function_Component_props[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
-      <div className="style-result">
-      <div>Hello, John!</div>
-      <div>Hello, Sara!</div>
-      </div>
+      <Result title={'React App'} logo={react_logo} route="localhost:3000">
+          <div>Hello, John!</div>
+          <div>Hello, Sara!</div>
+      </Result>
+
       <h3 className="title-h3" id="class_Component">4 - مكوّن الفئة (Class Component)</h3>
       <CodeHighlighter code={codes[1].class_Component[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
       <h3 className="title-h3" id="class_Component_this_props">4 - مكوّن الفئة (Class Component this.props)</h3>
       <CodeHighlighter code={codes[1].class_Component_this_props[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
       <CodeHighlighter code={codes[1].class_Component_this_props[1]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
-      <div className="style-result">
+      <Result title={'React App'} logo={react_logo} route="localhost:3000">
          <p style={{backgroundColor:"red",color:"white"}}> Learn React  </p>
-      </div>
+      </Result>
       <h3 className="title-h3" id="Components_in_Component">5 - المكونات في المكون </h3>
       <CodeHighlighter code={codes[1].Components_in_Component[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
       <CodeHighlighter code={codes[1].Components_in_Component[1]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
@@ -166,9 +176,9 @@ return(
         onClick={"{"}shoot{"}"} بدلاً من <bdi>onClick="shoot()"</bdi>
       </p>
       <CodeHighlighter code={codes[2].Events[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
-      <div className="style-result">
+      <Result title={'React App'} logo={react_logo} route="localhost:3000">
         <button onClick={()=>{alert("take Shoot function")}}>Shoot!</button>
-      </div>
+      </Result>
       <p><ul><li>إذا كتبت <bdi>onClick={"{"}shoot(){"}"}،</bdi> فسيتم تشغيل الوظيفة <bdi>shoot()</bdi> عند بدء التطبيق.</li></ul></p>  
   </article>    
 
@@ -180,16 +190,16 @@ return(
       </p>
       <div className="mital">متال 1 : </div>
       <CodeHighlighter code={codes[3].Lists[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-      <div className="style-result">
+      <Result title={'React App'} logo={react_logo} route="localhost:3000">
         <ul className="m-0">
           <li>Item 1</li>
           <li>Item 2</li>
           <li>Item 3</li>
         </ul>
-      </div>
+      </Result>
       <div className="mital">متال 2 : </div>
       <CodeHighlighter code={codes[3].Lists[1]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-      <div className="style-result">
+      <Result title={'React App'} logo={react_logo} route="localhost:3000">
         <table className="table">
           <tr> <th>name</th> <th>age</th> </tr>
           <tr> <td>kama186758"</td> <td>26</td> </tr>
@@ -198,17 +208,17 @@ return(
           <tr> <td>thami08</td> <td>19</td> </tr>
           <tr> <td>Reda6758</td> <td>16</td> </tr>
         </table>
-      </div>
+      </Result>
       <div className="mital">متال 3 : </div>
       <CodeHighlighter code={codes[3].Lists[2]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-      <div className="style-result">
+      <Result title={'React App'} logo={react_logo} route="localhost:3000">
         <h1  className="m-0">My Garage</h1>
         <ul className="m-0">
           <li>Ford</li>
           <li>BMW</li>
           <li>Audi</li>
         </ul>    
-      </div>
+      </Result>
   </article>
 
   <article id="Handle_images_react">
@@ -220,9 +230,9 @@ return(
     <ul><li> في هذا المتال قمن بجلب الصورة من مسارها مباشرة  </li></ul>
     <CodeHighlighter code={codes[4].Handle_images_react[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
     <CodeHighlighter code={codes[4].Handle_images_react[1]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-    <div className="style-result">
+    <Result title={'React App'} logo={react_logo} route="localhost:3000">
       <img src={react_logo} className="w-25 " alt="logo react" />
-    </div>
+    </Result>
     <ul><li>ماذا لو إحتجت لجلب عدة صور ، الطريقة المستعملة في المثال السبق ستكون طريقة <span className="text-danger">غير عملية</span> لذلك <span className="text-success">قم بإنشاء ملف بامتداد js</span> لمعالجة تنظيم الصور</li></ul>
     <CodeHighlighter code={codes[4].Handle_images_react[2]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
     <CodeHighlighter code={codes[4].Handle_images_react[3]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
@@ -284,7 +294,7 @@ return(
     </p>
     <h5>1 - إنشاء حالة المكون (this.state) و إعطائه قيمة أولية </h5>
     <CodeHighlighter code={codes[7].this_state[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
-    <div className="style-result">
+    <Result title={'React App'} logo={react_logo} route="localhost:3000">
       <ul>
         <li style={{fontSize: "24px", color: "red"}}>Admin</li>
         <li style={{fontSize: "24px", color: "red"}}>1</li>
@@ -293,12 +303,12 @@ return(
           the state this.state[2] is true
         </li>
       </ul>
-    </div>
+    </Result>
     <h5>2 - تغيير القيمة (this.state) </h5>
     <CodeHighlighter code={codes[7].this_state[1]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
-    <div className="style-result">
+    <Result title={'React App'} logo={react_logo} route="localhost:3000">
       <ThisState />
-    </div>
+    </Result>
   </article>
 
 

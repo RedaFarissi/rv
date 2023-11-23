@@ -6,7 +6,7 @@ export default function Superscript(){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html"> HTML Superscript (sup) </h1>
+    <h1 className="heading-style heading-style-html-color"> HTML Superscript (sup) </h1>
     <article>
         <p className="style_divv mt-5">
             تحدد العلامة <kbd>&lt;sup&gt;</kbd> النص المرتفع. يظهر النص المرتفع بنصف حرف فوق السطر العادي ، ويتم تقديمه أحيانًا بخط أصغر. يمكن استخدام النص المرتفع للحواشي السفلية ، مثل

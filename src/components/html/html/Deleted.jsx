@@ -6,7 +6,7 @@ export default function Deleted(){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html">HTML Deleted (del)</h1>
+    <h1 className="heading-style heading-style-html-color">HTML Deleted (del)</h1>
     <article className="mt-5">
         <p className="style_divv">
             يمثل عنصر  <kbd>&lt;del&gt;</kbd> في لغة <b>HTML</b> جزءًا من النص تم حذفه من المستند. غالبًا ما يتم عرض هذا العنصر مخططًا <small><small>(ولكن ليس بالضرورة)</small></small>.<br/>

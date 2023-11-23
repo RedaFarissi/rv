@@ -107,13 +107,26 @@ body
     margin: 0 50px
     padding: 40px 0
     margin-top: 140px 
-    .heading-style-html
+    .heading-style 
         direction: ltr
-        -webkit-text-stroke: 0.9px #e83e30
         font-style: italic
         font-size: 40px
-        text-shadow: 0.9px 0.9px 9px #e83e30
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    .heading-style-html-color
+        -webkit-text-stroke: 0.9px $html-color
+        text-shadow: 0.9px 0.9px 9px $html-color
+    .heading-style-css-color
+        -webkit-text-stroke: 0.9px $css-color
+        text-shadow: 0.9px 0.9px 9px $css-color
+    .heading-style-js-color
+        -webkit-text-stroke: 0.9px $js-color
+        text-shadow: 0.9px 0.9px 9px $js-color
+    .heading-style-react-color
+        -webkit-text-stroke: 0.9px $react-color
+        text-shadow: 0.9px 0.9px 9px $react-color
+    .heading-style-git-color
+        -webkit-text-stroke: 0.9px $git-color
+        text-shadow: 0.9px 0.9px 9px $git-color
     .img
         width: 100%
         margin: 20px  0
@@ -137,17 +150,12 @@ body
         direction: ltr
         background-color: white
         color: black
-        padding: 20px
         margin: 20px 0 
     .addClass
         width: 75%
     .mital
         color: yellow
         font-size: 23px
-
-
-    
-    
     
 .rounded-top
     border-radius: 3px 3px 0px 0px   

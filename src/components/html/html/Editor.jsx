@@ -4,7 +4,7 @@ export default function Editor() {
 
 return(
 <section className="section-conetent">
-    <h1 className="heading-style-html mt-2">HTML Editor</h1>
+    <h1 className="heading-style heading-style-html-color mt-2">HTML Editor</h1>
     <article>
         <h2 className="title-h2">1. ما هو محرر الأكواد</h2>
         <p className="style_divv">

@@ -9,7 +9,7 @@ export default function ListsUnordered(){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html"> HTML Lists Unordered ul </h1>
+    <h1 className="heading-style heading-style-html-color"> HTML Lists Unordered ul </h1>
     <article>
         <h2 className="title-h2">1. شرح الوسم ul </h2>
         <p className="style_divv">

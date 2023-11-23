@@ -5,7 +5,7 @@ export default function Italic(){
     const code = `<textarea name="" id="" > </textarea>`
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html"> HTML Textarea </h1>
+    <h1 className="heading-style heading-style-html-color"> HTML Textarea </h1>
     <article>
         <h2 className="title-h2">1. الوسم textarea </h2>
         <p className="style_divv">

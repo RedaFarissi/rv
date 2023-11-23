@@ -17,7 +17,7 @@ const code12 = `<div dir="rtl"> content </div>`;
 const code13 = `<span dir="auto"> content </span>`; 
 return(
 <section className="section-conetent">
-    <h1 className="heading-style-html"> HTML Attributes </h1>
+    <h1 className="heading-style heading-style-html-color"> HTML Attributes </h1>
     <article className="mt-5">
         <h2 className="title-h2">1. ما هو attribute </h2>
         <p className="style_divv">

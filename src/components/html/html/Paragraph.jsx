@@ -6,7 +6,7 @@ export default function Paragraph(){
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html">HTML Paragraph (p) </h1>
+    <h1 className="heading-style heading-style-html-color">HTML Paragraph (p) </h1>
     <article>
         <p className="style_divv mt-5">
             <ul>

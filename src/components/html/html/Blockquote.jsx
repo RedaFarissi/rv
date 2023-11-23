@@ -6,7 +6,7 @@ export default function Blockquote(){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html">HTML Blockquote</h1>
+    <h1 className="heading-style heading-style-html-color">HTML Blockquote</h1>
     <article className="mt-5">
         <div className="style_divv">
             عند كتابتك لمقالة أو خبر ما أحيانا تحتاج اضافة اقتباس أو نص مأخود من مكان أخر ، ومن أجل ذلك يستخدم <b>blockquote</b>  في هذا الدرس سنشرح كيفيه استخدامهم.

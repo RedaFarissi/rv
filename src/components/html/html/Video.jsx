@@ -9,7 +9,7 @@ export default function Audio(){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style-html">HTML video</h1>
+    <h1 className="heading-style heading-style-html-color">HTML video</h1>
     <article>
         <h2 className="title-h2">1. الوسم video</h2>
         <p className="style_divv">
