@@ -4,23 +4,23 @@ import "./Header.sass"
 
 export default function Header(){
   const programing = [
-    {name:"HTML" , link:"html" , color:"color-link-nav-light"},
-    {name:"CSS" , link:"css" , color:"color-link-nav-light"},
-    {name:"JAVASCRIPT" , link:"js" , color:"color-link-nav-light"},
-    {name:"REACT.js" , link:"react" , color:"color-link-nav-light"},
-    {name:"VUE.js" , link:"vue" , color:"color-link-nav-light"},
-    {name:"PYTHON" , link:"python" , color:"color-link-nav-light"},
-    {name:"DJANGO" , link:"django" , color:"color-link-nav-light"},
-    {name:"DJANGO API" , link:"django_api" , color:"color-link-nav-light"},
-    {name:"PHP" , link:"php" , color:"color-link-nav-light"},
-    {name:"LARAVEL" , link:"laravel" , color:"color-link-nav-light"} ,
-    {name:"LARAVEL API" , link:"laravel_api" , color:"color-link-nav-light"},
-    {name:"Git" , link:"git" , color:"color-link-nav-light"},
-    {name:"powerShell" , link:"power-shell" , color:"color-link-nav-light"},
+    {name:"HTML" , link:"html"},
+    {name:"CSS" , link:"css"},
+    {name:"JAVASCRIPT" , link:"js"},
+    {name:"REACT.js" , link:"react"},
+    {name:"VUE.js" , link:"vue"},
+    {name:"PYTHON" , link:"python"},
+    {name:"DJANGO" , link:"django"},
+    {name:"DJANGO API" , link:"django_api"},
+    {name:"PHP" , link:"php"},
+    {name:"LARAVEL" , link:"laravel"} ,
+    {name:"LARAVEL API" , link:"laravel_api"},
+    {name:"Git" , link:"git"},
+    {name:"powerShell" , link:"power-shell"},
   ]
   const links = programing.map(e=> 
             <li className="menu-category">
-                <Link to={e.link} className={`menu-title ${e.color}`}>
+                <Link to={e.link} className={`menu-title color-link-nav-light`}>
                   {e.name}
                 </Link>
             </li>)

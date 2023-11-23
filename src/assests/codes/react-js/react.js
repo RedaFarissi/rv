@@ -1,10 +1,10 @@
 const codes = [
   {
     title:"Introduction", 
-    What_is_React:"",
-    How_react_work:"",
-    What_you_need_to_get_started:"",
-    Verify_required_installations:"",
+    What_is_React:[],
+    How_react_work:[],
+    What_you_need_to_get_started:[],
+    Verify_required_installations:[],
     ES6:{
 class:[`class Animal {
 constructor(name, sound) {
@@ -41,28 +41,28 @@ for (let key in person) {
 console.log(\`\${key}: \${person[key]}\`);
 }`],
     },
-    Create_React_App:"",
+    Create_React_App:[],
     Run_React_App:[`cd myproject`,`npm start`]
   },
   {//code [1]
     title:"Component",
     JSX:[
 `function App() {
-let a = 2, b = 9;
+    let a = 2, b = 9;
 
-const myElement = (
-  <ul>
-    <li> a = {a} </li>
-    <li> b = {b} </li>
-    <li> a+b = {a+b} </li>
-  </ul>
-);
-
-return (
-  <>
-    {myElement}
-  </>
-);
+    const myElement = (
+      <ul>
+        <li> a = {a} </li>
+        <li> b = {b} </li>
+        <li> a+b = {a+b} </li>
+      </ul>
+    );
+    
+    return (
+      <>
+        {myElement}
+      </>
+    );
 }
 
 export default App;
@@ -104,26 +104,26 @@ export default App;`,
 
 // Define a function component using props
 const Greeting = (props) => {
-return <div>Hello, {props.name}!</div>;
+  return <div>Hello, {props.name}!</div>;
 };
 
 // Use the component and pass props
 const App = () => {
-return (
-  <div>
-    <Greeting name="John" />
-    <Greeting name="Sara" />
-  </div>
-);
+  return (
+    <div>
+      <Greeting name="John" />
+      <Greeting name="Sara" />
+    </div>
+  );
 };
 
 export default App;`],
     class_Component:[`import React, { Component } from 'react';
 
 class MyComponent extends Component {
-render() {
-  return <div>مكوّن الفئة</div>;
-}
+  render() {
+    return <div>مكوّن الفئة</div>;
+  }
 }`],
     class_Component_this_props:[`import React, { Component } from "react";
 
@@ -150,9 +150,9 @@ export default Paragraph;`,
 const design = ["red", "white"];
 
 const App = () => {
-return (
-  <Paragraph p_test="Learn React" design={design} />
-);
+  return (
+    <Paragraph p_test="Learn React" design={design} />
+  );
 };
 
 export default App;`
@@ -160,9 +160,9 @@ export default App;`
     Components_in_Component:[`import React from 'react';
 
 class Car extends React.Component {
-render() {
-  return <h2>I am a Car!</h2>;
-}
+  render() {
+    return <h2>I am a Car!</h2>;
+  }
 }
 
 export default Car;`,
@@ -170,14 +170,14 @@ export default Car;`,
 import Car from'./path-to-component-Car/Car';
 
 class Garage extends React.Component{
-render() {
-  return (
-    <div>
-      <h1>Who lives in my Garage?</h1>
-      <Car />
-    </div>
-  );
-}
+  render() {
+    return (
+      <div>
+        <h1>Who lives in my Garage?</h1>
+        <Car />
+      </div>
+    );
+  }
 }
 
 export default Garage;`,
@@ -195,13 +195,13 @@ export default App;`
   {//code[2]
     Events:[
 `function App() {
-const shoot = () => {
-  alert("take Shoot function");
-};
-
-return (
-  <button onClick={shoot}>Shoot!</button>
- );
+  const shoot = () => {
+    alert("take Shoot function");
+  };
+  
+  return (
+    <button onClick={shoot}>Shoot!</button>
+  );
 }
 
 export default App;`,
@@ -212,15 +212,15 @@ export default App;`,
 `import React from 'react';
 
 const MyList = () => {
-const items = ['Item 1', 'Item 2', 'Item 3'];
+  const items = ['Item 1', 'Item 2', 'Item 3'];
 
-return (
-  <ul>
-    {items.map((item, index) => (
-      <li key={index}>{item}</li>
-    ))}
-  </ul>
-);
+  return (
+    <ul>
+      {items.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  );
 };
 
 export default MyList;`,
@@ -230,65 +230,65 @@ import "./App.css";
 import Item from "./Item";
 
 function Item(props) {
-return (
-  <tr>
-    <td>{props.name}</td>
-    <td>{props.age}</td>
-  </tr>
-);
+  return (
+    <tr>
+      <td>{props.name}</td>
+      <td>{props.age}</td>
+    </tr>
+  );
 }
 
 class App extends React.Component {
-constructor() {
-  super();
-  this.state = {
-    users: [
-      { id: "1", name: "kama186758", age: "26" },
-      { id: "2", name: "ama186758", age: "29" },
-      { id: "3", name: "kamila58", age: "23" },
-      { id: "4", name: "thami08", age: "19" },
-      { id: "5", name: "Reda6758", age: "16" },
-    ],
-  };
-}
+    constructor() {
+      super();
+      this.state = {
+        users: [
+          { id: "1", name: "kama186758", age: "26" },
+          { id: "2", name: "ama186758", age: "29" },
+          { id: "3", name: "kamila58", age: "23" },
+          { id: "4", name: "thami08", age: "19" },
+          { id: "5", name: "Reda6758", age: "16" },
+        ],
+      };
+    }
 
-render() {
-  const items = this.state.users.map((e) => (
-    <Item key={e.id} name={e.name} age={e.age} />
-  ));
-
-  return (
-    <table className="table">
-      <tr>
-        <th>name</th>
-        <th>age</th>
-      </tr>
-      {items}
-    </table>
-  );
-}
+    render() {
+      const items = this.state.users.map((e) => (
+        <Item key={e.id} name={e.name} age={e.age} />
+      ));
+      
+      return (
+        <table className="table">
+          <tr>
+            <th>name</th>
+            <th>age</th>
+          </tr>
+          {items}
+        </table>
+      );
+    }
 }
 
 export default App;`,
 `import React from "react";
 
 function Garage() {
-const cars = [
-  { id: 1, brand: "Ford" },
-  { id: 2, brand: "BMW" },
-  { id: 3, brand: "Audi" },
-];
+  const cars = [
+    { id: 1, brand: "Ford" },
+    { id: 2, brand: "BMW" },
+    { id: 3, brand: "Audi" },
+  ];
 
-return (
-  <div>
-    <h1>My Garage</h1>
-    <ul>
-      {cars.map((car) => (
-        <li key={car.id}>{car.brand}</li>
-      ))}
-    </ul>
-  </div>
-);
+  return (
+    <div>
+      <h1>My Garage</h1>
+      <ul>
+        {cars.map((car) => (
+          <li key={car.id}>{car.brand}</li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
 export default Garage;`
@@ -298,19 +298,19 @@ export default Garage;`
 `import react_logo from "../../assests/images/logo/react_logo.svg";
 
 const MyImage = () => {
-return (
-  <img src={react_logo} alt='react logo'/>
-)
+  return (
+    <img src={react_logo} alt='react logo'/>
+  )
 }
 
 export default MyImage`,
 `import MyImage from './path-to-component-MyImage/MyImage'
 
 function App() {
-return (
-  <>
-    <MyImage />
-  </>
+  return (
+    <>
+      <MyImage />
+    </>
  );
 }
 
@@ -320,7 +320,7 @@ import python_logo from "../../assests/images/html/python_logo.png"
 import js_logo from "../../assests/images/html/js_logo.png"
 
 const images = {
-react_logo, python_logo, js_logo ,
+  react_logo, python_logo, js_logo ,
 }
 
 export default images ;`,
@@ -332,23 +332,70 @@ console.log(images.js_logo)`
   ]},
   {//code[5]
     Handle_import:[
+`function Header() {
+  return (
+    <h1>Header</h1>
+  );
+}
+
+export default Header;`,
+`function Content() {
+  return (
+    <p>This is the content of the app.</p>
+  );
+}`,
+`function Footer() {
+  return (
+    <h3>Footer</h3>
+  );
+}
+
+export default Footer;`,
+`import Header from "./path-to-component-Header/Header";
+import Content from "./path-to-component-Content/Content";
+import Footer from "./path-to-component-Footer/Footer";
+
+function App() {
+  return (
+  <>
+    <Header />
+    <Content />
+    <Footer />
+  </>
+  );
+}
+
+export default App;`,
 `export {default as Header} from './path-to-component-Header/Header';
 
 export {default as Content} from './path-to-component-Content/Content';
 
 export {default as Footer} from './path-to-component-Footer/Footer';`,
-`import { Header , Content , Footer } from './path-to-file-handle-component/file-name.js';`
+`import { Header , Content , Footer } from './path-to-file-handle-component/file-name.js';
+
+function App() {
+  return (
+  <>
+    <Header />
+    <Content />
+    <Footer />
+  </>
+  );
+}
+
+export default App;
+`
   ]},
   {//code[6]
     props_children:[ 
 `import React from 'react';
 
 const Card = (props) => {
-return (
-  <div className="card">
-    {props.children}
-  </div>
-);
+  return (
+    <div className="card">
+      {props.children}
+    </div>
+  );
 };
 
 export default Card;`,
@@ -356,15 +403,15 @@ export default Card;`,
 import Card from './Card';
 
 const App = () => {
-return (
-  <div>
-    <Card>
-      <h2>عنوان البطاقة</h2>
-      <p>هذا هو نص البطاقة.</p>
-      <img src="path/to/image.jpg" alt="صورة البطاقة" />
-    </Card>
-  </div>
-);
+  return (
+    <div>
+      <Card>
+        <h2>عنوان البطاقة</h2>
+        <p>هذا هو نص البطاقة.</p>
+        <img src="path/to/image.jpg" alt="صورة البطاقة" />
+      </Card>
+    </div>
+  );
 };
 
 export default App;
@@ -453,7 +500,7 @@ export default App;`,
   },
   {//code[8]
     title:"packages",
-    npm_list:"",
+    npm_list:[],
     axios:[
 `import axios from 'axios';`,
 `import axios from "axios";
@@ -532,16 +579,16 @@ return(
 `const response = await axios.get(\`\${this.state.url}produit_api/\` , {headers});
 const responseData = response.data;`,
 ` cart_length = async () =>{
-try{
-  const response = await axios.get(\`\${this.state.url}cart/length/\` , {withCredentials: true});
-  this.setState( prevState => ({...prevState , cart_length : response.data.length }) )
-}catch(err){
-  alert(err)
-}
+    try{
+      const response = await axios.get(\`\${this.state.url}cart/length/\` , {withCredentials: true});
+      this.setState( prevState => ({...prevState , cart_length : response.data.length }) )
+    }catch(err){
+      alert(err)
+    }
 }
 `
     ],
-    react_paypal_js:"",
+    react_paypal_js:[],
     react_sass:[`import "./App.sass"`],
     Router:[
 `import React from 'react';
@@ -574,30 +621,30 @@ return (
 }
 
 function Home() {
-return (
-  <div>
-    <h1>Home</h1>
-    <p>This is the Home page.</p>
-  </div>
-);
+  return (
+    <div>
+      <h1>Home</h1>
+      <p>This is the Home page.</p>
+    </div>
+  );
 }
 
 function About() {
-return (
-  <div>
-    <h1>About</h1>
-    <p>This is the About page.</p>
-  </div>
-);
+  return (
+    <div>
+      <h1>About</h1>
+      <p>This is the About page.</p>
+    </div>
+  );
 }
 
 function Contact() {
-return (
-  <div>
-    <h1>Contact</h1>
-    <p>This is the Contact page.</p>
-  </div>
-);
+  return (
+    <div>
+      <h1>Contact</h1>
+      <p>This is the Contact page.</p>
+    </div>
+  );
 }
 
 export default App;`
@@ -606,15 +653,15 @@ export default App;`
 `import { useNavigate } from 'react-router-dom';
 
 function MyComponent() {
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
-function handleClick() {
-  navigate('/new-page'); // Navigate to the new route
-}
+  function handleClick() {
+    navigate('/new-page'); // Navigate to the new route
+  }
 
-return (
-  <button onClick={handleClick}>Go to new page</button>
-);
+  return (
+    <button onClick={handleClick}>Go to new page</button>
+  );
 }`,
     ],
     useParams_Router:[
@@ -624,14 +671,14 @@ import ArticleList from './ArticleList';
 import ArticleDetail from './ArticleDetail';
 
 function App() {
-return (
-  <Router>
-    <Switch>
-      <Route path="/" exact component={ArticleList} />
-      <Route path="/article/:slug" component={ArticleDetail} />
-    </Switch>
-  </Router>
-);
+  return (
+    <Router>
+      <Switch>
+        <Route path="/" exact component={ArticleList} />
+        <Route path="/article/:slug" component={ArticleDetail} />
+      </Switch>
+    </Router>
+  );
 }
 
 export default App;`,
@@ -647,15 +694,15 @@ import articles from "./data/articles";
 ];*/
 
 const ArticleList = () => {
-return (
-  <ul>
-    {articles.map((article) => (
-      <li key={article.slug}>
-        <Link to={\`/article/\${article.slug}\`}>{article.title}</Link>
-      </li>
-    ))}
-  </ul>
-);
+  return (
+    <ul>
+      {articles.map((article) => (
+        <li key={article.slug}>
+          <Link to={\`/article/\${article.slug}\`}>{article.title}</Link>
+        </li>
+      ))}
+    </ul>
+  );
 };
 
 export default ArticleList;`,
@@ -665,21 +712,21 @@ import { useParams } from "react-router-dom";
 import articles from "./data/articles"; // Your article data
 
 function ArticleDetail() {
-const { slug } = useParams();
+  const { slug } = useParams();
 
-const article = articles.find((article) => article.slug === slug);
+  const article = articles.find((article) => article.slug === slug);
 
-if (!article) {
-  return <div>Article not found.</div>;
-}
+  if (!article) {
+    return <div>Article not found.</div>;
+  }
 
-return (
-  <div>
-    <h1>{article.title}</h1>
-    <p>{article.content}</p>
-    <img src={article.image} alt={article.title} />
-  </div>
-);
+  return (
+    <div>
+      <h1>{article.title}</h1>
+      <p>{article.content}</p>
+      <img src={article.image} alt={article.title} />
+    </div>
+  );
 }
 
 export default ArticleDetail;`,
@@ -705,13 +752,13 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { solarizedlight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const CodeExample = () => {
-const codeString = \`const greeting = 'Hello, world!';\`;
+  const codeString = \`const greeting = 'Hello, world!';\`;
 
-return (
-  <SyntaxHighlighter language="javascript" style={solarizedlight} showLineNumbers>
-    {codeString}
-  </SyntaxHighlighter>
-);
+  return (
+    <SyntaxHighlighter language="javascript" style={solarizedlight} showLineNumbers>
+      {codeString}
+    </SyntaxHighlighter>
+  );
 };
 
 export default CodeExample;`

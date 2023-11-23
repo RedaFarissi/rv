@@ -1,5 +1,5 @@
 import images from "../imagesHtml";
-import { CodeHighlighter } from "../pathHtml";
+import { CodeHighlighter ,  Result} from "../../path";
 
 export default function Italic(){
     const code = `<textarea name="" id="" > </textarea>`

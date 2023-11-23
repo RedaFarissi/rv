@@ -1,8 +1,8 @@
 import images from "../imagesHtml";
-import { CodeHighlighter } from "../pathHtml";
+import { CodeHighlighter ,  Result} from "../../path";
 import "./Table.css"
 
-export default function Table(){
+export default function Table(props){
     const code = `<table>
     <tr> 
        <th> title </th> 
@@ -17,6 +17,132 @@ export default function Table(){
        <td> content </td> 
     </tr> 
  </table>`
+    const codeExemple1 = [`  <table>
+        <tr>
+            <th>Month</th> 
+            <th>Savings</th>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$100</td>
+        </tr>
+        <tr>      
+            <td>February</td>
+            <td>$120</td>
+        </tr>
+        <tr>
+            <td>March</td>
+            <td>$140</td>
+        </tr>
+    </table>`,
+    ` <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+  </style>`]
+    const codeExemple2 = [`<table class="center">
+      <tr>
+        <th>Month</th>
+        <th>Savings</th>
+      </tr>
+      <tr>
+        <td>January</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>$80</td>
+      </tr>
+    </table>`,` <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 8px 14px;
+    }
+    
+    th {
+      font-size: 40px;
+      color: green;
+      background-color: brown;
+    }
+    
+    td {
+      font-size: 25px;
+    }
+    
+    table.center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    </style>`]
+
+    const codeExemple3 = [
+    `<table>
+    <caption>My savings</caption>
+        <tr>
+            <th>Month</th>
+            <th>Savings</th>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$100</td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <caption style="caption-side:bottom">My savings</caption>
+        <tr>
+            <th>Month</th>
+            <th>Savings</th>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$100</td>
+        </tr>
+    </table>`,
+    `<style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+          padding: 8px 14px;
+        }
+        th {
+          font-size: 32px;
+          color: green;
+          background-color: brown;
+        }
+        td {
+          font-size: 20px;
+          color: blue;
+        }
+        table.center {
+          margin-left: auto;
+          margin-right: auto;
+        }
+    </style>`]
+
+    const codeExemple4 = `<h1>HTML colgroup tag</h1>
+    <table>
+      <colgroup>
+        <col span="2" style="background-color: green; color: white" />
+        <col style="background-color: tomato" />
+      </colgroup>
+      <tr>
+        <th>STUDENT</th>
+        <th>COURSE</th>
+        <th>AGE</th>
+      </tr>
+      <tr>
+        <td>Manas Chhabra</td>
+        <td>BCA</td>
+        <td>19</td>
+      </tr>
+      <tr>
+        <td>Anurag Gupta</td>
+        <td>B.TECH</td>
+        <td>23</td>
+      </tr>
+    </table>`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color">HTML table</h1>
@@ -28,15 +154,30 @@ export default function Table(){
             يحدد العنصر <kbd>&lt;tr&gt;</kbd> عدد أسطر الجدول  ، ويحدد العنصر <kbd>&lt;th&gt;</kbd> رأس الجدول ، ويحدد العنصر <kbd>&lt;td&gt;</kbd> أعمدة أو خلية الجدول.<br/>
             قد يتضمن جدول <b>HTML</b> أيضًا عناصر <kbd>&lt;caption&gt;</kbd> و <kbd>&lt;colgroup&gt;</kbd> و <kbd>&lt;thead&gt;</kbd> و <kbd>&lt;tfoot&gt;</kbd> و <kbd>&lt;tbody&gt;</kbd>.
         </p>
-        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html31_table} alt="table code" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <div className="style-result">
-                <table id="a_tablE"><tr> <th>Month</th> <th>Savings</th> </tr>  <tr> <td>January</td> <td>$100</td> </tr></table>
-            </div>
+            <CodeHighlighter  code={codeExemple1[0]} head={codeExemple1[1]} language="html" title="Underline" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Table of Savings' logo={props.html_logo} route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+                <table id="a_tablE">
+                    <tr>
+                        <th>Month</th> 
+                        <th>Savings</th>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>      
+                        <td>February</td>
+                        <td>$120</td>
+                    </tr>
+                    <tr>
+                        <td>March</td>
+                        <td>$140</td>
+                    </tr>
+                </table>
+            </Result>
         </div>
         <div className="style_divv">
             <ul>
@@ -48,29 +189,22 @@ export default function Table(){
         </div>
         <div className="sum_exemple_style">
             <div className="mital">مثال 2 : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html31_table2} alt="table code" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <div className="style-result">
+            <CodeHighlighter  code={codeExemple2[0]} head={codeExemple2[1]} language="html" title="Table" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Table' logo={props.html_logo} route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
                 <table className="b_tablE"><tr> <th>Month</th> <th>Savings</th> </tr>  <tr> <td>January</td> <td>$100</td> </tr> <tr> <td>February</td> <td>$80</td> </tr></table>
-            </div>
+            </Result>
         </div>
     </article>
     <article>
         <h2 className="title-h2">2. الوسم caption </h2>
         <p className="style_divv">
-        يحدد الوسم <kbd>&lt;caption&gt;</kbd> شرح الجدول.<br/>
-        يجب إدخال الوسم <kbd>&lt;caption&gt;</kbd> مباشرة بعد علامة <kbd>&lt;table&gt;</kbd><br/>
-            <div className="alert alert-warning text-black mt-2">
-             نصيحة: بشكل افتراضي ، سيتم محاذاة التسمية التوضيحية للجدول إلى المنتصف أعلى الجدول. ومع ذلك ، يمكن استخدام محاذاة النص وجانب التسمية التوضيحية لخصائص CSS لمحاذاة التسمية التوضيحية ووضعها.
-            </div>
+            يحدد الوسم <kbd>&lt;caption&gt;</kbd> شرح الجدول.<br/>
+            يجب إدخال الوسم <kbd>&lt;caption&gt;</kbd> مباشرة بعد علامة <kbd>&lt;table&gt;</kbd><br/>
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html31_table3} alt="table code" className="img"/> 
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <div className="style-result">
+            <CodeHighlighter  code={codeExemple3[0]} head={codeExemple3[1]} language="html" title="Table" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Table' logo={props.html_logo} route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
                 <table className="b_tablE ml-0" >
                     <caption className="b_tablE-test"> My Savings</caption>
                     <tr> <th>Month</th> <th>Savings</th> </tr>
@@ -81,7 +215,7 @@ export default function Table(){
                     <tr> <th>Month</th> <th>Savings</th> </tr>
                     <tr> <td className="blue">January</td> <td className="blue">$100</td> </tr> 
                 </table>
-            </div>
+            </Result>
         </div>
     </article>
     <article>
@@ -94,21 +228,31 @@ export default function Table(){
         </div>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html31_table4} alt="table code" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <div className="style-result">
-                <h2 style={{marginBottom:"32px",fontWeight:"790"}}>HTML colgroup tag</h2>
+            <CodeHighlighter  code={codeExemple4} language="html" title="Table" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Table' logo={props.html_logo} route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+                <h1>HTML colgroup tag</h1>
                 <table>
-                    <colgroup> 
-                        <col span="2" className="bg-success text-white"/>
-                        <col style={{backgroundColor:"tomato"}}/>
-                    </colgroup>
-                    <tr> <th>STUDENT      </th> <th>COURSE</th> <th>AGE</th> </tr>
-                    <tr> <td>Manas Chhabra</td> <td>BCA</td>    <td>19</td> </tr> 
-                    <tr> <td>Anurag Gupta </td> <td>B.TECH</td> <td>23</td> </tr> 
+                  <colgroup>
+                    <col span="2" style={{backgroundColor: "green",color: "white"}} />
+                    <col style={{backgroundColor: "tomato"}} />
+                  </colgroup>
+                  <tr>
+                    <th>STUDENT</th>
+                    <th>COURSE</th>
+                    <th>AGE</th>
+                  </tr>
+                  <tr>
+                    <td>Manas Chhabra</td>
+                    <td>BCA</td>
+                    <td>19</td>
+                  </tr>
+                  <tr>
+                    <td>Anurag Gupta</td>
+                    <td>B.TECH</td>
+                    <td>23</td>
+                  </tr>
                 </table>
-            </div>
+            </Result>
         </div>
     </article>
     <article>

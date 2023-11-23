@@ -1,5 +1,5 @@
 import images from "../imagesHtml";
-import { CodeHighlighter } from "../pathHtml";
+import { CodeHighlighter ,  Result} from "../../path";
 
 export default function Meter(){
     const code = `<meter max="max_value" min="min_value" value="value"></meter>`

@@ -1,9 +1,10 @@
 import images from "../imagesHtml";
-import { CodeHighlighter } from "../pathHtml";
+import { CodeHighlighter ,  Result} from "../../path";
 
-export default function Image(){
+export default function Image(props){
     const code = `<img src="name_img.type" alt="description"/>`
-    
+    const codeExemple1 = `      <img src="./logo_html.png" width="50%" alt="description"/>`
+    const codeExemple2 = `      <img src="./logo/logo.png" width="50%" alt="description"/>`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color">HTML img</h1>
@@ -15,13 +16,13 @@ export default function Image(){
                 <li> نستخدم الوسم <kbd>&lt;img&gt;</kbd> على هذا النحو <kbd>&lt;img src="url"&gt;</kbd> لعرض صورة في الصفحة. مكان الكلمة <b>url</b> نضع مسار الصورة التي نريد عرضها.</li>
             </ul>
         </p>
-        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html20_img} alt="code" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html20_img_2} alt="result" className="img"/>
+            <CodeHighlighter  code={codeExemple1} language="html" title="Image" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Image' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+                <img src={props.html_logo} width="50%" alt="description"/> 
+            </Result>
             <ul>  
                 <li> يمكنك تحكم بحجم صورة وتعديل على شكلها بستخدام <b>CSS</b> . </li>
                 <li> السمة <b>alt</b> تستعمل  لإضهار رسالة للمستعمل في حالة حدت مشكل ولم يتمكن لمتصفح من عرض الصورة .</li>
@@ -30,10 +31,10 @@ export default function Image(){
         <div className="sum_exemple_style">
             <div className="mital">متال 2 : </div>
             <ul><li>قمنا بكتابة مسار خاطئ لصورة لتتمكن من رؤية فائدة <b>alt</b></li></ul>
-            <h4 className="green"> الكود </h4> 
-            <img src={images.html20_img2} alt="code" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html20_img2_2} alt="result" className="img"/>
+            <CodeHighlighter  code={codeExemple2} language="html" title="Image" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Image' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+                <img src="logo/logo.png" width="50%" alt="description"/> 
+            </Result>
         </div>
     </article>
 </section>

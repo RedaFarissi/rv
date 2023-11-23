@@ -1,5 +1,5 @@
 import images from "../imagesHtml";
-import { CodeHighlighter } from "../pathHtml";
+import { CodeHighlighter ,  Result} from "../../path";
 
 export default function From(){
     const code = `   <form action="/submit_form" method="post">

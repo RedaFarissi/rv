@@ -1,9 +1,9 @@
 import images from "../imagesHtml";
-import { CodeHighlighter } from "../pathHtml";
+import { CodeHighlighter ,  Result} from "../../path"
 
-export default function Italic(){
+export default function Italic(props){
     const code = `<i> content  </i>`
-    
+    const codeExemple = `italique <br/> <i>italique</i> <hr/> <i>italique</i>`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color">HTML Italic (i)</h1>
@@ -12,15 +12,14 @@ export default function Italic(){
             الوسم  <kbd>&lt;i&gt;</kbd>  في <b>HTML</b> يستخدم لعرض المحتوى بأسلوب مائل. يستخدم هذا الوسم عمومًا لعرض المصطلح التقني والعبارة والكلمة المهمة بلغة مختلفة .<br/>
             الوسم <kbd>&lt;i&gt;</kbd>  هو وسم زوجي يحتوي على علامة الفتح والمحتوى وعلامة الإغلاق .
         </p>
-        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html6_i}  alt="italic code" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <div className="style-result">
+            <CodeHighlighter  code={codeExemple} language="html" title="Italic" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Italic' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
                 italique <br/> <i>italique</i> <hr/> <i>italique</i>
-            </div>
+            </Result>
+            <img src={images.html6_i}  alt="italic code" className="img"/>
         </div>
     </article>
 </section>

@@ -1,9 +1,10 @@
-import images from "../imagesHtml";
-import { CodeHighlighter } from "../pathHtml";
+import { CodeHighlighter ,  Result} from "../../path";
 
-export default function Mark(){
+export default function Mark(props){
     const code = `<mark> content </mark>`
-    
+    const codeExemple =  `<p>
+    The <mark>quick brown fox</mark> jumps over the lazy dog.
+</p>`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color">HTML mark</h1>
@@ -13,13 +14,13 @@ export default function Mark(){
             تعرض المتصفحات تقليديًا النص الموجود داخل الوسم <kbd>&lt;mark&gt;</kbd> كنص بلون خلفية أصفر. <br/>
         يكتب الوسم <b>mrak</b> على شكل التالي : 
         </p>
-        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital"> متال :</div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html17_mark} alt="mark code"  className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html17_mark_2} alt="mark result" className="img"/>  
+            <CodeHighlighter  code={codeExemple} language="html" title="Mark" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Mark' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+                <p>  The <mark style={{backgroundColor:"yellow"}}>quick brown fox</mark> jumps over the lazy dog.</p>
+            </Result>
         </div>
     </article>
 </section>

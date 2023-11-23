@@ -3,8 +3,27 @@ import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import "./CodeHighlighter.sass"
 import { useState } from 'react';
 
-const CodeHighlighter = ({ code, language , addClass , copie , number=false}) => {
+function CadreHtml(props,){
+  return `<!DOCTYPE html>
+<html>
+<head>
+   <title> ${props.title}  </title>
+   <link rel="icon" href="./html_logo.png" type="image/png">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   ${props.head}
+</head>
+<body>
+${props.children}
+</body>
+</html>`
+}
+
+const CodeHighlighter = ({ code, language , addClass , copie , number=false , title = "Html Title",head = ""}) => {
   const [copySuccess, setCopySuccess] = useState(false);
+
+  const processedCode = language === "html" ? CadreHtml({ children: code , title: title , head: head}) : code;
+
+
   const handleCopyClick = () => {
     const textArea = document.createElement('textarea');
     textArea.value = code;
@@ -32,8 +51,8 @@ const CodeHighlighter = ({ code, language , addClass , copie , number=false}) =>
 
   return (
     <div className={`${addClass} position-relative mt-3 mb-3`}>
-      <SyntaxHighlighter language={language} style={tomorrow} className="box-code overflow-x" showLineNumbers={number}>
-        {code}
+      <SyntaxHighlighter style={tomorrow} language={language} className="box-code overflow-x" showLineNumbers={number}>
+        {processedCode}
       </SyntaxHighlighter>
       <button onClick={handleCopyClick} className={`button-copie ${(copie)?"d-block":"d-none"}`}>
         {copySuccess ? 'Copied' : 'Copy'}

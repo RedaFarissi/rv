@@ -1,9 +1,9 @@
 import images from "../imagesHtml";
-import { CodeHighlighter } from "../pathHtml";
+import { CodeHighlighter ,  Result} from "../../path";
 
-export default function Quotation(){
+export default function Quotation(props){
     const code = `<q cite="url"> content </q> `
-    
+    const codeExemple = `<p>The <q>quick brown fox</q> jumps over the lazy dog.</p>`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color">  HTML Quotation (q) </h1>
@@ -11,13 +11,13 @@ export default function Quotation(){
         <p className="style_divv mt-5">
             يشير عنصر <kbd>&lt;q&gt;</kbd> في لغة HTML إلى أن النص المتضمن عبارة عن اقتباس قصير مضمّن. تنفذ معظم المتصفحات الحديثة ذلك من خلال إحاطة النص بعلامات اقتباس. هذا العنصر مخصص للاقتباسات القصيرة التي لا تتطلب فواصل فقرات ؛ لعروض الأسعار الطويلة ، استخدم الوسم  <kbd>&lt;blockquote&gt;</kbd>
         </p>
-        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital"> متال :</div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html18_q} alt="q code"  className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html18_q_2} alt="q result" className="img"/>
+            <CodeHighlighter  code={codeExemple} language="html" title="Quotation" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Quotation' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+                <p>The <q>quick brown fox</q> jumps over the lazy dog.</p>
+            </Result>
         </div>
     </article>
 </section>

@@ -1,5 +1,6 @@
 import "./Result.sass"
 
+
 export default function Result(props){
     return(
         <div className="style-result">
@@ -9,7 +10,7 @@ export default function Result(props){
                         <div className="result-header-1-tab"> 
                             <div>
                                 <div className="div-img-box">
-                                    <img src={props.logo} alt="logo" />
+                                    {(props.logo)?(<img src={props.logo} alt="logo" />):(<span className="text-light" style={{fontSize:"10px"}}>Life</span>)}      
                                 </div>
                                 <p>
                                     {props.title}

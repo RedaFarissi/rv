@@ -1,9 +1,11 @@
 import images from "../imagesHtml";
-import { CodeHighlighter } from "../pathHtml";
+import { CodeHighlighter ,  Result} from "../../path";
 
-export default function Abbreviation(){
+export default function Abbreviation(props){
     const code = `<abbr> content </abbr>`
-    
+    const codeExemple = `<abbr title="kilogram"><b>KG</b></abbr>
+<br/>
+<abbr title="gram"><b>G</b></abbr>`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color"> HTML Abbreviation (abbr)</h1>
@@ -16,18 +18,16 @@ export default function Abbreviation(){
                 <li style={{marginBottom:"12px"}}>يملك سمة واحدة هي ال <b>Attribute title</b> التي نضيفها له لكتابة النص المخفي الذي سيتم إظهاره عند تمرير الماوس فوق الوسم.</li>
             </ul>
         </div>
-        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
+            <CodeHighlighter  code={codeExemple} language="html" title="Abbreviation" addClass="mt-3 mb-3" copie={true}/>
             <ul><li>عند تمرير الماوس فوق العنصر سيضهر title</li></ul>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html10_abbr} className="img"/>
-            <h4 className="green">  بعد تشغيل الكود  </h4>
-            <div className="style-result">
+            <Result title='Abbreviation' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
                 <abbr title="kilogram"><b>KG</b></abbr>
                 <br/>
                 <abbr title="gram"><b>G</b></abbr>
-            </div>
+            </Result>
         </div>
     </article>
 </section>

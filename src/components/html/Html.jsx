@@ -7,6 +7,8 @@ import {
     ListsOrdered ,ListsUnordered ,ListsDefinitionul ,Table ,Input ,Select ,From , 
     Textarea ,Button ,Fieldset ,Dialog ,Iframe ,Meter ,Style ,HtmlLink ,Meta , 
 } from './pathHtml.js';
+import html_logo from "../../assests/images/logo/html_logo.png";
+
 
 export default function Html(props){
     
@@ -22,52 +24,52 @@ export default function Html(props){
             </ul>
         </aside>
             <Routes>
-                <Route path='/' element={<Introduction />} />
-                <Route path='introduction' element={<Introduction />} /> 
-                <Route path='editor' element={<Editor />} /> 
-                <Route path='attributes' element={<Attributes />} /> 
-                <Route path='heading-(h1)' element={<Heading />} /> 
-                <Route path='paragraph-(p)' element={<Paragraph />} /> 
-                <Route path='break-(br)' element={<Break />} /> 
-                <Route path='horizontal-(hr)' element={<Horizontal />} /> 
-                <Route path='superscript-(sup)' element={<Superscript />} /> 
-                <Route path='subscript-(sub)' element={<Subscript />} /> 
-                <Route path='underline-(u)' element={<Underline />} /> 
-                <Route path='italic-(i)' element={<Italic />} /> 
-                <Route path='blockquote' element={<Blockquote />} /> 
-                <Route path='abbreviation-(abbr)' element={<Abbreviation />} /> 
-                <Route path='quotation-(q)' element={<Quotation />} /> 
-                <Route path='mark' element={<Mark />} /> 
-                <Route path='deleted-(del)' element={<Deleted />} /> 
-                <Route path='preformatted-(pre)' element={<Preformatted />} /> 
-                <Route path='small' element={<Small />} /> 
-                <Route path='anchor-(a)' element={<Anchor />} /> 
-                <Route path='image-(img)' element={<Image />} /> 
-                <Route path='division-(div)' element={<Division />} /> 
-                <Route path='span' element={<Span />} /> 
-                <Route path='audio' element={<Audio />} /> 
-                <Route path='video' element={<Video />} /> 
-                <Route path='details' element={<Details />} /> 
-                <Route path='bi-directional-isolation-(bdi)' element={<BiDirectionalIsolation />} /> 
-                <Route path='bi-directional-override-(bdo)' element={<BiDirectionalOverride />} /> 
-                <Route path='lists-ordered-(ol)' element={<ListsOrdered />} /> 
-                <Route path='lists-unordered-(ul)' element={<ListsUnordered />} /> 
-                <Route path='lists-definitionul-(dl)' element={<ListsDefinitionul />} /> 
-                <Route path='table' element={<Table />} /> 
-                <Route path='input' element={<Input />} /> 
-                <Route path='select' element={<Select />} /> 
-                <Route path='textarea' element={<Textarea />} /> 
-                <Route path='button' element={<Button />} /> 
-                <Route path='from' element={<From />} /> 
-                <Route path='header' element={<Header />} /> 
-                <Route path='fieldset' element={<Fieldset />} /> 
-                <Route path='dialog' element={<Dialog />} /> 
-                <Route path='iframe' element={<Iframe />} /> 
-                <Route path='meter' element={<Meter />} /> 
-                <Route path='style' element={<Style />} /> 
-                <Route path='style' element={<Style />} /> 
-                <Route path='link' element={<HtmlLink />} /> 
-                <Route path='meta' element={<Meta />} /> 
+                <Route path='/' element={<Introduction html_logo={html_logo} />} />
+                <Route path='introduction' element={<Introduction html_logo={html_logo} />} /> 
+                <Route path='editor' element={<Editor html_logo={html_logo} />} /> 
+                <Route path='attributes' element={<Attributes html_logo={html_logo} />} /> 
+                <Route path='heading-(h1)' element={<Heading html_logo={html_logo} />} /> 
+                <Route path='paragraph-(p)' element={<Paragraph html_logo={html_logo} />} /> 
+                <Route path='break-(br)' element={<Break html_logo={html_logo} />} /> 
+                <Route path='horizontal-(hr)' element={<Horizontal html_logo={html_logo} />} /> 
+                <Route path='superscript-(sup)' element={<Superscript html_logo={html_logo} />} /> 
+                <Route path='subscript-(sub)' element={<Subscript html_logo={html_logo} />} /> 
+                <Route path='underline-(u)' element={<Underline html_logo={html_logo} />} /> 
+                <Route path='italic-(i)' element={<Italic html_logo={html_logo} />} /> 
+                <Route path='blockquote' element={<Blockquote html_logo={html_logo} />} /> 
+                <Route path='abbreviation-(abbr)' element={<Abbreviation html_logo={html_logo} />} /> 
+                <Route path='quotation-(q)' element={<Quotation html_logo={html_logo} />} /> 
+                <Route path='mark' element={<Mark html_logo={html_logo} />} /> 
+                <Route path='deleted-(del)' element={<Deleted html_logo={html_logo} />} /> 
+                <Route path='preformatted-(pre)' element={<Preformatted html_logo={html_logo} />} /> 
+                <Route path='small' element={<Small html_logo={html_logo} />} /> 
+                <Route path='anchor-(a)' element={<Anchor html_logo={html_logo} />} /> 
+                <Route path='image-(img)' element={<Image html_logo={html_logo} />} /> 
+                <Route path='division-(div)' element={<Division html_logo={html_logo} />} /> 
+                <Route path='span' element={<Span html_logo={html_logo} />} /> 
+                <Route path='audio' element={<Audio html_logo={html_logo} />} /> 
+                <Route path='video' element={<Video html_logo={html_logo} />} /> 
+                <Route path='details' element={<Details html_logo={html_logo} />} /> 
+                <Route path='bi-directional-isolation-(bdi)' element={<BiDirectionalIsolation html_logo={html_logo} />} /> 
+                <Route path='bi-directional-override-(bdo)' element={<BiDirectionalOverride html_logo={html_logo} />} /> 
+                <Route path='lists-ordered-(ol)' element={<ListsOrdered html_logo={html_logo} />} /> 
+                <Route path='lists-unordered-(ul)' element={<ListsUnordered html_logo={html_logo} />} /> 
+                <Route path='lists-definitionul-(dl)' element={<ListsDefinitionul html_logo={html_logo} />} /> 
+                <Route path='table' element={<Table html_logo={html_logo} />} /> 
+                <Route path='input' element={<Input html_logo={html_logo} />} /> 
+                <Route path='select' element={<Select html_logo={html_logo} />} /> 
+                <Route path='textarea' element={<Textarea html_logo={html_logo} />} /> 
+                <Route path='button' element={<Button html_logo={html_logo} />} /> 
+                <Route path='from' element={<From html_logo={html_logo} />} /> 
+                <Route path='header' element={<Header html_logo={html_logo} />} /> 
+                <Route path='fieldset' element={<Fieldset html_logo={html_logo} />} /> 
+                <Route path='dialog' element={<Dialog html_logo={html_logo} />} /> 
+                <Route path='iframe' element={<Iframe html_logo={html_logo} />} /> 
+                <Route path='meter' element={<Meter html_logo={html_logo} />} /> 
+                <Route path='style' element={<Style html_logo={html_logo} />} /> 
+                <Route path='style' element={<Style html_logo={html_logo} />} /> 
+                <Route path='link' element={<HtmlLink html_logo={html_logo} />} /> 
+                <Route path='meta' element={<Meta html_logo={html_logo} />} /> 
             </Routes>
     </main>
     )

@@ -1,6 +1,12 @@
-import images from "../imagesHtml";
-
-export default function Break(){
+import { CodeHighlighter ,  Result} from "../../path";
+export default function Break(props){
+const codeExemple = `1. HTML 
+2. CSS
+3. JavaScript
+4. PHP <br/>
+5. MYSQL <br/>
+6. Laravel <br/>
+7. API`
 
     return(
     <section className="section-conetent">
@@ -13,10 +19,16 @@ export default function Break(){
             </p>
             <div className="sum_exemple_style">
                 <div className="mital">متال : </div>
-                <h4 className="green"> الكود </h4>
-                <img src={images.html14_br} alt="break exemple" className="img"/>
-                <h4 className="green"> بعد تشغيل الكود </h4>
-                <img src={images.html14_br_2} alt="break result" className="img"/>
+                <CodeHighlighter  code={codeExemple} language="html" title="Break" addClass="mt-3 mb-3" copie={true}/>
+                <Result title='Heading' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+                    1. HTML 
+                    2. CSS
+                    3. JavaScript
+                    4. PHP <br/>
+                    5. MYSQL <br/>
+                    6. Laravel <br/>
+                    7. API
+                </Result>
             </div>
         </article>
     </section>

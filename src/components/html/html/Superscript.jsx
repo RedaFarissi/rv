@@ -1,9 +1,9 @@
-import images from "../imagesHtml";
-import { CodeHighlighter } from "../pathHtml";
+import { CodeHighlighter ,  Result} from "../../path";
 
-export default function Superscript(){
+export default function Superscript(props){
     const code = `<sup> The text to be uploaded </sup>`
-    
+    const codeExemple = `<h2>2<sup>3</sup> = 8</h2>
+<h2>1<sup>er</sup></h2>`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color"> HTML Superscript (sup) </h1>
@@ -12,16 +12,14 @@ export default function Superscript(){
             تحدد العلامة <kbd>&lt;sup&gt;</kbd> النص المرتفع. يظهر النص المرتفع بنصف حرف فوق السطر العادي ، ويتم تقديمه أحيانًا بخط أصغر. يمكن استخدام النص المرتفع للحواشي السفلية ، مثل
             1<sup>er</sup>  
         </p>
-        <CodeHighlighter  code={code} language="html"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
         <div className="mital">مثال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html9_sup} alt="sup code" className="img"/>
-            <h4 className="green">  بعد تشغيل الكود  </h4>
-            <div className="style-result">
-                1 <sup>er</sup>
-                <p>text <sup>sup</sup></p>
-            </div>
+        <CodeHighlighter  code={codeExemple} language="html" title="Superscript" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='Superscript' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <h2>2<sup>3</sup> = 8</h2>
+            <h2>1<sup>er</sup></h2>
+        </Result>
         </div>
     </article>
 </section>

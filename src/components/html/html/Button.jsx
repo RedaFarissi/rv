@@ -1,5 +1,5 @@
 import images from "../imagesHtml";
-import { CodeHighlighter } from "../pathHtml";
+import { CodeHighlighter ,  Result} from "../../path";
 import "./Button.css"
 
 export default function Button(){

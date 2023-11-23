@@ -1,9 +1,21 @@
-import images from "../imagesHtml";
-import { CodeHighlighter } from "../pathHtml";
+import { CodeHighlighter ,  Result} from "../../path"
 
-export default function Division(){
+export default function Division(props){
     const code = `<div id="id_name" className="class_name"> content </div>`
-    
+    const codeExemple = `
+<style>
+    #div-element {
+        background-color:lightblue;
+        border: 5px outset red; 
+        text-align: center;
+        padding:30px;    
+        margin:30px
+    }   
+</style>
+<div class="#div-element">
+    <h2> This is Heading in div element </h2>
+    <p>  This is Paragraph in div element </p>
+</div>`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color">HTML Division (div)</h1>
@@ -17,13 +29,16 @@ export default function Division(){
                 <li>عند نهاية الوسم <kbd>&lt;div&gt;</kbd> يتم العودة إلى سطر جديد .  </li>
             </ul>
         </p>
-        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html21_div} alt="div code" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html21_div_2} alt="div result" className="img"/>
+            <CodeHighlighter  code={codeExemple} language="html" title="Underline" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Underline' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+               <div style={{backgroundColor:"lightblue", border: "5px outset red", textAlign:"center",padding:"30px",margin:"30px"}}>
+                    <h2> This is Heading in div element </h2>
+                    <p>  This is Paragraph in div element </p>
+               </div>
+            </Result>
         </div>
     </article>
 </section>

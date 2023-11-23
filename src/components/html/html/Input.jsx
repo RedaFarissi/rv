@@ -1,7 +1,6 @@
 import images from "../imagesHtml";
-import { CodeHighlighter } from "../pathHtml";
-
-export default function Italic(){
+import { CodeHighlighter ,  Result} from "../../path";
+export default function Input(){
     const code1 = `<input type="text" name="choise_name" required>`
     const code2 = `<input type="hidden" name="choise_name" required>`
     const code3 = `<input type="radio" name="choise_name" required>`

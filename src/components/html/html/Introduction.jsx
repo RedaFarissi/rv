@@ -1,18 +1,16 @@
 import images from "../imagesHtml";
-import { CodeHighlighter } from "../pathHtml";
+import { CodeHighlighter ,  Result} from "../../path";
 
-export default function Introduction(){
-    const code = `<!DOCTYPE html>
-<html>
-   <head>
-      <title> Page Title </title>
-      <!-- to work with different device -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-   </head >
-   <body>
-     Content
-   </body>
-</html>`
+export default function Introduction(props){
+    const code1 = `Content`;
+    const code2 = `<article>
+        <h2>Eagle</h2>
+        <p> 
+            Eagle is the common name for the golden eagle, bald eagle, and other birds of prey in the family Accipitridae. Eagles belong to several groups of genera, some of which are closely related. True eagles comprise the genus Aquila. Most of the 68 species of eagles are from Eurasia and Africa.[1] Outside this area, just 14 species can be found—two in North America, nine in Central and South America, and three in Australia.<br/>
+      Eagles are not a natural group but denote essentially any kind of bird of prey large enough to hunt sizeable (about 50 cm long or more overall) vertebrates.
+        </p>
+</article>`
+
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color"> HTML Introduction </h1>
@@ -69,7 +67,7 @@ export default function Introduction(){
     <article>
         <h2 className="title-h2">6. مستند HTML بسيط</h2>
         <CodeHighlighter 
-            code={code} language="html" 
+            code={code1} language="html" 
             addClass="addClass m-auto mt-3 mb-3"
             copie={true}
             number={true}
@@ -102,10 +100,16 @@ export default function Introduction(){
         مثال عن بنية مستند <b>HTML</b> بسيط يظهر فيه العنصر <kbd>&lt;body&gt;</kbd>، مع العنصر <kbd>&lt;head&gt;</kbd> الذي يحتوي على عنوان المستند العنصر <kbd>&lt;title&gt;</kbd> :
         </p>
         <div className="sum_exemple_style">
-            <h4 className="green"> الكود </h4>
-            <img src={images.html0_Introduction} alt="Introduction" className="img" />
-            <h4 className="green">  بعد تشغيل الكود </h4>
-            <div className="style-result">reda Eskouni</div>
+            <CodeHighlighter  code={code2} language="html" title='Eagle' number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <Result title={'Eagle'} logo={props.html_logo} route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+                <div>
+                    <h2>Eagle</h2>
+                    <p> 
+                        Eagle is the common name for the golden eagle, bald eagle, and other birds of prey in the family Accipitridae. Eagles belong to several groups of genera, some of which are closely related. True eagles comprise the genus Aquila. Most of the 68 species of eagles are from Eurasia and Africa.[1] Outside this area, just 14 species can be found—two in North America, nine in Central and South America, and three in Australia.<br/>
+                        Eagles are not a natural group but denote essentially any kind of bird of prey large enough to hunt sizeable (about 50 cm long or more overall) vertebrates.
+                    </p>
+                </div>
+            </Result>
         </div>
         <ul>
             <li>خلال هاذه الدورة من تعلم <b>HTML</b> ستتعرف على كل الوسوم <b>HTML</b> مما سيأهلك لتعلم لغة <b>CSS</b> و <b>JavaScript</b> ولغات أخرى  .</li>

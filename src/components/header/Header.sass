@@ -80,19 +80,15 @@
                 text-decoration: none
                 width: max-content
 
-
-
-
-@mixin create-line($color)
-    background: linear-gradient(to right, #f0fff0, #f0fff0 )
-    &:hover
-        background: linear-gradient(to right, aqua , $color, aqua)
+   
+.color-link-nav-light
+    background: #f0fff0
     &::after
         content: ""
         width: 0
         height: 3px
         -webkit-background-clip: text
-        background: linear-gradient(to right, aqua , $color, aqua )
+        background: linear-gradient(to right, #f0fff0 , #f0fff0, #f0fff0 )
         color: #f0fff0
         position: absolute
         bottom: 11px
@@ -102,6 +98,3 @@
         @keyframes link-prog 
             100%
                 width: calc(100% - 16px)
-    
-.color-link-nav-light
-    @include create-line($light)

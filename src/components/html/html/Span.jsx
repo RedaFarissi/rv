@@ -1,9 +1,10 @@
 import images from "../imagesHtml";
-import { CodeHighlighter } from "../pathHtml";
+import { CodeHighlighter ,  Result} from "../../path";
 
-export default function Span(){
+export default function Span(props){
     const code = `<span id="id_name" class="class_name"> content </span>`
-    
+    const codeExemple = `       <span style="font-size:xx-large;color:red;">M</span>other has <span style="color:blue">blue</span> eyes.`
+
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color">HTML Span</h1>
@@ -16,15 +17,13 @@ export default function Span(){
                 <li>الوسم <kbd>&lt;span&gt;</kbd> لا يقوم بالعودة إلى سطر تلقائيا .</li>
             </ul>
         </p>
-        <CodeHighlighter  code={code} language="html" addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="jsx" addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html22_span} alt="span code" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <div className="style-result">
-                <span style={{fontSize:"xx-large"}}>My</span> mother has <span style={{color:"blue"}}>blue</span> eyes.
-            </div>
+            <CodeHighlighter  code={codeExemple} language="html" title="Underline" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Underline' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+                <span style={{fontSize:"xx-large",color:"red"}}>M</span>other has <span style={{color:"blue"}}>blue</span> eyes.
+            </Result>
         </div>
     </article>
 </section>

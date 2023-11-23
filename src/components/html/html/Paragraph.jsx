@@ -1,9 +1,9 @@
-import images from "../imagesHtml";
-import { CodeHighlighter } from "../pathHtml";
+import { CodeHighlighter ,  Result} from "../../path";
 
-export default function Paragraph(){
+export default function Paragraph(props){
     const code = `<p> paragraph </p>`
-
+    const codeExemple = `<p>This is the paragraph.</p>
+  <p>This is another paragraph.</p>`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color">HTML Paragraph (p) </h1>
@@ -16,16 +16,14 @@ export default function Paragraph(){
                 <li>يكتب الوسم <kbd>&lt;p&gt;</kbd> على شكل التالي :</li>
             </ul>
         </p>
-        <CodeHighlighter  code={code} language="html"  addclass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="jsx"  addclass="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html16_p} alt="Paragraph code" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <div className='style-result'>
-                <p dir="rtl">هذه فقرة</p>
-                <p dir="rtl">هذه فقرة أخرى </p>
-            </div>
+            <CodeHighlighter  code={codeExemple} language="html" title="Paragraph" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Paragraph' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+               <p>This is the paragraph.</p>
+               <p>This is another paragraph.</p>
+            </Result>
         </div>
     </article>
 </section>)
