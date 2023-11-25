@@ -17,7 +17,7 @@ ${props.children}
 </html>`
 }
 
-const CodeHighlighter = ({ code, language , addClass , copie , number=false , title="Html Title",head="" , file_name=false}) => {
+const CodeHighlighter = ({ code="", language , addClass , copie , number=false , title="Html Title",head="" , file_name=false}) => {
   const [copySuccess, setCopySuccess] = useState(false);
 
   const processedCode = language === "html" ? 
@@ -48,12 +48,10 @@ const CodeHighlighter = ({ code, language , addClass , copie , number=false , ti
     }
     document.body.removeChild(textArea);
   };
-
-  console.log(tomorrow)
   return (
     <div className={`${addClass} position-relative mt-3 mb-3`}>
-      <div className={`file-name-title ps-3 m-0 text-success ${(file_name)?"d-block":"d-none"}`} dir='ltr'>
-        <span>{file_name}</span>
+      <div className={`file-name-title ps-3 m-0 ${(file_name)?"d-block":"d-none"}`} dir='ltr'>
+        <span className='text-secondary'>{file_name}</span>
       </div>
       <SyntaxHighlighter language={language} className={`box-code d-block ${(file_name)?"pt-5":""} overflow-x`} showLineNumbers={number} style={tomorrow}>
         {processedCode}

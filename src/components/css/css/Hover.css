@@ -1,0 +1,15 @@
+#h2 {font-size: xxx-large;}
+#h2:hover {background-color: aquamarine; border-bottom:4px dashed gray;color:violet;}
+.divdiv{font-size: xx-large;font-weight: bolder;}
+.divdiv:hover{ background-color: rgb(23,125,235);color:red;}
+.divdiv2:hover{ background-color: yellow;}
+.divdiv3:hover{background-color: green;color:white;}
+a{color: blue;}
+.ex1{ color:blue}
+div.ex1:hover  {color: red;}
+div.ex2:hover, div.ex2:active {font-size: 150%;}
+div.ex3:hover, div.ex3:active {background: red;}
+div.ex4:hover, div.ex4:active {font-family: monospace;}
+div.ex5:visited, div.ex5:link {text-decoration: none;}
+div.ex5:hover, div.ex5:active {text-decoration: overline;}
+div.styleee{background-color: rgb(235,235,235);padding: 20px 20px;direction:ltr;color:black;}

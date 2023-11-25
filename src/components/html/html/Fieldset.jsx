@@ -1,12 +1,19 @@
-import images from "../imagesHtml";
 import { CodeHighlighter ,  Result} from "../../path";
 
 export default function Fieldset(props){
     const code = `<fieldset> 
-    <legend> title </legend>
-    HTML content
+        <legend> title </legend>
+        HTML content
+</fieldset>`
+   const codeExemple = `    <fieldset> 
+        <legend> title :</legend>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+            Officia quisquam quam cumque quidem, similique voluptates rerum unde ab, 
+            animi quae veniam nostrum mollitia veritatis quod molestiae 
+            dolore harum modi blanditiis.
+        </p>        
     </fieldset>`
-   
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color"> HTML fieldset </h1>
@@ -19,13 +26,18 @@ export default function Fieldset(props){
         <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <img src={images.html36_fieldset} alt="fieldset"  className="img"/>
-            <img src={images.html36_fieldset_2} alt="fieldset" className="img"/>
-        </div>
-        <div className="sum_exemple_style">
-            <div className="mital">مثال 2 : </div>
-            <img src={images.html36_fieldset2} alt="fieldset" className="img"/>
-            <img src={images.html36_fieldset2_2} alt="fieldset" className="img"/>
+            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" title="Fieldset" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Fieldset' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+                <div className="p-0 m-2 mt-5" style={{border:"3px solid gray",position:"relative"}}>
+                    <div className="ms-4 ps-1 pe-2 mt-3" style={{backgroundColor:"#ffffff",width:"max-content",position:"absolute",top:"-32px"}}> title :</div>
+                    <div className="px-4 py-3">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                        Officia quisquam quam cumque quidem, similique voluptates rerum unde ab, 
+                        animi quae veniam nostrum mollitia veritatis quod molestiae 
+                        dolore harum modi blanditiis.
+                    </div>        
+                </div>
+            </Result>
         </div>
     </article>
 </section>

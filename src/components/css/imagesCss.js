@@ -36,7 +36,7 @@ import css18_word_spacing from "../../assests/images/css/css/css18_word-spacing.
 import css19_text from "../../assests/images/css/css/css19_text-align.png"
 import css20_overflow_2 from "../../assests/images/css/css/css20_overflow 2.png"
 import css20_overflow from "../../assests/images/css/css/css20_overflow.png"
-import css21_text from "../../assests/images/css/css/css21_text-shadow 2.png"
+import css21_text_shadow_2 from "../../assests/images/css/css/css21_text-shadow 2.png"
 import css21_text_shadow from "../../assests/images/css/css/css21_text-shadow.png"
 import css21_text_shadow2_2 from "../../assests/images/css/css/css21_text-shadow2 2.png"
 import css21_text_shadow2 from "../../assests/images/css/css/css21_text-shadow2.png"
@@ -358,6 +358,7 @@ import scss8 from "../../assests/images/css/css/scss8.png"
 import scss9 from "../../assests/images/css/css/scss9.png"
 
 const images = {
+    
     css0_Introduction,css0_Introduction2_2,css0_Introduction2_3,css0_Introduction2,
     css0_Introduction3_2,css0_Introduction3,css0_Introduction4_2,css0_Introduction4,
     css0_Introduction5_2,css0_Introduction5,css0_Introduction6,css10_width_2,
@@ -367,7 +368,7 @@ const images = {
     css12_text_decoration3,css12_text_decoration4_2,css12_text_decoration4,
     css13_opacity_2,css13_opacity,css14_hover,css15_visibility_2,css15_visibility,
     css16_display,css17_latter_spacing,css18_word_spacing,css19_text,css20_overflow_2,
-    css20_overflow,css21_text,css21_text_shadow,css21_text_shadow2_2,
+    css20_overflow,css21_text_shadow_2,css21_text_shadow,css21_text_shadow2_2,
     css21_text_shadow2,css22_box_shadow,css22_box_shadow2_2,css22_box_shadow2,
     css23_transform_2,css23_transform,css23_transform2_2,css23_transform2,
     css23_transform3_2,css23_transform3,css23_transform4_2,css23_transform4,

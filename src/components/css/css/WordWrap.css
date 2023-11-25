@@ -1,0 +1,12 @@
+.box{
+    width: 200px; 
+    height: 200px; 
+    background-color:thistle;
+    padding: 9px;
+  }
+  .a { 
+    word-wrap: break-word;
+  }
+  .b { 
+    word-wrap: normal;
+  }

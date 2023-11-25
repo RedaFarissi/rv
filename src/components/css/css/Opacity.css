@@ -1,0 +1,13 @@
+.css-opacity-test{
+    color:azure;border:1px solid gray;margin-top:-2px;padding:8px 0px;background-color:rgb(30,30,30);
+}
+
+.css-opacity-3{
+    opacity: 0.3
+}
+.css-opacity-6{
+    opacity: 0.6
+}
+.css-opacity-10{
+    opacity: 1
+}

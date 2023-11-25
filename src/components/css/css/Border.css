@@ -1,0 +1,9 @@
+#a,#b,#c,#d{ 
+  background-color: yellow; 
+  width: 350px; 
+  padding: 9px;
+}
+#a{border: groove 9px red;}
+#b{border: ridge  9px red;}
+#c{border: inset  9px red;}
+#d{border: outset 9px red ;}

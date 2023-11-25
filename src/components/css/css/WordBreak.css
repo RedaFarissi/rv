@@ -1,0 +1,5 @@
+#a,#b,#c,#d{ background-color: yellow; width: 350px;}
+#a{word-break: normal;}
+#b{word-break:break-all ;}
+#c{word-break:keep-all ;}
+#d{word-break:break-word ;}

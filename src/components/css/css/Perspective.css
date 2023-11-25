@@ -1,0 +1,24 @@
+#parent-div1 , #parent-div2 , #parent-DIV1 , #parent-DIV2{ margin:20px;background-color:green;}
+#parent-div1 ,  #parent-DIV1{perspective:300px;margin-bottom:90px;}
+#parent-div2 , #parent-DIV2{perspective:600px;}
+.parent{width:400px;height:400px;background-color:red;font-size:130px;margin:auto; }
+#parent-DIV1>div , #parent-DIV2>div{transform: translateZ(50px);} 
+
+.stylE , .style { 
+  background-color:red;height:300px;margin-bottom:9px;
+}
+.diV , .div{ perspective:300px; perspective-origin: left;  }
+.diV2 , .div2{ perspective:300px; perspective-origin: center;  }
+.diV3 , .div3{ perspective:300px; perspective-origin: right;  }
+.div_A , .div_B , .div_C{ 
+  background-color:green; color:white;
+  margin:auto; font-size:35px;
+  height:300px; width:300px;
+  transform: translateZ(-300px);
+}
+.div_a , .div_b , .div_c{ 
+  background-color:green;color: white;
+  margin:auto; font-size: 35px;
+  height:300px; width:300px;
+  transform: rotateX(45deg);
+}

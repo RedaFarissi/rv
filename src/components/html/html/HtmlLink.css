@@ -1,0 +1,10 @@
+.html-link-h1 , .html-link-p {
+    text-align:center;
+    padding: 9px;
+}
+.html-link-h1{
+    color: red;  
+} 
+.html-link-p{
+    font-size: 110%;
+}
