@@ -1,7 +1,8 @@
 import images from "../imagesHtml";
+import { CodeHighlighter ,  Result} from "../../path";
 
-export default function Iframe(){
-   
+export default function Iframe(props){
+    const codeExemple = `       <iframe width="560" height="315" src="https://www.youtube.com/embed/f0oy-NicIgE?si=ncRrKUBT7RHHFbTt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color">HTML Iframe</h1>
@@ -20,10 +21,10 @@ export default function Iframe(){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html37_iframe} alt="iframe"  className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html37_iframe_2} alt="iframe" className="img"/>
+            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" title="Span" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Span' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/f0oy-NicIgE?si=ncRrKUBT7RHHFbTt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </Result>
         </div>
     </article>
     <article>
@@ -40,33 +41,33 @@ export default function Iframe(){
                 <tr>
                     <td> تحديد نهج ميزة ل <bdi><strong>&lt;iframe&gt;</strong></bdi> </td>
                     <td></td>
-                    <td>allow</td>
+                    <td dir="ltr">allow</td>
                 </tr>
                 <tr>
                     <td>تعيين إلى true إذا  <bdi><strong>&lt;iframe&gt;</strong></bdi> مكن تنشيط وضع ملء الشاشة عن طريق استدعاء الأسلوب requestFullscreen()</td>
-                    <td>	true<br/>false</td>
-                    <td>allowfullscreen</td>
+                    <td dir="ltr">	true<br/>false</td>
+                    <td dir="ltr">allowfullscreen</td>
                 </tr>
                 <tr>
                     <td>تحديد ارتفاع <bdi><strong>&lt;iframe&gt;</strong></bdi> . الارتفاع الافتراضي هو 150 بكسل</td>
-                    <td>pixels</td>
-                    <td>height</td>
+                    <td dir="ltr">pixels</td>
+                    <td dir="ltr">height</td>
                 </tr>
                 <tr>
                     <td>Lazy تحديد ما إذا كان يجب على المستعرض تحميل iframe فورا أو تأجيل تحميل iframes حتى يتم استيفاء بعض الشروط</td>
-                    <td>eager<br/>lazy</td>
-                    <td>loading</td>
+                    <td dir="ltr">eager<br/>lazy</td>
+                    <td dir="ltr">loading</td>
                 </tr>
                 <tr>
                     <td>تحديد عنوان المستند لتضمينه في <bdi><strong>&lt;iframe&gt;</strong></bdi> </td>
-                    <td>URL</td>
-                    <td>src</td>
+                    <td dir="ltr">URL</td>
+                    <td dir="ltr">src</td>
                 </tr>
                 <tr>
                     <td>تحديد عرض <bdi><strong>&lt;iframe&gt;</strong></bdi> . العرض الافتراضي هو 300 بكسل
                 </td>
-                    <td>pixels</td>
-                    <td>width</td>
+                    <td dir="ltr">pixels</td>
+                    <td dir="ltr">width</td>
                 </tr>
             </tbody>
 

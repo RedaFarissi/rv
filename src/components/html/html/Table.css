@@ -16,7 +16,7 @@
 .b_tablE {border: 1px solid black ; border-collapse: collapse;padding: 7px; padding: 8p 14px;}
 .b_tablE  th {border: 1px solid black ; border-collapse: collapse;padding: 7px; padding: 8p 14px;}
 .b_tablE  td{border: 1px solid black ; border-collapse: collapse;padding: 7px; padding: 8p 14px;}
-.b_tablE th{font-size: 40px; color: green; background-color: brown;}
+.b_tablE th{font-size: 40px; color: white; background-color: brown;}
 .b_tablE td{font-size: 25px;}
 .b_tablE{margin: auto;}
 

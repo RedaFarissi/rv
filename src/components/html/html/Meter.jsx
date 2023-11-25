@@ -1,9 +1,12 @@
 import images from "../imagesHtml";
 import { CodeHighlighter ,  Result} from "../../path";
 
-export default function Meter(){
+export default function Meter(props){
     const code = `<meter max="max_value" min="min_value" value="value"></meter>`
-    
+    const codeExemple1 = `    <meter value="3" min="0" max="10" ></meter>`       
+    const codeExemple2 = `    <meter id="disk_c" value="33" min="0" max="100" low="50" high="70" optimum="90"></meter><br/>
+    <meter id="disk_c" value="66" min="0" max="100" low="50" high="70" optimum="90"></meter><br/>
+    <meter id="disk_c" value="99" min="0" max="100" low="50" high="70" optimum="90"></meter><br/>`     
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color"> HTML Meter </h1>
@@ -19,10 +22,10 @@ export default function Meter(){
         <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
         <div className="mital">متال : </div>
-        <h4 className="green"> الكود </h4>
-        <img src={images.html38_meter} alt="mater code" className="img"/>
-        <h4 className="green"> بعد تشغيل الكود </h4>
-        <img src={images.html38_meter_2} alt="meter result" className="img"/>
+            <CodeHighlighter file_name="index.html" code={codeExemple1} language="html" title="Meter" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Meter' logo={props.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+                <meter value="3" min="0" max="10" ></meter>
+            </Result>
         </div>
     </article>
     <article>
@@ -36,10 +39,12 @@ export default function Meter(){
         </div>
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html38_meter2} alt="mater code" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html38_meter2_2} alt="meter result" className="img"/>
+            <CodeHighlighter file_name="index.html" code={codeExemple2} language="html" title="Meter" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Meter' logo={props.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+                <meter id="disk_c" value="33" min="0" max="100" low="50" high="70" optimum="90"></meter><br/>
+                <meter id="disk_c" value="66" min="0" max="100" low="50" high="70" optimum="90"></meter><br/>
+                <meter id="disk_c" value="99" min="0" max="100" low="50" high="70" optimum="90"></meter><br/>
+            </Result>
         </div>
         <ul><li>يمكن تصميم الشكل ليكون أكتر إحترافية عبر لغة <b>CSS</b> .</li></ul>
     </article>

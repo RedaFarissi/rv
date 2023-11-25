@@ -1,4 +1,3 @@
-import images from "../imagesHtml";
 import { CodeHighlighter ,  Result} from "../../path";
 
 export default function Span(props){
@@ -20,8 +19,8 @@ export default function Span(props){
         <CodeHighlighter  code={code} language="jsx" addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
-            <CodeHighlighter  code={codeExemple} language="html" title="Underline" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Underline' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" title="Span" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Span' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <span style={{fontSize:"xx-large",color:"red"}}>M</span>other has <span style={{color:"blue"}}>blue</span> eyes.
             </Result>
         </div>

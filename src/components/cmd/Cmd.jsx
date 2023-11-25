@@ -1,11 +1,10 @@
 import { CodeCommand } from "../path";
-import codes from "../../assests/codes/cmd/cmd"
 import images from "./imagesCmd";
 
 
 export default function Cmd(props){
    
-    const arrays = codes.map(e => <li className="list-group-item">
+    const arrays = props.cmd_list.map(e => <li className="list-group-item">
         <a href={`/power-shell#${e}`}>CMD {e.replace(/_/g, ' ')}</a>
     </li>)
 
@@ -60,15 +59,20 @@ export default function Cmd(props){
                 <h3 className="title-h3" id="POST_Requests_curl">12 - إرسال طلبات POST باستخدام curl </h3>
                 <p className="style_divv">سيقوم هذا بإرسال طلب POST إلى www.example.com/login بحمولة تحتوي على حقلي اسم المستخدم وكلمة المرور.</p>
                 <CodeCommand>curl --request POST --data "username=johndoe&password=secret" https://www.example.com/login</CodeCommand>
-                <h3 className="title-h3" id="Copy_Files_to_another_Folder">13 - نسخ جميع الملفات بامتداد معين إلى مجلد آخر </h3>
+                <h3 className="title-h3" id="Copy_Files_to_another_Folder">13 - نسخ جميع الملفات إلى مجلد آخر </h3>
+                <h5>نسخ جميع الملفات بامتداد معين </h5>
                 <p className="style_divv">في هذا المثال، نقوم بنسخ جميع الملفات بامتداد <kbd>.php</kbd> من المجلد <kbd>C:\xampp\htdocs\js\js\</kbd> ونلصقها في <kbd>"C:\Users\SURFACE BOOK\Desktop\all_course_dj_env\project\templates\js"</kbd></p>
                 <CodeCommand>for %F in ("C:\xampp\htdocs\js\js\*.php") do copy "%F" "C:\Users\SURFACE BOOK\Desktop\all_course_dj_env\project\templates\js"</CodeCommand>
+                <h5> نسخ جميع الملفات إلى مجلد آخر </h5>
+                <p className="style_divv">نسخ جميع الملفات ذاخل مجلد إلى مجلد آخر .<br/> قم بذهاب إلى المسار الذي يحتوي الملفات تم إستخدم</p>
+                <CodeCommand>xcopy /s /i * "C:\Path\To\Target\Folder"</CodeCommand>
+                
                 <h3 className="title-h3" id="Change_extension"> 14 - تغيير امتداد الملفات من php إلى html </h3>
                 <p className="style_divv">  انتقل أولاً إلى مسار المجلد الذي يحتوى الملفات.<br/>قم بتغيير كل الملفات ذات الامتداد <kbd>.php</kbd> بالامتداد <kbd>.html</kbd> </p>
                 <CodeCommand>for %i in (*.php) do ren "%i" "*.html"</CodeCommand>
                 <h3 className="title-h3" id="Print_all_Files_in_folder"> 15 - طباعة جميع أسماء الملفات في مجلد معين </h3>
-                <CodeCommand>Get-ChildItem | Where-Object {'{'} -not $_.PSIsContainer {'}'} | ForEach-Object {'{'} $_.Name {'}'}</CodeCommand>
-                <CodeCommand>C:\Users\SURFACE BOOK\Desktop\folder_name{">"} <span className="text-warning">Get-ChildItem | Where-Object {'{'} -not $_.PSIsContainer {'}'} | ForEach-Object {'{'} $_.Name {'}'}</span></CodeCommand>
+                <CodeCommand>dir /A-D /B</CodeCommand>
+                <CodeCommand>C:\Users\SURFACE BOOK\Desktop\folder_name{">"} <span className="text-warning">dir /A-D /B</span></CodeCommand>
                 <h3 className="title-h3" id="View_System_Information"> 16 - عرض معلومات النظام</h3>
                 <p className="style_divv">يعرض معلومات حول النظام مثل اسم الكمبيوتر وإصدار النظام.</p>
                 <CodeCommand>systeminfo</CodeCommand>

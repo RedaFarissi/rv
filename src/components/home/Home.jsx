@@ -14,7 +14,7 @@ export default function Home(props){
           h1="HTML 5"
           img={images.html_logo}
           code={home.home_html}
-          language="html"
+          language="jsx"
           img_class="img-html"
           paragraph="HyperText Markup Language، ويشار إليها اختصاراً ب HTML وتُعرف بلغة ترميز النص التشعبي، هي عبارة عن لغة ترميز خاصة تستخدم لغايات تصميم وإنشاء صفحات الويب، كما يمكننا القول بإنّها عبارة عن الهيكل الرئيسي لصفحات الويب والبنية التحتيّة لها؛ إذ تقدّم وصفاً مفصلاً حول الكيفيّة التي ستكون عليها آلية عرض محتويات الموقع الإلكتروني ويكون ذلك بتقسيمه إلى عنوان وفقرات."
       />

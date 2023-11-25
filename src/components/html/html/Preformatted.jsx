@@ -1,4 +1,3 @@
-import images from "../imagesHtml";
 import { CodeHighlighter ,  Result} from "../../path";
 
 export default function Preformatted(props){
@@ -20,7 +19,7 @@ export default function Preformatted(props){
             <CodeHighlighter  code={code} language="jsx" addclassName="mt-3 mb-3" copie={true}/>
             <div className="mital"> متال :</div>
             <CodeHighlighter  code={codeExemple} language="html" title="Preformatted" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Preformatted' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <Result file_name="index.html" title='Preformatted' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <pre><br/>
                 &nbsp; &nbsp; &nbsp;function greet() {"{"}<br/>
                 &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; console.log("Hello, World!");<br/>

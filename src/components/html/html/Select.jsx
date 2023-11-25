@@ -1,7 +1,6 @@
-import images from "../imagesHtml";
 import { CodeHighlighter ,  Result} from "../../path";
 
-export default function Select(){
+export default function Select(props){
     const code1 = `<select>
     <option> content </option>
     <option> content </option>
@@ -14,7 +13,20 @@ export default function Select(){
     <option> content </option>
     <option> content </option>
 </select>`
-    
+    const codeExemple1 = `      Choose Marocan city:&nbsp;
+    <select>
+        <option value="Marakech">Marakech</option>
+        <option value="Rabat">Rabat</option>
+        <option value="Kenitra">Kenitra</option>
+        <option value="Tanger">Tanger</option>
+    </select> `
+    const codeExemple2 = `  <h2>Choose Marocan city:</h2>
+    <select size="3">
+        <option value="Marakech">Marakech</option>
+        <option value="Rabat">Rabat</option>
+        <option value="Kenitra">Kenitra</option>
+        <option value="Tanger">Tanger</option>
+    </select> `
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style heading-style-html-color">HTML Select</h1>
@@ -26,23 +38,20 @@ export default function Select(){
             السمة <b>name</b>  مطلوبة للإشارة إلى بيانات النموذج بعد إرسال النموذج (إذا حذفت السمة name، فلن يتم إرسال أية بيانات من القائمة المنسدلة).<br/>
             عند النقر سيتم إرسال القيمة المكتوبة داخل السمة value .   
         </p>
-        <CodeHighlighter  code={code1} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code1} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html35_select} alt="select" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <div className="style-result">
+            <CodeHighlighter file_name="index.html" code={codeExemple1} language="html" title="Select" addClass="mt-3 mb-3" copie={true}/>
+            <ul> <li>عند النقر ستضهر قائمة منسدلة</li> </ul>
+            <Result title='Select' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 Choose Marocan city:&nbsp;
                 <select>
                     <option value="Marakech">Marakech</option>
                     <option value="Rabat">Rabat</option>
                     <option value="Kenitra">Kenitra</option>
                     <option value="Tanger">Tanger</option>
-                </select> 
-            </div>
-            <h4 className="green"> عند النقر ستضهر قائمة منسدلة </h4>
-            <img src={images.html35_select_3} alt="select" className="img"/>
+                </select> <br/><br/><br/><br/><br/>
+            </Result>       
         </div>
     </article>
     <article>
@@ -50,21 +59,20 @@ export default function Select(){
         <p className="style_divv">
             تستخدم السمة <b>size</b> لتحديد عدد ال <b>option</b> التي ستضهر على صفحتك .
         </p>
-        <CodeHighlighter  code={code2} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code2} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html35_select2} alt="select" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <div className="style-result">
+            <CodeHighlighter file_name="index.html" code={codeExemple2} language="html" title="Select" addClass="mt-3 mb-3" copie={true}/>
+            <ul> <li>عند النقر ستضهر قائمة منسدلة</li> </ul>
+            <Result title='Select' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <h2>Choose Marocan city:</h2>
-                <select size="4">
+                <select size="3">
                     <option value="Marakech">Marakech</option>
                     <option value="Rabat">Rabat</option>
                     <option value="Kenitra">Kenitra</option>
                     <option value="Tanger">Tanger</option>
                 </select> 
-            </div>
+            </Result>  
         </div>
     </article>
 </section>

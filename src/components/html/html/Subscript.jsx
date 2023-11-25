@@ -1,4 +1,3 @@
-import images from "../imagesHtml";
 import { CodeHighlighter ,  Result} from "../../path";
 
 export default function Subscript(props){
@@ -16,8 +15,8 @@ export default function Subscript(props){
             <CodeHighlighter  code={code} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
             <div className="sum_exemple_style">
                 <div className="mital">مثال : </div>
-                <CodeHighlighter  code={codeExemple} language="html" title="Subscript" addClass="mt-3 mb-3" copie={true}/>
-                <Result title='Subscript' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+                <CodeHighlighter file_name="index.html" code={codeExemple} language="html" title="Subscript" addClass="mt-3 mb-3" copie={true}/>
+                <Result title='Subscript' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                     <p>H<sub>2</sub>O</p>
                     <p>H<sub>2</sub>O<sup>+</sup></p>
                 </Result>

@@ -51,7 +51,7 @@ export default function ListsOrdered(props){
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <CodeHighlighter  code={codeExemple1} language="html" title="Lists Ordered" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Lists Ordered' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <Result title='Lists Ordered' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <ol style={{fontWeight: "600"}}>
                     <li className='text-dark'>html</li>
                     <li className='text-dark'>css</li>
@@ -77,7 +77,7 @@ export default function ListsOrdered(props){
     <div className="sum_exemple_style">
         <div className="mital">مثال : </div>
         <CodeHighlighter  code={codeExemple2} language="html" title="Lists Ordered" addClass="mt-3 mb-3" copie={true}/>
-        <Result title='Lists Ordered' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+        <Result title='Lists Ordered' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2><bdi>type="I"</bdi></h2>
             <ol type="I" style={{fontWeight: "500"}}><li className='text-dark'>html</li><li className='text-dark'>css</li><li className='text-dark'>js</li><li className='text-dark'>php</li></ol><hr/>
             <h2><bdi>type="i"</bdi></h2>
@@ -96,7 +96,7 @@ export default function ListsOrdered(props){
     <div className="sum_exemple_style">
         <div className="mital">مثال : </div>
         <CodeHighlighter  code={codeExemple3} language="html" title="Lists Ordered" addClass="mt-3 mb-3" copie={true}/>
-        <Result title='Lists Ordered' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+        <Result title='Lists Ordered' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <ol start="7" style={{fontWeight: "500"}}>
                 <li className='text-dark'>html</li>
                 <li className='text-dark'>css</li>
@@ -119,8 +119,8 @@ export default function ListsOrdered(props){
     </div>
     <div className="sum_exemple_style">
         <div className="mital">مثال : </div>
-        <CodeHighlighter  code={codeExemple4} language="html" title="Lists Ordered" addClass="mt-3 mb-3" copie={true}/>
-        <Result title='Lists Ordered' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+        <CodeHighlighter file_name="index.html" code={codeExemple4} language="html" title="Lists Ordered" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='Lists Ordered' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <ol reversed style={{fontWeight: "500"}}>
                 <li className='text-dark'>html</li>
                 <li className='text-dark'>css</li>

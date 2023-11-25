@@ -19,8 +19,8 @@ export default function Paragraph(props){
         <CodeHighlighter  code={code} language="jsx"  addclass="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter  code={codeExemple} language="html" title="Paragraph" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Paragraph' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" title="Paragraph" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Paragraph' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                <p>This is the paragraph.</p>
                <p>This is another paragraph.</p>
             </Result>

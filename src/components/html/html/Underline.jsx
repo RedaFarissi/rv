@@ -13,8 +13,8 @@ export default function Underline(props){
     <CodeHighlighter  code={code} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
     <div className="sum_exemple_style">
         <div className="mital">مثال : </div>
-        <CodeHighlighter  code={codeExemple} language="html" title="Underline" addClass="mt-3 mb-3" copie={true}/>
-        <Result title='Underline' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+        <CodeHighlighter file_name="index.html" code={codeExemple} language="html" title="Underline" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='Underline' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <u>This text is underlined.</u>
             <h2><u>Heading</u></h2>
         </Result>

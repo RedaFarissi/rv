@@ -5,7 +5,7 @@ import ThisState from "./exemple/ThisState"
 import codes from "../../assests/codes/react-js/react"
 
 
-function React(){
+function React(props){
 
   const arrays = codes.map(e =>{ 
     const keys = Object.keys(e) 

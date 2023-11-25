@@ -1,12 +1,12 @@
 import images from "../imagesHtml";
 import { CodeHighlighter ,  Result} from "../../path";
 
-export default function Fieldset(){
+export default function Fieldset(props){
     const code = `<fieldset> 
     <legend> title </legend>
     HTML content
-</fieldset>`
-    
+    </fieldset>`
+   
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color"> HTML fieldset </h1>
@@ -16,19 +16,15 @@ export default function Fieldset(){
             ترسم العلامة <kbd>&lt;fieldset&gt;</kbd> مربع حول العناصر ذات الصلة.<br/>
             يتم استخدام العلامة <kbd>&lt;legend&gt;</kbd> لتعريف تسمية توضيحية <kbd>&lt;fieldset&gt;</kbd>.
         </p>
-        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <h4 className="green"> الكود </h4>
             <img src={images.html36_fieldset} alt="fieldset"  className="img"/>
-            <h4 className="green">  بعد تشغيل الكود  </h4>
             <img src={images.html36_fieldset_2} alt="fieldset" className="img"/>
         </div>
         <div className="sum_exemple_style">
             <div className="mital">مثال 2 : </div>
-            <h4 className="green"> الكود </h4>
             <img src={images.html36_fieldset2} alt="fieldset" className="img"/>
-            <h4 className="green">  بعد تشغيل الكود  </h4>
             <img src={images.html36_fieldset2_2} alt="fieldset" className="img"/>
         </div>
     </article>

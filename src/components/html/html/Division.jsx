@@ -2,20 +2,20 @@ import { CodeHighlighter ,  Result} from "../../path"
 
 export default function Division(props){
     const code = `<div id="id_name" className="class_name"> content </div>`
-    const codeExemple = `
-<style>
-    #div-element {
-        background-color:lightblue;
-        border: 5px outset red; 
-        text-align: center;
-        padding:30px;    
-        margin:30px
-    }   
-</style>
-<div class="#div-element">
-    <h2> This is Heading in div element </h2>
-    <p>  This is Paragraph in div element </p>
-</div>`
+    const codeExemple = [`    <div class="#div-element">
+            <h2> This is Heading in div element </h2>
+            <p>  This is Paragraph in div element </p>
+    </div>`,`
+    <style>
+            #div-element {
+                background-color:lightblue;
+                border: 5px outset red; 
+                text-align: center;
+                padding:30px;    
+                margin:30px
+            }   
+    </style>`
+    ]
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color">HTML Division (div)</h1>
@@ -32,8 +32,8 @@ export default function Division(props){
         <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
-            <CodeHighlighter  code={codeExemple} language="html" title="Underline" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Underline' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <CodeHighlighter file_name="index.html" code={codeExemple[0]} head={codeExemple[1]} language="html" title="Division" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Division' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                <div style={{backgroundColor:"lightblue", border: "5px outset red", textAlign:"center",padding:"30px",margin:"30px"}}>
                     <h2> This is Heading in div element </h2>
                     <p>  This is Paragraph in div element </p>

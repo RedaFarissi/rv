@@ -15,8 +15,8 @@ export default function Deleted(props){
         <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital"> متال :</div>
-            <CodeHighlighter  code={codeExemple} language="html" title="Deleted" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Deleted' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" title="Deleted" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Deleted' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <del>100DH</del> <strong>70 dh</strong>
             </Result>
         </div>

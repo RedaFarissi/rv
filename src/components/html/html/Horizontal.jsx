@@ -21,8 +21,8 @@ const codeExemple =  `<p>
     </div>
     <div className="sum_exemple_style">
         <div className="mital">متال : </div>
-        <CodeHighlighter  code={codeExemple} language="html" title="Horizontal" addClass="mt-3 mb-3" copie={true}/>
-        <Result title='Horizontal' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+        <CodeHighlighter  code={codeExemple} language="html" file_name="index.html" title="Horizontal" addClass="mt-3 mb-3" copie={true}/>
+        <Result file_name="index.html" title='Horizontal' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <p> HTML is the standard markup language for creating web pages and web applications. With HTML, you can create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, images and other items. [Image of a screenshot of a few lines of HTML code]</p>
             <hr/>
             <p> PHP (Hypertext Preprocessor) is a server-side scripting language that is used to add dynamic and interactive elements to a web page. PHP can be used to generate HTML, connect to databases, and perform other tasks that require access to the server. PHP is an interpreted language, which means that it is executed by a PHP interpreter on the server. </p>

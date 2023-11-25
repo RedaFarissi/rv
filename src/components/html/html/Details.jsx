@@ -1,4 +1,3 @@
-import images from "../imagesHtml";
 import { CodeHighlighter ,  Result} from "../../path";
 import html_logo from "../../../assests/images/logo/html_logo.png"
 import css_logo from "../../../assests/images/logo/css_logo.png"
@@ -47,7 +46,7 @@ export default function Details(props){
             <li> عند نقر على العنوانين سيضهر محتوى details</li>
             <li>عند إعادة الضغط سيعود المتصفح لشكل الأول</li>
         </ul>
-        <Result title='Details' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+        <Result title='Details' file_name="index.html" logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <details>
                 <summary>html logo</summary>
                 <div className="style_div" style={{backgroundColor:"greenyellow"}}>

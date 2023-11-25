@@ -1,11 +1,32 @@
-import images from "../imagesHtml";
 import { CodeHighlighter ,  Result} from "../../path";
 import "./Button.css"
+import { useState , useRef} from "react";
 
-export default function Button(){
+export default function Button(props){
     const code1 = `<button type="submit"> content </button>`
     const code2 = `<button type="reset"> content </button>`
-    
+    const codeExemple1 = `      <button> Click Me </button>`
+    const codeExemple2 = `      <form>
+            Full Name : <input type="text" name="full_name"/>
+            <button type="submit"> Submit to server </button>
+      </form>`
+    const inputRefExemple2 = useRef(null);
+    const [codeExemple2Route , setCodeExemple2Route] = useState("")         
+    const codeExemple2RouteHandle =()=>{
+        setCodeExemple2Route(`?full_name=${inputRefExemple2.current.value}`)
+    }
+    const codeExemple3 = `<form>
+    Full Name : <input type="text" name="full_name"/>
+    <button type="submit"> Submit to server </button>
+    <button type="reset"> reset </button>
+</form>`
+    const inputRefExemple3 = useRef(null);
+    const [codeExemple3Route , setCodeExemple3Route] = useState("") 
+    const codeExemple3RouteHandle =(event)=>{
+        event.preventDefault();
+        setCodeExemple3Route(`?full_name=${inputRefExemple3.current.value}`)
+    }
+
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color">HTML Button</h1>
@@ -15,15 +36,15 @@ export default function Button(){
             يستخدم الوسم <kbd>&lt;button&gt;</kbd>  في لغة <b>HTML</b> لإنشاء زر قابل للنقر وهو وسم زوجي اي يحتوي على علامة فتح وعلامة إغلاق.<br/>
             داخل <kbd>&lt;button&gt;</kbd> يمكنك وضع نص (و وسم مثل <kbd>&lt;i&gt;</kbd> <kbd>&lt;b&gt;</kbd> <kbd>&lt;strong&gt;</kbd> <kbd>&lt;br&gt;</kbd> <kbd>&lt;img&gt;</kbd> وما إلى ذلك).
         </p>
-        <CodeHighlighter  code={code1} language="html"  addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code2} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code1} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code2} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <ul><li> في هاده الحالة تم إنشاء زر عند النقر عليه  لا يحدت أي شيء .</li></ul>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html34_button} alt="button" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html34_button_2} alt="button" className="img"/>
+            <CodeHighlighter  code={codeExemple1} language="html" title="Button" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Button' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+                <button> Click Me </button><br/>
+            </Result>
         </div>
     </article>
     <article>
@@ -36,10 +57,11 @@ export default function Button(){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html34_button2} alt="button" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html34_button2_2} alt="button" className="img"/>
+            <CodeHighlighter  code={codeExemple2} language="html" title="Button" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Button' url_change={codeExemple2Route}  logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">     
+                    Full Name : <input type="text" ref={inputRefExemple2} name="full_name"/>
+                    <button type="submit" onClick={codeExemple2RouteHandle}> Submit to server </button>
+            </Result>
         </div>
         <h5> 2. القيمة reset </h5>
         <div className="style_divv">
@@ -47,10 +69,14 @@ export default function Button(){
         </div>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html34_button3} alt="button" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html34_button3_2} alt="button" className="img"/>
+            <CodeHighlighter  code={codeExemple3} language="html" title="Button" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Button' url_change={codeExemple3Route} file_name="index.html" logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">     
+                <form>
+                    Full Name : <input type="text" ref={inputRefExemple3} name="full_name"/>
+                    <button type="submit" onClick={codeExemple3RouteHandle}> Submit to server </button>
+                    <button type="reset"> reset </button>
+                </form>
+            </Result>
         </div>
     </article>
     <article>

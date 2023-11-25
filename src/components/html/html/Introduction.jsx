@@ -1,4 +1,3 @@
-import images from "../imagesHtml";
 import { CodeHighlighter ,  Result} from "../../path";
 
 export default function Introduction(props){
@@ -100,8 +99,8 @@ export default function Introduction(props){
         مثال عن بنية مستند <b>HTML</b> بسيط يظهر فيه العنصر <kbd>&lt;body&gt;</kbd>، مع العنصر <kbd>&lt;head&gt;</kbd> الذي يحتوي على عنوان المستند العنصر <kbd>&lt;title&gt;</kbd> :
         </p>
         <div className="sum_exemple_style">
-            <CodeHighlighter  code={code2} language="html" title='Eagle' number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <Result title={'Eagle'} logo={props.html_logo} route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <CodeHighlighter file_name="index.html" code={code2} language="html" title='Eagle' number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <Result title={'Eagle'} logo={props.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <div>
                     <h2>Eagle</h2>
                     <p> 

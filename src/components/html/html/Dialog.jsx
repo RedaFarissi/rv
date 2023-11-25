@@ -1,11 +1,15 @@
-import images from "../imagesHtml";
 import { CodeHighlighter ,  Result} from "../../path";
 
-export default function Dialog(){
+export default function Dialog(props){
     const code = `<dialog open="true/false"> 
     <!--HTML content-->
 </dialog>`
-    
+    const codeExemple = `     <dialog open='true' style="margin:auto;padding:3px;">
+        <div class="py-1 px-2 border border-dark">Html</div>
+        <div class="py-1 px-2 border border-dark">CSS</div>
+        <div class="py-1 px-2 border border-dark">JavaScript</div>
+        <div class="py-1 px-2 border border-dark">React</div>
+    </dialog>`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color">HTML Dialog</h1>
@@ -19,10 +23,15 @@ export default function Dialog(){
         <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html43_dialog} alt="dialog" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html43_dialog_2} alt="dialog" className="img"/>
+            <CodeHighlighter file_name="index.html" code={codeExemple} head={codeExemple[1]} language="html" title="Dialog" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Dialog' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+               <dialog open='true' style={{position:"static", margin:"auto",padding:"3px"}}>
+                    <div className="py-1 px-2 border  border-dark">Html</div>
+                    <div className="py-1 px-2 border  border-dark">CSS</div>
+                    <div className="py-1 px-2 border  border-dark">JavaScript</div>
+                    <div className="py-1 px-2 border  border-dark">React</div>
+               </dialog>
+            </Result>
         </div>
     </article>
 </section>

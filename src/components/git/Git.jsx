@@ -1,12 +1,8 @@
-import { CodeHighlighter } from "../path";
+import { CodeCommand } from "../path";
 import images from "./imagesGit";
-import codes from "../../assests/codes/git/git"
 
 export default function Git(props){
-    
-    const powerShell_list = Object.keys(codes);
-
-    const arrays = powerShell_list.map(e => <li className="list-group-item">
+    const arrays = props.git_list.map(e => <li className="list-group-item">
         <a href={`/git#${e}`}>GIT {e.replace(/_/g, ' ')}</a>
     </li>);
 
@@ -115,8 +111,8 @@ export default function Git(props){
                         في سياق نظام التحكم بالنسخ Git، يُشير "الاستنساخ" إلى عملية إنشاء نسخة محلية من مستودع بعيد (Remote Repository). عندما يقوم المستخدم بعملية الاستنساخ، يقوم Git بتحميل كل البيانات والتاريخ المتعلقين بالمستودع البعيد إلى الجهاز المحلي.<br/><br/>
                         هذه العملية تسمح للمطور بالعمل على المشروع بشكل محلي، وتوفير القدرة على إجراء التعهيدات والتحديثات بدون الحاجة إلى اتصال دائم بالمستودع البعيد. بمجرد إتمام العمل المحلي، يمكن تحديث المستودع البعيد بالتغييرات الجديدة باستخدام أوامر Git مثل git push.
                     </p>
-                    <CodeHighlighter  code={codes.Clone_Repository[0]} addclassName="mt-3 mb-3" copie={true}/>
-                    <CodeHighlighter  code={codes.Clone_Repository[1]} addclassName="mt-3 mb-3" copie={true}/>
+                    <CodeCommand>git clone {"<"}repo link{">"}</CodeCommand>
+                    <CodeCommand>git clone https://github.com/RedaFarissi/front-portfolio.git </CodeCommand>
                     <div className="mital">متال : </div>
                     <ul>
                         <li>للفهم بشكل أفضل قم بإنشاء repository في github أطلق عليه اسم first_repo</li>
@@ -156,17 +152,17 @@ export default function Git(props){
                     <p className="style_divv">
                         git add هو أمر يستخدم لإضافة تغييرات الملفات إلى المرحلة (staging area) في Git، استعدادًا للتأكيد (commit). عندما تقوم بتنفيذ git add لملف أو مجلد، يتم تتبع التغييرات في هذه الملفات وإضافتها إلى الفهرس المؤقت (staging area)، والتي تمثل مجموعة الملفات التي ستكون جاهزة للتأكيد في التحديث القادم.
                     </p>
-                    <CodeHighlighter  code={codes.git_add[0]} addclassName="mt-3 mb-3" copie={true}/>
-                    <CodeHighlighter  code={codes.git_add[1]} addclassName="mt-3 mb-3" copie={true}/>
+                    <CodeCommand>git add css/</CodeCommand>
+                    <CodeCommand>git add index.html</CodeCommand>
                     <div className="mx-3 text-success">أو</div>
-                    <CodeHighlighter  code={codes.git_add[2]} addclassName="mt-3 mb-3" copie={true}/>
+                    <CodeCommand>git add .</CodeCommand>
                     <div className="mx-3 text-success">أو</div>
-                    <CodeHighlighter  code={codes.git_add[3]} addclassName="mt-3 mb-3" copie={true}/>
+                    <CodeCommand>git add index.html css/</CodeCommand>
                     <img src={images.git24} alt="git" className="img"/>
                     <ul><li>أنت الآن في (staging area) وأنت على استعداد ل (commit)</li></ul>
                     <hr />
                     <h3 className="title-h3">إذا كنت تريد إزالة <kbd><bdi>git add</bdi></kbd> من repository الخاص بك إستخدام</h3>
-                    <CodeHighlighter  code={codes.git_add[4]} addclassName="mt-3 mb-3" copie={true}/>
+                    <CodeCommand>git reset css/ index.html</CodeCommand>
                 </article>
 
                 <article id="git_commit">
@@ -175,13 +171,13 @@ export default function Git(props){
                         في نظام التحكم بالنسخ Git، يُشير مصطلح "Commit" إلى عملية تسجيل التغييرات التي تم إجراؤها على الملفات في <bdi>repository</bdi>. عندما يقوم المستخدم بعملية <bdi>(commit)</bdi> ، يتم تضمين مجموعة من التغييرات التي تمثل حالة معينة للمشروع في تلك اللحظة.<br/><br/>
                         عملية Commit تُستخدم لإنشاء نقطة في تاريخ المشروع، وتسجل تفاصيل التغييرات التي تمت. يتم تعيين رسالة <bdi>(commit)</bdi> لشرح الغرض أو الهدف من تلك التغييرات. يعتبر Commit جزءًا أساسيًا من عملية تتبع تاريخ المشروع ويوفر إمكانية الرجوع إلى حالة محددة في أي وقت.
                     </p>
-                    <CodeHighlighter  code={codes.git_commit[0]} addclassName="mt-3 mb-3" copie={true}/>
+                    <CodeCommand>git commit -m "message to your teams"</CodeCommand>
                     <img src={images.git25} alt="git" className="img"/>
                     <img src={images.git26} alt="git" className="img"/>
                     <ul><li>أنت الآن في الريبو المحلي (local repo) وأنت جاهز لدفع البيانات داخل الريبو البعيد <bdi>(remote repo)</bdi></li></ul>
                     <hr />
                     <h3 className="title-h3">إذا كنت تريد إزالة <kbd><bdi>git commit</bdi></kbd> والعودة إلى (staging area) </h3>
-                    <CodeHighlighter  code={codes.git_commit[1]} addclassName="mt-3 mb-3" copie={true}/>
+                    <CodeCommand>git rm -f index.html css/</CodeCommand>
                 </article>
 
                 <article id="git_branch">
@@ -190,7 +186,7 @@ export default function Git(props){
                         استخدم الأمر (git branch) أدناه للحصول على اسم الفرع الذي تعمل فيه في الريبو المحلي الخاص بك. <br/><br/>
                         الفرع هو إصدار واحد من قاعدة التعليمات البرمجية، ويمكن أن يكون لديك فروع متعددة لإصدار متعدد
                     </p>
-                    <CodeHighlighter  code={codes.git_branch} addclassName="mt-3 mb-3" copie={true}/>
+                    <CodeCommand>git branch</CodeCommand>
                     <img src={images.git27} alt="git" className="img"/>
                 </article>
 
@@ -199,7 +195,7 @@ export default function Git(props){
                     <p className="style_divv">
                         git remote -v هو أمر يُستخدم لعرض عناوين URL لجميع النسخ البعيدة (remote) التي تم تكوينها في مشروع Git. يظهر هذا الأمر عادة العناوين الرابطة بمستودع النسخ البعيد من حيث يمكن أن يتم جلب (fetch) وإرسال (push) التغييرات.
                     </p>
-                    <CodeHighlighter  code={codes.git_remote} addclassName="mt-3 mb-3" copie={true}/>
+                    <CodeCommand>git remote -v</CodeCommand>
                     <img src={images.git28} alt="git" className="img"/>
                 </article>
 
@@ -209,8 +205,8 @@ export default function Git(props){
                         في نظام التحكم بالنسخ Git، "الدفع" يشير إلى عملية نقل التعهيدات والتحديثات المحلية إلى المستودع البعيد (Remote Repository). عندما يقوم المستخدم بعملية الدفع، يتم رفع التعهيدات التي قام بها محليًا إلى المكان البعيد، مما يتيح للفرق البرمجية والمطورين الآخرين الوصول إلى أحدث التغييرات.<br/><br/>
                         عملية الدفع تكون ضرورية عندما يكون المطور قد قام بإجراء تغييرات محلية ويرغب في تحديث المستودع البعيد بتلك التغييرات. تستخدم أمر (git push) لتحديث المستودع البعيد بالتعهيدات والتحديثات الحديثة التي تم إجراؤها محليًا.
                     </p>
-                    <CodeHighlighter  code={codes.git_push[0]} addclassName="mt-3 mb-3" copie={true}/>
-                    <CodeHighlighter  code={codes.git_push[1]} addclassName="mt-3 mb-3" copie={true}/>
+                    <CodeCommand>git push Remote_branch_name  local_branch_name</CodeCommand>
+                    <CodeCommand>git push origin  main</CodeCommand>
                     <img src={images.git29} alt="git" className="img"/>
                     <ul><li>كما ترون تم تعديل (remote repo)</li></ul> 
                     <img src={images.git30} alt="git" className="img"/>  
@@ -232,9 +228,9 @@ export default function Git(props){
                         في نظام التحكم بالنسخ Git، "السحب" يشير إلى عملية جلب التحديثات والتعهيدات من المستودع البعيد (Remote Repository) إلى المستودع المحلي. عند استخدام أمر السحب git pull، يقوم Git بجلب التحديثات الجديدة من المستودع البعيد ودمجها مع المشروع المحلي.<br/><br/>
                         هذه العملية ضرورية عندما يكون هناك تغييرات أُجريت على المشروع في المستودع البعيد من قبل أشخاص آخرين، وترغب في جلب هذه التحديثات لمشروعك المحلي لتحديثه والعمل عليه بآخر التغييرات. يسهل استخدام السحب عملية التنسيق والتعاون بين الفِرَق البرمجية التي تعمل على نفس المشروع.
                     </p>
-                    <CodeHighlighter  code={codes.git_pull[0]} addclassName="mt-3 mb-3" copie={true}/>
-                    <CodeHighlighter  code={codes.git_pull[1]} addclassName="mt-3 mb-3" copie={true}/>
-                    <CodeHighlighter  code={codes.git_pull[2]} addclassName="mt-3 mb-3" copie={true}/>
+                    <CodeCommand>git add .</CodeCommand>
+                    <CodeCommand>git commit -m "commit message"</CodeCommand>
+                    <CodeCommand>git pull origin master</CodeCommand>
                 </article>
 
 
@@ -243,11 +239,11 @@ export default function Git(props){
                     <h3 className="title-h3">1 - قم بإنشاء مستودع (repository) جديد على github </h3>
                     <img src={images.git14} alt="git" className="img"/>
                     <h3  className="title-h3">2 - استخدم هذه الأوامر في المجلد الذي تريد تحميله في github </h3>
-                    <CodeHighlighter  code={codes.Existing_Project_powerShell[0]} addclassName="mt-3 mb-3" copie={true}/>
-                    <CodeHighlighter  code={codes.Existing_Project_powerShell[1]} addclassName="mt-3 mb-3" copie={true}/>
-                    <CodeHighlighter  code={codes.Existing_Project_powerShell[2]} addclassName="mt-3 mb-3" copie={true}/>
-                    <CodeHighlighter  code={codes.Existing_Project_powerShell[3]} addclassName="mt-3 mb-3" copie={true}/>
-                    <CodeHighlighter  code={codes.Existing_Project_powerShell[4]} addclassName="mt-3 mb-3" copie={true}/>
+                    <CodeCommand>git init</CodeCommand>
+                    <CodeCommand>git add .</CodeCommand>
+                    <CodeCommand>git commit -m "Initial commit"</CodeCommand>
+                    <CodeCommand>git remote add origin {"<"}repository URL{">"}</CodeCommand>
+                    <CodeCommand>git push -u origin master</CodeCommand>
                 </article>
 
 
@@ -301,15 +297,15 @@ export default function Git(props){
                             بشكل عام، يمكن للوحدات الفرعية في Git أن تساعد في تسهيل عملية التطوير، وتجعل من السهل إدارة التبعيات، وتحافظ على تنظيم شيفرتك وسهولة صيانتها.
                       </p>
                       <h4>طريقة الكتابة</h4>
-                      <CodeHighlighter  code={codes.submodules[0]} addclassName="mt-3 mb-3" copie={true}/>
+                      <CodeCommand>git submodule add {"<"}repository-url{">"} {"<"}submodule-path{">"}</CodeCommand>
                       <div className="mital">متال : </div>
                       <p>في هذه الحالة استخدمت submodule لإنشاء (repo) يحتوي مجلد front , (<bdi>front/</bdi> هو مجلد React) </p>
-                      <CodeHighlighter  code={codes.submodules[1]} addclassName="mt-3 mb-3" copie={true}/>
-                      <CodeHighlighter  code={codes.submodules[2]} addclassName="mt-3 mb-3" copie={true}/>
+                      <CodeCommand>C:\project{">"} git init </CodeCommand>
+                      <CodeCommand>C:\project{">"} git submodule add https://github.com/RedaFarissi/front-ecommerce.git front</CodeCommand>
                       <p> أستخدم هذا الأمر في مسار project/  لأنه في مجلد project لدي واجهة (project/front)</p>
-                      <CodeHighlighter  code={codes.submodules[3]} addclassName="mt-3 mb-3" copie={true}/>
-                      <CodeHighlighter  code={codes.submodules[4]} addclassName="mt-3 mb-3" copie={true}/>
-                      <CodeHighlighter  code={codes.submodules[5]} addclassName="mt-3 mb-3" copie={true}/>
+                      <CodeCommand>C:\project{">"} git commit -m "commit message to front"</CodeCommand>
+                      <CodeCommand>C:\project{">"} git remote add origin https://github.com/RedaFarissi/portfolio-back.git</CodeCommand>
+                      <CodeCommand>C:\project{">"} git push {"<"}remote{">"} {"<"}branch{">"}</CodeCommand>
                       <p> يمكنك الآن إنشاء rebo آخر في github ودفع المجلد الأب فيه وستكون النتيجة ربط rebo الأول والثاني </p>
                 </article>
 
@@ -319,19 +315,19 @@ export default function Git(props){
                         إن إنشاء فرع جديد في Git يتيح لك العمل على ميزات جديدة أو تغييرات في مشروع دون التأثير على شيفرة البرنامج الرئيسية، مما يمنحك مساحة آمنة للتجربة والتعاون مع الآخرين.
                     </p>
                     <h3 className="title-h3">1 - لإنشاء فرع جديد </h3>
-                    <CodeHighlighter  code={codes.Create_new_branch[0]} addclassName="mt-3 mb-3" copie={true}/>
+                    <CodeCommand>git branch -c My_name_branch</CodeCommand>
                     <h3 className="title-h3">2 - للتبديل إلى الفرع الجديد</h3>
-                    <CodeHighlighter  code={codes.Create_new_branch[1]} addclassName="mt-3 mb-3" copie={true}/>
+                    <CodeCommand>git checkout My_name_branch</CodeCommand>
                     <h3 className="title-h3">3 - لإنشاء والتحول إلى فرع جديد</h3>
-                    <CodeHighlighter  code={codes.Create_new_branch[2]} addclassName="mt-3 mb-3" copie={true}/>
-                    <CodeHighlighter  code={codes.Create_new_branch[3]} addclassName="mt-3 mb-3" copie={true}/>
-                    <CodeHighlighter  code={codes.Create_new_branch[4]} addclassName="mt-3 mb-3" copie={true}/>
-                    <CodeHighlighter  code={codes.Create_new_branch[5]} addclassName="mt-3 mb-3" copie={true}/>
+                    <CodeCommand>git branch -b My_name_branch</CodeCommand>
+                    <CodeCommand>git add .</CodeCommand>
+                    <CodeCommand>git commit -m  "message"</CodeCommand>
+                    <CodeCommand>git push</CodeCommand>
                 </article>
                 
                 <article id="Remove_connection">
                     <h2 className="title-h2"> 24 - قم بإزالة الاتصال بين مجلد في جهاز الكمبيوتر الخاص بك و GitHub</h2>
-                    <CodeHighlighter  code={codes.Remove_connection} addclassName="mt-3 mb-3" copie={true}/>
+                    <CodeCommand>rd /s /q .git</CodeCommand>
                 </article>
 
             </section>

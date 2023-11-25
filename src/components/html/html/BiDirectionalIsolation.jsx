@@ -19,8 +19,8 @@ export default function BiDirectionalIsolation(props){
         <CodeHighlighter code={code} language="jsx" addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter  code={codeExemple} language="html" title="Bi Directional Isolation" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Bi Directional Isolation' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" title="Bi Directional Isolation" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Bi Directional Isolation' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <bdi>
                     <div>User <bdi>hrefs</bdi>: 60 points</div>
                     <div>User <bdi>jdoe</bdi>: 80 points</div>

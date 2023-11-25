@@ -1,4 +1,3 @@
-import images from "../imagesHtml";
 import { CodeHighlighter ,  Result} from "../../path";
 
 export default function Quotation(props){
@@ -14,8 +13,8 @@ export default function Quotation(props){
         <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital"> متال :</div>
-            <CodeHighlighter  code={codeExemple} language="html" title="Quotation" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Quotation' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" title="Quotation" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Quotation' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <p>The <q>quick brown fox</q> jumps over the lazy dog.</p>
             </Result>
         </div>

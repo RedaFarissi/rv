@@ -1,8 +1,12 @@
-import images from "../imagesHtml";
 import { CodeHighlighter ,  Result} from "../../path";
 
-export default function Italic(){
+export default function Textarea(props){
     const code = `<textarea name="" id="" > </textarea>`
+    const codeExemple = `      <form action="">
+            <label for="text">Review codding : </label>
+            <textarea id='text'>default text</textarea> 
+            <button>OK</button>
+      </form>`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color"> HTML Textarea </h1>
@@ -13,15 +17,15 @@ export default function Italic(){
             غالبا ما يستخدم <kbd>&lt;textarea&gt;</kbd> في نموذج ، لجمع مدخلات المستخدم مثل التعليقات  .<br/>
             يمكن أن تحتفظ منطقة النص بعدد غير محدود من الأحرف، ويتم عرض النص بخط ثابت العرض (عادة Courier).
         </p>
-        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html39_textarea} alt="textarea code" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <div className="style-result">
-                Review codding : <textarea>default text</textarea> <button>OK</button>
-            </div>
+            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" title="Textarea" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Textarea' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+                <label for="text">Review codding : </label>
+                <textarea id='text'>default text</textarea> 
+                <button>OK</button>
+            </Result>
         </div>
     </article>
     <article>
@@ -49,16 +53,6 @@ export default function Italic(){
         <h5>5. السمة  required </h5>
         <div className="style_divv">
             تستعمل هذه السمة لتحديد أن الحقل يجب ملأه بشكل إجباري   .
-        </div>
-        <div className="sum_exemple_style">
-            <div className="mital">مثال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html39_textarea2} alt="textarea code" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <div className="style-result">
-                <textarea maxlength="20" placeholder="entrez votre email ici"></textarea>
-                <textarea row="1" cols="22"></textarea><button>OK</button>
-            </div>
         </div>
     </article>
 </section>

@@ -16,7 +16,7 @@ export default function Header(){
     {name:"LARAVEL" , link:"laravel"} ,
     {name:"LARAVEL API" , link:"laravel_api"},
     {name:"Git" , link:"git"},
-    {name:"powerShell" , link:"power-shell"},
+    {name:"CMD" , link:"power-shell"},
   ]
   const links = programing.map(e=> 
             <li className="menu-category">

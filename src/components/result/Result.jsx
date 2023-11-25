@@ -2,6 +2,7 @@ import "./Result.sass"
 
 
 export default function Result(props){
+    
     return(
         <div className="style-result">
             <div className="style-result-header">
@@ -35,7 +36,7 @@ export default function Result(props){
                     </div>
                     <div className="style-result-header-2-center">
                         <i className="fa-solid fa-globe"></i>
-                        <p>{props.route}</p>
+                        <p>{props.route}<span className="text-primary">{props.url_change}</span></p>
                     </div>
                     <div className="style-result-header-2-right">
                         <i className="fa-solid fa-ellipsis-vertical"></i>

@@ -31,8 +31,8 @@ export default function Small(props){
         <CodeHighlighter  code={code2} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter  code={codeExemple} language="html" title="Small" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Small' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" title="Small" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Small' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <small> Reda Eskouni  </small><br/>
                 <small><small> Reda Eskouni  </small></small><br/>
                 <small><small><small> Reda Eskouni  </small></small></small><br/>

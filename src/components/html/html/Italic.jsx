@@ -15,8 +15,8 @@ export default function Italic(props){
         <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter  code={codeExemple} language="html" title="Italic" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Italic' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" title="Italic" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Italic' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 italique <br/> <i>italique</i> <hr/> <i>italique</i>
             </Result>
             <img src={images.html6_i}  alt="italic code" className="img"/>

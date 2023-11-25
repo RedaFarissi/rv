@@ -23,8 +23,6 @@ export default function Anchor(props){
 <p> paragraph3.<br/> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, adipisci? Illum et esse ratione labore consequatur recusandae earum inventore sit laboriosam nemo dicta vero mollitia temporibus eaque sed, a aut! Eius iure est maioreseostemporibus consequatur inventore suscipit sit illum? Quos quia tempore molestiae rerum, ab sapiente odit necessitatibus molestias magnam similique iusto corporis. Aspernatur enim consequuntur voluptas rerum delectus. Necessitatibus ab officiisatnobis a repudiandae maiores totam dolor quo aliquam fugiat, ipsam corporis pariatur accusantium animi porro esse unde tenetur magnam minus. Ipsum dolore magnam mollitia eaque commodi praesentium reiciendis veniam, animi atque aliquam nesciuntexcepturiquam autem quas libero a asperiores facilis id dicta minus consectetur? Dolore explicabo quasi repellendus veniam nam est maiores minima in non? Blanditiis eius accusantium minima dolorem amet aut natus vitae incidunt reiciendis consecteturaliquidrem doloribus adipisci tempora voluptas impedit quia non quibusdam mollitia, similique tempore? Ut aspernatur accusamus enim nisi impedit cum quia maxime voluptas accusantium, optio, natus aperiam tempora. Voluptas, tempore dolor natusdebitisex, omnis nesciunt quaerat, non soluta porro nulla suscipit laboriosam beatae quidem accusantium. Odit, provident aliquam sit velit ex fuga saepe, molestias modi reiciendis facilis vel! Enim, saepe! Harum quae ut molestiae voluptatem cupiditatetotammodi fuga corrupti autem laborum illo dolorem, sequi accusamus dignissimos in. Animi, corrupti officiis cumque similique recusandae necessitatibus iusto quas dolorem, reprehenderit repellat ullam sed inventore sint dolorum tempora eaqueporro exrem. Tempora, aliquid quod numquam, aliquam quas, illum saepe corrupti earum molestiae perferendis officiis unde dolores! Ducimus rem, maxime animi numquam debitis officiis suscipit in ex explicabo quaerat ipsa? Iste nihil asperioresnesciunt,consequuntur ab, dolores facere minima nisi aperiam beatae neque commodi suscipit saepe modi voluptatibus minus perspiciatis vel quia quaerat cum obcaecati, expedita harum. Illum harum, nihil quaerat soluta cumque atque rem perferendisveritatissaepe hic laborum mollitia earum alias incidunt inventore ab eligendi recusandae odio quis accusamus voluptatem. Molestias unde amet totam fugiat veritatis? Qui non voluptatum ullam eos. Soluta minus voluptatum veritatis perspiciatis,ducimus quamhic ea sit autem eligendi blanditiis optio at ipsam. Provident pariatur vel eos tempora velit numquam debitis corrupti sit, earum consequuntur praesentium! Mollitia velit ad corporis molestias?</p>
 <h2 id="title4">title4</h2>
 <p> paragraph4.<br/> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, adipisci? Illum et esse ratione labore consequatur recusandae earum inventore sit laboriosam nemo dicta vero mollitia temporibus eaque sed, a aut! Eius iure est maioreseostemporibus consequatur inventore suscipit sit illum? Quos quia tempore molestiae rerum, ab sapiente odit necessitatibus molestias magnam similique iusto corporis. Aspernatur enim consequuntur voluptas rerum delectus. Necessitatibus ab officiisatnobis a repudiandae maiores totam dolor quo aliquam fugiat, ipsam corporis pariatur accusantium animi porro esse unde tenetur magnam minus. Ipsum dolore magnam mollitia eaque commodi praesentium reiciendis veniam, animi atque aliquam nesciuntexcepturiquam autem quas libero a asperiores facilis id dicta minus consectetur? Dolore explicabo quasi repellendus veniam nam est maiores minima in non? Blanditiis eius accusantium minima dolorem amet aut natus vitae incidunt reiciendis consecteturaliquidrem doloribus adipisci tempora voluptas impedit quia non quibusdam mollitia, similique tempore? Ut aspernatur accusamus enim nisi impedit cum quia maxime voluptas accusantium, optio, natus aperiam tempora. Voluptas, tempore dolor natusdebitisex, omnis nesciunt quaerat, non soluta porro nulla suscipit laboriosam beatae quidem accusantium. Odit, provident aliquam sit velit ex fuga saepe, molestias modi reiciendis facilis vel! Enim, saepe! Harum quae ut molestiae voluptatem cupiditatetotammodi fuga corrupti autem laborum illo dolorem, sequi accusamus dignissimos in. Animi, corrupti officiis cumque similique recusandae necessitatibus iusto quas dolorem, reprehenderit repellat ullam sed inventore sint dolorum tempora eaqueporro exrem. Tempora, aliquid quod numquam, aliquam quas, illum saepe corrupti earum molestiae perferendis officiis unde dolores! Ducimus rem, maxime animi numquam debitis officiis suscipit in ex explicabo quaerat ipsa? Iste nihil asperioresnesciunt,consequuntur ab, dolores facere minima nisi aperiam beatae neque commodi suscipit saepe modi voluptatibus minus perspiciatis vel quia quaerat cum obcaecati, expedita harum. Illum harum, nihil quaerat soluta cumque atque rem perferendisveritatissaepe hic laborum mollitia earum alias incidunt inventore ab eligendi recusandae odio quis accusamus voluptatem. Molestias unde amet totam fugiat veritatis? Qui non voluptatum ullam eos. Soluta minus voluptatum veritatis perspiciatis,ducimus quamhic ea sit autem eligendi blanditiis optio at ipsam. Provident pariatur vel eos tempora velit numquam debitis corrupti sit, earum consequuntur praesentium! Mollitia velit ad corporis molestias?</p>`
-    const codeExemple5 = ``
-    const codeExemple6 = ``
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color">HTML Anchor (a)</h1>
@@ -48,7 +46,7 @@ export default function Anchor(props){
         <div className="sum_exemple_style">
             <div className="mital"> متال:</div>
             <CodeHighlighter  code={codeExemple1} language="html" title="Anchor" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Anchor' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <Result title='Anchor' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <a href="https://www.google.com/">google.com</a>    
             </Result>
             <h4 className="green">عند النقر على رابط  يتم توجيه المستخدم إلى google </h4>
@@ -65,7 +63,7 @@ export default function Anchor(props){
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
             <CodeHighlighter  code={codeExemple2} language="html" title="Anchor" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Anchor' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <Result title='Anchor' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <a href="https://www.google.com/" target="_blanck">google.com</a>    
             </Result>
             <h4 className="green">عند النقر على رابط  يتم توجيه المستخدم إلى google </h4>
@@ -81,7 +79,7 @@ export default function Anchor(props){
         <CodeHighlighter code={code3} language="jsx" addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <CodeHighlighter  code={codeExemple3} language="html" title="Anchor" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Anchor' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <Result title='Anchor' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <a href="https://www.google.com/" title="go to google" target="_blanck">google.com</a>    
             </Result>
         </div>
@@ -95,8 +93,8 @@ export default function Anchor(props){
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
             <ul><li>قم بنقر للفهم على الروابط أسفله للفهم بشكل أفضل .</li></ul>
-            <CodeHighlighter  code={codeExemple4} language="html" title="Anchor" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Anchor' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <CodeHighlighter  code={codeExemple4} file_name="index.html" language="html" title="Anchor" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Anchor' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <div style={{height:"400px",overflow:"auto"}}>
                     <a href="#title1">title1</a>&nbsp;&nbsp;
                     <a href="#title2">title2</a>&nbsp;&nbsp;

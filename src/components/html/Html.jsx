@@ -4,7 +4,7 @@ import {
     Superscript ,Subscript ,Underline ,Italic ,Abbreviation ,Blockquote ,Header
     ,Quotation ,Mark ,Deleted ,Preformatted ,Small ,Anchor ,Image ,Division , 
     Span ,Audio ,Video ,Details ,BiDirectionalIsolation ,BiDirectionalOverride ,
-    ListsOrdered ,ListsUnordered ,ListsDefinitionul ,Table ,Input ,Select ,From , 
+    ListsOrdered ,ListsUnordered ,ListsDefinitionul ,Table ,Input ,Select ,Form , 
     Textarea ,Button ,Fieldset ,Dialog ,Iframe ,Meter ,Style ,HtmlLink ,Meta , 
 } from './pathHtml.js';
 import html_logo from "../../assests/images/logo/html_logo.png";
@@ -60,7 +60,7 @@ export default function Html(props){
                 <Route path='select' element={<Select html_logo={html_logo} />} /> 
                 <Route path='textarea' element={<Textarea html_logo={html_logo} />} /> 
                 <Route path='button' element={<Button html_logo={html_logo} />} /> 
-                <Route path='from' element={<From html_logo={html_logo} />} /> 
+                <Route path='form' element={<Form html_logo={html_logo} />} /> 
                 <Route path='header' element={<Header html_logo={html_logo} />} /> 
                 <Route path='fieldset' element={<Fieldset html_logo={html_logo} />} /> 
                 <Route path='dialog' element={<Dialog html_logo={html_logo} />} /> 

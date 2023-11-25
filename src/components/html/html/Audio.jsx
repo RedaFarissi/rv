@@ -41,7 +41,7 @@ const codeExemple6 = `      <audio src="./music.mp3" controls preload="metadata"
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <CodeHighlighter  code={codeExemple1} language="html" title="Audio" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Audio' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <Result title='Audio' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <audio src="./music.mp3" controls></audio>
             </Result> 
         </div>
@@ -57,7 +57,7 @@ const codeExemple6 = `      <audio src="./music.mp3" controls preload="metadata"
             <div className="mital">مثال : </div>
             <ul><li>يبيّن هذه المثال كيفية تضمين مقطع صوتي باستخدام العنصر <strong>&lt;audio&gt;</strong> وله أكثر من مصدر، أحدها بصيغة <b>ogg</b> والآخر بصيغة <b>mp3</b></li></ul>
             <CodeHighlighter  code={codeExemple2} language="html" title="Audio" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Audio' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <Result title='Audio' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <audio src="./music.mp3" controls></audio>
             </Result> 
         </div>
@@ -74,7 +74,7 @@ const codeExemple6 = `      <audio src="./music.mp3" controls preload="metadata"
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <CodeHighlighter  code={codeExemple3} language="html" title="Audio" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Audio' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <Result title='Audio' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <audio src="./music.mp3" controls muted></audio>
             </Result>
         </div>
@@ -88,7 +88,7 @@ const codeExemple6 = `      <audio src="./music.mp3" controls preload="metadata"
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <CodeHighlighter  code={codeExemple4} language="html" title="Audio" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Audio' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <Result title='Audio' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <audio src="./music.mp3" controls autoplay></audio>
             </Result>
         </div>
@@ -103,7 +103,7 @@ const codeExemple6 = `      <audio src="./music.mp3" controls preload="metadata"
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <CodeHighlighter  code={codeExemple5} language="html" title="Audio" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Audio' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <Result title='Audio' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <audio src="./music.mp3" controls autoplay loop></audio>
             </Result>
         </div>
@@ -120,7 +120,7 @@ const codeExemple6 = `      <audio src="./music.mp3" controls preload="metadata"
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <CodeHighlighter  code={codeExemple6} language="html" title="Audio" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Audio' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <Result title='Audio' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <audio src="./music.mp3" controls preload="metadata" loop></audio>
             </Result>
         </div>

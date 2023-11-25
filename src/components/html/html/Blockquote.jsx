@@ -16,8 +16,8 @@ export default function Blockquote(props){
         <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
-            <CodeHighlighter  code={codeExemple} language="html" title="Blockquote" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Blockquote' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" title="Blockquote" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Blockquote' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <blockquote cite="https://www.google.com/"> google</blockquote>
             </Result>
         </div>

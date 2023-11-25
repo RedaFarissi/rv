@@ -31,7 +31,7 @@ export {default as ListsOrdered} from './html/ListsOrdered';
 export {default as ListsUnordered} from './html/ListsUnordered';
 export {default as ListsDefinitionul} from './html/ListsDefinitionul';
 export {default as Table} from './html/Table';
-export {default as From} from './html/From';
+export {default as Form} from './html/Form';
 export {default as Input} from './html/Input';
 export {default as Textarea} from './html/Textarea';
 export {default as Button} from './html/Button';

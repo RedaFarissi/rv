@@ -1,6 +1,7 @@
-import { CodeHighlighter } from "../pathCss";
+import { CodeHighlighter ,  Result} from "../../path";
+import images from "../imagesCss";
 
-export default function Introduction(){
+export default function Introduction(props){
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-css-color"> CSS Introduction </h1>
@@ -21,7 +22,7 @@ export default function Introduction(){
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
             <ul><li>في هاذا المتال قمنا بتسمية الملفين <b>reda</b> ولاكن يختلف الإمتداد فالملف الأول يحمل إمتداد <b>css</b> والملف التاني يحمل إمتداد <b>html</b> .</li></ul>
-            <img src="{% static 'css/css0_Introduction.png' %}" className="img"/>
+            <img src={images.css0_Introduction} alt="intro" className="img"/>
         </div>
         <h5>2. طريقة ربط الملف html ب css</h5>
         <div className="style_divv">
@@ -30,11 +31,11 @@ export default function Introduction(){
         <div className="sum_exemple_style">
             <div className="mital">متال :  </div>
             <h4 className="green"> ملف html </h4>
-            <img src="{% static 'css/css0_Introduction2.png' %}" className="img"/>
+            <img src={images.css0_Introduction2} alt="intro" className="img"/>
             <h4 className="green"> ملف css </h4>
-            <img src="{% static 'css/css0_Introduction2 2.png' %}" className="img"/>
+            <img src={images.css0_Introduction2_2} alt="intro" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src="{% static 'css/css0_Introduction2 3.png' %}" className="img"/>
+            <img src={images.css0_Introduction2_3} alt="intro" className="img"/>
         </div>
     </article>
     <article>
@@ -49,9 +50,9 @@ export default function Introduction(){
         <div className="sum_exemple_style">
             <div className="mital">متال :  </div>
             <h4 className="green">  </h4>
-            <img src="{% static 'css/css0_Introduction3.png' %}" className="img"/>
+            <img src={images.css0_Introduction3} alt="intro" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src="{% static 'css/css0_Introduction3 2.png' %}" className="img"/>
+            <img src={images.css0_Introduction3_2} alt="intro" className="img"/>
         </div>
         <ul><li> يمكنك دائما كتابة أكواد css داخل ملف خاص ب <b>css</b> وربطهم عن طريق الوسم <b>link</b> كما هو مذكور فوق .</li></ul>
     </article>
@@ -67,9 +68,9 @@ export default function Introduction(){
         <div className="sum_exemple_style">
         <div className="mital">متال :  </div>
         <h4 className="green"> الكود </h4>
-        <img src="{% static 'css/css0_Introduction4.png' %}" className="img"/>
+        <img src={images.css0_Introduction4} alt="intro" className="img"/>
         <h4 className="green"> بعد تشغيل الكود </h4>
-        <img src="{% static 'css/css0_Introduction4 2.png' %}" className="img"/>
+        <img src={images.css0_Introduction4_2} alt="intro" className="img"/>
         </div>
     </article>
     <article>
@@ -81,7 +82,7 @@ export default function Introduction(){
         </div>
         <div className="sum_exemple_style">
         <div className="mital">متال :  </div>
-        <img src="{% static 'css/css0_Introduction6.png' %}" className="img"/>
+        <img src={images.css0_Introduction6} alt="intro" className="img"/>
         </div>
     </article>
     <article>
@@ -95,9 +96,9 @@ export default function Introduction(){
         <div className="mital">متال :  </div>
             <ul><li>لاحض أن تصميم تم تنفيده على كل  وسوم h2 .</li></ul>
             <h4 className="green"> الكود </h4>
-            <img src="{% static 'css/css0_Introduction5.png' %}" className="img"/>
+            <img src={images.css0_Introduction5} alt="intro" className="img"/>
             <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src="{% static 'css/css0_Introduction5 2.png' %}" className="img"/>
+            <img src={images.css0_Introduction5_2} alt="intro" className="img"/>
         </div>
     </article>
 </section>

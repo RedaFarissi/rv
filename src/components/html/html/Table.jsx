@@ -1,4 +1,3 @@
-import images from "../imagesHtml";
 import { CodeHighlighter ,  Result} from "../../path";
 import "./Table.css"
 
@@ -35,11 +34,12 @@ export default function Table(props){
             <td>$140</td>
         </tr>
     </table>`,
-    ` <style>
-    table, th, td {
-      border: 1px solid black;
-    }
-  </style>`]
+    ` 
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+    </style>`]
     const codeExemple2 = [`<table class="center">
       <tr>
         <th>Month</th>
@@ -53,27 +53,29 @@ export default function Table(props){
         <td>February</td>
         <td>$80</td>
       </tr>
-    </table>`,` <style>
-    table, th, td {
-      border: 1px solid black;
-      border-collapse: collapse;
-      padding: 8px 14px;
-    }
-    
-    th {
-      font-size: 40px;
-      color: green;
-      background-color: brown;
-    }
-    
-    td {
-      font-size: 25px;
-    }
-    
-    table.center {
-      margin-left: auto;
-      margin-right: auto;
-    }
+    </table>`,
+    ` 
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+          padding: 8px 14px;
+        }
+
+        th {
+          font-size: 40px;
+          color: white;
+          background-color: brown;
+        }
+
+        td {
+          font-size: 25px;
+        }
+
+        table.center {
+          margin-left: auto;
+          margin-right: auto;
+        }
     </style>`]
 
     const codeExemple3 = [
@@ -100,7 +102,8 @@ export default function Table(props){
             <td>$100</td>
         </tr>
     </table>`,
-    `<style>
+    `
+    <style>
         table, th, td {
           border: 1px solid black;
           border-collapse: collapse;
@@ -108,7 +111,7 @@ export default function Table(props){
         }
         th {
           font-size: 32px;
-          color: green;
+          color: white;
           background-color: brown;
         }
         td {
@@ -120,7 +123,6 @@ export default function Table(props){
           margin-right: auto;
         }
     </style>`]
-
     const codeExemple4 = `<h1>HTML colgroup tag</h1>
     <table>
       <colgroup>
@@ -143,6 +145,72 @@ export default function Table(props){
         <td>23</td>
       </tr>
     </table>`
+    const codeExemple5 =  [`<table className="classTable">
+        <tr>
+            <th colspan="3">First Row</th>
+        </tr>
+        <tr>
+            <td>First Cell</td>
+            <td>Second Cell</td>
+            <td>Third Cell</td>
+        </tr>
+    </table>`,
+    `
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px 14px;
+        }
+        th {
+            font-size: 32px;
+            color: white;
+            background-color: brown;
+        }
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>`
+    ]
+    const codeExemple6 = [`     <table className="classTable" border="1">
+       <tr>
+         <th border="1">Header 1</th>
+         <th border="1">Header 2</th>
+         <th border="1">Header 3</th>
+       </tr>
+       <tr>
+         <td rowspan="2" className="bg-danger">Row 1, Cell 1 </td>
+         <td>Row 1, Cell 2</td>
+         <td>Row 1, Cell 3</td>
+       </tr>
+       <tr>
+         <td>Row 2, Cell 2</td>
+         <td>Row 2, Cell 3</td>
+       </tr>
+       <tr>
+         <td>Row 3, Cell 1</td>
+         <td>Row 3, Cell 2</td>
+         <td>Row 3, Cell 3</td>
+       </tr>
+     </table>`,
+     `
+    <style>
+       table, th, td {
+           border: 1px solid black;
+           border-collapse: collapse;
+           padding: 8px 14px;
+       }
+       th {
+           font-size: 32px;
+           color: white;
+           background-color: brown;
+       }
+       table.center {
+           margin-left: auto;
+           margin-right: auto;
+       }
+    </style>`]
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color">HTML table</h1>
@@ -157,8 +225,8 @@ export default function Table(props){
         <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter  code={codeExemple1[0]} head={codeExemple1[1]} language="html" title="Underline" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Table of Savings' logo={props.html_logo} route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <CodeHighlighter file_name="index.html" code={codeExemple1[0]} head={codeExemple1[1]} language="html" title="Underline" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Table of Savings' logo={props.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <table id="a_tablE">
                     <tr>
                         <th>Month</th> 
@@ -189,8 +257,8 @@ export default function Table(props){
         </div>
         <div className="sum_exemple_style">
             <div className="mital">مثال 2 : </div>
-            <CodeHighlighter  code={codeExemple2[0]} head={codeExemple2[1]} language="html" title="Table" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Table' logo={props.html_logo} route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <CodeHighlighter file_name="index.html" code={codeExemple2[0]} head={codeExemple2[1]} language="html" title="Table" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Table' logo={props.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <table className="b_tablE"><tr> <th>Month</th> <th>Savings</th> </tr>  <tr> <td>January</td> <td>$100</td> </tr> <tr> <td>February</td> <td>$80</td> </tr></table>
             </Result>
         </div>
@@ -203,8 +271,8 @@ export default function Table(props){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter  code={codeExemple3[0]} head={codeExemple3[1]} language="html" title="Table" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Table' logo={props.html_logo} route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <CodeHighlighter file_name="index.html" code={codeExemple3[0]} head={codeExemple3[1]} language="html" title="Table" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Table' logo={props.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <table className="b_tablE ml-0" >
                     <caption className="b_tablE-test"> My Savings</caption>
                     <tr> <th>Month</th> <th>Savings</th> </tr>
@@ -228,8 +296,8 @@ export default function Table(props){
         </div>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter  code={codeExemple4} language="html" title="Table" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Table' logo={props.html_logo} route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <CodeHighlighter file_name="index.html" code={codeExemple4} language="html" title="Table" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Table' logo={props.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <h1>HTML colgroup tag</h1>
                 <table>
                   <colgroup>
@@ -256,74 +324,57 @@ export default function Table(props){
         </div>
     </article>
     <article>
-        <h2 className="title-h2">4. الوسم thead</h2>
-        <p className="style_divv">
-            تُستخدم علامة <kbd>&lt;thead&gt;</kbd> لتجميع محتوى الرأس في جدول <b>HTML</b>.
-        </p>
-    </article>
-    <article>
-        <h2 className="title-h2">5. الوسم tbody</h2>
-        <p className="style_divv">
-            تُستخدم علامة <kbd>&lt;tbody&gt;</kbd> لتجميع محتوى النص في جدول <b>HTML</b>.
-        </p>
-        </article>
-        <article>
-        <h2>6. الوسم tfooter</h2>
-        <p  className="style_divv">
-            تُستخدم العلامة <kbd>&lt;tfooter&gt;</kbd> لتجميع محتوى السفلي في جدول <b>HTML</b>
-        </p>
-        <div className="sum_exemple_style">
-            <div className="mital">مثال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html31_table5} alt="table code" className="img"/> 
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <div className="style-result">
-                <table id="e_table">
-                    <caption className="e_table-caption"> reda_coder</caption>
-                    <tr> <th>Month   </th> <th>Savings</th>  </tr>
-                    <tr> <td>January </td> <td>$100</td>     </tr> 
-                    <tr> <td>February</td> <td>$80</td>      </tr> 
-                    <tr> <td>Sum     </td> <td>$180</td>     </tr> 
-                </table>
-            </div>
-        </div>
-    </article>
-    <article>
-        <h2>7. السمات المستعملة </h2>
-        <h5 className="title-h2"> السمة colspan </h5>
+        <h2 className="title-h2">4. السمات المستعملة </h2>
+        <h5> 1 - السمة colspan </h5>
         <p className="style_divv">
             تحدد السمة <b>colspan</b> عدد الأعمدة التي يجب أن تمتد الخلية .
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html31_table6} alt="table code" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <div className="style-result">
-                <table id="f_table">
-                    <tr> <th>Month   </th> <th>Savings</th>  </tr>
-                    <tr> <td>January </td> <td>$100</td>     </tr> 
-                    <tr> <td>February</td> <td>$80</td>      </tr> 
-                    <tr> <td colspan="2"> Sum: $180 </td>     </tr> 
-                </table>
-            </div>
+            <CodeHighlighter file_name="index.html" code={codeExemple5[0]} head={codeExemple5[1]} language="html" title="Table" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Table' logo={props.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+               <table className="b_tablE ml-0">
+                    <tr>
+                        <th colspan="3">First Row</th>
+                    </tr>
+                    <tr>
+                        <td>First Cell</td>
+                        <td>Second Cell</td>
+                        <td>Third Cell</td>
+                    </tr>
+               </table>
+            </Result>
         </div>
-        <h5> السمة rowspan </h5>
+        <h5>2 - السمة rowspan </h5>
         <p  className="style_divv">
             تحدد السمة <b>rowspan</b>  عدد الأسطر التي يجب أن تمتد الخلية .
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html31_table7} alt="table code" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <div className="style-result">
-                <table id="f_table">
-                    <tr> <th>Month   </th> <th>Savings</th> <th>Savings for holiday!</th> </tr>
-                    <tr> <td>January </td> <td>$100   </td> <td rowspan="2">$50</td> </tr> 
-                    <tr> <td>February</td> <td>$80</td>  </tr> 
+            <CodeHighlighter file_name="index.html" code={codeExemple6[0]} head={codeExemple6[1]} language="html" title="Table" addClass="mt-3 mb-3" copie={true}/>
+            <Result  title='Table' logo={props.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+                <table className="b_tablE" border="1">
+                  <tr>
+                    <th border="1">Header 1</th>
+                    <th border="1">Header 2</th>
+                    <th border="1">Header 3</th>
+                  </tr>
+                  <tr>
+                    <td rowspan="2" className="bg-danger">Row 1, Cell 1 </td>
+                    <td>Row 1, Cell 2</td>
+                    <td>Row 1, Cell 3</td>
+                  </tr>
+                  <tr>
+                    <td>Row 2, Cell 2</td>
+                    <td>Row 2, Cell 3</td>
+                  </tr>
+                  <tr>
+                    <td>Row 3, Cell 1</td>
+                    <td>Row 3, Cell 2</td>
+                    <td>Row 3, Cell 3</td>
+                  </tr>
                 </table>
-            </div>
+            </Result>
         </div>
     </article>
 </section>

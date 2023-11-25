@@ -1,4 +1,3 @@
-import images from "../imagesHtml";
 import { CodeHighlighter ,  Result} from "../../path";
 
 export default function Image(props){
@@ -19,8 +18,8 @@ export default function Image(props){
         <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
-            <CodeHighlighter  code={codeExemple1} language="html" title="Image" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Image' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <CodeHighlighter file_name="index.html" code={codeExemple1} language="html" title="Image" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Image' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <img src={props.html_logo} width="50%" alt="description"/> 
             </Result>
             <ul>  
@@ -31,8 +30,8 @@ export default function Image(props){
         <div className="sum_exemple_style">
             <div className="mital">متال 2 : </div>
             <ul><li>قمنا بكتابة مسار خاطئ لصورة لتتمكن من رؤية فائدة <b>alt</b></li></ul>
-            <CodeHighlighter  code={codeExemple2} language="html" title="Image" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Image' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+            <CodeHighlighter file_name="index.html" code={codeExemple2} language="html" title="Image" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='Image' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <img src="logo/logo.png" width="50%" alt="description"/> 
             </Result>
         </div>

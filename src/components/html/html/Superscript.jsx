@@ -15,8 +15,8 @@ export default function Superscript(props){
         <CodeHighlighter  code={code} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
         <div className="mital">مثال : </div>
-        <CodeHighlighter  code={codeExemple} language="html" title="Superscript" addClass="mt-3 mb-3" copie={true}/>
-        <Result title='Superscript' logo={props.html_logo}  route="C:/Users/SURFACE BOOK/Desktop/html/index.html">
+        <CodeHighlighter file_name="index.html" code={codeExemple} language="html" title="Superscript" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='Superscript' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>2<sup>3</sup> = 8</h2>
             <h2>1<sup>er</sup></h2>
         </Result>
