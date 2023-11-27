@@ -1,0 +1,140 @@
+#id_anima{
+    line-height: 85px;text-align: center;border:2px solid white;border-radius: 8px;width: 90px;height: 90px;background-color: black;animation : exemple 9s infinite ease;text-shadow: 1px 1px blue;box-shadow: 2px 2px 10px gray;font-size: xx-large;
+}
+@keyframes exemple {
+    0%{background-color: red;position: absolute; left:2%;transform: rotate(0deg);}
+    50%{background-color: green;position: absolute; left:80%;transform: rotate(25deg);}
+    100%{background-color: red;position: absolute; left:2%;transform: rotate(360deg)}
+}
+#id_anima_key{
+    width: 200px; height: 200px; background-color: black;
+    animation-name : reda;animation-duration :9s;animation-iteration-count: infinite;
+}
+@keyframes reda {
+    from{background-color: black;}to{background-color: green;}
+}
+#key_exemple{
+    margin: auto;width: 200px;height: 200px;background-color: black; border: 5px solid blue;
+    animation-name : name_function;animation-duration : 9s; animation-iteration-count: infinite;
+}
+@keyframes name_function {
+    0%{  background-color: black;}25%{ background-color: blue;}50%{ background-color: darkgreen;}
+    75%{ background-color: yellow;}100%{background-color: darkorange}
+}
+#key_exemple2{
+    margin: auto;width: 200px;height: 200px;background-color: black; border: 5px solid blue;
+    animation-name : name_function;animation-duration : 9s; animation-iteration-count: infinite;
+}
+#key_exemple3{
+    margin: auto;height:9vh;background-color: black;border: 5px solid blue;font-size: x-large;
+    animation-name : name_function3;
+    animation-duration : 6s; 
+    animation-delay : 3s;
+    animation-iteration-count: infinite; 
+}
+@keyframes name_function3 {
+    0% { border-radius:50% 9px;background-color: magenta;color: gray;width: 25%;}
+    25%{ border-radius:9px;background-color: black;color:aqua;width: 47%;}
+    50%{ border-radius:20px 20px 5% 20px;background-color: blueviolet ;color:orange;width: 70%;}
+    75%{ border-radius:9px;background-color: white ;color:blue;width: 47%;}
+    100%{border-radius:50% 9px;background-color: rgb(235,120,90);color:greenyellow;width: 25%;}
+}
+#DIV_animation{
+        width: 15%;
+        height: 15vh;
+        background-color: red;
+        border: 5px solid blue;
+        animation-name : name_function4;
+        animation-duration : 6s; 
+        animation-iteration-count : 2; 
+}
+@keyframes name_function4 {
+    0% { position:absolute; top:0%; left:0%;}25%{position:absolute; top:0%; left:85%;}
+    50%{ position:absolute; top:34vh; left:85%;}
+    75%{ position:absolute; top:34vh; left:0%;}100%{position:absolute; top:0%; left:0%;}
+}
+#DIV_animation2{
+    border-radius: 50%;
+    width: 15%;height: 15%;
+    background-color: goldenrod; border: 2px solid blue;
+    animation-name:name_function5;
+    animation-duration:2s;
+    animation-iteration-count:infinite;
+}
+@keyframes name_function5 {
+    0% { position:absolute; top:0%; left:0%;background-color: red;}25%{ position:absolute; top:0%; left:85%;background-color: green;}
+    50%{ position:absolute; top:34vh;left:85%;background-color: orange;}
+    75%{ position:absolute; top:34vh;left:0%;background-color: orangered;}100%{position:absolute; top:0%; left:0%;background-color: red;}
+}
+.section{border: 6px solid black;}
+.div {
+    width: 20%;height:70px;text-align: center;
+    border:2px solid green;background: red;color:white;
+    font-weight: bold;font-size: xx-large;
+    animation: mymove 5s infinite;
+}
+@keyframes mymove {
+    from{margin-left: 0%;}
+    to{  margin-left: 80%;}
+}
+#DIV_animatioN3{
+    border-radius: 50%;
+    width: 15% ;
+    height: 15% ;
+    background-color: goldenrod ; 
+    border: 2px solid blue ; 
+    animation : name_fonctioN 2s ;
+}
+@keyframes name_fonctionN {
+    0% {  position:absolute;top:0%  ;left:0% ;background-color: red;}
+    50%{  position:absolute;top:0%  ;left:85%;background-color: green;}
+    100%{ position:absolute;top:85%;left:85% ;background-color: orange;}
+}
+#playState{
+    border-radius: 50%;
+    width: 15%;height: 15%;
+    background-color: greenyellow;
+    border: 2px solid orchid;
+    animation : playState 5s infinite;
+}
+@keyframes playState {
+    0% { position:absolute; top:0%; left:0%;background-color: red;}
+    12.5%{ position:absolute; top:42.5%; left:42.5%;background-color: green;}
+    25%{ position:absolute; top:0%; left:85%;background-color: green;}
+    32.5%{ position:absolute; top:42.5%; left:42.5%;background-color: green;}
+    50%{ position:absolute; top:85%;left:85%;background-color: green;}
+    62.5%{ position:absolute; top:42.5%; left:42.5%;background-color: orange;}
+    80%{ position:absolute; top:85%;left:0%;background-color: orange;}
+    92.5%{ position:absolute; top:42.5%; left:42.5%;background-color: orange;}
+    100%{ position:absolute; top:0%; left:0%;background-color: orange;}
+}
+#DIV_animatio4{
+    border-radius: 50%;
+    width: 15%;height: 15%;
+    background-color: goldenrod; border: 2px solid blue;
+}
+@keyframes name_function9 {
+    0% { position:absolute; top:0%; left:0%;background-color: red;}
+    50%{ position:absolute; top:0%; left:85%;background-color: green;}
+    100%{ position:absolute; top:34vh;left:85%;background-color: orange;}
+}
+
+
+
+
+.animation_exemple{
+    display: flex; justify-content: space-around; background-color:azure;
+}
+.input_radio_box{
+    box-shadow:5px 5px 20px rgba(0 0 0/30%); align-self:center; width: 40%; min-height: 400px;
+}
+.animation{
+    width: 40%; box-shadow:3px 3px 20px rgba(0 0 0 /30%); min-height:400px;
+}
+@media only  screen and (max-width:903px) {
+    .animation_exemple{ flex-direction: column; }
+    .input_radio_box{ width: 100%;  margin-bottom: 27px; min-height: 90px;}
+    .Code{  margin-bottom: 20px; }
+    .animation{ width: 100%;  }
+    .div{ font-size: 18px;}
+}

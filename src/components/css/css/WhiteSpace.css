@@ -1,3 +1,6 @@
-.a { white-space: nowrap; }
-.b { white-space: normal; }
-.c { white-space: pre; }
+.css-white-space-ex1-a { white-space: nowrap; }
+.css-white-space-ex1-b { white-space: normal; }
+.css-white-space-ex1-c { white-space: pre; }
+.css-white-space-ex1-overflow{
+    overflow-x: auto;
+}

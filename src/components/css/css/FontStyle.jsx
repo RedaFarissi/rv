@@ -1,7 +1,21 @@
 import { CodeHighlighter ,  Result} from "../../path";
 import images from "../imagesCss";
+import "./FontStyle.css"
 
 export default function FontStyle(props){
+    const codeExemple2= { 
+        css:`p{ font-size: 22px;}
+p-1 {  font-style: normal;  }
+p-2 {  font-style: italic;  }
+p-3 {  font-style: oblique;  }
+p-4 {  font-style: inherit;  }`,
+        head:`  
+    <link rel="stylesheet" href="./index.css">`,
+        code:`      <p class="p-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+      <p class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+      <p class="p-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+      <p class="p-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>`
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-css-color"> CSS Font-Style </h1>
@@ -15,11 +29,15 @@ export default function FontStyle(props){
                 <li><b>oblique</b> : اختيار نسخة مُصنَّفة على أنها منحرفة (oblique)، وإن لم تتوافر نسخة منحرفة، فستستخدم النسخة المائلة من الخط <b>italic</b> ، وإن لم تتوفر كلا النسختين، فسيحاكى الخط المائل من المتصفح</li>
             </ul>
         </div>
-        <div className="sum_exemple_style">
-            <div className="mital">متال :  </div>
-            <img src={images.css7_font_style} className="img"/>
-            <img src={images.css7_font_style_2} className="img"/>
-        </div>
+        <div className="mital">متال :  </div>
+        <CodeHighlighter file_name="index.css" code={codeExemple2.css} language="css" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Font-Style" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='CSS Font-Style' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
+            <p className="css-font-style-ex1-p-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+            <p className="css-font-style-ex1-p-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+            <p className="css-font-style-ex1-p-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+            <p className="css-font-style-ex1-p-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+        </Result>
     </article>    
 </section>
     )

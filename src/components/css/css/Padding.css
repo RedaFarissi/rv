@@ -1,9 +1,32 @@
-#padding_exemple{ display: flex; justify-content: space-around; background-color:azure; }
-#input_radio_box{ box-shadow:5px 5px 20px rgba(0 0 0/30%); align-self:center; width:40%; min-height: 400px; }
-#padding{ width: 40%; box-shadow:3px 3px 20px rgba(0 0 0 /30%); min-height:400px; }
-@media only  screen and (max-width:903px) {
-    #padding_exemple{ flex-direction: column; }
-    #input_radio_box{ width: 100%; min-height: 90px; margin-bottom: 27px; }
-    #Code{ margin-bottom: 20px; }
-    #padding{ width:100%; min-height:90px; margin-top:30px;}
+.css-padding-ex1-h2 {
+  color: blue;
+}
+.css-padding-ex1-div {
+  border: 1px solid black;
+  padding: 20px 20px;
+} 
+
+
+.css-padding-ex2-h2 {
+  color: blue;
+  padding-top: 90px;
+}
+.css-padding-ex2-div {
+  border: 1px solid black;
+  padding-left: 25px;
+  padding-right: 9px;
+  padding-bottom: 76px;
+  padding-top: 0px;
+} 
+
+.css-padding-ex3-div {
+    border: 1px solid black;
+    padding: 40px ;
+} 
+
+.css-padding-ex4{
+    color: red;
+    border: 1px solid black;
+    margin: 1px;
+    margin-top: 4px;
 }

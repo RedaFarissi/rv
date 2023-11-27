@@ -1,4 +1,4 @@
-import html2 from "../../assests/images/html/html2.png"
+import html2 from "../../assests/images/logo/html_logo.png"
 
 import html_Editor_10 from "../../assests/images/html/html_Editor 10.png"
 import html_Editor_11 from "../../assests/images/html/html_Editor 11.png"
@@ -24,7 +24,9 @@ import html24_video7 from "../../assests/images/html/html24_video7.png"
 
 
 const images = {
+    //logo html
     html2,
+    //image explain
     html_Editor_10, html_Editor_11, html_Editor_12, 
     html_Editor_2, html_Editor_3, html_Editor_4, html_Editor_5, html_Editor_6,
     html_Editor_7, html_Editor_8, html_Editor_9, 

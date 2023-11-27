@@ -1,22 +1,26 @@
+import html_logo from "../../assests/images/logo/html_logo.png"
+import css_logo from "../../assests/images/logo/css_logo.png"
+import git_logo from "../../assests/images/logo/git_logo.png"
+import django_logo from "../../assests/images/logo/django_logo.svg"
+import js_logo from "../../assests/images/logo/js_logo.png"
+import laravel_logo from "../../assests/images/logo/laravel_logo.svg"
+import php_logo from "../../assests/images/logo/php_logo.png"
+import powershell_log from "../../assests/images/logo/powershell_log.svg"
+import python_logo from "../../assests/images/logo/python_logo.svg"
+import react_logo from "../../assests/images/logo/react_logo.svg"
+import vue_logo from "../../assests/images/logo/vue_logo.png"
+//images helps
+import orange1 from "../../assests/images/css/css/orange1.jpg"
+import orange2 from "../../assests/images/css/css/orange2.jpg"
+import orange3 from "../../assests/images/css/css/orange3.jpg"
+import ob_pc from "../../assests/images/css/css/ob_pc.png"
+import orange from "../../assests/images/css/css/orange.jpg"
+import img_forest from "../../assests/images/css/css/img_forest.jpg"
+//code
 import css0_Introduction from "../../assests/images/css/css/css0_Introduction.png"
-import css0_Introduction2_2 from "../../assests/images/css/css/css0_Introduction2 2.png"
-import css0_Introduction2_3 from "../../assests/images/css/css/css0_Introduction2 3.png"
-import css0_Introduction2 from "../../assests/images/css/css/css0_Introduction2.png"
-import css0_Introduction3_2 from "../../assests/images/css/css/css0_Introduction3 2.png"
-import css0_Introduction3 from "../../assests/images/css/css/css0_Introduction3.png"
-import css0_Introduction4_2 from "../../assests/images/css/css/css0_Introduction4 2.png"
-import css0_Introduction4 from "../../assests/images/css/css/css0_Introduction4.png"
-import css0_Introduction5_2 from "../../assests/images/css/css/css0_Introduction5 2.png"
-import css0_Introduction5 from "../../assests/images/css/css/css0_Introduction5.png"
-import css0_Introduction6 from "../../assests/images/css/css/css0_Introduction6.png"
-import css10_width_2 from "../../assests/images/css/css/css10_width 2.png"
-import css10_width from "../../assests/images/css/css/css10_width.png"
-import css10_width2_2 from "../../assests/images/css/css/css10_width2 2.png"
-import css10_width2 from "../../assests/images/css/css/css10_width2.png"
-import css11_height_2 from "../../assests/images/css/css/css11_height 2.png"
-import css11_height from "../../assests/images/css/css/css11_height.png"
-import css11_height2_2 from "../../assests/images/css/css/css11_height2 2.png"
-import css11_height2 from "../../assests/images/css/css/css11_height2.png"
+
+
+
 import css12_text_decoration_2 from "../../assests/images/css/css/css12_text-decoration 2.png"
 import css12_text_decoration from "../../assests/images/css/css/css12_text-decoration.png"
 import css12_text_decoration2_2 from "../../assests/images/css/css/css12_text-decoration2 2.png"
@@ -51,7 +55,6 @@ import css23_transform3_2 from "../../assests/images/css/css/css23_transform3 2.
 import css23_transform3 from "../../assests/images/css/css/css23_transform3.png"
 import css23_transform4_2 from "../../assests/images/css/css/css23_transform4 2.png"
 import css23_transform4 from "../../assests/images/css/css/css23_transform4.png"
-import css24_border from "../../assests/images/css/css/css24_border-radius.png"
 import css25_resize from "../../assests/images/css/css/css25_resize.png"
 import css25_resize2 from "../../assests/images/css/css/css25_resize2.png"
 import css25_resize3 from "../../assests/images/css/css/css25_resize3.png"
@@ -81,17 +84,12 @@ import css29_float5_2 from "../../assests/images/css/css/css29_float5 2.png"
 import css29_float5 from "../../assests/images/css/css/css29_float5.png"
 import css29_float6_2 from "../../assests/images/css/css/css29_float6 2.png"
 import css29_float6 from "../../assests/images/css/css/css29_float6.png"
-import css2_color_2 from "../../assests/images/css/css/css2_color 2.png"
-import css2_color from "../../assests/images/css/css/css2_color.png"
-import css2_color2_2 from "../../assests/images/css/css/css2_color2 2.png"
-import css2_color2 from "../../assests/images/css/css/css2_color2.png"
-import css2_color3_2 from "../../assests/images/css/css/css2_color3 2.png"
-import css2_color3 from "../../assests/images/css/css/css2_color3.png"
+
 import css30_clear_2 from "../../assests/images/css/css/css30_clear 2.png"
 import css30_clear from "../../assests/images/css/css/css30_clear.png"
 import css30_clear2_2 from "../../assests/images/css/css/css30_clear2 2.png"
 import css30_clear2 from "../../assests/images/css/css/css30_clear2.png"
-import css31_list from "../../assests/images/css/css/css31_list-style-type 2.png"
+import css31_list_style_type_2 from "../../assests/images/css/css/css31_list-style-type 2.png"
 import css31_list_style_type from "../../assests/images/css/css/css31_list-style-type.png"
 import css31_list_style_type2_2 from "../../assests/images/css/css/css31_list-style-type2 2.png"
 import css31_list_style_type2 from "../../assests/images/css/css/css31_list-style-type2.png"
@@ -139,13 +137,6 @@ import css39_outline5_2 from "../../assests/images/css/css/css39_outline5 2.png"
 import css39_outline5 from "../../assests/images/css/css/css39_outline5.png"
 import css39_outline6_2 from "../../assests/images/css/css/css39_outline6 2.png"
 import css39_outline6 from "../../assests/images/css/css/css39_outline6.png"
-import css3_border_2 from "../../assests/images/css/css/css3_border 2.png"
-import css3_border from "../../assests/images/css/css/css3_border.png"
-import css3_border2_2 from "../../assests/images/css/css/css3_border2 2.png"
-import css3_border2 from "../../assests/images/css/css/css3_border2.png"
-import css3_border3_2 from "../../assests/images/css/css/css3_border3 2.png"
-import css3_border3 from "../../assests/images/css/css/css3_border3.png"
-import css3_border4 from "../../assests/images/css/css/css3_border4.png"
 import css40_after_2 from "../../assests/images/css/css/css40_after 2.png"
 import css40_after from "../../assests/images/css/css/css40_after.png"
 import css40_after2_2 from "../../assests/images/css/css/css40_after2 2.png"
@@ -202,12 +193,6 @@ import css49_align_items3_2 from "../../assests/images/css/css/css49_align-items
 import css49_align_items3 from "../../assests/images/css/css/css49_align-items3.png"
 import css49_align_items4_2 from "../../assests/images/css/css/css49_align-items4 2.png"
 import css49_align_items4 from "../../assests/images/css/css/css49_align-items4.png"
-import css4_padding_2 from "../../assests/images/css/css/css4_padding 2.png"
-import css4_padding from "../../assests/images/css/css/css4_padding.png"
-import css4_padding2_2 from "../../assests/images/css/css/css4_padding2 2.png"
-import css4_padding2 from "../../assests/images/css/css/css4_padding2.png"
-import css4_padding3_2 from "../../assests/images/css/css/css4_padding3 2.png"
-import css4_padding3 from "../../assests/images/css/css/css4_padding3.png"
 import css50_align_self_2 from "../../assests/images/css/css/css50_align-self 2.png"
 import css50_align_self from "../../assests/images/css/css/css50_align-self.png"
 import css51_grid_2 from "../../assests/images/css/css/css51_grid 2.png"
@@ -228,7 +213,6 @@ import css52_Selectors11_2 from "../../assests/images/css/css/css52_Selectors11 
 import css52_Selectors11 from "../../assests/images/css/css/css52_Selectors11.png"
 import css52_Selectors12 from "../../assests/images/css/css/css52_Selectors12.png"
 import css52_Selectors13 from "../../assests/images/css/css/css52_Selectors13.png"
-
 import css52_Selectors14 from "../../assests/images/css/css/css52_Selectors14.png"
 import css52_Selectors15 from "../../assests/images/css/css/css52_Selectors15.png"
 import css52_Selectors2_2 from "../../assests/images/css/css/css52_Selectors2 2.png"
@@ -266,16 +250,6 @@ import css58_inline from "../../assests/images/css/css/css58_inline.png"
 import css58_inline2 from "../../assests/images/css/css/css58_inline2.png"
 import css59_inline_block from "../../assests/images/css/css/css59_inline-block.png"
 import css59_inline_block2 from "../../assests/images/css/css/css59_inline-block2.png"
-import css5_margin_2 from "../../assests/images/css/css/css5_margin 2.png"
-import css5_margin from "../../assests/images/css/css/css5_margin.png"
-import css5_margin2_2 from "../../assests/images/css/css/css5_margin2 2.png"
-import css5_margin2 from "../../assests/images/css/css/css5_margin2.png"
-import css5_margin3_2 from "../../assests/images/css/css/css5_margin3 2.png"
-import css5_margin3 from "../../assests/images/css/css/css5_margin3.png"
-import css5_margin4_2 from "../../assests/images/css/css/css5_margin4 2.png"
-import css5_margin4 from "../../assests/images/css/css/css5_margin4.png"
-import css5_margin5_2 from "../../assests/images/css/css/css5_margin5 2.png"
-import css5_margin5 from "../../assests/images/css/css/css5_margin5.png"
 import css60_text_transform from "../../assests/images/css/css/css60_text-transform.png"
 import css60_text_transform2 from "../../assests/images/css/css/css60_text-transform2.png"
 import css60_text_transform3 from "../../assests/images/css/css/css60_text-transform3.png"
@@ -291,43 +265,14 @@ import css65_media2 from "../../assests/images/css/css/css65_media2.png"
 import css66_webkit_text_storke from "../../assests/images/css/css/css66_webkit-text-storke.png"
 import css66_webkit_text_storke2 from "../../assests/images/css/css/css66_webkit-text-storke2.png"
 import css67_accent_color from "../../assests/images/css/css/css67_accent-color.png"
-import css6_font from "../../assests/images/css/css/css6_font-size 2.png"
-import css6_font_size from "../../assests/images/css/css/css6_font-size.png"
-import css6_font_size2_2 from "../../assests/images/css/css/css6_font-size2 2.png"
-import css6_font_size2 from "../../assests/images/css/css/css6_font-size2.png"
-import css7_font_style_2 from "../../assests/images/css/css/css7_font-style 2.png"
-import css7_font_style from "../../assests/images/css/css/css7_font-style.png"
-import css8_font_weight_2 from "../../assests/images/css/css/css8_font-weight 2.png"
-import css8_font_weight from "../../assests/images/css/css/css8_font-weight.png"
 import css9_font_family from "../../assests/images/css/css/css9_font-family.png"
 import css9_font_variant_2 from "../../assests/images/css/css/css9_font-variant 2.png"
 import css9_font_variant_3 from "../../assests/images/css/css/css9_font-variant 3.png"
 import css9_font_variant from "../../assests/images/css/css/css9_font-variant.png"
 import css9_font_variant2_2 from "../../assests/images/css/css/css9_font-variant2 2.png"
 import css9_font_variant2 from "../../assests/images/css/css/css9_font-variant2.png"
-import css_background_2 from "../../assests/images/css/css/css_background 2.png"
-import css_background from "../../assests/images/css/css/css_background.png"
-import css_background10_2 from "../../assests/images/css/css/css_background10 2.png"
-import css_background10 from "../../assests/images/css/css/css_background10.png"
-import css_background2_2 from "../../assests/images/css/css/css_background2 2.png"
-import css_background2 from "../../assests/images/css/css/css_background2.png"
-import css_background3_2 from "../../assests/images/css/css/css_background3 2.png"
-import css_background3 from "../../assests/images/css/css/css_background3.png"
-import css_background4_2 from "../../assests/images/css/css/css_background4 2.png"
-import css_background4 from "../../assests/images/css/css/css_background4.png"
-import css_background5_2 from "../../assests/images/css/css/css_background5 2.png"
-import css_background5 from "../../assests/images/css/css/css_background5.png"
-import css_background6_2 from "../../assests/images/css/css/css_background6 2.png"
-import css_background6 from "../../assests/images/css/css/css_background6.png"
-import css_background7_2 from "../../assests/images/css/css/css_background7 2.png"
-import css_background7 from "../../assests/images/css/css/css_background7.png"
-import css_background8_2 from "../../assests/images/css/css/css_background8 2.png"
-import css_background8 from "../../assests/images/css/css/css_background8.png"
-import css_background9_2 from "../../assests/images/css/css/css_background9 2.png"
-import css_background9 from "../../assests/images/css/css/css_background9.png"
-import img_forest from "../../assests/images/css/css/img_forest.jpg"
-import ob_pc from "../../assests/images/css/css/ob_pc.png"
-import orange from "../../assests/images/css/css/orange.jpg"
+
+
 import sass1 from "../../assests/images/css/css/sass1.png"
 import sass2 from "../../assests/images/css/css/sass2.png"
 import sass3 from "../../assests/images/css/css/sass3.png"
@@ -358,12 +303,14 @@ import scss8 from "../../assests/images/css/css/scss8.png"
 import scss9 from "../../assests/images/css/css/scss9.png"
 
 const images = {
-    
-    css0_Introduction,css0_Introduction2_2,css0_Introduction2_3,css0_Introduction2,
-    css0_Introduction3_2,css0_Introduction3,css0_Introduction4_2,css0_Introduction4,
-    css0_Introduction5_2,css0_Introduction5,css0_Introduction6,css10_width_2,
-    css10_width,css10_width2_2,css10_width2,css11_height_2,css11_height,
-    css11_height2_2,css11_height2,css12_text_decoration_2,css12_text_decoration,
+    //logo
+    html_logo , css_logo , git_logo , django_logo , js_logo , laravel_logo , php_logo , powershell_log , python_logo , react_logo , vue_logo,
+
+    //images to test
+    orange,orange1,orange2,orange3,ob_pc,img_forest,
+    //codes
+    css0_Introduction ,
+    css12_text_decoration_2,css12_text_decoration,
     css12_text_decoration2_2,css12_text_decoration2,css12_text_decoration3_2,
     css12_text_decoration3,css12_text_decoration4_2,css12_text_decoration4,
     css13_opacity_2,css13_opacity,css14_hover,css15_visibility_2,css15_visibility,
@@ -372,15 +319,14 @@ const images = {
     css21_text_shadow2,css22_box_shadow,css22_box_shadow2_2,css22_box_shadow2,
     css23_transform_2,css23_transform,css23_transform2_2,css23_transform2,
     css23_transform3_2,css23_transform3,css23_transform4_2,css23_transform4,
-    css24_border,css25_resize,css25_resize2,css25_resize3,css25_resize4,css26_focus,
+    css25_resize,css25_resize2,css25_resize3,css25_resize4,css26_focus,
     css26_focus2,css27_transition,css27_transition0,css27_transition2,
     css27_transition3,css27_transition4,css28_position_2,css28_position,
     css28_position2_2,css28_position2,css28_position3_2,css28_position3,
     css29_float_2,css29_float,css29_float2_2,css29_float2,css29_float3_2,
     css29_float3,css29_float4_2,css29_float4,css29_float5_2,css29_float5,
-    css29_float6_2,css29_float6,css2_color_2,css2_color,css2_color2_2,
-    css2_color2,css2_color3_2,css2_color3,css30_clear_2,css30_clear,
-    css30_clear2_2,css30_clear2,css31_list,css31_list_style_type,
+    css29_float6_2,css29_float6,css30_clear_2,css30_clear,
+    css30_clear2_2,css30_clear2,css31_list_style_type_2,css31_list_style_type,
     css31_list_style_type2_2,css31_list_style_type2,css32_box_sizing_2,
     css32_box_sizing,css32_box_sizing2_2,css32_box_sizing2,css33_object_fit_2,
     css33_object_fit,css33_object_fit2_2,css33_object_fit2_3,css33_object_fit2,
@@ -392,8 +338,7 @@ const images = {
     css37_z_index_2,css37_z_index,css37_z_index2_2,css37_z_index2,css38_invalid,
     css38_valid,css38_valid_invalid,css39_outline,css39_outline2,css39_outline3_2,
     css39_outline3,css39_outline4,css39_outline5_2,css39_outline5,css39_outline6_2
-    ,css39_outline6,css3_border_2,css3_border,css3_border2_2,css3_border2,
-    css3_border3_2,css3_border3,css3_border4,css40_after_2,css40_after,
+    ,css39_outline6,css40_after_2,css40_after,
     css40_after2_2,css40_after2,css40_before_2,css40_before,css41_order_2,
     css41_order,css42_writing_mode_2,css42_writing_mode,css42_writing_mode2_2,
     css42_writing_mode2,css43_flex_2,css43_flex,css43_flex2_2,css43_flex2,
@@ -407,8 +352,7 @@ const images = {
     css48_justify_content5_2,css48_justify_content5,css48_justify_content6_2,
     css48_justify_content6,css49_align_items_2,css49_align_items,
     css49_align_items2,css49_align_items3_2,css49_align_items3,
-    css49_align_items4_2,css49_align_items4,css4_padding_2,css4_padding,
-    css4_padding2_2,css4_padding2,css4_padding3_2,css4_padding3,css50_align_self_2,
+    css49_align_items4_2,css49_align_items4,css50_align_self_2,
     css50_align_self,css51_grid_2,css51_grid,css51_grid2_2,css51_grid2,css51_grid3_2,
     css51_grid3,css51_grid4_2,css51_grid4,css51_grid5_2,css51_grid5,css52_Selectors_2,
     css52_Selectors,css52_Selectors10_2,css52_Selectors10,css52_Selectors11_2,
@@ -422,23 +366,14 @@ const images = {
     css53_Function7,css53_Function8,css54_white_space,css55_word_wrap,
     css56_add_transform,css56_add_transform2,css56_add_transform3,
     css56_add_transform4,css57_block,css58_inline,css58_inline2,
-    css59_inline_block,css59_inline_block2,css5_margin_2,css5_margin,
-    css5_margin2_2,css5_margin2,css5_margin3_2,css5_margin3,
-    css5_margin4_2,css5_margin4,css5_margin5_2,css5_margin5,
+    css59_inline_block,css59_inline_block2,
     css60_text_transform,css60_text_transform2,css60_text_transform3,
     css61_text_indent,css62_line_height,css63_word_break,css64_perspective,
     css64_perspective2,css64_perspective3,css64_perspective4,css65_media,
     css65_media2,css66_webkit_text_storke,css66_webkit_text_storke2,
-    css67_accent_color,css6_font,css6_font_size,css6_font_size2_2,
-    css6_font_size2,css7_font_style_2,css7_font_style,css8_font_weight_2,
-    css8_font_weight,css9_font_family,css9_font_variant_2,css9_font_variant_3,
-    css9_font_variant,css9_font_variant2_2,css9_font_variant2,css_background_2,
-    css_background,css_background10_2,css_background10,css_background2_2,
-    css_background2,css_background3_2,css_background3,css_background4_2,
-    css_background4,css_background5_2,css_background5,css_background6_2,
-    css_background6,css_background7_2,css_background7,css_background8_2,
-    css_background8,css_background9_2,css_background9,img_forest,ob_pc,
-    orange,sass1,sass2,sass3,sass4,sass5,sass6,sass7,sass8,scss1,scss10,
+    css67_accent_color,css9_font_family,css9_font_variant_2,css9_font_variant_3,
+    css9_font_variant,css9_font_variant2_2,css9_font_variant2,
+    sass1,sass2,sass3,sass4,sass5,sass6,sass7,sass8,scss1,scss10,
     scss11,scss12,scss13,scss14,scss15,scss16,scss17,scss18,scss19,
     scss2,scss20,scss3,scss4,scss5,scss6,scss7,scss8,scss9,
 }

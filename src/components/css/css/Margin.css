@@ -1,15 +1,61 @@
-#margin_exemple{
-    display: flex; justify-content: space-around; background-color:azure;
+.css-margin-ex1-h2 {
+   color: blue;
 }
-#input_radio_box{
-    box-shadow:5px 5px 20px rgba(0 0 0/30%);
-    align-self:center; width:40%; min-height: 400px;
+.css-margin-ex1-div {
+  border: 1px solid black;
+  margin: 90px 20px;
+  font-size: 17px;
 }
-#margin{ width: max-content; padding: 9px; }
-#Margin{ width:40%; box-shadow:3px 3px 20px rgba(0 0 0 /30%); min-height:400px; }
-@media only  screen and (max-width:903px) {
-    #margin_exemple{ flex-direction: column; }
-    #input_radio_box{ width: 100%; min-height: 90px; margin-bottom: 27px; }
-    #Code{ margin-bottom: 20px; }
-    #Margin{ width: 100%; min-height: 90px;}
+
+
+.css-margin-ex2-div-1 {
+    border: 1px solid black;
+    font-size: 17px;
+    width: max-content;
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+ .css-margin-ex2-div-2 {
+   border: 1px solid red;
+   margin-left: 25px;
+   margin-right: 9px;
+   margin-bottom: 76px;
+   margin-top: 2px;
+   font-size: 17px;
+ } 
+
+.css-margin-ex3-without-margin {
+    width: 70%;
+    background-color: red;
+    color: white;
 }
+
+.css-margin-ex3-with-margin {
+    width: 70%;
+    background-color: yellowgreen;
+    color: white;
+    margin: auto;
+}
+
+
+.css-margin-ex4 {
+    width: 70%;
+    background-color: red;
+    border: 2px solid green;
+    margin: 20px auto;
+  }
+
+  .css-margin-ex4-without-margin {
+      background-color: greenyellow;
+      border: 2px solid white;
+      padding: 1rem;
+      margin: 0;
+  }
+  .css-margin-ex4-with{
+      background-color: greenyellow;
+      border: 2px solid white;
+      padding: 1rem;
+      margin: 20px;
+  }
+

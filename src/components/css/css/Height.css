@@ -1,0 +1,10 @@
+.css-height-ex1{
+    height: 120px;
+    width: 20%;
+}
+.css-height-ex2{
+    background-color:red;
+    color: white;
+    height: 300px;
+    width: max-content;
+}

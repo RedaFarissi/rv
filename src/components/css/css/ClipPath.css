@@ -1,0 +1,18 @@
+.parent{margin: 20px;
+    width: 230px;
+    height: 230px;
+    background-color: darkgrey;
+    border-radius: 7px;
+    padding: 5px;
+}
+.child_test{ width: 220px; height: 220px; }
+.test{
+    background-color: red;
+    clip-path: ellipse(50% 30% at 50% 50%); /* at 50% 50% by default */
+}
+.test2{ background-color: green; clip-path: ellipse(50% 30% at 0%); }
+.test3{ background-color: yellow; clip-path: ellipse(50% 30% at 0% 0%);}
+.test4{ background-color:aqua; clip-path:ellipse(100% 30%);}
+.testing{ background-color: red; clip-path: circle();/*50% default*/  }
+.testing2{  background-color: brown;  clip-path: circle(25px at 25px 25px);   }
+.testing3{  background-color:chartreuse;  clip-path: circle(60%);   }

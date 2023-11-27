@@ -1,6 +1,6 @@
 import { CodeHighlighter ,  Result} from "../../path";
 import images from "../imagesCss";
-import "./Opacity.css"
+//import "./Opacity.css"
 export default function Opacity(props){
     return(
 <section className="section-conetent">

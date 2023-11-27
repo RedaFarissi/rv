@@ -1,12 +1,77 @@
+import { useState , useRef, useEffect} from "react";
+import { CodeHighlighter , Result , InteractivCss} from "../../path";
 import images from "../imagesCss";
+import "./Padding.css"
 
 export default function Padding(props){
-    // function padding(value){
-    //     document.getElementById("padding").style.padding = value;
-    //     document.getElementById("padding-result").innerHTML  = value +";";
-    //   }
-    //   document.getElementById("none1").click()
+    const codeExemple1= { 
+    head:`  
+    <style> 
+         h2 {
+           color: blue;
+         }
+         div {
+           border: 1px solid black;
+           padding: 20px 20px;
+         } 
+    </style>`,
+    code:`    <h2>Title 1</h2>
+    <div>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    </div>`
+    }
+
     
+    const codeExemple2= { 
+    head:`  
+    <style> 
+        h2 {
+            color: blue;
+            padding-top: 90px;
+        }
+        div {
+            border: 1px solid black;
+            padding-left: 25px;
+            padding-right: 9px;
+            padding-bottom: 76px;
+            padding-top: 0px;
+        } 
+    </style>`,
+    code:`    <h2>Title 1</h2>
+    <div>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    </div>`
+    }
+    const codeExemple3= { 
+    head:`  
+    <style> 
+         div {
+           border: 1px solid black;
+           padding: 40px ;
+         } 
+    </style>`,
+    code:`
+    <div>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    </div>
+    <div>
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    </div>
+    `
+    }
+       
+    const [selectedValue, setSelectedValue] = useState("30px");
+    const resultRef = useRef()
+    const inputRef = useRef()
+    const handlePadding = (event) => {
+      const { value } = event.target;
+      setSelectedValue(value);
+      resultRef.current.style.padding = value
+    };
+    useEffect(() => {
+        inputRef.current.click();
+      }, []);
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-css-color"> CSS Padding </h1>
@@ -18,8 +83,13 @@ export default function Padding(props){
         </div>
         <div className="sum_exemple_style">
             <div className="mital">متال :  </div>
-            <img src={images.css4_padding} alt="padding exemple" className="img"/>
-            <img src={images.css4_padding_2} alt="padding exemple" className="img"/>
+            <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Padding" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='CSS Padding' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+                <h2 className="css-padding-ex1-h2">Title 1</h2>
+                <div className="css-padding-ex1-div">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                </div>
+            </Result>
         </div>
         <ul>
             <li> في المتال أعلاه نلاحض أنه تم إعطاء قيمتين لل <b>padding</b> .</li>
@@ -38,43 +108,48 @@ export default function Padding(props){
                 <li><b>padding-left</b></li>
             </ul>
         </div>
-        <div className="sum_exemple_style">
-        <div className="mital">متال :  </div>
-        <img src={images.css4_padding2} alt="padding exemple" className="img"/>
-        <img src={images.css4_padding2_2} alt="padding exemple" className="img"/>
-        </div>
-        <div className="sum_exemple_style">
+        <div className="mital">متال 1 :  </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Padding" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='CSS Padding' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2 className="css-padding-ex2-h2">Title 1</h2>
+            <div className="css-padding-ex2-div">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            </div>
+        </Result>
+        
         <div className="mital">متال 2 :  </div>
         <ul><li>إذا كان للخاصية padding قيمة واحدة فجميع  لجوانب سوف تأخد تلك القيمة .</li></ul>
-        <img src={images.css4_padding3} alt="padding exemple" className="img"/>
-        <img src={images.css4_padding3_2} alt="padding exemple" className="img"/>
-        </div>
-        {/* <div className="mital">متال 3 :  </div>
-        <ul><li> قم بنقر على الأزرار أسفله لتغيير قيمة الخاصية <b>padding</b> للفهم بشكل أفضل .</li></ul>
-        <div id="padding_exemple" className="alert p-4 rounded m-auto border border-primary border-2 text-dark" dir="ltr">
-            <div id="input_radio_box" className="border border-secondary rounded bg-light p-3">
-              <div className="h3"> padding </div>
-              <div>
-                <input type="radio" name="bo-sh" onclick="padding(this.value)"  className="pad" value="1em"id="none1" /> 1em <br/>
-                <input type="radio" name="bo-sh" onclick="padding(this.value)"  className="pad" value="4% 0"/> 4% 0<br/>
-                <input type="radio" name="bo-sh" onclick="padding(this.value)"  className="pad" value="10px 50px 20px"/> 10px 50px 20px<br/>
-                <input type="radio" name="bo-sh" onclick="padding(this.value)"  className="pad" value="10px 50px 30px 0"/> 10px 50px 30px 0<br/>
-                <input type="radio" name="bo-sh" onclick="padding(this.value)"  className="pad" value="0px 60px"/> 0px 60px<br/>
-                <input type="radio" name="bo-sh" onclick="padding(this.value)"  className="pad" value="0"/> 0<br/>
-              </div>
-              <div id="Code" className="mt-4 w-100">
-                  <div className="h3"> Code: </div>
-                  <div className="border py-2 ps-2 w-100">
-                      <span style="font-weight:500;">padding : </span> <span id="padding-result" style="font-weight:500"></span>
-                  </div>
-              </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" title="CSS Padding" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='CSS Padding' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <div className="css-padding-ex3-div">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
             </div>
-            <div className="border bg-light border-secondary" id="padding"> 
-                <div className="h2"> Result : </div>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br/>
-                Facere dolor exercitationem repellat dolore .
+            <div className="css-padding-ex3-div">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
             </div>
-        </div> */}
+        </Result>
+    </article>
+    <article>
+        <div className="mital">3. متال تفاعلي توضيحي  </div> 
+        <InteractivCss 
+          property="padding" 
+          value={selectedValue}
+          classChild="css-padding-ex4"  
+          resultRef={resultRef}
+          textInResult="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere dolor exercitationem repellat dolore ."
+        >
+              <ul className="p-0">
+                  <li><input type="checkbox" name="bo-sh6" ref={inputRef} onChange={handlePadding} checked={selectedValue === '30px'} value="30px" /> &nbsp; 30px</li>
+                  <li><input type="checkbox" name="bo-sh6" onChange={handlePadding} checked={selectedValue === '1rem'} value="1rem"/> &nbsp; 1rem </li>
+                  <li><input type="checkbox" name="bo-sh6" onChange={handlePadding} checked={selectedValue === '4% 0'} value="4% 0"/> &nbsp; 4% 0 </li>
+                  <li><input type="checkbox" name="bo-sh6" onChange={handlePadding} checked={selectedValue === '0 4%'} value="0 4% "/> &nbsp; 0 4% </li>
+                  <li><input type="checkbox" name="bo-sh6" onChange={handlePadding} checked={selectedValue === '10px 50px 20px'} value="10px 50px 20px"/> &nbsp; 10px 50px 20px</li>
+                  <li><input type="checkbox" name="bo-sh6" onChange={handlePadding} checked={selectedValue === '10px 50px 30px 0'} value="10px 50px 30px 0"/> &nbsp; 10px 50px 30px 0 </li>
+                  <li><input type="checkbox" name="bo-sh6" onChange={handlePadding} checked={selectedValue === '0px 60px'} value="0px 60px"/> &nbsp; 0px 60px </li>
+                  <li><input type="checkbox" name="bo-sh6" onChange={handlePadding} checked={selectedValue === '0'} value="0"/> &nbsp; 0 </li>
+              </ul>
+        </InteractivCss>    
     </article>
 
 </section>

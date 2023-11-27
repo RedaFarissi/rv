@@ -271,11 +271,10 @@ export default function Transform(props){
   </div>
 </div>
 <h5 className="mt-2">3. skew</h5>
-<div className="mital">متال :</div>
+  <div className="mital">متال :</div>
   <ul><li>المثال التالي يحرف العنصر <kbd>&lt;div&gt;</kbd> بمقدار 20 درجة على طول المحور X ، و 10 درجات على طول المحور Y:</li></ul>
   <img src={images.css23_transform4} className="img"/>
   <img src={images.css23_transform4_2} className="img"/>
-</div>
 </section>
   )
 }

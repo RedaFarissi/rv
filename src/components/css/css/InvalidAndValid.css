@@ -1,0 +1,5 @@
+input{ border-radius:9px; border: 2px solid black; outline: 0px; width:40%;height: 40px; }
+#email:invalid{ border: 2px solid darkred; background-color: red; color:aliceblue; font-size: xx-large; }
+#Email:valid{ border: 2px solid green; color: blueviolet;background-color: black;  }
+#emaiL:invalid{ border: 2px solid darkred; color: white ;background-color: red;  }
+#emaiL:valid  { border: 2px solid green; color: blueviolet;background-color: black;  }

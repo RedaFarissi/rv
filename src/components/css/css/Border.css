@@ -1,9 +1,43 @@
-#a,#b,#c,#d{ 
+.css-border-ex1-title2{
+  border: 9px solid green;
+} 
+.css-border-ex1-title3{
+   border: 5px solid rgba(255,0,0);
+}
+
+
+
+
+
+.css-border-ex2-title1 {
+  border-left: 8px solid black;
+  border-bottom: 8px solid red;
+  border-top: 8px solid green;
+  border-right: 8px solid yellow;
+}
+
+.css-border-ex2-title2 {
+  border-top: 8px dotted deeppink;
+  border-bottom: 8px double brown;
+}
+
+
+.css-border-ex3-border-aqua {
+  border-style: solid;
+  border-width: 9px;
+  border-color: aqua;
+}
+
+
+
+
+#css-border-ex4-a,#css-border-ex4-b,#css-border-ex4-c,#css-border-ex4-d{ 
   background-color: yellow; 
   width: 350px; 
   padding: 9px;
 }
-#a{border: groove 9px red;}
-#b{border: ridge  9px red;}
-#c{border: inset  9px red;}
-#d{border: outset 9px red ;}
+#css-border-ex4-a{border: groove 9px red;}
+#css-border-ex4-b{border: ridge  9px red;}
+#css-border-ex4-c{border: inset  9px red;}
+#css-border-ex4-d{border: outset 9px red ;}
+

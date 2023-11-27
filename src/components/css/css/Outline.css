@@ -1,0 +1,67 @@
+#Pa {	
+    border: 2px solid black;
+    outline: #4CAF50 solid 10px;
+    margin: auto;  
+    padding: 20px;
+    text-align: center;
+}
+.P {outline-color:red; outline-width:3.5px ;}
+
+.dotted {outline-style: dotted;}
+.dashed {outline-style: dashed;}
+.solid { outline-style: solid;}
+.double {outline-style: double;}
+.groove {outline-style: groove;}
+.ridge { outline-style: ridge;}
+.inset { outline-style: inset;}
+.outset {outline-style: outset;}
+
+
+
+
+/***************************/
+
+
+
+
+
+#outline_exemple{
+    display: flex;
+    justify-content: space-around;
+    background-color:azure;
+}
+#input_radio_box{
+    box-shadow:5px 5px 20px rgba(0 0 0/30%);
+    align-self:center;
+    width: 40%;
+    min-height: 400px;
+}
+#outLine{
+    width: 50%;margin:auto;background-color:gray;color:white;border:3px solid black;text-align:center;
+    padding:14px;margin-top:75px;outline-style:solid;outline-color:yellow   
+}
+#outlineE{
+    width: 40%;
+    box-shadow:3px 3px 20px rgba(0 0 0 /30%);
+    min-height:400px;
+}
+@media only  screen and (max-width:903px) {
+    #outline_exemple{
+        flex-direction: column;
+    }
+    #input_radio_box{
+        width: 100%;
+        min-height: 90px;
+        margin-bottom: 27px;
+    }
+    #Code{
+        margin-bottom: 20px;
+    }
+    #outlineE{
+        width: 100%;
+        min-height: 280px;
+    }
+    #outLine{
+        margin-top:75px;
+    }
+}

@@ -4,7 +4,11 @@ import {
     Margin,FontSize,FontStyle,FontWeight,FontVariant,WhiteSpace,WordWrap,WordBreak,
     TextDecoration,LetterSpacing,WordSpacing,TextAlign,TextTransform,TextIndent,LineHeight,
     Float,Clear,Opacity,Hover,Display,Block,Inline,InlineBlock,Visibility,BorderCollapse,Overflow,
-    TextShadow,Perspective,
+    TextShadow,Perspective,Transform,Transform3D,Resize,Focus,Transition,Position,ListStyleType,
+    BoxSizing,ObjectFit,Animation,ClipPath,Cursor,ScrollBehavior,ZIndex,InvalidAndValid,
+    Outline,AfterAndBefore,WritingMode,Filter,Quotes,TransformStyle,WebkitTextStroke,
+    FlexDirection,FlexWrap,AlignItems,AlignSelf,JustifyContent,Order,Grid,AccentColor,
+    Selectors,Functions,Media,ScssComponent,SassComponent
 } from './pathCss.js';
 
 export default function Css(props){
@@ -57,11 +61,41 @@ export default function Css(props){
                 <Route path='/overflow' element={<Overflow />} /> 
                 <Route path='/text-shadow' element={<TextShadow />} /> 
                 <Route path='/perspective' element={<Perspective />} /> 
-                <Route path='/height' element={<Height />} /> 
-                <Route path='/height' element={<Height />} /> 
-                <Route path='/height' element={<Height />} /> 
-                <Route path='/height' element={<Height />} /> 
-                <Route path='/height' element={<Height />} /> 
+                <Route path='/transform' element={<Transform />} /> 
+                <Route path='/transform-3D' element={<Transform3D />} /> 
+                <Route path='/resize' element={<Resize />} /> 
+                <Route path='/focus' element={<Focus />} /> 
+                <Route path='/transition' element={<Transition />} /> 
+                <Route path='/position' element={<Position />} /> 
+                <Route path='/list-style-type' element={<ListStyleType />} /> 
+                <Route path='/box-sizing' element={<BoxSizing />} /> 
+                <Route path='/object-fit' element={<ObjectFit />} /> 
+                <Route path='/animation' element={<Animation />} /> 
+                <Route path='/clip-path' element={<ClipPath />} /> 
+                <Route path='/cursor' element={<Cursor />} /> 
+                <Route path='/scroll-behavior' element={<ScrollBehavior />} /> 
+                <Route path='/z-index' element={<ZIndex />} /> 
+                <Route path='/invalid-&-valid' element={<InvalidAndValid />} /> 
+                <Route path='/outline' element={<Outline />} /> 
+                <Route path='/after-&-before' element={<AfterAndBefore />} /> 
+                <Route path='/writing-mode' element={<WritingMode />} /> 
+                <Route path='/filter' element={<Filter />} /> 
+                <Route path='/quotes' element={<Quotes />} /> 
+                <Route path='/transform-style' element={<TransformStyle />} /> 
+                <Route path='/-webkit-text-stroke' element={<WebkitTextStroke />} /> 
+                <Route path='/flex-direction' element={<FlexDirection />} /> 
+                <Route path='/flex-wrap' element={<FlexWrap />} /> 
+                <Route path='/align-items' element={<AlignItems />} /> 
+                <Route path='/align-self' element={<AlignSelf />} /> 
+                <Route path='/justify-content' element={<JustifyContent />} /> 
+                <Route path='/order' element={<Order />} /> 
+                <Route path='/grid' element={<Grid />} /> 
+                <Route path='/accent-color' element={<AccentColor />} /> 
+                <Route path='/selectors' element={<Selectors />} /> 
+                <Route path='/functions' element={<Functions />} /> 
+                <Route path='/media' element={<Media />} /> 
+                <Route path='/scss' element={<ScssComponent />} /> 
+                <Route path='/sass' element={<SassComponent />} /> 
             </Routes>
         </section>
     </main>

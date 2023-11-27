@@ -1,0 +1,22 @@
+.css-color-ex1-title1{
+    font-size: 45px; color: slateblue;
+}
+.css-color-ex1-title2{
+    font-size: 45px; color: red;
+}
+.css-color-ex1-paragraph1{
+    font-size: 25px; color: dodgerblue
+}
+.css-color-ex1-paragraph2{
+    font-size: 25px; color: mediumorchid
+}
+
+.css-color-ex3{
+    font-size: 90px; 
+    font-weight: 800;
+    background-image: url("../../../assests/images/css/css/orange.jpg"); 
+    background-size: contain;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1.2px red
+}

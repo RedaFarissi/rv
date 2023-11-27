@@ -1,7 +1,7 @@
 
 import { CodeHighlighter ,  Result} from "../../path";
 import images from "../imagesCss";
-import "./Display.css"
+//import "./Display.css"
 export default function Display(props){
     return(
 <section className="section-conetent">

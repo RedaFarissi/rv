@@ -1,0 +1,7 @@
+.css-font-style-ex1-p-1 , .css-font-style-ex1-p-2 , .css-font-style-ex1-p-3 , .css-font-style-ex1-p-4{
+    font-size: 22px;
+}
+.css-font-style-ex1-p-1 {  font-style: normal;  }
+.css-font-style-ex1-p-2 {  font-style: italic;  }
+.css-font-style-ex1-p-3 {  font-style: oblique;  }
+.css-font-style-ex1-p-4 {  font-style: inherit;  }

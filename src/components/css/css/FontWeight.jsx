@@ -1,25 +1,50 @@
-import { CodeHighlighter ,  Result} from "../../path";
+import { CodeHighlighter ,  Result } from "../../path";
 import images from "../imagesCss";
-
+import "./FontWeight.css"
 export default function FontWeight(props){
-    // function font_w(value){
-    //     document.getElementById("font_w").style.fontWeight = value;
-    //     document.getElementById("fontWeightResult").innerHTML = value +";";
-    //   }
-    //   document.getElementById("none3").click();
+    
+    const codeExemple2= { 
+        css:`.font-weight-example {
+  font-size: 24px;
+}
+.normal {
+  font-weight: normal;
+}
+.bold {
+  font-weight: bold;
+}
+.bolder {
+  font-weight: bolder;
+}
+.lighter {
+  font-weight: lighter;
+}`,
+    head:`  
+    <link rel="stylesheet" href="./index.css">`,
+        code:`      <h2>Font Weight Example</h2>
+      <p class="font-weight-example normal">This is normal text.</p>
+      <p class="font-weight-example bold">This is bold text.</p>
+      <p class="font-weight-example bolder">This is bolder text.</p>
+      <p class="font-weight-example lighter">This is lighter text.</p>`
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-css-color"> CSS Font-Weight </h1>
     <article>
-        <div className="style_divv mt-5">
+        <p className="style_divv mt-5">
         الخاصية <b>font-weight</b> في <b>CSS</b> تُحدِّد «وزن» (weight، أو السمك) الخط؛ والأوزان المتاحة للاستخدام في خطٍ ما تعتمد على نوع الخط المستخدم <b>font-family</b>، إذ إنَّ بعض الخطوط لا توفِّر إلا نسختين هما <b>normal</b> و <b>bold</b>.
-        </div>
-        <div className="sum_exemple_style">
+        </p>
         <div className="mital">متال :  </div>
-        <img src={images.css8_font_weight} className="img"/>
-        <img src={images.css8_font_weight_2} className="img"/>
-        </div>
-        <h3>جميع القيم الممكنة لل font-weight </h3>
+        <CodeHighlighter file_name="index.css" code={codeExemple2.css} language="css" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Font-Weight" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='CSS Font-Weight' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
+            <h2>Font Weight Example</h2>
+            <p class="css-font-weight-ex1-example css-font-weight-ex1-normal">This is normal text.</p>
+            <p class="css-font-weight-ex1-example css-font-weight-ex1-bold">This is bold text.</p>
+            <p class="css-font-weight-ex1-example css-font-weight-ex1-bolder">This is bolder text.</p>
+            <p class="css-font-weight-ex1-example css-font-weight-ex1-lighter">This is lighter text.</p>
+        </Result>
+        <h3>جميع القيم الممكنة للخاصية font-weight </h3>
         <div className="style_divv" >
             كلمات محجوزة <br/><br/>
             <ul dir="ltr"><li><b>font-weight: normal</b></li><li><b>font-weight: bold</b></li></ul>
@@ -48,43 +73,6 @@ export default function FontWeight(props){
             </ul>
         </div>
     </article>
-{/* <div className="mital">متال :  </div>
-<ul><li> قم بنقر على الأزرار أسفله لتغيير قيمة الخاصية <b>font-weight</b> و لفهم بشكل أفضل .</li></ul>
-<div id="fontWeight_exemple" className="alert p-4 rounded m-auto border border-primary border-2 text-dark" dir="ltr">
-    <div id="input_radio_box" className="border border-secondary rounded bg-light p-3">
-        <div className="h2"> font-weight: </div>
-        <div>
-            <input type="radio" name="bo-sh" onclick="font_w(this.value)" className="font-w" value="normal"  id="none3"/> normal<br/>
-            <input type="radio" name="bo-sh" onclick="font_w(this.value)" className="font-w" value="bold"/> bold   <br/>
-            <input type="radio" name="bo-sh" onclick="font_w(this.value)" className="font-w" value="lighter"/> lighter<br/>
-            <input type="radio" name="bo-sh" onclick="font_w(this.value)" className="font-w" value="bolder"/> bolder <br/>
-            <input type="radio" name="bo-sh" onclick="font_w(this.value)" className="font-w" value="100"/> 100 <br/>
-            <input type="radio" name="bo-sh" onclick="font_w(this.value)" className="font-w" value="200"/> 200 <br/>
-            <input type="radio" name="bo-sh" onclick="font_w(this.value)" className="font-w" value="300"/> 300 <br/>
-            <input type="radio" name="bo-sh" onclick="font_w(this.value)" className="font-w" value="400"/> 400 <br/>
-            <input type="radio" name="bo-sh" onclick="font_w(this.value)" className="font-w" value="500"/> 500 <br/>
-            <input type="radio" name="bo-sh" onclick="font_w(this.value)" className="font-w" value="600"/> 600 <br/>
-            <input type="radio" name="bo-sh" onclick="font_w(this.value)" className="font-w" value="700"/> 700 <br/>
-            <input type="radio" name="bo-sh" onclick="font_w(this.value)" className="font-w" value="800"/> 800 <br/>
-            <input type="radio" name="bo-sh" onclick="font_w(this.value)" className="font-w" value="900"/> 900 <br/>
-            <input type="radio" name="bo-sh" onclick="font_w(this.value)" className="font-w" value="inherit"/> inherit <br/>
-        </div>
-    </div>
-    <div className="border bg-light border-secondary" id="FontWeight">
-        <div className="h2 ps-3 pt-3"> Result : </div>
-        <div id="font_w"> font weight </div>
-
-        <div id="Code">
-          <div className="h3"> Code: </div>
-          <div className="border py-2 ps-2 w-100" >
-              <span style="font-weight: 500;">font-weight:</span> <span id="fontWeightResult" style="font-weight: 500"></span>
-          </div>
-        </div>
-    </div>
-</div> */}
-
-
-
 </section>
 )
 }

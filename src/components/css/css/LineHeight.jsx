@@ -6,7 +6,6 @@ export default function LineHeight(props){
 <section className="section-conetent">
     <h1 className="heading-style heading-style-css-color"> CSS Width </h1>
     <article>
-        <h1 class="heading-style-css"><u><i> CSS line-height </i></u></h1>
         <div class="style_divv mt-5">
             تحدد خاصية <b>line-height</b> ارتفاع الخط.<br/>
             <div class="alert alert-danger mt-3">

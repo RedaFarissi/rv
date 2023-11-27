@@ -1,0 +1,19 @@
+.RAng_class{
+    width: 100% ;
+}
+#img_test{
+    box-sizing:border-box;border: 7px solid black; width:70%;margin: 50px 15%;
+}
+.value {
+    background-color:black;
+    border:8px solid orangered;padding: 9px 0px;text-align: center;
+    color: white;
+}
+#blur_exemple{ display: flex; justify-content: space-around; background-color:azure; }
+#input_radio_box{ box-shadow:5px 5px 20px rgba(0 0 0/30%); align-self:center; width: 40%; min-height: 400px; }
+#Blur_E{ width: 40%; box-shadow:3px 3px 20px rgba(0 0 0 /30%); min-height:400px; }
+@media only  screen and (max-width:903px) {
+    #blur_exemple{flex-direction: column;}
+    #input_radio_box{ width: 100%; min-height: 90px; margin-bottom: 27px; }
+    #Blur_E{ width: 100%; min-height: 90px; }
+}

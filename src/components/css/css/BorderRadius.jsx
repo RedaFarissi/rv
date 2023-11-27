@@ -1,108 +1,72 @@
-import { CodeHighlighter ,  Result} from "../../path";
+import { useState , useRef ,useEffect} from "react";
+import { CodeHighlighter ,  Result , InteractivCss} from "../../path";
 import images from "../imagesCss";
-import "./Border.css"
+import "./BorderRadius.css"
+
 
 export default function BorderRadius(props){
-  function border_radius(value){
-    document.getElementById("border_rad").style.borderRadius = value;
-    document.getElementById("border-radius-result").innerHTML = value;
+  const [selectedValue, setSelectedValue] = useState("30px");
+  const resultRef = useRef()
+  const inputRef = useRef()
+  const handleBordeRadius = (event) => {
+    const { value } = event.target;
+    setSelectedValue(value);
+    resultRef.current.style.borderRadius = value
+  };
+  
+  useEffect(() => {
+    inputRef.current.click();
+  }, []);
+  
+  const codeExemple= { 
+    head:`  
+   <style> 
+       .img{
+          border-radius: 50%;
+        }    
+   </style>`,
+    code:`        <img src="./orange.jpg" width="40%" />
+    <img src="./orange.jpg" width="40%" class="img"/>`
   }
   return(
     <section className="section-conetent">
   <h1 className="heading-style heading-style-css-color"> CSS Border-Radius </h1>
+    <article>
+        <p className="style_divv mt-5">
+            تتيح لك خاصية <b>border-radius</b> تحديد الزوايا الدائرية لحدود العنصر. يتم تحديد الانحناء في كل زاوية بنصف قطر واحد أو اثنين من الانحناء مما يجعل من الممكن تحديد قوس لدائرة أو قوس من القطع الناقص.
+           <br/> يمكنك إعطاء كل جانب من جوانب العنصر قيمة إنحناء . 
+        </p>
+        <div className="mital">متال 1 :</div>
+        <CodeHighlighter file_name="index.html"code={codeExemple.code} head={codeExemple.head} language="html" title="CSS Border-Radius" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='CSS Border-Radius' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <img src={images.orange} width="40%"  />
+            <img src={images.orange} width="40%" className="css-border-radius-ex2"/>
+        </Result>
+      </article>
+      <article>
+        <div className="mital">2. متال تفاعلي توضيحي  </div> 
+        <InteractivCss 
+          property="border-radius" 
+          value={selectedValue}
+          classParent="css-border-radius-ex1-parent"
+          classChild="css-border-radius-ex1"  
+          resultRef={resultRef}
+          textInResult="border-radius"
+        >
+              <ul className="p-0">
+                  <li><input type="checkbox" name="bo-sh6" ref={inputRef} onChange={handleBordeRadius} checked={selectedValue === '30px'} value="30px" /> &nbsp; 30px</li>
+                  <li><input type="checkbox" name="bo-sh6" onChange={handleBordeRadius} checked={selectedValue === '25% 10%'} value="25% 10%"/> &nbsp; 25% 10% </li>
+                  <li><input type="checkbox" name="bo-sh6" onChange={handleBordeRadius} checked={selectedValue === '10% 30% 50% 70%'} value="10% 30% 50% 70%"/> &nbsp; 10% 30% 50% 70% </li>
+                  <li><input type="checkbox" name="bo-sh6" onChange={handleBordeRadius} checked={selectedValue === '10% / 50%'} value="10% / 50%"/> &nbsp; 10% / 50%</li>
+                  <li><input type="checkbox" name="bo-sh6" onChange={handleBordeRadius} checked={selectedValue === '10px 100px'} value="10px 100px"/> &nbsp; 10px 100px </li>
+                  <li><input type="checkbox" name="bo-sh6" onChange={handleBordeRadius} checked={selectedValue === '50% 20% / 10% 40%'} value="50% 20% / 10% 40%"/> &nbsp; 50% 20% / 10% 40% </li>
+                  <li><input type="checkbox" name="bo-sh6" onChange={handleBordeRadius} checked={selectedValue === '50% 20% 10% 40%'} value="50% 20% 10% 40%"/> &nbsp; 50% 20%  10% 40% </li>
+                  <li><input type="checkbox" name="bo-sh6" onChange={handleBordeRadius} checked={selectedValue === '50%'} value="50%"/> &nbsp; 50% </li>
+                  <li><input type="checkbox" name="bo-sh6" onChange={handleBordeRadius} checked={selectedValue === '90%'} value="90%"/> &nbsp; 90% </li>
+              </ul>
+        </InteractivCss>
 
-<div class="style_divv mt-5">
-    تتيح لك خاصية <b>border-radius</b> تحديد الزوايا الدائرية لحدود العنصر. يتم تحديد الانحناء في كل زاوية بنصف قطر واحد أو اثنين من الانحناء مما يجعل من الممكن تحديد قوس لدائرة أو قوس من القطع الناقص.
-   <br/> يمكنك إعطاء كل جانب من جوانب العنصر قيمة إنحناء . 
-</div>
-{/* <div class="mital">متال :</div>
-<div id="border_radius_exemple" class="alert p-4 rounded m-auto border border-primary border-2 text-dark" dir="ltr">
-  <div id="input_radio_box" class="border border-secondary rounded bg-light p-3">
-    <div class="h2"> border-radius : </div>  
-    <div>
-      <input type="radio" name="bo-sh6" onClick={border_radius("30px")} value="30px" id="border_r"/>  30px<br/>
-      <input type="radio" name="bo-sh6" onClick={border_radius("25%f 10%")} value="25%f 10%"/>  25% 10% <br/>
-      <input type="radio" name="bo-sh6" onClick={border_radius("10% 30% 50% 70%")} value="10% 30% 50% 70%"/>  10% 30% 50% 70% <br/>
-      <input type="radio" name="bo-sh6" onClick={border_radius("10% / 50%")} value="10% / 50%"/>  10% / 50%<br/>
-      <input type="radio" name="bo-sh6" onClick={border_radius("10px 100px")} value="10px 100px"/>  10px 100px <br/>
-      <input type="radio" name="bo-sh6" onClick={border_radius("50% 20% / 10% 40%")} value="50% 20% / 10% 40%"/> 50% 20% / 10% 40% <br/>
-      <input type="radio" name="bo-sh6" onClick={border_radius("50% 20% 10% 40%")} value="50% 20% 10% 40%"/> 50% 20%  10% 40% <br/>
-      <input type="radio" name="bo-sh6" onClick={border_radius("50%")} value="50%"/> 50% 
-    </div>
-    <div id="Code" class="mt-4 w-100">
-       <div class="h3"> Code: </div>
-       <div class="border py-2 ps-2 w-100" >
-           <span style={{fontWeight:"500"}}>border-radius :</span> <span id="border-radius-result" style={{fontWeight:"500"}}></span>
-       </div>
-    </div>
-  </div> 
-  <div class="border bg-light border-secondary p-2" id="border-radius">
-    <div class="h2"> Result: </div>
-    <div id="border_rad"> Reda </div>
-  </div>
-</div>
-<div class="sum_exemple_style">
-<div class="mital">متال 2 :</div>
-<h4 style="color:green"> الكود </h4>
-<img src="{% static 'css/css24_border-radius.png' %}" class="img"/>
-<h4 style="color:green"> بعد تشغيل الكود </h4>
-<div class="styleee">
-    <div style="float: left;width:50%;border:5px solid white">
-        <img src="{% static 'css/orange.jpg' %}"  style="width:100%;border:5px solid blue"/>
-        <h6 style="font-size: large;text-align:center;padding-top:15px;border-top:4px solid white;padding:9px" dir="rtl">  <bdi> أصورة قبل إضافة خاصية border-radius </bdi></h6>
-    </div>
-    <div style="float: left;width:50%;border:5px solid white">
-        <img src="{% static 'css/orange.jpg' %}" style="width:100%;border:5px solid blue;border-radius:50%" id="imG" />
-        <h6 style="font-size: large;text-align:center;padding-top:15px;border-top:4px solid white;padding:9px" dir="rtl"> أصورة بعد إضافة خاصية border-radius </h6>
-    </div>
-    <br style="clear: both;">
-</div> 
-</div>*/}
-
+    </article>
 </section>
 )
 }
-
-/*
- #border_radius_exemple{
-        display: flex;
-        justify-content: space-around;
-        background-color:azure;
-    }
-    #input_radio_box{
-        box-shadow:5px 5px 20px rgba(0 0 0/30%);
-        align-self:center;
-        width: 40%;
-        min-height: 400px;
-    }
-    #border-radius{
-        width: 40%;
-        box-shadow:3px 3px 20px rgba(0 0 0 /30%);
-        min-height:400px;
-    }
-    #border_rad{
-      color:white; padding:9px; width:200px; height:200px; margin:auto;
-      background-color:gray; margin-top:20%; border:2.5px solid red; text-align:center;
-      margin-bottom:20%; 
-    }
-    
-    @media only  screen and (max-width:903px) {
-        #border_radius_exemple{
-          flex-direction: column;
-        }
-        #input_radio_box{
-          width:100%;
-          margin-bottom:27px;
-        }
-        #Code{
-          margin-bottom:20px;
-        }
-        #border-radius{
-          width: 100%;
-          min-height: 90px;
-        }
-        #border_rad{
-          margin-top:9%;
-        }
-    }
-   */

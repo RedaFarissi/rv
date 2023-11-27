@@ -1,0 +1,4 @@
+#dIv {border: 2px solid; padding: 20px;width: 70%;resize: both;overflow: auto;max-width: 100% ;max-height:49vh }
+#hori { border: 2px solid;padding: 20px;width: 70%; resize: horizontal;overflow: auto;max-width: 100% ;}
+#verti {border: 2px solid;padding: 20px; width: 70%;resize: vertical;overflow: auto;max-height:55vh}
+#textarea{ resize: none;}

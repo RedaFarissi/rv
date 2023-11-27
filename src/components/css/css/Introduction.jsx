@@ -1,7 +1,69 @@
 import { CodeHighlighter ,  Result} from "../../path";
 import images from "../imagesCss";
+import "./Introduction.css"
+
 
 export default function Introduction(props){
+
+const codeExemple1 = { 
+    css:`body{
+        background-color: #dc3545;
+}`,
+    head:`      
+    <link rel="stylesheet" href="./reda.css">`,
+    code:``
+    }
+
+    const codeExemple2 = { 
+    css:`#my-name {
+    background-color: rgb(43, 122, 226);
+    color: crimson;
+    padding: 5px 5px;
+}`,
+    head:`
+    <link rel="stylesheet" href="./index.css">`,
+    code:`        <h1 id="my-name">Reda Eskouni</h1>`
+    }
+
+    const codeExemple3 = { 
+    head:`    
+    <style>
+        .reda {
+            background-color: rgb(0, 122, 226);
+            color: yellow;
+            padding: 5px 5px;
+        }    
+    </style>`,
+    code:`
+    <h1 class="reda">Reda Eskouni</h1>
+    <h1 class="reda">Reda Eskouni</h1>
+    <h1 class="reda">Reda Eskouni</h1>
+    <h1 class="reda">Reda Eskouni</h1>
+    <h1 class="reda">Reda Eskouni</h1>
+    `
+    }
+
+    const codeExemple4 = { 
+    code:`      <!-- 
+            Comments 
+        -->`
+    }
+    const codeExemple5 = { 
+    head:`
+    <style>
+        h2 {
+            color: red;
+        }    
+    </style>`,
+    code:`        <h2>Heading Title 1</h2>
+        <h2>Heading Title 2</h2>
+        <h2>Heading Title 3</h2>
+        <h2>Heading Title 4</h2>
+        <h2>Heading Title 5</h2>`
+    }
+
+
+
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-css-color"> CSS Introduction </h1>
@@ -19,24 +81,19 @@ export default function Introduction(props){
         <div className="style_divv">
             لإنشاء ملف <b>CSS</b> كل ما عليك فعله إنشاء ملف وأن تقوم بئعطائه إسم و صيغة <b>CSS</b> تم التأكد أن ملف داخل نفس المجلد الذي يحتوي ملف <b>html</b> .
         </div>
-        <div className="sum_exemple_style">
-            <div className="mital">متال : </div>
-            <ul><li>في هاذا المتال قمنا بتسمية الملفين <b>reda</b> ولاكن يختلف الإمتداد فالملف الأول يحمل إمتداد <b>css</b> والملف التاني يحمل إمتداد <b>html</b> .</li></ul>
-            <img src={images.css0_Introduction} alt="intro" className="img"/>
-        </div>
+        <div className="mital">متال : </div>
+        <ul><li>في هاذا المتال قمنا بتسمية الملفين <b>reda</b> ولاكن يختلف الإمتداد فالملف الأول يحمل إمتداد <b>css</b> والملف التاني يحمل إمتداد <b>html</b> .</li></ul>
+        <img src={images.css0_Introduction} alt="intro" className="img"/>
         <h5>2. طريقة ربط الملف html ب css</h5>
         <div className="style_divv">
             لربط ملف <b>html</b> بملف <b>css</b> يجب إستخدام الوسم <kbd>&lt;link&gt;</kbd> مع السمة <b>rel</b> وقيمة <b>stylesheet</b> .<br/> 
         </div>
-        <div className="sum_exemple_style">
-            <div className="mital">متال :  </div>
-            <h4 className="green"> ملف html </h4>
-            <img src={images.css0_Introduction2} alt="intro" className="img"/>
-            <h4 className="green"> ملف css </h4>
-            <img src={images.css0_Introduction2_2} alt="intro" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.css0_Introduction2_3} alt="intro" className="img"/>
-        </div>
+        <div className="mital">متال :  </div>
+        <CodeHighlighter file_name="reda.html" code={codeExemple1.code} head={codeExemple1.head} language="html" title="Reda test" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="reda.css" code={codeExemple1.css} language="css" title="Reda test" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='Reda test' styleAdd="bg-danger css-intr-ex1" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
+     
+        </Result>
     </article>
     <article>
         <h2 className="title-h2">3. تحديد عناصر  CSS عبر id </h2>
@@ -47,13 +104,12 @@ export default function Introduction(props){
                 <li> السمة id  هي سمة خاصة و يعني ذالك أنه لا يمكن تحيديد نفس ال id مرتين .</li>
             </ul>
         </div>
-        <div className="sum_exemple_style">
-            <div className="mital">متال :  </div>
-            <h4 className="green">  </h4>
-            <img src={images.css0_Introduction3} alt="intro" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.css0_Introduction3_2} alt="intro" className="img"/>
-        </div>
+        <div className="mital">متال :  </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" title="Reda test" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.css" code={codeExemple2.css} language="css" title="Reda test" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='Reda test' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h1 className="css-intr-ex2">Reda Eskouni</h1>
+        </Result>
         <ul><li> يمكنك دائما كتابة أكواد css داخل ملف خاص ب <b>css</b> وربطهم عن طريق الوسم <b>link</b> كما هو مذكور فوق .</li></ul>
     </article>
     <article>
@@ -65,13 +121,15 @@ export default function Introduction(props){
                 <li> السمة <b>class</b>  هي سمة يمكن إعطائها لعدة أوسم <b>html</b>  وتنفيد الأكواد على كل العناصر دفعة واحدة.</li>
             </ul>
         </div>
-        <div className="sum_exemple_style">
         <div className="mital">متال :  </div>
-        <h4 className="green"> الكود </h4>
-        <img src={images.css0_Introduction4} alt="intro" className="img"/>
-        <h4 className="green"> بعد تشغيل الكود </h4>
-        <img src={images.css0_Introduction4_2} alt="intro" className="img"/>
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple3.code} head={codeExemple3.head} language="html" title="Css Introduction" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='Css Introduction' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h1 className="css-intr-ex3">Reda Eskouni</h1>
+            <h1 className="css-intr-ex3">Reda Eskouni</h1>
+            <h1 className="css-intr-ex3">Reda Eskouni</h1>
+            <h1 className="css-intr-ex3">Reda Eskouni</h1>
+            <h1 className="css-intr-ex3">Reda Eskouni</h1>
+        </Result>
     </article>
     <article>
         <h2 className="title-h2">5. التعليقات - CSS Comments</h2>
@@ -80,10 +138,8 @@ export default function Introduction(props){
             يتم تجاهل التعليقات من قبل المتصفحات.<br/>
             تعليق <b>CSS</b> يتم وضع داخل <kbd>&lt;style&gt;</kbd> أو داخل ملف css،  ويبدأ مع */ وينتهي ب /*:
         </div>
-        <div className="sum_exemple_style">
         <div className="mital">متال :  </div>
-        <img src={images.css0_Introduction6} alt="intro" className="img"/>
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple4.code}  language="html" title="Css Introduction" addClass="mt-3 mb-3" copie={true}/>
     </article>
     <article>
         <h2 className="title-h2">6.  معلومات تقنية </h2>
@@ -92,14 +148,16 @@ export default function Introduction(props){
             أو السمة <b>class</b>  وهي سمة مفيدة جدا بحيت تمكنك من إعطاء نفس التصميم لعدة عناصر <b>html</b> دفعتا واحدة .<br/>
             يمكنك أيضا إعطاء تصاميم <b>CSS</b> من خلال إسم الوسم ونتيجتا لذالك كل وسوم <b>html</b> التي من نفس النوع سوف تأخد هاذا التصميم .
         </div>
-        <div className="sum_exemple_style">
         <div className="mital">متال :  </div>
-            <ul><li>لاحض أن تصميم تم تنفيده على كل  وسوم h2 .</li></ul>
-            <h4 className="green"> الكود </h4>
-            <img src={images.css0_Introduction5} alt="intro" className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.css0_Introduction5_2} alt="intro" className="img"/>
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple5.code} head={codeExemple5.head} language="html" title="Css Introduction" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='Css Introduction' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2 className="css-intr-ex5">Heading Title 1</h2>
+            <h2 className="css-intr-ex5">Heading Title 2</h2>
+            <h2 className="css-intr-ex5">Heading Title 3</h2>
+            <h2 className="css-intr-ex5">Heading Title 4</h2>
+            <h2 className="css-intr-ex5">Heading Title 5</h2>
+        </Result>
+        <ul><li>لاحض أن تصميم تم تنفيده على كل  وسوم h2 .</li></ul>
     </article>
 </section>
 )

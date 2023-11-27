@@ -1,0 +1,31 @@
+.css-font-size-ex1-a {   font-size: xx-small; } 
+.css-font-size-ex1-b {  font-size: x-small;  }  
+.css-font-size-ex1-c { font-size: small;  }  
+.css-font-size-ex1-d { font-size: medium;  }  
+.css-font-size-ex1-e { font-size: large;  }
+.css-font-size-ex1-f { font-size: x-large;  }
+.css-font-size-ex1-g { font-size: xx-large;  }
+.css-font-size-ex1-h { font-size: xxx-large;   }
+
+
+
+.css-font-size-ex2-parent{
+    font-size: 36px;
+}
+.css-font-size-ex2-half{
+    font-size: 50%;
+}
+.css-font-size-ex2-multiple{
+    font-size: 200%;
+}
+
+
+/* responsive */ 
+.css-font-size-ex3-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.css-font-size-ex3{
+    color: black;
+}

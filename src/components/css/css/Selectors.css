@@ -1,0 +1,2 @@
+#emaiL , #passworD {width:90%; height:50px; background-color:yellow;outline: none;border: none;margin:5px 5%;} 
+#emaiL::placeholder , #passworD::placeholder{ background-color: rgba(25 200 25/40%); padding-left: 9px;}

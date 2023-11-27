@@ -1,40 +1,19 @@
-#fontWeight_exemple{
-    display: flex;
-    justify-content: space-around;
-    background-color:azure;
+.css-font-weight-ex1-example {
+    font-size: 24px;
 }
-#input_radio_box{
-    box-shadow:5px 5px 20px rgba(0 0 0/30%);
-    align-self:center;
-    width: 40%;
-    min-height: 400px;
+
+.css-font-weight-ex1-normal {
+    font-weight: normal;
 }
-#FontWeight{
-    width: 40%;
-    box-shadow:3px 3px 20px rgba(0 0 0 /30%);
-    min-height:400px;
+
+.css-font-weight-ex1-bold {
+    font-weight: bold;
 }
-#font_w{
-    text-align: center;
-    line-height: 200px;
+
+.css-font-weight-ex1-bolder {
+    font-weight: bolder;
 }
-#Code{
-        margin: 20px;
-}
-@media only  screen and (max-width:903px) {
-    #fontWeight_exemple{
-        flex-direction: column;
-    }
-    #input_radio_box{
-        width: 100%;
-        min-height: 90px;
-        margin-bottom: 27px;
-    }
-    #Code{
-        margin-bottom: 20px;
-    }
-    #FontWeight{
-        width: 100%;
-        min-height: 90px;
-    }
+
+.css-font-weight-ex1-lighter {
+    font-weight: lighter;
 }

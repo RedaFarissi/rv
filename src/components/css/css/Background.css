@@ -1,0 +1,64 @@
+.css-background-ex1-body{
+    background-color: red;
+    height:400px
+}
+.css-background-ex1{
+    background-color: aqua;
+    color: violet;
+    font-size: 33px;
+}
+
+.css-background-ex2-body{
+    background-image: url("../../../assests/images/css/css/orange.jpg"); 
+    height: 75vh;
+}
+.css-background-ex2{
+    color: orange;
+    font-size: 70px;
+    background-color: white; 
+    text-align: center;
+    margin-top: 33vh;
+}
+.css-background-ex3-body{
+    background-image: url("../../../assests/images/css/css/orange.jpg"); 
+    height: 75vh;
+    background-repeat: no-repeat;
+}
+.css-background-ex4-body{
+    background-image: url("../../../assests/images/css/css/orange.jpg"); 
+    height: 75vh;
+    background-repeat : repeat-x ;
+}
+.css-background-ex5-body{
+    background-image: url("../../../assests/images/css/css/orange.jpg"); 
+    height: 75vh;
+    background-repeat : repeat-y ;
+}
+.css-background-ex6-body{
+    background-image: url("../../../assests/images/css/css/orange.jpg"); 
+    height: 75vh;
+    background-repeat : no-repeat ;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.css-background-ex7{
+    font-size: larger;
+    padding:20px;
+    border: 12px dashed #ffcc90;
+    background-color : greenyellow ;
+    background-clip: padding-box; 
+}
+.css-background-ex8{
+    font-size: larger;
+    padding:20px;
+    border: 12px dashed #ffcc90;
+    background-color : greenyellow ;
+    background-clip: border-box; 
+}
+.css-background-ex9{
+    font-size: larger;
+    padding:20px;
+    border: 12px dashed #ffcc90;
+    background-color : greenyellow ;
+    background-clip: content-box; 
+}

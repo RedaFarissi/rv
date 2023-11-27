@@ -1,50 +1,115 @@
-import { CodeHighlighter ,  Result} from "../../path";
+import { CodeHighlighter ,  Result , InteractivCss} from "../../path";
 import images from "../imagesCss";
+import { useState , useRef ,useEffect} from "react";
+import "./FontSize.css"
 
 export default function FontSize(props){
-    // function font_size(value){
-    //   document.getElementById("font_size").style.fontSize = value;
-    // }
-    // document.getElementById("none2").click()
+    const codeExemple1= { 
+        css:`.a {   font-size: xx-small; } 
+.b {  font-size: x-small;  }  
+.c { font-size: small;  }  
+.d { font-size: medium;  }  
+.e { font-size: large;  }
+.f { font-size: x-large;  }
+.g { font-size: xx-large;  }
+.h { font-size: xxx-large;   }`,
+        head:`  
+    <link rel="stylesheet" href="./index.css">`,
+        code:`      <div class="a">xx-small</div>
+    <div class="b">x-small</div>
+    <div class="c">small</div>
+    <div class="d">medium</div>
+    <div class="e">large</div>
+    <div class="f">x-large</div>
+    <div class="g">xx-large</div>
+    <div class="h">xxx-large</div>`
+    }
+    const codeExemple2= { 
+        css:`.parent{
+    font-size: 36px;
+}
+.half{
+    font-size: 50%;
+}
+.multiple{
+    font-size: 200%;
+}`,
+        head:`  
+    <link rel="stylesheet" href="./index.css">`,
+        code:`      <div class="parent">
+            <p> Default size: (36px)</p>
+            <span class="half"> 50% (18px)</span>
+            <span class="multiple"> 200% (72px)</span>
+        </div>`
+    }
+    const [selectedValue, setSelectedValue] = useState("30px");
+    const resultRef = useRef()
+    const inputRef = useRef()
+    const handleBordeRadius = (event) => {
+      const { value } = event.target;
+      setSelectedValue(value);
+      resultRef.current.style.fontSize = value
+    };
+    
+    useEffect(() => {
+      inputRef.current.click();
+    }, []);
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-css-color"> CSS Font-Size </h1>
     <article>
-        <div className="style_divv mt-5">
+        <p className="style_divv mt-5">
             <b>font-size</b> هو الخاصية <b>CSS</b> التي تتحكم في حجم الخط على صفحة ويب. هناك العديد من القيم المختلفة التي يمكنك استخدامها لتعريف الخاصية <b>font-size</b> . نلقي نظرة على المثال أدناه، والذي يتضمن قيم ووحدات مختلفة يمكنك استخدامها في <b>CSS</b>.<br/>تقدم هذه القيم أساليب مختلفة لتحديد حجم الخط على صفحة الويب الخاصة بك .
-        </div>
+        </p>
         <div className="sum_exemple_style">
         <div className="mital">متال :  </div>
-        <img src={images.css6_font_size} className="img"/>
-        <img src={images.css6_font_size_2} className="img"/>
+        <CodeHighlighter file_name="index.css" code={codeExemple1.css} language="css" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Font-Size" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='CSS Font-Size' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
+            <div className="css-font-size-ex1-a">xx-small</div>
+            <div className="css-font-size-ex1-b">x-small</div>
+            <div className="css-font-size-ex1-c">small</div>
+            <div className="css-font-size-ex1-d">medium</div>
+            <div className="css-font-size-ex1-e">large</div>
+            <div className="css-font-size-ex1-f">x-large</div>
+            <div className="css-font-size-ex1-g">xx-large</div>
+            <div className="css-font-size-ex1-h">xxx-large</div>
+        </Result>
         </div>
         <ul>
             <li>لنفترض أن <kbd>&lt;div&gt;</kbd> الذي تم تعيينه إلى 36px  يحتوي على <kbd>&lt;p&gt;</kbd> وعنصرين <kbd>&lt;span&gt;</kbd>. يتم تعيين حجم الخط من <kbd>&lt;span&gt;</kbd>  إلى 50٪ و 200٪ على التوالي. ثم <kbd>&lt;span&gt;</kbd> بكسل 18  مع قيمة 50 ٪   و <kbd>&lt;span&gt;</kbd> مع قيمة 200 ٪ سيكون 72px. إليك كيف يبدو هذا الرمز في العمل:</li>
         </ul>
-        <div className="sum_exemple_style">
         <div className="mital">متال 2 :  </div>
-        <img src={images.css6_font_size2} className="img"/>
-        <img src={images.css6_font_size2_2} className="img"/>
-        </div>
-        {/* <div className="mital">متال 3 :  </div>
-        <ul><li> قم بنقر على الأزرار أسفله لتغيير قيمة الخاصية <b>font-size</b> للفهم بشكل أفضل .</li></ul>
-        <div className="alert contaner-fluid p-4 rounded m-auto border border-primary border-2" dir="ltr" style="background-color:azure;">
-            <div className="d-flex text-black">
-                <h2 className="w-50"> font-size: </h2>
-                <h2 className="w-50"> Result: </h2>
+        <CodeHighlighter file_name="index.css" code={codeExemple2.css} language="css" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Font-Size" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='CSS Font-Size' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
+            <div className="css-font-size-ex2-parent">
+                <p> Default size: (36px)</p>
+                <span className="css-font-size-ex2-half"> 50% (18px)</span>
+                <span className="css-font-size-ex2-multiple"> 200% (72px)</span>
             </div>
-            <div className="d-flex text-dark">
-                <div className="border border-secondary rounded mt-3 bg-light p-3 px-4" style="width:40%;margin-right:10%;box-shadow:5px 5px 20px rgba(0 0 0/30%);align-self:center">
-                    <input type="radio" name="bo-sh" onclick="font_size(this.value)"  className="font" value="25px" id="none2" /> 25px<br>
-                    <input type="radio" name="bo-sh" onclick="font_size(this.value)"  className="font" value="15px"/> 15px<br>
-                    <input type="radio" name="bo-sh" onclick="font_size(this.value)"  className="font" value="28px"/> 28px<br>
-                    <input type="radio" name="bo-sh" onclick="font_size(this.value)"  className="font" value="22px"/> 22px<br>
-                </div>
-                <div className="d-flex w-50 mt-3 border bg-light align-self-center border-secondary p-2" id="font_size" style="box-shadow:3px 3px 20px rgba(0 0 0 /30%);"> 
-                    font-size
-                    </div>
-            </div>
-        </div> */}
+        </Result>
+    </article>
+    <article>
+        <div className="mital">3. متال تفاعلي توضيحي  </div> 
+        <InteractivCss 
+          property="font-size" 
+          value={selectedValue}
+          classParent="css-font-size-ex3-parent"
+          classChild="css-font-size-ex3"  
+          resultRef={resultRef}
+          textInResult="font-size"
+        >
+            <ul className="p-0">
+                <li><input type="checkbox" name="bo-sh6" ref={inputRef} onChange={handleBordeRadius} checked={selectedValue === '25px'} value="25px" /> &nbsp; 25px</li>
+                <li><input type="checkbox" name="bo-sh6" onChange={handleBordeRadius} checked={selectedValue === '15px'} value="15px"/> &nbsp; 15px </li>
+                <li><input type="checkbox" name="bo-sh6" onChange={handleBordeRadius} checked={selectedValue === '28px'} value="28px"/> &nbsp; 28px </li>
+                <li><input type="checkbox" name="bo-sh6" onChange={handleBordeRadius} checked={selectedValue === '22px'} value="22px"/> &nbsp; 22px</li>
+                <li><input type="checkbox" name="bo-sh6" onChange={handleBordeRadius} checked={selectedValue === '2rem'} value="2rem"/> &nbsp; 2rem</li>
+                <li><input type="checkbox" name="bo-sh6" onChange={handleBordeRadius} checked={selectedValue === '3rem'} value="3rem"/> &nbsp; 3rem</li>
+                <li><input type="checkbox" name="bo-sh6" onChange={handleBordeRadius} checked={selectedValue === '2pc'} value="2pc"/> &nbsp; 2pc</li>
+            </ul>
+        </InteractivCss>
     </article>
 </section>
 )

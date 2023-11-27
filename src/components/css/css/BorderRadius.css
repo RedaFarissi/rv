@@ -1,0 +1,19 @@
+.css-border-radius-ex1-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.css-border-radius-ex1{
+    height: 130px;
+    width: 130px;
+    text-align: center;
+    line-height: 120px;
+    border: 2px solid black;
+    background-color: red;
+}
+
+
+.css-border-radius-ex2{
+    border-radius: 50%;
+}

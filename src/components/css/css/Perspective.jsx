@@ -1,6 +1,6 @@
 import { CodeHighlighter ,  Result} from "../../path";
 import images from "../imagesCss";
-import "./Perspective.css";
+//import "./Perspective.css";
 
 export default function Perspective(props){
     return(
