@@ -1,34 +1,56 @@
 
 
-import { CodeHighlighter ,  Result} from "../../path";
+import { CodeHighlighter ,  Result , InteractivCss } from "../../path";
+import { useState , useRef , useEffect } from "react";
 import images from "../imagesCss";
+import "./TextAlign.css"
+
 
 export default function TextAlign(props){
-  // document.getElementById("noneT").click()
-  // document.getElementById("noneT2").click()
-  // function text_align(value){
-  //   document.getElementById("text_align").style.textAlign = value
-  //   document.getElementById("text_align_result").innerHTML = value + ";"
-  // }
-  // function text_align2(value){
-  //   document.getElementById("pp").style.textAlign = value
-  //   document.getElementById("text_align_result2").innerHTML = value + ";"
-  // }
-
+    const codeExemple1= { 
+        css:`#h2 { text-align: center; color: red;}
+p.date {text-align: right;}
+p.main {text-align: justify;}`,
+    head:`  
+    <link rel="stylesheet" href="./index.css">`,
+    code:`      <h2 id="h2">CSS text-align Example</h2>
+    <p class="date">May, 2014</p>
+    <p class="main">
+      In my younger and more vulnerable years my father gave me some
+      advice that I've been turning over in my mind ever since. 
+      'Whenever you feel like criticizing anyone,' he told me, 
+      'just remember that all the people in this world haven't had the advantages that you've had.'
+    </p>
+    <p>
+      <b>Note:</b> Resize the browser window to see how the value "justify" works.
+    </p>`
+    }
+    const [selectedValue, setSelectedValue] = useState("30px");
+    const resultRef = useRef()
+    const inputRef = useRef()
+    const handleBordeRadius = (event) => {
+      const { value } = event.target;
+      setSelectedValue(value);
+      resultRef.current.style.textAlign = value
+    };
+    
+    useEffect(() => {
+      inputRef.current.click();
+    }, []);
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-css-color"> CSS Text-Align </h1>
     <article>
-        <div className="style_divv mt-5">
+        <p className="style_divv mt-5">
             تحدد خاصية <b>text-align</b>   المحاذاة الأفقية للنص في العنصر . بحيت يمكنك التحكم في العناصر فالخاصية <b>text-align</b> تمكنك من تحديد أين تريد عرض العنصر يمين أو اليسار أو وسط الصفحة
-        </div>
-        <div className="sum_exemple_style">
+        </p>
         <div className="mital">متال  :  </div>
-        <img src={images.css19_text_align} className="img"/>
-        <div className="style-result">
-            <h2 id="h2">CSS text-align Example</h2>
-            <p className="date">May, 2014</p>
-            <p className="main">
+        <CodeHighlighter file_name="index.css" code={codeExemple1.css} language="css" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Text-Align" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='CSS Text-Align' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
+            <h2 id="css-text-align-ex1-h2">CSS text-align Example</h2>
+            <p className="css-text-align-ex1-date">May, 2014</p>
+            <p className="css-text-align-ex1-main">
               In my younger and more vulnerable years my father gave me some
               advice that I've been turning over in my mind ever since. 
               'Whenever you feel like criticizing anyone,' he told me, 
@@ -37,53 +59,26 @@ export default function TextAlign(props){
             <p>
               <b>Note:</b> Resize the browser window to see how the value "justify" works.
             </p>
-        </div>
-        </div>
+        </Result>        
     </article>
-
-{/*
-<div className="mital">متال  2 :  </div>
-
-<ul><li> قم بنقر على الأزرار أسفله للفهم بشكل أفضل عن الخاصية <b>text-align</b>  .</li></ul>
-<div  id="textAlign_exemple" className="alert p-4 rounded m-auto border border-primary border-2 text-dark" dir="ltr">
-  <div id="input_radio_box" className="border border-secondary rounded bg-light p-3">
-    <div className="h2"> text-align : </div>  
-    <div className="h6">1- text-align for heading</div>
-    <div className="border p-1">
-      <input type="radio" name="bo-sh" onclick="text_align(this.value)"  className="mar" value="left" id="noneT" /> left <br>
-      <input type="radio" name="bo-sh" onclick="text_align(this.value)"  className="mar" value="right"/>  right<br>
-      <input type="radio" name="bo-sh" onclick="text_align(this.value)"  className="mar" value="center"/> center<br>
-      <input type="radio" name="bo-sh" onclick="text_align(this.value)"  className="mar" value="justify"/> justify<br>
-    </div>
-    <br>
-    <div className="h6">2- text-align for paragraph</div>
-    <div className="border p-1">
-      <input type="radio" name="bot" onclick="text_align2(this.value)"  className="mar" value="left" id="noneT2" /> left <br>
-      <input type="radio" name="bot" onclick="text_align2(this.value)"  className="mar" value="right"/>  right<br>
-      <input type="radio" name="bot" onclick="text_align2(this.value)"  className="mar" value="center"/> center<br>
-      <input type="radio" name="bot" onclick="text_align2(this.value)"  className="mar" value="justify"/> justify<br>
-    </div>
-    <div id="Code" className="mt-4 w-100">
-          <div className="h3"> Code: </div>
-          <div className="border py-2 ps-2 w-100" >
-              1) <span style="font-weight: 500;">text-align :</span> <span id="text_align_result" style="font-weight: 500"></span><br>
-              2) <span style="font-weight: 500;">text-align :</span> <span id="text_align_result2" style="font-weight: 500"></span><br>
-          </div>
-    </div>
-  </div>
-
-  <div className="border bg-light border-secondary" id="font_size">
-    <div className="h2"> Result: </div>
-    <div style="margin:auto;background-color:green;color:white;border:1px solid blue;font-size:33px;" id="text_align">
-      text-align
-    </div>
-    <p id="pp">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br>Nisi eius voluptatum consequuntur, porro voluptas voluptatibus earum ipsam magnam.<br><br>Vel voluptatem id iste officiis reprehenderit, perferendis quam error corrupti?<br>Enim aspernatur ea praesentium, provident corrupti recusandae<br>
-      natus ad alias consequatur id reiciendis ex ullam odit labore vitae error nihil minima molestias! Maiores fuga beatae quas nemo et obcaecati culpa accusamus fugiat porro inventore, non earum veniam ad tempora nulla ab repudiandae harum voluptas, dolor aut corrupti facilis esse magni minima. Eius veniam vel omnis,
-      saepe hic aperiam aliquid molestiae doloremque qui?
-    </p>
-  </div> */}
-
+    <article>
+        <div className="mital"> متال توضيحي تفاعلي  : </div> 
+        <InteractivCss 
+          property="text-align" 
+          value={selectedValue}
+          classParent="css-text-align-ex2-parent"
+          classChild="css-text-align-ex2"  
+          resultRef={resultRef}
+          textInResult="text-align"
+        >
+            <ul className="p-0">
+                <li><input type="checkbox" name="bo-sh6" ref={inputRef} onChange={handleBordeRadius} checked={selectedValue === 'left'} value="left" /> &nbsp; left</li>
+                <li><input type="checkbox" name="bo-sh6" onChange={handleBordeRadius} checked={selectedValue === 'right'} value="right"/> &nbsp; right </li>
+                <li><input type="checkbox" name="bo-sh6" onChange={handleBordeRadius} checked={selectedValue === 'center'} value="center"/> &nbsp; center </li>
+                <li><input type="checkbox" name="bo-sh6" onChange={handleBordeRadius} checked={selectedValue === 'justify'} value="justify"/> &nbsp; justify</li>
+            </ul>
+        </InteractivCss>
+    </article>
 </section>
 )
 }

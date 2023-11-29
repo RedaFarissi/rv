@@ -19,7 +19,6 @@ export default function Italic(props){
             <Result title='Italic' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 italique <br/> <i>italique</i> <hr/> <i>italique</i>
             </Result>
-            <img src={images.html6_i}  alt="italic code" className="img"/>
         </div>
     </article>
 </section>

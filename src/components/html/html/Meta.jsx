@@ -1,4 +1,4 @@
-import { CodeHighlighter ,  Result} from "../../path";
+import { CodeHighlighter } from "../../path";
 
 export default function  Meta(props){
     const code1 = `<meta charset="UTF-8">`
@@ -70,53 +70,53 @@ const codeExemple5  =`<!DOCTYPE html>
 <h1 className="heading-style heading-style-html-color">HTML meta</h1>
 <article>
     <h2 className="title-h2">1. تعريف الوسم meta </h2>
-    <div className="style_divv">
+    <p className="style_divv">
         يعرف الوسم <kbd>&lt;meta&gt;</kbd> بيانات التعريف حول مستند HTML. بيانات التعريف هي بيانات (معلومات) حول البيانات .<br/>
         الوسم <kbd>&lt;meta&gt;</kbd> دائما يكون داخل الوسم <kbd>&lt;head&gt;</kbd> ، وعادة ما تستخدم لتحديد مجموعة الأحرف ووصف الصفحة والكلمات الرئيسية ومؤلف المستند وإعدادات منفذ العرض.
         لن يتم عرض بيانات التعريف على الصفحة، ولكن يمكن تحليل الجهاز.<br/>
         يتم استخدام بيانات التعريف من قبل المتصفحات (كيفية عرض المحتوى أو إعادة تحميل الصفحة) ومحركات البحث (الكلمات الرئيسية) وخدمات الويب الأخرى. وهووسم فردي يحتوي على السمات انضر الأمتلة التوضيحية أسفله .
-    </div>
+    </p>
 </article>
 <article>
     <h2 className="title-h2">2. السمة charset </h2>
-    <div className="style_divv">
+    <p className="style_divv">
         السمة <b>charset</b> تحدد ترميز الأحرف لمستند <b>HTML</b>.
         تشجع مواصفات <b>HTML5</b> مطوري الويب على استخدام مجموعة أحرف <b>UTF-8</b> ، والتي تغطي جميع الشخصيات والرموز تقريبا في العالم.<br/>
         السمة <b>charset</b> هي  سمة مهمة يجب إستخدامها دائما . <br/>
         <CodeHighlighter  code={code1} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
-    </div>
+    </p>
     <CodeHighlighter code={codeExemple1} language="jsx" title="Meta" addClass="mt-3 mb-3" copie={true}/>
 </article>
 <article>
     <h2 className="title-h2">3. السمة name </h2>
-    <div className="style_divv">
+    <p className="style_divv">
     السمة <b>name</b> تحديد اسم بيانات التعريف.<br/>
     تحدد سمة <b>name</b> اسما لمعلومات / قيمة لأسمة <b>content</b> .
-    </div>
+    </p>
     <h5>1.  الكلمات الرئيسية لمحركات البحث </h5>
-    <div className="style_divv">
+    <p className="style_divv">
         لتحديد الكلمات الرئيسية  لمحركات البحث يجب إعطاء السمة  <b>name</b>  القيمة <b>keywords</b> تم داخل السمة <b>content</b> قم بكتابة جميع الكلمات التي قد تساعد موقعك مع محركات البحت .
         <CodeHighlighter  code={code2} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
-    </div>
+    </p>
     <CodeHighlighter code={codeExemple2} language="jsx" title="Meta" addClass="mt-3 mb-3" copie={true}/>
     <h5>2.  وصف صفحة الويب الخاصة  </h5>
-    <div className="style_divv">
+    <p className="style_divv">
         لتحديد وصف صفحة الويب الخاصة بك يجب إعطاء السمة  <b>name</b>  القيمة <b>description</b> تم داخل السمة <b>content</b> قم بكتابة تعريف وصف صفحة الويب الخاصة بك .
         <CodeHighlighter  code={code3} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
-    </div>
+    </p>
     <CodeHighlighter code={codeExemple3} language="jsx" title="Meta" addClass="mt-3 mb-3" copie={true}/>
     <h5>3.  مؤلف صفحة </h5>
-    <div className="style_divv">
+    <p className="style_divv">
         لتحديد مؤلف صفحة يجب إعطاء السمة  <b>name</b>  القيمة <b>author</b> تم داخل السمة <b>content</b> قم بكتابة إسمك   .
         <CodeHighlighter  code={code4} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
-    </div>
+    </p>
     <CodeHighlighter code={codeExemple4} language="jsx" title="Meta" addClass="mt-3 mb-3" copie={true}/>
 
     <h5>4.  موقع متجاوب مع جميع الأجهزة </h5>
-    <div className="style_divv">
+    <p className="style_divv">
         لجعل موقعك متجاوب مع جميع الأجهزة يجب إعطاء السمة  <b>name</b> القيمة <b>viewport</b> تم داخل السمة <b>content</b> قم بكتابة <b>width=device-width, initial-scale=1.0</b>   .
         <CodeHighlighter  code={code5} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
-    </div>
+    </p>
     <CodeHighlighter code={codeExemple5} language="jsx" title="Meta" addClass="mt-3 mb-3" copie={true}/>
     <h5>4.   تحديد كيف يتم عرض موقعك في فيس بوك </h5>
     تستخدم الخاصية <b>meta</b> مع السمة <b><bdi>property="og:title"</bdi></b> لتحديد عنوان لموقعك عند مشاركته على فيس بوك . يتم تحدي العناون داخل الخاصية <b>content</b> 

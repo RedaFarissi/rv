@@ -1,5 +1,7 @@
-#a,#b,#c,#d{ background-color: yellow; width: 350px;}
-#a{word-break: normal;}
-#b{word-break:break-all ;}
-#c{word-break:keep-all ;}
-#d{word-break:break-word ;}
+#css-word-braek-ex1-a,#css-word-braek-ex1-b,#css-word-braek-ex1-c,#css-word-braek-ex1-d{ 
+    background-color: yellow; width: 350px;
+}
+#css-word-braek-ex1-a{word-break: normal;}
+#css-word-braek-ex1-b{word-break:break-all ;}
+#css-word-braek-ex1-c{word-break:keep-all ;}
+#css-word-braek-ex1-d{word-break:break-word ;}

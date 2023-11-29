@@ -91,7 +91,7 @@ export default function FontSize(props){
         </Result>
     </article>
     <article>
-        <div className="mital">3. متال تفاعلي توضيحي  </div> 
+        <div className="mital"> متال توضيحي تفاعلي  : </div> 
         <InteractivCss 
           property="font-size" 
           value={selectedValue}

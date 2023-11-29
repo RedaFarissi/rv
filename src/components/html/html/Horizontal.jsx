@@ -12,13 +12,13 @@ const codeExemple =  `<p>
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color">HTML Horizontal Line (hr) </h1>
-    <div className="style_divv mt-5">
+    <p className="style_divv mt-5">
         عندما نقوم بكتابة الفقرات و نريد ان نفصل بينها بخط فاننا نقوم بوضع خط افقي لكي 
         نفرق بين هاته الفقرات و الخط الفاصل لا نستطيع وضعه هكذا بل يلزمنا وسم نستعمله 
         <kbd>
             &lt;hr&gt;</kbd>  وهذا الوسم هو الوسم الفردي . <br/>
             يمكن كتابة الوسم <b>hr</b>  بهده الطريقة أيضا <kbd><bdi>&lt;hr/&gt;</bdi></kbd>  
-    </div>
+    </p>
     <div className="sum_exemple_style">
         <div className="mital">متال : </div>
         <CodeHighlighter  code={codeExemple} language="html" file_name="index.html" title="Horizontal" addClass="mt-3 mb-3" copie={true}/>

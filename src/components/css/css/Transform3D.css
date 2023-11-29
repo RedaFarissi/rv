@@ -1,39 +1,17 @@
-#rotateX_exemple,#rotateX2_exemple,#rotateY_exemple,#rotateY2_exemple,#rotateZ_exemple,#translateZ_exemple,#translateZ2_exemple {
-    display: flex;
-    justify-content: space-around;
-    background-color:azure;
+.css-transform3d-ex1-parent , .css-transform3d-ex2-parent , .css-transform3d-ex3-parent 
+,.css-transform3d-ex4-parent, .css-transform3d-ex5-parent , .css-transform3d-ex6-parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#input_radio_box_rotateX,#input_radio_box_rotateX2,#input_radio_box_rotateY,#input_radio_box_rotateY2,#input_radio_box_rotateZ,#input_radio_box_translateZ,#input_radio_box_translateZ2 {
-    box-shadow:5px 5px 20px rgba(0 0 0/30%);
-    align-self:center;
-    width: 40%;
-    min-height: 400px;
+
+
+.css-transform3d-ex2-parent, .css-transform3d-ex4-parent, .css-transform3d-ex5-parent, .css-transform3d-ex6-parent{
+  perspective: 300px;
 }
-#rotateX,#rotateX2,#rotateY,#rotateY2,#rotateZ,#translateZ,#translateZ2{
+
+
+.css-transform3d-ex1-child , .css-transform3d-ex2-child , .css-transform3d-ex3-child , 
+.css-transform3d-ex4-child , .css-transform3d-ex5-child , .css-transform3d-ex6-child {
   width:160px;height:160px;margin:auto;background-color:gray;margin-top:15%;margin-bottom:15%;border:2.5px solid red;
-} 
-#result-rotateX,#result-rotateX2,#result-rotateY,#result-rotateY2,#result-rotateZ,#result-translateZ,#result-translateZ2{
-  width:40%;box-shadow:3px 3px 20px rgba(0 0 0 /30%);
 }
-
-@media only  screen and (max-width:903px) {
-    #rotateX_exemple,#rotateX2_exemple,#rotateY_exemple,#rotateZ_exemple,#translateZ_exemple,#translateZ2_exemple{
-      flex-direction: column;
-    }
-    #input_radio_box_rotateX,#input_radio_box_rotateX2,#input_radio_box_rotateY,#input_radio_box_rotateZ,#input_radio_box_translateZ,#input_radio_box_translateZ2 {
-      width:100%;
-      margin-bottom:27px;
-      padding-left: 9px;
-    }
-    .Code{
-      margin-bottom:20px;
-    }
-    #result-rotateX,#result-rotateX2,#result-rotateY,#result-rotateZ,#result-translateZ,#result-translateZ2{
-      width: 100%;
-    }
-}
-
-#result-rotateX2,#result-rotateY2,#result-translateZ2{
-    perspective: 300px;
-    perspective-origin: center;
-  }

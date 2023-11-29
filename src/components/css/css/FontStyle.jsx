@@ -20,7 +20,7 @@ p-4 {  font-style: inherit;  }`,
 <section className="section-conetent">
     <h1 className="heading-style heading-style-css-color"> CSS Font-Style </h1>
     <article>
-        <div className="style_divv mt-5">
+        <p className="style_divv mt-5">
             الخاصية <b>font-style</b> في <b>CSS</b> تُحدِّد إن كان يجب أن يكون شكل الخط عاديًا (normal) أو مائلًا (italic) أو منحرفًا (oblique). وسيختار المتصفح النسخة الأنسب من نوع الخط <b>font-family</b>.<br/>
             يكون للخط المائل بعض سمات الكتابة اليدوية، ويستهلك عادةً مسافة أفقية أقل من الخط العادي، بينما الخط المنحرف (oblique) يُمثِّل نسخةً منحرفة بزاوية معيّنة من الخط العادي؛ وعند عدم توافر نسخة مائلة مخصصة من الخط، فسيكون شكل الخط المائل والمنحرف سواءً.
             <ul>
@@ -28,7 +28,7 @@ p-4 {  font-style: inherit;  }`,
                 <li><b>italic</b> : اختيار نسخة مُصنَّفة على أنها مائلة (italic)، وإن لم تتوافر نسخة مائلة، فستستخدم النسخة المنحرفة من الخط <b>oblique</b>، وإن لم تتوفر كلا النسختين، فسيحاكى الخط المائل من المتصفح.</li>
                 <li><b>oblique</b> : اختيار نسخة مُصنَّفة على أنها منحرفة (oblique)، وإن لم تتوافر نسخة منحرفة، فستستخدم النسخة المائلة من الخط <b>italic</b> ، وإن لم تتوفر كلا النسختين، فسيحاكى الخط المائل من المتصفح</li>
             </ul>
-        </div>
+        </p>
         <div className="mital">متال :  </div>
         <CodeHighlighter file_name="index.css" code={codeExemple2.css} language="css" copie={true}/>
         <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Font-Style" addClass="mt-3 mb-3" copie={true}/>

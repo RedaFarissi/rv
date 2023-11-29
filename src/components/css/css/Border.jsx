@@ -84,7 +84,7 @@ export default function Border(props){
     <h1 className="heading-style heading-style-css-color"> CSS Border </h1>
     <article>
         <h2 className="title-h2">1- إنشاء حدود </h2>
-        <div class="style_divv">
+        <p class="style_divv">
             تسمح لك الخاصية <b>border</b> في لغة  <b>CSS</b> بتحديد خط يمتل حد العنصر يمكن تحديد عرض الخط و نوعه و لونه أيضا  .<br/>
                يمكن تحديد لون و سمك و نوع الخط دفعتا واحدة كما هو موضح أسفله  ولاكن يجب أن تكتب القيم بترتيب محدد وهو كتالي :<br/>
             1. قيمة محددة بال <b>px</b> أو  <b>ch</b> أو  <b>em</b> أو <b>cm</b>  أو <b>in</b> أو <b>mm</b> أو <b>pc</b> ..إلخ . غالبا ما نستخدم px .<br/>
@@ -98,7 +98,7 @@ export default function Border(props){
                 </ul>
             3. لون الخط يمكنك تحديد أي لون تريد بصيغة أحرف متل black , aqua , .. أو بضيغة rgb() أو بصغة <b>HEX</b> .
             <ul><li><small>ستتعلم كل شيئ عن الألوان في فقرة <b>color</b> من هاذا البرنامج التعليمي الخاص بلغة <b>CSS</b> .</small></li></ul>
-        </div>
+        </p>
         <div class="mital">متال : </div>
         <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Border" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Border' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">

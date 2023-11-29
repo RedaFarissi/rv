@@ -1,12 +1,39 @@
 import { CodeHighlighter ,  Result} from "../../path";
 import images from "../imagesCss";
+import "./TextTransform.css"
 
 export default function TextTransform(props){
+    const codeExemple1= { 
+     head:`  
+       <style> 
+           p{
+                text-transform: capitalize;
+                color: red;
+           }    
+       </style>`,
+    code:`      <p> lorem ipsum dolor sit amet consectetur adipisicing elit. </p>`
+    }
+    const codeExemple2= { 
+        head:`  
+          <style> 
+              #p1{
+                   text-transform: uppercase;
+                   color: red;
+              }
+              #p2{
+                text-transform: lowercase;
+                color: green;
+                }    
+          </style>`,
+        code:`      <p id="p1"> lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+      <p id="p2"> lorem ipsum dolor sit amet consectetur adipisicing elit. </p>`
+       }
+       
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-css-color"> CSS Text-Transform </h1>
     <article>    
-        <div className="style_divv mt-5">
+        <p className="style_divv mt-5">
             تتحكم خاصية <b><bdi>text-transform</bdi></b> في الكتابة بالأحرف الكبيرة للنص.
             وتقبل عدة قيم وهي كتالي :
             <ul>
@@ -15,28 +42,17 @@ export default function TextTransform(props){
                 <li><b>uppercase</b> : يحول كل الأحرف إلى أحرف كبيرة</li>
                 <li><b>lowercase</b> : يحول جميع الأحرف إلى أحرف صغيرة</li>
             </ul>
-        </div>
-        <div className="sum_exemple_style">
-            <div className="mital">متال : </div>
-            <img src={images.css60_text_transform} className="img"/>
-            <div className="style-result">
-                <p id="parag"> lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div>
-        </div>
-        <div className="sum_exemple_style">
-            <div className="mital">متال 2 : </div>
-            <img src={images.css60_text_transform2} className="img"/>
-            <div className="style-result">
-                <p id="paragra"> lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div>
-        </div>
-        <div className="sum_exemple_style">
-            <div className="mital">متال 3 : </div>
-            <img src={images.css60_text_transform3} className="img"/>
-            <div className="style-result">
-                <p id="paragraph"> Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. </p>
-            </div>
-        </div>
+        </p>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Text-Transform" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='CSS Text-Transform' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <p id="css-text-transform-ex1-parag"> lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        </Result>
+        <div className="mital">متال 2 : </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Text-Transform" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='CSS Text-Transform' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <p className="css-text-transform-ex2-parag1"> lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <p className="css-text-transform-ex2-parag2"> lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        </Result>
     </article>
 </section>
 )

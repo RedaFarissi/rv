@@ -1,0 +1,20 @@
+.css-text-shadow-ex1-h1{
+    text-shadow: 2px 2px red;
+    font-size: xxx-large;
+    color: blue;
+}
+.css-text-shadow-ex1-paragragh1{ 
+    font-size: larger; 
+    text-shadow: 1px 1px rgba(0,255,200);
+}
+
+.css-text-shadow-ex1-box-paragragh2{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-shadow: 1px 1px rgba(0,255,200);
+}
+.css-text-shadow-ex1-paragragh2{
+    font-size: larger; 
+    text-shadow: 4px 3px fuchsia;
+}

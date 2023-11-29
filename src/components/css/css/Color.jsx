@@ -62,7 +62,7 @@ export default function Color(props){
 <section className="section-conetent">
     <h1 className="heading-style heading-style-css-color"> CSS Color </h1>
     <article>
-        <div className="style_divv mt-5">
+        <p className="style_divv mt-5">
         تحدد الخاصية <b>color</b> لون النص . استخدم لون خلفية مقترن بلون نص يسهل قراءة النص.<br/>
         يتم تحديد اللون بواسطة :<br/>
         <ul>
@@ -70,7 +70,7 @@ export default function Color(props){
             <li>قيمة <b>HEX</b> مثل <bdi>#ff0000</bdi></li>
             <li>قيمة <b>RGB</b> مثل rgb(255,255,255)</li>
         </ul>
-        </div>
+        </p>
     </article>
     <article>
         <h2 className="title-h2"> 1.  أسماء الألوان </h2>
@@ -86,10 +86,10 @@ export default function Color(props){
     </article>
     <article>
         <h2 className="title-h2"> 2. الألوان بصيغة rgb </h2>
-        <div className="style_divv">
+        <p className="style_divv">
             <b>rgb</b> النموذج اللوني أحمر أخضر أزرق أو باختصار النموذج اللوني <b>rgb</b> ويقصد بها  (Red Green Blue).<br/>
             وهو نموذج لوني جمعي تجمع فيه الألوان الحمراء والخضراء والزرقاء مع بعضها البعض بطرق مختلفة لتوليد مجموعة كبيرة من الألوان. تستقبل <b>rgb</b> تلات أرقام  ما بين 0 و 255
-        </div>    
+        </p>    
         <div className="mital">متال : </div>
         <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" title="CSS Color" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Color' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
@@ -100,10 +100,10 @@ export default function Color(props){
     </article>
     <article>
         <h2 className="title-h2">3.transparent</h2>
-        <div className="style_divv">
+        <p className="style_divv">
             تستعمل القيمة <b>transparent</b> مع الخاصية  <b>color</b> لجعل النص شفافا
             تستعمل مع الخاصية <b>-webkit-background-clip</b> و القيمة <b>text</b> لجعل النص يأخد ألوان الخلفية . 
-        </div>
+        </p>
         <CodeHighlighter  code={code} language="css"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="mital">متال : </div>
         <CodeHighlighter file_name="index.html" code={codeExemple3.code} head={codeExemple3.head} language="html" title="CSS Color" addClass="mt-3 mb-3" copie={true}/>

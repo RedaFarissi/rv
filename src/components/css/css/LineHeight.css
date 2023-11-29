@@ -1,4 +1,4 @@
-#a,#b,#c{ width:400px; background-color:yellow; border:2px solid black; }
-#a{ line-height:25px; }
-#b{ line-height:55px; }
-#c{ line-height:-20px;} 
+#css-line-height-ex1-a,#css-line-height-ex1-b,#css-line-height-ex1-c{ width:400px; background-color:yellow; border:2px solid black; }
+#css-line-height-ex1-a{ line-height:25px; }
+#css-line-height-ex1-b{ line-height:55px; }
+#css-line-height-ex1-c{ line-height:-20px;} 

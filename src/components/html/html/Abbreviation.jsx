@@ -1,4 +1,3 @@
-import images from "../imagesHtml";
 import { CodeHighlighter ,  Result} from "../../path";
 
 export default function Abbreviation(props){
@@ -10,14 +9,14 @@ export default function Abbreviation(props){
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color"> HTML Abbreviation (abbr)</h1>
     <article className="mt-5">
-        <div className="style_divv">
+        <p className="style_divv">
             نستخدم الوسم <kbd>&lt;abbr&gt;</kbd> على هذا النحو <kbd>&lt;abbr title="hidden"&gt; visible &lt;/abbr&gt;</kbd> لوضع إسم مختصر <small><small>(Abbreviation)</small></small> بدل الإسم الكامل و عند تمرير الفأرة فوقه يقوم المتصفح بإظهار الإسم الكامل كلميح فوقها.
             <ul>
                 <li style={{marginBottom:"12px"}}>مكان الكلمة <b>visible</b> نضع النص الذي نريده أن يظهر أمام المستخدم.</li>
                 <li style={{marginBottom:"12px"}}>مكان الكلمة <b>hidden</b> نضع النص الذي نريده أن يظهر عند تمرير الماوس فوقه النص الظاهر في الصفحة.</li>
                 <li style={{marginBottom:"12px"}}>يملك سمة واحدة هي ال <b>Attribute title</b> التي نضيفها له لكتابة النص المخفي الذي سيتم إظهاره عند تمرير الماوس فوق الوسم.</li>
             </ul>
-        </div>
+        </p>
         <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>

@@ -1,4 +1,4 @@
-.flo{
+.css-float-ex1-flo{
     width: 30%;
     height: 90px;
     background-color: blueviolet;
@@ -6,3 +6,92 @@
     line-height: 90px;
     margin-bottom: 20px;
 }
+
+#css-float-ex2 {
+    float: right;
+    width: 20%;
+    height: 96px;
+    background-color: blueviolet;
+    font-size: large;
+    text-align: center;
+    line-height: 90px;
+}
+
+
+#css-float-ex3-parent-div{
+    width: 70%;
+    height: 200px;
+    border: 5px solid black;
+}
+#css-float-ex3-child {
+    float: right;
+    width: 20%;
+    height: 96px;
+    background-color: blueviolet;
+    font-size: large;
+    text-align: center;
+    line-height: 200px;
+}  
+
+
+#css-float-ex4-div {
+    width: 45%;
+    height: 25vh;
+    background-color: brown;
+    float: left;
+    font-size: x-large;
+    color: white;
+  }
+
+
+
+#css-float-ex5-parent-div{
+    margin: auto;
+    width: 70%;
+    height: 200px;
+    border: 5px solid black;
+}
+#css-float-ex5-child {
+    float: LEFT;
+    width: 20%;
+    height: 50%;
+    border: 3px solid green;
+    background-color: yellow;
+    font-size: large;
+    text-align: center;
+    line-height: 200px;
+    margin-top: 9px;
+} 
+
+
+.css-float-ex6-div {
+    width: 20%;
+    height: 90px;
+    float: left;
+    font-size: xx-large;
+    color: white;
+}
+.css-float-ex6-div1 { background-color: blue;  }
+.css-float-ex6-div2 { background-color: orange; }
+.css-float-ex6-div3 { background-color: brown;}
+.css-float-ex6-div4 { background-color: pink;  }
+.css-float-ex6-div5 { background-color: chartreuse;  }
+.css-float-ex6-div6 { background-color: red;  }
+
+
+
+
+.css-float-ex7-div {
+    width: 20%;
+    height: 90px;
+    font-size: xx-large;
+    color: white;
+    float: left;
+    margin: 2%;
+}
+.css-float-ex7-div1 {  background-color: red;}
+.css-float-ex7-div2 {  background-color: blue;}
+.css-float-ex7-div3 {  background-color: orange;}
+.css-float-ex7-div4 {  background-color: brown;}
+.css-float-ex7-div5 {  background-color: pink;}        
+.css-float-ex7-div6 { background-color: chartreuse;  }

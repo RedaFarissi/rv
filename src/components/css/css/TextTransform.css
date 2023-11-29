@@ -1,3 +1,6 @@
-#parag{ text-transform: capitalize; margin-bottom: 0px;}
-#paragra{ font-size:24px; text-transform:uppercase;  margin-bottom: 0px;}
-#paragraph{ text-transform:lowercase; margin-bottom: 0px;}
+#css-text-transform-ex1-parag{ text-transform: capitalize; color:red;}
+
+
+
+.css-text-transform-ex2-parag1{ text-transform: uppercase; color: red;}
+.css-text-transform-ex2-parag2{text-transform: lowercase; color: green;}

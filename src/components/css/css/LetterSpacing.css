@@ -1,8 +1,5 @@
-.normal   { letter-spacing: normal; }
-.em-wide  { letter-spacing: 0.4em; }
-.em-wider { letter-spacing: 1em; }
-.em-tight { letter-spacing: -0.05em; }
-.px-wide  { letter-spacing: 6px; }
-@media only  screen and (max-width:903px) {
-  #letter-spacing{ font-size: 90%; }
-}
+.css-letter-spacing-ex1-normal   { letter-spacing: normal; }
+.css-letter-spacing-ex1-em-wide  { letter-spacing: 0.4em; }
+.css-letter-spacing-ex1-em-wider { letter-spacing: 1em; }
+.css-letter-spacing-ex1-em-tight { letter-spacing: -0.05em; }
+.css-letter-spacing-ex1-px-wide  { letter-spacing: 6px; }

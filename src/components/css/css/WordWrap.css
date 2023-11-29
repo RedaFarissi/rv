@@ -1,12 +1,12 @@
-.box{
+.css-word-wrap-ex1-box{
     width: 200px; 
     height: 200px; 
     background-color:thistle;
     padding: 9px;
-  }
-  .a { 
-    word-wrap: break-word;
-  }
-  .b { 
-    word-wrap: normal;
-  }
+}
+.css-word-wrap-ex1-a { 
+  word-wrap: break-word;
+}
+.css-word-wrap-ex1-b { 
+  word-wrap: normal;
+}

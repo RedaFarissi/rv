@@ -44,7 +44,7 @@ export default function Result(props){
                     </div>
               </div>
             </div>
-            <div className={`px-2 pt-2 pb-4  ${props.styleAdd}`}>
+            <div className={`add-style-body  ${props.styleAdd}`}>
                 {props.children}
             </div>
         </div>

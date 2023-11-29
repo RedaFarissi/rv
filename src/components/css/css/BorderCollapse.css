@@ -1,0 +1,11 @@
+.css-border-collapse-ex1{
+    border: 1px solid black;
+  }
+
+  #css-border-collapse-ex1-table1 {
+    border-collapse: separate;
+  }
+
+  #css-border-collapse-ex1-table2 {
+    border-collapse: collapse;
+  }

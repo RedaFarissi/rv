@@ -1,15 +1,17 @@
-#h2 {font-size: xxx-large;}
-#h2:hover {background-color: aquamarine; border-bottom:4px dashed gray;color:violet;}
-.divdiv{font-size: xx-large;font-weight: bolder;}
-.divdiv:hover{ background-color: rgb(23,125,235);color:red;}
-.divdiv2:hover{ background-color: yellow;}
-.divdiv3:hover{background-color: green;color:white;}
-a{color: blue;}
-.ex1{ color:blue}
-div.ex1:hover  {color: red;}
-div.ex2:hover, div.ex2:active {font-size: 150%;}
-div.ex3:hover, div.ex3:active {background: red;}
-div.ex4:hover, div.ex4:active {font-family: monospace;}
-div.ex5:visited, div.ex5:link {text-decoration: none;}
-div.ex5:hover, div.ex5:active {text-decoration: overline;}
-div.styleee{background-color: rgb(235,235,235);padding: 20px 20px;direction:ltr;color:black;}
+#css-hover-ex1-h2 {font-size: xxx-large;}
+#css-hover-ex1-h2:hover {background-color: aquamarine; border-bottom:4px dashed gray;color:violet;}
+.css-hover-ex1-divdiv{font-size: xx-large;font-weight: bolder;}
+.css-hover-ex1-divdiv:hover{ background-color: rgb(23,125,235);color:red;}
+.css-hover-ex1-divdiv2:hover{ background-color: yellow;}
+.css-hover-ex1-divdiv3:hover{background-color: green;color:white;}
+.css-hover-ex1-a{color: blue;}
+
+
+
+
+.css-hover-ex2-ex1:hover, .css-hover-ex2-ex1:active  {color: red;}
+.css-hover-ex2-ex2:hover, .css-hover-ex2-ex2:active {font-size: 150%;}
+.css-hover-ex2-ex3:hover, .css-hover-ex2-ex3:active {background: red;}
+.css-hover-ex2-ex4:hover, .css-hover-ex2-ex4:active {font-family: monospace;}
+.css-hover-ex2-ex5:visited, .css-hover-ex2-ex5:link {text-decoration: none;}
+.css-hover-ex2-ex5:hover, .css-hover-ex2-ex5:active {text-decoration: overline;}

@@ -129,7 +129,7 @@ const codeExemple9= {
 <section className="section-conetent">
     <h1 className="heading-style heading-style-css-color"> CSS Background </h1>
     <article>
-        <div className="style_divv">
+        <p className="style_divv">
             يتم استخدام خاصية <b>Background</b> في <b>CSS</b> لإضافة تأثيرات خلفية للعناصر.<br/>
             في هذا الفصل، سوف تتعلم حول خصائص خلفية <b>CSS</b> التالية:
             <ul dir="ltr">
@@ -140,7 +140,7 @@ const codeExemple9= {
                 <li><b>background-position</b></li>
                 <li><b>background-clip</b></li>
             </ul>
-        </div>
+        </p>
     </article>
     <article>
         <h2 className="title-h2">1.  لون الخلفية background-color </h2>

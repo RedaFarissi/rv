@@ -1,4 +1,9 @@
-#dIv {border: 2px solid; padding: 20px;width: 70%;resize: both;overflow: auto;max-width: 100% ;max-height:49vh }
-#hori { border: 2px solid;padding: 20px;width: 70%; resize: horizontal;overflow: auto;max-width: 100% ;}
-#verti {border: 2px solid;padding: 20px; width: 70%;resize: vertical;overflow: auto;max-height:55vh}
-#textarea{ resize: none;}
+#css-resize-ex1-div-resize {border: 2px solid; padding: 20px;width: 70%;resize: both;overflow: auto;max-width: 100% ;max-height:49vh }
+
+/*************************/
+
+#css-resize-ex2-horizontal { border: 2px solid;padding: 20px;width: 70%; resize: horizontal;overflow: auto;max-width: 100% ;}
+#css-resize-ex3-vertical {border: 2px solid;padding: 20px; width: 70%;resize: vertical;overflow: auto;max-height:55vh}
+
+
+#css-resize-ex4-textarea{ resize: none;}

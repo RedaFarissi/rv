@@ -77,10 +77,10 @@ export default function Padding(props){
     <h1 className="heading-style heading-style-css-color"> CSS Padding </h1>
     <article>
         <h2 className="title-h2"> 1 - الجوانب الداخلية -  padding </h2>
-        <div className="style_divv mt-5">
+        <p className="style_divv mt-5">
             يتم استخدام الخاصية <b>padding</b> في لغة  <b>CSS</b> لإنشاء مساحة حول محتوى عنصر داخل <b>border</b> في عنصر محدد .<br/>
             مع <b>CSS</b>، لديك السيطرة الكاملة على <b>padding</b> . توجد خصائص لإعداد <b>padding</b> لكل جانب من عناصر (أعلى، يمين، أسفل، ويسارا).
-        </div>
+        </p>
         <div className="sum_exemple_style">
             <div className="mital">متال :  </div>
             <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Padding" addClass="mt-3 mb-3" copie={true}/>
@@ -99,7 +99,7 @@ export default function Padding(props){
     </article>
     <article>
         <h2 className="title-h2"> 2 - الجوانب الفردية -  padding </h2>
-        <div className="style_divv">
+        <p className="style_divv">
             CSS له خصائص لتحديد <b>padding</b>  لكل جانب من العناصر :<br/>
             <ul>
                 <li><b>padding-top</b></li>
@@ -107,7 +107,7 @@ export default function Padding(props){
                 <li><b>padding-bottom</b></li>
                 <li><b>padding-left</b></li>
             </ul>
-        </div>
+        </p>
         <div className="mital">متال 1 :  </div>
         <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Padding" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Padding' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">

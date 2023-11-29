@@ -38,12 +38,12 @@ export default function Width(props){
 <section className="section-conetent">
     <h1 className="heading-style heading-style-css-color"> CSS Width </h1>
     <article>
-        <div className="style_divv mt-5">
+        <p className="style_divv mt-5">
             تحدد خاصية <b>width</b> عرض العنصر.<br/>
             لا يشمل عرض العنصر المساحة المتروكة أو الحدود أو الهوامش .
             تتجاوز الخاصيتان <b>min-width</b> و <b>max-width</b> خاصية العرض .<br/>
             يمكن تحديد عرض العناصر بواسطة عدة مقاييس ندكر منها <bdi>(..., cm , mm , em , px , %  )</bdi> , وتعتبر أفضل طريقة عبر النسبة المئوية % بحيت يكون العنصر متجاوب مع عرض الصفحة
-        </div>
+        </p>
         <div className="mital">متال :  </div>
         <CodeHighlighter file_name="index.css" code={codeExemple.css} language="css" title="CSS Width" addClass="mt-3 mb-3" copie={true}/>
         <CodeHighlighter file_name="index.html" code={codeExemple.code} head={codeExemple.head} language="html" title="Reda test" addClass="mt-3 mb-3" copie={true}/>

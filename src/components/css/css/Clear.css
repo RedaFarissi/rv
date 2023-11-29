@@ -1,52 +1,28 @@
-#DIV1{
+.css-clear-ex1-div{
+    width: 20%;
+    height: 90px;
+    font-size: xx-large;
     color: white;
-    overflow: hidden;
-    margin: 9px;
-    background-color:crimson;
-    width: 30%;
-    height: 100px;
-    border:9px double black;
+}
+
+.css-clear-ex1-float_class {
     float: left;
 }
-#DIV2{
+
+
+
+
+
+.css-clear-ex2-div{
+    width: 20%;
+    height: 90px;
+    font-size: xx-large;
     color: white;
-    overflow: hidden;
-    background-color:darkslategray;
-    width: 30%;
-    height: 200px;
-    border:9px double black;
-    float: right;
 }
-#clear_exemple{
-    display: flex;
-    justify-content: space-around;
-    background-color:azure;
+
+.css-clear-ex2-float_class {
+    float: left;
 }
-#input_radio_box{
-    box-shadow:5px 5px 20px rgba(0 0 0/30%);
-    align-self:center;
-    width: 40%;
-    min-height: 400px;
-}
-#clear{
-    width: 40%;
-    box-shadow:3px 3px 20px rgba(0 0 0 /30%);
-    min-height:400px;
-}
-@media only  screen and (max-width:903px) {
-    #clear_exemple{
-        flex-direction: column;
-    }
-    #input_radio_box{
-        width: 100%;
-        min-height: 90px;
-        margin-bottom: 27px;
-    }
-    #Code{
-        margin-bottom: 20px;
-    }
-    #clear{
-        width: 100%;
-        min-height: 90px;
-    }
+#css-clear-ex2-orange-color{
+    clear: both;
 }

@@ -110,10 +110,10 @@ export default function Margin(props){
 <section className="section-conetent">
     <h1 className="heading-style heading-style-css-color"> CSS Margin </h1>
     <article>
-        <div className="style_divv mt-5">
+        <p className="style_divv mt-5">
             يتم استخدام الخاصية <b>margin</b> في لغة  <b>CSS</b> لإنشاء مساحة حول محتوى عنصر خارج ال <b>border</b> في عنصر محدد .<br/>
             مع <b>CSS</b>، لديك السيطرة الكاملة على <b>margin</b> . توجد خصائص لإعداد <b>margin</b> لكل جانب من عناصر (أعلى، يمين، أسفل، ويسارا).
-        </div>
+        </p>
         <div className="mital">متال :  </div>
         <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Height" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Height' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
@@ -130,7 +130,7 @@ export default function Margin(props){
     </article>
     <article>
         <h2 className="title-h2">1.  الجوانب الفردية -  margin </h2>
-        <div className="style_divv">
+        <p className="style_divv">
           <b>CSS</b> له خصائص لتحديد <b>margin</b>  لكل جانب من العناصر :<br/>
             <ul>
                 <li>margin-top</li>
@@ -138,7 +138,7 @@ export default function Margin(props){
                 <li>margin-bottom</li>
                 <li>margin-left</li>
             </ul>
-        </div>
+        </p>
         <div className="sum_exemple_style">
         <div className="mital">متال :  </div>
         <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Height" addClass="mt-3 mb-3" copie={true}/>

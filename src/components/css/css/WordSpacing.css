@@ -1,5 +1,19 @@
-.n  {  word-spacing: normal; }
-.e  {  word-spacing: 0.4em; }
-.er {  word-spacing: 1em; }
-.et {  word-spacing: -0.05em; }
-.pe {  word-spacing: 6px; }
+.css-word-spacing-ex1-a  {  word-spacing: normal; }
+.css-word-spacing-ex1-b  {  word-spacing: 0.4em; }
+.css-word-spacing-ex1-c {  word-spacing: 1em; }
+.css-word-spacing-ex1-d {  word-spacing: -0.05em; }
+.css-word-spacing-ex1-e {  word-spacing: 6px; }
+
+
+
+
+.css-word-spacing-ex2-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px;
+}
+.css-word-spacing-ex2{
+    color: black;
+    border: 1px solid black;
+}

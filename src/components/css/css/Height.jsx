@@ -5,11 +5,11 @@ import "./Height.css"
 export default function Height(props){
     const codeExemple1= { 
     head:`  
-   <style> 
+    <style> 
        img{
            height: 120px;
        }    
-   </style>`,
+    </style>`,
     code:`      <img src="./css_logo.png" width="20%" alt="css logo" />`
     }
     const codeExemple2= { 

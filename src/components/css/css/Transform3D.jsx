@@ -1,284 +1,251 @@
-import { CodeHighlighter ,  Result} from "../../path";
+import { CodeHighlighter ,  Result , InteractivCss } from "../../path";
 import images from "../imagesCss";
+import { useState , useRef ,useEffect} from "react";
+import "./Transform3D.css"
 
 export default function Transform3D(props){
 
-//   function rotateX(value){
-//     document.getElementById("rotateX").style.transform = value;
-//     document.getElementById("rotateX-result").innerHTML = value;
-// }
-// function rotateX2(value){
-//     document.getElementById("rotateX2").style.transform = value;
-//     document.getElementById("rotateX2-result").innerHTML = value;
-// }
+  const [selectedValue1, setSelectedValue1] = useState("rotateX(0deg)");
+  const resultRef1 = useRef()
+  const inputRef1 = useRef()
+  const handleTransform3D_1 = (event) => {
+    const { value } = event.target;
+    setSelectedValue1(value);
+    resultRef1.current.style.transform = value
+  };
 
-// function rotateY(value){
-//     document.getElementById("rotateY").style.transform = value;
-//     document.getElementById("rotateY-result").innerHTML = value;
-// }
-// function rotateY2(value){
-//     document.getElementById("rotateY2").style.transform = value;
-//     document.getElementById("rotateY2-result").innerHTML = value;
-// }
-// function rotateZ(value){
-//     document.getElementById("rotateZ").style.transform = value;
-//     document.getElementById("rotateZ-result").innerHTML = value;
-// }
-// function translateZ(value){
-//     document.getElementById("translateZ").style.transform = value;
-//     document.getElementById("translateZ-result").innerHTML = value;
-// }
+  const [selectedValue2, setSelectedValue2] = useState("rotateX(0deg)");
+  const resultRef2 = useRef()
+  const inputRef2 = useRef()
+  const handleTransform3D_2 = (event) => {
+    const { value } = event.target;
+    setSelectedValue2(value);
+    resultRef2.current.style.transform = value
+  };
 
+  const [selectedValue3, setSelectedValue3] = useState("rotateY(0deg)");
+  const resultRef3 = useRef()
+  const inputRef3 = useRef()
+  const handleTransform3D_3 = (event) => {
+    const { value } = event.target;
+    setSelectedValue3(value);
+    resultRef3.current.style.transform = value
+  };
+
+  const [selectedValue4, setSelectedValue4] = useState("rotateY(0deg)");
+  const resultRef4 = useRef()
+  const inputRef4 = useRef()
+  const handleTransform3D_4 = (event) => {
+    const { value } = event.target;
+    setSelectedValue4(value);
+    resultRef4.current.style.transform = value
+  };
+ 
+  const [selectedValue5, setSelectedValue5] = useState("rotateZ(0deg)");
+  const resultRef5 = useRef()
+  const inputRef5 = useRef()
+  const handleTransform3D_5 = (event) => {
+    const { value } = event.target;
+    setSelectedValue5(value);
+    resultRef5.current.style.transform = value
+  };
+
+  const [selectedValue6, setSelectedValue6] = useState("translateZ(0px)");
+  const resultRef6 = useRef()
+  const inputRef6 = useRef()
+  const handleTransform3D_6 = (event) => {
+    const { value } = event.target;
+    setSelectedValue6(value);
+    resultRef6.current.style.transform = value
+  };
+
+  useEffect(() => {
+    inputRef1.current.click();
+    inputRef2.current.click();
+    inputRef3.current.click();
+    inputRef4.current.click();
+    inputRef5.current.click();
+    inputRef6.current.click();
+  }, []);
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-css-color"> CSS Transform-3D </h1>
     <article>
-
+      <p className="style_divv mt-5">
+          يدعم <b>{"CSS"}</b> أيضًا عمليات التحويل ثلاثية الأبعاد.<br/>
+          ستتعرف في هذا الفصل على خاصية <b>transform</b> بشكل أعمق .<br/>
+          باستخدام خاصية <bdi><b>transform</b></bdi> ، يمكنك استخدام طرق التحويل ثلاثية الأبعاد التالية:<br/>
+          <ul>
+              <li><bdi><b>rotateX()</b></bdi></li>
+              <li><bdi><b>rotateY()</b></bdi></li>
+              <li><bdi><b>rotateZ()</b></bdi></li>
+          </ul>
+      </p>
     </article>
-
-<div className="style_divv mt-5">
-    يدعم <b>{"CSS"}</b> أيضًا عمليات التحويل ثلاثية الأبعاد.<br/>
-    ستتعرف في هذا الفصل على خاصية <b>transform</b> بشكل أعمق .<br/>
-    باستخدام خاصية <bdi><b>transform</b></bdi> ، يمكنك استخدام طرق التحويل ثلاثية الأبعاد التالية:<br/>
-    <ul>
-        <li><bdi><b>rotateX()</b></bdi></li>
-        <li><bdi><b>rotateY()</b></bdi></li>
-        <li><bdi><b>rotateZ()</b></bdi></li>
-    </ul>
-</div>
-<h3 className="mt-3"> 1-  الدالة <bdi>rotateX()</bdi></h3>
-<div className="style_divv">
-    تحدد الوظيفة <bdi><b>rotateX()</b></bdi>  التحويل الذي يقوم بتدوير عنصر حول المحور الأفقي <bdi>(دون تشويهه)</bdi> . <br/>
-</div>
-{/* <div className="mital">متال  :  </div>
-<ul>
-  <li> أنقر على الأزرار أسفله لفهم بشكل أفضل عن الخاصية <b>transform</b> مع  الدالة <bdi><b>rotateX()</b></bdi> . </li>
-  <li> في المتال أسفله لم نقم بستعمال الخاصية <b>perspective</b> على العنصر الأب  </li>
-</ul>
-<div id="rotateX_exemple" className="alert p-4 rounded m-auto border border-primary border-2 text-dark" dir="ltr">
-  <div id="input_radio_box_rotateX" className="border border-secondary rounded bg-light p-3">
-    <div className="h2"> transform : </div>  
-    <div>
-      <input type="radio" name="bo-sh4" onclick="rotateX(this.value)" value="rotateX(0deg)"/>   rotateX(0deg)   <br/>
-      <input type="radio" name="bo-sh4" onclick="rotateX(this.value)" value="rotateX(10deg)" /> rotateX(10deg)  <br/>
-      <input type="radio" name="bo-sh4" onclick="rotateX(this.value)" value="rotateX(30deg)"/>  rotateX(30deg)  <br/>
-      <input type="radio" name="bo-sh4" onclick="rotateX(this.value)" value="rotateX(60deg)"/>  rotateX(60deg)  <br/>
-      <input type="radio" name="bo-sh4" onclick="rotateX(this.value)" value="rotateX(90deg)"/>  rotateX(90deg)  <br/>
-      <input type="radio" name="bo-sh4" onclick="rotateX(this.value)" value="rotateX(120deg)"/> rotateX(120deg) <br/>
-      <input type="radio" name="bo-sh4" onclick="rotateX(this.value)" value="rotateX(150deg)"/> rotateX(150deg) <br/>
-      <input type="radio" name="bo-sh4" onclick="rotateX(this.value)" value="rotateX(180deg)"/> rotateX(180deg) <br/>
-      <input type="radio" name="bo-sh4" onclick="rotateX(this.value)" value="rotateX(210deg)"/> rotateX(210deg) <br/>
-      <input type="radio" name="bo-sh4" onclick="rotateX(this.value)" value="rotateX(240deg)"/> rotateX(240deg) <br/>
-      <input type="radio" name="bo-sh4" onclick="rotateX(this.value)" value="rotateX(270deg)"/> rotateX(270deg) <br/>
-      <input type="radio" name="bo-sh4" onclick="rotateX(this.value)" value="rotateX(300deg)"/> rotateX(300deg) <br/>
-      <input type="radio" name="bo-sh4" onclick="rotateX(this.value)" value="rotateX(330deg)"/> rotateX(330deg) <br/>
-      <input type="radio" name="bo-sh4" onclick="rotateX(this.value)" value="rotateX(360deg)"/> rotateX(360deg) <br/>
-    </div>
-    <div className="Code mt-4">
-       <div className="h3"> Code: </div>
-       <div className="border py-2 ps-2 w-100" >
-           <span style={{font-weight:"500"}}>transform : </span> <span id="rotateX-result" style="font-weight:500"></span>
-       </div>
-    </div>
-  </div>
-  <div className="border bg-light  border-secondary p-2" id="result-rotateX">
-    <div className="h2"> Result: </div>
-    <div id="rotateX" className="border border-success border-3 w-50 bg-dark text-light p-3" > Reda Eskouni </div>
-  </div>
-</div> */}
-
-<div className="mital"> متال 2 : </div>
-<ul>
-  <li> أنقر على الأزرار أسفله لفهم بشكل أفضل عن الخاصية <b>transform</b> مع  الدالة <bdi><b>rotateX()</b></bdi> . </li>
-  <li> في المتال أسفله قمنا بستعمال الخاصية <b>perspective</b> على العنصر الأب  </li>
-</ul>
-
-{/* <div id="rotateX2_exemple" className="alert p-4 rounded m-auto border border-primary border-2 text-dark" dir="ltr">
-  <div id="input_radio_box_rotateX2" className="border border-secondary rounded bg-light p-3">
-    <div className="h2"> transform : </div>  
-    <div>
-      <input type="radio" name="bo-sh9" onclick="rotateX2(this.value)" value="rotateX(0deg)"/>   rotateX(0deg)   <br/>
-      <input type="radio" name="bo-sh9" onclick="rotateX2(this.value)" value="rotateX(10deg)" /> rotateX(10deg)  <br/>
-      <input type="radio" name="bo-sh9" onclick="rotateX2(this.value)" value="rotateX(30deg)"/>  rotateX(30deg)  <br/>
-      <input type="radio" name="bo-sh9" onclick="rotateX2(this.value)" value="rotateX(60deg)"/>  rotateX(60deg)  <br/>
-      <input type="radio" name="bo-sh9" onclick="rotateX2(this.value)" value="rotateX(90deg)"/>  rotateX(90deg)  <br/>
-      <input type="radio" name="bo-sh9" onclick="rotateX2(this.value)" value="rotateX(120deg)"/> rotateX(120deg) <br/>
-      <input type="radio" name="bo-sh9" onclick="rotateX2(this.value)" value="rotateX(150deg)"/> rotateX(150deg) <br/>
-      <input type="radio" name="bo-sh9" onclick="rotateX2(this.value)" value="rotateX(180deg)"/> rotateX(180deg) <br/>
-      <input type="radio" name="bo-sh9" onclick="rotateX2(this.value)" value="rotateX(210deg)"/> rotateX(210deg) <br/>
-      <input type="radio" name="bo-sh9" onclick="rotateX2(this.value)" value="rotateX(240deg)"/> rotateX(240deg) <br/>
-      <input type="radio" name="bo-sh9" onclick="rotateX2(this.value)" value="rotateX(270deg)"/> rotateX(270deg) <br/>
-      <input type="radio" name="bo-sh9" onclick="rotateX2(this.value)" value="rotateX(300deg)"/> rotateX(300deg) <br/>
-      <input type="radio" name="bo-sh9" onclick="rotateX2(this.value)" value="rotateX(330deg)"/> rotateX(330deg) <br/>
-      <input type="radio" name="bo-sh9" onclick="rotateX2(this.value)" value="rotateX(360deg)"/> rotateX(360deg) <br/>
-    </div>
-    <div className="Code mt-4">
-       <div className="h3"> Code: </div>
-       <div className="border py-2 ps-2 w-100" >
-           <span style={{font-weight:"500"}}>transform : </span> <span id="rotateX2-result" style="font-weight:500"></span>
-       </div>
-    </div>
-  </div>
-  <div className="border bg-light  border-secondary p-2" id="result-rotateX2">
-    <div className="h2"> Result: </div>
-    <div id="rotateX2" className="border border-success border-3 w-50 bg-dark text-light p-3" > Reda Eskouni </div>
-  </div>
-</div> */}
-<h3 className="mt-3"> 2-  الدالة <bdi>rotateY()</bdi></h3>
-<div className="style_divv">
-    تحدد الوظيفة <bdi><b>rotateY()</b></bdi>  التحويل الذي يقوم بتدوير عنصر حول المحور العمودي  <bdi>(دون تشويهه)</bdi> . <br/>
-</div>
-<div className="mital">متال  :  </div>
-<ul>
-  <li> أنقر على الأزرار أسفله لفهم بشكل أفضل عن الخاصية <b>transform</b> مع  الدالة <bdi><b>rotateY()</b></bdi> </li>
-  <li> في المتال أسفله لم نقم بستعمال الخاصية <b>perspective</b> على العنصر الأب  </li>
-</ul>
-{/* <div id="rotateY_exemple" className="alert p-4 rounded m-auto border border-primary border-2 text-dark" dir="ltr">
-  <div id="input_radio_box_rotateY" className="border border-secondary rounded bg-light p-3">
-    <div className="h2"> transform : </div>  
-    <div>
-      <input type="radio" name="bo-sh3" onclick="rotateY(this.value)" value="rotateY(0deg)"/>   rotateY(0deg)<br/>
-      <input type="radio" name="bo-sh3" onclick="rotateY(this.value)" value="rotateY(10deg)" /> rotateY(10deg)<br/>
-      <input type="radio" name="bo-sh3" onclick="rotateY(this.value)" value="rotateY(30deg)"/>  rotateY(30deg) <br/>
-      <input type="radio" name="bo-sh3" onclick="rotateY(this.value)" value="rotateY(60deg)"/>  rotateY(60deg) <br/>
-      <input type="radio" name="bo-sh3" onclick="rotateY(this.value)" value="rotateY(90deg)"/>  rotateY(90deg) <br/>
-      <input type="radio" name="bo-sh3" onclick="rotateY(this.value)" value="rotateY(120deg)"/> rotateY(120deg) <br/>
-      <input type="radio" name="bo-sh3" onclick="rotateY(this.value)" value="rotateY(150deg)"/> rotateY(150deg) <br/>
-      <input type="radio" name="bo-sh3" onclick="rotateY(this.value)" value="rotateY(180deg)"/> rotateY(180deg) <br/>
-      <input type="radio" name="bo-sh3" onclick="rotateY(this.value)" value="rotateY(210deg)"/> rotateY(210deg) <br/>
-      <input type="radio" name="bo-sh3" onclick="rotateY(this.value)" value="rotateY(240deg)"/> rotateY(240deg) <br/>
-      <input type="radio" name="bo-sh3" onclick="rotateY(this.value)" value="rotateY(270deg)"/> rotateY(270deg) <br/>
-      <input type="radio" name="bo-sh3" onclick="rotateY(this.value)" value="rotateY(300deg)"/> rotateY(300deg) <br/>
-      <input type="radio" name="bo-sh3" onclick="rotateY(this.value)" value="rotateY(330deg)"/> rotateY(330deg) <br/>
-      <input type="radio" name="bo-sh3" onclick="rotateY(this.value)" value="rotateY(360deg)"/> rotateY(360deg) <br/>
-    </div>
-    <div className="Code mt-4">
-       <div className="h3"> Code: </div>
-       <div className="border py-2 ps-2 w-100" >
-           <span style={{font-weight:"500"}}>transform : </span> <span id="rotateY-result" style={{font-weight:"500"}}></span>
-       </div>
-    </div>
-  </div>
-  <div className="border bg-light  border-secondary p-2" id="result-rotateY">
-    <div className="h2"> Result: </div>
-    <div id="rotateY" className="border border-success border-3 w-50 bg-dark text-light p-3" > Reda Eskouni </div>
-  </div>
-</div> */}
-
-<div className="mital">متال 2 :  </div>
-<ul>
-  <li> أنقر على الأزرار أسفله لفهم بشكل أفضل عن الخاصية <b>transform</b> مع  الدالة <bdi><b>rotateY()</b></bdi> </li>
-  <li> في المتال أسفله قمنا بستعمال الخاصية <b>perspective</b> على العنصر الأب  </li>
-</ul>
-{/* <div id="rotateY2_exemple" className="alert p-4 rounded m-auto border border-primary border-2 text-dark" dir="ltr">
-  <div id="input_radio_box_rotateY2" className="border border-secondary rounded bg-light p-3">
-    <div className="h2"> transform : </div>  
-    <div>
-      <input type="radio" name="bo-shd8" onclick="rotateY2(this.value)" value="rotateY(0deg)"/>   rotateY(0deg)<br/>
-      <input type="radio" name="bo-shd8" onclick="rotateY2(this.value)" value="rotateY(10deg)" /> rotateY(10deg)<br/>
-      <input type="radio" name="bo-shd8" onclick="rotateY2(this.value)" value="rotateY(30deg)"/>  rotateY(30deg) <br/>
-      <input type="radio" name="bo-shd8" onclick="rotateY2(this.value)" value="rotateY(60deg)"/>  rotateY(60deg) <br/>
-      <input type="radio" name="bo-shd8" onclick="rotateY2(this.value)" value="rotateY(90deg)"/>  rotateY(90deg) <br/>
-      <input type="radio" name="bo-shd8" onclick="rotateY2(this.value)" value="rotateY(120deg)"/> rotateY(120deg) <br/>
-      <input type="radio" name="bo-shd8" onclick="rotateY2(this.value)" value="rotateY(150deg)"/> rotateY(150deg) <br/>
-      <input type="radio" name="bo-shd8" onclick="rotateY2(this.value)" value="rotateY(180deg)"/> rotateY(180deg) <br/>
-      <input type="radio" name="bo-shd8" onclick="rotateY2(this.value)" value="rotateY(210deg)"/> rotateY(210deg) <br/>
-      <input type="radio" name="bo-shd8" onclick="rotateY2(this.value)" value="rotateY(240deg)"/> rotateY(240deg) <br/>
-      <input type="radio" name="bo-shd8" onclick="rotateY2(this.value)" value="rotateY(270deg)"/> rotateY(270deg) <br/>
-      <input type="radio" name="bo-shd8" onclick="rotateY2(this.value)" value="rotateY(300deg)"/> rotateY(300deg) <br/>
-      <input type="radio" name="bo-shd8" onclick="rotateY2(this.value)" value="rotateY(330deg)"/> rotateY(330deg) <br/>
-      <input type="radio" name="bo-shd8" onclick="rotateY2(this.value)" value="rotateY(360deg)"/> rotateY(360deg) <br/>
-    </div>
-    <div className="Code mt-4">
-       <div className="h3"> Code: </div>
-       <div className="border py-2 ps-2 w-100" >
-           <span style={{font-weight:"500"}}>transform : </span> <span id="rotateY2-result" style={{font-weight:"500"}}></span>
-       </div>
-    </div>
-  </div>
-  <div className="border bg-light  border-secondary p-2" id="result-rotateY2">
-    <div className="h2"> Result: </div>
-    <div id="rotateY2" className="border border-success border-3 w-50 bg-dark text-light p-3" > Reda Eskouni </div>
-  </div>
-</div> */}
-
-
-
-
-
-
-
-
-
-
-<h3 className="mt-3"> 3-  الدالة <bdi>rotateZ()</bdi></h3>
-<div className="style_divv">
-    تحدد الوظيفة <bdi><b>rotateZ()</b></bdi>  التحويل الذي يقوم بتدوير عنصر حول المحور <b>z</b> <bdi>(دون تشويهه)</bdi> . <br/>
-</div>
-<div className="mital">متال  :  </div>
-{/* <ul><li>   أنقر على الأزرار أسفله لفهم بشكل أفضل عن الخاصية <b>transform</b> مع  الدالة <bdi><b>rotateZ()</b></bdi> </li></ul>
-<div id="rotateZ_exemple" className="alert p-4 rounded m-auto border border-primary border-2 text-dark" dir="ltr">
-  <div id="input_radio_box_rotateZ" className="border border-secondary rounded bg-light p-3">
-    <div className="h2"> transform : </div>  
-    <div>
-      <input type="radio" name="bo-sh2" onclick="rotateZ(this.value)" value="rotateZ(0deg)"/>   rotateZ(0deg)<br/>
-      <input type="radio" name="bo-sh2" onclick="rotateZ(this.value)" value="rotateZ(10deg)" /> rotateZ(10deg)<br/>
-      <input type="radio" name="bo-sh2" onclick="rotateZ(this.value)" value="rotateZ(30deg)"/>  rotateZ(30deg) <br/>
-      <input type="radio" name="bo-sh2" onclick="rotateZ(this.value)" value="rotateZ(60deg)"/>  rotateZ(60deg) <br/>
-      <input type="radio" name="bo-sh2" onclick="rotateZ(this.value)" value="rotateZ(90deg)"/>  rotateZ(90deg) <br/>
-      <input type="radio" name="bo-sh2" onclick="rotateZ(this.value)" value="rotateZ(120deg)"/> rotateZ(120deg) <br/>
-      <input type="radio" name="bo-sh2" onclick="rotateZ(this.value)" value="rotateZ(150deg)"/> rotateZ(150deg) <br/>
-      <input type="radio" name="bo-sh2" onclick="rotateZ(this.value)" value="rotateZ(180deg)"/> rotateZ(180deg) <br/>
-      <input type="radio" name="bo-sh2" onclick="rotateZ(this.value)" value="rotateZ(210deg)"/> rotateZ(210deg) <br/>
-      <input type="radio" name="bo-sh2" onclick="rotateZ(this.value)" value="rotateZ(240deg)"/> rotateZ(240deg) <br/>
-      <input type="radio" name="bo-sh2" onclick="rotateZ(this.value)" value="rotateZ(270deg)"/> rotateZ(270deg) <br/>
-      <input type="radio" name="bo-sh2" onclick="rotateZ(this.value)" value="rotateZ(300deg)"/> rotateZ(300deg) <br/>
-      <input type="radio" name="bo-sh2" onclick="rotateZ(this.value)" value="rotateZ(330deg)"/> rotateZ(330deg) <br/>
-      <input type="radio" name="bo-sh2" onclick="rotateZ(this.value)" value="rotateZ(360deg)"/> rotateZ(360deg) <br/>
-    </div>
-    <div className="Code" className="mt-4">
-       <div className="h3"> Code: </div>
-       <div className="border py-2 ps-2 w-100" >
-           <span style={{font-weight:"500"}}>transform : </span> <span id="rotateZ-result" style="font-weight:500"></span>
-       </div>
-    </div>
-  </div>
-  <div className="border bg-light  border-secondary p-2" id="result-rotateZ">
-    <div className="h2"> Result: </div>
-    <div id="rotateZ" className="border border-success border-3 w-50 bg-dark text-light p-3" > Reda Eskouni </div>
-  </div>
-</div> */}
-
-
-<h3 className="mt-3"> 4-  الدالة <bdi>translateZ()</bdi></h3>
-<div className="style_divv">
-  أولاََّّ لإستخدام <kbd>transform : translateZ()</kbd> يجب إعطاء العنصر الأب القيمة <bdi><b>perspective</b></bdi> .<br/>
-  تحدد الوظيفة <bdi><b>translateZ()</b></bdi>  التحويل الذي يقوم بتدوير عنصر حول المحور <b>z</b> <bdi>(دون تشويهه)</bdi> . <br/>
-</div>
-<div className="mital">متال  :  </div>
-{/* <ul><li>   أنقر على الأزرار أسفله لفهم بشكل أفضل عن الخاصية <b>transform</b> مع  الدالة <bdi><b>rotateZ()</b></bdi> </li></ul>
-<div id="translateZ_exemple" className="alert p-4 rounded m-auto border border-primary border-2 text-dark" dir="ltr">
-  <div id="input_radio_box_translateZ" className="border border-secondary rounded bg-light p-3">
-    <div className="h2"> transform : </div>  
-    <div>
-      <input type="radio" name="bo-sh5" onclick="translateZ(this.value)" value="translateZ(0px)"/>     <bdi>translateZ(0px)    </bdi> .<br/>
-      <input type="radio" name="bo-sh5" onclick="translateZ(this.value)" value="translateZ(35px)"/>    <bdi>translateZ(35px)   </bdi> .<br/>
-      <input type="radio" name="bo-sh5" onclick="translateZ(this.value)" value="translateZ(-35px)"/>   <bdi>translateZ(-35px)  </bdi> .<br/>
-      <input type="radio" name="bo-sh5" onclick="translateZ(this.value)" value="translateZ(-9.7rem)"/> <bdi>translateZ(-9.7rem)</bdi> .<br/>
-      <input type="radio" name="bo-sh5" onclick="translateZ(this.value)" value="translateZ(2.7rem)"/>  <bdi>translateZ(2.7rem) </bdi> .<br/>
-    </div>
-    <div className="Code" className="mt-4">
-       <div className="h3"> Code: </div>
-       <div className="border py-2 ps-2 w-100" >
-           <span style={{font-weight:"500"}}>transform : </span> <span id="translateZ-result" style="font-weight:500"></span>
-       </div>
-    </div>
-  </div>
-  <div className="border bg-light  border-secondary p-2" id="result-translateZ" style="perspective:300px">
-    <div className="h2"> Result: </div>
-    <div id="translateZ" className="border border-success border-3 w-50 bg-dark text-light p-3" > Reda Eskouni </div>
-  </div>
-</div> */}
+    <article>
+      <h2 className="title-h2"> 1-  الدالة <bdi>rotateX()</bdi></h2>
+      <p className="style_divv">
+          تحدد الوظيفة <bdi><b>rotateX()</b></bdi>  التحويل الذي يقوم بتدوير عنصر حول المحور الأفقي <bdi>(دون تشويهه)</bdi> . <br/>
+      </p>
+      <div className="mital"> متال توضيحي تفاعلي  : </div> 
+      <ul>
+        <li> في المتال أسفله لم نقم بستعمال الخاصية <b>perspective</b> على العنصر الأب  </li>
+      </ul>
+      <InteractivCss 
+        property="transform" 
+        value={selectedValue1}
+        classParent="css-transform3d-ex1-parent"
+        classChild="css-transform3d-ex1-child"  
+        resultRef={resultRef1}
+        textInResult="Hello Word"
+      >
+          <ul className="p-0">
+              <li><input type="checkbox" name="bo-sh6" ref={inputRef1} onChange={handleTransform3D_1} checked={selectedValue1 === 'rotateX(0deg)'} value="rotateX(0deg)" /> &nbsp; rotateX(0deg)</li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_1} checked={selectedValue1 === 'rotateX(40deg)'} value="rotateX(40deg)"/> &nbsp; rotateX(40deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_1} checked={selectedValue1 === 'rotateX(80deg)'} value="rotateX(80deg)"/> &nbsp; rotateX(80deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_1} checked={selectedValue1 === 'rotateX(120deg)'} value="rotateX(120deg)"/> &nbsp; rotateX(120deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_1} checked={selectedValue1 === 'rotateX(160deg)'} value="rotateX(160deg)"/> &nbsp; rotateX(160deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_1} checked={selectedValue1 === 'rotateX(200deg)'} value="rotateX(200deg)"/> &nbsp; rotateX(200deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_1} checked={selectedValue1 === 'rotateX(240deg)'} value="rotateX(240deg)"/> &nbsp; rotateX(240deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_1} checked={selectedValue1 === 'rotateX(280deg)'} value="rotateX(280deg)"/> &nbsp; rotateX(280deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_1} checked={selectedValue1 === 'rotateX(320deg)'} value="rotateX(320deg)"/> &nbsp; rotateX(320deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_1} checked={selectedValue1 === 'rotateX(360deg)'} value="rotateX(360deg)"/> &nbsp; rotateX(360deg) </li>
+          </ul>
+      </InteractivCss>
+      <div className="mital"> متال توضيحي تفاعلي  2 : </div>
+      <ul>
+        <li> في المتال أسفله قمنا بستعمال الخاصية <b>perspective</b> على العنصر الأب  </li>
+      </ul>
+      <InteractivCss 
+        property="transform" 
+        value={selectedValue2}
+        classParent="css-transform3d-ex2-parent"
+        classChild="css-transform3d-ex2-child"  
+        resultRef={resultRef2}
+        textInResult="Hello Word"
+      >
+          <ul className="p-0">
+              <li><input type="checkbox" name="bo-sh6" ref={inputRef2} onChange={handleTransform3D_2} checked={selectedValue2 === 'rotateX(0deg)'} value="rotateX(0deg)" /> &nbsp; rotateX(0deg)</li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_2} checked={selectedValue2 === 'rotateX(40deg)'} value="rotateX(40deg)"/> &nbsp; rotateX(40deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_2} checked={selectedValue2 === 'rotateX(80deg)'} value="rotateX(80deg)"/> &nbsp; rotateX(80deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_2} checked={selectedValue2 === 'rotateX(120deg)'} value="rotateX(120deg)"/> &nbsp; rotateX(120deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_2} checked={selectedValue2 === 'rotateX(160deg)'} value="rotateX(160deg)"/> &nbsp; rotateX(160deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_2} checked={selectedValue2 === 'rotateX(200deg)'} value="rotateX(200deg)"/> &nbsp; rotateX(200deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_2} checked={selectedValue2 === 'rotateX(240deg)'} value="rotateX(240deg)"/> &nbsp; rotateX(240deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_2} checked={selectedValue2 === 'rotateX(280deg)'} value="rotateX(280deg)"/> &nbsp; rotateX(280deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_2} checked={selectedValue2 === 'rotateX(320deg)'} value="rotateX(320deg)"/> &nbsp; rotateX(320deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_2} checked={selectedValue2 === 'rotateX(360deg)'} value="rotateX(360deg)"/> &nbsp; rotateX(360deg) </li>
+          </ul>
+      </InteractivCss>
+    </article>
+    <article>
+      <h2 className="title-h2"> 2-  الدالة <bdi>rotateY()</bdi></h2>
+      <p className="style_divv">
+          تحدد الوظيفة <bdi><b>rotateY()</b></bdi>  التحويل الذي يقوم بتدوير عنصر حول المحور العمودي  <bdi>(دون تشويهه)</bdi> . <br/>
+      </p>
+      <div className="mital"> متال توضيحي تفاعلي :  </div>
+      <ul>
+        <li> في المتال أسفله لم نقم بستعمال الخاصية <b>perspective</b> على العنصر الأب  </li>
+      </ul>
+      <InteractivCss 
+        property="transform" 
+        value={selectedValue3}
+        classParent="css-transform3d-ex3-parent"
+        classChild="css-transform3d-ex3-child"  
+        resultRef={resultRef3}
+        textInResult="Hello Word"
+      >
+          <ul className="p-0">
+              <li><input type="checkbox" name="bo-sh6" ref={inputRef3} onChange={handleTransform3D_3} checked={selectedValue3 === 'rotateY(0deg)'} value="rotateY(0deg)" /> &nbsp; rotateY(0deg)</li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_3} checked={selectedValue3 === 'rotateY(40deg)'}  value="rotateY(40deg)"/> &nbsp; rotateY(40deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_3} checked={selectedValue3 === 'rotateY(80deg)'}  value="rotateY(80deg)"/> &nbsp; rotateY(80deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_3} checked={selectedValue3 === 'rotateY(120deg)'} value="rotateY(120deg)"/> &nbsp; rotateY(120deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_3} checked={selectedValue3 === 'rotateY(160deg)'} value="rotateY(160deg)"/> &nbsp; rotateY(160deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_3} checked={selectedValue3 === 'rotateY(200deg)'} value="rotateY(200deg)"/> &nbsp; rotateY(200deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_3} checked={selectedValue3 === 'rotateY(240deg)'} value="rotateY(240deg)"/> &nbsp; rotateY(240deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_3} checked={selectedValue3 === 'rotateY(280deg)'} value="rotateY(280deg)"/> &nbsp; rotateY(280deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_3} checked={selectedValue3 === 'rotateY(320deg)'} value="rotateY(320deg)"/> &nbsp; rotateY(320deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_3} checked={selectedValue3 === 'rotateY(360deg)'} value="rotateY(360deg)"/> &nbsp; rotateY(360deg) </li>
+          </ul>
+      </InteractivCss>
+      <div className="mital"> متال توضيحي تفاعلي  2 :  </div>
+      <ul>
+        <li> في المتال أسفله قمنا بستعمال الخاصية <b>perspective</b> على العنصر الأب  </li>
+      </ul>
+      <InteractivCss 
+        property="transform" 
+        value={selectedValue4}
+        classParent="css-transform3d-ex4-parent"
+        classChild="css-transform3d-ex4-child"  
+        resultRef={resultRef4}
+        textInResult="Hello Word"
+      >
+          <ul className="p-0">
+              <li><input type="checkbox" name="bo-sh6" ref={inputRef4} onChange={handleTransform3D_4} checked={selectedValue4 === 'rotateY(0deg)'} value="rotateY(0deg)" /> &nbsp; rotateY(0deg)</li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_4} checked={selectedValue4 === 'rotateY(40deg)'}  value="rotateY(40deg)"/> &nbsp; rotateY(40deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_4} checked={selectedValue4 === 'rotateY(80deg)'}  value="rotateY(80deg)"/> &nbsp; rotateY(80deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_4} checked={selectedValue4 === 'rotateY(120deg)'} value="rotateY(120deg)"/> &nbsp; rotateY(120deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_4} checked={selectedValue4 === 'rotateY(160deg)'} value="rotateY(160deg)"/> &nbsp; rotateY(160deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_4} checked={selectedValue4 === 'rotateY(200deg)'} value="rotateY(200deg)"/> &nbsp; rotateY(200deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_4} checked={selectedValue4 === 'rotateY(240deg)'} value="rotateY(240deg)"/> &nbsp; rotateY(240deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_4} checked={selectedValue4 === 'rotateY(280deg)'} value="rotateY(280deg)"/> &nbsp; rotateY(280deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_4} checked={selectedValue4 === 'rotateY(320deg)'} value="rotateY(320deg)"/> &nbsp; rotateY(320deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_4} checked={selectedValue4 === 'rotateY(360deg)'} value="rotateY(360deg)"/> &nbsp; rotateY(360deg) </li>
+          </ul>
+      </InteractivCss>
+    </article>
+    <article>
+      <h3 className="mt-3"> 3-  الدالة <bdi>rotateZ()</bdi></h3>
+      <p className="style_divv">
+          تحدد الوظيفة <bdi><b>rotateZ()</b></bdi>  التحويل الذي يقوم بتدوير عنصر حول المحور <b>z</b> <bdi>(دون تشويهه)</bdi> . <br/>
+      </p>
+      <div className="mital"> متال توضيحي تفاعلي :  </div>
+      <InteractivCss 
+        property="transform" 
+        value={selectedValue5}
+        classParent="css-transform3d-ex5-parent"
+        classChild="css-transform3d-ex5-child"  
+        resultRef={resultRef5}
+        textInResult="Hello Word"
+      >
+          <ul className="p-0">
+              <li><input type="checkbox" name="bo-sh6" ref={inputRef5} onChange={handleTransform3D_5} checked={selectedValue5 === 'rotateZ(0deg)'} value="rotateZ(0deg)" /> &nbsp; rotateZ(0deg)</li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_5} checked={selectedValue5 === 'rotateZ(40deg)'}  value="rotateZ(40deg)"/> &nbsp; rotateZ(40deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_5} checked={selectedValue5 === 'rotateZ(80deg)'}  value="rotateZ(80deg)"/> &nbsp; rotateZ(80deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_5} checked={selectedValue5 === 'rotateZ(120deg)'} value="rotateZ(120deg)"/> &nbsp; rotateZ(120deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_5} checked={selectedValue5 === 'rotateZ(160deg)'} value="rotateZ(160deg)"/> &nbsp; rotateZ(160deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_5} checked={selectedValue5 === 'rotateZ(200deg)'} value="rotateZ(200deg)"/> &nbsp; rotateZ(200deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_5} checked={selectedValue5 === 'rotateZ(240deg)'} value="rotateZ(240deg)"/> &nbsp; rotateZ(240deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_5} checked={selectedValue5 === 'rotateZ(280deg)'} value="rotateZ(280deg)"/> &nbsp; rotateZ(280deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_5} checked={selectedValue5 === 'rotateZ(320deg)'} value="rotateZ(320deg)"/> &nbsp; rotateZ(320deg) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_5} checked={selectedValue5 === 'rotateZ(360deg)'} value="rotateZ(360deg)"/> &nbsp; rotateZ(360deg) </li>
+          </ul>
+      </InteractivCss>
+    </article>
+    <article>
+      <h2 className="title-h2"> 4-  الدالة <bdi>translateZ()</bdi></h2>
+      <p className="style_divv">
+        أولاََّّ لإستخدام <kbd>transform : translateZ()</kbd> يجب إعطاء العنصر الأب القيمة <bdi><b>perspective</b></bdi> .<br/>
+        تحدد الوظيفة <bdi><b>translateZ()</b></bdi>  التحويل الذي يقوم بتدوير عنصر حول المحور <b>z</b> <bdi>(دون تشويهه)</bdi> . <br/>
+      </p>
+      <div className="mital"> متال توضيحي تفاعلي :  </div>
+      <InteractivCss 
+        property="transform" 
+        value={selectedValue6}
+        classParent="css-transform3d-ex6-parent"
+        classChild="css-transform3d-ex6-child"  
+        resultRef={resultRef6}
+        textInResult="Hello Word"
+      >
+          <ul className="p-0">
+              <li><input type="checkbox" name="bo-sh6" ref={inputRef6} onChange={handleTransform3D_6} checked={selectedValue6 === 'translateZ(0px)'} value="translateZ(0px)" /> &nbsp; translateZ(0px)</li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_6} checked={selectedValue6 === 'translateZ(35px)'}  value="translateZ(35px)"/> &nbsp; translateZ(35px) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_6} checked={selectedValue6 === 'translateZ(-35px)'}  value="translateZ(-35px)"/> &nbsp; translateZ(-35px) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_6} checked={selectedValue6 === 'translateZ(-9.7rem)'} value="translateZ(-9.7rem)"/> &nbsp; translateZ(-9.7rem) </li>
+              <li><input type="checkbox" name="bo-sh6" onChange={handleTransform3D_6} checked={selectedValue6 === 'translateZ(2.7rem)'} value="translateZ(2.7rem)"/> &nbsp; translateZ(2.7rem) </li>
+          </ul>
+      </InteractivCss>
+    </article>
 </section>
     )
   }

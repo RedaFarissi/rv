@@ -1,13 +1,28 @@
-.css-opacity-test{
-    color:azure;border:1px solid gray;margin-top:-2px;padding:8px 0px;background-color:rgb(30,30,30);
+.css-opacity-ex1 {
+  background: rgb(76, 175, 80);
+  padding: 10px;
+}
+.css-opacity-ex1-1 {
+  background: rgba(76, 175, 80, 0.1);
+}
+.css-opacity-ex1-3{
+  background: rgba(76, 175, 80, 0.3);
+}
+.css-opacity-ex1-6 {
+  background: rgba(76, 175, 80, 0.6);
 }
 
-.css-opacity-3{
+
+
+.css-opacity-ex2-test{
+    color:azure;border:1px solid gray;margin-top:-2px;padding:8px 0px;background-color:rgb(30,30,30);
+}
+.css-opacity-ex2-3{
     opacity: 0.3
 }
-.css-opacity-6{
+.css-opacity-ex2-6{
     opacity: 0.6
 }
-.css-opacity-10{
+.css-opacity-ex2-10{
     opacity: 1
 }

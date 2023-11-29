@@ -1,0 +1,39 @@
+#css-text-decoration-ex1-title1{text-decoration-line: overline;}
+#css-text-decoration-ex1-title2{text-decoration-line:underline;}
+#css-text-decoration-ex1-title3{text-decoration-line: line-through;}
+#css-text-decoration-ex1-title4{text-decoration-line: none;}
+
+
+
+
+
+
+#css-text-decoration-ex2-title1{text-decoration-line: overline;}
+#css-text-decoration-ex2-title2{text-decoration-line:underline;}
+#css-text-decoration-ex2-title3{text-decoration-line: line-through;}
+#css-text-decoration-ex2-title4{text-decoration-line: none;}
+
+#css-text-decoration-ex2-title1,#css-text-decoration-ex2-title2,
+#css-text-decoration-ex2-title3,#css-text-decoration-ex2-title4{
+    text-decoration-color: red;
+}
+
+
+
+
+
+
+
+
+#css-text-decoration-ex3-title1{text-decoration-line: overline;text-decoration-style:dashed}
+#css-text-decoration-ex3-title2{text-decoration-line: overline;  text-decoration-style:dotted}
+#css-text-decoration-ex3-title3{text-decoration-line: overline; text-decoration-style:double}
+#css-text-decoration-ex3-title4{text-decoration-line: overline; text-decoration-style:none}
+#css-text-decoration-ex3-title5{text-decoration-line: overline; text-decoration-style:solid}
+#css-text-decoration-ex3-title6{text-decoration-line: overline; text-decoration-style:wavy}
+#css-text-decoration-ex3-title7{text-decoration-line: overline; text-decoration-style:inherit}
+#css-text-decoration-ex3-title8{text-decoration-line: overline; text-decoration-style:unset}
+    
+
+#css-text-decoration-ex4-title1{    text-decoration: overline red dashed; }
+#css-text-decoration-ex4-title2{    text-decoration: underline green double; }
