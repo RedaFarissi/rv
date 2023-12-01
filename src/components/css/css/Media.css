@@ -1,27 +1,22 @@
-.Parent{
-    background-color:greenyellow; display:flex; justify-content:space-between; width:max(1400px , 100%); flex-wrap:wrap;
-  }
-  .Parent > div{
-    background-color:yellow; width:240px; margin:20px; text-align:center; padding:20px;
-    color:red; font-size:35px; border:outset 9px red;
-  }
-  /**********************************************************************/
-  .parent{
-    background-color:greenyellow;
+.css-media-ex-styleAdd{
+  overflow-x: auto;
+}
+.css-media-ex-parent{
+  background-color:greenyellow;
     width:max(1400px , 100%);
     display:flex; justify-content:space-between;
     flex-wrap: wrap;
   }
-  .parent > div{
+  .css-media-ex-parent > div{
     background-color: yellow; width:240px;
     margin:20px;   text-align:center;
     padding:20px; color:red;
     font-size:35px; border:outset 9px red;
   }
   @media only screen and (max-width: 1400px){
-    .parent{ width: 100%; }
-    .parent > div{ width:40%; }
+    .css-media-ex-parent{ width: 100%; }
+    .css-media-ex-parent > div{ width:40%; }
   }
   @media only screen and (max-width: 900px){
-    .parent > div{ width:100%; }
+    .css-media-ex-parent > div{ width:100%; }
   }

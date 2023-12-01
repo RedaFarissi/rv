@@ -1,30 +1,61 @@
-#Lien:after { content: "l'ien is : " attr(href); } 
-    #div_id {
-        width:calc(100% - 100px);
-        height:65px;
-        background-color: red;
-        margin-left: 50px;
-        text-align: center;
-        line-height: 65px;
-        font-size: 40px;
-        border-radius: 7px;
-    }
-    #grad1 {
-      height: 200px;
-      width: 200px;
-      background-color: red; /* For browsers that do not support gradients */
-      background-image: conic-gradient(red, yellow, green);
-    }
-    #p1 { background-color:hsla(120,100%,50%); }
-    #p2 { background-color:hsla(120,100%,75%); }
-    #p3 { background-color:hsla(120,100%,25%); }
-    #p4 { background-color:hsla(120,60%,70%); }
-    #p5 { background-color:hsla(0,100%,50%); }
-    #p6 { background-color:hsla(360,40%,50%); }
-    #Gradient1 { height: 150px;background-image: linear-gradient(red, yellow, blue);}
-    #grad-1 { height: 100px; background-image: linear-gradient(0deg, red, blue) }
-    #grad-2 { height: 100px; background-image: linear-gradient(90deg, red, blue);}
-    #grad-3 { height: 100px;background-image: linear-gradient(180deg, red, blue);}
-    #grad-4 { height: 100px;background-image: linear-gradient(-90deg, red, blue);} 
-    #div1 { background-color: red;height: 150px; width: max(50%, 300px); color:white}
-    #css_min {background-color: red;height: 150px;width: min(50%, 300px);color: white;}
+#css-function-ex1:after { content: " l'ien is : " attr(href); } 
+
+/*********************************************************************/
+
+#css-function-ex2 {
+    width:calc(100% - 100px);
+    height:65px;
+    background-color: red;
+    margin-left: 50px;
+    text-align: center;
+    line-height: 65px;
+    font-size: 40px;
+    border-radius: 7px;
+}
+
+/*********************************************************************/
+
+#css-function-ex3 {
+  height: 200px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: conic-gradient(red, yellow, green);
+}
+
+/*********************************************************************/
+
+#css-function-ex4-p1 { background-color:hsla(120,100%,50%); }
+#css-function-ex4-p2 { background-color:hsla(120,100%,75%); }
+#css-function-ex4-p3 { background-color:hsla(120,100%,25%); }
+#css-function-ex4-p4 { background-color:hsla(120,60%,70%); }
+#css-function-ex4-p5 { background-color:hsla(0,100%,50%); }
+#css-function-ex4-p6 { background-color:hsla(360,40%,50%); }
+
+/*********************************************************************/
+
+#css-function-ex5 { height: 150px;background-image: linear-gradient(red, yellow, blue);}
+
+/*********************************************************************/
+
+#css-function-ex5-grad-1 { height: 100px; background-image: linear-gradient(0deg, red, blue) ;color:white;text-align:center}
+#css-function-ex5-grad-2 { height: 100px; background-image: linear-gradient(90deg, red, blue);color:white;text-align:center}
+#css-function-ex5-grad-3 { height: 100px;background-image: linear-gradient(180deg, red, blue);color:white;text-align:center}
+#css-function-ex5-grad-4 { height: 100px;background-image: linear-gradient(-90deg, red, blue);color:white;text-align:center} 
+
+/*********************************************************************/
+
+#css-function-ex6 { background-color: red;height: 150px; width: max(50%, 300px); color:white}
+
+/*********************************************************************/
+
+#css-function-ex7 {background-color: red;height: 150px;width: min(50%, 300px);color: white;}
+
+/*********************************************************************/
+#css-function-ex8 {
+  width: 200px;
+  height: 100px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}

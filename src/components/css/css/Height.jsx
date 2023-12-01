@@ -35,7 +35,7 @@ export default function Height(props){
             ملاحظة: تتجاوز خصائص <b>min-height</b> و <b>max-height</b> خاصية الارتفاع .<br/>
         </p>
         <div className="mital">متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Height" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Height" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Height' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <img src={images.css_logo}  className='css-height-ex1' alt="css logo" />
         </Result>

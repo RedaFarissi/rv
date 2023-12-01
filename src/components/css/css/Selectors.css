@@ -1,17 +1,134 @@
-#emaiL , #passworD {width:90%; height:50px; background-color:yellow;outline: none;border: none;margin:5px 5%;} 
-#emaiL::placeholder , #passworD::placeholder{ background-color: rgba(25 200 25/40%); padding-left: 9px;}
-
-
-[placeholder~="Password"]{
-    height:20px;border-radius:50px;padding-left:9px;background-color:gray;color:white;
+.css-selector-ex1{
+    font-size: 60px;
+    background-color: red;
+    width: 50%;
+    margin: auto;
+    margin-top: 4px;
+    text-align: center;
 }
 
-[type="email"]{
+/************************************************/
+
+.css-selector-ex2-class1 .css-selector-ex2-class2 {
+    font-size: 60px;
+    background-color: green;
+    width: 50%;
+    margin: auto;
+    border: 2px solid black;
+    margin-top: 4px;
+    text-align: center;
+}
+
+/************************************************/
+
+#css-selector-ex3{
+    font-size: 35px; 
+    background-color: green; 
+    text-align: center;
+    width: 50%; ; 
+    margin: 20px auto; 
+    border:2px solid black;
+}
+
+/************************************************/
+
+.css-selector-ex4-styleAdd{
+    background-color: red;
+    color: white;
+}
+
+/************************************************/
+
+.css-selector-ex5-header * {
+    background-color: red;
+    width: 50%;
+    height: 90px;
+    margin: 9px auto;
+    border: 2px solid black;
+}
+
+/************************************************/
+
+.css-selector-ex6-div {
+    font-size: 40px;
+    background-color: blueviolet;
+    margin-bottom: 2px;
+}
+
+.css-selector-ex6-span {
+    color: green;
+    background-color: blue;
+}
+
+/************************************************/
+
+.css-selector-ex7 {
+    font-size: 40px;
+    background-color: brown;
+}
+
+/************************************************/
+
+.css-selector-ex8-header, .css-selector-ex8-footer {
+    background-color: red;
+    margin-top: 20px;
+    padding: 20px;
+    color: blue;
+    font-size: 50px;
+}
+.css-selector-ex8-html, #css-selector-ex8-css {
+    font-size: 30px;
+    background-color: yellow;
+}
+
+/************************************************/
+
+.css-selector-ex9-p {
+  background-color: gray;
+  border: 4px solid red;
+}
+
+
+/************************************************/
+
+.css-selector-ex10 {
+    background-color: gray;
+    border: 4px solid red;
+}
+
+/************************************************/
+
+.css-selector-ex11{background: darkorange; color: white; font-size: 25px;}
+
+/************************************************/
+
+.css-selector-ex12{
+    width: 90%;
+    height: 50px;
+    background-color: yellow;
+    outline: none;
+    border: none;
+    margin: 5px 5%;
+}
+
+.css-selector-ex12::placeholder {
+    background-color: rgba(25, 200, 25, 40%);
+    padding-left: 9px;
+}
+
+/************************************************/
+
+.css-selector-ex13{
     width:60%; height:50px; border-radius:50px;border:1px solid red;padding-left: 9px; 
 }
 
-a[target=_blank] { background-color: yellow;}
+/************************************************/
 
+.css-selector-ex14{
+    height:20px;border-radius:50px;padding-left:9px;background-color:gray;
+    color:white;height:40px;margin-top: 20px
+}
 
+/************************************************/
 
-[class|=top] {  background: yellow;}
+.css-selector-ex15 {  background: yellow;}
