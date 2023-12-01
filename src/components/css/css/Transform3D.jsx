@@ -1,5 +1,4 @@
-import { CodeHighlighter ,  Result , InteractivCss } from "../../path";
-import images from "../imagesCss";
+import {  InteractivCss } from "../../path";
 import { useState , useRef ,useEffect} from "react";
 import "./Transform3D.css"
 

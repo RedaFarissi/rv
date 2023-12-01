@@ -75,8 +75,8 @@ export default function Css(props){
                 <Route path='/cursor' element={<Cursor />} /> 
                 <Route path='/scroll-behavior' element={<ScrollBehavior />} /> 
                 <Route path='/z-index' element={<ZIndex />} /> 
-                <Route path='/invalid-&-valid' element={<InvalidAndValid />} /> 
                 <Route path='/outline' element={<Outline />} /> 
+                <Route path='/invalid-&-valid' element={<InvalidAndValid />} /> 
                 <Route path='/after-&-before' element={<AfterAndBefore />} /> 
                 <Route path='/writing-mode' element={<WritingMode />} /> 
                 <Route path='/filter' element={<Filter />} /> 

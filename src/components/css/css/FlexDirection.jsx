@@ -1,48 +1,74 @@
-import { CodeHighlighter ,  Result} from "../../path";
-import images from "../imagesCss";
+import { CodeHighlighter , InteractivCss} from "../../path";
+import { useState , useRef ,useEffect} from "react";
+import "./FlexDirection.css"
 
 export default function FlexDirection(props){
-    // document.getElementById("FlD").click()
-    // function flexD(value){
-    //     document.getElementById("Fl").style.flexDirection = value
-    //     document.getElementById("flex-direction-result").innerHTML = value +";"
-    // }
+    const codeExemple1= { 
+        css:`.box { 
+    display: flex; 
+    background-color: yellow;
+    flex-direction: column; 
+}
+.box div {
+    width: 40px;
+    background-color: yellowgreen; 
+    margin: 9px; 
+    padding: 9px;
+    font-size: 30px;
+    border:2px solid blueviolet;
+    outline:2px solid blue;
+    outline-offset:6px;
+}`,
+    head:`  
+        <link rel="stylesheet" href="./index.css">`,
+        code:`      <div class="box" ref={resultRef} >
+           <div> 1 </div> 
+           <div> 2 </div>
+           <div> 3 </div>  
+      </div>`
+    }
+    const [selectedValue, setSelectedValue] = useState("column");
+    const resultRef = useRef()
+    const inputRef = useRef()
+    const handleFlexDirection = (event) => {
+      const { value } = event.target;
+      setSelectedValue(value);
+      resultRef.current.style.flexDirection = value
+    };
+    
+    useEffect(() => {
+      inputRef.current.click();
+    }, []);
+
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-css-color"> CSS Flex-Direction </h1>
     <article>
-
-
-        <div className="style_divv mt-5">
+        <p className="style_divv mt-5">
             تحدد الخاصية <b>flex-direction</b> اتجاه العناصر المرنة. <br/>
             <b>ملاحظة : </b> إذا لم يكن العنصر يحتوي على  <b>display:flex</b>  ، فلن يكون للخاصية   <b>flex-direction</b> أي تأثير .
-        </div>
-        <div className="mital"> متال :</div>
-        <img src={images.css44_flex_direction} className="img"/>
-        <ul><li> قم بنقر على الأزرار أسفله لتغيير قيمة الخاصية <b>flex-direction</b>  و لفهم بشكل أفضل .</li></ul>
-        {/* <div id="flex_direction_exemple" className="alert p-4 rounded m-auto border border-primary border-2 text-dark" dir="ltr">
-            <div id="input_radio_box" className="border border-secondary rounded bg-light p-3">
-                <div className="h2"> flex-direction : </div>
-                <input type="radio" name="fl-D" onclick="flexD(this.value)"  className="mar" value="column" id="FlD" /> column <br/>
-                <input type="radio" name="fl-D" onclick="flexD(this.value)"  className="mar" value="row"/> row <br/>
-                <input type="radio" name="fl-D" onclick="flexD(this.value)"  className="mar" value="row-reverse"/> row-reverse <br/>
-                <input type="radio" name="fl-D" onclick="flexD(this.value)"  className="mar" value="column-reverse"/> column-reverse <br/>
-                <div id="Code" className="mt-4 w-100">
-                  <div className="h3"> Code: </div>
-                  <div className="border py-2 ps-2 w-100" >
-                      <span style={{fontWeight:"500"}}> flex-direction :</span> <span id="flex-direction-result" style={{fontWeight:"500"}}></span>
-                      </div>
-              </div>
-              </div>
-            <div className="border bg-light border-secondary" id="flexDirection">
-                <div className="h2"> Result : </div>
-                <div className="Fl" id="Fl">
-        	      <div style="order:3;"> 1 </div> 
-        	      <div style="order:1;"> 2 </div>
-        	      <div style="order:2;"> 3 </div>  
-        	    </div>
-            </div>
-        </div> */}
+        </p>
+        <div className="mital"> متال توضيحي تفاعلي  : </div> 
+        <CodeHighlighter file_name="index.css" code={codeExemple1.css} language="css" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Height" addClass="mt-3 mb-3" copie={true}/>
+        <InteractivCss 
+          property="flex-direction" 
+          value={selectedValue}  
+          textInResult={
+                        <div className="css-flex-direction-ex1-box" ref={resultRef}>
+                          <div> 1 </div> 
+                          <div> 2 </div>
+                          <div> 3 </div>  
+                        </div>
+                    }
+        >
+            <ul className="p-0">
+                <li><input type="checkbox" name="bo-sh6" ref={inputRef} onChange={handleFlexDirection} checked={selectedValue === 'column'} value="column" /> &nbsp; column</li>
+                <li><input type="checkbox" name="bo-sh6" onChange={handleFlexDirection} checked={selectedValue === 'row'} value="row"/> &nbsp; row </li>
+                <li><input type="checkbox" name="bo-sh6" onChange={handleFlexDirection} checked={selectedValue === 'row-reverse'} value="row-reverse"/> &nbsp; row-reverse </li>
+                <li><input type="checkbox" name="bo-sh6" onChange={handleFlexDirection} checked={selectedValue === 'column-reverse'} value="column-reverse"/> &nbsp; column-reverse</li>
+            </ul>
+        </InteractivCss>
       </article>
 </section>
     )

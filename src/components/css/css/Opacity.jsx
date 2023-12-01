@@ -64,11 +64,11 @@ export default function Opacity(props){
 
         <div className="mital"> متال 2 :  </div>
         <div style={{textAlign:"center"}} dir="ltr">
-            <img src={images.img_forest} className="w-100 css-opacity-ex2-10"/>
+            <img src={images.img_forest} alt="forest" className="w-100 css-opacity-ex2-10"/>
             <h4 className="css-opacity-ex2-test">opacity : 1 </h4>
-            <img src={images.img_forest} className="w-100 css-opacity-ex2-6"/>
+            <img src={images.img_forest} alt="forest" className="w-100 css-opacity-ex2-6"/>
             <h4 className="css-opacity-ex2-test">opacity : 0.6 </h4>
-            <img src={images.img_forest} className="w-100 css-opacity-ex2-3"/>
+            <img src={images.img_forest} alt="forest" className="w-100 css-opacity-ex2-3"/>
             <h4 className="css-opacity-ex2-test">opacity : 0.3 </h4>
         </div>
         <br style={{clear:"both"}}/>

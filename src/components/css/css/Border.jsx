@@ -112,10 +112,10 @@ export default function Border(props){
     </article>
     <article>
         <h2 className="title-h2">2- تحديد إتجاه الحدود</h2>
-        <div class="style_divv">
+        <p class="style_divv">
             في المتال الأول  عند تحديد عنصر و إعطائه الخاصية <b>border</b> فإن الحد يشمل يمين العنصر ويساره و الفوق و التحت وتلك تكون طريقة جيدة أحيانا ولاكن أحيانا أخرى قد تكون غير مرغوبة  .<br/>
             يمكنك كتابة <b>border</b> كل إتجاه لوحده وتحكم بشكل أفضل
-        </div>
+        </p>
         <div class="mital"> متال : </div>
         <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Border" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Border' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
@@ -135,13 +135,13 @@ export default function Border(props){
         <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" title="CSS Border" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Border' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2 className="css-border-ex3-border-aqua">title 1</h2>
-            <img src={images.orange1} width="200px" className="css-border-ex3-border-aqua"/>
-            <img src={images.css_logo} width="200px" className="css-border-ex3-border-aqua"/>
+            <img src={images.orange1} alt="orange1" width="200px" className="css-border-ex3-border-aqua"/>
+            <img src={images.css_logo} alt="css logo" width="200px" className="css-border-ex3-border-aqua"/>
         </Result>
     </article>
     <article>
         <h2 className="title-h2">3- الخط التلاتي الأبعاد </h2>
-        <div class="style_divv">
+        <p class="style_divv">
          الخط التلاتي الأبعاد و يكون عبارة عن واحد من الأشكال التالية <b>groove</b> , <b>ridge</b> , <b>inset</b> , <b>outset</b> :<br/>
             <ul>
                 <li><b>groove</b> : يحدد حدًا محززًا ثلاثي الأبعاد. التأثير يعتمد على قيمة لون الحدود </li>
@@ -149,7 +149,7 @@ export default function Border(props){
                 <li><b>inset</b> : يحدد حد داخلي ثلاثي الأبعاد. التأثير يعتمد على قيمة لون الحدود</li>
                 <li><b>outset</b> : يحدد حد خارجي ثلاثي الأبعاد. التأثير يعتمد على قيمة لون الحدود</li>
             </ul>
-        </div>
+        </p>
         <div class="mital"> متال : </div>
         <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" title="CSS Border" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Border' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">

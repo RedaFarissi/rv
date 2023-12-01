@@ -1,0 +1,14 @@
+#css-order-ex-parent {border: 1px solid #c3c3c3;display: flex;}
+#css-order-ex-parent div {width: 90px; height: 90px;}
+.css-order-ex-flex-center-center{ display: flex; justify-content: center; align-items: center; }
+.css-order-ex-bg-red{ background-color: red; }
+.css-order-ex-bg-blue{ background-color: blue; }
+.css-order-ex-bg-green{ background-color: green; }
+.css-order-ex-bg-pink{ background-color: pink; }
+.css-order-ex-bg-yellow{ background-color: yellow; }
+.css-order-ex-fs-45{ font-size: 45px;}
+.css-order-ex-order-1{ order: 1 ;}
+.css-order-ex-order-2{ order: 2 ;}
+.css-order-ex-order-3{ order: 3 ;}
+.css-order-ex-order-4{ order: 4 ;}
+.css-order-ex-order-4{ order: 5 ;}

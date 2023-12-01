@@ -1,0 +1,21 @@
+.css-z-index-ex1-body {
+  background-image: linear-gradient(to left, #0277bd, #0277bd , azure );
+  position: relative;
+}
+
+.css-z-index-ex1-h2 {
+  color: white;
+  font-size: 60px;
+  text-shadow: 5px 5px 5px #0277bd;
+  position: absolute;
+  top: 30px;
+  left: 120px;
+  z-index: 1;
+}
+
+.css-z-index-ex1-img {
+  width: 200px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}

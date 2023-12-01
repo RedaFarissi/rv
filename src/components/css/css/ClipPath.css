@@ -1,18 +1,54 @@
-.parent{margin: 20px;
+.css-clip-path-ex1-parent{margin: 20px;
     width: 230px;
     height: 230px;
     background-color: darkgrey;
     border-radius: 7px;
     padding: 5px;
 }
-.child_test{ width: 220px; height: 220px; }
-.test{
-    background-color: red;
-    clip-path: ellipse(50% 30% at 50% 50%); /* at 50% 50% by default */
+.css-clip-path-ex1-child_test{ width: 220px; height: 220px; }
+.css-clip-path-ex1-test1{ background-color: red;clip-path: ellipse(50% 30% at 50% 50%); /* at 50% 50% by default */}
+.css-clip-path-ex1-test2{ background-color: green; clip-path: ellipse(50% 30% at 0%); }
+.css-clip-path-ex1-test3{ background-color: yellow; clip-path: ellipse(50% 30% at 0% 0%);}
+.css-clip-path-ex1-test4{ background-color:aqua; clip-path:ellipse(100% 30%);}
+
+
+/************************************************************/
+
+
+.css-clip-path-ex2-parent{margin: 20px;
+    width: 230px;
+    height: 230px;
+    background-color: darkgrey;
+    border-radius: 7px;
+    padding: 5px;
 }
-.test2{ background-color: green; clip-path: ellipse(50% 30% at 0%); }
-.test3{ background-color: yellow; clip-path: ellipse(50% 30% at 0% 0%);}
-.test4{ background-color:aqua; clip-path:ellipse(100% 30%);}
-.testing{ background-color: red; clip-path: circle();/*50% default*/  }
-.testing2{  background-color: brown;  clip-path: circle(25px at 25px 25px);   }
-.testing3{  background-color:chartreuse;  clip-path: circle(60%);   }
+.css-clip-path-ex2-child_test{ width: 220px; height: 220px; }
+
+.css-clip-path-ex2-testing1{ background-color: red; clip-path: circle();/*50% default*/  }
+.css-clip-path-ex2-testing2{  background-color: brown;  clip-path: circle(25px at 25px 25px);   }
+.css-clip-path-ex2-testing3{  background-color:chartreuse;  clip-path: circle(60%);   }
+
+/************************************************************/
+
+
+#css-clip-path-ex3{
+    background-image: linear-gradient(to left, red, darkorange, orange);
+    height: 200px;
+    clip-path: polygon(0 1%, 100% 0, 100% 70%, 0 100%);
+}
+
+
+/************************************************************/
+
+
+.css-clip-path-ex4 {
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(to left, darkorange, orange, red);
+    text-align: center;
+    line-height: 200px;
+    color: white;
+    font-size: x-large;
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+}
+

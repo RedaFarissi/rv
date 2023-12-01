@@ -14,11 +14,11 @@ div.ex5:hover, div.ex5:active {text-decoration: overline;}`,
     head:`  
         <link rel="stylesheet" href="./index.css">`,
         code:`      <p>Mouse over the links to see them change layout.</p>
-        <p><div style="cursor: pointer" className="ex1">This link changes color</div></p>
-        <p><div style="color:blue;cursor:pointer;" className="ex2">This link changes font-size</div></p>
-        <p><div style="color:blue;cursor:pointer;" className="ex3">This link changes background-color</div></p>
-        <p><div style="color:blue;cursor:pointer;" className="ex4">This link changes font-family</div></p>
-        <p><div style="color:blue;cursor:pointer;" className="ex5">This link changes text-decoration</div></p>`
+        <p><div style="cursor: pointer" class="ex1">This link changes color</div></p>
+        <p><div style="color:blue;cursor:pointer;" class="ex2">This link changes font-size</div></p>
+        <p><div style="color:blue;cursor:pointer;" class="ex3">This link changes background-color</div></p>
+        <p><div style="color:blue;cursor:pointer;" class="ex4">This link changes font-family</div></p>
+        <p><div style="color:blue;cursor:pointer;" class="ex5">This link changes text-decoration</div></p>`
     }
     return(
 <section className="section-conetent">
@@ -39,8 +39,8 @@ div.ex5:hover, div.ex5:active {text-decoration: overline;}`,
             </div>
             <div className="css-hover-ex1-divdiv">Links:</div>
             <p className="css-hover-ex1-divdiv2">Here are my favorite websites:</p>
-            <a className="css-hover-ex1-divdiv3" href="https://www.w3schools.com" target="_blank">w3schools.com</a>
-            <a className="css-hover-ex1-divdiv3" href="https://harmash.com/" target="_blank">harmash.com</a>
+            <a className="css-hover-ex1-divdiv3" rel="noopener noreferrer" href="https://www.w3schools.com" target="_blank">w3schools.com</a>
+            <a className="css-hover-ex1-divdiv3" rel="noopener noreferrer" href="https://harmash.com/" target="_blank">harmash.com</a>
             <p className="css-hover-ex1-divdiv2"><b>Note:</b> Mouse over paragraphs, headers, and links to see what is getting a style.</p>
             <p className="css-hover-ex1-divdiv2"><b>Note:</b> For :hover to work for other than links in IE, a DOCTYPE must be declared.</p>
         </Result>

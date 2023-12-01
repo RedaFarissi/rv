@@ -1,46 +1,57 @@
-.h2{ font-size: xx-large; direction:rtl; }
-	#div{ display: flex;  width:100%; flex-wrap: wrap;}
-	#div2{ display: flex;  width:100%;}
-	#div div , #div2 div{ width: 30%; margin:1.5%; height:90px; font-size: xx-large; text-align: center; line-height: 90px;}
-    #Rseult{display: flex;width: 99.9%;border:5px solid black;padding: 9px;margin-top:20px;height:220px}
-    #Rseult div{width: 50%;height: 70px;}
-    #Rseult2{display: flex;border:5px solid black;padding: 9px;margin-top:20px;height:220px;flex-wrap: wrap;}
-    #Rseult2 div{width: 50%;height: 70px;}
+.css-flex-wrap-ex1-h2{ 
+    font-size: xx-large; 
+    direction:rtl; 
+}
+#css-flex-wrap-ex1-div{ 
+    display: flex;  
+    width:100%; 
+    flex-wrap: wrap;
+}
+#css-flex-wrap-ex1-div2{ 
+    display: flex;  
+    width:100%;
+}
+#css-flex-wrap-ex1-div div , #css-flex-wrap-ex1-div2 div{ 
+    width: 30%; 
+    margin:1.5%; 
+    height:90px; 
+    font-size: xx-large; 
+    text-align: center; 
+    line-height: 90px;
+}
+    
+    
+    
+/******************************************/    
+    
+#css-flex-wrap-ex2-Rseult{
+    display: flex;
+    width: 99.9%;
+    padding: 9px;
+    margin-top:20px;
+    height:220px
+}
+#css-flex-wrap-ex2-Rseult div{
+    width: 50%;
+    height: 70px;
+    font-size: 26px;
+    text-align: center;
+    line-height: 70px;
+}
 
 
+/******************************************/    
 
 
+#Rseult2{
+    display: flex;
+    padding: 9px;
+    margin-top:20px; 
+    flex-wrap: wrap;
+    height: 300px;
+}
+#Rseult2 div{
+    width: 50%;
+    height: 70px;
+}
 
-    .wrap_exemple{
-        display: flex;
-        justify-content: space-around;
-        background-color:azure;
-    }
-    .input_radio_box{
-        box-shadow:5px 5px 20px rgba(0 0 0/30%);
-        align-self:center;
-        width: 40%;
-        min-height: 330px;
-    }
-    .flex-wrap{
-        width: 40%;
-        box-shadow:3px 3px 20px rgba(0 0 0 /30%);
-        min-height: 330px;
-    }
-    @media only  screen and (max-width:903px) {
-        .wrap_exemple{
-            flex-direction: column;
-        }
-        .input_radio_box{
-            width: 100%;
-            min-height: 90px;
-            margin-bottom: 27px;
-        }
-        #Code{
-            margin-bottom: 20px;
-        }
-        .flex-wrap{
-            width: 100%;
-            min-height: 90px;
-        }
-    }

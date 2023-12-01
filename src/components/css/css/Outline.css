@@ -1,67 +1,70 @@
-#Pa {	
+#css-outline-ex1 {	
     border: 2px solid black;
     outline: #4CAF50 solid 10px;
     margin: auto;  
     padding: 20px;
     text-align: center;
+    margin-top: 20px;
 }
-.P {outline-color:red; outline-width:3.5px ;}
+/***************************/
+.css-outline-ex2-div{font-size: larger; border: 1px solid black; margin: 3px 25px}
 
-.dotted {outline-style: dotted;}
-.dashed {outline-style: dashed;}
-.solid { outline-style: solid;}
-.double {outline-style: double;}
-.groove {outline-style: groove;}
-.ridge { outline-style: ridge;}
-.inset { outline-style: inset;}
-.outset {outline-style: outset;}
-
-
+.css-outline-ex2-1 { outline-style: solid; outline-color: red; outline-width: thin;}
+.css-outline-ex2-2 { outline-style: solid; outline-color: red; outline-width: medium;}
+.css-outline-ex2-3 { outline-style: solid; outline-color: red; outline-width: thick;}
+.css-outline-ex2-4 { outline-style: solid; outline-color: red; outline-width: 20px;}
 
 
 /***************************/
 
 
+.css-outline-ex3-P {outline-color:red; outline-width:3.5px ;}
+
+.css-outline-ex3-dotted {outline-style: dotted;}
+.css-outline-ex3-dashed {outline-style: dashed;}
+.css-outline-ex3-solid { outline-style: solid;}
+.css-outline-ex3-double {outline-style: double;}
+.css-outline-ex3-groove {outline-style: groove;}
+.css-outline-ex3-ridge { outline-style: ridge;}
+.css-outline-ex3-inset { outline-style: inset;}
+.css-outline-ex3-outset {outline-style: outset;}
 
 
+/*********************************************/
 
-#outline_exemple{
+.css-outline-ex4-p{border: 4px solid brown; font-size: larger; }
+.css-outline-ex4-P1 {outline-color:green; outline-width:6.5px; outline-style: solid;}
+.css-outline-ex4-P2 {outline-color:black; outline-width:6.5px; outline-style: solid;}
+.css-outline-ex4-P3 {outline-color: yellow; outline-width:6.5px; outline-style: solid;}
+
+/*********************************************/
+
+.css-outline-ex5 {
+    font-size: larger;
+    margin: 30px;
+    padding: 9px;
+    background: yellow;
+    border: 2px solid green;
+    outline: 4px solid red;
+    outline-offset: 16px;
+}
+/*************************************/
+
+.css-outline-width-classParent{
     display: flex;
-    justify-content: space-around;
-    background-color:azure;
+    justify-content: center;
+    align-items: center;
 }
-#input_radio_box{
-    box-shadow:5px 5px 20px rgba(0 0 0/30%);
-    align-self:center;
-    width: 40%;
-    min-height: 400px;
-}
-#outLine{
-    width: 50%;margin:auto;background-color:gray;color:white;border:3px solid black;text-align:center;
-    padding:14px;margin-top:75px;outline-style:solid;outline-color:yellow   
-}
-#outlineE{
-    width: 40%;
-    box-shadow:3px 3px 20px rgba(0 0 0 /30%);
-    min-height:400px;
-}
-@media only  screen and (max-width:903px) {
-    #outline_exemple{
-        flex-direction: column;
-    }
-    #input_radio_box{
-        width: 100%;
-        min-height: 90px;
-        margin-bottom: 27px;
-    }
-    #Code{
-        margin-bottom: 20px;
-    }
-    #outlineE{
-        width: 100%;
-        min-height: 280px;
-    }
-    #outLine{
-        margin-top:75px;
-    }
+.css-outline-classChild{
+    width: 50%;
+    margin:auto;
+    background-color:red;
+    color:white;
+    border:3px solid black;
+    text-align:center;
+    padding:14px;
+    margin-top:75px;
+    outline-style:solid;
+    outline-color:yellow;
+
 }

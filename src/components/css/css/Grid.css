@@ -1,0 +1,37 @@
+#css-grid-ex1-Result{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+#css-grid-ex1-Result div{ height: 70px; width: 100%; font-size: x-large; }  
+
+/*****************************************/
+
+#css-grid-ex2-Result{
+display: grid;
+grid-template-columns: auto auto 60px;
+
+}
+#css-grid-ex2-Result div{height: 70px; width: 100%; font-size: x-large;}
+
+/*****************************************/
+
+#css-grid-ex3-Result{
+    display: grid;
+    grid-template-columns: auto 90px auto ;
+    gap: 20px
+}
+#css-grid-ex3-Result div{height: 70px; width: 100%; font-size: x-large;}
+    
+/*****************************************/
+
+.css-grid-ex4-parent{
+    height: 500px;
+}
+#css-grid-ex4-Result{
+    display: grid;
+    grid-template-columns: auto 90px auto ;
+    gap: 100px 5px;
+}
+#css-grid-ex4-Result div{height: 70px; width: 100%; font-size: x-large;}
+    

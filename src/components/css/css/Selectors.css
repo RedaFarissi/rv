@@ -1,2 +1,17 @@
 #emaiL , #passworD {width:90%; height:50px; background-color:yellow;outline: none;border: none;margin:5px 5%;} 
 #emaiL::placeholder , #passworD::placeholder{ background-color: rgba(25 200 25/40%); padding-left: 9px;}
+
+
+[placeholder~="Password"]{
+    height:20px;border-radius:50px;padding-left:9px;background-color:gray;color:white;
+}
+
+[type="email"]{
+    width:60%; height:50px; border-radius:50px;border:1px solid red;padding-left: 9px; 
+}
+
+a[target=_blank] { background-color: yellow;}
+
+
+
+[class|=top] {  background: yellow;}

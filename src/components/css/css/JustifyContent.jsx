@@ -1,113 +1,246 @@
-import { CodeHighlighter ,  Result} from "../../path";
+import { CodeHighlighter ,  Result , InteractivCss } from "../../path";
+import { useState , useRef ,useEffect} from "react";
 import images from "../imagesCss";
+import "./JustifyContent.css"
 
 export default function JustifyContent(props){
-    // document.getElementById("flex-start").click()
-    // function just_C(value) {
-    //   document.getElementById("Result").style.justifyContent = value;
-    //   document.getElementById("justify-content-result").innerHTML = value +";";
-    // }
+    const codeExemple1= { 
+    head:`  
+    <style> 
+        #div {
+            border: 2px solid black;
+            display: flex;
+            justify-content: flex-start;
+        }
+        #div > div {
+            padding:  30px 45px;
+            font-size: 45px;
+            border:4px solid brown;
+        }   
+    </style>`,
+    code:`      <div id="div">
+        <div style="background-color: blue;">1</div>
+        <div style="background-color: green;">2</div>
+        <div style="background-color: violet;">3</div>
+      </div>`
+    }
+    const codeExemple2= { 
+    head:`  
+    <style> 
+        #div {
+            border: 2px solid black;
+            display: flex;
+            justify-content: flex-end;
+        }
+        #div > div {
+            padding:  30px 45px;
+            font-size: 45px;
+            border:4px solid brown;
+        }   
+    </style>`
+    }
+    const codeExemple3= { 
+    head:`  
+    <style> 
+        #div {
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+        }
+        #div > div {
+            padding:  30px 45px;
+            font-size: 45px;
+            border:4px solid brown;
+        }   
+    </style>`
+    }
+    const codeExemple4= { 
+    head:`  
+    <style> 
+        #div {
+            border: 2px solid black;
+            display: flex;
+            justify-content: space-between;
+        }
+        #div > div {
+            padding:  30px 45px;
+            font-size: 45px;
+            border:4px solid brown;
+        }   
+    </style>`
+    }
+    const codeExemple5= { 
+    head:`  
+    <style> 
+        #div {
+            border: 2px solid black;
+            display: flex;
+            justify-content: space-around;
+        }
+        #div > div {
+            padding:  30px 45px;
+            font-size: 45px;
+            border:4px solid brown;
+        }   
+    </style>`
+    }
+    const codeExemple6= { 
+    head:`  
+    <style> 
+        #div {
+            border: 2px solid black;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #div > div {
+            padding:  30px 45px;
+            font-size: 45px;
+            border:4px solid brown;
+        }   
+    </style>`
+    }
+    const [selectedValue, setSelectedValue] = useState("flex-start");
+    const resultRef = useRef()
+    const inputRef = useRef()
+    const handleJustifyContent = (event) => {
+      const { value } = event.target;
+      setSelectedValue(value);
+      resultRef.current.style.justifyContent = value
+    };
+    
+    useEffect(() => {
+      inputRef.current.click();
+    }, []);
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-css-color"> CSS Justify-Content </h1>
-    <article></article>
-
-<div className="style_divv mt-5">
-    تقوم الخاصية <b>justify-content</b> بمحاذاة عناصر الحاوية المرنة عندما لا تستخدم العناصر كل المساحة المتوفرة على المحور الرئيسي (أفقيًا) .<br/>
-    تستخدم الخاصية <b>justify-content</b> مع الخاصية <b>display</b> و القيمة <b>flex</b> وتستقبل القيم التالية :
-    <ul dir="ltr">
-        <li><b>justify-content : flex-start</b></li>
-        <li><b>justify-content : flex-end</b></li>
-        <li><b>justify-content : center</b></li>
-        <li><b>justify-content : space-between</b></li>
-        <li><b>justify-content : space-around</b></li>
-        <li><b>justify-content : space-evenly</b></li>
-    </ul>
-</div>
-<h3>1. القيمة flex-start</h3>
-<div className="style_divv">
-    القيمة الافتراضية. يتم وضع العناصر في بداية الحاوية 
-</div>
-<div className="sum_exemple_style">
-<div className="mital">متال  :  </div>
-<img src={images.css48_justify_content} className="img"/>
-<img src={images.css48_justify_content_2} className="img"/>
-</div>
-<h3>2. القيمة flex-end</h3>
-<div className="style_divv">
-    يتم وضع العناصر في نهاية الحاوية
-</div>
-<div className="sum_exemple_style">
-<div className="mital">متال  :  </div>
-<img src={images.css48_justify_content2} className="img"/>
-<img src={images.css48_justify_content2_2} className="img"/>
-</div>
-<h3>3. القيمة center</h3>
-<div className="style_divv">
-    يتم وضع العناصر في وسط الحاوية      
-</div>
-<div className="sum_exemple_style">
-<div className="mital">متال :  </div>
-<img src={images.css48_justify_content3} className="img"/>
-<img src={images.css48_justify_content3_2} className="img"/>
-</div>
-<h3>4. القيمة space-between</h3>
-<div className="style_divv">
-    العناصر سيكون لها مسافة بينهما     
-</div>
-<div className="sum_exemple_style">
-<div className="mital">متال :  </div>
-<img src={images.css48_justify_content4} className="img"/>
-<img src={images.css48_justify_content4_2} className="img"/>
-</div>
-<h3>5. القيمة space-around</h3>
-<div className="style_divv">
-    سيكون للعناصر مسافة قبلها وفيما بينها وبعدها    
-</div>
-<div className="sum_exemple_style">
-<div className="mital">متال :  </div>
-<img src={images.css48_justify_content5} className="img"/>
-<img src={images.css48_justify_content5_2} className="img"/>
-</div>
-<h3>6. القيمة space-evenly</h3>
-<div className="style_divv">
-    سيكون للعناصر مساحة متساوية حولها    
-</div>
-<div className="sum_exemple_style">
-<div className="mital">متال :  </div>
-<img src={images.css48_justify_content6} className="img"/>
-<img src={images.css48_justify_content6_2} className="img"/>
-</div>
-<h3>7. متال تفاعلي تجربي </h3>
-<ul><li> قم بنقر على الأزرار أسفله لتغيير قيمة الخاصية <b>justify-content</b>  و لفهم بشكل أفضل .</li></ul>
-{/* <div id="justify_content_exemple" className="alert p-4 rounded m-auto border border-primary border-2 text-dark" dir="ltr">
-    <div id="input_radio_box" className="border border-secondary rounded bg-light p-3" >
-        <div className="h2"> justify-content : </div>
-        <div>
-            <input type="radio" name="Ju-C" onclick="just_C(this.value)" value="flex-start" id="flex-start" /> flex-start <br/>
-            <input type="radio" name="Ju-C" onclick="just_C(this.value)" value="flex-end"/> flex-end <br/>
-            <input type="radio" name="Ju-C" onclick="just_C(this.value)" value="center"/> center <br/>
-            <input type="radio" name="Ju-C" onclick="just_C(this.value)" value="space-between"/> space-between<br/>
-            <input type="radio" name="Ju-C" onclick="just_C(this.value)" value="space-evenly"/> space-evenly<br/>
-            <input type="radio" name="Ju-C" onclick="just_C(this.value)" value="space-around"/> space-around<br/>
-        </div>
-        <div id="Code" className="mt-4 w-100">
-          <div className="h3"> Code: </div>
-          <div className="border py-2 ps-2 w-100" >
-                <span style="font-weight: 500;"> display : flex ;</span><br/>
-                <span style="font-weight: 500;">justify-content : </span> <span id="justify-content-result" style="font-weight: 500"></span>
-          </div>
-        </div>
-    </div>
-    <div className="border bg-light border-secondary" id="justify-content"> 
-        <div className="h2"> Result : </div>
-        <div id="Result">
-            <div style="background-color:violet;"></div>
-    		<div style="background-color:green;"></div>
-    		<div style="background-color:brown;"></div> 
-        </div>
-    </div>
-</div> */}
+    <article>
+        <p className="style_divv mt-5">
+            تقوم الخاصية <b>justify-content</b> بمحاذاة عناصر الحاوية المرنة عندما لا تستخدم العناصر كل المساحة المتوفرة على المحور الرئيسي (أفقيًا) .<br/>
+            تستخدم الخاصية <b>justify-content</b> مع الخاصية <b>display</b> و القيمة <b>flex</b> وتستقبل القيم التالية :
+            <ul dir="ltr">
+                <li><b>justify-content : flex-start</b></li>
+                <li><b>justify-content : flex-end</b></li>
+                <li><b>justify-content : center</b></li>
+                <li><b>justify-content : space-between</b></li>
+                <li><b>justify-content : space-around</b></li>
+                <li><b>justify-content : space-evenly</b></li>
+            </ul>
+        </p>
+    </article>
+    <article>
+        <h2 className="title-h2">1. القيمة flex-start</h2>
+        <p className="style_divv">
+            القيمة الافتراضية. يتم وضع العناصر في بداية الحاوية 
+        </p>
+        <div className="mital">متال  :  </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Justify-Content" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='CSS Justify-Content' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <div id="css-justify-content-ex1-div">
+                <div style={{backgroundColor:"blue"}}>1</div>
+                <div style={{backgroundColor:"green"}}>2</div>
+                <div style={{backgroundColor:"violet"}}>3</div>
+            </div>
+        </Result>
+    </article>
+    <article>
+        <h2 className="title-h2">2. القيمة flex-end</h2>
+        <p className="style_divv">
+            يتم وضع العناصر في نهاية الحاوية
+        </p>
+        <div className="mital">متال  :  </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple2.head} language="html" title="CSS Justify-Content" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='CSS Justify-Content' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <div id="css-justify-content-ex2-div">
+                <div style={{backgroundColor:"blue"}}>1</div>
+                <div style={{backgroundColor:"green"}}>2</div>
+                <div style={{backgroundColor:"violet"}}>3</div>
+            </div>
+        </Result>
+    </article>
+    <article>
+        <h2 className="title-h2">3. القيمة center</h2>
+        <p className="style_divv">
+            يتم وضع العناصر في وسط الحاوية      
+        </p>
+        <div className="mital">متال :  </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple3.head} language="html" title="CSS Justify-Content" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='CSS Justify-Content' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <div id="css-justify-content-ex3-div">
+                <div style={{backgroundColor:"blue"}}>1</div>
+                <div style={{backgroundColor:"green"}}>2</div>
+                <div style={{backgroundColor:"violet"}}>3</div>
+            </div>
+        </Result>
+    </article>
+    <article>
+        <h2 className="title-h2">4. القيمة space-between</h2>
+        <p className="style_divv">
+            العناصر سيكون لها مسافة بينهما     
+        </p>
+        <div className="mital">متال :  </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple4.head} language="html" title="CSS Justify-Content" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='CSS Justify-Content' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <div id="css-justify-content-ex4-div">
+                <div style={{backgroundColor:"blue"}}>1</div>
+                <div style={{backgroundColor:"green"}}>2</div>
+                <div style={{backgroundColor:"violet"}}>3</div>
+            </div>
+        </Result>
+    </article>
+    <article>
+        <h2 className="title-h2">5. القيمة space-around</h2>
+        <p className="style_divv">
+            سيكون للعناصر مسافة قبلها وفيما بينها وبعدها    
+        </p>
+        <div className="mital">متال :  </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple5.head} language="html" title="CSS Justify-Content" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='CSS Justify-Content' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <div id="css-justify-content-ex5-div">
+                <div style={{backgroundColor:"blue"}}>1</div>
+                <div style={{backgroundColor:"green"}}>2</div>
+                <div style={{backgroundColor:"violet"}}>3</div>
+            </div>
+        </Result>
+    </article>
+    <article>
+        <h2 className="title-h2">6. القيمة space-evenly</h2>
+        <p className="style_divv">
+            سيكون للعناصر مساحة متساوية حولها    
+        </p>
+        <div className="mital">متال :  </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple6.head} language="html" title="CSS Justify-Content" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='CSS Justify-Content' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <div id="css-justify-content-ex6-div">
+                <div style={{backgroundColor:"blue"}}>1</div>
+                <div style={{backgroundColor:"green"}}>2</div>
+                <div style={{backgroundColor:"violet"}}>3</div>
+            </div>
+        </Result>
+    </article>
+    <article>
+        <div   div className="mital"> متال توضيحي تفاعلي  : </div> 
+        <InteractivCss 
+          property="justify-content" 
+          value={selectedValue}
+          textInResult={
+                        <div id="Result" ref={resultRef}>
+                            <div style={{backgroundColor:"violet"}}></div>
+    	                  	<div style={{backgroundColor:"green"}}></div>
+    	                  	<div style={{backgroundColor:"brown"}}></div> 
+                        </div>
+                        }
+        >
+            <ul className="p-0">
+                <li><input type="checkbox" name="bo-sh6" ref={inputRef} onChange={handleJustifyContent} checked={selectedValue === 'flex-start'} value="flex-start" /> &nbsp; flex-start</li>
+                <li><input type="checkbox" name="bo-sh6" onChange={handleJustifyContent} checked={selectedValue === 'flex-end'} value="flex-end"/> &nbsp; flex-end </li>
+                <li><input type="checkbox" name="bo-sh6" onChange={handleJustifyContent} checked={selectedValue === 'center'} value="center"/> &nbsp; center </li>
+                <li><input type="checkbox" name="bo-sh6" onChange={handleJustifyContent} checked={selectedValue === 'space-between'} value="space-between"/> &nbsp; space-between</li>
+                <li><input type="checkbox" name="bo-sh6" onChange={handleJustifyContent} checked={selectedValue === 'space-evenly'} value="space-evenly"/> &nbsp; space-evenly</li>
+                <li><input type="checkbox" name="bo-sh6" onChange={handleJustifyContent} checked={selectedValue === 'space-around'} value="space-around"/> &nbsp; space-around</li>
+            </ul>
+        </InteractivCss>
+    </article>
 </section>
 )
 }

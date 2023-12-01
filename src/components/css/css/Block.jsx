@@ -35,11 +35,11 @@ export default function Block(props){
         <Result title='CSS Block' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <i className="css-block-ex1-i"> i - {">"} Inline </i>
             <span className="css-block-ex1-span"> span -{">"} Inline </span>
-            <a className="css-block-ex1-a"> a -{">"} Inline </a>
+            <span className="css-block-ex1-a"> a -{">"} Inline </span>
             <hr/>
             <i className="css-block-ex1-i d-block"> i -{">"} Block </i>
             <span className="css-block-ex1-i d-block"> SPAN -{">"} Block </span>
-            <a className="css-block-ex1-i d-block"> a -{">"} Block </a>
+            <span className="css-block-ex1-i d-block"> a -{">"} Block </span>
         </Result>
     </article>
 </section>

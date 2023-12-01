@@ -1,19 +1,80 @@
-.RAng_class{
-    width: 100% ;
+.css-filter-ex1-parent{  display: flex; }
+.css-filter-ex1-div1 , .css-filter-ex1-div2{ width: 30%; margin: auto; margin: 10%; }
+.css-filter-ex1-img{
+    width: 100%;
 }
-#img_test{
-    box-sizing:border-box;border: 7px solid black; width:70%;margin: 50px 15%;
+.css-filter-ex1-img2{
+    filter: blur(4px);
 }
-.value {
-    background-color:black;
-    border:8px solid orangered;padding: 9px 0px;text-align: center;
-    color: white;
+
+/************************************/
+
+.css-filter-ex2-parent{ display: flex; }
+.css-filter-ex2-div1 , .css-filter-ex2-div2{ width: 30%; margin: auto; margin: 10%; }
+.css-filter-ex2-img{ width: 100%; }
+.css-filter-ex2-img1{
+    filter: brightness(40%);
 }
-#blur_exemple{ display: flex; justify-content: space-around; background-color:azure; }
-#input_radio_box{ box-shadow:5px 5px 20px rgba(0 0 0/30%); align-self:center; width: 40%; min-height: 400px; }
-#Blur_E{ width: 40%; box-shadow:3px 3px 20px rgba(0 0 0 /30%); min-height:400px; }
-@media only  screen and (max-width:903px) {
-    #blur_exemple{flex-direction: column;}
-    #input_radio_box{ width: 100%; min-height: 90px; margin-bottom: 27px; }
-    #Blur_E{ width: 100%; min-height: 90px; }
+.css-filter-ex2-img2{
+    filter: brightness(160%);
+}
+
+/************************************/
+
+.css-filter-ex3-parent{ display: flex;}
+.css-filter-ex3-div1 , .css-filter-ex3-div2{ width: 30%; margin: auto; margin: 10%; }
+.css-filter-ex3-img{ width: 100%; }
+.css-filter-ex3-img1{
+    filter: contrast(9%);
+}
+.css-filter-ex3-img2{
+    filter: contrast(200%);
+}
+
+/************************************/
+
+.css-filter-ex4-parent{ display: flex; }
+.css-filter-ex4-div1 , .css-filter-ex4-div2{ width: 30%; margin: auto; margin: 10%;}
+.css-filter-ex4-img{ width: 100%; }
+.css-filter-ex4-img1{
+    filter: grayscale(50%);
+}
+.css-filter-ex4-img2{
+    filter: grayscale(100%);
+}
+
+/************************************/
+
+.css-filter-ex5-parent{ display: flex; }
+.css-filter-ex5-div1 , .css-filter-ex5-div2{ width: 30%; margin: auto; margin: 10%;}
+.css-filter-ex5-img{ width: 100%; }
+.css-filter-ex5-img1{
+    filter: hue-rotate(20deg);
+}
+.css-filter-ex5-img2{
+    filter: hue-rotate(300deg);
+}
+
+/************************************/
+
+.css-filter-ex6-parent{ display: flex; }
+.css-filter-ex6-div1 , .css-filter-ex6-div2{ width: 30%; margin: auto; margin: 10%;}
+.css-filter-ex6-img{ width: 100%; }
+.css-filter-ex6-img1{
+    filter: invert(60%);
+}
+.css-filter-ex6-img2{
+    filter: invert(100%);
+}
+
+/************************************/
+
+.css-filter-ex7-parent{ display: flex; }
+.css-filter-ex7-div1 , .css-filter-ex7-div2{ width: 30%; margin: auto; margin: 10%;}
+.css-filter-ex7-img{ width: 100%; }
+.css-filter-ex7-img1{
+    filter: sepia(50%);
+}
+.css-filter-ex7-img2{
+    filter: sepia(200%);
 }

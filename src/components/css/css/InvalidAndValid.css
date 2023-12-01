@@ -1,5 +1,16 @@
-input{ border-radius:9px; border: 2px solid black; outline: 0px; width:40%;height: 40px; }
-#email:invalid{ border: 2px solid darkred; background-color: red; color:aliceblue; font-size: xx-large; }
-#Email:valid{ border: 2px solid green; color: blueviolet;background-color: black;  }
-#emaiL:invalid{ border: 2px solid darkred; color: white ;background-color: red;  }
-#emaiL:valid  { border: 2px solid green; color: blueviolet;background-color: black;  }
+#css-invalid-ex1:invalid{ 
+    border: 2px solid red; 
+    outline: none;
+}
+
+
+.css-invalid-ex2-input {
+    width: 50%;
+    border-radius: 6px;
+    height: 44px;
+    outline: none;
+}
+#css-invalid-ex2-Email:invalid{  border: 2px solid red; }
+#css-invalid-ex2-Email:valid  {    border: 2px solid green; }
+#css-invalid-ex2-email:invalid{ border: 2px solid darkred; color: white ;background-color: red;  }
+#css-invalid-ex2-email:valid  { border: 2px solid green; background-color: greenyellow;  }

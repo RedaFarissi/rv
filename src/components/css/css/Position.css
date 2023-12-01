@@ -1,0 +1,14 @@
+.css-position-ex1-div { width: 90px; height: 90px; color: white; }
+.css-position-ex1-posi1 { background-color: blue; }
+.css-position-ex1-posi2 { background-color: red; position: relative; left: 9%; top: 40px;}
+.css-position-ex1-posi3 { background-color: green; }
+
+
+.css-position-ex2-div_relative { background-color: fuchsia; border: 3px solid blue; width: 70%; height: 20vh; color: white; position: relative;}
+.css-position-ex2-div_absolute { background-color: blue; border: 3px solid greenyellow; width: 50%; height: 10vh; position: absolute; left: 50%; top: 50%;}
+
+/***************************************/
+.css-position-ex3-div { width: 200px; height: 200px; color: white;}
+.css-position-ex3-div_absol { background-color: red;}
+.css-position-ex3-div_abso2 { background-color: blue; position: absolute; left: 150px; top: 90px;}
+.css-position-ex3-div_abso3 { background-color: green;}

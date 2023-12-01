@@ -1,19 +1,81 @@
 
-import { CodeHighlighter ,  Result} from "../../path";
+import { CodeHighlighter ,  Result , InteractivCss} from "../../path";
+import { useState , useRef ,useEffect} from "react";
 import images from "../imagesCss";
+import "./FlexWrap.css"
 
 export default function FlexWrap(props){
-// function FlexWrap(value){
-//     document.getElementById("Rseult").style.flexWrap = value
-//     document.getElementById("flex-wrap-result").innerHTML = value +";"
-// }
-// function align_Content(value){
-//     document.getElementById("Rseult2").style.alignContent = value
-//     document.getElementById("flex-wrap-result2").innerHTML = value +";"
-// }
-// document.getElementById("Wrap-first").click()
-// document.getElementById("wrap2").click()
+    const codeExemple1= { 
+    head:`  
+    <style> 
+        .h2{ 
+            font-size: xx-large; 
+            direction:rtl; 
+        }
+        #div{ 
+            display: flex;  
+            width:100%; 
+            flex-wrap: wrap;
+        }
+        #div2{ 
+            display: flex;  
+            width:100%;
+        }
+        #div div , #div2 div{ 
+            width: 30%; 
+            margin:1.5%; 
+            height:90px; 
+            font-size: xx-large; 
+            text-align: center; 
+            line-height: 90px;
+        }    
+    </style>`,
+    code:`      <h2 class="h2"><bdi> With flex-wrap </bdi> .</h2>
+      <div id="div" style="border: 2px solid black;"> 
+          <div style="background-color:red">1</div>
+          <div style="background-color:green">2</div>
+          <div style="background-color:pink">3</div>
+          <div style="background-color:yellow">4</div>
+          <div style="background-color:rgb(200,0,100)">5</div>
+          <div style="background-color:darkorange">6</div>
+          <div style="background-color:gray">7</div>
+          <div style="background-color:aqua">8</div>
+      </div>
+      <h2 class="h2"><bdi> Without flex-wrap </bdi></h2>
+      <div id="div2" style="border:2px solid black;"> 
+          <div style="background-color:red;">A</div>
+          <div style="background-color:green;">B</div>
+          <div style="background-color:pink;">C</div>
+          <div style="background-color:yellow;">D</div>
+          <div style="background-color:rgb(200,0,100);">E</div>
+          <div style="background-color:darkorange;">F</div>
+          <div style="background-color:gray;">G</div>
+          <div style="background-color:aqua;">H</div>
+      </div>`
+    }
+    const [selectedValue1, setSelectedValue1] = useState("nowrap");
+    const resultRef1 = useRef()
+    const inputRef1 = useRef()
+    const handleFlexWrap1 = (event) => {
+      const { value } = event.target;
+      setSelectedValue1(value);
+      resultRef1.current.style.flexWrap = value
+    };
+    
 
+    const [selectedValue2, setSelectedValue2] = useState("flex-start");
+    const resultRef2 = useRef()
+    const inputRef2 = useRef()
+    const handleFlexWrap2 = (event) => {
+      const { value } = event.target;
+      setSelectedValue2(value);
+      resultRef2.current.style.alignContent = value
+    };
+
+    useEffect(() => {
+      inputRef1.current.click();
+      inputRef2.current.click();
+    }, []);
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-css-color"> CSS Flex-Wrap </h1>
@@ -28,91 +90,83 @@ export default function FlexWrap(props){
             </ul>
         </p>
     </article>
-<h3>1. الخاصية flex-wrap </h3>
-<div class="sum_exemple_style">
-    <div class="mital">متال : </div>
-    <img src={images.css47_flex_wrap} class="img"/>
-    <div class="style-result">
-        <h2 class="h2"><bdi> عند إستعمال الخاصية  flex-wrap: wrap </bdi> .</h2>
-    	<div id="div" style={{border:"2px solid black"}}> 
-    		<div style={{backgroundColor:"red"}}>1</div>
-    		<div style={{backgroundColor:"green"}}>2</div>
-    		<div style={{backgroundColor:"pink"}}>3</div>
-    		<div style={{backgroundColor:"yellow"}}>4</div>
-    		<div style={{backgroundColor:"rgb(200,0,100)"}}>5</div>
-    		<div style={{backgroundColor:"darkorange"}}>6</div>
-    		<div style={{backgroundColor:"gray"}}>7</div>
-    		<div style={{backgroundColor:"aqua"}}>8</div>
-    	</div>
-    	<h2 class="h2"><bdi> بدون إستعمال الخاصية flex-wrap </bdi></h2>
-    	<div id="div2" style={{border:"2px solid black"}}> 
-    		<div style={{backgroundColor:"red"}}>A</div>
-    		<div style={{backgroundColor:"green"}}>B</div>
-    		<div style={{backgroundColor:"pink"}}>C</div>
-    		<div style={{backgroundColor:"yellow"}}>D</div>
-    		<div style={{backgroundColor:"rgb(200,0,100)"}}>E</div>
-    		<div style={{backgroundColor:"darkorange"}}>F</div>
-    		<div style={{backgroundColor:"gray"}}>G</div>
-    		<div style={{backgroundColor:"aqua"}}>H</div>
-    	</div>
-    </div>
-</div>
-<div class="mital">متال 2 : </div>
-{/* <div class="wrap_exemple alert p-3 rounded m-auto border border-primary border-2 text-dark" dir="ltr">
-    <div class="input_radio_box border border-secondary rounded bg-light p-3">
-        <div class="h2" style="text-align:left;"> <bdi>flex-wrap :</bdi> </div>
-        <div>
-            <input type="radio" name="bo-sh" onclick="FlexWrap(this.value)" value="wrap" id="Wrap-first"/> wrap  <br>
-            <input type="radio" name="bo-sh" onclick="FlexWrap(this.value)" value="nowrap"/> nowrap <br>
-            <input type="radio" name="bo-sh" onclick="FlexWrap(this.value)" value="wrap-reverse"/> wrap-reverse 
+    <article>
+        <h2 className="title-h2">1. الخاصية flex-wrap </h2>
+        <div class="sum_exemple_style">
+            <div class="mital">متال : </div>
+            <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Height" addClass="mt-3 mb-3" copie={true}/>
+            <Result title='CSS Height' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+                <h2 class="css-flex-wrap-ex1-h2"><bdi> With flex-wrap </bdi> .</h2>
+            	<div id="css-flex-wrap-ex1-div" style={{border:"2px solid black"}}> 
+            		<div style={{backgroundColor:"red"}}>1</div>
+            		<div style={{backgroundColor:"green"}}>2</div>
+            		<div style={{backgroundColor:"pink"}}>3</div>
+            		<div style={{backgroundColor:"yellow"}}>4</div>
+            		<div style={{backgroundColor:"rgb(200,0,100)"}}>5</div>
+            		<div style={{backgroundColor:"darkorange"}}>6</div>
+            		<div style={{backgroundColor:"gray"}}>7</div>
+            		<div style={{backgroundColor:"aqua"}}>8</div>
+            	</div>
+            	<h2 class="css-flex-wrap-ex1-h2"><bdi> Without flex-wrap </bdi></h2>
+            	<div id="css-flex-wrap-ex1-div2" style={{border:"2px solid black"}}> 
+            		<div style={{backgroundColor:"red"}}>A</div>
+            		<div style={{backgroundColor:"green"}}>B</div>
+            		<div style={{backgroundColor:"pink"}}>C</div>
+            		<div style={{backgroundColor:"yellow"}}>D</div>
+            		<div style={{backgroundColor:"rgb(200,0,100)"}}>E</div>
+            		<div style={{backgroundColor:"darkorange"}}>F</div>
+            		<div style={{backgroundColor:"gray"}}>G</div>
+            		<div style={{backgroundColor:"aqua"}}>H</div>
+            	</div>
+            </Result>
         </div>
-        <div id="Code" class="mt-4 w-100">
-          <div class="h3"> Code: </div>
-          <div class="border py-2 ps-2 w-100" >
-              <span style="font-weight: 500;">flex-wrap : </span> <span id="flex-wrap-result" style="font-weight: 500"></span>
-          </div>
-      </div>
-    </div>
-    <div class="flex-wrap border bg-light border-secondary p-2">
-        <div class="h2" style="text-align:left;"> <bdi>Result :</bdi> </div>
-        <div id="Rseult">
-            <div style="background-color:green;"></div>
-            <div style="background-color:crimson;"></div>
-            <div style="background-color:blue;"></div>
-        </div>
-    </div>
-</div> */}
-<ul><li>لاحض أنه يتم إضافة فراغ بين العناصر الأبناء تلقائيا </li></ul>
-<h3>2.  الخاصية flex-content</h3>
-<p class="style_divv">
-    تعدل خاصية <b>align-content</b> سلوك الخاصية <b>flex-wrap</b>. وذالك بإزالة الفراغات بين العناصر .<br/>
-</p>
-<div class="mital">متال  : </div>
-{/* <div class="wrap_exemple alert p-3 rounded m-auto border border-primary border-2 text-dark" dir="ltr">
-    <div class="input_radio_box border border-secondary rounded bg-light p-3" >
-        <div class="h2" style="text-align:left;"> <bdi>align-content :</bdi>  </div>
-        <div>
-            <input type="radio" name="bo-sh" onclick="align_Content(this.value)" value="flex-start" id="wrap2" /> flex-start  <br>
-            <input type="radio" name="bo-sh" onclick="align_Content(this.value)" value="center"/> center <br>
-            <input type="radio" name="bo-sh" onclick="align_Content(this.value)" value="flex-end"/> flex-end 
-        </div>
-        <div id="Code" class="mt-4 w-100">
-          <div class="h3"> Code: </div>
-          <div class="border py-2 ps-2 w-100" >
-              <span style="font-weight: 500;">align-content : </span> <span id="flex-wrap-result2" style="font-weight: 500"></span>
-          </div>
-      </div>
-    </div>
-    <div class="flex-wrap border bg-light border-secondary p-2">
-        <div class="h2"> Result: </div>
-        <div id="Rseult2">
-            <div style="background-color:green;"></div>
-            <div style="background-color:crimson"></div>
-            <div style="background-color:blue;"></div>
-        </div>
-    </div>
-</div> */}
-
+        <div className="mital"> متال توضيحي تفاعلي  : </div> 
+        <InteractivCss 
+          property="flex-wrap" 
+          value={selectedValue1}  
+          textInResult={
+                    <div id="css-flex-wrap-ex2-Rseult" ref={resultRef1}>
+                        <div style={{backgroundColor: "green"}}>1</div>
+                        <div style={{backgroundColor: "crimson"}}>2</div>
+                        <div style={{backgroundColor: "blue"}}>3</div>
+                        <div style={{backgroundColor: "gray"}}>4</div>
+                        <div style={{backgroundColor: "red"}}>5</div>
+                    </div>
+                    }
+        >
+            <ul className="p-0">
+                <li><input type="checkbox" name="bo-sh6" ref={inputRef1} onChange={handleFlexWrap1} checked={selectedValue1 === 'nowrap'} value="nowrap"/> &nbsp; nowrap </li>
+                <li><input type="checkbox" name="bo-sh6" onChange={handleFlexWrap1} checked={selectedValue1 === 'wrap'} value="wrap" /> &nbsp; wrap</li>
+                <li><input type="checkbox" name="bo-sh6" onChange={handleFlexWrap1} checked={selectedValue1 === 'wrap-reverse'} value="wrap-reverse"/> &nbsp; wrap-reverse </li>
+            </ul>
+        </InteractivCss>
+       
+        <ul><li>لاحض أنه يتم إضافة فراغ بين العناصر الأبناء تلقائيا </li></ul>
+    </article>
+    <article>
+        <h2 className="title-h2">2.  الخاصية flex-content</h2>
+        <p class="style_divv">
+            تعدل خاصية <b>align-content</b> سلوك الخاصية <b>flex-wrap</b>. وذالك بإزالة الفراغات بين العناصر .<br/>
+        </p>
+        <div className="mital"> متال توضيحي تفاعلي  : </div> 
+        <InteractivCss 
+          property="align-content" 
+          value={selectedValue2}            
+          textInResult={
+                    <div id="Rseult2" ref={resultRef2}>
+                        <div style={{backgroundColor: "green"}}>1</div>
+                        <div style={{backgroundColor: "crimson"}}>2</div>
+                        <div style={{backgroundColor: "blue"}}>3</div>
+                    </div>
+                    }
+        >
+            <ul className="p-0">
+                <li><input type="checkbox" name="bo-sh6" ref={inputRef2} onChange={handleFlexWrap2} checked={selectedValue2 === 'flex-start'} value="flex-start"/> &nbsp; flex-start </li>
+                <li><input type="checkbox" name="bo-sh6" onChange={handleFlexWrap2} checked={selectedValue2 === 'center'} value="center" /> &nbsp; center</li>
+                <li><input type="checkbox" name="bo-sh6" onChange={handleFlexWrap2} checked={selectedValue2 === 'flex-end'} value="flex-end"/> &nbsp; flex-end </li>
+            </ul>
+        </InteractivCss>
+    </article>
 </section>
 )
 }

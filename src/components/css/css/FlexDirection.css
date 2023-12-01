@@ -1,14 +1,5 @@
-.Fl { display: flex; background-color: yellow;flex-direction: column; }
-	.Fl div {
-	    width: 40px;background-color: yellowgreen; margin: 9px; padding: 9px;
-	    font-size: 30px;border:2px solid blueviolet;outline:2px solid blue;outline-offset:6px;
-	}
-    #flex_direction_exemple{ display: flex; justify-content: space-around; background-color:azure; }
-    #input_radio_box{ box-shadow:5px 5px 20px rgba(0 0 0/30%); align-self:center; width: 40%; min-height: 350px; }
-    #flexDirection{ width: 40%; box-shadow:3px 3px 20px rgba(0 0 0 /30%); min-height:350px; }
-    @media only  screen and (max-width:903px) {
-        #flex_direction_exemple{ flex-direction: column; }
-        #input_radio_box{ width: 100%; min-height: 90px; margin-bottom: 27px; }
-        #Code{ margin-bottom: 20px; }
-        #flexDirection{ width: 100%; min-height: 90px; }
-    }
+.css-flex-direction-ex1-box { display: flex; background-color: yellow;flex-direction: column; }
+.css-flex-direction-ex1-box div {
+    width: 40px;background-color: yellowgreen; margin: 9px; padding: 9px;
+    font-size: 30px;border:2px solid blueviolet;outline:2px solid blue;outline-offset:6px;
+}

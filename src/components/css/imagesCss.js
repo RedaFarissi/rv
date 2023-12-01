@@ -308,8 +308,10 @@ const images = {
 
     //images to test
     orange,orange1,orange2,orange3,ob_pc,img_forest,
+    
     //codes
     css0_Introduction ,
+    
     css12_text_decoration_2,css12_text_decoration,
     css12_text_decoration2_2,css12_text_decoration2,css12_text_decoration3_2,
     css12_text_decoration3,css12_text_decoration4_2,css12_text_decoration4,

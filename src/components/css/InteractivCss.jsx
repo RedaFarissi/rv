@@ -8,11 +8,11 @@ export default function InteractivCss(props){
           {props.children}
       </div>
       <div className="col-lg-6 result">
-          <div className={`bg-light w-100 class-parent ${props.classParent}`} >
-            <div className={props.classChild} ref={props.resultRef}>
-                 {props.textInResult} 
+            <div className={`bg-light w-100 class-parent ${props.classParent}`} >
+              <div className={props.classChild} ref={props.resultRef}>
+                   {props.textInResult} 
+              </div>
             </div>
-          </div>
       </div>
   </div>
     )

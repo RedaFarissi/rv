@@ -1,0 +1,11 @@
+#css-quotes-ex1-a {
+  quotes: """ """;
+}
+
+#css-quotes-ex1-b {
+  quotes: "(" ")" ''' ''';
+}
+
+#css-quotes-ex1-c {
+  quotes: "<" ">"  "(" ")";
+}

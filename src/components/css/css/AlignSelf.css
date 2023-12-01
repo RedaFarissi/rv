@@ -1,0 +1,11 @@
+#css-align-self-ex1-div {
+    border: 2px solid black;
+    height: 400px;
+    display: flex;
+    align-items: stretch;
+}
+
+#css-align-self-ex1-div div {
+    width: 15%;
+    height: 90px;
+}

@@ -171,7 +171,6 @@ export default function Perspective(props){
         </p>
 
         <div className="mital"> متال : </div>
-        <img src={images.css64_perspective3} className="img"/>
         <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" title="CSS Perspective" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Perspective' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="css-perspective-ex3-style css-perspective-ex3-div1"> 

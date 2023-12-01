@@ -1,11 +1,94 @@
-#justify_content_exemple{ display: flex; justify-content: space-around; background-color:azure; }
-.input_radio_box{ box-shadow:5px 5px 20px rgba(0 0 0/30%); align-self:center; width: 40%; min-height: 450px; }
-#justify-content{ width: 40%; box-shadow:3px 3px 20px rgba(0 0 0 /30%); min-height:450px; }
-#Result{display:flex; background-color:azure;  border:2px solid black; height: 305px;margin-top: 20px;}
-#Result div{width:25%; height:90px;background-color : azure;border:1px solid black}
-@media only  screen and (max-width:903px) {
-    #justify_content_exemple{ flex-direction: column; }
-    .input_radio_box{ width: 100%; margin-bottom: 27px; }
-    #Code{ margin-bottom: 20px; }
-    #justify-content{ width: 100%;  margin-top :30px;}
+#css-justify-content-ex1-div{
+    border: 2px solid black;
+    display: flex;
+    justify-content: flex-start;
+}
+#css-justify-content-ex1-div> div{
+    padding:  30px 45px;
+    font-size: 45px;
+    border:4px solid brown;
+}
+
+/********************************/
+
+#css-justify-content-ex2-div{
+    border: 2px solid black;
+    display: flex;
+    justify-content: flex-end;
+}
+#css-justify-content-ex2-div> div{
+    padding:  30px 45px;
+    font-size: 45px;
+    border:4px solid brown;
+}
+
+/********************************/
+
+#css-justify-content-ex3-div{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+}
+#css-justify-content-ex3-div> div{
+    padding:  30px 45px;
+    font-size: 45px;
+    border:4px solid brown;
+}
+
+/********************************/
+
+#css-justify-content-ex4-div{
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+#css-justify-content-ex4-div> div{
+    padding:  30px 45px;
+    font-size: 45px;
+    border:4px solid brown;
+}
+
+/********************************/
+
+#css-justify-content-ex5-div{
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+}
+#css-justify-content-ex5-div> div{
+    padding:  30px 45px;
+    font-size: 45px;
+    border:4px solid brown;
+}
+
+/********************************/
+
+#css-justify-content-ex6-div{
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-evenly;
+}
+#css-justify-content-ex6-div> div{
+    padding:  30px 45px;
+    font-size: 45px;
+    border:4px solid brown;
+}
+
+
+/********************************/
+
+
+
+
+#Result{
+    display:flex; 
+    background-color:azure;  
+    height: 305px;
+    margin-top: 20px;
+}
+#Result div{
+    width:20%; 
+    height:70px;
+    background-color : azure;
+    border:1px solid black
 }

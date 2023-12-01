@@ -1,36 +1,35 @@
-.alias {cursor: alias;}
-.all-scroll {cursor: all-scroll;}
-.auto {cursor: auto;}
-.cell {cursor: cell;}
-.context-menu {cursor: context-menu;}
-.col-resize {cursor: col-resize;}
-.copy {cursor: copy;}
-.crosshair {cursor: crosshair;}
-.default {cursor: default;}
-.e-resize {cursor: e-resize;}
-.ew-resize {cursor: ew-resize;}
-.grab {cursor: -webkit-grab; cursor: grab;}
-.grabbing {cursor: -webkit-grabbing; cursor: grabbing;}
-.help {cursor: help;}.move {cursor: move;}
-.n-resize {cursor: n-resize;}
-.ne-resize {cursor: ne-resize;}
-.nesw-resize {cursor: nesw-resize;}
-.ns-resize {cursor: ns-resize;}
-.nw-resize {cursor: nw-resize;}
-.nwse-resize {cursor: nwse-resize;}
-.no-drop {cursor: no-drop;}
-.none {cursor: none;}
-.not-allowed {cursor: not-allowed;}
-.pointer {cursor: pointer;}
-.progress {cursor: progress;}
-.row-resize {cursor: row-resize;}
-.s-resize {cursor: s-resize;}
-.se-resize {cursor: se-resize;}
-.sw-resize {cursor: sw-resize;}
-.text {cursor: text;}
-.url {cursor: url(myBall
-    .cur),auto;}
-.w-resize {cursor: w-resize;}
-.wait {cursor: wait;}
-.zoom-in {cursor: zoom-in;}
-.zoom-out {cursor: zoom-out;}
+.alias {cursor: alias; padding: 20px; border: 2px solid black; margin: 9px;}
+.all-scroll {cursor: all-scroll;  padding: 20px; border: 2px solid black; margin: 9px;}
+.auto {cursor: auto;  padding: 20px; border: 2px solid black; margin: 9px;}
+.cell {cursor: cell;  padding: 20px; border: 2px solid black; margin: 9px;}
+.context-menu {cursor: context-menu;  padding: 20px; border: 2px solid black; margin: 9px;}
+.col-resize {cursor: col-resize;  padding: 20px; border: 2px solid black; margin: 9px;}
+.copy {cursor: copy;  padding: 20px; border: 2px solid black; margin: 9px;}
+.crosshair {cursor: crosshair;  padding: 20px; border: 2px solid black; margin: 9px;}
+.default {cursor: default;  padding: 20px; border: 2px solid black; margin: 9px;}
+.e-resize {cursor: e-resize;  padding: 20px; border: 2px solid black; margin: 9px;}
+.ew-resize {cursor: ew-resize;  padding: 20px; border: 2px solid black; margin: 9px;}
+.grab {cursor: -webkit-grab; cursor: grab;  padding: 20px; border: 2px solid black; margin: 9px;}
+.grabbing {cursor: -webkit-grabbing; cursor: grabbing;  padding: 20px; border: 2px solid black; margin: 9px;}
+.help {cursor: help; padding: 20px; border: 2px solid black; margin: 9px;}
+.move {cursor: move;  padding: 20px; border: 2px solid black; margin: 9px;}
+.n-resize {cursor: n-resize;  padding: 20px; border: 2px solid black; margin: 9px;}
+.ne-resize {cursor: ne-resize;  padding: 20px; border: 2px solid black; margin: 9px;}
+.nesw-resize {cursor: nesw-resize;  padding: 20px; border: 2px solid black; margin: 9px;}
+.ns-resize {cursor: ns-resize;  padding: 20px; border: 2px solid black; margin: 9px;}
+.nw-resize {cursor: nw-resize;  padding: 20px; border: 2px solid black; margin: 9px;}
+.nwse-resize {cursor: nwse-resize;  padding: 20px; border: 2px solid black; margin: 9px;}
+.no-drop {cursor: no-drop;  padding: 20px; border: 2px solid black; margin: 9px;}
+.none {cursor: none;  padding: 20px; border: 2px solid black; margin: 9px;}
+.not-allowed {cursor: not-allowed;  padding: 20px; border: 2px solid black; margin: 9px;}
+.pointer {cursor: pointer;  padding: 20px; border: 2px solid black; margin: 9px;}
+.progress {cursor: progress; display: block; padding: 30px; border: 2px solid black; margin: 9px;}
+.row-resize {cursor: row-resize;  padding: 20px; border: 2px solid black; margin: 9px;}
+.s-resize {cursor: s-resize;  padding: 20px; border: 2px solid black; margin: 9px;}
+.se-resize {cursor: se-resize;  padding: 20px; border: 2px solid black; margin: 9px;}
+.sw-resize {cursor: sw-resize;  padding: 20px; border: 2px solid black; margin: 9px;}
+.text {cursor: text;  padding: 20px; border: 2px solid black; margin: 9px;}
+.w-resize {cursor: w-resize;  padding: 20px; border: 2px solid black; margin: 9px;}
+.wait {cursor: wait;  padding: 20px; border: 2px solid black; margin: 9px;}
+.zoom-in {cursor: zoom-in;  padding: 20px; border: 2px solid black; margin: 9px;}
+.zoom-out {cursor: zoom-out;  padding: 20px; border: 2px solid black; margin: 9px;}

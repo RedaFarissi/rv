@@ -1,0 +1,12 @@
+.css-list-style-type-ex1-li {font-size: xx-large;}
+.css-list-style-type-ex1-ol .css-list-style-type-ex1-li , .css-list-style-type-ex1-ul .css-list-style-type-ex1-li {list-style-type: circle;}
+
+
+
+
+
+.css-list-style-type-ex2-a {list-style-type: circle;}
+.css-list-style-type-ex2-b {list-style-type: square;}
+.css-list-style-type-ex2-c {list-style-type: upper-roman;}
+.css-list-style-type-ex2-d {list-style-type: lower-alpha;}
+.css-list-style-type-ex2-e {list-style-type: none;}

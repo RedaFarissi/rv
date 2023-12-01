@@ -1,68 +1,12 @@
-#scroll_behavior_exemple{
-    display: flex;
-    justify-content: space-around;
-    background-color:azure;
+.css-scroll-behavior-ex-link{
+    padding:9px;color:blue;
+    font-size: 20px;
 }
-#input_radio_box{
-    box-shadow:5px 5px 20px rgba(0 0 0/30%);
-    align-self:center;
-    width: 40%;
-    min-height: 320px;
-}
-#scroll-behavior{
-    width: 40%;
-    box-shadow:3px 3px 20px rgba(0 0 0 /30%);
-    min-height:320px;
-}
-@media only  screen and (max-width:903px) {
-    #scroll_behavior_exemple{
-        flex-direction: column;
-    }
-    #input_radio_box{
-        width: 100%;
-        min-height: 90px;
-        margin-bottom: 27px;
-    }
-    #Code{
-        margin-bottom: 20px;
-    }
-    #scroll-behavior{
-        width: 100%;
-        min-height: 90px;
-    }
-}
-/* ******************* */
 
-#outline_exemple{
-    display: flex;
-    justify-content: space-around;
-    background-color:azure;
-}
-#input_radio_box{
-    box-shadow:5px 5px 20px rgba(0 0 0/30%);
-    align-self:center;
-    width: 40%;
-    min-height: 400px;
-}
-#padding{
-    width: 40%;
-    box-shadow:3px 3px 20px rgba(0 0 0 /30%);
-    min-height:400px;
-}
-@media only  screen and (max-width:903px) {
-    #padding_exemple{
-        flex-direction: column;
-    }
-    #input_radio_box{
-        width: 100%;
-        min-height: 90px;
-        margin-bottom: 27px;
-    }
-    #Code{
-        margin-bottom: 20px;
-    }
-    #padding{
-        width: 100%;
-        min-height: 90px;
-    }
+#css-scroll-behavior-ex-A , #css-scroll-behavior-ex-B , #css-scroll-behavior-ex-C {
+    height:900px;
+    background-color: yellow;
+    text-align:center;
+    line-height:200px;
+    font-size: xxx-large;
 }
