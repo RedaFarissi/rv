@@ -194,11 +194,7 @@ export default function Django(props){
             <h2>9 - admin file </h2>
             <div className="  fs-5 p-4 pb-2 rounded">
             <b> helloapp/admin.py  </b><br/><br/>
-            <pre>
-               <b>from</b> django.contrib <b>import</b> admin
-               <b>from</b> .models <b>import</b> Article<br/>
-               admin.site.register(Article)
-            </pre>
+           
             <span style={{color:"green"}}>#<b><b>go to link : <a href="#">http://127.0.0.1:8000/admin/helloapp/article/add</a></b></b></span>
             </div>
          
