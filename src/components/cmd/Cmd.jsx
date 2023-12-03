@@ -5,20 +5,34 @@ import images from "./imagesCmd";
 export default function Cmd(props){
    
     const arrays = props.cmd_list.map(e => <li className="list-group-item">
-        <a href={`/power-shell#${e}`}>CMD {e.replace(/_/g, ' ')}</a>
+        <a href={`/power-shell#${e}`}><i className="fa-solid fa-caret-right me-2"></i>CMD {e.replace(/_/g, ' ')}</a>
     </li>)
 
     return(
     <main>
         <aside className="aside">
-            <h5 className="mt-3">Command Pormpt</h5>
             <ul className="list-group m-0">
                 {arrays}
             </ul>
         </aside>
         <section className="section-conetent">
-            <h1 className="heading-style heading-style-html-color"> Command Pormpt (Windows) </h1>            
+            <h1 className="heading-style heading-style-html-color"> Command Pormpt (Windows) </h1>  
+            <article>
+                <h2 id="Introduction" className="title-h2 mt-5"> 1 - ما هو Command Prompt ولماذا نستخدمه</h2>
+                <p className="style_divv">
+                    CMD، الذي يعني واجهة الأوامر، هو تطبيق مترجم الأوامر المتوفر في معظم أنظمة التشغيل في ويندوز. يوفر واجهة نصية تسمح للمستخدمين بالتفاعل مع نظام التشغيل عبر إدخال الأوامر واستلام ردود نصية. تتيح واجهة أوامر الطرفية للمستخدمين أداء مهام مختلفة، وتنفيذ أوامر النظام، وتصفح نظام الملفات باستخدام مجموعة من الأوامر المحددة.<br/><br/>
+
+                    يمكن للمستخدمين الوصول إلى واجهة أوامر الطرفية عن طريق كتابة "cmd" أو "Command Prompt" في شريط البحث في ويندوز وفتح التطبيق. بمجرد فتحه، يمكنهم إدخال الأوامر لأداء مهام مثل التلاعب في الملفات، وتكوين النظام، وتشخيص الشبكة، وغير ذلك.<br/><br/>
+
+                    تستخدم واجهة أوامر الطرفية بناءً على بنية بناء محددة للأوامر، وكل أمر يقوم بإجراء معين. يمكن للمستخدمين أيضًا إنشاء سيناريوهات الأوامر، وهي سلاسل من الأوامر المحفوظة في ملف بامتداد ".bat" لأتمتة المهام وتنفيذ متسلسل لعدة أوامر.<br/><br/>
+
+                    في حين أن إصدارات أحدث من ويندوز قد قدمت PowerShell، وهو واجهة أوامر ولغة سكريبت أقوى، إلا أن واجهة الأوامر CMD تظل أداة أساسية لمديري النظام والمطورين والمستخدمين الذين يفضلون واجهة أوامر بسيطة للتفاعل مع نظام التشغيل ويندوز.<br/><br/>
+
+                    سنتعلم في هذه الفقرة كل الأوامر الأساسية التي تحتاجها لبدء إستخدام Command Pormpt .
+                </p>
+            </article>          
             <article className="mt-5">
+                <h2 className="title-h2"> 2 - الأوامر الأكثر إستخداما</h2>
                 <h3 className="title-h3"  id="Create_Folder">1 - إنشاء مجلد </h3>
                 <CodeCommand>mkdir folder_name</CodeCommand>
                 <CodeCommand>C:\Users\SURFACE BOOK\Desktop{">"} <span className="text-warning">mkdir folder_name</span></CodeCommand>

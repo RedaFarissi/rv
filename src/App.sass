@@ -8,7 +8,7 @@
     box-sizing: border-box
 
 body
-    background-color: #171717
+    background-color: rgb(5 5 5)
     overflow-x: hidden
     color: $light
     font-size: 16px
@@ -18,7 +18,7 @@ body
         border: 0.6px solid gray
         -webkit-border-radius: 10px  
         border-radius: 8px
-    ul
+    ul , ol
         margin: 0 35px
 
 // Aside 
@@ -28,35 +28,31 @@ body
     height: calc(100vh - 130px)
     left: 0px
     bottom: 0
-    background-color: rgb(20 20 20)
+    background-color: rgb(10 10 10)
     direction: ltr
     padding: 9x
+    padding-top: 20px
     overflow-y: auto
-    overflow-x: hidden
-    font-size: 14px 
+    overflow-x: hidden 
     &::-webkit-scrollbar 
         box-sizing: border-box
-        width: 3px
+        width: 5px
     &::-webkit-scrollbar-track 
-        background: rgb(20 20 20)
+        background: rgb(30 30 30)
        
     &::-webkit-scrollbar-thumb 
-        background:  #313336
+        background:  white
         -webkit-border-radius: 10px  
         border-radius: 8px
-    h5
-        margin-left: 19px
-        font-weight: 700
-        list-style-type: circle
     ul , dl
         width: 100%
     li , .aside-dl-simple
         margin: 0 4px 
         border-radius: 3px
         border: none
-        font-size: 14.5px 
+        font-size: 13px 
         padding: 0
-        background-color: rgb(20 20 20)
+        background-color:  rgb(10 10 10)
         cursor: pointer
         font-family: "Tajawal", sans-serif
         font-weight: 650
@@ -75,6 +71,7 @@ body
 
     .aside-dl-dt
         padding: 7px 20px
+        font-size: 13px 
         a
             text-decoration: none
             color: #f0fff0
@@ -93,6 +90,10 @@ body
             border-radius: 3px 
             &:hover
                 background-color: #1f2021
+            i
+                font-size: 5px 
+                margin-right: 3px  
+                display: inline-block
         
 
 
@@ -108,9 +109,10 @@ body
 // Section 
 
 .section-conetent
-    width: calc( 100% - 365px )
-    margin: 0 50px
+    width: calc( 85% - 365px )
+    margin: 0 calc(10% - 35px)
     padding: 40px 0
+    font-size: 17px
     margin-top: 140px 
     .heading-style 
         direction: ltr
@@ -132,18 +134,22 @@ body
     .heading-style-git-color
         -webkit-text-stroke: 0.9px $git-color
         text-shadow: 0.9px 0.9px 9px $git-color
+    .heading-style-django-color
+        -webkit-text-stroke: 2px $django-color
+        text-shadow: 0.9px 0.9px 9px rgba(9 46 36)
     .img
         width: 100%
         margin: 20px  0
         border: 0.1px solid rgba(255 255 255/20%)
     .style_divv
-        background-color:  #191a1bec
-        border: 0.2px solid rgba(165 42 42/70%) //brown
+        background-color:  rgba(255 255 255/5%)
+        border: 0.2px solid gray
         padding: 20px
         border-radius: 3px
         margin-bottom: 24px 
         font-style: italic
         word-spacing: 3px 
+        font-size: 16px
     .title-h2
         font-size: 31px
         color: aqua
@@ -151,6 +157,11 @@ body
         font-size: 27px
         margin-top:17px 
         color: yellow
+    .title-h5
+        font-size: 20px
+        margin-top:15px 
+        color: rgba(99, 123 , 200 , )
+
     .style-result
         direction: ltr
         background-color: white

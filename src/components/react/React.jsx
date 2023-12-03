@@ -12,10 +12,10 @@ function React(props){
     var keys_map;
     if (keys.includes("title")) { 
       keys_map = keys.map((key) => (
-        key === "title" ? <dt className="aside-dl-dt" key={key}><a href={`/react#${e[key]}`}><i className="fa-solid fa-caret-right"></i> {e[key]}</a></dt> : <dd className="aside-dl-dd" key={key}><a href={`/react#${key}`}>{key.replace(/_/g, ' ')}</a></dd>
+        key === "title" ? <dt className="aside-dl-dt" key={key}><a href={`/react#${e[key]}`}><i className="fa-solid fa-caret-right"></i> {e[key]}</a></dt> : <dd className="aside-dl-dd" key={key}><a href={`/react#${key}`}><i class="fa-solid fa-circle"></i> {key.replace(/_/g, ' ')}</a></dd>
       ));
     } else {
-      keys_map = <dt className="aside-dl-simple" key={keys[0]}><a href={`/react#${keys[0]}`}>{keys[0].replace(/_/g, ' ')} </a></dt>;
+      keys_map = <dt className="aside-dl-simple" key={keys[0]}><a href={`/react#${keys[0]}`}><i className="fa-solid fa-caret-right"></i> {keys[0].replace(/_/g, ' ')} </a></dt>;
     }
     return keys_map
   });
@@ -23,7 +23,6 @@ function React(props){
 return(
  <main>
   <aside  className="aside">
-      <h5 className="mt-3">React Tutorials</h5>
       <dl className="list-group m-0">
         {arrays}
       </dl>

@@ -11,8 +11,8 @@ justify-content: center
 align-items: center`,
         css:`@import "./sass-flex"
 @mixin animationRotate($name , $x , $y ) 
-    animation: #{"{"}$name{"}"} 2s linear infinite
-    @keyframes #{"{"}$name{"}"}
+    animation: #{$name} 2s linear infinite
+    @keyframes #{$name}
         0%
             transform: rotateX($x) rotateY($y) rotateZ(0deg)
         100%
@@ -46,7 +46,6 @@ align-items: center`,
       </div>`
     }
     const codeExemple2= { 
-        
         css:`@import "./sass-flex"
 *
     margin: 0
@@ -124,25 +123,31 @@ container-box
 <section className="section-conetent">
     <h1 className="heading-style heading-style-css-color"> SASS ('front/css/sass.css')</h1>
     <article>
-        <h2 className="title-h2"> 1 - install sass from npm </h2>
+        <h2 className="title-h2"> 1 - تثبيت sass من npm </h2>
         <CodeCommand>npm install -g sass</CodeCommand>
         
-        <b>Get version sass </b>
+        <b>نسخة  sass </b>
         <CodeCommand>sass --version</CodeCommand>
         <ul>
-            <li> Search for "Command Prompt" or "cmd" in the Windows Start menu. </li>
-            <li> Right-click on "Command Prompt" and select "Run as administrator. </li>
-            <li> In the elevated Command Prompt, Try : </li>
+            <li>  إبحث عن "Command Prompt" أو "cmd" في قائمة ابدأ في نظام التشغيل Windows.  </li>
+            <li> انقر بزر الماوس الأيمن على "موجه الأوامر" وحدد "Run as administrator. </li>
+            <li> في موجه الأوامر المنبتق ، حاول : </li>
         </ul>
         <CodeCommand>where sass</CodeCommand>
         <ul>
-            <li>On Windows: You can add the directory to your PATH by opening the System Properties, going to the "Advanced" tab, clicking on "Environment Variables," and then editing the PATH variable to include the directory where Sass is installed.</li>
+            <li>على نظام التشغيل Windows: يمكنك إضافة الدليل إلى المسار الخاص بك عن طريق فتح خصائص النظام، والانتقال إلى علامة التبويب "Advanced"، والنقر فوق "Environment Variables"، ثم تحرير متغير PATH ليشمل الدليل الذي تم تثبيت Sass عليه.</li>
         </ul>
-        <img src={images.sass1} className="img"/>
-        <b>Create output.css with CMD </b>
-        <img src={images.sass2} className="img"/>
+        <img src={images.sass1} alt="sass" className="img"/>
+        <b> قم بإنشاء ملف  output.css باستخدام  CMD </b>
+        <img src={images.sass2} alt="sass" className="img"/>
     </article>
     <article>  
+        <h2 className="title-h2"> 2 - البدء في استخدام sass </h2>
+        <p className="style_divv">
+            الفرق بين Sass و SCSS : <br/> 
+            Sass يستخدم صيغة غير متسلسلة ويتطلب التركيز على التباعد البصري، بينما SCSS يستخدم صيغة تشبه CSS، مما يجعلها أكثر تشابهًا مع الكتابة التقليدية للـCSS. فيما يتعلق بالتركيب، Sass يعتمد على المسافات والتباعد البصري، بينما يستخدم SCSS الأقواس والنقاط والفواصل، مما يجعله أكثر تشابهًا مع بنية CSS القياسية. من حيث التوافق مع CSS، Sass ليس متوافقًا مباشرة ويتطلب تعلم بنية جديدة، بينما SCSS متوافق بشكل كامل مع CSS، مما يتيح نقل ملف CSS مباشرة إلى ملف SCSS دون أي تعديل. <br/><br/>
+            يفضل بعض المطورين استخدام Sass لمرونته وقدرته على تنظيم الأكواد، في حين يُفضل بعضهم الآخر استخدام SCSS لسهولة التكامل مع مشاريع CSS الحالية. تحديد الاختيار بين Sass و SCSS يعتمد على تفضيلات المطور وراحته في الاستخدام
+        </p>
         <div className="mital">متال :  </div>
         <CodeHighlighter file_name="_sass-flex.sass" code={codeExemple1.sassFlex} language="sass" copie={true}/>
         <CodeHighlighter file_name="index.sass" code={codeExemple1.css} language="sass" copie={true}/>

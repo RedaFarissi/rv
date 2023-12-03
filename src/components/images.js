@@ -8,7 +8,7 @@ import laravel_logo from '../assests/images/logo/laravel_logo.svg'
 import python_logo from '../assests/images/logo/python_logo.svg'
 import django_logo from '../assests/images/logo/django_logo.svg'
 import git_logo from '../assests/images/logo/git_logo.png'
-import powershell_log from '../assests/images/logo/powershell_log.svg'
+import powershell_log from '../assests/images/logo/powershell_log.png'
 
 const images = {
     //logo

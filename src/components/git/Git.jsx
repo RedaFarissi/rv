@@ -3,13 +3,12 @@ import images from "./imagesGit";
 
 export default function Git(props){
     const arrays = props.git_list.map(e => <li className="list-group-item">
-        <a href={`/git#${e}`}>GIT {e.replace(/_/g, ' ')}</a>
+        <a href={`/git#${e}`}><i className="fa-solid fa-caret-right me-1"></i> GIT {e.replace(/_/g, ' ')}</a>
     </li>);
 
     return(
         <main>
             <aside className="aside">
-                <h5 className="mt-3">Git Tutorials</h5>
                 <ul className="list-group m-0">
                     {arrays}
                 </ul>

@@ -13,14 +13,13 @@ import html_logo from "../../assests/images/logo/html_logo.png";
 export default function Html(props){
     
     const arrays = props.html_list.map(e => <li className="list-group-item">
-        <Link to={`/html/${e.toLowerCase().replace(/\s/g, '-')}`}>HTML {e}</Link>
+        <Link to={`/html/${e.toLowerCase().replace(/\s/g, '-')}`}><i className="fa-solid fa-caret-right me-1"></i> HTML {e}</Link>
     </li>)
     return(    
     <main>
         <aside className="aside">
-            <h5 className="mt-3">HTML Tutorials</h5>
             <ul className="list-group m-0">
-                {arrays}
+                 {arrays}
             </ul>
         </aside>
             <Routes>
