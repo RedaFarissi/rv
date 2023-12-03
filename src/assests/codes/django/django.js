@@ -1,6 +1,8 @@
 import {
     index2setting, index2includes_app_to_urlpatterns0 ,index2includes_app_to_urlpatterns1 ,
-    index2templates0 , index2templates1 ,index2templates2, index2urls,index2views,
+    index2templates0 , index2templates1 ,index2templates2, index2urls,index2views,index2models0,
+    index2models1,index2admin,
+
 } from "./pathCodeDjango";
 const codes = [
     {
@@ -32,9 +34,9 @@ const codes = [
         templates:[index2templates0(),index2templates1(),index2templates2(),],
         urls:[index2urls()],
         views:[index2views()],
-        models:[],
-        Administering_data_in_Django:[],
-        admin:[],
+        models:[index2models0(),index2models1()],
+        admin:[index2admin()],
+        createsuperuser:[],
         create_file_to_avoid_repeat:[],
     },
     {

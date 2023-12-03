@@ -4,6 +4,7 @@ export default function index2templates0(){
    <title> home </title>
 </head>
 <body>
+   <h1>Home</h1>
    <!-- HTML -->
 </body>
 </html>`

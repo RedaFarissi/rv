@@ -190,7 +190,6 @@ import django46  from "../../assests/images/django/django46.png"
 import django47  from "../../assests/images/django/django47.png"
 import django48  from "../../assests/images/django/django48.png"
 import django49  from "../../assests/images/django/django49.png"
-import django5   from "../../assests/images/django/django5.png"
 import django50  from "../../assests/images/django/django50.png"
 import django51  from "../../assests/images/django/django51.png"
 import django52  from "../../assests/images/django/django52.png"
@@ -246,6 +245,8 @@ import django96  from "../../assests/images/django/django96.png"
 import django97  from "../../assests/images/django/django97.png"
 import django98  from "../../assests/images/django/django98.png"
 import django99  from "../../assests/images/django/django99.png"
+import django5  from "../../assests/images/django/django5.png"
+import django5_5  from "../../assests/images/django/django5_5.png"
 import django_path from "../../assests/images/django/django_path.png"
 
 
@@ -283,7 +284,7 @@ const images = {
     django27,django28,django29,django3,django30,django31,django32,
     django33,django34,django35,django36,django37,django39,django4,
     django40,django41,django42,django43,django44,django45,django46,
-    django47,django48,django49,django5,django50,django51,django52,
+    django47,django48,django49,django50,django51,django52,
     django53,django54,django55,django56,django57,django58,django59,
     django6,django60,django61,django62,django63,django64,django65,
     django66_5,django66,django67,django68,django69,django7,django70,
@@ -291,7 +292,7 @@ const images = {
     django78,django79,django8,django80,django81,django82,django83,
     django84,django85,django86,django87,django88,django89,django9,
     django90,django91,django92,django93,django94,django95,django96,
-    django97,django98,django99,django_path
+    django97,django98,django99,django_path,django5,django5_5,
 }
 
 export default images ;

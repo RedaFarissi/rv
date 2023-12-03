@@ -12,7 +12,7 @@ export default function Result(props){
                             <div>
                                 <div className="style-handle"></div>
                                 <div className="div-img-box">
-                                    {(props.logo)?(<img src={props.logo} alt="logo" />):(<span className="text-light" style={{fontSize:"10px"}}>Life</span>)}      
+                                    {(props.logo)?(<img src={props.logo} alt="logo" />):(<i className="fa-solid fa-earth-americas text-light"></i>)}      
                                 </div>
                                 <p>
                                     {props.title}
