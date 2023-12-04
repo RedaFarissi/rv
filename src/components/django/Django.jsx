@@ -9,7 +9,7 @@ export default function Django(props){
       var keys_map;
       if (keys.includes("title")) { 
         keys_map = keys.map((key) => (
-          key === "title" ? <dt className="aside-dl-dt" key={key}><a href={`/django#${e[key]}`}><i className="fa-solid fa-caret-right"></i> {e[key]}</a></dt> : <dd className="aside-dl-dd" key={key}><a href={`/django#${key}`}><i className="fa-solid fa-circle"></i> {key.replace(/_/g, ' ')}</a></dd>
+          key === "title" ? <dt className="aside-dl-dt" key={key}><a href={`/django#${e[key]}`}><i className="fa-solid fa-caret-right"></i> {e[key].replace(/_/g, ' ')}</a></dt> : <dd className="aside-dl-dd" key={key}><a href={`/django#${key}`}><i className="fa-solid fa-circle"></i> {key.replace(/_/g, ' ')}</a></dd>
         ));
       } else {
         keys_map = <dt className="aside-dl-simple" key={keys[0]}><a href={`/django#${keys[0]}`}><i className="fa-solid fa-caret-right"></i> {keys[0].replace(/_/g, ' ')} </a></dt>;
@@ -26,8 +26,10 @@ export default function Django(props){
    </aside>
    <section className="section-conetent ">
       <h1 className="heading-style heading-style-django-color"> Django </h1>   
-      <article>
-            <h2 className="title-h2 mt-5" id="Introduction">1 -مقدمة حول Django</h2>
+
+
+      <article id="Introduction">
+            <h2 className="title-h2 mt-5">1 -مقدمة حول Django</h2>
             <h3 className="title-h3" id="What_is_Django">1 - ما هو Djnago . </h3>
             <p className="style_divv">
                ديجانغو هو إطار عالي المستوى ومفتوح المصدر لبناء تطبيقات الويب الديناميكية باستخدام لغة البرمجة python .يتبع إطار العمل نمط البرمجة المعماري Model-View-Controller (MVC) ويشجع على التطوير السريع والتصميم النظيف والعملي.<br/>
@@ -61,8 +63,13 @@ export default function Django(props){
             <img src={images.django67} className="img"/>
             <img src={images.django25} className="img"/>
       </article>
-      <article className="mt-5">
-            <h2 className="title-h2" id="virtualenv"> 2- virtualenv .</h2> 
+
+
+
+
+
+      <article className="mt-5" id="virtualenv">
+            <h2 className="title-h2"> 2- virtualenv .</h2> 
             <h3 className="title-h3" id="What_is_virtualenv">1 - ما هو virtualenv</h3>
             <p className="style_divv"> 
                virtualenv (اختصار ل virtual environment) هو أداة في Python تساعد في إدارة عدة بيئات Python على نفس الجهاز. إليك بعض الأسباب الرئيسية التي تجعل استخدام البيئات الظاهرية، مثل virtualenv، شائعًا في تطوير Python:<br/><br/>
@@ -125,7 +132,13 @@ export default function Django(props){
             <CodeCommand>cd project_name</CodeCommand>
             <CodeCommand>python manage.py runserver</CodeCommand>
       </article>
-      <article>
+
+
+
+
+
+
+      <article id="First_Exemple">
             <h2 className="title-h2 mt-5"> 3 - المثال الأول </h2>
             <ol>
                <li> أنشاء virtualenv </li>
@@ -277,124 +290,263 @@ export default function Django(props){
             <ul> <li> تحديث صفحة : http://127.0.0.1:8000/admin/ </li> </ul>
             <img src={images.django5_5} className="w-100 my-2 "/>
             <ul> <li> انقر على add في Articles وأضاف article  تم اذهب إلى الرابط http://localhost:8000/helloapp/article/1/ </li> </ul>
-           
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-
-            <div className="border-5 m-2">
-          
-            <h2 id="create_file_to_avoid_repeat">10 - create layoute or any name file to avoid repeat (mise a jour) </h2>
-            <div className="  fs-5 p-4 pb-2 rounded">
-         
-            {/* <pre className="p-2 mb-2">
-            <span style={{color:"green"}}>&lt;!-- helloapp/templates/layoute.html --></span>
-         
-            &lt;html>
-            &lt;head>
-               &lt;title> articles &lt;/title>
-            &lt;/head>
-            &lt;body>
-               &lt;header>
-                  &lt;a href="&#123;% url 'home' %&#125;">  home &lt;/a>
-                  &lt;a href="&#123;% url 'articles' %&#125;">  articles &lt;/a>
-               &lt;/header>
-                  &#123;% block content %&#125;
-                  &#123;% endblock content %&#125;
-               </body>
-            &lt;/body>
-            &lt;/html><br/></pre>
-            <h3 className="p-0 m-0 h3 "> => in another file you need to extends file layoute for use</h3>
-            <pre className="classname= p-2 mb-2">
-            <span style={{color:"green"}}>&lt;!-- templates/articles.html --></span><br/>
-            &#123;% extends 'layoute.html' %&#125;<br/>
-            &#123;% block content %&#125;
-            &lt;h1>Articles: &lt;/h1><br/>
-            &lt;ul>
-               &#123;% for article in all_articles_list %&#125;
-                  &lt;li> &lt;a href="&#123;% url 'article' article.id %&#125;">&#123;&#123; article.title &#125;&#125;&lt;/a> &lt;/li>
-               &#123;% endfor %&#125;
-            &lt;/ul>
-            &#123;% endblock content %&#125;
-            </pre> */}
-            {/* <pre className=" p-2 mb-2">
-            <span style={{color:"green"}}>&lt;!-- templates/article.html --></span><br/>
-            &#123;% extends 'layoute.html' %&#125;
-            &#123;% block content %&#125;
-            &lt;h1>Article: &#123;&#123; article.title &#125;&#125;&lt;/h1>
-            &lt;p>&#123;&#123; article.text &#125;&#125;&lt;/p>
-            &#123;% endblock content %&#125;
-            </pre> */}
-            </div>
-            </div>
+            <h3 className="title-h3" id="layout_file_to_avoid_repeat"> 10 - إنشاء ملف layoute لتجنب التكرار وتعديل الملفات .  </h3>
+            <CodeHighlighter code={codes[2].layout_file_to_avoid_repeat[0]} file_name="project / helloapp / templates / layoute.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].layout_file_to_avoid_repeat[1]} file_name="project / helloapp / templates / articles.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].layout_file_to_avoid_repeat[2]} file_name="project / helloapp / templates / article.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].layout_file_to_avoid_repeat[3]} file_name="project / helloapp / templates / home.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
       </article>
-      <article>
-            <h1> About templates </h1>
-            <div>
-            <br id="templates_tags"/><br/>
-            <h2> templates tags </h2>
-            <ul className="fs-5">
-               <li> <b>&#123;% if condition %&#125; ... &#123;% endif %&#125;</b>: Conditional statements to display content based on a condition. </li>
-               <li> <b>&#123;% for item in list %&#125; ... &#123;% endfor %&#125;</b>: Iterates over a list or queryset and executes the block of code for each item. </li>
-               <li> <b>&#123;% url 'url_name' arg1 arg2 %&#125;</b>: Generates a URL based on the provided URL name and arguments. </li>
-               <li> <b>&#123;% block block_name %&#125; ... &#123;% endblock %&#125;</b>: Defines a named block that can be overridden in child templates. </li>
-               <li> <b>&#123;% include 'template_name.html' %&#125;</b>: Includes the content of another template at that position. </li>
-               <li> <b>&#123;% csrf_token %&#125;</b>: Generates a CSRF token for form submission security. </li>
-               <li> <b>&#123;% load custom_tags %&#125;</b>: Loads custom template tags from a specified file.  </li>
-            </ul>
+      
+      <article id="Model_Field_Reference">  
+            <h2 className="title-h2"> 4 - Model Field Reference </h2>
+            <h3 className="title-h3" id="Definition">1 - تعريف </h3>
+            <p className="style_divv">
+               في Django يشير (Model Field Reference) إلى مجموعة من الأنواع المدمجة للحقول التي يمكنك استخدامها لتعريف البيانات في نموذج Django. تُستخدم حقول النموذج لتحديد نوع البيانات التي يمكن أن يحتوي عليها كل حقل في نموذج Django، وبالتالي، يساعد في تحديد هيكل ومظهر قاعدة البيانات.<br/><br/>
+               ببساطة، حقول النموذج تعتبر "البنية الأساسية" لنموذج Django وتحدد كيف يجب تخزين وتمثيل مختلف أنواع البيانات مثل النصوص، والأرقام، والتواريخ، وغيرها. عند تحديد نموذج Django، يمكنك استخدام حقول النموذج لتحديد ما إذا كان الحقل سيكون نصيًا أو رقميًا أو تاريخيًا، وما إذا كان يجب أن يكون له قيمة افتراضية أو لا.<br/><br/>
+               باستخدام هذه الحقول، يمكنك تعريف كيف يجب أن تبدو البيانات في قاعدة البيانات وكيف يمكن لتطبيق Django التفاعل معها. يُسهل مرجع حقول النموذج على المطورين تحديد نموذج بيانات Django الذي يعكس بنية البيانات التي يحتاجونها لتطبيقهم.<br/><br/>
 
-            <br id="csrf_token"/>
-            <h3> 1 - &#123;% csrf_token %&#125; </h3>
-            <div className="fs-5">
-               By including the <b>&#123;% csrf_token %&#125;</b> tag in your form, you ensure that the form submissions are protected against CSRF attacks. It's a crucial security measure when dealing with user input and form submissions in Django applications.<br/><br/>
-               It's essential to include the <b>&#123;% csrf_token %&#125;</b> tag in your forms, especially for POST requests. If you omit it, Django's form handling mechanisms will raise a CSRF verification failed error to prevent potential security risks
-            </div>
+               <span className="mb-3">Model Field Reference يعطيك :</span>
+               <ol>
+                  <li className="mb-2">
+                     <span className="text-success">عنصر HTML (HTML Widget):</span> حقول النموذج في Django لا تحدد فقط كيفية تخزين البيانات في قاعدة البيانات ولكنها تؤثر أيضًا على كيفية تقديمها في النماذج. يتم ربط كل حقل نموذج بعنصر HTML افتراضي، وهو عنصر النموذج الذي يُستخدم لجمع الإدخال من المستخدمين. على سبيل المثال:
+                     <ul>
+                        <li> <b>CharField</b> :   يُمثل باستخدام عنصر إدخال نصي. </li>
+                        <li> <b>DateField</b> :   يُمثل باستخدام عنصر اختيار التاريخ. </li>
+                     </ul>
+                     يمكنك تخصيص العناصر المستخدمة في النماذج إذا لم تكن القيم الافتراضية مناسبة لتطبيقك.
+                  </li>
+                  <li className="mb-2">
+                     <span className="text-success">التحقق (Validation):</span> حقول النموذج في Django توفر التحقق المدمج للبيانات المُدخلة في النماذج. يتأكد ذلك من أن البيانات تفي بمعايير معينة قبل تخزينها في قاعدة البيانات. على سبيل المثال:
+                     <ul>
+                        <li> <b>CharField</b> : يمكنه فرض طول أقصى. </li>
+                        <li> <b>EmailField</b> : يمكنه التحقق مما إذا كانت القيمة المُدخلة هي عنوان بريد إلكتروني صالح.</li>
+                     </ul>
+                     Django يقوم بهذه التحققات على الجانب الخادم وأيضًا على الجانب العميل (في المتصفح، باستخدام JavaScript).
+                  </li>
+                  <li className="mb-2">
+                     <span className="text-success">معالجة حجم قاعدة البيانات (Database Size Handling):</span> يؤثر كل حقل نموذج على كيفية تخزين البيانات في قاعدة البيانات، مما يؤثر على حجم قاعدة البيانات وكفاءتها:
 
-            <br id="as_p"/><br/>
-            <h3>2 - &#123;&#123; key.as_p &#125;&#125;</h3>
+                     CharField قد يستخدم VARCHAR في قاعدة البيانات.
+                     IntegerField قد يستخدم INTEGER.
+                     DateField قد يستخدم DATE.
+                     اختيار أنواع الحقول المناسبة يمكن أن يؤثر على حجم قاعدة البيانات وأدائها. على سبيل المثال، استخدام CharField(max_length=100) سيخصص مساحة أكبر في قاعدة البيانات من CharField(max_length=20).
+                  </li>
+               </ol>     
+            </p>
+            <h3 className="title-h3" id="Field">2 - الحقول Field </h3>
+            <h5 className="title-h5">1 - CharField </h5> 
+            <p className="style_divv">
+               يستخدم CharField عمومًا لتخزين سلاسل صغيرة مثل الاسم الأول واسم العائلة وما إلى ذلك.<br/>
+               max_length: هو الحد الأقصى لطول الأحرف المسموح استخدامها.
+               <CodeHighlighter code={`column_name = models.CharField(max_length = 200,**options)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
+            </p>
+         
+            <h5 className="title-h5">2 - TextField </h5>
+            <p className="style_divv">
+               يستخدم TextField بشكل عام لتخزين السلاسل الكبيرة (نص).
+               <CodeHighlighter code={`column_name = models.TextField(**options)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
+            </p>
+                  
+            <h5 className="title-h5"> 3 - IntegerField </h5>
+            <p className="style_divv">
+               يستخدم IntegerField بشكل عام لتخزين الأعداد الصحيحة .              
+               <CodeHighlighter code={`column_name = models.IntegerField(default=default_Number)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
+            </p>
+
+            <h5 className="title-h5"> 4 - PositiveIntegerField </h5>
+            <p className="style_divv">
+               يشبه IntegerField، ولكنه يسمح فقط بالقيم الموجبة.
+               <CodeHighlighter code={`column_name = models.PositiveIntegerField()`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
+            </p>
+
+            <h5 className="title-h5">5 -  BigIntegerField </h5>
+            <p className="style_divv">
+               يستخدم BigIntegerField لتخزين القيم الصحيحة الكبيرة.
+               <CodeHighlighter code={`column_name = models.BigIntegerField()`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
+            </p>
+         
+            <h5 className="title-h5">6 - DateTimeField </h5>
+            <p className="style_divv">
+               يمثل DateTimeField التاريخ والوقت. 
+               <CodeHighlighter code={`column_name = models.DateTimeField()`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
+               لجعله يحفظ البيانات تلقائيا
+               <CodeHighlighter code={`column_name = models.DateTimeField(("Date"), auto_now_add = True)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
+            </p>
+         
+            <h5 className="title-h5">7 -  EmailField </h5>
+            <p className="style_divv">
+               مصمم خصيصًا لتخزين عناوين البريد الإلكتروني.
+               <CodeHighlighter code={`column_name = models.EmailField(max_length=Number)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
+            </p>
+         
+            <h5 className="title-h5"> 8 - BooleanField </h5>
+            <p className="style_divv">
+               يخزن BooleanField قيم True  أو False.
+               <CodeHighlighter code={`column_name = models.BooleanField(default=False)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
+            </p>
+         
+            <h5 className="title-h5">9 - DecimalField </h5>
+            <p className="style_divv">
+               يستخدم DecimalField لتخزين الأرقام العشرية.
+               <CodeHighlighter code={`column_name = models.DecimalField(max_digits=10, decimal_places=2)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
+            </p>
+
+            <h5 className="title-h5">10 - URLField </h5>
+            <p className="style_divv">
+               مصمم خصيصًا لتخزين عناوين URL.
+               <CodeHighlighter code={`column_name = models.URLField()`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
+            </p>
+
+            <h5 className="title-h5">11 - FileField </h5>
+            <p className="style_divv">
+               يستخدم لتحميل الملفات (مثل الصور والمستندات وما إلى ذلك).
+               <CodeHighlighter code={`column_name = models.FileField(upload_to="folder_to_upload_in_media")`} language="python" addclassName="mt-3 mb-3" copie={true}/>                
+               لتحميل الملف تحتاج إلى استخدام  <a className="text-light" href="#Serving_files_uploaded_by_a_user_during_development">media</a>
+            </p>
+
+            <h5 className="title-h5">12 - ImageField </h5>
+            <p className="style_divv">
+               <CodeHighlighter code={`column_name = models.ImageField(upload_to='folder_to_upload_in_media/')`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
+               لتحميل الملف تحتاج إلى استخدام  <a className="text-light" href="#Serving_files_uploaded_by_a_user_during_development">media</a>
+            </p>
+
+            <h5 className="title-h5">13 - SlugField </h5>
+            <p className="style_divv">
+               يُستخدم لتخزين تسمية قصيرة تحتوي فقط على أحرف أو أرقام أو واصلات أو شرطات سفلية.
+               <CodeHighlighter code={`column_name = models.SlugField(unique=True)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
+            </p>
+            <h3 className="title-h3" id="Parameter"> 3 - Parameter</h3>
+            <h5 className="title-h5">1 - choices</h5>
+            <p className="style_divv">
+               لإنشاء خيار، تحتاج إلى (tuple) يتم فرضها من خلال التحقق من صحة النموذج وستكون أداة النموذج الافتراضية عبارة عن مربع تحديد يحتوي على هذه الاختيارات بدلاً من حقل النص القياسي.            
+               <CodeHighlighter code={codes[3].Parameter[0]} language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            </p>
+      
+            <h5 className="title-h5">2 - blank</h5>
+            <p className="style_divv"> 
+               لإخبار جانغو إذا كان الحقل إجباري أو إختياري .<br/><br/>
+               <ul>
+                  <li><b>blank=True</b> :  لإخبار django أن هذا العمود إختياري</li>
+                  <li><b>blank=False</b> : لإخبار django أن هذا العمود إجباري  (قيمة الافتراضية)</li>
+               </ul>
+               <CodeHighlighter code={codes[3].Parameter[1]} language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            </p>
+            <h5 className="title-h5">3 - related_name</h5>
+            <p className="style_divv">
+                
+                  when we use Relations Ship between table in Django , we have just <b>one</b> table determine relation . <b>but</b> you can use the same relationship in the other table using related_name.<br/>
+                  by default Django 
+               
+               <h3 className="text-danger">Exemple </h3>
+               <img src={images.django136} className="img"/>
+               <h4 className="text-danger">get all book for author id 1 using <b>shell</b> </h4>
+               <img src={images.django137} className="img"/>
+               <h4 className="text-danger">in real code  </h4>
+               <h5>app/urls.py</h5>
+               <img src={images.django138} className="img"/>
+               <h5>app/views.py</h5>
+               <img src={images.django139} className="img"/>
+               <h5>Result</h5>
+               <img src={images.django140} className="img"/>
+               <div className="fs-2  m-5 text-danger">you don't need to use the related_name parameter in a Django view</div>
+            </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+         
+            <h2 id="Relations">3 - Relations </h2>
+            <p>
+               In django Relations between models is Divided into 3 sections we take facebook like exemple :
+               <ul>
+                  <li className=" m-2 p-3">
+                     <b>One to many</b> : like Relations between user and post the usser can create many post ,but post ctraeted by one user .<br/>      
+                     to use this Relations in Django you must use
+                     <div className="p-2 mt-3 ">
+                        column_name = models.ForeignKey(<b className="o">'ClassModelsToRelation'</b>, <span className="g">on_delete</span>=models.<b className="bc">CASCADE</b>)
+                     </div>
+                  </li>
+                  <h3> Foreginkey </h3>
+                  <p>
+                     <div className="m-2 alert-danger"><b>Note</b>: <b>To use Create Class and use <kbd>makemigrations</kbd> and <kbd>migrate</kbd> after that use <kbd>Foreginkey</kbd></b> </div>
+                     <h4>Exemple:</h4>
+                     <img src={images.django66_5} className="img"/>
+                     <CodeCommand>python manage.py makemigrations</CodeCommand>
+                     <CodeCommand>python manage.py migrate</CodeCommand>
+                     <img src={images.django66} className="img"/>
+                  </p>
+                  <li className=" m-2 p-3">
+                     <b>Many to many</b> : like Relations between user and groups the usser can create many groups ,
+                     and groups can have many user . <br/> 
+                     <div className="alert-dark p-2 mt-3 ">
+                        ManyToManyField
+                     </div>
+                  </li>
+                  <li className=" m-2 p-3">
+                     <b>One to one</b> : like Relations between user and profile the usser can have one profile , 
+                     and profile have one user . <br/> 
+                     <div className="alert-dark p-2 mt-3 ">
+
+                     </div>
+                  </li>
+               </ul>
+            </p> 
+      </article>
+
+      <article id="about_templates">
+            <h2  className="title-h2 mt-5" > 5 - About templates </h2>
+            <h3 className="title-h3" id="templates_tags">1 -  templates tags </h3>
+            <p className="style_divv">
+               <ul className="fs-5">
+                  <li className="mb-2"> <bdi>{"{"}% if condition %{"}"} ... {"{"}% endif %{"}"}</bdi>: عبارة شرطية لعرض المحتوى بناءً على شرط. تُستخدم لتحديد ما إذا كان يجب عرض جزء معين من الصفحة استنادًا إلى شرط معين. </li>
+                  <li className="mb-2"> <bdi>{"{"}% for item in list %{"}"} ... {"{"}% endfor %{"}"}</bdi>:  كتلة الشيفرة لكل عنصر. يستخدم لتكرار العمليات على مجموعة من العناصر. </li>
+                  <li className="mb-2"> <bdi>{"{"}% url 'url_name' arg1 arg2 %{"}"}</bdi>: يولد عنوان URL بناءً على اسم الرابط المقدم والوسائط. يُستخدم لتوليد عناوين الروابط بطريقة ديناميكية. </li>
+                  <li className="mb-2"> <bdi>{"{"}% block block_name %{"}"} ... {"{"}% endblock %{"}"}</bdi>: يعرف كتلة مسماة يمكن استبدالها في القوالب الفرعية. تُستخدم لإنشاء أماكن للتخصيص في القوالب الفرعية. </li>
+                  <li className="mb-2"> <bdi>{"{"}% include 'template_name.html' %{"}"}</bdi>:  يضم محتوى قالب آخر في تلك الموقع. يستخدم لإعادة استخدام قوالب الويب وتضمينها في قوالب أخرى. </li>
+                  <li className="mb-2"> <bdi>{"{"}% csrf_token %{"}"}</bdi>: يولد رمز CSRF لأمان تقديم النموذج. يستخدم لتضمين رمز حماية CSRF في نماذج الويب لتقديمها بشكل آمن. </li>
+                  <li className="mb-2"> <bdi>{"{"}% load custom_tags %{"}"}</bdi>:  يحمل وسوم القوالب المخصصة من ملف محدد. يستخدم لتحميل واستخدام وسوم مخصصة معرفة مسبقًا في القوالب. </li>
+               </ul>
+            </p>
+            <h3 className="title-h3" id="csrf_token"> 2 - {"{"}% csrf_token %{"}"} </h3>
+            <p className="style_divv">
+               من خلال تضمين العلامة {"{"}% csrf_token %{"}"} في النموذج الخاص بك، فإنك تضمن حماية عمليات إرسال النماذج ضد هجمات CSRF. إنه إجراء أمني حاسم عند التعامل مع إدخال المستخدم وعمليات إرسال النماذج في تطبيقات Django.
+            </p>
+            <h3 className="title-h3" id="as_p">3 - {"{{"} key.as_p {"}}"}</h3>
             <img src={images.django162} className="img"/>
             <img src={images.django166} className="img"/>
             <div className="fs-5">
-               The &#123;&#123; form.as_p &#125;&#125; template tag in Django is used to render a form as a series of paragraphs (&lt;p{">"} elements), with each form field wrapped in its own paragraph.
+               The {"{{"} form.as_p {"}}"} template tag in Django is used to render a form as a series of paragraphs (&lt;p{">"} elements), with each form field wrapped in its own paragraph.
             </div>
-
-            <br id="load-custom_tags"/><br/>
-            <h3>3 - &#123;% load custom_tags %&#125; </h3>
+            <h3 className="title-h3" id="load-custom_tags">4 - {"{"}% load custom_tags %{"}"} </h3>
             <img src={images.django164} className="img"/>
             <img src={images.django165} className="img"/>
-
-
-            <br id="template_filters"/><br/>
-            <h2> template filters </h2>
+            <h3 className="title-h3" id="template_filters"> template filters </h3>
             <ul className="fs-5">
-               <li> <b>&#123;&#123; variable|filter &#125;&#125;</b> Applies filters to transform the value of a variable before rendering it. </li>
-               <li> <b>&#123;&#123; variable|date:'Y-m-d' &#125;&#125;</b>: Formats a date or time value based on the specified format. </li>
-               <li> <b>&#123;&#123; variable|length &#125;&#125;</b>: Returns the length of a string, list, or queryset.</li>
-               <li> <b>&#123;&#123; variable|truncatechars:20 &#125;&#125;</b>: Truncates a string to a specified number of characters. </li>
-               <li> <b>&#123;&#123; variable|linebreaksbr &#125;&#125;</b>: Converts line breaks to HTML &lt;br{">"} tags. </li>
+               <li className="mb-2"> <b>{"{{"} variable|filter {"}}"}</b> Applies filters to transform the value of a variable before rendering it. </li>
+               <li className="mb-2"> <b>{"{{"} variable|date:'Y-m-d' {"}}"}</b>: Formats a date or time value based on the specified format. </li>
+               <li className="mb-2"> <b>{"{{"} variable|length {"}}"}</b>: Returns the length of a string, list, or queryset.</li>
+               <li className="mb-2"> <b>{"{{"} variable|truncatechars:20 {"}}"}</b>: Truncates a string to a specified number of characters. </li>
+               <li className="mb-2"> <b>{"{{"} variable|linebreaksbr {"}}"}</b>: Converts line breaks to HTML &lt;br{">"} tags. </li>
             </ul>
-
-            <br id="variable-date"/>
-            <h3> 1 - &#123;&#123; variable|date:'Y-m-d' &#125;&#125;</h3>
+            <h5 className="title-h5" id="variable-date"> 1 - {"{{"} variable|date:'Y-m-d' {"}}"}</h5>
             <img src={images.django167} className="img"/>
             <img src={images.django168} className="img"/>
             <img src={images.django169} className="w-100 my-2 "/>
-            <br id="variable-length"/>
-            <h3> 2 - &#123;&#123; variable|length &#125;&#125; </h3>
+            <h5 className="title-h5" id="variable-length"> 2 - {"{{"} variable|length {"}}"} </h5>
             <img src={images.django170} className="img"/>
-            </div>
       </article>
       <article>
             <h1> About admin </h1>
@@ -526,205 +678,7 @@ export default function Django(props){
                <object width="100%" height="900px" type="application/pdf"data="pdf/django/Django-initiation--v4.pdf"></object>
             </div>
       </article>
-      <article>  
       
-            <h1 className="mt-5"> Model Field Reference </h1>
-            <p className="my-3">for more information go <a href="https://docs.djangoproject.com/en/4.1/ref/models/fields/" target="_blank">Here</a></p>
-            <p>
-               This section introduces the models defined with a field function (a vector as input and a field as output).<br/>
-               <div dir="rtl"><small>يقدم هذا القسم النماذج المحددة بوظيفة الحقل (ناقل كمدخل وحقل كمخرج)</small></div>  
-               Several types of physical models are available:
-               <div dir="rtl"><small> ( تتوفر عدة أنواع من النماذج المادية )</small></div>
-            </p>
-            <p>
-               <b> Django Model Field give you : </b>
-               <ul>
-                  <li> <b>html widget</b> : the html widget give you design </li>
-                  <li> <b>validation</b> : do vlidation to your Field </li>
-                  <li> <b>db size</b> : handle database size </li>
-               </ul>
-            </p>
-            <h2 id="function">1 - function</h2>
-            <ul>
-               <li className="mt-3 fs-3"><b>models.CharFields()</b> :
-                  <div className="">
-                     <p>CharField is generally used for storing small strings like first name, last name, etc.<br/>
-                     The default form widget for this field is <b>TextInput</b>.</p>
-                     <div className="text-danger">Syntaxe</div>
-                     <div className="bg-light mt-2 p-2 pb-0"><pre>column_name = models.CharField(max_length = 200,<small className="text-success">**options</small>)</pre></div>
-                     max_length: is max length char to use.<br/>
-                  </div>
-               </li>
-               <li className="mt-3 fs-3"><b>models.TextField()</b> :
-                  <div className="">
-                     <p>TextField is generally used for storing big strings <small>(Text)</small><br/>
-                        The default form widget for this field is <b>Textarea</b>.</p>
-                     <div className="text-danger">Syntaxe</div>
-                     <div className="bg-light mt-2 p-2 pb-0"><pre>column_name = models.TextField(<small className="text-success">**options</small>)</pre></div>
-                  </div>
-               </li>
-               <li className="mt-3 fs-3"><b>models.DateTimeField()</b> :
-                  <div className="">
-                     <p> DateTimeField is generally used for storing  date and this function take two params:<br/>
-                     The default form widget for this field is <b>&lt;input type="date"{">"}</b>.
-                     </p>
-                     <div className="text-danger">Syntaxe</div>
-                     <div className="bg-light mt-2 p-2 pb-0">
-                        <pre>models.DateTimeField(auto_now=False <span className="text-success">or</span> auto_now_add=False,<small className="text-success">**options</small>)</pre>
-                     </div>
-                     <p>
-                        by default <b>auto_now</b> and <b>auto_now_add</b> take <b>False</b> like value .<br/>
-                        <ol>
-                           <li><b>auto_now=True</b> : use this to save Now date in database. </li>
-                           <li><b>auto_now_add=True</b> : save last update to date .</li>
-                        </ol>
-                     </p>
-                  </div>
-               </li>
-               <li className="mt-3 fs-3"><b>models.IntegerField()</b> :
-                  <div className="">
-                     <p>IntegerField is generally used for storing integer <br/>
-                        The default form widget for this field is <b>&lt;input type="number"{">"}</b>.</p>
-                     <div className="text-danger">Syntaxe</div>
-                     <div className="bg-light mt-2 p-2 pb-0">
-                        <pre>column_name = models.IntegerField(default=default_Number)</pre>
-                     </div>
-                  </div>
-               </li>
-               <li className="mt-3 fs-3"><b>models.DateTimeField()</b> :
-                  <div className="">
-                     <p> to Create input with type="date" use :</p>
-                     <div className="text-danger">Syntaxe</div>
-                     <div className="bg-light mt-2 p-2 pb-0">
-                        <pre> column_name = models.DateTimeField() </pre>
-                     </div>
-                     <p>to make him save date automaticly use : </p>
-                     <div className="bg-light mt-2 p-2 pb-0">
-                        <pre> column_name = models.DateTimeField(("Date"), auto_now_add = True) </pre>
-                     </div>
-                     <img src={images.django34} className="img"/>
-                     <img src={images.django35} className="img"/>
-                  </div>
-               </li>
-               <li className="mt-3 fs-3"><b>models.EmailField()</b> :
-                  <div className="">
-                     <p> to Create input with type="email" use :</p>
-                     <div className="text-danger">Syntaxe</div>
-                     <div className="bg-light mt-2 p-2 pb-0">
-                        <pre> column_name = models.EmailField(max_length=Number) </pre>
-                     </div>
-                  </div>
-               </li>
-               <li className="mt-3 fs-3"><b>models.FileField()</b> :
-                  <div className="">
-                     <p> to Create input with type="file" use :</p>
-                     <div className="text-danger">Syntaxe</div>
-                     <div className="bg-light mt-2 p-2 pb-0">
-                        <pre> column_name = models.FileField(upload_to="folder_to_upload_in_media") </pre>
-                     </div>
-                     <img src={images.django37} className="img"/>
-                     <div className="alert-danger"><b>Note:</b> to upload file you need to use <a href="#Serving_files_uploaded_by_a_user_during_development">media</a></div>
-                  </div>
-               </li>
-               <li className="mt-3 fs-3"><b>models.BooleanField(default=False||True)</b> :
-                  <div className="">
-                     <p>  rendered as a checkbox input by default, but can be customized with a widget object.</p>
-                     <div className="text-danger">Syntaxe</div>
-                     <div className="bg-light mt-2 p-2 pb-0">
-                        <pre> my_boolean_field = models.BooleanField(default=False) </pre>
-                     </div>
-                     <img src={images.django37} className="img"/>
-                     <div className="alert-danger"><b>Note:</b> to upload file you need to use <a href="#Serving_files_uploaded_by_a_user_during_development">media</a></div>
-                  </div>
-               </li>
-            </ul>
-
-            <br/> <h2 id="param">2 - param </h2>
-            <ul>
-               <li className="mt-3 fs-3"><b>choices</b> :
-                  <div className="">
-                     <p> 
-                        for create choice you need a <b>tuple</b> , the tuple must created outside class.<br/>
-                        they’re enforced by model validation and the default form widget will be a <b>select</b> box with these choices instead of the standard text field.<br/>  
-                     </p>
-                     <div dir="rtl"><small><small>يتم فرضها عن طريق التحقق من صحة النموذج وستكون أداة النموذج الافتراضية هي مربع تحديد مع هذه الاختيارات بدلاً من حقل النص القياسي.</small></small></div>
-
-                     <div className="text-danger">Syntaxe</div>
-                     <div className="bg-light mt-2 p-2 pb-0"><pre>column_name = models.CharField(max_length = 200,<small className="text-success">**options</small>)</pre></div>
-                     <img src={images.django6} className="img"/>
-                  </div>
-               </li>
-               <li className="mt-3 fs-3"><b>blank</b> :
-                  <div className="">
-                     <p> 
-                        to tell django that column not required use <u>blank=True</u>:<br/>
-                        default value is <u>blank=False</u>
-                     </p>
-                     <div className="text-danger">Syntaxe</div>
-                     <div className="bg-light mt-2 p-2 pb-0"><pre>column_name = models.CharField(max_length = 200,<span className="text-success">blank = True</span>)</pre></div>
-                     <img src={images.django36} className="img"/>
-                  </div>
-               </li>
-               <li className="mt-3 fs-3"><b>related_name</b> :
-
-               <div className="">
-                     <p> 
-                        when we use Relations Ship between table in Django , we have just <b>one</b> table determine relation . <b>but</b> you can use the same relationship in the other table using related_name.<br/>
-                        by default Django 
-                     </p>
-                     <h3 className="text-danger">Exemple </h3>
-                     <img src={images.django136} className="img"/>
-                     <h4 className="text-danger">get all book for author id 1 using <b>shell</b> </h4>
-                     <img src={images.django137} className="img"/>
-                     <h4 className="text-danger">in real code  </h4>
-                     <h5>app/urls.py</h5>
-                     <img src={images.django138} className="img"/>
-                     <h5>app/views.py</h5>
-                     <img src={images.django139} className="img"/>
-                     <h5>Result</h5>
-                     <img src={images.django140} className="img"/>
-                     <div className="fs-2  m-5 text-danger">you don't need to use the related_name parameter in a Django view</div>
-                  </div>
-               </li>
-            </ul>
-
-            <br/> <h2 id="Relations">3 - Relations </h2>
-            <p>
-               In django Relations between models is Divided into 3 sections we take facebook like exemple :
-               <ul>
-                  <li className=" m-2 p-3">
-                     <b>One to many</b> : like Relations between user and post the usser can create many post ,but post ctraeted by one user .<br/>      
-                     to use this Relations in Django you must use
-                     <div className="p-2 mt-3 ">
-                        column_name = models.ForeignKey(<b className="o">'ClassModelsToRelation'</b>, <span className="g">on_delete</span>=models.<b className="bc">CASCADE</b>)
-                     </div>
-                  </li>
-                  <h3> Foreginkey </h3>
-                  <p>
-                     <div className="m-2 alert-danger"><b>Note</b>: <b>To use Create Class and use <kbd>makemigrations</kbd> and <kbd>migrate</kbd> after that use <kbd>Foreginkey</kbd></b> </div>
-                     <h4>Exemple:</h4>
-                     <img src={images.django66_5} className="img"/>
-                     <CodeCommand>python manage.py makemigrations</CodeCommand>
-                     <CodeCommand>python manage.py migrate</CodeCommand>
-                     <img src={images.django66} className="img"/>
-                  </p>
-                  <li className=" m-2 p-3">
-                     <b>Many to many</b> : like Relations between user and groups the usser can create many groups ,
-                     and groups can have many user . <br/> 
-                     <div className="alert-dark p-2 mt-3 ">
-                        ManyToManyField
-                     </div>
-                  </li>
-                  <li className=" m-2 p-3">
-                     <b>One to one</b> : like Relations between user and profile the usser can have one profile , 
-                     and profile have one user . <br/> 
-                     <div className="alert-dark p-2 mt-3 ">
-
-                     </div>
-                  </li>
-               </ul>
-            </p> 
-      </article>
       <article>
             <div className="border-5 m-2">
             <br id="Static_files_Media_files"/><br/><br/>
@@ -762,7 +716,7 @@ export default function Django(props){
             <h3> 3 - Get File From static/ folder </h3>
             <p> in static/ folder we put image named <b>img_pc.png</b> </p>
             <p>to Get anithing ffrom static in templates you must use </p>
-            <div className=" pb-0"><pre> &#123;% load static %&#125; </pre></div>
+            <div className=" pb-0"><pre> {"{"}% load static %{"}"} </pre></div>
             and write syntaxe like this:
             <img src={images.django11} className="img"/>
             <br/>
@@ -870,7 +824,7 @@ export default function Django(props){
             path('', include('app.urls')),<br/>   ...
             ]</pre></div>
             <p className="fs-5">this route (localhost:8000/accounts/) content many route </p>
-            <div className="">
+            <div>
                accounts/ login/ [name='login']
             <br/>accounts/ logout/ [name='logout']
             <br/>accounts/ password_change/ [name='password_change']
@@ -1130,7 +1084,7 @@ export default function Django(props){
                &lt;/head>
                &lt;body>
                   &lt;form action="#" method="POST">
-                        &#123;&#123;form&#125;&#125;
+                        {"{{"}form{"}}"}
                   &lt;/form>
                &lt;/body>
             &lt;/html></pre>
@@ -1444,7 +1398,7 @@ export default function Django(props){
                   it can expose sensitive information about your application and system to potential attackers. <br/>
                </b>
             </p>
-            <div className="">
+            <div>
                <span className="text-success"> project/settings.py </span>
                <pre>DEBUG = False</pre>
                <div className="alert-danger"><b>CommandError</b>: You must set settings.ALLOWED_HOSTS if DEBUG is False.</div>

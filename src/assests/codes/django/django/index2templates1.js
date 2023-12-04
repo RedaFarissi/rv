@@ -1,5 +1,6 @@
 export default function index2templates1(){
-    return `<html>
+    return `<!DOCTYPE html>
+<html>
 <head>
    <title> articles </title>
 </head>

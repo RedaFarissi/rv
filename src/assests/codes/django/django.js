@@ -1,7 +1,9 @@
 import {
     index2setting, index2includes_app_to_urlpatterns0 ,index2includes_app_to_urlpatterns1 ,
     index2templates0 , index2templates1 ,index2templates2, index2urls,index2views,index2models0,
-    index2models1,index2admin,
+    index2models1,index2admin,layout_file_to_avoid_repeat0,layout_file_to_avoid_repeat1,
+    layout_file_to_avoid_repeat2,layout_file_to_avoid_repeat3,index3Parameter0,index3Parameter1
+
 
 } from "./pathCodeDjango";
 const codes = [
@@ -37,7 +39,13 @@ const codes = [
         models:[index2models0(),index2models1()],
         admin:[index2admin()],
         createsuperuser:[],
-        create_file_to_avoid_repeat:[],
+        layout_file_to_avoid_repeat:[layout_file_to_avoid_repeat0(),layout_file_to_avoid_repeat1(),layout_file_to_avoid_repeat2(),layout_file_to_avoid_repeat3()],
+    },
+    {
+        title:"Model_Field_Reference",
+        Definition:[],
+        Field:[],
+        Parameter:[index3Parameter0(),index3Parameter1()], 
     },
     {
         title:"about_templates",
@@ -64,12 +72,6 @@ const codes = [
         restore_the_data_from_the_backup:[],
         remove_all_from_db_models:[],
         annotate:[],
-    },
-    {
-        title:"Model_Field_Reference",
-        function:[],
-        param:[],
-        Relations:[],
     },
     {
         title:"Static_files_Media_files",

@@ -1,0 +1,13 @@
+export default function layout_file_to_avoid_repeat1(){
+    return `{% extends 'layoute.html' %}
+
+{% block content %}
+   <h1>Articles: </h1>
+
+   <ul>
+      {% for article in all_articles_list %}
+         <li> <a href="{% url 'article' article.id %}">{{ article.title }}</a> </li>
+      {% endfor %}
+   </ul>
+{% endblock content %}`
+}
