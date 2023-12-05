@@ -146,6 +146,9 @@ export default function Django(props){
                <li> إنشاء مشروع django بالاسم project</li>
             </ol>
             <h3 className="title-h3" id="Creation_app_in_project"> 1- إنشاء app helloapp في المشروع .</h3> 
+            <p className="style_divv">
+               يتألف مشروع Django عادةً من عدة تطبيقات، ويتم تصميم كل تطبيق ليكون وحدة مستقلة يمكن إعادة استخدامها في مشاريع أخرى.<br/><br/>
+            </p>
             <CodeCommand>python manage.py startapp helloapp</CodeCommand>
             <h3 className="title-h3" id="settings"> 2- Setting .</h3> 
             <ul><li>تحتاج إلى إضافة اسم التطبيق إلى INSTALLED_APPS في settings.py :</li></ul>
@@ -185,8 +188,7 @@ export default function Django(props){
                في Django، الـViews تمثل الوحدات التي تدير المنطق الأساسي لتطبيقك. يمكنك تصور الـView كلمفتاح الوصول إلى البيانات والمنطق الخاص بتطبيقك، وهي المسؤولة عن استعراض البيانات وتحويلها إلى صيغة تظهر للمستخدم في المستعرض.<br/><br/>
                في Django، الـView هي دالة برمجية تستقبل طلب HTTP وتعيد استجابة. يمكن أن تقوم بالتفاعل مع قاعدة البيانات، والحصول على بيانات، وإرسال بيانات إلى القالب ليتم عرضها، أو تنفيذ أي منطق أخرى ذات صلة.
             </p>
-            <CodeHighlighter code={codes[2].views[0]} file_name="project / helloapp / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-            
+            <CodeHighlighter code={codes[2].views[0]} file_name="project / helloapp / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>   
             <h3 className="title-h3" id="models"> 7 - ملف models</h3>
             <p className="style_divv">
                في Django، ال models هو تمثيل لجدول في قاعدة البيانات. يستخدم ال models  لتحديد هيكل البيانات والعلاقات بينها، ويوفر وسيلة للتفاعل مع قاعدة البيانات بطريقة برمجية.<br/><br/>
@@ -304,7 +306,6 @@ export default function Django(props){
                في Django يشير (Model Field Reference) إلى مجموعة من الأنواع المدمجة للحقول التي يمكنك استخدامها لتعريف البيانات في نموذج Django. تُستخدم حقول النموذج لتحديد نوع البيانات التي يمكن أن يحتوي عليها كل حقل في نموذج Django، وبالتالي، يساعد في تحديد هيكل ومظهر قاعدة البيانات.<br/><br/>
                ببساطة، حقول النموذج تعتبر "البنية الأساسية" لنموذج Django وتحدد كيف يجب تخزين وتمثيل مختلف أنواع البيانات مثل النصوص، والأرقام، والتواريخ، وغيرها. عند تحديد نموذج Django، يمكنك استخدام حقول النموذج لتحديد ما إذا كان الحقل سيكون نصيًا أو رقميًا أو تاريخيًا، وما إذا كان يجب أن يكون له قيمة افتراضية أو لا.<br/><br/>
                باستخدام هذه الحقول، يمكنك تعريف كيف يجب أن تبدو البيانات في قاعدة البيانات وكيف يمكن لتطبيق Django التفاعل معها. يُسهل مرجع حقول النموذج على المطورين تحديد نموذج بيانات Django الذي يعكس بنية البيانات التي يحتاجونها لتطبيقهم.<br/><br/>
-
                <span className="mb-3">Model Field Reference يعطيك :</span>
                <ol>
                   <li className="mb-2">
@@ -333,38 +334,33 @@ export default function Django(props){
                   </li>
                </ol>     
             </p>
-            <h3 className="title-h3" id="Field">2 - الحقول Field </h3>
+            <h3 className="title-h3" id="Fields">2 - الحقول Fields </h3>
             <h5 className="title-h5">1 - CharField </h5> 
             <p className="style_divv">
                يستخدم CharField عمومًا لتخزين سلاسل صغيرة مثل الاسم الأول واسم العائلة وما إلى ذلك.<br/>
                max_length: هو الحد الأقصى لطول الأحرف المسموح استخدامها.
                <CodeHighlighter code={`column_name = models.CharField(max_length = 200,**options)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-         
             <h5 className="title-h5">2 - TextField </h5>
             <p className="style_divv">
                يستخدم TextField بشكل عام لتخزين السلاسل الكبيرة (نص).
                <CodeHighlighter code={`column_name = models.TextField(**options)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
-            </p>
-                  
+            </p>       
             <h5 className="title-h5"> 3 - IntegerField </h5>
             <p className="style_divv">
                يستخدم IntegerField بشكل عام لتخزين الأعداد الصحيحة .              
                <CodeHighlighter code={`column_name = models.IntegerField(default=default_Number)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-
             <h5 className="title-h5"> 4 - PositiveIntegerField </h5>
             <p className="style_divv">
                يشبه IntegerField، ولكنه يسمح فقط بالقيم الموجبة.
                <CodeHighlighter code={`column_name = models.PositiveIntegerField()`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-
             <h5 className="title-h5">5 -  BigIntegerField </h5>
             <p className="style_divv">
                يستخدم BigIntegerField لتخزين القيم الصحيحة الكبيرة.
                <CodeHighlighter code={`column_name = models.BigIntegerField()`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-         
             <h5 className="title-h5">6 - DateTimeField </h5>
             <p className="style_divv">
                يمثل DateTimeField التاريخ والوقت. 
@@ -372,56 +368,77 @@ export default function Django(props){
                لجعله يحفظ البيانات تلقائيا
                <CodeHighlighter code={`column_name = models.DateTimeField(("Date"), auto_now_add = True)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-         
             <h5 className="title-h5">7 -  EmailField </h5>
             <p className="style_divv">
                مصمم خصيصًا لتخزين عناوين البريد الإلكتروني.
                <CodeHighlighter code={`column_name = models.EmailField(max_length=Number)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-         
             <h5 className="title-h5"> 8 - BooleanField </h5>
             <p className="style_divv">
                يخزن BooleanField قيم True  أو False.
                <CodeHighlighter code={`column_name = models.BooleanField(default=False)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-         
             <h5 className="title-h5">9 - DecimalField </h5>
             <p className="style_divv">
                يستخدم DecimalField لتخزين الأرقام العشرية.
                <CodeHighlighter code={`column_name = models.DecimalField(max_digits=10, decimal_places=2)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-
             <h5 className="title-h5">10 - URLField </h5>
             <p className="style_divv">
                مصمم خصيصًا لتخزين عناوين URL.
                <CodeHighlighter code={`column_name = models.URLField()`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-
             <h5 className="title-h5">11 - FileField </h5>
             <p className="style_divv">
                يستخدم لتحميل الملفات (مثل الصور والمستندات وما إلى ذلك).
                <CodeHighlighter code={`column_name = models.FileField(upload_to="folder_to_upload_in_media")`} language="python" addclassName="mt-3 mb-3" copie={true}/>                
-               لتحميل الملف تحتاج إلى استخدام  <a className="text-light" href="#Serving_files_uploaded_by_a_user_during_development">media</a>
+               لتحميل الملف تحتاج إلى استخدام  <a className="text-light" href="#files_uploaded_by_user">media</a>
             </p>
-
             <h5 className="title-h5">12 - ImageField </h5>
             <p className="style_divv">
+               يستخدم ImageField للتعامل مع تحميلات الصور.
                <CodeHighlighter code={`column_name = models.ImageField(upload_to='folder_to_upload_in_media/')`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
-               لتحميل الملف تحتاج إلى استخدام  <a className="text-light" href="#Serving_files_uploaded_by_a_user_during_development">media</a>
+               لتحميل الملف تحتاج إلى استخدام  <a className="text-light" href="#files_uploaded_by_user">media</a>
             </p>
-
             <h5 className="title-h5">13 - SlugField </h5>
             <p className="style_divv">
                يُستخدم لتخزين تسمية قصيرة تحتوي فقط على أحرف أو أرقام أو واصلات أو شرطات سفلية.
                <CodeHighlighter code={`column_name = models.SlugField(unique=True)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-            <h3 className="title-h3" id="Parameter"> 3 - Parameter</h3>
+            <h3 className="title-h3" id="Relations"> 3 - Relations </h3>
+            <p className="style_divv">
+               في Django، عند تحديد النماذج، يتم إنشاء العلاقات بينها باستخدام الحقول التي تمثل أنواعًا مختلفة من العلاقات. حقول العلاقة الأساسية الثلاثة التي يوفرها Django هي:
+            </p>
+            <h5 className="title-h5">1 - OneToOneField </h5>
+            <p className="style_divv">
+               OneToOneField هو حقل يُستخدم لإنشاء علاقة واحد إلى واحد بين نموذجين. يُستخدم عندما يكون لكل مثيل من مثيلات نموذج واحد تمامًا مرتبط مع مثيل واحد من نموذج آخر، والعكس صحيح. <br/><br/>
+               مثل العلاقات بين المستخدم والملف الشخصي، يمكن للمستخدم أن يكون له ملف شخصي واحد، والملف الشخصي له مستخدم واحد.
+               <CodeHighlighter code={`column_name = models.OneToOneField(ClassModelsToRelation, on_delete=models.CASCADE, related_name='name_to_get_related_data')`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
+            </p>
+            <CodeHighlighter code={codes[3].Relations[0]} file_name="models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            
+            <h5 className="title-h5">2 - Foreginkey </h5>
+            <p className="style_divv">
+               ForeignKey هو حقل يُستخدم لإنشاء علاقة كثير إلى واحد بين نموذجين. يُستخدم عندما يكون لدى نموذج علاقة مع نموذج آخر، ويمكن ربط كل مثيل من مثيلات النموذج المتعلق بعدة مثيلات من نموذج المصدر، ولكن يتم ربط كل مثيل من مثيلات النموذج المصدر بمثيل واحد فقط من النموذج المتعلق.<br/><br/>
+               مثل العلاقات بين المستخدم والمنشور، يمكن للمستخدم إنشاء العديد من المنشورات، ولكن يتم التحكم في النشر من قبل مستخدم واحد.
+               <CodeHighlighter code={`column_name = models.Foreginkey(ClassModelsToRelation, on_delete=models.CASCADE, related_name='name_to_get_related_data')`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
+            </p>
+            <CodeHighlighter code={codes[3].Relations[1]} file_name="models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            
+            <h5 className="title-h5">3 - ManyToManyField </h5>
+            <p className="style_divv">
+               ManyToManyField هو حقل يُستخدم لإنشاء علاقة كثير إلى كثير بين نموذجين. يُستخدم عندما يكون لكل مثيل من مثيلات نموذج واحد قد تم ارتباطه بمثيلات متعددة من نموذج آخر، والعكس صحيح.<br/><br/>
+               مثل العلاقات بين المستخدم والمجموعات، يمكن للمستخدم إنشاء العديد من المجموعات ويمكن أن تضم المجموعات العديد من المستخدمين.
+               <CodeHighlighter code={`column_name = models.ManyToManyField(ClassModelsToRelation,related_name='name_to_get_related_data')`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
+            </p>
+            <CodeHighlighter code={codes[3].Relations[2]} file_name="models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <h3 className="title-h3" id="Parameter"> 4 - Parameter</h3>
             <h5 className="title-h5">1 - choices</h5>
             <p className="style_divv">
                لإنشاء خيار، تحتاج إلى (tuple) يتم فرضها من خلال التحقق من صحة النموذج وستكون أداة النموذج الافتراضية عبارة عن مربع تحديد يحتوي على هذه الاختيارات بدلاً من حقل النص القياسي.            
-               <CodeHighlighter code={codes[3].Parameter[0]} language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+               <CodeHighlighter code={`choices=(  ("Key1", "value1"),    ("Key2", "value2"),   )`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-      
+            <CodeHighlighter code={codes[3].Parameter[0]} file_name="models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             <h5 className="title-h5">2 - blank</h5>
             <p className="style_divv"> 
                لإخبار جانغو إذا كان الحقل إجباري أو إختياري .<br/><br/>
@@ -429,107 +446,224 @@ export default function Django(props){
                   <li><b>blank=True</b> :  لإخبار django أن هذا العمود إختياري</li>
                   <li><b>blank=False</b> : لإخبار django أن هذا العمود إجباري  (قيمة الافتراضية)</li>
                </ul>
-               <CodeHighlighter code={codes[3].Parameter[1]} language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+               <CodeHighlighter code="blank=True" language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
+            <CodeHighlighter code={codes[3].Parameter[1]} file_name="models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             <h5 className="title-h5">3 - related_name</h5>
             <p className="style_divv">
-                
-                  when we use Relations Ship between table in Django , we have just <b>one</b> table determine relation . <b>but</b> you can use the same relationship in the other table using related_name.<br/>
-                  by default Django 
-               
-               <h3 className="text-danger">Exemple </h3>
-               <img src={images.django136} className="img"/>
-               <h4 className="text-danger">get all book for author id 1 using <b>shell</b> </h4>
-               <img src={images.django137} className="img"/>
-               <h4 className="text-danger">in real code  </h4>
-               <h5>app/urls.py</h5>
-               <img src={images.django138} className="img"/>
-               <h5>app/views.py</h5>
-               <img src={images.django139} className="img"/>
-               <h5>Result</h5>
-               <img src={images.django140} className="img"/>
-               <div className="fs-2  m-5 text-danger">you don't need to use the related_name parameter in a Django view</div>
-            </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-         
-            <h2 id="Relations">3 - Relations </h2>
-            <p>
-               In django Relations between models is Divided into 3 sections we take facebook like exemple :
-               <ul>
-                  <li className=" m-2 p-3">
-                     <b>One to many</b> : like Relations between user and post the usser can create many post ,but post ctraeted by one user .<br/>      
-                     to use this Relations in Django you must use
-                     <div className="p-2 mt-3 ">
-                        column_name = models.ForeignKey(<b className="o">'ClassModelsToRelation'</b>, <span className="g">on_delete</span>=models.<b className="bc">CASCADE</b>)
-                     </div>
-                  </li>
-                  <h3> Foreginkey </h3>
-                  <p>
-                     <div className="m-2 alert-danger"><b>Note</b>: <b>To use Create Class and use <kbd>makemigrations</kbd> and <kbd>migrate</kbd> after that use <kbd>Foreginkey</kbd></b> </div>
-                     <h4>Exemple:</h4>
-                     <img src={images.django66_5} className="img"/>
-                     <CodeCommand>python manage.py makemigrations</CodeCommand>
-                     <CodeCommand>python manage.py migrate</CodeCommand>
-                     <img src={images.django66} className="img"/>
-                  </p>
-                  <li className=" m-2 p-3">
-                     <b>Many to many</b> : like Relations between user and groups the usser can create many groups ,
-                     and groups can have many user . <br/> 
-                     <div className="alert-dark p-2 mt-3 ">
-                        ManyToManyField
-                     </div>
-                  </li>
-                  <li className=" m-2 p-3">
-                     <b>One to one</b> : like Relations between user and profile the usser can have one profile , 
-                     and profile have one user . <br/> 
-                     <div className="alert-dark p-2 mt-3 ">
-
-                     </div>
-                  </li>
-               </ul>
+               يستخدم Django الخاصية related_name في حقل ForeignKey أو OneToOneField لتحديد اسم العلاقة العكسية من النموذج المتعلق إلى النموذج الذي يعرّف المفتاح الخارجي. يتيح لك ذلك تحديد اسم أكثر إيضاحاً أو فهمًا للعلاقة العكسية.<br/><br/>
+               في نماذج Django، عند إنشاء حقل ForeignKey أو OneToOneField، يقوم Django تلقائيًا بإنشاء علاقة عكسية من النموذج المتعلق إلى النموذج الذي يعرّف المفتاح الخارجي. يتم إنشاء هذه العلاقة العكسية كمدير يتيح لك الوصول إلى الكائنات المتعلقة بسهولة.<br/><br/>
+               بشكل افتراضي، يقوم Django بتوليد اسم لهذه العلاقة العكسية استنادًا إلى اسم النموذج الذي يعرّف ForeignKey أو OneToOneField. ومع ذلك، في بعض الحالات، قد ترغب في توفير اسم مخصص وأكثر وضوحًا للعلاقة العكسية، وهنا يأتي دور related_name.
+               <CodeHighlighter code={`related_name="name_to_get_related_data"`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p> 
+            <CodeHighlighter code={codes[3].Parameter[2]} file_name="project / helloapp / models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <div className="mital">مثال 1 : </div>
+            <CodeCommand>python manage.py shell</CodeCommand>
+            <CodeCommand>
+               {">>>"}from helloapp.models import Author , Book<br/>
+               {">>>"}<span className="text-success">#create two authors in database</span><br/>
+               {">>>"}author1 = Author(name="reda eskouni") <br/>
+               {">>>"}author2 = Author(name="Name 2")<br/>
+               {">>>"}<span className="text-success">#save authors created</span><br/>
+               {">>>"}author1.save()<br/>
+               {">>>"}author2.save()<br/>
+               {">>>"}<span className="text-success">#list all authors created</span><br/>
+               {">>>"}for author in Author.objects.all():<br/>
+               {">>>"}...&nbsp;&nbsp;&nbsp;&nbsp;print(author.name)<br/>
+               {">>>"}...<br/>
+               reda eskouni<br/>
+               Name 2<br/>
+               {">>>"}<span className="text-success">#Create 4 books and saved it</span><br/>
+               {">>>"}book1 = Book.objects.create(title="My Book 1", author=author1) <br/>
+               {">>>"}book2 = Book.objects.create(title="My Book 2", author=author1) <br/>
+               {">>>"}book3 = Book.objects.create(title="My Book 3", author=author2) <br/>
+               {">>>"}book4 = Book.objects.create(title="My Book 4", author=author1) <br/>
+               {">>>"}<span className="text-success">#list all books created</span><br/>
+               {">>>"}for book in Book.objects.all():<br/>
+               {">>>"}...&nbsp;&nbsp;&nbsp;&nbsp;print(f"book title is : {"{"}book.title{"}"} and author is {"{"}book.author{"}"}"))<br/>
+               {">>>"}...<br/>
+               book title is : My Book 1 and author is reda eskouni <br/>
+               book title is : My Book 2 and author is reda eskouni <br/>
+               book title is : My Book 3 and author is Name 2 <br/>
+               book title is : My Book 4 and author is reda eskouni <br/>
+               {">>>"}<br/>
+               {">>>"}<span className="text-success">#use related_name='books' created in models </span><br/>
+               {">>>"}all_books_for_author1 = author1.books.all()<br/>
+               {">>>"}for i in all_books_for_author1:<br/>
+               {">>>"}...&nbsp;&nbsp;&nbsp;&nbsp;print(f"{"{"}author1.name{"}"} created {"=>"}  {"{"}i.title{"}"}")<br/>
+               {">>>"}...<br/>
+               reda eskouni created {"=>"}  My Book 1<br/>
+               reda eskouni created {"=>"}  My Book 2<br/>
+               reda eskouni created {"=>"}  My Book 4<br/>
+            </CodeCommand>
+            <ul><li>لنفترض أن البيانات بالفعل في قاعدة البيانات</li></ul>
+            <CodeCommand>python manage.py shell</CodeCommand>
+            <CodeCommand>
+               {">>>"}from helloapp.models import Author , Book<br/>
+               {">>>"}<span className="text-success">#get the autor you want all his book</span><br/>
+               {">>>"}author = Author.objects.get(id=1) <br/>
+               {">>>"}all_books_for_author1 = author.books.all()<br/>
+               {">>>"}...<br/>
+               {">>>"}for i in all_books_for_author1:<br/>
+               {">>>"}...&nbsp;&nbsp;&nbsp;&nbsp;print(f"{"{"}author.name{"}"} created {"=>"}  {"{"}i.title{"}"}")<br/>
+               {">>>"}...<br/>
+               reda eskouni created {"=>"}  My Book 1<br/>
+               reda eskouni created {"=>"}  My Book 2<br/>
+               reda eskouni created {"=>"}  My Book 4<br/>
+            </CodeCommand>
+            <div className="mital">مثال 2 : </div>
+            <CodeHighlighter code={codes[3].Parameter[3]} file_name="project / helloapp / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[3].Parameter[4]} file_name="project / helloapp / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[3].Parameter[5]} file_name="project / helloapp / templates /author_books.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <Result title='author_books' logo={images.html_logo}  route="http://localhost:8000/helloapp/authors/1/books/">
+               <h2>Author : reda eskouni</h2>
+               <div className="text-light mb-2" style={{backgroundColor:"red",fontSize:"26px"}}>My Book 1</div>
+               <div className="text-light mb-2" style={{backgroundColor:"red",fontSize:"26px"}}>My Book 2</div>
+               <div className="text-light mb-2" style={{backgroundColor:"red",fontSize:"26px"}}>My Book 4</div>
+            </Result> 
       </article>
 
-      <article id="about_templates">
-            <h2  className="title-h2 mt-5" > 5 - About templates </h2>
-            <h3 className="title-h3" id="templates_tags">1 -  templates tags </h3>
+      <article id="Static_and_Media_files">
+            <h2  className="title-h2 mt-5" > 5 - Static files && Media files </h2>
+            <h3 className="title-h3" id="manage_static_files"> 1 - manage static files</h3>
             <p className="style_divv">
-               <ul className="fs-5">
-                  <li className="mb-2"> <bdi>{"{"}% if condition %{"}"} ... {"{"}% endif %{"}"}</bdi>: عبارة شرطية لعرض المحتوى بناءً على شرط. تُستخدم لتحديد ما إذا كان يجب عرض جزء معين من الصفحة استنادًا إلى شرط معين. </li>
-                  <li className="mb-2"> <bdi>{"{"}% for item in list %{"}"} ... {"{"}% endfor %{"}"}</bdi>:  كتلة الشيفرة لكل عنصر. يستخدم لتكرار العمليات على مجموعة من العناصر. </li>
-                  <li className="mb-2"> <bdi>{"{"}% url 'url_name' arg1 arg2 %{"}"}</bdi>: يولد عنوان URL بناءً على اسم الرابط المقدم والوسائط. يُستخدم لتوليد عناوين الروابط بطريقة ديناميكية. </li>
-                  <li className="mb-2"> <bdi>{"{"}% block block_name %{"}"} ... {"{"}% endblock %{"}"}</bdi>: يعرف كتلة مسماة يمكن استبدالها في القوالب الفرعية. تُستخدم لإنشاء أماكن للتخصيص في القوالب الفرعية. </li>
-                  <li className="mb-2"> <bdi>{"{"}% include 'template_name.html' %{"}"}</bdi>:  يضم محتوى قالب آخر في تلك الموقع. يستخدم لإعادة استخدام قوالب الويب وتضمينها في قوالب أخرى. </li>
-                  <li className="mb-2"> <bdi>{"{"}% csrf_token %{"}"}</bdi>: يولد رمز CSRF لأمان تقديم النموذج. يستخدم لتضمين رمز حماية CSRF في نماذج الويب لتقديمها بشكل آمن. </li>
-                  <li className="mb-2"> <bdi>{"{"}% load custom_tags %{"}"}</bdi>:  يحمل وسوم القوالب المخصصة من ملف محدد. يستخدم لتحميل واستخدام وسوم مخصصة معرفة مسبقًا في القوالب. </li>
-               </ul>
+               في Django، يعتبر مجلد "static" مجلدًا حيث يمكنك تنظيم وتخزين الملفات الثابتة الخاصة بتطبيق الويب الخاص بك. تتضمن هذه الملفات الثابتة موارد مثل الصور وملفات JavaScript وورق الأنماط CSS وموارد أخرى يستخدمها صفحات الويب الخاصة بك. إليك تفصيل للغرض واستخدام مجلد "static" في Django:
             </p>
+            <h5 className="title-h5"> 1 - أضف في ملف settings.py </h5>
+            <CodeHighlighter code={codes[4].manage_static_files[0]} file_name="project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <h5 className="title-h5"> 2 -  أضف في ملف urls.py </h5>
+            <CodeHighlighter code={codes[4].manage_static_files[1]} file_name="project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <ul><li>قم بإنشاء مجلد باسم static/ في نفس مسار ملف manage.py مما يعنب بجانب تطبيقات المنشأت في مشروعك </li></ul>
+            <img src={images.django9} className="img"/>
+            <ul><li>يمكنك الآن إضافة جميع الملفات الثابتة أو المجلدات التي تحتوي على ملفات ثابت في static/</li></ul>
+            <h5  className="title-h5"> 3 - الحصول على الملفات من المجلد static/ </h5>
+            <p className="style_divv">
+                في المجلد static/ نضع صورة باسم img_pc.png . <br/>
+               للحصول على أي شيء من static/ يجب عليك استخدام 
+               <CodeHighlighter code={`{% load static %}`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
+            </p>
+            <CodeHighlighter code={codes[4].manage_static_files[2]} file_name="test_static.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+         
+            <div className="border-5 m-2">
+            <br id="files_uploaded_by_user"/><br/>
+            <h2 className="mt-5"> 2 - Serving files uploaded by a user during development </h2>
+            <h3> 1 - add in <b>django_project_test/settings.py</b> </h3>
+            <div className=" pb-0"><pre>
+            import os 
+            .<br/>  .<br/>
+            MEDIA_URL = 'media/' 
+            MEDIA_ROOT = os.path.join(BASE_DIR,"media")</pre>
+            </div>
+            <img src={images.django17} className="img"/>
+            <h3> 2 - add in <b>django_project_test/urls.py</b> </h3>
+            <div className=" pb-0"><pre> urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)</pre></div>
+            <h4 className="ms-0">Exemple : </h4>
+            <img src={images.django10} className="img"/>
+            <h3> 3 - install Pillow</h3>
+            To let user upload file in django you must install <b>Pillow</b> To  install it use : 
+            <CodeCommand>python -m pip install Pillow</CodeCommand>
+            <b>and</b>
+            <CodeCommand>python.exe -m pip install --upgrade pip</CodeCommand>
+            <img src={images.django18} className="img"/>
+            <b>to Get All package  installed use:</b>
+            <CodeCommand>pip freeze</CodeCommand>
+            <h3> 4 - use  models.ImageField</h3>
+            <p><b>To let admin upload file in database use must use </b></p>
+            <div className=" pb-0"><pre> models.ImageField(upload_to='folderNameToCreate/')</pre></div>
+            <p>you must use <b>upload_to=</b> to add path for upload file .</p>
+            <img src={images.django19} className="img"/>
+            <div className="h2 mt-3">Result</div>
+            <img src={images.django20} className="img"/>
+            <img src={images.django21} className="img"/>
+            <h3> 5 - To Get image upload in templates </h3>
+            <img src={images.django22} className="img"/>
+            <p className="mt-3">
+            <b> i.iamge.url</b>:
+            <ul>
+               <li><b>i</b> : item in for loop</li>
+               <li><b>iamge</b> : name of column</li>
+               <li><b>url</b> : to get image uploded in database </li>
+            </ul>
+            </p>
+            <img src={images.django23} className="w-100 mt-3"/>
+            <img src={images.django24} className="w-100 mb-2 mt-3"/>
+            </div>
+
+
+            <h3 className="title-h3" id="Create_Public_templates"> 3 - إنشاء templates عامة </h3>    
+            <h3> 4 - Create Public templates you can use it in all App in your Project_django </h3>
+            <p> to create public templates in all app you must at first to do all common in  <a href="#Static_files_Media_files" style={{textDecoration: "none"}}>Static files && Media files</a> </p>
+            <ul>
+               <li><b> Create folder with name templates in the same path of helloapp like image bellow</b></li>
+               <li className="my-3"> <b>create file witn any name you want in templates/ folder in this exemple the name is <u>base.html</u></b> </li>
+               <img src={images.django12} className="img"/>
+               <li className="my-3"><b> Add Content to base.html </b></li>
+               <img src={images.django13} className="img"/>
+               <li className="my-3"><b>add in <b>django_project_test/settings.py</b></b></li>
+               <img src={images.django14} className="img"/>
+               <div className="h4 my-3"> Now you Can Use File <b><u>base.html</u></b> in Any App you want to create.</div>
+               <img src={images.django15} className="img"/>
+               <div className="h4 my-3">result</div>
+               <img src={images.django16} className="img"/>
+            </ul>
+      </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <article id="about_templates">
+            <h2  className="title-h2 mt-5" > 6 - About templates </h2>
+            <h3 className="title-h3" id="templates_tags">1 -  templates tags </h3>
+           
+            <table className="table table-bordered text-light">
+               <tbody>
+               <tr className="mb-2"> 
+                  <td> عبارة شرطية لعرض المحتوى بناءً على شرط. تُستخدم لتحديد ما إذا كان يجب عرض جزء معين من الصفحة استنادًا إلى شرط معين. </td>
+                  <td dir="ltr">{"{"}% if condition %{"}"} ... {"{"}% endif %{"}"}</td>
+               </tr>
+               <tr className="mb-2"> 
+                  <td>  كتلة الشيفرة لكل عنصر. يستخدم لتكرار العمليات على مجموعة من العناصر. </td>
+                  <td dir="ltr">{"{"}% for item in list %{"}"} ... {"{"}% endfor %{"}"}</td>
+               </tr>
+               <tr className="mb-2"> 
+                  <td> يولد عنوان URL بناءً على اسم الرابط المقدم والوسائط. يُستخدم لتوليد عناوين الروابط بطريقة ديناميكية. </td>
+                  <td dir="ltr">{"{"}% url 'url_name' arg1 arg2 %{"}"}</td>
+               </tr>
+               <tr className="mb-2"> 
+                  <td> يعرف كتلة مسماة يمكن استبدالها في القوالب الفرعية. تُستخدم لإنشاء أماكن للتخصيص في القوالب الفرعية. </td>
+                  <td dir="ltr">{"{"}% block block_name %{"}"} ... {"{"}% endblock %{"}"}</td>
+               </tr>
+               <tr className="mb-2"> 
+                  <td>  يضم محتوى قالب آخر في تلك الموقع. يستخدم لإعادة استخدام قوالب الويب وتضمينها في قوالب أخرى. </td>
+                  <td dir="ltr">{"{"}% include 'template_name.html' %{"}"}</td>
+               </tr>
+               <tr className="mb-2"> 
+                  <td> يولد رمز CSRF لأمان تقديم النموذج. يستخدم لتضمين رمز حماية CSRF في نماذج الويب لتقديمها بشكل آمن. </td>
+                  <td dir="ltr">{"{"}% csrf_token %{"}"}</td>
+               </tr>
+               <tr className="mb-2"> 
+                  <td>  يحمل وسوم القوالب المخصصة من ملف محدد. يستخدم لتحميل واستخدام وسوم مخصصة معرفة مسبقًا في القوالب. </td>
+                  <td dir="ltr">{"{"}% load custom_tags %{"}"}</td>
+               </tr>
+               </tbody>
+            </table>
             <h3 className="title-h3" id="csrf_token"> 2 - {"{"}% csrf_token %{"}"} </h3>
             <p className="style_divv">
                من خلال تضمين العلامة {"{"}% csrf_token %{"}"} في النموذج الخاص بك، فإنك تضمن حماية عمليات إرسال النماذج ضد هجمات CSRF. إنه إجراء أمني حاسم عند التعامل مع إدخال المستخدم وعمليات إرسال النماذج في تطبيقات Django.
             </p>
-            <h3 className="title-h3" id="as_p">3 - {"{{"} key.as_p {"}}"}</h3>
-            <img src={images.django162} className="img"/>
-            <img src={images.django166} className="img"/>
-            <div className="fs-5">
-               The {"{{"} form.as_p {"}}"} template tag in Django is used to render a form as a series of paragraphs (&lt;p{">"} elements), with each form field wrapped in its own paragraph.
-            </div>
+           
             <h3 className="title-h3" id="load-custom_tags">4 - {"{"}% load custom_tags %{"}"} </h3>
             <img src={images.django164} className="img"/>
             <img src={images.django165} className="img"/>
@@ -679,111 +813,7 @@ export default function Django(props){
             </div>
       </article>
       
-      <article>
-            <div className="border-5 m-2">
-            <br id="Static_files_Media_files"/><br/><br/>
-            <h1 className="mt-5"> Static files && Media files  <small>(Version 4.1)</small></h1>
-            <div className="alert-dark"><p>In this Chapter my django project is : django_project_test</p>
-            <p>In this Chapter my django app is : app</p></div>
-            <ul>
-            <li><b>static files</b> : is evry thing about Front-end (HTML , CSS , JavaScript , All Templates like Vue.js and React.js and ....  )</li>
-            <li><b>media  files</b> : is evry thing about <b>upload</b> </li> 
-            </ul>
-            <br id="manage_static_files"/><br/>
-            <h2> 1 - manage static files</h2>
-            <h3> 1 - add in <b>django_project_test/settings.py</b> </h3>
-            <div className=" pb-0"><pre>
-            STATIC_URL = 'static/'
-            STATICFILES_DIRS = [
-               BASE_DIR / "static",
-               '/var/www/static/',
-            ] </pre>
-            </div>
-            <h4 className="ms-0">Exemple : </h4>
-            <img src={images.django7} className="img"/>
-            <h3> 2 - add in <b>django_project_test/urls.py</b> </h3>
-            <div className=" pb-0"><pre>
-            from django.conf import settings
-            from django.conf.urls.static import static</pre>
-            </div>
-            and add this in the same file 
-            <div className=" pb-0"><pre> urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)</pre></div>
-            <h4 className="ms-0">Exemple : </h4>
-            <img src={images.django8} className="img"/>
-            <p className="my-2"><b> Create folder with name static in the same path of helloapp like this . </b></p>
-            <img src={images.django9} className="img"/>
-            <p>Now you can add All File folder and file in static </p>
-            <h3> 3 - Get File From static/ folder </h3>
-            <p> in static/ folder we put image named <b>img_pc.png</b> </p>
-            <p>to Get anithing ffrom static in templates you must use </p>
-            <div className=" pb-0"><pre> {"{"}% load static %{"}"} </pre></div>
-            and write syntaxe like this:
-            <img src={images.django11} className="img"/>
-            <br/>
-                  <p className="mt-5">for more Info click <a href="https://docs.djangoproject.com/en/4.1/howto/static-files/" target="_blank"><b>Here</b></a></p>
-         
-            <h3> 4 - Create templates you can use it in all App in your Project_django </h3>
-            <p> to create public templates in all app you must at first to do all common in  <a href="#Static_files_Media_files" style={{textDecoration: "none"}}>Static files && Media files</a> </p>
-            <ul>
-               <li><b> Create folder with name templates in the same path of helloapp like image bellow</b></li>
-               <li className="my-3"> <b>create file witn any name you want in templates/ folder in this exemple the name is <u>base.html</u></b> </li>
-               <img src={images.django12} className="img"/>
-               <li className="my-3"><b> Add Content to base.html </b></li>
-               <img src={images.django13} className="img"/>
-               <li className="my-3"><b>add in <b>django_project_test/settings.py</b></b></li>
-               <img src={images.django14} className="img"/>
-               <div className="h4 my-3"> Now you Can Use File <b><u>base.html</u></b> in Any App you want to create.</div>
-               <img src={images.django15} className="img"/>
-               <div className="h4 my-3">result</div>
-               <img src={images.django16} className="img"/>
-            </ul>
-            </div>
-         
-            <div className="border-5 m-2">
-            <br id="Serving_files_uploaded_by_a_user_during_development"/><br/>
-            <h2 className="mt-5"> 2 - Serving files uploaded by a user during development </h2>
-            <h3> 1 - add in <b>django_project_test/settings.py</b> </h3>
-            <div className=" pb-0"><pre>
-            import os 
-            .<br/>  .<br/>
-            MEDIA_URL = 'media/' 
-            MEDIA_ROOT = os.path.join(BASE_DIR,"media")</pre>
-            </div>
-            <img src={images.django17} className="img"/>
-            <h3> 2 - add in <b>django_project_test/urls.py</b> </h3>
-            <div className=" pb-0"><pre> urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)</pre></div>
-            <h4 className="ms-0">Exemple : </h4>
-            <img src={images.django10} className="img"/>
-            <h3> 3 - install Pillow</h3>
-            To let user upload file in django you must install <b>Pillow</b> To  install it use : 
-            <CodeCommand>python -m pip install Pillow</CodeCommand>
-            <b>and</b>
-            <CodeCommand>python.exe -m pip install --upgrade pip</CodeCommand>
-            <img src={images.django18} className="img"/>
-            <b>to Get All package  installed use:</b>
-            <CodeCommand>pip freeze</CodeCommand>
-            <h3> 4 - use  models.ImageField</h3>
-            <p><b>To let admin upload file in database use must use </b></p>
-            <div className=" pb-0"><pre> models.ImageField(upload_to='folderNameToCreate/')</pre></div>
-            <p>you must use <b>upload_to=</b> to add path for upload file .</p>
-            <img src={images.django19} className="img"/>
-            <div className="h2 mt-3">Result</div>
-            <img src={images.django20} className="img"/>
-            <img src={images.django21} className="img"/>
-            <h3> 5 - To Get image upload in templates </h3>
-            <img src={images.django22} className="img"/>
-            <p className="mt-3">
-            <b> i.iamge.url</b>:
-            <ul>
-               <li><b>i</b> : item in for loop</li>
-               <li><b>iamge</b> : name of column</li>
-               <li><b>url</b> : to get image uploded in database </li>
-            </ul>
-            </p>
-            <img src={images.django23} className="w-100 mt-3"/>
-            <img src={images.django24} className="w-100 mb-2 mt-3"/>
-            </div>
-      </article>
+
       <article>
             <h1> django user authentication without Rest framework </h1>
             <h4><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication" target="_blank"> Toturial </a></h4>

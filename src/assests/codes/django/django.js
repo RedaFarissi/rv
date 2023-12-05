@@ -2,8 +2,10 @@ import {
     index2setting, index2includes_app_to_urlpatterns0 ,index2includes_app_to_urlpatterns1 ,
     index2templates0 , index2templates1 ,index2templates2, index2urls,index2views,index2models0,
     index2models1,index2admin,layout_file_to_avoid_repeat0,layout_file_to_avoid_repeat1,
-    layout_file_to_avoid_repeat2,layout_file_to_avoid_repeat3,index3Parameter0,index3Parameter1
-
+    layout_file_to_avoid_repeat2,layout_file_to_avoid_repeat3,index3Parameter0,index3Parameter1,
+    index3Parameter2,index3Parameter3,index3Parameter4,index3Parameter5,index3Relations0,
+    index3Relations1,index3Relations2,index4manage_static_files0,index4manage_static_files1,
+    index4manage_static_files2,
 
 } from "./pathCodeDjango";
 const codes = [
@@ -44,14 +46,19 @@ const codes = [
     {
         title:"Model_Field_Reference",
         Definition:[],
-        Field:[],
-        Parameter:[index3Parameter0(),index3Parameter1()], 
+        Fields:[],
+        Relations:[index3Relations0(),index3Relations1(),index3Relations2(),],
+        Parameter:[index3Parameter0(),index3Parameter1(),index3Parameter2(),index3Parameter3(),index3Parameter4(),index3Parameter5(),], 
+    },
+    {
+        title:"Static_and_Media_files",
+        manage_static_files:[index4manage_static_files0(),index4manage_static_files1(),index4manage_static_files2()],
+        files_uploaded_by_user:[],
     },
     {
         title:"about_templates",
         templates_tags:[],
         csrf_token:[],
-        as_p:[],
         load:[],
         template_filters:[],
         variable_date:[],
@@ -72,11 +79,6 @@ const codes = [
         restore_the_data_from_the_backup:[],
         remove_all_from_db_models:[],
         annotate:[],
-    },
-    {
-        title:"Static_files_Media_files",
-        manage_static_files:[],
-        Serving_files_uploaded_by_a_user_during_development:[],
     },
     {
         title:"user_authentication_without_Rest_framework",
