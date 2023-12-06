@@ -1,4 +1,4 @@
-export default function layout_file_to_avoid_repeat1(){
+export default function index2layout_file_to_avoid_repeat1(){
     return `{% extends 'layoute.html' %}
 
 {% block content %}

@@ -1,0 +1,10 @@
+export default function index4Media_files8(){
+    return `from django.shortcuts import render
+from .models import Product
+
+
+def list_products(request):
+    products = Product.objects.all()
+    return render(request , "list_products.html" , {"products": products })
+`
+}

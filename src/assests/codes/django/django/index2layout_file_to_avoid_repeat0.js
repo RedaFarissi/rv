@@ -1,4 +1,4 @@
-export default function layout_file_to_avoid_repeat0(){
+export default function index2layout_file_to_avoid_repeat0(){
     return `<!DOCTYPE html>
 <html>
 <head>
