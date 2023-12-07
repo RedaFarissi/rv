@@ -8,10 +8,10 @@ import {
     Textarea ,Button ,Fieldset ,Dialog ,Iframe ,Meter ,Style ,HtmlLink ,Meta , 
 } from './pathHtml.js';
 import html_logo from "../../assests/images/logo/html_logo.png";
+import { useEffect } from "react";
 
 
-export default function Html(props){
-    
+export default function Html(props){  
     const arrays = props.html_list.map(e => <li className="list-group-item">
         <Link to={`/html/${e.toLowerCase().replace(/\s/g, '-')}`}><i className="fa-solid fa-caret-right me-1"></i> HTML {e}</Link>
     </li>)

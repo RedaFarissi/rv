@@ -47,7 +47,7 @@ div.ex5:hover, div.ex5:active {text-decoration: overline;}`,
 
         <div className="mital">متال 2:  </div>    
         <CodeHighlighter file_name="index.css" code={codeExemple2.css} language="css" copie={true}/>
-        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Hover" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Hover" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Hover' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <p>Mouse over the links to see them change layout.</p>
             <p><div style={{cursor:"pointer"}} className="ex1">This link changes color</div></p>

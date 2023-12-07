@@ -71,20 +71,20 @@ return(
     <article className="mt-5">
         <h2 className="title-h2">1. ما هو attribute </h2>
         <p className="style_divv">
-            تحدد السمات <b>(Attributes)</b> خصائص إضافية مثل عرض الصورة وارتفاعها. توضع السمات دائمًا في وسم البدء (أو وسم الفتح) <code> &lt; &gt; </code> وعادة ما تكون على شكل أزواج اسم و قيمة وتكتب بالشكل التالي : <q>name=</q>value . يجب دائمًا إحاطة قيم السمات بعلامات اقتباس.<br/>
+            تحدد السمات <b>(Attributes)</b> خصائص إضافية مثل عرض الصورة وارتفاعها. توضع السمات دائمًا في وسم البدء (أو وسم الفتح) <bdi> {"<>"} </bdi> وعادة ما تكون على شكل أزواج اسم و قيمة وتكتب بالشكل التالي : <q>name=</q>value . يجب دائمًا إحاطة قيم السمات بعلامات اقتباس.<br/>
             أيضا ، بعض السمات َضرورية لعمل عناصر معينة. على سبيل المثال ، يجب أن يحتوي الوسم <kbd>&lt;img&gt;</kbd> على سمات <b>src</b> و <b>alt</b>
             <ul>
                 <li>يمكن أن تحتوي جميع عناصر <b>HTML</b> على <b>attributes</b></li>
                 <li> يتم تحديد  <b>attributes</b> دائمًا في بداية الوسم</li>
             </ul>
         </p>
-        <CodeHighlighter  code={code1} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code2} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code3} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code4} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code1} language="html"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code2} language="html"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code3} language="html"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code4} language="html"  addClass="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital"> متال :</div>
-            <CodeHighlighter  code={codeExemple1} file_name="index.html" language="html" title="My HTML Document" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter  code={codeExemple1} is_html={true} file_name="index.html" language="html" title="My HTML Document" addClass="mt-3 mb-3" copie={true}/>
             <ol>
                 <li>في المثال أعلاه <b>src</b> داخل الوسم <kbd>&lt;img&gt;</kbd> هو سمة <small>(Attributes)</small> ومسار الصورة المقدمة هو قيمة السمة <small>(value)</small>.</li>
                 <li>ايضا <b>href</b> داخل الوسم <strong>&lt;a&gt;</strong> هي سمة <small>(Attributes)</small> والرابط المقدم هو قيمته <small>(value)</small>، وهكذا</li>
@@ -108,13 +108,13 @@ return(
                 <li>نقوم بتحديد ال <b>id</b> بوضع <small>(#)</small> قبل اسم ال <b>id</b> </li>
             </ul>
         </p>
-        <CodeHighlighter  code={code5} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code6} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code7} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code5} language="html"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code6} language="html"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code7} language="html"  addClass="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital"> مثال: </div>
             في المثال التالي لدينا عنصر <kbd>&lt;h2&gt;</kbd> يشير إلى اسم المعرف "coder_reda". سيتم تصميم عنصر <kbd>&lt;h2&gt;</kbd> هذا وفقًا لتعريف نمط coder_reda# في قسم الرأس:
-            <CodeHighlighter file_name="index.html" code={codeExemple2} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple2} language="html"  addClass="mt-3 mb-3" copie={true}/>
             <Result title='HTML id'  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <h2 style={{color: "green",fontSize:"45px"}}>Title</h2>
                 <p>Paragraph</p>
@@ -131,13 +131,13 @@ return(
                 <li>نقوم بتحديد ال <b>class</b> بوضع (نقطة) قبل اسم لكلاس</li>
             </ul>
         </p>
-        <CodeHighlighter  code={code8} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code9} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code10} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code8}  language="html"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code9}  language="html"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code10} language="html"  addClass="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital"> مثال: </div>
             في المثال التالي لدينا ثلاثة عناصر <kbd>&lt;h2&gt;</kbd> مع سمة <b>class</b> بقيمة "class_tile". سيتم تصميم جميع عناصر <kbd>&lt;h2&gt;</kbd> الثلاثة بالتساوي لقسم الرأس
-            <CodeHighlighter file_name="index.html" code={codeExemple3} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" is_html={true} code={codeExemple3} language="html"  addClass="mt-3 mb-3" copie={true}/>
             <Result title='HTML class'  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <h2 style={{color:"green",fontSize:"45px"}}>Title 1</h2> 
                 <h2 style={{color:"green",fontSize:"45px"}}>Title 2</h2>
@@ -157,12 +157,12 @@ return(
                 <li style={{marginBottom:"9px"}}><b>auto</b> الذي يفوض وكيل المستخدم القرار. الخوارزمية المستخدمة بسيطة نسبيًا: يتم تحليل المحتوى النصي وعندما يتم مواجهة الحرف الأول الذي له اتجاه "قوي" ، يتم أخذ هذا الاتجاه للعنصر بأكمله.</li>
             </ul>
         </p>
-        <CodeHighlighter  code={code11} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code12} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code13} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code11} language="html"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code12} language="html"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code13} language="html"  addClass="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital"> مثال: </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple4} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple4} language="html"  addClass="mt-3 mb-3" copie={true}/>
             <Result title='HTML class'  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <p>This is a paragraph of text in English, it's displayed by default from left to right.</p>
                 <p dir="rtl">هذه فقرة من النص باللغة العربية، ولكنها تُعرض من اليمين إلى اليسار.</p>

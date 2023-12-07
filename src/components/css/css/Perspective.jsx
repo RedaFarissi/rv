@@ -135,7 +135,7 @@ export default function Perspective(props){
       
         <div className="mital"> متال : </div>
         <ul><li> لاحظ أن الخاصية <b>perspective</b> لا تغير أي شيء في التصميم أسفله </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Perspective" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Perspective" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Perspective' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-perspective-ex1-parent-div1">
               <div className="css-perspective-ex1-parent"> A </div> 
@@ -147,7 +147,7 @@ export default function Perspective(props){
       
         <div className="mital"> متال 2 : </div>
         <ul><li> لاحظ أن الخاصية <b>perspective</b>  تغير  التصميم بعد إستعمال الخاصية <kbd>transform : translateZ(50px)</kbd> </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Perspective" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Perspective" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Perspective' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-perspective-ex2-parent-div1">
               <div class="css-perspective-ex2-parent">A</div>
@@ -171,7 +171,7 @@ export default function Perspective(props){
         </p>
 
         <div className="mital"> متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" title="CSS Perspective" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="CSS Perspective" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Perspective' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="css-perspective-ex3-style css-perspective-ex3-div1"> 
               <div className="css-perspective-ex3-div_a"> div1  </div>
@@ -185,7 +185,7 @@ export default function Perspective(props){
         </Result>
       
         <div className="mital"> متال 2 : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" title="CSS Perspective" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" is_html={true} title="CSS Perspective" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Perspective' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="css-perspective-ex4-style css-perspective-ex4-div1"> 
               <div className="css-perspective-ex4-div_a"> div1  </div>

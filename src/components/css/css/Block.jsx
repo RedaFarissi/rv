@@ -31,7 +31,7 @@ export default function Block(props){
             يمكن إستخدام جميع العناصر مع الخاصية <kbd>display:block</kbd> متل <small>margin , padding , width , height .....</small>
         </p>
         <div className="mital">متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Block" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Block" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Block' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <i className="css-block-ex1-i"> i - {">"} Inline </i>
             <span className="css-block-ex1-span"> span -{">"} Inline </span>

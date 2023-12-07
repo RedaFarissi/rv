@@ -23,7 +23,7 @@ export default function Dialog(props){
         <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple} head={codeExemple[1]} language="html" title="Dialog" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple} head={codeExemple[1]} language="html" is_html={true} title="Dialog" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Dialog' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                <dialog open='true' style={{position:"static", margin:"auto",padding:"3px"}}>
                     <div className="py-1 px-2 border  border-dark">Html</div>

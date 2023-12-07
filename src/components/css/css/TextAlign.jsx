@@ -46,7 +46,7 @@ p.main {text-align: justify;}`,
         </p>
         <div className="mital">متال  :  </div>
         <CodeHighlighter file_name="index.css" code={codeExemple1.css} language="css" copie={true}/>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Text-Align" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Text-Align" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Text-Align' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
             <h2 id="css-text-align-ex1-h2">CSS text-align Example</h2>
             <p className="css-text-align-ex1-date">May, 2014</p>

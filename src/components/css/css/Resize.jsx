@@ -88,7 +88,7 @@ export default function Resize(props){
         <h2 className="title-h2">1. القيمة both </h2>
         <div className="mital">متال  :  </div>
         <ul><li>  يمكنك الضعط على (border) من الجهة اليمنى السفلية وتغيير طول و عرض العنصر  . </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Resize" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Resize" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Resize' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1>The resize Property</h1>
             <div id="css-resize-ex1-div-resize">
@@ -101,7 +101,7 @@ export default function Resize(props){
         <h2 className="title-h2">2. القيمة horizontal </h2>
         <div className="mital">متال  :  </div>
         <ul><li>  يمكنك الضعط على (border) من الجهة اليمنى السفلية وتغيير عرض العنصر . </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Resize" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Resize" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Resize' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1>The resize Property</h1>
             <div id="css-resize-ex2-horizontal">
@@ -114,7 +114,7 @@ export default function Resize(props){
         <h2 className="title-h2">3. القيمة vertical </h2>
         <div className="mital">متال  :  </div>
         <ul><li>  يمكنك الضعط على (border) من الجهة اليمنى السفلية وتغيير طول العنصر  . </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" title="CSS Resize" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="CSS Resize" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Resize' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1>The resize Property</h1>
             <div id="css-resize-ex3-vertical">
@@ -130,7 +130,7 @@ export default function Resize(props){
             يمكن إستعماله أيضا لجعل العناصر التي  لها حجم متغير تابت متل <kbd>textarea</kbd>
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" title="CSS Resize" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" is_html={true} title="CSS Resize" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Resize' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1>The resize Property</h1>
             <textarea id="css-resize-ex4-textarea">  </textarea>        

@@ -228,12 +228,12 @@ export default function Animation(props){
             </ul>
         </p>
         <div class="mital"> متال 1 :</div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Animation" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Animation" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Animation' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-animation-ex2">  </div>
         </Result>
         <div class="mital"> متال 2 :</div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Animation" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Animation" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Animation' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-animation-ex3">  </div>
         </Result>
@@ -246,7 +246,7 @@ export default function Animation(props){
         </li></ul> 
         </p>
         <div class="mital"> متال :</div>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" title="CSS Animation" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="CSS Animation" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Animation' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-animation-ex4">  </div>
         </Result>
@@ -259,7 +259,7 @@ export default function Animation(props){
             المثال أسفله له تأخير لمدة 3 تواني قبل بدء تحريك 
         </p>
         <div class="mital"> متال :</div>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" title="CSS Animation" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" is_html={true} title="CSS Animation" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Animation' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-animation-ex5">  </div>
         </Result>
@@ -273,7 +273,7 @@ export default function Animation(props){
         </p>
         <div class="mital"> متال :</div>
         <ul><li>عند تحديت الصفحة  سيتم تنفيد التحريك مرتين فقط لأننا قمنا بإعطاء الخاصية <b>animation-iteration-count</b> القيمة 2 </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple5.code} head={codeExemple5.head} language="html" title="CSS Animation" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple5.code} head={codeExemple5.head} language="html" is_html={true} title="CSS Animation" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Animation' styleAdd="css-animation-ex6-styleAdd" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-animation-ex6">  </div>
         </Result>
@@ -320,7 +320,7 @@ export default function Animation(props){
             </ul>
         </p>
         <div class="mital"> متال :</div>
-        <CodeHighlighter file_name="index.html"code={codeExemple6.code} head={codeExemple6.head} language="html" title="CSS Animation" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple6.code} head={codeExemple6.head} language="html" is_html={true} title="CSS Animation" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Animation' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="css-animation-ex8-box">
                <div class="css-animation-ex8" style={{animationTimingFunction:"linear"}}>  linear </div>

@@ -73,7 +73,7 @@ export default function Grid(props){
             </div>
         </p>
         <div className="mital">متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Grid" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Grid" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Grid' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-grid-ex1-Result">
               <div cl style={{backgroundColor: "red"}}> 1 </div>
@@ -87,7 +87,7 @@ export default function Grid(props){
             </div>
         </Result>      
         <div className="mital">متال 2 : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple2.head} language="html" title="CSS Grid" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Grid" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Grid' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-grid-ex2-Result">
               <div cl style={{backgroundColor: "red"}}> 1 </div>
@@ -112,7 +112,7 @@ export default function Grid(props){
             </div>
         </p>
         <div className="mital">متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple3.head} language="html" title="CSS Grid" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple3.head} language="html" is_html={true} title="CSS Grid" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Grid' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-grid-ex3-Result">
               <div cl style={{backgroundColor: "red"}}> 1 </div>
@@ -126,7 +126,7 @@ export default function Grid(props){
             </div>
         </Result>
         <div className="mital">متال 2 : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple4.head} language="html" title="CSS Grid" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple4.head} language="html" is_html={true} title="CSS Grid" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Grid' styleAdd="css-grid-ex4-parent" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-grid-ex4-Result">
               <div cl style={{backgroundColor: "red"}}> 1 </div>

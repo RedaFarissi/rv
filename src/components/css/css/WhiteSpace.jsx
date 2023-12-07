@@ -53,7 +53,7 @@ export default function WhiteSpace(props){
         </p>
         <div className="mital">متال :  </div>
         <CodeHighlighter file_name="index.css" code={codeExemple.css} language="css" copie={true}/>
-        <CodeHighlighter file_name="index.html" code={codeExemple.code} head={codeExemple.head} language="html" title="CSS White-Space" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple.code} head={codeExemple.head} language="html" is_html={true} title="CSS White-Space" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS White-Space' styleAdd="css-white-space-ex1-overflow" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
             <h1>The white-space Property</h1>
             <h2 style={{color:"red"}}>white-space: nowrap:</h2>

@@ -83,7 +83,7 @@ export default function Padding(props){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">متال :  </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Padding" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Padding" addClass="mt-3 mb-3" copie={true}/>
             <Result title='CSS Padding' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <h2 className="css-padding-ex1-h2">Title 1</h2>
                 <div className="css-padding-ex1-div">
@@ -109,7 +109,7 @@ export default function Padding(props){
             </ul>
         </p>
         <div className="mital">متال 1 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Padding" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Padding" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Padding' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2 className="css-padding-ex2-h2">Title 1</h2>
             <div className="css-padding-ex2-div">
@@ -120,7 +120,7 @@ export default function Padding(props){
         
         <div className="mital">متال 2 :  </div>
         <ul><li>إذا كان للخاصية padding قيمة واحدة فجميع  لجوانب سوف تأخد تلك القيمة .</li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" title="CSS Padding" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="CSS Padding" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Padding' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="css-padding-ex3-div">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.

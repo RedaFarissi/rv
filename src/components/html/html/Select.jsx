@@ -38,10 +38,10 @@ export default function Select(props){
             السمة <b>name</b>  مطلوبة للإشارة إلى بيانات النموذج بعد إرسال النموذج (إذا حذفت السمة name، فلن يتم إرسال أية بيانات من القائمة المنسدلة).<br/>
             عند النقر سيتم إرسال القيمة المكتوبة داخل السمة value .   
         </p>
-        <CodeHighlighter  code={code1} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code1} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple1} language="html" title="Select" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple1} language="html" is_html={true} title="Select" addClass="mt-3 mb-3" copie={true}/>
             <ul> <li>عند النقر ستضهر قائمة منسدلة</li> </ul>
             <Result title='Select' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 Choose Marocan city:&nbsp;
@@ -59,10 +59,10 @@ export default function Select(props){
         <p className="style_divv">
             تستخدم السمة <b>size</b> لتحديد عدد ال <b>option</b> التي ستضهر على صفحتك .
         </p>
-        <CodeHighlighter  code={code2} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code2} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple2} language="html" title="Select" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple2} language="html" is_html={true} title="Select" addClass="mt-3 mb-3" copie={true}/>
             <ul> <li>عند النقر ستضهر قائمة منسدلة</li> </ul>
             <Result title='Select' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <h2>Choose Marocan city:</h2>

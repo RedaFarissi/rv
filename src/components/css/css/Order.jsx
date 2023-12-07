@@ -52,7 +52,7 @@ export default function Order(props){
         </p>
         <div className="mital">متال  :  </div>
         <CodeHighlighter file_name="index.css" code={codeExemple1.css} language="css" copie={true}/>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Order" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Order" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Order' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
             <div id="css-order-ex-parent">
                 <div className="css-order-ex-flex-center-center css-order-ex-fs-45 css-order-ex-order-3 css-order-ex-bg-red" > 1 </div>

@@ -21,7 +21,7 @@ export default function Iframe(props){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" title="Span" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" is_html={true} title="Span" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Span' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/f0oy-NicIgE?si=ncRrKUBT7RHHFbTt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </Result>

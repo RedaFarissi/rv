@@ -1,0 +1,9 @@
+pre{
+    border-radius: 4px;
+}
+pre>code{
+	font-size: 19px  !important;
+}
+.undefined {
+    border-radius: 50%;
+}

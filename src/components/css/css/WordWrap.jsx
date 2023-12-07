@@ -44,7 +44,7 @@ export default function WordWrap(props){
 
       <div className="mital">متال :  </div>
       <CodeHighlighter file_name="index.css" code={codeExemple.css} language="css" copie={true}/>
-      <CodeHighlighter file_name="index.html" code={codeExemple.code} head={codeExemple.head} language="html" title="CSS Word-Wrap" addClass="mt-3 mb-3" copie={true}/>
+      <CodeHighlighter file_name="index.html" code={codeExemple.code} head={codeExemple.head} language="html" is_html={true} title="CSS Word-Wrap" addClass="mt-3 mb-3" copie={true}/>
       <Result title='CSS Word-Wrap' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
         <div className="style-result" style={{overflow:"auto"}}>
             <h1 className="h1">The word-wrap Property</h1>

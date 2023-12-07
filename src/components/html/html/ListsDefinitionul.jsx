@@ -32,10 +32,10 @@ export default function ListsDefinitionul(props){
                 <li style={{marginBottom:"9px"}}>تشير العلامة <kbd>&lt;dd&gt;</kbd> في <b>HTML</b> إلى وصف التعريف وتستخدم للإشارة إلى وصف أو تعريف عنصر في قائمة الوصف. يمكن إدراج الفقرات وفواصل الأسطر والصور والروابط والقوائم داخل علامة <kbd>&lt;dd&gt;</kbd></li>
             </ul>
         </p>
-        <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" title="Underline" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" is_html={true} title="Underline" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Underline' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <dl>
                   <dt>1. html</dt>

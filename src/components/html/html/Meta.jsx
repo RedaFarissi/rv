@@ -83,9 +83,9 @@ const codeExemple5  =`<!DOCTYPE html>
         السمة <b>charset</b> تحدد ترميز الأحرف لمستند <b>HTML</b>.
         تشجع مواصفات <b>HTML5</b> مطوري الويب على استخدام مجموعة أحرف <b>UTF-8</b> ، والتي تغطي جميع الشخصيات والرموز تقريبا في العالم.<br/>
         السمة <b>charset</b> هي  سمة مهمة يجب إستخدامها دائما . <br/>
-        <CodeHighlighter  code={code1} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code1} language="html"  addclassName="mt-3 mb-3" copie={true}/>
     </p>
-    <CodeHighlighter code={codeExemple1} language="jsx" title="Meta" addClass="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter code={codeExemple1} language="html" title="Meta" addClass="mt-3 mb-3" copie={true}/>
 </article>
 <article>
     <h2 className="title-h2">3. السمة name </h2>
@@ -96,39 +96,39 @@ const codeExemple5  =`<!DOCTYPE html>
     <h5>1.  الكلمات الرئيسية لمحركات البحث </h5>
     <p className="style_divv">
         لتحديد الكلمات الرئيسية  لمحركات البحث يجب إعطاء السمة  <b>name</b>  القيمة <b>keywords</b> تم داخل السمة <b>content</b> قم بكتابة جميع الكلمات التي قد تساعد موقعك مع محركات البحت .
-        <CodeHighlighter  code={code2} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code2} language="html"  addclassName="mt-3 mb-3" copie={true}/>
     </p>
-    <CodeHighlighter code={codeExemple2} language="jsx" title="Meta" addClass="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter code={codeExemple2} language="html" title="Meta" addClass="mt-3 mb-3" copie={true}/>
     <h5>2.  وصف صفحة الويب الخاصة  </h5>
     <p className="style_divv">
         لتحديد وصف صفحة الويب الخاصة بك يجب إعطاء السمة  <b>name</b>  القيمة <b>description</b> تم داخل السمة <b>content</b> قم بكتابة تعريف وصف صفحة الويب الخاصة بك .
-        <CodeHighlighter  code={code3} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code3} language="html"  addclassName="mt-3 mb-3" copie={true}/>
     </p>
-    <CodeHighlighter code={codeExemple3} language="jsx" title="Meta" addClass="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter code={codeExemple3} language="html" title="Meta" addClass="mt-3 mb-3" copie={true}/>
     <h5>3.  مؤلف صفحة </h5>
     <p className="style_divv">
         لتحديد مؤلف صفحة يجب إعطاء السمة  <b>name</b>  القيمة <b>author</b> تم داخل السمة <b>content</b> قم بكتابة إسمك   .
-        <CodeHighlighter  code={code4} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code4} language="html"  addclassName="mt-3 mb-3" copie={true}/>
     </p>
-    <CodeHighlighter code={codeExemple4} language="jsx" title="Meta" addClass="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter code={codeExemple4} language="html" title="Meta" addClass="mt-3 mb-3" copie={true}/>
 
     <h5>4.  موقع متجاوب مع جميع الأجهزة </h5>
     <p className="style_divv">
         لجعل موقعك متجاوب مع جميع الأجهزة يجب إعطاء السمة  <b>name</b> القيمة <b>viewport</b> تم داخل السمة <b>content</b> قم بكتابة <b>width=device-width, initial-scale=1.0</b>   .
-        <CodeHighlighter  code={code5} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code5} language="html"  addclassName="mt-3 mb-3" copie={true}/>
     </p>
-    <CodeHighlighter code={codeExemple5} language="jsx" title="Meta" addClass="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter code={codeExemple5} language="html" title="Meta" addClass="mt-3 mb-3" copie={true}/>
     <h5>4.   تحديد كيف يتم عرض موقعك في فيس بوك </h5>
     تستخدم الخاصية <b>meta</b> مع السمة <b><bdi>property="og:title"</bdi></b> لتحديد عنوان لموقعك عند مشاركته على فيس بوك . يتم تحدي العناون داخل الخاصية <b>content</b> 
-    <CodeHighlighter  code={code6} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter  code={code6} language="html"  addclassName="mt-3 mb-3" copie={true}/>
     تستخدم الخاصية <b>meta</b> مع السمة <b><bdi>property="og:discription"</bdi></b> لتحديد وصف لموقعك عند مشاركته على فيس بوك . يتم تحديد الوصف داخل الخاصية <b>content</b> 
-    <CodeHighlighter  code={code7} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter  code={code7} language="html"  addclassName="mt-3 mb-3" copie={true}/>
     تستخدم الخاصية <b>meta</b> مع السمة <b><bdi>property="og:image"</bdi></b> لتحديد صورة لموقعك عند مشاركته على فيس بوك . يتم تحديد مسار الصورة تم  نوعها داخل الخاصية <b>content</b> 
-    <CodeHighlighter  code={code8} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter  code={code8} language="html"  addclassName="mt-3 mb-3" copie={true}/>
     تستخدم الخاصية <b>meta</b> مع السمة <b><bdi>property="og:width"</bdi></b> لتحديد عرض الصورة الذي قمة بتحديدها لموقعك عند مشاركته على فيس بوك . يتم تحديد عرض داخل الخاصية <b>content</b> 
-    <CodeHighlighter  code={code9} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter  code={code9} language="html"  addclassName="mt-3 mb-3" copie={true}/>
     تستخدم الخاصية <b>meta</b> مع السمة <b><bdi>property="og:height"</bdi></b> لتحديد طول الصورة الذي قمة بتحديدها لموقعك عند مشاركته على فيس بوك . يتم تحديد الطول داخل الخاصية <b>content</b> 
-    <CodeHighlighter  code={code10} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter  code={code10} language="html"  addclassName="mt-3 mb-3" copie={true}/>
 </article>
 </section>
 )

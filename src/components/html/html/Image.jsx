@@ -15,10 +15,10 @@ export default function Image(props){
                 <li> نستخدم الوسم <kbd>&lt;img&gt;</kbd> على هذا النحو <kbd>&lt;img src="url"&gt;</kbd> لعرض صورة في الصفحة. مكان الكلمة <b>url</b> نضع مسار الصورة التي نريد عرضها.</li>
             </ul>
         </p>
-        <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="html" addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple1} language="html" title="Image" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple1} language="html" is_html={true} title="Image" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Image' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <img src={props.html_logo} width="50%" alt="description"/> 
             </Result>
@@ -30,7 +30,7 @@ export default function Image(props){
         <div className="sum_exemple_style">
             <div className="mital">متال 2 : </div>
             <ul><li>قمنا بكتابة مسار خاطئ لصورة لتتمكن من رؤية فائدة <b>alt</b></li></ul>
-            <CodeHighlighter file_name="index.html" code={codeExemple2} language="html" title="Image" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple2} language="html" is_html={true} title="Image" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Image' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <img src="logo/logo.png" width="50%" alt="description"/> 
             </Result>

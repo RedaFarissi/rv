@@ -53,10 +53,10 @@ export default function ListsUnordered(props){
             نستخدم الوسم <kbd>&lt;ul&gt;</kbd>  لإنشاء  قائمة (نقطية) غير مرتبة.<br/>
             نستخدم الوسم <kbd>&lt;li&gt;</kbd>  داخل الو سم <kbd>&lt;ul&gt;</kbd> لتفرقة بين المحتوى 
         </p>
-        <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter  code={codeExemple1} language="html" title="Lists Unordered" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter  code={codeExemple1} language="html" is_html={true} title="Lists Unordered" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Lists Unordered' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <ul className="m-0">
                     <li>html</li>
@@ -74,7 +74,7 @@ export default function ListsUnordered(props){
         </div>
             <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple2} language="html" title="Lists Unordered" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple2} language="html" is_html={true} title="Lists Unordered" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Lists Unordered' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <ul type="circle">
                     <li>html</li>
@@ -100,7 +100,7 @@ export default function ListsUnordered(props){
     <article>
         <h2 className="title-h2">3. القوائم المتداخلة </h2>
         <ul><li> معلومة : يمكن كتابة قوائم متداخلة كما هو موضح في الأسفل .</li></ul>
-        <CodeHighlighter file_name="index.html" code={codeExemple3} language="html" title="Lists Unordered" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple3} language="html" is_html={true} title="Lists Unordered" addClass="mt-3 mb-3" copie={true}/>
         <Result title='Lists Unordered' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <ul>
               <li>Coffee</li>

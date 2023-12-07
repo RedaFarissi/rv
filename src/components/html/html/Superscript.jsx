@@ -12,10 +12,10 @@ export default function Superscript(props){
             تحدد العلامة <kbd>&lt;sup&gt;</kbd> النص المرتفع. يظهر النص المرتفع بنصف حرف فوق السطر العادي ، ويتم تقديمه أحيانًا بخط أصغر. يمكن استخدام النص المرتفع للحواشي السفلية ، مثل
             1<sup>er</sup>  
         </p>
-        <CodeHighlighter  code={code} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="html"  addClass="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
         <div className="mital">مثال : </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple} language="html" title="Superscript" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple} language="html" is_html={true} title="Superscript" addClass="mt-3 mb-3" copie={true}/>
         <Result title='Superscript' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>2<sup>3</sup> = 8</h2>
             <h2>1<sup>er</sup></h2>

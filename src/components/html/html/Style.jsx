@@ -18,7 +18,8 @@ export default function Style(props){
     border: green;
   }
 </style>`
-  const codeExemple = [`   <style>
+  const codeExemple = [`   
+    <style>
           .heading{
               font-size: 60px;
               color : white;
@@ -56,7 +57,7 @@ export default function Style(props){
     <CodeHighlighter  code={code} language="css"  addclassName="mt-3 mb-3" copie={true}/>
     <div className="sum_exemple_style">
     <div className="mital">مثال : </div>
-    <CodeHighlighter file_name="index.html" code={codeExemple[1]} head={codeExemple[0]} language="html" title="Style" addClass="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter file_name="index.html" code={codeExemple[1]} head={codeExemple[0]} language="html" is_html={true} title="Style" addClass="mt-3 mb-3" copie={true}/>
     <Result title='Style' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
         <h2 className="html-style-heading html-style-heading-1">Reda Eskouni</h2>
         <h2 className="html-style-heading html-style-heading-2">Reda Eskouni</h2>

@@ -30,7 +30,7 @@ export default function Quotes(props){
         </p>
         <div class="mital">متال : </div>
         <CodeHighlighter file_name="index.css" code={codeExemple2.css} language="css" copie={true}/>
-        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Quotes" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Quotes" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Quotes' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
             <h2><q id="css-quotes-ex1-a">This is a quote.</q></h2>
             <h2><q id="css-quotes-ex1-b">This is a <q>quote</q> inside a quote.</q></h2>

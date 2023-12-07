@@ -105,7 +105,7 @@ export default function AlignItems(props){
             قيمة إفتراضية . يتم شد العناصر لتناسب الحاوية    
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Align-Items" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Align-Items" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Align-Items' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-align-items-ex1-div">
                 <div style={{backgroundColor:"blue"}}></div>
@@ -121,7 +121,7 @@ export default function AlignItems(props){
             يتم وضع العناصر في بداية الحاوية على المستوى العمودي  .
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple2.head} language="html" title="CSS Align-Items" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Align-Items" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Align-Items' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-align-items-ex2-div">
                 <div style={{backgroundColor:"blue"}}></div>
@@ -137,7 +137,7 @@ export default function AlignItems(props){
             يتم وضع العناصر في وسط الحاوية على المستوى العمودي .
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple3.head} language="html" title="CSS Align-Items" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple3.head} language="html" is_html={true} title="CSS Align-Items" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Align-Items' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-align-items-ex3-div">
                 <div style={{backgroundColor:"blue"}}></div>
@@ -153,7 +153,7 @@ export default function AlignItems(props){
             يتم وضع العناصر في نهاية الحاوية على مستوى الأفقي .
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple4.head} language="html" title="CSS Align-Items" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple4.head} language="html" is_html={true} title="CSS Align-Items" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Align-Items' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-align-items-ex4-div">
                 <div style={{backgroundColor:"blue"}}></div>

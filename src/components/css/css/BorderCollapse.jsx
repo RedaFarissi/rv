@@ -52,7 +52,7 @@ export default function BorderCollapse(props){
             </ul>
         </div>
         <div class="mital"> متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple.code} head={codeExemple.head} language="html" title="CSS Border-Collapse" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple.code} head={codeExemple.head} language="html" is_html={true} title="CSS Border-Collapse" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Border-Collapse' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <table className="css-border-collapse-ex1"  id="css-border-collapse-ex1-table1">
                 <thead><tr><th className="css-border-collapse-ex1">First Name</th><th className="css-border-collapse-ex1">Last Name</th></tr></thead>

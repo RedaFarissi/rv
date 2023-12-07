@@ -47,7 +47,7 @@ export default function AccentColor(props){
             </ul>
         </p>
         <div className="mital"> متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Accent-Color" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Accent-Color" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Accent-Color' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             checkbox <input type="checkbox" checked /><br/><hr/>
             radio <input type="radio" checked />  <br/><hr/>

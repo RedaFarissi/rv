@@ -112,7 +112,7 @@ export default function Position(props){
             عند تغير مكان عنصر من عناصر <b>HTML</b> بستخدام القيمة <b>relative</b> مع الخاصية <b>position</b> يتم تحويل العنصر إلى المكان المحدد بستعمال الخصائص <b>top</b> و <b>bottom</b> و <b>left</b> و <b>right</b> ولاكن يبقى المكان الأصلي محجوز مما يعني أنه لن يتم تعديل المحتوى الآخر ليناسب أي فجوة يتركها العنصر . 
         </p>
         <div class="mital"> متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Position" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Position" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Position' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="css-position-ex1-div css-position-ex1-posi1"></div>
             <div className="css-position-ex1-div css-position-ex1-posi2"></div>
@@ -136,7 +136,7 @@ export default function Position(props){
             تتم إزالة العناصر المطلقة ذات المواضع من التدفق العادي ، ويمكن أن تتداخل مع العناصر مما يعني أنه يتم تعديل المحتوى الآخر ليصبح بتدفق العادي .<br/>
         </p>
         <div class="mital"> متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Position" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Position" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Position' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
            <div className="css-position-ex2-div_relative">
               <div class="css-position-ex2-div_absolute">
@@ -145,7 +145,7 @@ export default function Position(props){
             </div>
         </Result>
         <div class="mital"> متال 2 : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" title="CSS Position" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="CSS Position" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Position' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="position-relative">
                 <div className="css-position-ex3-div css-position-ex3-div_absol"> Absolute </div>

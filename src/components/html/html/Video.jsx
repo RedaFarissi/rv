@@ -20,7 +20,7 @@ export default function Audio(){
                 <li style={{marginBottom:"9px"}}>دائما استخدم امتداد <b>mp4</b> لأن جميع المتصفحات تدعمه.</li>
             </ul>
         </p>
-        <CodeHighlighter  code={code1} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code1} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <h4 className="green"> الكود </h4>
@@ -35,7 +35,7 @@ export default function Audio(){
             يُحدِّد العنصر <kbd>&lt;source&gt;</kbd> عدِّة مصادر لملفات الوسائط المتعددة ضمن العنصر <kbd>&lt;picture&gt;</kbd> أو <kbd>&lt;audio&gt;</kbd> أو <kbd>&lt;video&gt;</kbd>. وهذا العنصر فارغ، وأكثر استخدام شائع له هو توفير محتوى الوسائط المتعددة نفسه لكن بصيغ مختلفة لكي يستطيع المتصفح تشغيل أنسبها .
             <ul><li>يحتوي على <b>attribute</b> أساسي هو src وتكون قيمته عبارة عن مسار وإسم ملف الفيديو. وهو من العناصر التي ليس لها نهاية وسم (closing tag).</li></ul>
         </p>
-        <CodeHighlighter  code={code2} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code2} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <ul><li>يبيّن هذه المثال كيفية تضمين مقطع فيديو باستخدام الوسم <bdi><strong>&lt;video&gt;</strong></bdi> وله أكثر من مصدر، أحدها بصيغة <b>mov</b> والآخر بصيغة <b>mp4</b></li></ul>
             <div className="mital">مثال : </div>

@@ -16,10 +16,10 @@ export default function Paragraph(props){
                 <li>يكتب الوسم <kbd>&lt;p&gt;</kbd> على شكل التالي :</li>
             </ul>
         </p>
-        <CodeHighlighter  code={code} language="jsx"  addclass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="html"  addclass="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" title="Paragraph" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" is_html={true} title="Paragraph" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Paragraph' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                <p>This is the paragraph.</p>
                <p>This is another paragraph.</p>

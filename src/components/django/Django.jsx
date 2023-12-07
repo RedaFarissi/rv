@@ -3,25 +3,23 @@ import images from "./imagesDjango";
 import codes from "../../assests/codes/django/django"
 import { useState } from "react";
 
-const GetAbsoluteUrlExemple = (title,author) =>{
-      return(
-      <table className="table table-dark table-bordered text-light">
-         <thead>
-            <tr>
-               <th className="mb-0"> title </th>
-               <th className="mb-0"> author </th>
-            </tr>
-         </thead>    
-         <tbody className="mt-0">
-            <tr>
-               <td> {title} </td>
-               <td> {author} </td>
-            </tr>
-         </tbody>
-      </table>
-      )
-}
 export default function Django(props){
+    
+   const [getAbsoluteUrl1, setGetAbsoluteUrl1] = useState({
+      route: "",
+      title_route:"index",
+      title: "",
+      author:"",
+      visibility: false
+   })
+   const [getAbsoluteUrl2, setGetAbsoluteUrl2] = useState({
+      id: "",
+      route: "categories/",
+      title_route:"categories",
+      title: "",
+      author:"",
+      visibility: false
+   })
 
    const arrays = codes.map(e =>{ 
       const keys = Object.keys(e) 
@@ -34,7 +32,7 @@ export default function Django(props){
         keys_map = <dt className="aside-dl-simple" key={keys[0]}><a href={`/django#${keys[0]}`}><i className="fa-solid fa-caret-right"></i> {keys[0].replace(/_/g, ' ')} </a></dt>;
       }
       return keys_map
-    });
+   });
 
     return (
 <main>
@@ -45,8 +43,6 @@ export default function Django(props){
    </aside>
    <section className="section-conetent ">
       <h1 className="heading-style heading-style-django-color"> Django </h1>   
-
-
       <article id="Introduction">
             <h2 className="title-h2 mt-5">1 -مقدمة حول Django</h2>
             <h3 className="title-h3" id="What_is_Django">1 - ما هو Djnago . </h3>
@@ -194,9 +190,9 @@ export default function Django(props){
                   <li className="mb-3"> <span className="text-success">إضافة القوالب</span> : قم بوضع ملفات القوالب الخاصة بك داخل مجلد templates. يمكنك إضافة ملفات HTML أو ملفات قوالب Django مع امتداد .html .</li>
                </ul>
             </p>
-            <CodeHighlighter code={codes[2].templates[0]} file_name="project / helloapp / templates / home.html" language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-            <CodeHighlighter code={codes[2].templates[1]} file_name="project / helloapp / templates / articles.html" language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-            <CodeHighlighter code={codes[2].templates[2]} file_name="project / helloapp / templates / article.html" language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].templates[0]} file_name="project / helloapp / templates / home.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].templates[1]} file_name="project / helloapp / templates / articles.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].templates[2]} file_name="project / helloapp / templates / article.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             <h3 className="title-h3" id="urls"> 5 - ملف urls </h3>
             <p className="style_divv">
                في Django، يُستخدم ملف urls.py لتحديد كيفية ربط عناوين الـURL بدوال (views) محددة في تطبيقك. يحدد هذا الملف الطريقة التي يمكن للمستخدمين من خلالها الوصول إلى محتوى معين في تطبيقك.
@@ -262,15 +258,15 @@ export default function Django(props){
             <CodeCommand>python manage.py runserver</CodeCommand>
             <h5 className="title-h5"> 5 - نتيجة التشغيل  </h5>
             <ul> <li>http://localhost:8000/helloapp/home/</li> </ul>
-            <Result title='home' logo={images.html_logo}  route="http://localhost:8000/helloapp/home/">
+            <Result title='home'  route="http://localhost:8000/helloapp/home/">
                <h1>Home</h1>
             </Result>
             <ul><li>http://localhost:8000/helloapp/articles/</li></ul>
-            <Result title='articles' logo={images.html_logo}  route="http://localhost:8000/helloapp/articles/">
+            <Result title='articles'  route="http://localhost:8000/helloapp/articles/">
                <h1>Articles</h1>
             </Result>
-            <ul><li>http://localhost:8000/helloapp/article/1/</li></ul>
-            <Result title='DoesNotExist at /helloapp/artic' logo={images.html_logo}  route="http://localhost:8000/helloapp/article/1/">
+            <ul><li><bdi>http://localhost:8000/helloapp/article/1/</bdi></li></ul>
+            <Result styleAdd="p-0" title='DoesNotExist at /helloapp/artic'  route="http://localhost:8000/helloapp/article/1/">
                <div className="alert alert-warning">
                      <h2>DoesNotExist at /helloapp/article/1/</h2>
                      <h6>Article matching query does not exist.</h6>
@@ -301,14 +297,14 @@ export default function Django(props){
                إنشاء مستخدم فائق (superuser) في Django يتيح لك الوصول إلى واجهة الإدارة والتحكم الكامل في قاعدة البيانات. يمكنك إنشاء مستخدم فائق باستخدام أمر createsuperuser.
             </p>
             <CodeCommand>python manage.py createsuperuser</CodeCommand>
-            <ul><li>   اذهب إلى الرابط http://127.0.0.1:8000/admin/ وقم بتسجيل الدخول باستخدام الحساب الذي قمت بإنشائه</li></ul>
+            <ul><li>   اذهب إلى الرابط <bdi>http://127.0.0.1:8000/admin/</bdi> وقم بتسجيل الدخول باستخدام الحساب الذي قمت بإنشائه</li></ul>
             <img src={images.django5} className="w-100 my-2 "/>
             <h3 className="title-h3" id="admin">9 - ملف admin </h3>
             <p className="style_divv">
                ملف admin.py هو ملف في مشروع Django يستخدم لتكوين وتخصيص واجهة الإدارة لتطبيق محدد. يحتوي هذا الملف عادة على إعدادات خاصة بالإدارة التي تسمح للمطور بتحديد كيفية عرض وتحرير البيانات في واجهة الإدارة. يتم تسجيل النماذج (Models) التي يرغب المطور في إدارتها في هذا الملف، ويمكن أيضًا إضافة تخصيصات إضافية مثل تحديد الحقول المعروضة، وتحديد البحث، وتطبيق الفلاتر، وغيرها من الإعدادات التي تجعل عملية الإدارة أكثر سهولة وفعالية
             </p>
             <CodeHighlighter code={codes[2].admin[0]} file_name="project / helloapp / admin.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-            <ul> <li> تحديث صفحة : http://127.0.0.1:8000/admin/ </li> </ul>
+            <ul> <li> تحديث صفحة : <bdi>http://127.0.0.1:8000/admin/</bdi> </li> </ul>
             <img src={images.django5_5} className="w-100 my-2 "/>
             <ul> <li> انقر على add في Articles وأضاف article  تم اذهب إلى الرابط http://localhost:8000/helloapp/article/1/ </li> </ul>
             <h3 className="title-h3" id="layout_file_to_avoid_repeat"> 10 - إنشاء ملف layoute لتجنب التكرار وتعديل الملفات .  </h3>
@@ -534,7 +530,7 @@ export default function Django(props){
             <CodeHighlighter code={codes[3].Parameter[3]} file_name="project / helloapp / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             <CodeHighlighter code={codes[3].Parameter[4]} file_name="project / helloapp / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             <CodeHighlighter code={codes[3].Parameter[5]} file_name="project / helloapp / templates /author_books.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-            <Result title='author_books' logo={images.html_logo}  route="http://localhost:8000/helloapp/authors/1/books/">
+            <Result title='author_books'  route="http://localhost:8000/helloapp/authors/1/books/">
                <h2>Author : reda eskouni</h2>
                <div className="text-light mb-2" style={{backgroundColor:"red",fontSize:"26px"}}>My Book 1</div>
                <div className="text-light mb-2" style={{backgroundColor:"red",fontSize:"26px"}}>My Book 2</div>
@@ -676,7 +672,7 @@ export default function Django(props){
             <div className="mital">مثال : </div>
             <CodeHighlighter code={codes[5].template_filters[0]} file_name="views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[5].template_filters[1]} file_name="created_updated.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <Result title='date' logo={images.html_logo}  route="http://localhost:8000/helloapp/article/1/">
+            <Result title='date'  route="http://localhost:8000/helloapp/article/1/">
                <h2>Products created updated</h2>
                <div className="mb-2 bg-dark text-light">
                   <ul>
@@ -734,7 +730,7 @@ export default function Django(props){
                تُستخدم هذه الطريقة عادةً مع نظام توجيه URL الخاص بـ Django لتحديد أنماط URL التي تطابق عناوين URL التي يتم إرجاعها بواسطة get_absolute_url.
             </p>
             <div className="mital">مثال 1 : </div>
-            <h5 className="title-h5">إنشاء app</h5>
+            <h5 className="title-h5">إنشاء app بالاسم testing</h5>
             <CodeCommand>python manage.py startapp testing</CodeCommand>
             <CodeHighlighter code={codes[7].get_absolute_url[0]} file_name="projet / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[7].get_absolute_url[1]} file_name="projet / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
@@ -743,6 +739,9 @@ export default function Django(props){
             <CodeHighlighter code={codes[7].get_absolute_url[4]} file_name="projet / testing / models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[7].get_absolute_url[5]} file_name="projet / templates / index.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[7].get_absolute_url[6]} file_name="projet / templates / home_detail.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeCommand>python manage.py makemigrations</CodeCommand>
+            <CodeCommand>python manage.py migrate</CodeCommand>
+            <CodeCommand>python manage.py shell</CodeCommand>
             <CodeCommand>
                {">>>"} from testing.models import Author, Book<br/>
                {">>>"} <br/>
@@ -757,33 +756,101 @@ export default function Django(props){
                {">>>"} Book.objects.create(title="Book 2 by Author 2", author=author2)<br/>
                {">>>"} Book.objects.create(title="Book 3 by Author 2", author=author2)<br/>
             </CodeCommand>
-            <Result title='index' logo={images.html_logo}  route="http://localhost:8000/testing/">
-               <table className="table table-dark table-bordered text-light">
-                  <thead>
-                     <tr>
-                        <th className="mb-0"> Title </th>
-                     </tr>
-                  </thead>    
-                  <tbody className="mt-0">
-                     <tr><td onClick={()=>{ GetAbsoluteUrlExemple("Book 1 by Author 1","author 1") }}><u className="text-primary" style={{textDecoration:"underline"}}>Book 1 by Author 1</u> </td></tr>
-                     <tr><td onClick={()=>{ GetAbsoluteUrlExemple("Book 2 by Author 1","author 1") }}><u className="text-primary" style={{textDecoration:"underline"}}>Book 2 by Author 1</u></td></tr>
-                     <tr><td onClick={()=>{ GetAbsoluteUrlExemple("Book 3 by Author 1","author 1") }}><u className="text-primary" style={{textDecoration:"underline"}}>Book 3 by Author 1</u></td></tr>
-                     <tr><td onClick={()=>{ GetAbsoluteUrlExemple("Book 1 by Author 2","author 2") }}><u className="text-primary" style={{textDecoration:"underline"}}>Book 1 by Author 2</u></td></tr>
-                     <tr><td onClick={()=>{ GetAbsoluteUrlExemple("Book 2 by Author 2","author 2") }}><u className="text-primary" style={{textDecoration:"underline"}}>Book 2 by Author 2</u></td></tr>
-                     <tr><td onClick={()=>{ GetAbsoluteUrlExemple("Book 3 by Author 2","author 2") }}><u className="text-primary" style={{textDecoration:"underline"}}>Book 3 by Author 2</u></td></tr>
-                  </tbody>
-               </table>
+            <Result title={getAbsoluteUrl1.title_route} route={`http://localhost:8000/testing/${getAbsoluteUrl1.route}`}>
+               {(getAbsoluteUrl1.visibility)?(
+                  <>
+                     <h2>home_detail</h2>
+                     <table className="table table-dark table-bordered text-light">
+                        <thead>
+                           <tr>
+                              <th className="mb-0"> title </th>
+                              <th className="mb-0"> author </th>
+                           </tr>
+                        </thead>    
+                        <tbody className="mt-0">
+                           <tr>
+                              <td> {getAbsoluteUrl1.title} </td>
+                              <td> {getAbsoluteUrl1.author} </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </>
+               ):(
+                  <table className="table table-dark table-bordered text-light">
+                     <thead>
+                        <tr>
+                           <th className="mb-0"> Title </th>
+                        </tr>
+                     </thead>    
+                     <tbody className="mt-0">
+                        <tr><td onClick={()=>{ setGetAbsoluteUrl1({title_route:"detail",route:"book-1-by-author-1/",title:"Book 1 by Author 1",author:"author 1",visibility:true}) }}><u className="text-primary cursor-pointer" style={{textDecoration:"underline"}}>Book 1 by Author 1</u></td></tr>
+                        <tr><td onClick={()=>{ setGetAbsoluteUrl1({title_route:"detail",route:"book-2-by-author-1/",title:"Book 2 by Author 1",author:"author 1",visibility:true}) }}><u className="text-primary cursor-pointer" style={{textDecoration:"underline"}}>Book 2 by Author 1</u></td></tr>
+                        <tr><td onClick={()=>{ setGetAbsoluteUrl1({title_route:"detail",route:"book-3-by-author-1/",title:"Book 3 by Author 1",author:"author 1",visibility:true}) }}><u className="text-primary cursor-pointer" style={{textDecoration:"underline"}}>Book 3 by Author 1</u></td></tr>
+                        <tr><td onClick={()=>{ setGetAbsoluteUrl1({title_route:"detail",route:"book-1-by-author-2/",title:"Book 1 by Author 2",author:"author 2",visibility:true}) }}><u className="text-primary cursor-pointer" style={{textDecoration:"underline"}}>Book 1 by Author 2</u></td></tr>
+                        <tr><td onClick={()=>{ setGetAbsoluteUrl1({title_route:"detail",route:"book-2-by-author-2/",title:"Book 2 by Author 2",author:"author 2",visibility:true}) }}><u className="text-primary cursor-pointer" style={{textDecoration:"underline"}}>Book 2 by Author 2</u></td></tr>
+                        <tr><td onClick={()=>{ setGetAbsoluteUrl1({title_route:"detail",route:"book-3-by-author-2/",title:"Book 3 by Author 2",author:"author 2",visibility:true}) }}><u className="text-primary cursor-pointer" style={{textDecoration:"underline"}}>Book 3 by Author 2</u></td></tr>
+                     </tbody>
+                  </table>
+               )}
             </Result>  
-
             <div className="mital"> مثال 2 : </div>
-            <h5 className="title-h5">urls.py</h5>
-            <img src={images.django144} className="img"/>
-            <h5 className="title-h5">models.py</h5>
-            <img src={images.django145} className="img"/>
-            <h5 className="title-h5">views.py</h5>
-            <img src={images.django146} className="img"/>
-            <h5 className="title-h5"> template/category_list.html </h5>
-            <img src={images.django147} className="img"/>
+            <h5 className="title-h5">إنشاء app بالاسم shop</h5>
+            <CodeCommand>python manage.py startapp shop</CodeCommand>
+            <CodeHighlighter code={codes[7].get_absolute_url[7]}  file_name="projet / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[8]}  file_name="projet / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[9]}  file_name="projet / shop / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[10]} file_name="projet / shop / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[11]} file_name="projet / shop / models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[12]} file_name="projet / templates / home_detail.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[13]} file_name="projet / templates / home_detail.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeCommand>python manage.py makemigrations</CodeCommand>
+            <CodeCommand>python manage.py migrate</CodeCommand>
+            <CodeCommand>python manage.py shell</CodeCommand>
+            <CodeCommand>
+               {">>>"} from shop.models import Category<br/>
+               {">>>"} Category.objects.create(name="category 1", slug="category-1")<br/>
+               {">>>"} Category.objects.create(name="category 2", slug="category-2")<br/>
+               {">>>"} Category.objects.create(name="category 3", slug="category-3")<br/>
+               {">>>"} Category.objects.create(name="category 4", slug="category-4")<br/>
+               {">>>"} Category.objects.create(name="category 5", slug="category-5")<br/>
+               {">>>"} Category.objects.create(name="category 6", slug="category-6")<br/>
+            </CodeCommand>
+            <Result title={getAbsoluteUrl2.title_route} route={`http://localhost:8000/${getAbsoluteUrl2.route}`}>
+               {(getAbsoluteUrl2.visibility)?(
+                  <>
+                     <h2> Category {getAbsoluteUrl2.id} </h2>
+                     <table className="table table-dark table-bordered text-light">
+                        <thead>
+                           <tr>
+                              <th className="mb-0"> category </th>
+                           </tr>
+                        </thead>    
+                        <tbody className="mt-0">
+                           <tr>
+                              <td> {getAbsoluteUrl2.title} </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </>
+               ):(
+                  <table className="table table-dark table-bordered text-light">
+                     <thead>
+                        <tr>
+                           <th className="mb-0"> categories </th>
+                        </tr>
+                     </thead>    
+                     <tbody className="mt-0">
+                        <tr><td onClick={()=>{ setGetAbsoluteUrl2({id:"1",title_route:"category 1",route:"category/category-1/",title:"category 1",visibility:true}) }}><u className="text-primary cursor-pointer" style={{textDecoration:"underline"}}>category 1</u></td></tr>
+                        <tr><td onClick={()=>{ setGetAbsoluteUrl2({id:"2",title_route:"category 2",route:"category/category-2/",title:"category 2",visibility:true}) }}><u className="text-primary cursor-pointer" style={{textDecoration:"underline"}}>category 2</u></td></tr>
+                        <tr><td onClick={()=>{ setGetAbsoluteUrl2({id:"3",title_route:"category 3",route:"category/category-3/",title:"category 3",visibility:true}) }}><u className="text-primary cursor-pointer" style={{textDecoration:"underline"}}>category 3</u></td></tr>
+                        <tr><td onClick={()=>{ setGetAbsoluteUrl2({id:"4",title_route:"category 4",route:"category/category-4/",title:"category 4",visibility:true}) }}><u className="text-primary cursor-pointer" style={{textDecoration:"underline"}}>category 4</u></td></tr>
+                        <tr><td onClick={()=>{ setGetAbsoluteUrl2({id:"5",title_route:"category 5",route:"category/category-5/",title:"category 5",visibility:true}) }}><u className="text-primary cursor-pointer" style={{textDecoration:"underline"}}>category 5</u></td></tr>
+                        <tr><td onClick={()=>{ setGetAbsoluteUrl2({id:"6",title_route:"category 6",route:"category/category-6/",title:"category 6",visibility:true}) }}><u className="text-primary cursor-pointer" style={{textDecoration:"underline"}}>category 6</u></td></tr>
+                     </tbody>
+                  </table>
+               )}
+            </Result> 
+
             <h3  className="title-h3" id="create_a_database_backup"> 2 - إنشاء نسخة احتياطية لقاعدة البيانات </h3>
             <p className="style_divv">
                إن إنشاء نسخة احتياطية لقاعدة البيانات يشير إلى إنشاء نسخة من الحالة الحالية لقاعدة البيانات.<br/><br/>
@@ -807,93 +874,165 @@ export default function Django(props){
             
             <h3 className="title-h3" id="annotate">5 - annotate</h3>
             <p className="style_divv">
-               في Django، يقوم نظام الربط الكائني (ORM) تلقائيًا بتستخلص العلاقة بين النماذج استنادًا إلى تعاريف الحقول والعلاقات الرئيسية الخارجية التي قمت بتعريفها في نماذجك.<br/><br/>
+               في Django، يقوم نظام الربط الكائني (ORM) تلقائيًا بتستخلص العلاقة بين النماذج استنادًا إلى تعاريف الحقول والعلاقات الرئيسية الخارجية التي قمت بتعريفها في ملف models.py <br/><br/>
                في نموذج Like الخاص بك، قمت بتعريف حقل مفتاح خارجي يسمى product والذي يشير إلى نموذج Product. يستخدم Django هذه العلاقة لفهم الاتصال بين نموذج Like ونموذج Product.<br/><br/>
                في حالتي، يحتوي نموذج Like على حقل ForeignKey يسمى product والذي يشير إلى نموذج Product. عند تحديد 'like' داخل Count()، يفهم Django أنه يحتاج إلى حساب حالات Like المتعلقة بكل Product استنادًا إلى العلاقة بمفتاح الخارجي product. لذا، يحل Django تلقائيًا العلاقة بين نموذج Product ونموذج Like من خلال تعريف حقل مفتاح خارجي ويستخدمها لحساب الإعجابات المتعلقة بكل منتج.
             </p>         
             <div className="mital">مثال 1 : </div>
-            <img src={images.django191} className="img"/>
-            <img src={images.django192} className="img"/>
-            <img src={images.django193} className="img"/>
+            <CodeHighlighter code={codes[7].annotate[0]} file_name="models.py" language="py" addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].annotate[1]} file_name="views.py" language="python" addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].annotate[2]} file_name="index.html" language="django" addclassName="mt-3 mb-3" copie={true}/>
             <img src={images.django194} className="img"/>
             <div className="mital">مثال 2 : </div>
-            <img src={images.django195} className="img"/>
-            <img src={images.django196} className="img"/>
-            <img src={images.django197} className="img"/>
-            <img src={images.django198} className="img"/>
-            <img src={images.django199} className="img"/>
-            <img src={images.django200} className="img"/>
+            <ul>
+               <li> أنشئ مشروعًا جديدًا  (لقد أطلقت عليه اسم project)</li>
+               <li>وأضف إعدادات <bdi>media/</bdi> و <bdi>static/</bdi> واستخدم templates العام</li>
+               <li>إنشاء app بالاسم book</li>
+               <li> وأضف التطبيق الخاص بك في INSTALLED_APPS </li>
+            </ul>
+            <CodeHighlighter code={codes[7].annotate[3]} file_name="" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].annotate[4]} file_name="" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].annotate[5]} file_name="" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].annotate[6]} file_name="" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].annotate[7]} file_name="" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeCommand> python manage.py makemigrations</CodeCommand>   
+            <CodeCommand> python manage.py migrate</CodeCommand>   
+            <CodeCommand> python manage.py shell</CodeCommand>   
+            <CodeCommand>   
+               {">>>"} from book.models import Author , Book<br/>
+               {">>>"} author1 = Author.objects.create(name="author1")<br/>
+               {">>>"} author2 = Author.objects.create(name="author2")<br/>
+               {">>>"} author3 = Author.objects.create(name="author3")<br/>
+               {">>>"}<br/>
+               {">>>"} Book.objects.create(title="A" , author=author1 , number_page=90 )<br/>
+               {">>>"} Book.objects.create(title="B" , author=author2 , number_page=29 )<br/>
+               {">>>"} Book.objects.create(title="C" , author=author3 , number_page=239 )<br/>
+               {">>>"} Book.objects.create(title="AA" , author=author1 , number_page=39 )<br/>
+               {">>>"} Book.objects.create(title="BB" , author=author2 , number_page=39 )<br/>
+               {">>>"} Book.objects.create(title="CC" , author=author3 , number_page=239 )<br/>
+            </CodeCommand>
+            <Result title='annotate' route="http://localhost:8000/">
+               <h2> All Books </h2>
+               <table className="css-border-collapse-ex1 css-border-collapse-ex1-table2">
+                  <tr><th className="css-border-collapse-ex1 p-3">Title</th><th className="css-border-collapse-ex1 p-3">Author</th><th className="css-border-collapse-ex1 p-3">Number Page</th></tr>
+                  <tr> <td className="css-border-collapse-ex1 px-3 py-2">A</td> <td className="css-border-collapse-ex1 px-3 py-2">author1</td><td className="css-border-collapse-ex1 p-2">90</td></tr>
+                  <tr> <td className="css-border-collapse-ex1 px-3 py-2">B</td> <td className="css-border-collapse-ex1 px-3 py-2">author2</td><td className="css-border-collapse-ex1 p-2">29</td></tr>
+                  <tr> <td className="css-border-collapse-ex1 px-3 py-2">C</td> <td className="css-border-collapse-ex1 px-3 py-2">author3</td><td className="css-border-collapse-ex1 p-2">239</td></tr>
+                  <tr> <td className="css-border-collapse-ex1 px-3 py-2">AA</td><td className="css-border-collapse-ex1 px-3 py-2">author1</td><td className="css-border-collapse-ex1 p-2">39</td></tr>
+                  <tr> <td className="css-border-collapse-ex1 px-3 py-2">BB</td><td className="css-border-collapse-ex1 px-3 py-2">author2</td><td className="css-border-collapse-ex1 p-2">39</td></tr>
+                  <tr> <td className="css-border-collapse-ex1 px-3 py-2">CC</td><td className="css-border-collapse-ex1 px-3 py-2">author3</td><td className="css-border-collapse-ex1 p-2">239</td></tr>
+               </table>
+               <h2> annotate </h2>
+               <table className="css-border-collapse-ex1 css-border-collapse-ex1-table2 mb-3">
+                  <tr><th className="css-border-collapse-ex1 p-3">Authors</th> <th className="css-border-collapse-ex1 p-3">Number of books</th></tr>
+                  <tr><td className="css-border-collapse-ex1 px-3 py-2">author1</td> <td className="css-border-collapse-ex1 px-3 py-2">2</td></tr>
+                  <tr><td className="css-border-collapse-ex1 px-3 py-2">author2</td> <td className="css-border-collapse-ex1 px-3 py-2">2</td></tr>
+                  <tr><td className="css-border-collapse-ex1 px-3 py-2">author3</td> <td className="css-border-collapse-ex1 px-3 py-2">2</td></tr>
+               </table>
+               <table className="css-border-collapse-ex1 css-border-collapse-ex1-table2 mb-3">
+                  <tr><th className="css-border-collapse-ex1 p-3">Authors</th> <th className="css-border-collapse-ex1 p-3">Sum pages in all books for each author</th></tr>
+                  <tr><td className="css-border-collapse-ex1 px-3 py-2">author1</td> <td className="css-border-collapse-ex1 px-3 py-2">129</td></tr>
+                  <tr><td className="css-border-collapse-ex1 px-3 py-2">author2</td> <td className="css-border-collapse-ex1 px-3 py-2" >68</td></tr>
+                  <tr><td className="css-border-collapse-ex1 px-3 py-2">author3</td> <td className="css-border-collapse-ex1 px-3 py-2">478</td></tr>
+               </table>
+               <table className="css-border-collapse-ex1 css-border-collapse-ex1-table2">
+                  <tr><th className="css-border-collapse-ex1 p-3">Authors</th> <th className="css-border-collapse-ex1 p-3">Avg pages in all books for each author</th></tr>
+                  <tr><td className="css-border-collapse-ex1 px-3 py-2">author1</td> <td className="css-border-collapse-ex1 px-3 py-2">64.5</td></tr>
+                  <tr><td className="css-border-collapse-ex1 px-3 py-2">author2</td> <td className="css-border-collapse-ex1 px-3 py-2">34.0</td></tr>
+                  <tr><td className="css-border-collapse-ex1 px-3 py-2">author3</td> <td className="css-border-collapse-ex1 px-3 py-2">239.0</td></tr>
+               </table>
+            </Result>  
       </article>
       
 
-      <article>
-            <h1> django user authentication without Rest framework </h1>
+      <article id="User_Authentication">
+            <h2 className="title-h2"> User Authentication </h2>
             <h4><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication" target="_blank"> Toturial </a></h4>
 
-            <br id="the_relation_between_class_User_and_authontication"/><br/>
-            <h2> 1 -  the rolation between class User and authontication  </h2>
-            <div className="fs-4"> In Django, the <b>User</b> class plays a central role in the authentication system. It represents a user account and provides various methods and attributes related to authentication. 
-               The <b>User</b> class is defined in the <b>'django.contrib.auth.models'</b> module.<br/><br/>
-               <ul>
-                  <li><b className="fs-2 text-success">User Authentication :</b> The User class provides built-in functionalities for user authentication, including methods like <b>authenticate()</b>, <b>login()</b>, and <b>logout()</b>. These methods allow you to authenticate users, log them in, and log them out of your application. This function is defined in the <b>'django.contrib.auth'</b>  </li>
-                  <li>
-                     <b className="fs-2 text-success">User Model :</b> The User class serves as the default user model for Django's authentication system. It includes fields 
-                     <ol>
-                        <li><span className="text-danger">username</span>: No default value. + A unique username for the user.</li>
-                        <li><span className="text-danger">password</span>: No default value. + The user's password. It is stored as a hash for security.</li>
-                        <li><span className="text-danger">email</span>: Empty string ('') by default.  + Must content the user's email address.</li>
-                        <li><span className="text-danger">first_name</span>: Empty string ('') by default. </li>
-                        <li><span className="text-danger">last_name</span>: Empty string ('') by default.  </li>
-                        <li><span className="text-danger">is_staff</span>: False by default. + A boolean indicating whether the user is a staff member with administrative access.</li>
-                        <li><span className="text-danger">is_active</span>: True by default. + indicates whether the user account is active or not. is used to determine the status of a user account. When <b>is_active</b> is set to <b>True</b>, it means that the user account is active and can be used for authentication and other operations. On the other hand, when <b>is_active</b> is set to <b>False</b>, it indicates that the user account is inactive or disabled.</li>
-                        <li><span className="text-danger">is_superuser</span>: False by default. + indicating whether the user has all permissions.</li>
-                        <li><span className="text-danger">date_joined</span>: The current date and time when the user account is created.</li>
-                     </ol>
+            <h3 className="title-h3" id="User_and_authontication"> 1 -  العلاقة بين فئة المستخدم (class User) والمصادقة (Authentication)  </h3>
+            <p className="style_divv">
+               في Django، تلعب فئة المستخدم (User class) دورًا مركزيًا في نظام المصادقة (Authentication) . إنه يمثل حساب مستخدم ويوفر طرقًا وسمات مختلفة تتعلق بالمصادقة. يتم تعريف فئة المستخدم في الوحدة النمطية "django.contrib.auth.models".<br/><br/>
+              <ul>
+               
+                  <li className="mb-2"><span className="text-success">User Authentication :</span> توفر فئة المستخدم وظائف مدمجة لمصادقة المستخدم، بما في ذلك أساليب مثل المصادقة <bdi>authenticate()</bdi> و <bdi>login()</bdi> و <bdi>logout()</bdi>. تسمح لك هذه الطرق بمصادقة المستخدمين وتسجيل دخولهم وتسجيل خروجهم من التطبيق الخاص بك. تم تعريف هذه الوظيفة في "Django.contrib.auth"</li>
+                  <li className="mb-2">
+                     <span className="text-success">User Model :</span> تعمل فئة المستخدم <bdi>User class</bdi> كنموذج المستخدم الافتراضي لنظام مصادقة Django. ويشمل الحقول 
+                     <ul>
+                        <li><span className="text-warning">username :</span> لا توجد قيمة افتراضية + اسم مستخدم فريد .</li>
+                        <li><span className="text-warning">password :</span> لا توجد قيمة افتراضية + كلمة مرور المستخدم . يتم تخزينه كتجزئة للأمن.</li>
+                        <li><span className="text-warning">email :</span> سلسلة فارغة ('') بشكل افتراضي. + يجب أن يحتوي على عنوان البريد الإلكتروني للمستخدم.</li>
+                        <li><span className="text-warning">first_name : </span> سلسلة فارغة ('') بشكل افتراضي.</li>
+                        <li><span className="text-warning">last_name :</span> سلسلة فارغة ('') بشكل افتراضي.</li>
+                        <li><span className="text-warning">is_staff :</span> False افتراضيا + قيمة منطقية تشير إلى ما إذا كان المستخدم موظفًا يتمتع بحق الوصول الإداري.</li>
+                        <li><span className="text-warning">is_active :</span> True افتراضيا + يشير إلى ما إذا كان حساب المستخدم نشطًا أم لا. يتم استخدامه لتحديد حالة حساب المستخدم. عند ضبط is_active على True، فهذا يعني أن حساب المستخدم نشط ويمكن استخدامه للمصادقة والعمليات الأخرى. من ناحية أخرى، عند ضبط is_active على False، فهذا يشير إلى أن حساب المستخدم غير نشط أو معطل.</li>
+                        <li><span className="text-warning">is_superuser :</span> False افتراضيا + يشير إلى ما إذا كان المستخدم لديه كافة ال Permissions.</li>
+                        <li><span className="text-warning">date_joined :</span> التاريخ والوقت الحاليين عند إنشاء حساب المستخدم.</li>
+                     </ul>
                   </li>
-                  <li><b className="fs-2 text-success">User Manager :</b></li>
-                  <li><b className="fs-2 text-success">User Permissions :</b></li>
-                  <li><b className="fs-2 text-success">User Relationships :</b></li>
-               </ul>
-            </div>
+                  <li className="mb-2"><span className="text-success">User Manager :</span> في Django، يكون مدير المستخدم (User Manager) مسؤولاً عن إدارة إنشاء كائنات المستخدم ومعالجتها. يوفر Django نموذج مستخدم افتراضيًا إلى جانب فئة UserManager، والتي تُستخدم لأداء المهام المتعلقة بإدارة المستخدم. يوفر User Manager طرقًا لإنشاء المستخدمين وتعيين كلمات المرور وإدارة سمات المستخدم. كما رأينا في <a href="#createsuperuser">createsuperuser</a></li>
+                  <li className="mb-2">
+                     <span className="text-success">User Permissions :</span> يتضمن نظام مصادقة Django نظام permissions  مرنًا. بشكل افتراضي، يأتي نموذج المستخدم مع permissions : التالية
+                     <ul>
+                        <li>add_user</li>
+                        <li>change_user</li>
+                        <li>delete_user</li>
+                     </ul>
+                  </li>
+                  <li className="mb-2"><span className="text-success">User Relationships :</span> يوفر Django طريقة لإقامة علاقات بين كائنات المستخدم والنماذج الأخرى. العلاقة الأكثر شيوعًا هي علاقة ForeignKey , حيث يمكن أن يحتوي النموذج على مفتاح خارجي لنموذج المستخدم. كما رأينا في <a href="#Relations">Relations</a></li>
+               </ul> 
+            </p>
 
-            <br id="include_urls_and_file_html"/><br/>
-            <h2> 2 - include urls and file html </h2>
-            <h3> 1 - project/urls.py </h3>
-            <p className="fs-5"> <b>In top of urlpatterns before all apps use : </b></p>
-            <div className=" pb-0"><pre>urlpatterns = [
-            <b className="text-danger">path('accounts/', include('django.contrib.auth.urls')),</b> <span className="text-success">#accounts path must be in index 0 in list</span>  
-            path('admin/', admin.site.urls),
-            path('', include('app.urls')),<br/>   ...
-            ]</pre></div>
-            <p className="fs-5">this route (localhost:8000/accounts/) content many route </p>
-            <div>
-               accounts/ login/ [name='login']
-            <br/>accounts/ logout/ [name='logout']
-            <br/>accounts/ password_change/ [name='password_change']
-            <br/>accounts/ password_change/done/ [name='password_change_done']
-            <br/>accounts/ password_reset/ [name='password_reset']
-            <br/>accounts/ password_reset/done/ [name='password_reset_done']
-            <br/>accounts/ reset/{"<"}uidb64{">"}/{"<"}token{">"}/ [name='password_reset_confirm']
-            <br/>accounts/ reset/done/ [name='password_reset_complete']
-            </div>
-            <p className="fs-5"> All this route in accounts is ready to use all what you need is craete templates </p>
-         
-            <h3>2 - Create templates  </h3>
-            <ul className="fs-4">
-               <li> You can startapp accounts and create templates inside it and create another folder with name registration/ in templates folder , then create all file you needed inside him </li>
-               <li> Or you can create folder templates/ and it should be in your project root directory like exemple bellow </li>
-               <img src={images.django201} className="img"/>
+            <h3 className="title-h3" id="include_urls_and_files_html"> 2 - تضمين عناوين URL وملفات HTML </h3>
+            <h5 className="title-h5"> 1 - project/urls.py </h5>
+            <p className="style_divv">
+               تُعتبر URL (الروابط) الخاصة بالمصادقة المدمجة في Django مجموعة من أنماط الروابط والواجهات المُعرفة مُسبقًا تم توفيرها من قِبل Django للتعامل مع مهام المصادقة الشائعة للمستخدمين. عندما تقوم بتضمين django.contrib.auth.urls في تكوين الروابط الخاص بمشروعك، يتم إعداد تلك الروابط تلقائيًا لتنفيذ عمليات المصادقة مثل تسجيل الدخول، وتسجيل الخروج، وإعادة تعيين كلمة المرور، وغيرها.<br/><br/>
+               تُبسط هذه الميزة عملية تنفيذ مصادقة المستخدم في مشروع Django عن طريق القضاء على الحاجة إلى تحديد كل رابط وواجهة عرض تتعلق بالمصادقة يدويًا. من خلال الاستفادة من هذه الروابط المدمجة، يستطيع المطورون إعداد نظام مصادقة آمن بسرعة دون الحاجة إلى كود مخصص طويل.<br/><br/>
+               على النحو الأساسي، إنها وسيلة ملائمة لدمج وظائف مصادقة المستخدمين في مشروع Django بسهولة، متبعين في ذلك أفضل الممارسات ومعايير الأمان التي حددها إطار العمل Django.
+            </p>
+            <CodeHighlighter code={codes[8].include_urls_and_files_html[0]} file_name="project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <ul> <li>يحتوي هذا المسار (localhost:8000/accounts/) على العديد من المسارات حول المصادقة </li></ul>
+            <Result styleAdd="p-0 pb-5" title='Page not found at /accounts/' route="http://localhost:8000/accounts/">
+                  <div className="alert alert-warning">
+                     <h2>Page not found <small><small><small className="text-secondary">(404)</small></small></small></h2>
+                     <b className="ms-3 ps-2">Request Method:</b>	GET <br/>
+                     <b className="ms-5 ps-2">Request URL:</b>	http://localhost:8000/accounts/
+                  </div>
+                  <p className="ps-1 fs-14">
+                     Using the URLconf defined in project.urls, Django tried these URL patterns, in this order:
+                     <ol className="ms-3 fs-12">
+                        <li>accounts/ login/ [name='login']</li>
+                        <li>accounts/ logout/ [name='logout']</li>
+                        <li>accounts/ password_change/ [name='password_change']</li>
+                        <li>accounts/ password_change/done/ [name='password_change_done']</li>
+                        <li>accounts/ password_reset/ [name='password_reset']</li>
+                        <li>accounts/ password_reset/done/ [name='password_reset_done']</li>
+                        <li>accounts/ reset/{"<"}uidb64{">"}/{"<"}token{">"}/ [name='password_reset_confirm']</li>
+                        <li>accounts/ reset/done/ [name='password_reset_complete']</li>
+                        <li>admin/</li>
+                        <li>[name='testing']</li>
+                     </ol>
+                     The current path, accounts/, didn’t match any of these.
+                  </p>
+                  <hr />
+                  <p className="ms-2 fs-14">You’re seeing this error because you have DEBUG = True in your Django settings file. Change that to False, and Django will display a standard 404 page.</p>
+            </Result>
+
+            <ul><li>كل هذا المسار في الحسابات جاهز لاستخدام كل ما تحتاجه هو templates/ </li></ul>
+            <h5 className="title-h5">2 - Create templates  </h5>
+            <ul>
+               <li> يمكنك إنشاء تطبيق باسم accounts وإنشاء templates بداخله وإنشاء مجلد آخر بالاسم <bdi>registration/</bdi> في مجلد <bdi>templates/</bdi> ثم إنشاء كافة الملفات التي تحتاجها بداخله</li>
+               <li>أو يمكنك إنشاء مجلد templates/ ويجب أن يكون في الدليل الجذر لمشروعكه</li>
             </ul>
-            <h4> Create All Conetnt html file in <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication" target="_blank"> Toturial </a> in <u><i>registration</i></u> folder</h4>
+            <CodeHighlighter code={codes[8].include_urls_and_files_html[1]} file_name="project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+           
+            
+            <h5 className="title-h5"> Create All Conetnt html file in <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication" target="_blank"> Toturial </a> in <u><i>registration</i></u> folder</h5>
             <p className="fs-5"> After Creating all file </p>
             <img src={images.django202} className="img"/>
             <img src={images.django203} className="img"/> 
          
-         
-         
-         
-            <br id="Sign_Up"/><br/>
-            <h2>3 - Sign Up </h2>
+
+            <h3 className="title-h3" id="Sign_Up">3 - Sign Up </h3>
             <p className="fs-5"> By default Django give you <b className='text-success'>User</b> models  </p>
             <img src={images.django204} className="img"/> 
             <p className="fs-4"> Django give you build-in class to create User Form by using <b className="text-success">UserCreationForm</b></p>
@@ -903,8 +1042,7 @@ export default function Django(props){
             <img src={images.django208} className="w-100 mt-2 mb-3"/> 
             <p className="fs-5"> You can use any app to use <b className="text-success">UserCreationForm</b> and you need to create file html content code the handle <b>signUp</b></p>
          
-            <br id="Add_fields_to_User_SignUp"/><br/>
-            <h2>4 - Add fields to User Sign Up</h2>
+            <h3 className="title-h3" id="Add_fields_to_User_SignUp">4 - Add fields to User Sign Up</h3>
             <h3> create forms file to add fields to User </h3>
             <img src={images.django209} className="w-100 mt-2 mb-3"/> 
             <h3> add login to your views for login when user created </h3>
@@ -913,8 +1051,7 @@ export default function Django(props){
             <img src={images.django212} className="img"/> 
          
          
-            <br id="verificationEmailInSignUp"/><br/>
-            <h2> 5 - Confirmation Email in Sign Up</h2>
+            <h3 className="title-h3" id="verificationEmailInSignUp"> 5 - Confirmation Email in Sign Up</h3>
             <img src={images.django231} className="img"/> 
             <img src={images.django232} className="img"/> 
             <img src={images.django233} className="img"/> 
@@ -929,15 +1066,14 @@ export default function Django(props){
                <a href="https://www.javatpoint.com/django-user-registration-with-email-confirmation" target="_blank"> django-user-registration-with-email-confirmation </a>
             </p>
          
-            <br id="Add_Social_Login_to_Django"/><br/>
-            <h2> 6 - Add Social Login to Django</h2>
+            <h3 className="title-h3" id="Add_Social_Login_to_Django"> 6 - Add Social Login to Django</h3>
             <ul>
                <li><a href="https://studygyaan.com/django/how-to-add-social-login-to-django" target="_blank"> Tutorial </a></li>
                <li><a href="https://www.youtube.com/watch?v=E6LxUleoloU" target="_blank"> video Youtube to explain  </a></li>
             </ul>
 
          
-            <h3><ul><li>Facebook Login Django</li></ul></h3>
+            <h5><ul><li>Facebook Login Django</li></ul></h5>
             <p>Go to <a href="https://developers.facebook.com/">developers.facebook.com/</a> Login with your account and create app </p>
             <img src={images.django237} className="img"/> 
             <img src={images.django238} className="img"/> 
@@ -958,7 +1094,7 @@ export default function Django(props){
             </pre></div> */}
 
             <br/>
-            <h3><ul><li>Linkedin Login Django</li></ul></h3>
+            <h5><ul><li>Linkedin Login Django</li></ul></h5>
             <ul>  <li><a href="https://www.youtube.com/watch?v=m5sHDaBwxjc" target="_blank"> video Youtube to explain  </a></li> </ul>
          
             <p>Go to <a href="https://developer.linkedin.com/">https://developer.linkedin.com/</a> Login with your account and create app </p>

@@ -77,20 +77,20 @@ export default function Input(props){
             يعتبر الوسم <bdi><strong>&lt;input&gt;</strong></bdi> عنصر النموذج الأكثر أهمية . بحيت يمكننا من إختيار نوع الإدخال الذي سيقوم به المستخدم وذالك من خلال السمة <b>type</b>.<br/>
             يمكن التعديل على تصميم حقل الإدخال عبر لغة <b>CSS</b>
         </p>
-        <CodeHighlighter  code={code1}  language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code2}  language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code3}  language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code4}  language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code5}  language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code6}  language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code7}  language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code8}  language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code9}  language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code10} language="jsx" addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code11} language="jsx" addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code12} language="jsx" addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code13} language="jsx" addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code14} language="jsx" addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code1}  language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code2}  language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code3}  language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code4}  language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code5}  language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code6}  language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code7}  language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code8}  language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code9}  language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code10} language="html" addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code11} language="html" addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code12} language="html" addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code13} language="html" addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code14} language="html" addclassName="mt-3 mb-3" copie={true}/>
     </article>
     <article>
         <h2 className="title-h2">2.  السمة type</h2> 
@@ -102,7 +102,7 @@ export default function Input(props){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple1} language="html" title="Input Text" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple1} language="html" is_html={true} title="Input Text" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Input Text' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <label>First Name : </label> 
                 <input type="text" name="first_name"/>
@@ -116,7 +116,7 @@ export default function Input(props){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple2} language="html" title="Input Hidden" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple2} language="html" is_html={true} title="Input Hidden" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Input Hidden' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <button> OK </button>
             </Result>
@@ -132,7 +132,7 @@ export default function Input(props){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple3} language="html" title="Input Radio" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple3} language="html" is_html={true} title="Input Radio" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Input Radio' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <input type="radio" name="test-raddio"/> HTML <br/>
                  <input type="radio" name="test-raddio"/> CSS <br/>
@@ -149,7 +149,7 @@ export default function Input(props){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple4} language="html" title="Input Checkbox" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple4} language="html" is_html={true} title="Input Checkbox" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Input Checkbox' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                     <label htmlFor="checkbox">Select an option:</label><br/><br/>
                     <input type="checkbox" id="checkbox" name="option1" value="Option 1"/>
@@ -169,7 +169,7 @@ export default function Input(props){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple5} language="html" title="Input Email" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple5} language="html" is_html={true} title="Input Email" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Input Email' url_change={codeExemple5Route} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html" logo={props.html_logo}>
                     <label>Email : </label> 
                     <input type="email" ref={inputRefExemple5} name="full_name" required/>
@@ -184,7 +184,7 @@ export default function Input(props){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple6} language="html" title="Input Email" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple6} language="html" is_html={true} title="Input Email" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Input Email' route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html" logo={props.html_logo}>
                 <label>input your email : </label><input type="email" name='email'/><br/>
                 <label>input your password :</label> <input type="password" name="password" /><br/>
@@ -198,7 +198,7 @@ export default function Input(props){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple7} language="html" title="Input Tel" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple7} language="html" is_html={true} title="Input Tel" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Input Tel' route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html" logo={props.html_logo}>
                 <label>Insert Phone Number : </label> 
                 <input type="tel" name="phone-number"/>
@@ -211,7 +211,7 @@ export default function Input(props){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple8} language="html" title="Input Button" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple8} language="html" is_html={true} title="Input Button" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Input Button' route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html" logo={props.html_logo}>
                 <input type="button" value="Click"/>
             </Result>
@@ -223,7 +223,7 @@ export default function Input(props){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple9} language="html" title="Input Date" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple9} language="html" is_html={true} title="Input Date" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Input Date' route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html" logo={props.html_logo}>
                 Birthday: <input type="date" />
             </Result>
@@ -234,7 +234,7 @@ export default function Input(props){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple10} language="html" title="Input Time" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple10} language="html" is_html={true} title="Input Time" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Input Time' route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html" logo={props.html_logo}>
                 Select a time : <input type="time"/>
             </Result>
@@ -253,7 +253,7 @@ export default function Input(props){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple11} language="html" title="Input Number" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple11} language="html" is_html={true} title="Input Number" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Input Number' route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html" logo={props.html_logo}>
                 Quantity (between 1 and 5): <input type="number"/>
             </Result>
@@ -277,7 +277,7 @@ export default function Input(props){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple12} language="html" title="Input Number" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple12} language="html" is_html={true} title="Input Number" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Input Number' route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html" logo={props.html_logo}>
                 Points (between 0 and 10): <input type="range" min="0" value="7" max="10"/>
             </Result>
@@ -290,7 +290,7 @@ export default function Input(props){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple13} language="html" title="Input Number" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple13} language="html" is_html={true} title="Input Number" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Input Number' url_change={codeExemple13Route} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html" logo={props.html_logo}>
                 <label>First Name : </label> 
                 <input ref={inputRefExemple13F} type="text" name="first_name"/><br/>

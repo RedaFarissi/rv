@@ -147,7 +147,7 @@ const codeExemple9= {
         <ul><li> تحدد خاصية <b>background-color</b> لون خلفية عنصر. </li></ul>
         <div className="sum_exemple_style">
         <div className="mital">متال : </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Background" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Background" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Background' styleAdd="css-background-ex1-body" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="css-background-ex1">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -170,7 +170,7 @@ const codeExemple9= {
         بشكل افتراضي، يتم تكرار الصورة بحيث تغطي العنصر بأكمله وذالك فقط أن كانت الصورة صغيرة الحجم .<br/></li></ul>
    
         <div className="mital">متال : </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Background" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Background" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Background' styleAdd="css-background-ex2-body" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
            <h2 className="css-background-ex2">Orange</h2>
         </Result>
@@ -184,19 +184,19 @@ const codeExemple9= {
         </ul>
         <div className="sum_exemple_style">
         <div className="mital">متال :</div>
-        <CodeHighlighter file_name="index.html" code="" head={codeExemple3.head} language="html" title="CSS Background" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code="" head={codeExemple3.head} language="html" is_html={true} title="CSS Background" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Background' styleAdd="css-background-ex3-body" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
         </Result>
         </div>
         <ul><li>في هاذا المتال الصورة لم تتكرر لأننا قمن بكتابة الخاصية <b>background-repeat</b> مع القيمة <b>no-repeat</b> .</li></ul>
         <div className="mital">متال 2 :</div>
-        <CodeHighlighter file_name="index.html" code="" head={codeExemple4.head} language="html" title="CSS Background" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code="" head={codeExemple4.head} language="html" is_html={true} title="CSS Background" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Background' styleAdd="css-background-ex4-body" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
         </Result>
         <ul><li>في المتال التاني الصورة تكررت أفقيا لأننا قمن بكتابة الخاصية <b>background-repeat</b> مع القيمة <b>repeat-x</b> .</li></ul>
 
         <div className="mital">متال 3 :</div>
-        <CodeHighlighter file_name="index.html" code="" head={codeExemple5.head} language="html" title="CSS Background" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code="" head={codeExemple5.head} language="html" is_html={true} title="CSS Background" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Background' styleAdd="css-background-ex5-body" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
         </Result>
         <ul><li>في المتال التالت الصورة تكررت عموديا لأننا قمن بكتابة الخاصية <b>background-repeat</b> مع القيمة <b>repeat-y</b> .</li></ul>
@@ -209,7 +209,7 @@ const codeExemple9= {
         </ul>
         <div className="sum_exemple_style">
         <div className="mital">متال 4 :</div>
-        <CodeHighlighter file_name="index.html" code="" head={codeExemple6.head} language="html" title="CSS Background" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code="" head={codeExemple6.head} language="html" is_html={true} title="CSS Background" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Background' styleAdd="css-background-ex6-body" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
         </Result>
         </div>
@@ -223,7 +223,7 @@ const codeExemple9= {
         <div className="sum_exemple_style">
         <div className="mital">متال :</div>
         <ul><li>القيمة <b>padding-box</b> تجعل ال <b>border</b> خارج الخلفية ولاكن بدون ترك مساحة بين الإتنين . </li></ul>
-        <CodeHighlighter file_name="index.html" code={codeExemple7.code} head={codeExemple7.head} language="html" title="CSS Background" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple7.code} head={codeExemple7.head} language="html" is_html={true} title="CSS Background" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Background' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="css-background-ex7">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos ipsum nobis 
@@ -235,7 +235,7 @@ const codeExemple9= {
         <div className="sum_exemple_style">
         <div className="mital">متال 2 :</div>
         <ul><li> القيمة <b>border-box</b> تجعل ال <b>border</b> داخل الخلفية  .</li></ul>
-        <CodeHighlighter file_name="index.html" code={codeExemple8.code} head={codeExemple8.head} language="html" title="CSS Background" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple8.code} head={codeExemple8.head} language="html" is_html={true} title="CSS Background" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Background' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="css-background-ex8">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos ipsum nobis 
@@ -247,7 +247,7 @@ const codeExemple9= {
         <div className="sum_exemple_style">
         <div className="mital">متال 3 :</div>
         <ul><li> القيمة <b>content-box</b> تجعل ال <b>border</b> خارج الخلفية و تترك <b>margin</b> بين الإتنين يمكن إختيار حجم ال <b>margin</b> بنفسك في هذه الحالة 20px .</li></ul>
-        <CodeHighlighter file_name="index.html" code={codeExemple9.code} head={codeExemple9.head} language="html" title="CSS Background" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple9.code} head={codeExemple9.head} language="html" is_html={true} title="CSS Background" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Background' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="css-background-ex9">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos ipsum nobis 

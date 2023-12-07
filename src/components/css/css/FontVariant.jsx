@@ -30,7 +30,7 @@ export default function FontVariant(props){
         <div className="sum_exemple_style">
         <div className="mital">متال :  </div>
         <CodeHighlighter file_name="index.css" code={codeExemple.css} language="css" copie={true}/>
-        <CodeHighlighter file_name="index.html" code={codeExemple.code} head={codeExemple.head} language="html" title="CSS Font-Variant" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple.code} head={codeExemple.head} language="html" is_html={true} title="CSS Font-Variant" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Font-Variant' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
             <p className="css-font-size-ex1-p1">This is a paragraph with the font variant set to unicase.</p>
             <p className="css-font-size-ex1-p2">This is a paragraph with the font variant set to all-petite-caps.</p>

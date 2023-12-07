@@ -151,7 +151,7 @@ container-box
         <div className="mital">متال :  </div>
         <CodeHighlighter file_name="_sass-flex.sass" code={codeExemple1.sassFlex} language="sass" copie={true}/>
         <CodeHighlighter file_name="index.sass" code={codeExemple1.css} language="sass" copie={true}/>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" title="SASS" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="SASS" addClass="mt-3 mb-3" copie={true}/>
         <Result title='SASS' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
             <div className='sass-ex1-container-test'>
                 <div className='ring'></div>
@@ -162,7 +162,7 @@ container-box
         <div className="mital"> متال 2 :  </div>
         <CodeHighlighter file_name="_sass-flex.sass" code={codeExemple1.sassFlex} language="sass" copie={true}/>
         <CodeHighlighter file_name="index.sass" code={codeExemple2.css} language="sass" copie={true}/>
-        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" title="SASS" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="SASS" addClass="mt-3 mb-3" copie={true}/>
         <Result title='SASS' logo={images.html_logo} styleAdd="sass-ex2-styleAdd"  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
             <div className="sass-ex2-container-test-2">
                 <h2> <span>P</span>articles Di<span>st</span>ortion Effects </h2>
@@ -170,7 +170,7 @@ container-box
         </Result>
         <div className="mital"> متال 3 :  </div>
         <CodeHighlighter file_name="index.sass" code={codeExemple3.css} language="sass" copie={true}/>
-        <CodeHighlighter file_name="index.html" code={codeExemple3.code} head={codeExemple3.head} language="html" title="SASS" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="SASS" addClass="mt-3 mb-3" copie={true}/>
         <Result title='SASS' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
             <div className='sass-ex3-container-3'>
                 <div className='container-box'>

@@ -47,7 +47,7 @@ export default function Opacity(props){
         </p>
 
         <div className="mital"> متال 1 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple.code} head={codeExemple.head} language="html" title="CSS Opacity" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple.code} head={codeExemple.head} language="html" is_html={true} title="CSS Opacity" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Opacity' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1 style={{color:"red"}}>Transparent Boxes</h1>
             <h2>Using the opacity property</h2>

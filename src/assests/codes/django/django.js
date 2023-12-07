@@ -2,8 +2,8 @@ import {
     index2setting, index2includes_app_to_urlpatterns0 ,index2includes_app_to_urlpatterns1 ,
     index2templates0 , index2templates1 ,index2templates2, index2urls,index2views,index2models0,
     index2models1,index2admin,index2layout_file_to_avoid_repeat0,index2layout_file_to_avoid_repeat1,
-    index2layout_file_to_avoid_repeat2,index2layout_file_to_avoid_repeat3,index3Parameter0,index3Parameter1,
-    index3Parameter2,index3Parameter3,index3Parameter4,index3Parameter5,index3Relations0,
+    index2layout_file_to_avoid_repeat2,index2layout_file_to_avoid_repeat3,index3Parameter0,
+    index3Parameter1,index3Parameter2,index3Parameter3,index3Parameter4,index3Parameter5,index3Relations0,
     index3Relations1,index3Relations2,index4manage_static_files0,index4manage_static_files1,
     index4manage_static_files2,index4manage_static_files3,index4manage_static_files4,
     index4Media_files0,index4Media_files1,index4Media_files2,index4Media_files3,index4Media_files4,
@@ -13,6 +13,11 @@ import {
     index6list_display,index6prepopulated_fields,index6list_editable,index6inlines0,
     index6inlines1,index7get_absolute_url0,index7get_absolute_url1,index7get_absolute_url2,
     index7get_absolute_url3,index7get_absolute_url4,index7get_absolute_url5,index7get_absolute_url6,
+    index7get_absolute_url7,index7get_absolute_url8,index7get_absolute_url9,index7get_absolute_url10,
+    index7get_absolute_url11,index7get_absolute_url12,index7get_absolute_url13,index7annotate0,
+    index7annotate1,index7annotate2,index7annotate3,index7annotate4,index7annotate5,index7annotate6,
+    index7annotate7,index8include_urls_and_files_html0,index8include_urls_and_files_html1,
+    
     
 
 } from "./pathCodeDjango";
@@ -79,16 +84,16 @@ const codes = [
     },
     {
         title:"about_models",
-        get_absolute_url:[index7get_absolute_url0(),index7get_absolute_url1(),index7get_absolute_url2(),index7get_absolute_url3(),index7get_absolute_url4(),index7get_absolute_url5(),index7get_absolute_url6()],
+        get_absolute_url:[index7get_absolute_url0(),index7get_absolute_url1(),index7get_absolute_url2(),index7get_absolute_url3(),index7get_absolute_url4(),index7get_absolute_url5(),index7get_absolute_url6(),index7get_absolute_url7(),index7get_absolute_url8(),index7get_absolute_url9(),index7get_absolute_url10(),index7get_absolute_url11(),index7get_absolute_url12(),index7get_absolute_url13(),],
         create_a_database_backup:[],
         restore_the_data_from_the_backup:[],
         remove_all_from_db_models:[],
-        annotate:[],
+        annotate:[index7annotate0(),index7annotate1(),index7annotate2(),index7annotate3(),index7annotate4(),index7annotate5(),index7annotate6(),index7annotate7()],
     },
     {
-        title:"user_authentication_without_Rest_framework",
-        the_relation_between_class_User_and_authontication:[],
-        include_urls_and_file_html:[],
+        title:"User_Authentication",
+        User_and_authontication:[],
+        include_urls_and_files_html:[index8include_urls_and_files_html0(),index8include_urls_and_files_html1(),],
         Sign_Up:[],
         Add_fields_to_User_SignUp:[],
         verificationEmailInSignUp:[],

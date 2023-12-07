@@ -36,12 +36,12 @@ export default function Button(props){
             يستخدم الوسم <kbd>&lt;button&gt;</kbd>  في لغة <b>HTML</b> لإنشاء زر قابل للنقر وهو وسم زوجي اي يحتوي على علامة فتح وعلامة إغلاق.<br/>
             داخل <kbd>&lt;button&gt;</kbd> يمكنك وضع نص (و وسم مثل <kbd>&lt;i&gt;</kbd> <kbd>&lt;b&gt;</kbd> <kbd>&lt;strong&gt;</kbd> <kbd>&lt;br&gt;</kbd> <kbd>&lt;img&gt;</kbd> وما إلى ذلك).
         </p>
-        <CodeHighlighter  code={code1} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter  code={code2} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code1} language="html"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code2} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
             <ul><li> في هاده الحالة تم إنشاء زر عند النقر عليه  لا يحدت أي شيء .</li></ul>
-            <CodeHighlighter  code={codeExemple1} language="html" title="Button" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter  code={codeExemple1} language="html" is_html={true} title="Button" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Button' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <button> Click Me </button><br/>
             </Result>
@@ -57,7 +57,7 @@ export default function Button(props){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter  code={codeExemple2} language="html" title="Button" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter  code={codeExemple2} language="html" is_html={true} title="Button" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Button' url_change={codeExemple2Route}  logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">     
                     Full Name : <input type="text" ref={inputRefExemple2} name="full_name"/>
                     <button type="submit" onClick={codeExemple2RouteHandle}> Submit to server </button>
@@ -69,7 +69,7 @@ export default function Button(props){
         </div>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter  code={codeExemple3} language="html" title="Button" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter  code={codeExemple3} language="html" is_html={true} title="Button" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Button' url_change={codeExemple3Route} file_name="index.html" logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">     
                 <form>
                     Full Name : <input type="text" ref={inputRefExemple3} name="full_name"/>

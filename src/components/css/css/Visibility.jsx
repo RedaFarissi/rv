@@ -32,7 +32,7 @@ export default function Visibility(props){
         </p>
         <div class="mital">متال :  </div>
         <CodeHighlighter file_name="index.css" code={codeExemple.css} language="css" copie={true}/>
-        <CodeHighlighter file_name="index.html" code={codeExemple.code} head={codeExemple.head} language="html" title="CSS Height" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple.code} head={codeExemple.head} language="html" is_html={true} title="CSS Height" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Height' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
             <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam deserunt natus voluptate tenetur provident eos assumenda incidunt asperiores? Eius magnam incidunt voluptatem officiis perspiciatis eum alias tempore consectetur, soluta aspernatur.</p>
             <p style={{visibility:"hidden"}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam deserunt natus voluptate tenetur provident eos assumenda incidunt asperiores? Eius magnam incidunt voluptatem officiis perspiciatis eum alias tempore consectetur, soluta aspernatur.</p>

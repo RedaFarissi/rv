@@ -208,21 +208,21 @@ export default function Transform(props){
         <h3  className="title-h3">1.  الدالة translateX</h3>
         <div className="mital">متال  :  </div>
         <ul><li>لاحض أنه من خلال القيمة <b>translateX</b> يمكن التحكم بمكان عرض العنصر على مستوى العرض  .</li></ul> 
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Transform" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Transform" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Transform' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="css-transform-ex1-header"></div>
         </Result>
         <h3 className="title-h3">2.  الدالة translateY</h3>
         <div className="mital"> متال  :  </div>
         <ul><li>لاحض أنه من خلال الدالة <b>translateY</b> يمكن التحكم بمكان عرض العنصر على مستوى الطول . </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Transform" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Transform" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Transform' styleAdd='css-transform-ex2-styleAdd'  logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="css-transform-ex2-header"></div>
         </Result>
         <h3 className="title-h3">3.  الدالة translate </h3>
         <div className="mital"> متال 1 :  </div>
         <ul><li>لاحض أنه من خلال الدالة <b>translate</b>  يمكن التحكم بمكان عرض العنصر على مستوى الطول و العرض . </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" title="CSS Transform" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="CSS Transform" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Transform' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
           <h1>The transform : translate </h1>
           <div className="css-transform-ex3-box">
@@ -230,7 +230,7 @@ export default function Transform(props){
           </div>
         </Result>
         <div className="mital"> متال 2 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" title="CSS Transform" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" is_html={true} title="CSS Transform" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Transform' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1>The transform : translate </h1>
             <div className="css-transform-ex4-box">
@@ -356,7 +356,7 @@ export default function Transform(props){
         </p>
         <h3 className="title-h3">1. skewX </h3>
         <div className="mital"> متال  : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple9.code} head={codeExemple9.head} language="html" title="CSS Transform" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple9.code} head={codeExemple9.head} language="html" is_html={true} title="CSS Transform" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Transform' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
           <h1>The transform : skewX </h1>
           <div className="css-transform-ex9-box2">
@@ -369,7 +369,7 @@ export default function Transform(props){
         
         <h3 className="title-h3">2. skewY</h3>
         <div className="mital"> متال  : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple10.code} head={codeExemple10.head} language="html" title="CSS Transform" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple10.code} head={codeExemple10.head} language="html" is_html={true} title="CSS Transform" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Transform' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
           <h1>The transform : skewY </h1>
           <div className="css-transform-ex10-BOX_DIV">
@@ -386,7 +386,7 @@ export default function Transform(props){
         <h3 className="title-h3">3. skew</h3>
         <div className="mital">متال :</div>
         <ul><li>المثال التالي يحرف العنصر <kbd>&lt;div&gt;</kbd> بمقدار 20 درجة على طول المحور X ، و 10 درجات على طول المحور Y:</li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple11.code} head={codeExemple11.head} language="html" title="CSS Transform" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple11.code} head={codeExemple11.head} language="html" is_html={true} title="CSS Transform" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Transform' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
           <h1>The transform : skew </h1>
           <p>The skew() method skews the element to a specific angle.</p>

@@ -172,7 +172,7 @@ var( --name )`
             <CodeHighlighter code={code1} language="css" copie={true}/>
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Function" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Function" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Function' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1> The attr() Function </h1>
             <div>
@@ -189,7 +189,7 @@ var( --name )`
             <CodeHighlighter code={code2} language="css" copie={true}/>
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Function" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Function" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Function' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-function-ex2"><span style={{color:"aliceblue"}}> CSS calc() </span></div>
         </Result>
@@ -203,7 +203,7 @@ var( --name )`
             <CodeHighlighter code={code3} language="css" copie={true}/>
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" title="CSS Function" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="CSS Function" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Function' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1> Conic Gradient - Three Colors </h1>
             <div id="css-function-ex3"></div>
@@ -240,7 +240,7 @@ var( --name )`
             <CodeHighlighter code={code4} language="css" copie={true}/>
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" title="CSS Function" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" is_html={true} title="CSS Function" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Function' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1>The hsl() Function</h1>
             <p>HSL colors with opacity:</p>
@@ -260,7 +260,7 @@ var( --name )`
             <CodeHighlighter code={code5} language="css" copie={true}/>
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple5.code} head={codeExemple5.head} language="html" title="CSS Function" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple5.code} head={codeExemple5.head} language="html" is_html={true} title="CSS Function" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Function' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1> Linear Gradient - Top to Bottom </h1>
             <p>
@@ -269,7 +269,7 @@ var( --name )`
             <div id="css-function-ex5"></div>
         </Result>  
         <div className="mital"> متال 2 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple6.code} head={codeExemple6.head} language="html" title="CSS Function" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple6.code} head={codeExemple6.head} language="html" is_html={true} title="CSS Function" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Function' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1>Linear Gradients - Using Different Angles</h1>
             <p id="css-function-ex5-grad-1">0deg</p>
@@ -285,7 +285,7 @@ var( --name )`
             <CodeHighlighter code={code6} language="css" copie={true}/>
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple7.code} head={codeExemple7.head} language="html" title="CSS Function" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple7.code} head={codeExemple7.head} language="html" is_html={true} title="CSS Function" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Function' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1>The max() Function</h1>
             <p>
@@ -303,7 +303,7 @@ var( --name )`
             <CodeHighlighter code={code7} language="css" copie={true}/>
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple8.code} head={codeExemple8.head} language="html" title="CSS Function" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple8.code} head={codeExemple8.head} language="html" is_html={true} title="CSS Function" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Function' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1>The min() Function</h1>
             <p>
@@ -322,7 +322,7 @@ var( --name )`
             <CodeHighlighter code={code8} language="css" copie={true}/>
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple9.code} head={codeExemple9.head} language="html" title="CSS Function" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple9.code} head={codeExemple9.head} language="html" is_html={true} title="CSS Function" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Function' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-function-ex8">This box has a color defined by a CSS variable.</div>
         </Result> 

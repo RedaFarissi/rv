@@ -35,7 +35,7 @@ export default function Inline(props){
             لا يمكن إستخدام جميع العناصر مع الخاصية <kbd>display:inline</kbd> متل <small>width , height , padding-top , padding-bottom , margin-top , margin-bottom</small> في حين يقوم بدعم <small>padding-right , padding-left, margin-right , margin-left</small>
         </p>
         <div className="mital">متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Inline" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Inline" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Inline' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <header className="css-inline-ex1"> 
                 header -{">"} Inline

@@ -47,7 +47,7 @@ export default function InvalidAndValid(props){
             <li> عند إزالة القيمة داخل عنصر <b>input</b> سيتم إزالة الخصائص التي داخل <b>invalid</b>   </li>
             <li> سيتم إزالة الخصائص التي داخل <b>invalid</b> عند إدخال <b>email</b>  </li>
         </ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Invalid" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Invalid" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Invalid' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h4>input email (without any style) </h4>
             <input type="email" />
@@ -61,7 +61,7 @@ export default function InvalidAndValid(props){
             تستعمل  <b>valid</b>  مع عناصر ال <b>input</b>  وتسمح بإعطاء خصائص <b>CSS</b> عند إدخال البيانات بشكل صحيح . <br/>
         </p>
         <div className="mital"> متال  : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Invalid & Valid" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Invalid & Valid" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Invalid & Valid' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <input type="email"  id="css-invalid-ex2-Email" className="css-invalid-ex2-input"/><br/><br/>
           	<input type="email" id="css-invalid-ex2-email" className="css-invalid-ex2-input"/><br/>            

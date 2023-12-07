@@ -39,10 +39,6 @@ import django135 from "../../assests/images/django/django135.png"
 import django141 from "../../assests/images/django/django141.png"
 import django142 from "../../assests/images/django/django142.png"
 import django143 from "../../assests/images/django/django143.png"
-import django144 from "../../assests/images/django/django144.png"
-import django145 from "../../assests/images/django/django145.png"
-import django146 from "../../assests/images/django/django146.png"
-import django147 from "../../assests/images/django/django147.png"
 import django148 from "../../assests/images/django/django148.png"
 import django149 from "../../assests/images/django/django149.png"
 import django150 from "../../assests/images/django/django150.png"
@@ -74,18 +70,8 @@ import django188 from "../../assests/images/django/django188.png"
 import django189 from "../../assests/images/django/django189.png"
 import django19  from "../../assests/images/django/django19.png"
 import django190 from "../../assests/images/django/django190.png"
-import django191 from "../../assests/images/django/django191.png"
-import django192 from "../../assests/images/django/django192.png"
-import django193 from "../../assests/images/django/django193.png"
 import django194 from "../../assests/images/django/django194.png"
-import django195 from "../../assests/images/django/django195.png"
-import django196 from "../../assests/images/django/django196.png"
-import django197 from "../../assests/images/django/django197.png"
-import django198 from "../../assests/images/django/django198.png"
-import django199 from "../../assests/images/django/django199.png"
 import django2   from "../../assests/images/django/django2.png"
-import django200 from "../../assests/images/django/django200.png"
-import django201 from "../../assests/images/django/django201.png"
 import django202 from "../../assests/images/django/django202.png"
 import django203 from "../../assests/images/django/django203.png"
 import django204 from "../../assests/images/django/django204.png"
@@ -212,47 +198,46 @@ import django5_5  from "../../assests/images/django/django5_5.png"
 import django_path from "../../assests/images/django/django_path.png"
 
 
-
-
 const images = {  
     django1,django100,django101,django102,django103,
-    django104,django105,django106,django107,django108,django109,
-    django110,django111,django112,django113,django114,
-    django115,django116,django117,django118,django119,django12,
-    django120,django121,django122,django123,django124,django125,
-    django126,django127,django128,django129,django130,
-    django131,django132,django133,django134,django135,django141,
-    django142,django143,django144,django145,django146,django147,
+    django104,django105,django106,django107,django108,
+    django109,django110,django111,django112,django113,
+    django114,django115,django116,django117,django118,
+    django119,django12,django120,django121,django122,
+    django123,django124,django125,django126,django127,
+    django128,django129,django130,django131,django132,
+    django133,django134,django135,django141,django142,
+    django143,
     django148,django149,django150,django151,django152,
-    django158,
-    django159,django16,django160,django161,django162,django163,
-    django166,django172,django174,
+    django158,django159,django16,django160,django161,
+    django162,django163,django166,django172,django174,
     django176,django177,django178,django179,django18,
-    django180,django181,django182,django183,django184,django185,
-    django186,django188,django189,django19,django190,
-    django191,django192,django193,django194,django195,django196,
-    django197,django198,django199,django2,django200,
-    django201,django202,django203,django204,django205,django206,
-    django207,django208,django209,django210,django211,
-    django212,django213,django214,django215,django216,django217,
-    django218,django219,django220,django221,django222,
-    django223,django224,django225,django226,django227,django228,
-    django229,django23,django230,django231,django232,django233,
-    django234,django235,django236,django237,django238,django239,
-    django24,django240,django241,django242,django243,django244,
-    django245,django246,django247,django248,django25,django26,
-    django27,django28,django29,django3,django30,django31,django32,
-    django33,django39,django4,
-    django40,django41,django42,django43,django44,django45,django46,
-    django47,django48,django49,django50,django51,django52,
-    django53,django54,django55,django56,django57,django58,django59,
-    django60,django61,django62,django63,django64,django65,
-    django67,django68,django69,django70,
-    django71,django72,django73,django74,django75,django76,django77,
-    django78,django79,django80,django81,django82,django83,
-    django84,django85,django86,django87,django88,django89,django9,
-    django90,django91,django92,django93,django94,django95,django96,
-    django97,django98,django99,django_path,django5,django5_5,
+    django180,django181,django182,django183,django184,
+    django185,django186,django188,django189,django19,
+    django190,django194,django2,django202,django203,
+    django204,django205,django206,django207,django208,
+    django209,django210,django211,django212,django213,
+    django214,django215,django216,django217,django218,
+    django219,django220,django221,django222,django223,
+    django224,django225,django226,django227,django228,
+    django229,django23,django230,django231,django232,
+    django233,django234,django235,django236,django237,
+    django238,django239,django24,django240,django241,
+    django242,django243,django244,django245,django246,
+    django247,django248,django25,django26,django27,
+    django28,django29,django3,django30,django31,
+    django32,django33,django39,django4,django40,
+    django41,django42,django43,django44,django45,
+    django46,django47,django48,django49,django50,
+    django51,django52,django53,django54,django55,
+    django56,django57,django58,django59,django60,django61,
+    django62,django63,django64,django65, django67,django68,
+    django69,django70,django71,django72,django73,django74,
+    django75,django76,django77,django78,django79,django80,
+    django81,django82,django83,django84,django85,django86,
+    django87,django88,django89,django9,django90,django91,
+    django92,django93,django94,django95,django96,django97,
+    django98,django99,django_path,django5,django5_5,
 }
 
 export default images ;

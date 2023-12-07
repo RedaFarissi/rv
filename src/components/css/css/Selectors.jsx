@@ -252,7 +252,7 @@ export default function Selectors(props){
             يمكن أن تشير عناصر HTML أيضًا إلى أكثر من فئة واحدة (انظر إلى المثال 2 أدناه).
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Selectors' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="css-selector-ex1">1</div>
             <div className="css-selector-ex1">2</div>
@@ -268,7 +268,7 @@ export default function Selectors(props){
             تحديد جميع العناصر التي لها <bdi><b>class2</b></bdi> داخل عنصر له <bdi><b>class1</b></bdi>.
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Selectors' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="css-selector-ex2-class1">
                 <div className="css-selector-ex2-class2">1</div>
@@ -286,7 +286,7 @@ export default function Selectors(props){
         </p>
         <div className="mital">متال  :  </div>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Selectors' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-selector-ex3">This is some text that will be styled by the CSS code snippet.</div>
         </Result>
@@ -298,13 +298,13 @@ export default function Selectors(props){
             يمكن للمحدد * أيضًا تحديد جميع العناصر داخل عنصر آخر .
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" is_html={true} title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Selectors' styleAdd="css-selector-ex4-styleAdd" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> Heading </h2>
             <p> Paragrapgh </p>
         </Result>
         <div className="mital">متال 2 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple5.code} head={codeExemple5.head} language="html" title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple5.code} head={codeExemple5.head} language="html" is_html={true} title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Selectors' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="css-selector-ex5-header">
                 <h2> This is (h2) in the Header</h2>
@@ -319,7 +319,7 @@ export default function Selectors(props){
             يمكن تحديد جميع العناصر ذات إسم محدد بستخدام الإسم فقط
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple6.code} head={codeExemple6.head} language="html" title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple6.code} head={codeExemple6.head} language="html" is_html={true} title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Selectors' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="css-selector-ex6-div"><span className="css-selector-ex6-span">R</span>eda</div>
             <div className="css-selector-ex6-div">Eskouni</div>
@@ -331,7 +331,7 @@ export default function Selectors(props){
             محدد العنصر element.class يستخدم لتحديد العنصر المحدد بالفئة المحددة.
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple7.code} head={codeExemple7.head} language="html" title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple7.code} head={codeExemple7.head} language="html" is_html={true} title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Selectors' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">    
             <p>Reda Eskouni 1</p>
             <p>Reda Eskouni 2</p>
@@ -344,7 +344,7 @@ export default function Selectors(props){
             لتصميم عدة عناصر بنفس النمط ، إفصل اسم كل عنصر بفاصلة.
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple8.code} head={codeExemple8.head} language="html" title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple8.code} head={codeExemple8.head} language="html" is_html={true} title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Selectors' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">    
             <div className="css-selector-ex8-header"> 
                 <p class="css-selector-ex8-html">HTML</p>
@@ -362,7 +362,7 @@ export default function Selectors(props){
             لم يتم تحديد العناصر التي ليست تابعة مباشرة للعنصر الأب .
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple9.code} head={codeExemple9.head} language="html" title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple9.code} head={codeExemple9.head} language="html" is_html={true} title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Selectors' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">    
             <h2> Hello world </h2>
             <p className="css-selector-ex9-p"> Style. </p>
@@ -375,7 +375,7 @@ export default function Selectors(props){
             يتم استخدام <bdi><b>element1 + element2</b></bdi> لتحديد عنصر <b>element2</b> يقع مباشرة بعد عنصر  <b>element1</b>.
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple10.code} head={codeExemple10.head} language="html" title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple10.code} head={codeExemple10.head} language="html" is_html={true} title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Selectors' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html"> 
             <p>p inside div.</p>
             <p className="css-selector-ex10">p bottom div.</p>
@@ -388,7 +388,7 @@ export default function Selectors(props){
             يتم استخدام  <bdi><b>element1 ~ element2</b></bdi> لتحديد جميع عانصر <b>element2</b> التي تقع مباشرة بعد العنصر  <b>element1</b>.
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple11.code} head={codeExemple11.head} language="html" title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple11.code} head={codeExemple11.head} language="html" is_html={true} title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Selectors' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html"> 
             <div>div element.</div>            
             <pre> pre above element p.</pre>
@@ -409,7 +409,7 @@ export default function Selectors(props){
             يتم استخدام  محدد السمة <bdi>[attribute]</bdi>  لتحديد العناصر ذات السمة المحددة.
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple12.code} head={codeExemple12.head} language="html" title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple12.code} head={codeExemple12.head} language="html" is_html={true} title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Selectors' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html"> 
             <input className="css-selector-ex12" type="email" focus placeholder="email"/>
             <input className="css-selector-ex12" type="password" placeholder="password"/>
@@ -421,7 +421,7 @@ export default function Selectors(props){
             يتم استخدام  محدد السمة <bdi>[attribute = value]</bdi>  لتحديد العناصر ذات السمة و القيمة المحددين.
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple13.code} head={codeExemple13.head} language="html" title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple13.code} head={codeExemple13.head} language="html" is_html={true} title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Selectors' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html"> 
             <input type="email" name="email" className="css-selector-ex13"  placeholder="email"/><br/>
             <input type="password" name="password" placeholder="password"/>
@@ -433,7 +433,7 @@ export default function Selectors(props){
             يتم استخدام  محدد السمة <bdi>[attribute ~= value]</bdi>  لتحديد العناصر ذات قيمة السمة التي تحتوي على كلمة محددة.
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple14.code} head={codeExemple14.head} language="html" title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple14.code} head={codeExemple14.head} language="html" is_html={true} title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Selectors' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html"> 
             <input type="text" placeholder="input Text"/><br/>
             <input type="password" className="css-selector-ex14" placeholder="input Password"/>
@@ -446,7 +446,7 @@ export default function Selectors(props){
             ملاحظة: يجب أن تكون القيمة كلمة كاملة ، إما بمفردها ، مثل <bdi>className="top"</bdi>، أو متبوعة بواصلة (-) ، مثل <bdi>className="top-text"</bdi>
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple15.code} head={codeExemple15.head} language="html" title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple15.code} head={codeExemple15.head} language="html" is_html={true} title="CSS Selectors" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Selectors' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html"> 
             <h2>CSS [attribute|="value"] Selector</h2>
             <h1 className="css-selector-ex15">Welcome</h1>

@@ -134,7 +134,7 @@ export default function JustifyContent(props){
             القيمة الافتراضية. يتم وضع العناصر في بداية الحاوية 
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Justify-Content" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Justify-Content" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Justify-Content' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-justify-content-ex1-div">
                 <div style={{backgroundColor:"blue"}}>1</div>
@@ -149,7 +149,7 @@ export default function JustifyContent(props){
             يتم وضع العناصر في نهاية الحاوية
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple2.head} language="html" title="CSS Justify-Content" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Justify-Content" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Justify-Content' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-justify-content-ex2-div">
                 <div style={{backgroundColor:"blue"}}>1</div>
@@ -164,7 +164,7 @@ export default function JustifyContent(props){
             يتم وضع العناصر في وسط الحاوية      
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple3.head} language="html" title="CSS Justify-Content" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple3.head} language="html" is_html={true} title="CSS Justify-Content" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Justify-Content' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-justify-content-ex3-div">
                 <div style={{backgroundColor:"blue"}}>1</div>
@@ -179,7 +179,7 @@ export default function JustifyContent(props){
             العناصر سيكون لها مسافة بينهما     
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple4.head} language="html" title="CSS Justify-Content" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple4.head} language="html" is_html={true} title="CSS Justify-Content" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Justify-Content' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-justify-content-ex4-div">
                 <div style={{backgroundColor:"blue"}}>1</div>
@@ -194,7 +194,7 @@ export default function JustifyContent(props){
             سيكون للعناصر مسافة قبلها وفيما بينها وبعدها    
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple5.head} language="html" title="CSS Justify-Content" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple5.head} language="html" is_html={true} title="CSS Justify-Content" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Justify-Content' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-justify-content-ex5-div">
                 <div style={{backgroundColor:"blue"}}>1</div>
@@ -209,7 +209,7 @@ export default function JustifyContent(props){
             سيكون للعناصر مساحة متساوية حولها    
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple6.head} language="html" title="CSS Justify-Content" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple6.head} language="html" is_html={true} title="CSS Justify-Content" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Justify-Content' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-justify-content-ex6-div">
                 <div style={{backgroundColor:"blue"}}>1</div>

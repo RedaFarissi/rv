@@ -100,7 +100,7 @@ export default function Border(props){
             <ul><li><small>ستتعلم كل شيئ عن الألوان في فقرة <b>color</b> من هاذا البرنامج التعليمي الخاص بلغة <b>CSS</b> .</small></li></ul>
         </p>
         <div class="mital">متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Border" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Border" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Border' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Title 1</h2>
             <h2 className="css-border-ex1-title2">Title 2</h2>
@@ -117,7 +117,7 @@ export default function Border(props){
             يمكنك كتابة <b>border</b> كل إتجاه لوحده وتحكم بشكل أفضل
         </p>
         <div class="mital"> متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Border" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Border" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Border' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2 className="css-border-ex2-title1">title 1</h2>
             <div id="p1">
@@ -132,7 +132,7 @@ export default function Border(props){
         </Result>
         <div class="mital"> متال : </div>
         <ul><li>  طرق أخرى لتحديد border .</li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" title="CSS Border" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="CSS Border" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Border' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2 className="css-border-ex3-border-aqua">title 1</h2>
             <img src={images.orange1} alt="orange1" width="200px" className="css-border-ex3-border-aqua"/>
@@ -151,7 +151,7 @@ export default function Border(props){
             </ul>
         </p>
         <div class="mital"> متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" title="CSS Border" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" is_html={true} title="CSS Border" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Border' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>border-style: groove</h2>
             <p id="css-border-ex4-a"> border: groove 9px red; </p>

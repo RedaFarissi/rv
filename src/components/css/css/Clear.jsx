@@ -68,7 +68,7 @@ export default function Clear(props){
             <li> في هذا المتال قمنا بإضافة الخاصية <b>float</b> لأول وسمين <b>div</b> فقط . </li>
             <li> لاحض أن الوسم 3 و الوسم 4 تم وضعهم في نفس المكان بحيت يضهر الشكل بطريقة سيئة .</li>
         </ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Clear" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Clear" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Clear' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div class="css-clear-ex1-div css-clear-ex1-float_class" style={{backgroundColor: "red"}}> red</div>
             <div class="css-clear-ex1-div css-clear-ex1-float_class" style={{backgroundColor: "blue"}}> blue</div>
@@ -80,7 +80,7 @@ export default function Clear(props){
         <ul>
            <li>لحل هدا المشكل الذي ينتج عن الخاصية <b>float</b> نستعمل الخاصية <b>clear </b></li>
         </ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Clear" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Clear" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Clear' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div class="css-clear-ex2-div css-clear-ex2-float_class" style={{backgroundColor: "red"}}> red</div>
             <div class="css-clear-ex2-div css-clear-ex2-float_class" style={{backgroundColor: "blue"}}> blue</div>

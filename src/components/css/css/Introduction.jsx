@@ -89,7 +89,7 @@ const codeExemple1 = {
             لربط ملف <b>html</b> بملف <b>css</b> يجب إستخدام الوسم <kbd>&lt;link&gt;</kbd> مع السمة <b>rel</b> وقيمة <b>stylesheet</b> .<br/> 
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="reda.html" code={codeExemple1.code} head={codeExemple1.head} language="html" title="Reda test" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="reda.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="Reda test" addClass="mt-3 mb-3" copie={true}/>
         <CodeHighlighter file_name="reda.css" code={codeExemple1.css} language="css" title="Reda test" addClass="mt-3 mb-3" copie={true}/>
         <Result title='Reda test' styleAdd="bg-danger css-intr-ex1" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
      
@@ -105,7 +105,7 @@ const codeExemple1 = {
             </ul>
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" title="Reda test" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="Reda test" addClass="mt-3 mb-3" copie={true}/>
         <CodeHighlighter file_name="index.css" code={codeExemple2.css} language="css" title="Reda test" addClass="mt-3 mb-3" copie={true}/>
         <Result title='Reda test' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1 className="css-intr-ex2">Reda Eskouni</h1>
@@ -122,7 +122,7 @@ const codeExemple1 = {
             </ul>
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple3.code} head={codeExemple3.head} language="html" title="Css Introduction" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="Css Introduction" addClass="mt-3 mb-3" copie={true}/>
         <Result title='Css Introduction' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1 className="css-intr-ex3">Reda Eskouni</h1>
             <h1 className="css-intr-ex3">Reda Eskouni</h1>
@@ -139,7 +139,7 @@ const codeExemple1 = {
             تعليق <b>CSS</b> يتم وضع داخل <kbd>&lt;style&gt;</kbd> أو داخل ملف css،  ويبدأ مع */ وينتهي ب /*:
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple4.code}  language="html" title="Css Introduction" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple4.code}  language="html" is_html={true} title="Css Introduction" addClass="mt-3 mb-3" copie={true}/>
     </article>
     <article>
         <h2 className="title-h2">6.  معلومات تقنية </h2>
@@ -149,7 +149,7 @@ const codeExemple1 = {
             يمكنك أيضا إعطاء تصاميم <b>CSS</b> من خلال إسم الوسم ونتيجتا لذالك كل وسوم <b>html</b> التي من نفس النوع سوف تأخد هاذا التصميم .
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple5.code} head={codeExemple5.head} language="html" title="Css Introduction" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple5.code} head={codeExemple5.head} language="html" is_html={true} title="Css Introduction" addClass="mt-3 mb-3" copie={true}/>
         <Result title='Css Introduction' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2 className="css-intr-ex5">Heading Title 1</h2>
             <h2 className="css-intr-ex5">Heading Title 2</h2>

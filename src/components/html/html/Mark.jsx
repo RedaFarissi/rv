@@ -14,10 +14,10 @@ export default function Mark(props){
             تعرض المتصفحات تقليديًا النص الموجود داخل الوسم <kbd>&lt;mark&gt;</kbd> كنص بلون خلفية أصفر. <br/>
         يكتب الوسم <b>mrak</b> على شكل التالي : 
         </p>
-        <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital"> متال :</div>
-            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" title="Mark" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" is_html={true} title="Mark" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Mark' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <p>  The <mark style={{backgroundColor:"yellow"}}>quick brown fox</mark> jumps over the lazy dog.</p>
             </Result>

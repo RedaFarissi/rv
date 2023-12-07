@@ -202,7 +202,7 @@ export default function Filter(props){
                 وحدة الإستعمال الأكتر شيوعا هي <b>px</b>.
             </p>
             <div class="mital">متال : </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Filter" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Filter" addClass="mt-3 mb-3" copie={true}/>
             <Result title='CSS Filter' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <div className="css-filter-ex1-parent">
                     <div className="css-filter-ex1-div1">
@@ -227,7 +227,7 @@ export default function Filter(props){
                   </ul>    
             </p>
             <div class="mital">متال : </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Filter" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Filter" addClass="mt-3 mb-3" copie={true}/>
             <Result title='CSS Filter' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <div className="css-filter-ex2-parent">
                     <div className="css-filter-ex2-div1">
@@ -252,7 +252,7 @@ export default function Filter(props){
                   </ul>    
             </p>
             <div class="mital">متال : </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" title="CSS Filter" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="CSS Filter" addClass="mt-3 mb-3" copie={true}/>
             <Result title='CSS Filter' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <div className="css-filter-ex3-parent">
                     <div className="css-filter-ex3-div1">
@@ -283,7 +283,7 @@ export default function Filter(props){
                   </ul>  
             </p>
             <div class="mital">متال : </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" title="CSS Filter" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" is_html={true} title="CSS Filter" addClass="mt-3 mb-3" copie={true}/>
             <Result title='CSS Filter' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <div className="css-filter-ex4-parent">
                     <div className="css-filter-ex4-div1">
@@ -305,7 +305,7 @@ export default function Filter(props){
             <b> ملاحظة </b>: الحد الأقصى للقيمة هو 360 درجة.
             </p>
             <div className="mital">متال : </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple5.code} head={codeExemple5.head} language="html" title="CSS Filter" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple5.code} head={codeExemple5.head} language="html" is_html={true} title="CSS Filter" addClass="mt-3 mb-3" copie={true}/>
             <Result title='CSS Filter' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <div className="css-filter-ex5-parent">
                     <div className="css-filter-ex5-div1">
@@ -330,7 +330,7 @@ export default function Filter(props){
                     </ul>
             </p>
             <div className="mital">متال : </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple6.code} head={codeExemple6.head} language="html" title="CSS Filter" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple6.code} head={codeExemple6.head} language="html" is_html={true} title="CSS Filter" addClass="mt-3 mb-3" copie={true}/>
             <Result title='CSS Filter' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <div className="css-filter-ex6-parent">
                     <div className="css-filter-ex6-div1">
@@ -356,7 +356,7 @@ export default function Filter(props){
                     </ul>
             </p>
             <div className="mital">متال : </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple7.code} head={codeExemple7.head} language="html" title="CSS Filter" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple7.code} head={codeExemple7.head} language="html" is_html={true} title="CSS Filter" addClass="mt-3 mb-3" copie={true}/>
             <Result title='CSS Filter' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <div className="css-filter-ex7-parent">
                     <div className="css-filter-ex7-div1">

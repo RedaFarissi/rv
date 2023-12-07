@@ -46,7 +46,7 @@ export default function Width(props){
         </p>
         <div className="mital">متال :  </div>
         <CodeHighlighter file_name="index.css" code={codeExemple.css} language="css" title="CSS Width" addClass="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter file_name="index.html" code={codeExemple.code} head={codeExemple.head} language="html" title="Reda test" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple.code} head={codeExemple.head} language="html" is_html={true} title="Reda test" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Width' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2 className="css-width-ex1-parent">This is a heading</h2>
             <h2 className="css-width-ex1-parent css-width-ex1-children1">This is another heading</h2>

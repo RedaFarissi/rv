@@ -43,12 +43,12 @@ export default function TextTransform(props){
                 <li><b>lowercase</b> : يحول جميع الأحرف إلى أحرف صغيرة</li>
             </ul>
         </p>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Text-Transform" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Text-Transform" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Text-Transform' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <p id="css-text-transform-ex1-parag"> lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
         </Result>
         <div className="mital">متال 2 : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Text-Transform" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Text-Transform" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Text-Transform' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <p className="css-text-transform-ex2-parag1"> lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             <p className="css-text-transform-ex2-parag2"> lorem ipsum dolor sit amet consectetur adipisicing elit. </p>

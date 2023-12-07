@@ -222,10 +222,10 @@ export default function Table(props){
             يحدد العنصر <kbd>&lt;tr&gt;</kbd> عدد أسطر الجدول  ، ويحدد العنصر <kbd>&lt;th&gt;</kbd> رأس الجدول ، ويحدد العنصر <kbd>&lt;td&gt;</kbd> أعمدة أو خلية الجدول.<br/>
             قد يتضمن جدول <b>HTML</b> أيضًا عناصر <kbd>&lt;caption&gt;</kbd> و <kbd>&lt;colgroup&gt;</kbd> و <kbd>&lt;thead&gt;</kbd> و <kbd>&lt;tfoot&gt;</kbd> و <kbd>&lt;tbody&gt;</kbd>.
         </p>
-        <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple1[0]} head={codeExemple1[1]} language="html" title="Underline" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple1[0]} head={codeExemple1[1]} language="html" is_html={true} title="Underline" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Table of Savings' logo={props.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <table id="a_tablE">
                     <tr>
@@ -257,7 +257,7 @@ export default function Table(props){
         </div>
         <div className="sum_exemple_style">
             <div className="mital">مثال 2 : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple2[0]} head={codeExemple2[1]} language="html" title="Table" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple2[0]} head={codeExemple2[1]} language="html" is_html={true} title="Table" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Table' logo={props.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <table className="b_tablE"><tr> <th>Month</th> <th>Savings</th> </tr>  <tr> <td>January</td> <td>$100</td> </tr> <tr> <td>February</td> <td>$80</td> </tr></table>
             </Result>
@@ -271,7 +271,7 @@ export default function Table(props){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple3[0]} head={codeExemple3[1]} language="html" title="Table" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple3[0]} head={codeExemple3[1]} language="html" is_html={true} title="Table" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Table' logo={props.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <table className="b_tablE ml-0" >
                     <caption className="b_tablE-test"> My Savings</caption>
@@ -296,7 +296,7 @@ export default function Table(props){
         </div>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple4} language="html" title="Table" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple4} language="html" is_html={true} title="Table" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Table' logo={props.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <h1>HTML colgroup tag</h1>
                 <table>
@@ -331,7 +331,7 @@ export default function Table(props){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple5[0]} head={codeExemple5[1]} language="html" title="Table" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple5[0]} head={codeExemple5[1]} language="html" is_html={true} title="Table" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Table' logo={props.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                <table className="b_tablE ml-0">
                     <tr>
@@ -351,7 +351,7 @@ export default function Table(props){
         </p>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple6[0]} head={codeExemple6[1]} language="html" title="Table" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple6[0]} head={codeExemple6[1]} language="html" is_html={true} title="Table" addClass="mt-3 mb-3" copie={true}/>
             <Result  title='Table' logo={props.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <table className="b_tablE" border="1">
                   <tr>

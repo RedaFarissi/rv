@@ -2,7 +2,7 @@ import { CodeHighlighter ,  Result} from "../../path"
 
 export default function Division(props){
     const code = `<div id="id_name" className="class_name"> content </div>`
-    const codeExemple = [`    <div class="#div-element">
+    const codeExemple = [`    <div id="div-element">
             <h2> This is Heading in div element </h2>
             <p>  This is Paragraph in div element </p>
     </div>`,`
@@ -29,10 +29,10 @@ export default function Division(props){
                 <li>عند نهاية الوسم <kbd>&lt;div&gt;</kbd> يتم العودة إلى سطر جديد .  </li>
             </ul>
         </p>
-        <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple[0]} head={codeExemple[1]} language="html" title="Division" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple[0]} head={codeExemple[1]} language="html" is_html={true} title="Division" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Division' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                <div style={{backgroundColor:"lightblue", border: "5px outset red", textAlign:"center",padding:"30px",margin:"30px"}}>
                     <h2> This is Heading in div element </h2>

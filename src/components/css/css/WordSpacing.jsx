@@ -40,7 +40,7 @@ export default function WordSpacing(props){
       </p>
       <div className="mital">متال  :  </div>
       <CodeHighlighter file_name="index.css" code={codeExemple.css} language="css" copie={true}/>
-      <CodeHighlighter file_name="index.html" code={codeExemple.code} head={codeExemple.head} language="html" title="CSS Word-Spacing" addClass="mt-3 mb-3" copie={true}/>
+      <CodeHighlighter file_name="index.html" code={codeExemple.code} head={codeExemple.head} language="html" is_html={true} title="CSS Word-Spacing" addClass="mt-3 mb-3" copie={true}/>
       <Result title='CSS Word-Spacing' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
         <p className="css-word-spacing-ex1-a"> word spacing in CSS</p>
         <p className="css-word-spacing-ex1-b"> word spacing in CSS</p>

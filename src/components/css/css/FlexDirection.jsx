@@ -50,7 +50,7 @@ export default function FlexDirection(props){
         </p>
         <div className="mital"> متال توضيحي تفاعلي  : </div> 
         <CodeHighlighter file_name="index.css" code={codeExemple1.css} language="css" copie={true}/>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Height" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Height" addClass="mt-3 mb-3" copie={true}/>
         <InteractivCss 
           property="flex-direction" 
           value={selectedValue}  

@@ -103,7 +103,7 @@ export default function Cursor(props){
         </p>
         <div className="mital"> متال : </div>
         <ul><li>متال توضيحي لجميع قيم الخاصية <b>cursor</b></li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Height" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Height" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Height' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div style={{display: "flex" , flexWrap:"wrap"}}>
               <p onClick={() => copyClassName('alias')} className="alias"> alias</p>

@@ -46,7 +46,7 @@ export default function Overflow(props){
             </ul>
         </div>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Overflow" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Overflow" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Overflow' logo={images.html_logo} styleAdd="css-overflow-styleAdd" route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1>The overflow Property</h1>
             <p>The overflow property specifies whether to clip content or to add scrollbars when an element's content is too big to fit in a specified area.</p>

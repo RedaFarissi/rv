@@ -58,31 +58,31 @@ return(
          </ul>
         </p>
         <h3 className="title-h3" id="Verify_required_installations">4 - التحقق من التثبيتات المطلوبة</h3>
-        <h5>فحص إصدار Node.js</h5>
+        <h5 className="title-h5">فحص إصدار Node.js</h5>
         <CodeCommand>node -v</CodeCommand>
-        <h5>فحص إصدار npm</h5>
+        <h5 className="title-h5">فحص إصدار npm</h5>
         <CodeCommand>npm -v</CodeCommand>
-        <h5>فحص إصدار npx</h5>
+        <h5 className="title-h5">فحص إصدار npx</h5>
         <CodeCommand>npx -v</CodeCommand>
         <h3 className="title-h3" id="ES6">4 - (ES6) </h3>
         <p className="style_divv">
           ECMAScript 6 (المعروفة أيضًا بـ ES6) هي إصدار جديد من لغة JavaScript تم نشره في عام 2015. وهي تأتي مع العديد من الميزات الجديدة والتحسينات التي تهدف إلى تحسين القراءة والكتابة للمطورين. إليك تعريف بسيط وأمثلة لبعض ميزات ES6:
         </p>
-        <h5>(Classes)</h5>
+        <h5 className="title-h5">class</h5>
         <CodeHighlighter  code={codes[0].ES6.class[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <h5>تعريف المتغيرات بـ let و const</h5>
+        <h5 className="title-h5">تعريف المتغيرات بـ let و const</h5>
         <CodeHighlighter  code={codes[0].ES6.variable[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <h5>الدوال السهمية (Arrow Functions)</h5>
+        <h5 className="title-h5">الدوال السهمية (Arrow Functions)</h5>
         <CodeHighlighter  code={codes[0].ES6.arrow[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <h5>التفكيك (Destructuring)</h5>
+        <h5 className="title-h5">التفكيك (Destructuring)</h5>
         <CodeHighlighter  code={codes[0].ES6.destructuring[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <h5>(Modules)</h5>
+        <h5 className="title-h5">(Modules)</h5>
         <CodeHighlighter  code={codes[0].ES6.modules[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <h5>تعيين قيمة افتراضية لمتغير (Default Parameter)</h5>
+        <h5 className="title-h5">تعيين قيمة افتراضية لمتغير (Default Parameter)</h5>
         <CodeHighlighter  code={codes[0].ES6.default_parameter[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <h5>عامل الانتشار (Spread Operator):</h5>
+        <h5 className="title-h5">عامل الانتشار (Spread Operator):</h5>
         <CodeHighlighter  code={codes[0].ES6.spread_operator[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <h5>التكرار على الكائنات (Object Iteration)</h5>
+        <h5 className="title-h5">التكرار على الكائنات (Object Iteration)</h5>
         <CodeHighlighter  code={codes[0].ES6.object_iteration[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
         <h3 className="title-h3" id="Create_React_App">5 - إنشاء تطبيق App</h3>
         <CodeCommand>npm cache verify</CodeCommand>
@@ -91,7 +91,7 @@ return(
         <h3 className="title-h3" id="Run_React_App"> 6 - تشغيل تطبيق App</h3>
         <CodeCommand>cd myproject</CodeCommand>
         <CodeCommand>npm start</CodeCommand>
-        <h5>كنتيجة، تم تنزيل هذا الملف على npm وهو قيد الاستخدام بالفعل</h5> 
+        <h5 className="title-h5">كنتيجة، تم تنزيل هذا الملف على npm وهو قيد الاستخدام بالفعل</h5> 
         <img src={images.react1} alt="react"  className="img"/>
         <img src={images.react2} alt="react"  className="img"/>
         <img src={images.react3} alt="react"  className="img"/>
@@ -303,7 +303,7 @@ return(
     <p className="style_divv">
       نستخدم this.state عندما نعمل مع مكون الفئة (Component class)
     </p>
-    <h5>1 - إنشاء حالة المكون (this.state) و إعطائه قيمة أولية </h5>
+    <h5 className="title-h5">1 - إنشاء حالة المكون (this.state) و إعطائه قيمة أولية </h5>
     <CodeHighlighter code={codes[7].this_state[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
     <Result title={'React App'} logo={react_logo} route="localhost:3000">
       <ul>
@@ -315,7 +315,7 @@ return(
         </li>
       </ul>
     </Result>
-    <h5>2 - تغيير القيمة (this.state) </h5>
+    <h5 className="title-h5">2 - تغيير القيمة (this.state) </h5>
     <CodeHighlighter code={codes[7].this_state[1]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
     <Result title={'React App'} logo={react_logo} route="localhost:3000">
       <ThisState />
@@ -343,16 +343,16 @@ return(
       يعتمد Axios على الوعد، مما يمنحك القدرة على الاستفادة من مزامنة JavaScript وانتظار تعليمات برمجية غير متزامنة أكثر قابلية للقراءة.<br/><br/>  
       يسهّل Axios إرسال طلبات HTTP وتلقي الاستجابات، دون الحاجة إلى القلق بشأن التفاصيل ذات المستوى المنخفض حول كيفية إرسال هذه الطلبات ومعالجتها.
     </p>
-    <h5> 1 - تثبيت المكتبة </h5>
+    <h5 className="title-h5"> 1 - تثبيت المكتبة </h5>
     <CodeCommand>npm install axios</CodeCommand>
-    <h5> 2 - إستيراد المكتبة </h5>
+    <h5 className="title-h5"> 2 - إستيراد المكتبة </h5>
     <CodeHighlighter code={codes[8].axios[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
-    <h5> 3 - إرسال بيانات axios (post) </h5>
+    <h5 className="title-h5"> 3 - إرسال بيانات axios (post) </h5>
     <div className="mital">متال 1 : </div>
     <CodeHighlighter code={codes[8].axios[1]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
     <div className="mital">متال 2 : </div>
     <CodeHighlighter code={codes[8].axios[2]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
-    <h5> 4 - axios.get </h5>
+    <h5 className="title-h5"> 4 - axios.get </h5>
     <div className="mital">متال 1 : </div>
     <CodeHighlighter code={codes[8].axios[3]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
     <div className="mital">متال 2 : </div>
@@ -366,23 +366,23 @@ return(
     <h3 className="title-h3" id="react_paypal_js"> 3 - مكتبة react-paypal-js </h3>
     <a href="https://paypal.github.io/react-paypal-js/?path=/story/getting-started--page"> react-paypal-js </a>
     <h3 className="title-h3" id="react_sass"> 4 - مكتبة sass</h3>
-    <h5>1 - تثبيت المكتبة </h5>
+    <h5 className="title-h5">1 - تثبيت المكتبة </h5>
     <CodeCommand>npm install sass</CodeCommand>
-    <h5> 2 - إستيراد ملف sass ذاخل component </h5>
+    <h5 className="title-h5"> 2 - إستيراد ملف sass ذاخل component </h5>
     <CodeHighlighter code={codes[8].react_sass[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
   
     <h3 className="title-h3" id="Router">5 - مكتبة Router  </h3>
     <p className="style_divv">
       مكتبة React Router هي مكتبة تستخدم في تطبيقات React لإدارة التنقل وتحديث عناوين الصفحات بطريقة ديناميكية وبدون إعادة تحميل الصفحة. يتمثل هدفها الرئيسي في توفير تجربة تصفح سلسة داخل تطبيق React دون الحاجة إلى تحميل صفحات جديدة من الخادم.
     </p>
-    <h5>1 - تثبيت المكتبة </h5>
+    <h5 className="title-h5">1 - تثبيت المكتبة </h5>
     <ul><li><small>الإصدار الأخير</small></li></ul>
     <CodeCommand>npm install react-router-dom@latest</CodeCommand>
     <ul><li><small>نسخة محددة</small></li></ul>
     <CodeCommand>npm install react-router-dom@18.2.0</CodeCommand>
-    <h5>2 - الغاء تثبيت المكتبة </h5>
+    <h5 className="title-h5">2 - الغاء تثبيت المكتبة </h5>
     <CodeCommand>npm uninstall react-router-dom</CodeCommand>
-    <h5>3 - إستخدام المكتبة </h5>
+    <h5 className="title-h5">3 - إستخدام المكتبة </h5>
     <CodeHighlighter code={codes[8].Router[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
     
     
@@ -409,13 +409,14 @@ return(
     <p className="style_divv">
       react-syntax-highlighter هو مكتبة React تُستخدم لتحسين تظليل وتلوين رموز المصدر (syntax highlighting) في تطبيقات React. يعتبر ذلك مفيدًا عند عرض قطعة من الشيفرة المصدرية في واجهة المستخدم لتحسين قراءة الشيفرة.
     </p>
-    <h5>1 - تثبيت المكتبة </h5>
+    <h5 className="title-h5">1 - تثبيت المكتبة </h5>
     <CodeCommand>npm install react-syntax-highlighter</CodeCommand>
-    <h5> 2 - إستخدام  المكتبة </h5>
+    <h5 className="title-h5"> 2 - إستخدام  المكتبة </h5>
     <CodeHighlighter code={codes[8].react_syntax_highlighter[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
-    <h5> 3 - إستخدام  ميزات إضافية </h5>
+    <h5 className="title-h5"> 3 - إستخدام  ميزات إضافية </h5>
     <CodeHighlighter code={codes[8].react_syntax_highlighter[1]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
-    
+    <h5 className="title-h5"> 4 - الحصول على جميع التصاميم الممكنة في المكتبةالخاصة بي </h5>
+    <CodeCommand>ls node_modules/react-syntax-highlighter/dist/esm/styles/prism</CodeCommand>
   </article>
 
  </section>

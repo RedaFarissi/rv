@@ -19,7 +19,7 @@ const codeExemple = `1. HTML
             </p>
             <div className="sum_exemple_style">
                 <div className="mital">متال : </div>
-                <CodeHighlighter  code={codeExemple} language="html" file_name="index.html" title="Break" addClass="mt-3 mb-3" copie={true}/>
+                <CodeHighlighter  code={codeExemple} language="html" is_html={true} file_name="index.html" title="Break" addClass="mt-3 mb-3" copie={true}/>
                 <Result title='Heading' file_name="index.html" logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                     1. HTML 
                     2. CSS

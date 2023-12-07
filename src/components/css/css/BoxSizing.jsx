@@ -56,14 +56,14 @@ export default function BoxSizing(props){
             </ul>
         </p>
         <div className="mital"> متال :</div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Box-Sizing" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Box-Sizing" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Box-Sizing' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-box-sizing-ex1-div1">
                 <div id="css-box-sizing-ex1-div2"></div>
             </div>
         </Result>
         <div className="mital"> متال 2 :</div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Box-Sizing" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Box-Sizing" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Box-Sizing' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-box-sizing-ex2-div1">
                 <div id="css-box-sizing-ex2-div2"></div>

@@ -38,10 +38,10 @@ export default function Details(props){
                 <li> يجب أن يكون العنصر <kbd>&lt;summary&gt;</kbd> أول عنصر فرعي لعنصر <kbd>&lt;details&gt;</kbd></li>
             </ul>
         </p>
-        <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
         <div className="mital">مثال : </div>
-        <CodeHighlighter  code={codeExemple} language="html" title="Details" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={codeExemple} language="html" is_html={true} title="Details" addClass="mt-3 mb-3" copie={true}/>
         <ul>
             <li> عند نقر على العنوانين سيضهر محتوى details</li>
             <li>عند إعادة الضغط سيعود المتصفح لشكل الأول</li>

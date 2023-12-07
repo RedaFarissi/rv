@@ -4,7 +4,7 @@ import "./Result.sass"
 export default function Result(props){
     
     return(
-        <div className="style-result">
+        <div className={`style-result`}>
             <div className="style-result-header">
               <div className="style-result-header-1">
                     <div className="style-result-header-1-left">

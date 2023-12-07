@@ -89,7 +89,7 @@ export default function ObjectFit(props){
             يتم تحديد حجم المحتوى كما لو لم يتم تحديد أي شيء أو يحتوي عليه ، أيهما سينتج عنه حجم كائن ملموس أصغر.
         </p>
         <div className="mital"> متال  : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Object-Fit" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Object-Fit" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Object-Fit' styleAdd="styleAdd-ex1-result" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="d-flex flex-wrap ">
                   <img src={images.orange} className="css-object-fit-ex1-img" style={{objectFit: "fill"}}/>

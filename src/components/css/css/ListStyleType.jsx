@@ -51,7 +51,7 @@ export default function ListStyleType(props){
                 </ul>
             </p>
             <div className="mital"> متال 1 : </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS List-Style-Type" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS List-Style-Type" addClass="mt-3 mb-3" copie={true}/>
             <Result title='CSS List-Style-Type' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <ol className="css-list-style-type-ex1-ol">
                     <li className="css-list-style-type-ex1-li">HTML</li>
@@ -67,7 +67,7 @@ export default function ListStyleType(props){
             </Result>
             
             <div className="mital"> متال 2 : </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS List-Style-Type" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS List-Style-Type" addClass="mt-3 mb-3" copie={true}/>
             <Result title='CSS List-Style-Type' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <ol className="css-list-style-type-ex2-a">      <li>HTML</li>  <li>CSS</li>  <li>Js</li>  </ol><hr/>
                 <ol className="css-list-style-type-ex2-b">      <li>HTML</li>  <li>CSS</li>  <li>Js</li>  </ol><hr/>

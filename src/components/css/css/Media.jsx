@@ -57,7 +57,7 @@ export default function Media(props){
             <li> في المتال أسفله لم تقم الخاصية <b>flex-wrap</b> بإجاع العناصر الأخرى إلى السطر لأننا قمنا بإعطاء العنصر الأب الخاصية <b>width</b> بقيمة محددة .</li>
         </ul>
         <CodeHighlighter file_name="index.css" code={codeExemple1.css} language="css" copie={true}/>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Media" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Media" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Media' styleAdd="css-media-ex-styleAdd" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
             <div className="css-media-ex-parent">
                 <div> A </div>

@@ -42,7 +42,7 @@ export default function ZIndex(props){
         </p>
         <div className="mital"> متال : </div>
         <ul><li> من دون الخاصية <b>z-index</b> لن يضهر العنوان لأن الصوة ستكون فوقه </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Z-Index" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Z-Index" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Z-Index' styleAdd="css-z-index-ex1-body" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <img src={images.css_logo}  className='css-z-index-ex1-img' alt="css logo" />
             <h1 className="css-z-index-ex1-h2">CSS LOGO</h1>

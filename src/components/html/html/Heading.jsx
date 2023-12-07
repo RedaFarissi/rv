@@ -20,16 +20,16 @@ export default function Heading(props){
         العناوين في لغة <b>HTML</b> من أهم الوسوم التي تسخدم في <b>HTML</b> فالعناوين معرّفة بوسوم من :<br/>
         <kbd>&lt;h1&gt;</kbd> الى ... <kbd>&lt;h1&gt;</kbd> . <kbd>&lt;h6&gt;</kbd> هو أكبر مقاس للعنوان بينما نجد أن الوسم <kbd>&lt;h6&gt;</kbd> هو أصغر مقاس للعناوين.
     </p>
-    <CodeHighlighter  code={code1} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
-    <CodeHighlighter  code={code2} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
-    <CodeHighlighter  code={code3} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
-    <CodeHighlighter  code={code4} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
-    <CodeHighlighter  code={code5} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
-    <CodeHighlighter  code={code6} language="jsx"  addClass="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter  code={code1} language="html"  addClass="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter  code={code2} language="html"  addClass="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter  code={code3} language="html"  addClass="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter  code={code4} language="html"  addClass="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter  code={code5} language="html"  addClass="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter  code={code6} language="html"  addClass="mt-3 mb-3" copie={true}/>
     <div className="sum_exemple_style">
         <div className="mital">مثال : </div>
         <ul><li> <i>  لاحظ ان كل العناوين تقوم بالعودة إلى سطر تلقائيا </i></li></ul>
-        <CodeHighlighter file_name="index.html" code={codeExemple} language="html" title="Heading" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple} language="html" is_html={true}  title="Heading" addClass="mt-3 mb-3" copie={true}/>
         <Result title='Heading' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1> Reda Eskouni </h1>
             <h2> Reda Eskouni </h2>

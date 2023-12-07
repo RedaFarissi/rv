@@ -47,7 +47,7 @@ export default function WordBreak(props){
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
             <CodeHighlighter file_name="index.css" code={codeExemple.css} language="css" copie={true}/>
-            <CodeHighlighter file_name="index.html" code={codeExemple.code} head={codeExemple.head} language="html" title="CSS Word-Break" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple.code} head={codeExemple.head} language="html" is_html={true} title="CSS Word-Break" addClass="mt-3 mb-3" copie={true}/>
             <Result title='CSS Word-Break' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
               <h2>word-break: normal</h2>
               <p id="css-word-braek-ex1-a">

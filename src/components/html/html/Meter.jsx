@@ -22,7 +22,7 @@ export default function Meter(props){
         <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
         <div className="mital">متال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple1} language="html" title="Meter" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple1} language="html" is_html={true} title="Meter" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Meter' logo={props.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <meter value="3" min="0" max="10" ></meter>
             </Result>
@@ -39,7 +39,7 @@ export default function Meter(props){
         </div>
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple2} language="html" title="Meter" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple2} language="html" is_html={true} title="Meter" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Meter' logo={props.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <meter id="disk_c" value="33" min="0" max="100" low="50" high="70" optimum="90"></meter><br/>
                 <meter id="disk_c" value="66" min="0" max="100" low="50" high="70" optimum="90"></meter><br/>

@@ -5,38 +5,38 @@ export default function ListsOrdered(props){
     <li> content </li>
     <li> content </li>
  </ol>`
-    const codeExemple1 = `<ol style="font-weight: 600">
-    <li className='text-dark'>html</li>
-    <li className='text-dark'>css</li>
-    <li className='text-dark'>js</li>
-    <li className='text-dark'>php</li>
-</ol>`
+    const codeExemple1 = `   <ol style="font-weight: 600">
+        <li>html</li>
+        <li>css</li>
+        <li>js</li>
+        <li>php</li>
+    </ol>`
     const codeExemple2 = `    <h2><bdi>type="I"</bdi></h2>
-    <ol type="I" style="font-weight: 500"><li className='text-dark'>html</li><li className='text-dark'>css</li><li className='text-dark'>js</li><li className='text-dark'>php</li></ol><hr/>
+    <ol type="I" style="font-weight: 500"><li>html</li><li>css</li><li>js</li><li>php</li></ol><hr/>
     <h2><bdi>type="i"</bdi></h2>
-    <ol type="i" style="font-weight: 500"><li className='text-dark'>html</li><li className='text-dark'>css</li><li className='text-dark'>js</li><li className='text-dark'>php</li></ol><hr/>
+    <ol type="i" style="font-weight: 500"><li>html</li><li>css</li><li>js</li><li>php</li></ol><hr/>
     <h2><bdi>type="a"</bdi></h2>
-    <ol type="a" style="font-weight: 500"><li className='text-dark'>html</li><li className='text-dark'>css</li><li className='text-dark'>js</li><li className='text-dark'>php</li></ol><hr/>
+    <ol type="a" style="font-weight: 500"><li>html</li><li>css</li><li>js</li><li>php</li></ol><hr/>
     <h2><bdi>type="A"</bdi></h2>
-    <ol type="A" style="font-weight: 500"><li className='text-dark'>html</li><li className='text-dark'>css</li><li className='text-dark'>js</li><li className='text-dark'>php</li></ol><hr/>` 
+    <ol type="A" style="font-weight: 500"><li>html</li><li>css</li><li>js</li><li>php</li></ol><hr/>` 
     const codeExemple3 = `      <ol start="7" style="font-weight: 500">
-        <li className='text-dark'>html</li>
-        <li className='text-dark'>css</li>
-        <li className='text-dark'>js</li>
-        <li className='text-dark'>php</li>
+        <li>html</li>
+        <li>css</li>
+        <li>js</li>
+        <li>php</li>
     </ol>
     <hr/>
     <ol start="3" type="a" style="font-weight: 500">
-        <li className='text-dark'>html</li>
-        <li className='text-dark'>css</li>
-        <li className='text-dark'>js</li>
-        <li className='text-dark'>php</li>
+        <li>html</li>
+        <li>css</li>
+        <li>js</li>
+        <li>php</li>
     </ol>`
     const codeExemple4 = `      <ol reversed style="font-weight: 500">
-        <li className='text-dark'>html</li>
-        <li className='text-dark'>css</li>
-        <li className='text-dark'>js</li>
-        <li className='text-dark'>php</li>
+        <li>html</li>
+        <li>css</li>
+        <li>js</li>
+        <li>php</li>
     </ol>`
     return(
 <section className="section-conetent">
@@ -47,10 +47,10 @@ export default function ListsOrdered(props){
             نستخدم الوسم <kbd>&lt;ol&gt;</kbd> لعرض قائمة مرتبة <b>Ordered List</b> في الصفحة و نقصد بذلك عرض مجموعة عناصر مع إظهار رقم كل عنصر تم إدخاله فيها. من أهم ما يميز هذه القوائم أنه يمكنك عرض الترقيم بالشكل الذي تريده, فمثلاً يمكنك عرض أرقام عادية, أحرف أبجدية, أرقام رومانية <br/>
             يجب كتابة محتوى الفقرات أو العناوين  الذي تريد ترقيمها داخل الوسم <kbd>&lt;li&gt;</kbd>
         </p>
-        <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter  code={codeExemple1} language="html" title="Lists Ordered" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter  code={codeExemple1} language="html" is_html={true} title="Lists Ordered" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Lists Ordered' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <ol style={{fontWeight: "600"}}>
                     <li className='text-dark'>html</li>
@@ -76,7 +76,7 @@ export default function ListsOrdered(props){
     </p>
     <div className="sum_exemple_style">
         <div className="mital">مثال : </div>
-        <CodeHighlighter  code={codeExemple2} language="html" title="Lists Ordered" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={codeExemple2} language="html" is_html={true} title="Lists Ordered" addClass="mt-3 mb-3" copie={true}/>
         <Result title='Lists Ordered' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2><bdi>type="I"</bdi></h2>
             <ol type="I" style={{fontWeight: "500"}}><li className='text-dark'>html</li><li className='text-dark'>css</li><li className='text-dark'>js</li><li className='text-dark'>php</li></ol><hr/>
@@ -95,7 +95,7 @@ export default function ListsOrdered(props){
     </p>
     <div className="sum_exemple_style">
         <div className="mital">مثال : </div>
-        <CodeHighlighter  code={codeExemple3} language="html" title="Lists Ordered" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={codeExemple3} language="html" is_html={true} title="Lists Ordered" addClass="mt-3 mb-3" copie={true}/>
         <Result title='Lists Ordered' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <ol start="7" style={{fontWeight: "500"}}>
                 <li className='text-dark'>html</li>
@@ -119,7 +119,7 @@ export default function ListsOrdered(props){
     </div>
     <div className="sum_exemple_style">
         <div className="mital">مثال : </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple4} language="html" title="Lists Ordered" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple4} language="html" is_html={true} title="Lists Ordered" addClass="mt-3 mb-3" copie={true}/>
         <Result title='Lists Ordered' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <ol reversed style={{fontWeight: "500"}}>
                 <li className='text-dark'>html</li>

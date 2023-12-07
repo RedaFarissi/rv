@@ -107,7 +107,7 @@ export default function ClipPath(props){
                 هاذه الفقرة سوف تتعلم عن طريقة إستعمال الموقع التالي قم بنقر <a href="https://bennettfeely.com/clippy/" target="_blanck">هنا</a> لذهاب إلى موقع المساعد .
             </div>
             <div className="mital"> متال  : </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Clip-Path" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Clip-Path" addClass="mt-3 mb-3" copie={true}/>
             <Result title='CSS Clip-Path' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <div style={{display:"flex",flexWrap:"wrap"}}>
                     <div className="css-clip-path-ex1-parent">
@@ -125,7 +125,7 @@ export default function ClipPath(props){
                 </div>  
             </Result>
             <div className="mital"> متال 2 : </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Clip-Path" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Clip-Path" addClass="mt-3 mb-3" copie={true}/>
             <Result title='CSS Clip-Path' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <div style={{display:"flex",flexWrap:"wrap"}}>
                     <div className="css-clip-path-ex2-parent">
@@ -147,12 +147,12 @@ export default function ClipPath(props){
                 <img src={images.css36_clip_path} className="img"/>
             </p>
             <div className="mital"> متال 1 : </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" title="CSS Clip-Path" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="CSS Clip-Path" addClass="mt-3 mb-3" copie={true}/>
             <Result title='CSS Clip-Path' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <div id="css-clip-path-ex3"></div>  
             </Result>
             <div className="mital"> متال 2 : </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" title="CSS Clip-Path" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" is_html={true} title="CSS Clip-Path" addClass="mt-3 mb-3" copie={true}/>
             <Result title='CSS Clip-Path' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <div className="css-clip-path-ex4">Reda Eskouni</div>  
             </Result>

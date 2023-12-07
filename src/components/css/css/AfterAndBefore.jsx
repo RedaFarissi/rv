@@ -47,7 +47,7 @@ export default function AfterAndBefore(props){
         </p>
         <div className="mital">متال : </div>
         <ul><li>   لاحظ في المتال أسفله أن الخاصية <b>color</b> تم تحديدها داخل كل العنصر وذالك بعض إضافة المحدد <b>after</b> . </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS After" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS After" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS After' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1 className="css-after-before-ex1">Reda</h1>
         </Result>
@@ -61,7 +61,7 @@ export default function AfterAndBefore(props){
             استخدم : : قبل المحدد <b>before</b>  لإدراج شيء قبل المحتوى يمكنك إستعمال ال <b>id</b> أو <b>class</b> أو عبر إسم العنصر قم بتحديد بنفسك .
         </p>
         <div className="mital">متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Before" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Before" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Before' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1 className="css-after-before-ex2">Reda</h1>
         </Result>

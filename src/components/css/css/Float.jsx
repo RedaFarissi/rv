@@ -162,7 +162,7 @@ export default function Float(props){
         <ul>
             <li>في هاذا المتال العنصر <b>div</b> الذي قمنى بإضافة له الخاصية <b>float</b> لا يتواجد ضمن أي عنصر أخر لذالك سيكون يمين الصفحة لأنه يعود في هذه الحالة على العنصر <b>body</b>  </li>
         </ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Float" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Float" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Float' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-float-ex2"></div>
             <br style={{clear:"both"}}/>
@@ -172,7 +172,7 @@ export default function Float(props){
             <li>في هاذا المتال العنصر <b>div</b> الذي قمنى بإضافة له الخاصية <b>float</b> يتواجد ضمن عنصر <b>div</b> أخر .</li>
             <li> بواسطة  <b>id</b> قمنا بتحيد عرض العنصر <b>div</b> الأب بقيمة  <bdi>75%</bdi>  عند إعطاء الخاصية <b>float</b> للوسم <b>div</b> الإبن سيتم تحديد الموضع نسبتا للوسم الأب .</li>
         </ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" title="CSS Float" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="CSS Float" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Float' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-float-ex3-parent-div">
                 <div id="css-float-ex3-child"></div>
@@ -186,7 +186,7 @@ export default function Float(props){
         <ul>
             <li>في هاذا المتال العنصر <b>div</b> الذي قمنى بإضافة له الخاصية <b>float</b> لا يتواجد ضمن أي عنصر أخر لذالك سيكون يسار الصفحة لأنه يعود في هذه الحالة على العنصر <b>body</b>  </li>
         </ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" title="CSS Float" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" is_html={true} title="CSS Float" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Float' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-float-ex4-div">
               This is a floating text box.
@@ -198,7 +198,7 @@ export default function Float(props){
             <li>في هاذا المتال العنصر <b>div</b> الذي قمنى بإضافة له الخاصية <b>float</b> يتواجد ضمن عنصر <b>div</b> أخر .</li>
             <li> بواسطة  <b>id</b> قمنا بتحيد عرض العنصر <b>div</b> الأب بقيمة  <bdi>60%</bdi> وجعلناه وسط الصفحت بستخدام الخاصية <b>margin</b> مع القيمة <b>auto</b> عند إعطاء الخاصية <b>float</b> للوسم <b>div</b> الإبن سيتم تحديد الموضع نسبتا للوسم الأب .</li>
         </ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple5.code} head={codeExemple5.head} language="html" title="CSS Float" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple5.code} head={codeExemple5.head} language="html" is_html={true} title="CSS Float" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Float' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-float-ex5-parent-div">
                 <div id="css-float-ex5-child"></div>
@@ -211,7 +211,7 @@ export default function Float(props){
         <ul>
             <li>في هذا المتال قمنا بتحديد لكل عناصر <b>div</b> الخاصية <b>width</b> بنسبة <bdi>20%</bdi> تم الخاصية  <b>float</b> بالقيمة <b>left</b> لكل العناصر لاحض أن أول 5 عناصر تم عرضها في سطر واحد لأن <bdi>5 x 20 = 100</bdi> .  </li>   
         </ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple6.code} head={codeExemple6.head} language="html" title="CSS Float" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple6.code} head={codeExemple6.head} language="html" is_html={true} title="CSS Float" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Float' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div class="css-float-ex6-div css-float-ex6-div1">blue</div>
             <div class="css-float-ex6-div css-float-ex6-div2">orange</div>
@@ -227,7 +227,7 @@ export default function Float(props){
             <li>يمكن إنشاء فراغ لتفرقة بين العناصر وذالك بستخدام الخاصية <b>margin</b> . </li>
             <li>لاحض أن العنصر الدي يحمل خلفية بلون <b>pink</b> تغير مكانه وذالك لأنه تم إضافة <b>margin</b> لكل الجوانب بنسبة ,<bdi>2%</bdi> وبتالي لم تعد المساحة كافية ونتيجتا لذالك تم إعادته لسطر جديد </li>
         </ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple7.code} head={codeExemple7.head} language="html" title="CSS Float" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple7.code} head={codeExemple7.head} language="html" is_html={true} title="CSS Float" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Float' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div class="css-float-ex7-div css-float-ex7-div1">red</div>
             <div class="css-float-ex7-div css-float-ex7-div2">blue</div>

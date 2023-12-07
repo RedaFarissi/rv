@@ -78,7 +78,7 @@ h2{ text-decoration-color: red;}`,
         <ul><li> تستعمل الخاصية <b>text-decoration-line</b> من أجل إنشاء خط جميل فوق أو وسط أو تحت العناصر أنضر المتال أسفله . </li></ul>
         <div className="mital"> متال :</div>
         <CodeHighlighter file_name="index.css" code={codeExemple1.css} language="css" copie={true}/>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Text-Decoration" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Text-Decoration" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Text-Decoration' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
             <h2 id="css-text-decoration-ex1-title1"> overline </h2>
             <h2 id="css-text-decoration-ex1-title2"> underline </h2>
@@ -91,7 +91,7 @@ h2{ text-decoration-color: red;}`,
         <p className="style_divv"> تستعمل الخاصية <b>text-decoration-color</b> من أجل  إعطاء لون للخط الذي تم كتابته بواسطة الخاصية <b>text-decoration-line</b> . </p>
         <div className="mital"> متال :</div>
         <CodeHighlighter file_name="index.css" code={codeExemple2.css} language="css" copie={true}/>
-        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Text-Decoration" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Text-Decoration" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Text-Decoration' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
             <h2 id="css-text-decoration-ex2-title1"> overline </h2>
             <h2 id="css-text-decoration-ex2-title2"> underline </h2>
@@ -113,7 +113,7 @@ h2{ text-decoration-color: red;}`,
         </p>
         <div className="mital"> متال :</div>
         <CodeHighlighter file_name="index.css" code={codeExemple3.css} language="css" copie={true}/>
-        <CodeHighlighter file_name="index.html" code={codeExemple3.code} head={codeExemple3.head} language="html" title="CSS Text-Decoration" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="CSS Text-Decoration" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Text-Decoration' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
             <h2 id="css-text-decoration-ex3-title1">titlel</h2>
             <h2 id="css-text-decoration-ex3-title2">title2</h2>
@@ -127,7 +127,7 @@ h2{ text-decoration-color: red;}`,
         <ul><li>يمكنك كتابة العنصر <b>text-decoration</b> دفعتا واحدة بستعمال الطريقة المعروضة في المتال أسفله . </li></ul>
         <div className="mital"> متال :</div>
         <CodeHighlighter file_name="index.css" code={codeExemple4.css} language="css" copie={true}/>
-        <CodeHighlighter file_name="index.html" code={codeExemple4.code} head={codeExemple4.head} language="html" title="CSS Text-Decoration" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple4.code} head={codeExemple4.head} language="html" is_html={true} title="CSS Text-Decoration" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Text-Decoration' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
             <h2 id="css-text-decoration-ex4-title1">titlel</h2>
             <h2 id="css-text-decoration-ex4-title2">title2</h2>

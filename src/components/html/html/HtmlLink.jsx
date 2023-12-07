@@ -25,24 +25,20 @@ p{
             غالبا ما يستخدم الوسم <kbd>&lt;link&gt;</kbd> للارتباط بأوراق الأنماط الخارجية أو لإضافة رمز <b>favicon</b> إلى موقعك على الويب.<br/>
             يتم وضع الوسم <kbd>&lt;link&gt;</kbd>  داخل الوسم <kbd>&lt;head&gt;</kbd>  و هو وسم فارغ، يحتوي على السمات فقط.
         </p>
-        <div className="sum_exemple_style">
-            <div className="mital">مثال : </div>
-            <ul><li>يجب أن تكون الصورة من نوع <b>icon</b> داخل نفس المجلد الذي يحتوي على ملف <b>HTML</b></li></ul>
-            <CodeHighlighter file_name="index.html" code=""  language="html" title="Html Link" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Html Link' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
-                <div style={{position:"relative",bottom:"87px",left:"3px",width:"37px",height:"37px",border: "3px solid red",borderRadius:"50%"}}></div>
-            </Result>
-        </div>
-        <div className="sum_exemple_style">
-            <div className="mital">مثال 2 : </div>
-            <ul><li> في هاذ المتال قمنا بإنشاء ملف <b>CSS</b> داخل نفس مجلد الدي يحتوي على ملف <b>HTML</b> </li></ul>
-            <CodeHighlighter file_name="index.css" code={codeExempleCss} language="css" title="Division" addClass="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter file_name="index.html" code={codeExempleHtml[1]} head={codeExempleHtml[0]} language="html" title="Html Link" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Html Link' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
-                <h1 className="html-link-h1">My Heading</h1>
-                <p className="html-link-p">My Paragraph.</p>
-            </Result>
-        </div>
+        <div className="mital">مثال : </div>
+        <ul><li>يجب أن تكون الصورة من نوع <b>icon</b> داخل نفس المجلد الذي يحتوي على ملف <b>HTML</b></li></ul>
+        <CodeHighlighter file_name="index.html" code=""  language="html" is_html={true} title="Html Link" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='Html Link' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <div style={{position:"relative",bottom:"87px",left:"3px",width:"37px",height:"37px",border: "3px solid red",borderRadius:"50%"}}></div>
+        </Result>
+        <div className="mital">مثال 2 : </div>
+        <ul><li> في هاذ المتال قمنا بإنشاء ملف <b>CSS</b> داخل نفس مجلد الدي يحتوي على ملف <b>HTML</b> </li></ul>
+        <CodeHighlighter file_name="index.css" code={codeExempleCss} language="css" title="Division" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExempleHtml[1]} head={codeExempleHtml[0]} language="html" is_html={true} title="Html Link" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='Html Link' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h1 className="html-link-h1">My Heading</h1>
+            <p className="html-link-p">My Paragraph.</p>
+        </Result>
     </article>
 </section>
 )

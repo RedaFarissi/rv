@@ -76,7 +76,7 @@ export default function Color(props){
         <h2 className="title-h2"> 1.  أسماء الألوان </h2>
  
         <div className="mital">متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Color" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Color" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Color' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2 className="css-color-ex1-title1">Title 1</h2>
             <p className="css-color-ex1-paragraph1"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid animi vel nam quas.</p>
@@ -91,7 +91,7 @@ export default function Color(props){
             وهو نموذج لوني جمعي تجمع فيه الألوان الحمراء والخضراء والزرقاء مع بعضها البعض بطرق مختلفة لتوليد مجموعة كبيرة من الألوان. تستقبل <b>rgb</b> تلات أرقام  ما بين 0 و 255
         </p>    
         <div className="mital">متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" title="CSS Color" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="CSS Color" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Color' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1 style={{color:"rgba(0,0,255)"}}> Heading Blue </h1>
             <h1 style={{color:"rgba(255,0,0)"}}> Heading Red </h1>
@@ -106,7 +106,7 @@ export default function Color(props){
         </p>
         <CodeHighlighter  code={code} language="css"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="mital">متال : </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple3.code} head={codeExemple3.head} language="html" title="CSS Color" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="CSS Color" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Color' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1 className="css-color-ex3"> Reda Eskouni </h1>
         </Result>

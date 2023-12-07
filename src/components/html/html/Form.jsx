@@ -5,43 +5,43 @@ import { useState , useRef} from "react";
 export default function Form(props){
     
     
-    const code = `   <form action="/submit_form" method="post">
-    <!-- Text Input -->
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-    
-    <!-- Password Input -->
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
+    const code = `    <form action="/submit_form" method="post">
+        <!-- Text Input -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-    <!-- Radio Button -->
-    <label>Gender:</label>
-    <input type="radio" id="male" name="gender" value="male" checked>
-    <label for="male">Male</label>
-    <input type="radio" id="female" name="gender" value="female">
-    <label for="female">Female</label>
+        <!-- Password Input -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
 
-    <!-- Checkbox -->
-    <label for="subscribe">Subscribe to newsletter:</label>
-    <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+        <!-- Radio Button -->
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" checked>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
 
-    <!-- Dropdown Menu -->
-    <label for="country">Country:</label>
-    <select id="country" name="country">
-        <option value="usa">United States</option>
-        <option value="canada">Canada</option>
-        <option value="uk">United Kingdom</option>
-        <!-- Add more options as needed -->
-        </select>
-        
-        <!-- Submit Button -->
-    <input type="submit" value="Submit">
-</form>`
-    const codeExemple1 = `    <form>
-<label>Full Name : </label>
-<input type="text" name="full_name"/>
-            <input type="submit" value="Submit"/>
-            </form>`
+        <!-- Checkbox -->
+        <label for="subscribe">Subscribe to newsletter:</label>
+        <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+
+        <!-- Dropdown Menu -->
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <!-- Add more options as needed -->
+            </select>
+
+            <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>`
+        const codeExemple1 = `    <form>
+        <label>Full Name : </label>
+        <input type="text" name="full_name"/>
+        <input type="submit" value="Submit"/>
+    </form>`
 
     const inputRefExemple1 = useRef(null);
     const [codeExemple1Route , setCodeExemple1Route] = useState("")         
@@ -59,10 +59,10 @@ export default function Form(props){
             الوسم <kbd>&lt;form&gt;</kbd> في العادة عبارة عن مجموعة عناصر توضع في الصفحة بهدف جعل المستخدم يدخل بيانات فيها. من الأمثلة الشائعة التي نتعامل فيها مع نماذج, هي صفحات تسجيل الدخول, صفحات إنشاء حساب جديد, إضافة تعليق, إضافة منشور إلخ.. <br/>
             الوسم <kbd>&lt;form&gt;</kbd>  بحد ذاته ليس شيئاً يتم عرضه في الصفحة بل هو بمثابة حاوية للوسوم التي نضعها فيه.<br/>
         </p>
-        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" number={true} copie={true}/>
+        <CodeHighlighter  code={code} language="html" is_html={true}  addclassName="mt-3 mb-3" number={true} copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple1} language="html" title="Form" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple1} language="html" is_html={true} title="Form" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Form' url_change={codeExemple1Route} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html" logo={props.html_logo}>
                 <label>Full Name : </label> 
                 <input type="text" ref={inputRefExemple1} name="full_name"/>

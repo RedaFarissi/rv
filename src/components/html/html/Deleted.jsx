@@ -2,7 +2,7 @@ import { CodeHighlighter ,  Result} from "../../path";
 
 export default function Deleted(props){
     const code = `<del> content </del>`
-    const codeExemple = `<del>100DH</del> <strong>70 dh</strong>`
+    const codeExemple = `    <del>100DH</del> <strong>70 dh</strong>`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-html-color">HTML Deleted (del)</h1>
@@ -12,10 +12,10 @@ export default function Deleted(props){
             يمكن تلاعب  بشكل عبر <b>CSS</b> .<br/>
             يكتب الوسم <b>del</b> على شكل التالي : 
         </p>
-        <CodeHighlighter  code={code} language="jsx"  addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
             <div className="mital"> متال :</div>
-            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" title="Deleted" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" is_html={true} title="Deleted" addClass="mt-3 mb-3" copie={true}/>
             <Result title='Deleted' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <del>100DH</del> <strong>70 dh</strong>
             </Result>

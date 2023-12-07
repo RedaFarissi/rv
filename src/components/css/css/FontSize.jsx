@@ -64,7 +64,7 @@ export default function FontSize(props){
         <div className="sum_exemple_style">
         <div className="mital">متال :  </div>
         <CodeHighlighter file_name="index.css" code={codeExemple1.css} language="css" copie={true}/>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Font-Size" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Font-Size" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Font-Size' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
             <div className="css-font-size-ex1-a">xx-small</div>
             <div className="css-font-size-ex1-b">x-small</div>
@@ -81,7 +81,7 @@ export default function FontSize(props){
         </ul>
         <div className="mital">متال 2 :  </div>
         <CodeHighlighter file_name="index.css" code={codeExemple2.css} language="css" copie={true}/>
-        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Font-Size" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Font-Size" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Font-Size' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
             <div className="css-font-size-ex2-parent">
                 <p> Default size: (36px)</p>

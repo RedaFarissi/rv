@@ -94,7 +94,7 @@ export default function FlexWrap(props){
         <h2 className="title-h2">1. الخاصية flex-wrap </h2>
         <div class="sum_exemple_style">
             <div class="mital">متال : </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Height" addClass="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Height" addClass="mt-3 mb-3" copie={true}/>
             <Result title='CSS Height' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <h2 class="css-flex-wrap-ex1-h2"><bdi> With flex-wrap </bdi> .</h2>
             	<div id="css-flex-wrap-ex1-div" style={{border:"2px solid black"}}> 

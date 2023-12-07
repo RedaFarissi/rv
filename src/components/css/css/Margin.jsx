@@ -115,7 +115,7 @@ export default function Margin(props){
             مع <b>CSS</b>، لديك السيطرة الكاملة على <b>margin</b> . توجد خصائص لإعداد <b>margin</b> لكل جانب من عناصر (أعلى، يمين، أسفل، ويسارا).
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Height" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Height" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Height' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2 className="css-margin-ex1-h2">Title 1</h2>
             <div className="css-margin-ex1-div">
@@ -141,7 +141,7 @@ export default function Margin(props){
         </p>
         <div className="sum_exemple_style">
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Height" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Height" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Height' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="css-margin-ex2-div-1">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
@@ -160,7 +160,7 @@ export default function Margin(props){
             تستخدم القيمة  <b>auto</b> مع الخاصية <b>margin</b> لجعل العنصر وسط الصفحة أو وسط العنصر الأب إذا كان <div className=""></div> 
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" title="CSS Height" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="CSS Height" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Height' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="css-margin-ex3-without-margin">
               <h2>Without Margin</h2>
@@ -170,7 +170,7 @@ export default function Margin(props){
             </div>
         </Result>
         <div className="mital">متال 2 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" title="CSS Height" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" is_html={true} title="CSS Height" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Height' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div class="css-margin-ex4">
               <h2 class="css-margin-ex4-without-margin"> Without Margin </h2>

@@ -58,7 +58,7 @@ export default function Focus(props){
         </p>
         <div className="mital">متال  :  </div>
         <ul><li> أنقر على أزرار الإدخال لفهم بشكل أفضل عن إستخدامات الخاصية focus </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Focus" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Focus" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Focus' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <input type="text" value="style1 focus" id="css-focus-ex1-input1"/>
             <input type="text" value="style2 focus" id="css-focus-ex1-input2"/>
@@ -66,7 +66,7 @@ export default function Focus(props){
         
         <div className="mital">متال 2 : </div>
         <ul><li> يمكنك أيضا تغيير خصائص CSS بعد إضافة الخاصية focus  </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Focus" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Focus" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Focus' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <textarea type="text" id="css-focus-ex2-textarea"> textarea:focus click ici  </textarea>
         </Result>

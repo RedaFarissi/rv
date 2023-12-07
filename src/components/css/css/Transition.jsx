@@ -123,19 +123,19 @@ export default function Transition(props){
             <li>مرر الماوس فوق العنصر <b>div</b> أدناه لمشاهدة تأثير <b>transition</b> في لغة  <b>CSS</b> .</li>
             <li>في هاذا المتال الوقت المحدد لتنفيد الأوامر على خاصية ال <b>width</b> هو تانيتين .</li>
         </ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Transition" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Transition" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Transition' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-transition-ex1"></div>
         </Result>       
         <div className="mital">متال 2 :  </div>
         <ul><li>مرر الماوس فوق العنصر <b>div</b> أدناه لمشاهدة تأثير <b>transition</b> في لغة  <b>CSS</b> .</li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Transition" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Transition" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Transition' styleAdd="d-flex justify-content-center align-items-center styleAdd-ex2" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-transition-ex2"> Hello word </div>
         </Result>
         <div className="mital">متال 3 :  </div>
         <ul><li>أنقر فوق العنصر <b>input</b> أدناه لمشاهدة تأثير <b>transition</b> في لغة  <b>CSS</b> .</li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" title="CSS Transition" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="CSS Transition" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Transition' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <input id="css-transition-ex3"  type="text" placeholder="click ici"/> 
         </Result>
@@ -156,7 +156,7 @@ export default function Transition(props){
         </p>
         <div className="mital">متال  :  </div>
         <ul><li>مرر الماوس فوق العناصر <b>div</b> أدناه لمشاهدة تأثير <b>transition-timing-function</b> في لغة  <b>CSS</b> .</li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" title="CSS Transition" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" is_html={true} title="CSS Transition" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Transition' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1>The transition-timing-function Property</h1>
             <p>Hover over the div elements below, to see the different speed curves:</p>
@@ -176,7 +176,7 @@ export default function Transition(props){
         <div className="mital">متال  :  </div>
         <ul><li>مرر الماوس فوق العناصر <b>div</b> وإنتضر لمدة 2 ثوانٍ .</li></ul>
         <ul><li>مرر الماوس فوق العناصر <b>div</b> أدناه لمشاهدة تأثير <b>transition-timing-function</b> في لغة  <b>CSS</b> .</li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple5.code} head={codeExemple5.head} language="html" title="CSS Transition" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple5.code} head={codeExemple5.head} language="html" is_html={true} title="CSS Transition" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Transition' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1>The transition-delay Property</h1>
             <p>Hover over the div element below, to see the transition effect:</p>

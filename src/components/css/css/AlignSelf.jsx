@@ -33,7 +33,7 @@ export default function AlignSelf(props){
             <b>ملاحظة</b> : تتجاوز الخاصية <b>align-self</b> خاصية <b>align-items</b> للحاوية المرنة.     
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Align-Items" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Align-Items" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Align-Items' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="css-align-self-ex1-div">
                 <div style={{backgroundColor:"blue"}}></div>

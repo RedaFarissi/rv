@@ -31,7 +31,7 @@ p-4 {  font-style: inherit;  }`,
         </p>
         <div className="mital">متال :  </div>
         <CodeHighlighter file_name="index.css" code={codeExemple2.css} language="css" copie={true}/>
-        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Font-Style" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Font-Style" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Font-Style' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
             <p className="css-font-style-ex1-p-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
             <p className="css-font-style-ex1-p-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>

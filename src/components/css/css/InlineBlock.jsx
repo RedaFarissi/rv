@@ -34,7 +34,7 @@ export default function InlineBlock(props){
             يمكن إستخدام جميع العناصر مع الخاصية <kbd>display:inline-block</kbd> متل <small>margin , padding , width , height .....</small>
         </p>   
         <div className="mital">متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Inline-Block" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Inline-Block" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Inline-Block' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="inline-B"> DIV -{">"} INLINE-BLOCK </div>
             <span className="inline-B"> SPAN -{">"} INLINE-BLOCK </span>

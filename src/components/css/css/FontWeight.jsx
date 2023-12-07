@@ -36,7 +36,7 @@ export default function FontWeight(props){
         </p>
         <div className="mital">متال :  </div>
         <CodeHighlighter file_name="index.css" code={codeExemple2.css} language="css" copie={true}/>
-        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Font-Weight" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Font-Weight" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Font-Weight' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
             <h2>Font Weight Example</h2>
             <p class="css-font-weight-ex1-example css-font-weight-ex1-normal">This is normal text.</p>

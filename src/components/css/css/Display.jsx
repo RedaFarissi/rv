@@ -47,7 +47,7 @@ head:`
     </p>
     <div className="mital">متال :  </div>
     <CodeHighlighter file_name="index.css" code={codeExemple.css} language="css" copie={true}/>
-    <CodeHighlighter file_name="index.html" code={codeExemple.code} head={codeExemple.head} language="html" title="CSS Display" addClass="mt-3 mb-3" copie={true}/>
+    <CodeHighlighter file_name="index.html" code={codeExemple.code} head={codeExemple.head} language="html" is_html={true} title="CSS Display" addClass="mt-3 mb-3" copie={true}/>
     <Result title='CSS Display' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
         <h2>The display Property</h2>
         <h2>display: none:</h2>

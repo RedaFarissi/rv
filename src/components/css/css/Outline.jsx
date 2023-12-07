@@ -117,7 +117,7 @@ export default function Outline(props){
         
         <div className="mital"> متال : </div>
         <ul><li> لا يهم ترتيب العناصر </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" title="CSS Outline" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Outline" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Outline' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <p id="css-outline-ex1">This element has a 2px black border and a green outline with a width of 10px.</p>
         </Result>
@@ -154,7 +154,7 @@ export default function Outline(props){
             </ul>
         </InteractivCss>
         <div className="mital"> متال 2 : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" title="CSS Outline" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="CSS Outline" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Outline' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div class="css-outline-ex2-div css-outline-ex2-1">A thin outline.</div><br/><br/>
             <div class="css-outline-ex2-div css-outline-ex2-2">A medium outline.</div><br/><br/>
@@ -181,7 +181,7 @@ export default function Outline(props){
         </p>
         
         <div className="mital"> متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" title="CSS Outline" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="CSS Outline" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Outline' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <p className="css-outline-ex3-P css-outline-ex3-dotted">A dotted outline</p>
         	<p className="css-outline-ex3-P css-outline-ex3-dashed">A dashed outline</p>
@@ -199,7 +199,7 @@ export default function Outline(props){
             تحدد الخاصية <b>outline-color</b> لون الخط الخارجي 
         </p>
         <div className="mital"> متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" title="CSS Outline" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} head={codeExemple4.head} language="html" is_html={true} title="CSS Outline" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Outline' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <p className="css-outline-ex4-p css-outline-ex4-P1">outline-color green</p>
             <p className="css-outline-ex4-p css-outline-ex4-P2">outline-color black</p>
@@ -214,7 +214,7 @@ export default function Outline(props){
         </p>
 
         <div className="mital"> متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple5.code} head={codeExemple5.head} language="html" title="CSS Outline" addClass="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple5.code} head={codeExemple5.head} language="html" is_html={true} title="CSS Outline" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Outline' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <p className="css-outline-ex5">outline-offset with 16px.</p>
         </Result>
