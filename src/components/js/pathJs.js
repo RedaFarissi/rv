@@ -25,12 +25,13 @@ export {default as Modules} from './js/tutorial/Modules';
 export {default as Errors} from './js/tutorial/Errors';
 export {default as JSON} from './js/tutorial/JSON';
 
-//export {default as } from './js/';
-//export {default as } from './js/';
-//export {default as } from './js/';
-//export {default as } from './js/';
-//export {default as } from './js/';
-//export {default as } from './js/';
+export {default as Functions} from './js/function/Functions';
+export {default as Bind} from './js/function/Bind';
+export {default as Call} from './js/function/Call';
+export {default as Apply} from './js/function/Apply';
+export {default as Map} from './js/function/Map';
+export {default as Filter} from './js/function/Filter';
+
 //export {default as } from './js/';
 //export {default as } from './js/';
 //export {default as } from './js/';

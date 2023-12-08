@@ -8,20 +8,20 @@
     #dV1{width: 50%; height:150px; overflow: auto; background-color: brown;padding: 20px;}
     #dV2{  background-color: yellow; border: 2px solid black;margin:500px 0px;}
 </style>
-<h1 class="heading-style-js"><u><i> JavaScript scrollIntoView</i></u></h1>
-<div class="style_divv mt-5">
-    تقوم طريقة <bdi><b>scrollIntoView()</b></bdi> بتمرير محدد إلى المنطقة المرئية من نافذة المتصفح.<br>
-    يتم الوصول إلى  <b>pageYOffset</b> باستخدام :<br>
-    <div class="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">  
+<h1 className="heading-style-js"><u><i> JavaScript scrollIntoView</i></u></h1>
+<div className="style_divv mt-5">
+    تقوم طريقة <bdi><b>scrollIntoView()</b></bdi> بتمرير محدد إلى المنطقة المرئية من نافذة المتصفح.<br/>
+    يتم الوصول إلى  <b>pageYOffset</b> باستخدام :<br/>
+    <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">  
         <pre><span style="color:var(--js-color)">element</span>.<span style="color:var(--js-color)">scrollIntoView()</span></pre>
     </div>
 </div>
-<div class="sum_exemple_style">
-    <div class="mital"> متال :  </div>
+<div className="sum_exemple_style">
+    <div className="mital"> متال :  </div>
     <h4 style="color:green"> الكود </h4>
-    <img src="{% static 'js/js44_scrollIntoView.png' %}" class="img">
+    <img src="{% static 'js/js44_scrollIntoView.png' %}" className="img">
     <h4 style="color:green"> بعد تشغيل الأكواد </h4>
-    <div class="styleee img">
+    <div className="styleee img">
         <button onclick="name_function()"> TOP </button>
         <button onclick="name_function2()"> BOTTOM </button>
         <button onclick="name_function3()"> smooth </button>

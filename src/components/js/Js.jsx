@@ -3,9 +3,8 @@ import {
     Introduction,Statements,Output,Variables,Arithmetic,Assignment,Types,String,StringSearch,
     StringsTemplates,Numbers,Booleans,Date,Random,Conditions,Switch,ArraysPart1,ArraysPart2,
     Objects,LoopFor,LoopWhile,Break,Conversion,Modules,Errors,JSON,
-
-
-
+    
+    Functions,Bind,Call,Apply,Map,Filter,
 } from './pathJs.js';
 import "./Js.sass"
 
@@ -56,7 +55,17 @@ return(
             <Route path='/modules' element={<Modules />} /> 
             <Route path='/errors' element={<Errors />} /> 
             <Route path='/json' element={<JSON />} /> 
-            <Route path='/' element={<Introduction />} /> 
+
+            <Route path='/functions' element={<Functions />} /> 
+            <Route path='/bind' element={<Bind />} /> 
+            <Route path='/call' element={<Call />} /> 
+            <Route path='/apply' element={<Apply />} /> 
+            <Route path='/map' element={<Map />} /> 
+            <Route path='/filter' element={<Filter />} /> 
+
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
         </Routes>
     </section>
 </main>

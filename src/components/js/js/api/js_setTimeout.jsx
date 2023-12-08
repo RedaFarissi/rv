@@ -1,9 +1,9 @@
 {% load static %} 
 <h1 class="heading-style-js"><u><i> JavaScript setTimeout </i></u></h1>
 <div class="style_divv mt-5">
-تستدعي طريقة <bdi><b>setTimeout()</b></bdi> دالة بعد عدد من المللي ثانية.<br>
-يتم تنفيذ <bdi><b>setTimeout()</b></bdi> مرة واحدة فقط.<br>
-إذا كنت بحاجة إلى عمليات تنفيذ متكررة ، فاستخدم <bdi><b>setInterval()</b></bdi> بدلاً من ذلك.<br>
+تستدعي طريقة <bdi><b>setTimeout()</b></bdi> دالة بعد عدد من المللي ثانية.<br/>
+يتم تنفيذ <bdi><b>setTimeout()</b></bdi> مرة واحدة فقط.<br/>
+إذا كنت بحاجة إلى عمليات تنفيذ متكررة ، فاستخدم <bdi><b>setInterval()</b></bdi> بدلاً من ذلك.<br/>
 استخدم طريقة <bdi><b>clearTimeout()</b></bdi> لمنع بدء تشغيل الوظيفة.
     <div class="codeStudio alert bg-dark pb-0 mt-3" dir="ltr">
         <pre><span style="color:gold;">setTimeout(<span class="text-light">function_name</span>,<span class="text-light">milliseconds</span>)</span></pre>

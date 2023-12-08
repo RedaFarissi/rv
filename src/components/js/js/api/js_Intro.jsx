@@ -1,7 +1,7 @@
 {% load static %} 
 <h1 class="heading-style-css"><u><i>JavaScript API introduction </i></u></h1>
 <p> 
-    واجهة برمجة تطبيقات الويب هي حلم المطور.<br>
+    واجهة برمجة تطبيقات الويب هي حلم المطور.<br/>
     <ul>
         <li> من خلال API يمكن توسيع وظائف المتصفح </li>
         <li> يمكنه تبسيط الوظائف المعقدة بشكل كبير </li>
@@ -10,14 +10,14 @@
 </p>
 <h3>1- ما هي واجهة برمجة تطبيقات الويب <bdi>(API)</bdi> ?</h3>
 <div class="style_divv">    
-    <b>API</b> وتعني  <b>Application Programming Interface</b> (واجهة برمجة التطبيقات).<br>
-    <bdi><b>Web API</b></bdi>   هو واجهة برمجة تطبيقات للويب .<br>
-    يمكن لواجهة برمجة تطبيقات المتصفح أن توسع وظائف متصفح الويب.<br>
-    يمكن لخادم <B>API</B> توسيع وظائف خادم الويب.<br>
+    <b>API</b> وتعني  <b>Application Programming Interface</b> (واجهة برمجة التطبيقات).<br/>
+    <bdi><b>Web API</b></bdi>   هو واجهة برمجة تطبيقات للويب .<br/>
+    يمكن لواجهة برمجة تطبيقات المتصفح أن توسع وظائف متصفح الويب.<br/>
+    يمكن لخادم <B>API</B> توسيع وظائف خادم الويب.<br/>
 </div>
 <h3>2- المتصفحات و واجهة برمجة تطبيقات <bdi>API</bdi></h3>
 <div class="style_divv">
-    تحتوي جميع المتصفحات على مجموعة من واجهات برمجة تطبيقات الويب المدمجة لدعم العمليات المعقدة ، وللمساعدة في الوصول إلى البيانات.<br>
+    تحتوي جميع المتصفحات على مجموعة من واجهات برمجة تطبيقات الويب المدمجة لدعم العمليات المعقدة ، وللمساعدة في الوصول إلى البيانات.<br/>
     على سبيل المثال ، يمكن لواجهة برمجة تطبيقات <bdi>(Geolocation API)</bdi> تحديد الموقع الجغرافي أن ترجع إحداثيات مكان المتصفح.
 </div>
 <div class="sum_exemple_style">
@@ -48,6 +48,6 @@
     }
     function showPosition(position) {
         result.innerHTML = "Latitude: " + position.coords.latitude + 
-      "<br>Longitude: " + position.coords.longitude;
+      "<br/>Longitude: " + position.coords.longitude;
     }
 </script>

@@ -1,7 +1,7 @@
 {% load static %} 
 <h1 class="heading-style-js"><u><i> JavaScript setInterval </i></u></h1>
 <div class="style_divv mt-5">
-    تستدعي طريقة <bdi><b>setInterval()</b></bdi> دالة في فترات زمنية محددة (بالمللي ثانية).<br>
+    تستدعي طريقة <bdi><b>setInterval()</b></bdi> دالة في فترات زمنية محددة (بالمللي ثانية).<br/>
     تستمر طريقة <bdi><b>setInterval()</b></bdi> في استدعاء الوظيفة حتى يتم استدعاء <bdi><b>clearInterval()</b> أو تصبح النافذة
     <div class="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
         <pre><span style="color:gold">setInterval(</span> Function_name <span style="color:gold">,</span> milliseconds<span style="color:gold">)</span></pre>

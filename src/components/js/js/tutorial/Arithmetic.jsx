@@ -5,7 +5,7 @@ export default function Arithmetic(){
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Arithmetic</h1>
     <article>
-        <p class="style_divv mt-5">
+        <p className="style_divv mt-5">
             تؤدي العوامل الحسابية العمليات الحسابية على الأرقام (المتغيرات أو الحرفية).<br/>
             <table dir="ltr">
                 <tr><th> Operator  </th><th> Description </th></tr>
@@ -22,49 +22,49 @@ export default function Arithmetic(){
     </article>
     <article>
         <h2 className="title-h2">1. Addition</h2>
-        <div class="mital"> متال :  </div>
-        <img src="{% static 'js/js5_Arithmetic.png' %}" class="img"/>
-        <div class="styleee img"><div id="adition"> 95 </div></div>
+        <div className="mital"> متال :  </div>
+        <img src="{% static 'js/js5_Arithmetic.png' %}" className="img"/>
+        <div className="styleee img"><div id="adition"> 95 </div></div>
     </article>
     <article>
         <h2 className="title-h2">2. Subtraction</h2>
-        <div class="mital"> متال :  </div>
-        <img src="{% static 'js/js5_Arithmetic2.png' %}" class="img"/>
-        <div class="styleee img"><div id="soustraction"> -85 </div></div>
+        <div className="mital"> متال :  </div>
+        <img src="{% static 'js/js5_Arithmetic2.png' %}" className="img"/>
+        <div className="styleee img"><div id="soustraction"> -85 </div></div>
     </article>
     <article>
         <h2 className="title-h2">3. Multiplication</h2>
-        <div class="mital"> متال :  </div>
-        <img src="{% static 'js/js5_Arithmetic3.png' %}" class="img"/>
-        <div class="styleee img"><div id="multip"> 450 </div></div>
+        <div className="mital"> متال :  </div>
+        <img src="{% static 'js/js5_Arithmetic3.png' %}" className="img"/>
+        <div className="styleee img"><div id="multip"> 450 </div></div>
     </article>
     <article>
         <h2 className="title-h2">5. Division</h2>
-        <div class="mital"> متال :  </div>
-        <img src="{% static 'js/js5_Arithmetic4.png' %}" class="img"/>
-        <div class="styleee img">  0.05555555555555555 </div>
+        <div className="mital"> متال :  </div>
+        <img src="{% static 'js/js5_Arithmetic4.png' %}" className="img"/>
+        <div className="styleee img">  0.05555555555555555 </div>
         <h2 className="title-h2">5. Exponentiation</h2>
-        <div class="mital"> متال :  </div>
-        <img src="{% static 'js/js5_Arithmetic5.png' %}" class="img"/>
-        <div class="styleee img"><div id="Expo"> 125 </div></div>
+        <div className="mital"> متال :  </div>
+        <img src="{% static 'js/js5_Arithmetic5.png' %}" className="img"/>
+        <div className="styleee img"><div id="Expo"> 125 </div></div>
     </article>
     <article>
         <h2 className="title-h2">6. Modulus (Remainder)</h2>
-        <div class="mital"> متال :  </div>
-        <img src="{% static 'js/js5_Arithmetic6.png' %}" class="img"/>
-        <div class="styleee img">2</div>
+        <div className="mital"> متال :  </div>
+        <img src="{% static 'js/js5_Arithmetic6.png' %}" className="img"/>
+        <div className="styleee img">2</div>
     </article>
     <article>
         <h2 className="title-h2">7. Increment</h2>
-        <div class="mital"> متال :  </div>
-        <img src="{% static 'js/js5_Arithmetic7.png' %}" class="img"/>
-        <div class="styleee img"> 6  </div>
+        <div className="mital"> متال :  </div>
+        <img src="{% static 'js/js5_Arithmetic7.png' %}" className="img"/>
+        <div className="styleee img"> 6  </div>
     </article>
     <article>
         <h2 className="title-h2">8. Decrement</h2>
-        <div class="mital"> متال :  </div>
-        <img src="{% static 'js/js5_Arithmetic8.png' %}" class="img"/>
-        <div class="styleee img"> 4 </div>
+        <div className="mital"> متال :  </div>
+        <img src="{% static 'js/js5_Arithmetic8.png' %}" className="img"/>
+        <div className="styleee img"> 4 </div>
 
     </article>
 </section>

@@ -1,20 +1,20 @@
 {% load static %} 
-<h1 class="heading-style-js"><u><i>  JavaScript pageX </i></u></h1>
-<div class="style_divv mt-5">
-    ترجع الخاصية <b>pageX</b> الإحداثيات الأفقية (وفقا للوثيقة) لمؤشر الماوس عند تشغيل حدث ماوس.<br>
-    المستند هو صفحة الويب.<br>
-    للحصول على الإحداثيات الرأسية (وفقا للوثيقة) لمؤشر الماوس، استخدم الخاصية <b>pageY</b>.<br>
+<h1 className="heading-style-js"><u><i>  JavaScript pageX </i></u></h1>
+<div className="style_divv mt-5">
+    ترجع الخاصية <b>pageX</b> الإحداثيات الأفقية (وفقا للوثيقة) لمؤشر الماوس عند تشغيل حدث ماوس.<br/>
+    المستند هو صفحة الويب.<br/>
+    للحصول على الإحداثيات الرأسية (وفقا للوثيقة) لمؤشر الماوس، استخدم الخاصية <b>pageY</b>.<br/>
     هذه الخاصية للقراءة فقط.
-    <div class="codeStudio alert bg-dark  mt-2 pb-0" dir="ltr">
+    <div className="codeStudio alert bg-dark  mt-2 pb-0" dir="ltr">
         <pre><span style="color:var(--js-color)">event</span>.<span style="color:var(--js-color)">pageX</span></pre>
     </div>
 </div>
-<div class="sum_exemple_style">
-    <div class="mital">متال :  </div>
+<div className="sum_exemple_style">
+    <div className="mital">متال :  </div>
     <h4 style="color:green"> الكود </h4>
-    <img src="{% static 'js/js103_pageX.png' %}" class="img">
+    <img src="{% static 'js/js103_pageX.png' %}" className="img">
     <h4 style="color:green"> بعد تشغيل الأكواد </h4>
-    <div class="styleee img">
+    <div className="styleee img">
       <h2 onmousemove="showCoords(event)"> Move mouse in this heading to get the x (horizontal) and y (vertical) coordinates of the mouse pointer .</h2>
       <p> <strong>Tip:</strong>Try to click different places in the heading. </p>
       <p id="id_name"></p>

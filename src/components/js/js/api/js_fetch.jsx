@@ -4,8 +4,8 @@
 </style>
 <h1 class="heading-style-js"><u><i>  JavaScript fetch api </i></u></h1>
 <div class="style_divv mt-5">
-    تسمح واجهة <bdi><b>Fetch API</b></bdi> لمتصفح الويب بإجراء طلبات <b>HTTP</b> لخوادم الويب.<br>
-    لا حاجة ل <b>XMLHttpRequest</b> بعد الآن .<br>
+    تسمح واجهة <bdi><b>Fetch API</b></bdi> لمتصفح الويب بإجراء طلبات <b>HTTP</b> لخوادم الويب.<br/>
+    لا حاجة ل <b>XMLHttpRequest</b> بعد الآن .<br/>
     <b style="text-shadow:0.9px 0.9px red;"> الطريقة الأولى : </b>
     <div class="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
 <pre><span style="color:gold">fetch(</span>lien_api<span style="color:gold">)</span>.<span style="color:gold">then(</span> <span style="color:var(--js-color)">variable</span> <span style="color:var(--html-color-tags)">=></span> { <span style="color:var(--violet-color)">return</span> <span style="color:var(--js-color)">variable</span>.<span style="color:gold">json()</span> }<span style="color:gold">)</span>.<span style="color:gold">then(</span>data <span style="color:var(--html-color-tags)">=></span>{
@@ -98,7 +98,7 @@
     }
     var resulta = document.getElementById("resulta")
     for(let item in data ){
-        resulta.innerHTML += `<span id='C'> ${item} </span> : ${data[item]} <br>`
+        resulta.innerHTML += `<span id='C'> ${item} </span> : ${data[item]} <br/>`
     }
 </script>
 <script>
