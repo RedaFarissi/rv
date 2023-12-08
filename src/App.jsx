@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
 import { Header , Home , Html , Css, Js , React , Cmd , Git , Django} from './components/path';
 import "./App.sass"
@@ -28,7 +27,7 @@ function App() {
             <Route path='/css/*' element={<Css  css_list={css_list}  />} />
             <Route path='/js/*' element={<Js js_matrix={js_matrix} />} />
             <Route path='/react/' element={<React  />} />
-            <Route path='/django/' element={<Django  />} />
+            <Route path='/django/*' element={<Django  />} />
             <Route path='/power-shell' element={<Cmd cmd_list={cmd_list}  />} />
             <Route path='/git' element={<Git git_list={git_list}  />} />
         </Routes>  

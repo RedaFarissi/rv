@@ -27,7 +27,7 @@ const codes = [
         What_is_Django:[],
         What_you_need_to_get_started:[],
         Verify_required_installations:[],
-        Struct_django:[],
+        Struct_Django:[],
     },
     {
         title:"virtualenv", 
@@ -100,16 +100,16 @@ const codes = [
         Add_Social_Login_to_Django:[],
     },
     {
-        title:"using_email_in_django",
+        title:"Django_Email",
         send_email:[],
         list_emails:[],
         UseEmailAsUsername:[],
     },
     {
-        django_Pagination:[],
+        Django_Pagination:[],
     },
     {
-        django_Slug:[]
+        Django_Slug:[]
     },
     {
         ModelForm:[],
@@ -118,14 +118,23 @@ const codes = [
         Form:[],
     },
     {
-        title: "filterfromdataBase",
+        title: "Django_Filter",
         models_Objecjs_filter:[],
         filter_from_dataBase_directly:[],
         filter_using_Q:[],
         lookup_expr:[],
     },
     {
-        exercice:[]
+        Exercice:[]
+    },
+    {
+        Session:[]
+    },
+    {
+        Context_Processors:[]
+    },
+    {
+        How_Django_Work:[]
     },
     {
         title:"Ussing_Class_View",
@@ -136,15 +145,6 @@ const codes = [
         ordering:[],
         queryset:[],
         get_queryset:[],
-    },
-    {
-        SESSION:[]
-    },
-    {
-        Context_Processors:[]
-    },
-    {
-        How_Django_Work:[]
     },
     {
         ngrok:[]
