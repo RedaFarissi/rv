@@ -1,61 +1,62 @@
 import { Routes, Route , Link } from "react-router-dom";
-import { Introduction } from './pathJs.js';
+import { 
+    Introduction,Statements,Output,Variables,Arithmetic,Assignment,Types,String,StringSearch,
+    StringsTemplates,Numbers,Booleans,Date,Random,Conditions,Switch,ArraysPart1,ArraysPart2,
+    Objects,LoopFor,LoopWhile,Break,Conversion,Modules,Errors,JSON,
+
+
+
+} from './pathJs.js';
 import "./Js.sass"
 
-export default function Js(){
-    const js_list = ["Introduction","Statements","Output","Variables","Arithmetic","Assignment","Types","String","String Search","Strings Templates","Numbers","Booleans","Date","Random","Conditions","Switch","Arrays part 1","Arrays part 2","Objects","Loop for","Loop while","Break","Conversion","Modules","Errors","JSON","Performance", ]
-    const functions_list = ["Functions", "bind", "call","apply",  "Map","Filter", ]
-    const class_list = ["Class Introduction","Static","private","Inheritance" ]
-    const window_list = ["alert","confirm","btoa","prompt","atob","location","frames","innerWidth","innerHeight","clientWidth","scrollBy","pageXOffset","pageX","pageY","scrollIntoView","scrollTop","console","getComputedStyle","localStorage","sessionStorage","matchMedia","navigator","print",]
-    const dom_list = ["addEventListener","removeEventListener","doctype","getElementById","getElementsByClassName","getElementsByName","getElementsByTagName","activeElement","children","body","documentElement","cookie","classList","createElement","appendChild","setAttribute","createAttribute","removeAttribute","createComment","createTextNode","remove","head","images","links","querySelector","querySelectorAll","requestFullscreen","exitFullscreen","contains","focus","blur","scripts","title","baseURI","play","pause","load",]
-    const events_list = ["currentTarget","target","ctrlKey","data","onclick","ondblclick","onbeforeprint","animation","onfocus","onblur","onloadstart","ondurationchange","onloadedmetadata","onloadeddata","onprogress","onprogress","onended","onchange","oninput","oncontextmenu","oncopy","oninvalid","onkeydown","onkeypress","onkeyup","onload","onmousedown","onmouseup","onmouseenter","onmouseleave","onmouseover","onmouseout","ondrag","onsubmit","onfocusin","onfocusout","onerror","onfullscreenchange","onpagehide","onpaste","onpause","onplay","onresize","onreset","onscroll","onselect","ontoggle","onunload","onvolumechange",]
-    const api_list = ["Intro","Forms","fetch","History","setInterval","clearInterval","setTimeout"]
-
-    const arrays1 = js_list.map(e => <li className="list-group-item"><Link>JS {e}</Link></li>)
-    const arrays2 = functions_list.map(e => <li className="list-group-item"><Link>JS {e}</Link></li>)
-    const arrays3 = class_list.map(e => <li className="list-group-item"><Link>JS {e}</Link></li>)
-    const arrays4 = window_list.map(e => <li className="list-group-item"><Link>JS {e}</Link></li>)
-    const arrays5 = dom_list.map(e => <li className="list-group-item"><Link>JS {e}</Link></li>)
-    const arrays6 = events_list.map(e => <li className="list-group-item"><Link>JS {e}</Link></li>)
-    const arrays7 = api_list.map(e => <li className="list-group-item"><Link>JS {e}</Link></li>)
+export default function Js(props){
+    const matrix = props.js_matrix.map( e =>(
+        <dl>
+            { 
+                e.map((value, index) => (
+                    (index === 0) ? 
+                    <dt className="aside-dl-dt"><Link> <i className="fa-solid fa-caret-right"></i> {value}</Link></dt> : 
+                    <dd className="aside-dl-dd"><Link to={`/js/${value.toLowerCase().replace(/\s/g, '-')}`}> <i className="fa-solid fa-circle"></i> {value}</Link></dd>
+                ))
+            }
+        </dl>
+    ))
 return(
 <>
  <main>
     <aside className="aside">
-        <h5 className="mt-3">JavaScript Tutorials</h5>
-        <ul className="list-group m-0">
-            {arrays1}
-        </ul><br/>
-        <h5>Functions Tutorials</h5>
-        <ul className="list-group m-0">
-            {arrays2}
-        </ul><br/>
-        <h5>Class Tutorials</h5>
-        <ul className="list-group m-0">
-            {arrays3}
-        </ul><br/>
-        <h5>Window Tutorials</h5>
-        <ul className="list-group m-0">
-            {arrays4}
-        </ul><br/>
-        <h5>DOM Tutorials</h5>
-        <ul className="list-group m-0">
-            {arrays5}
-        </ul><br/>
-        <h5>Events Tutorials</h5>
-        <ul className="list-group m-0">
-            {arrays6}
-        </ul><br/>
-        <h5>API Tutorials</h5>
-        <ul className="list-group m-0">
-            {arrays7}
-        </ul><br/>
-        
+        {matrix}
     </aside>
     <section>
         <Routes>
             <Route path='/' element={<Introduction />} />
             <Route path='/introduction' element={<Introduction />} /> 
+            <Route path='/statements' element={<Statements />} /> 
+            <Route path='/output' element={<Output />} /> 
+            <Route path='/variables' element={<Variables />} /> 
+            <Route path='/arithmetic' element={<Arithmetic />} /> 
+            <Route path='/assignment' element={<Assignment />} /> 
+            <Route path='/types' element={<Types />} /> 
+            <Route path='/string' element={<String />} /> 
+            <Route path='/string-search' element={<StringSearch />} /> 
+            <Route path='/strings-templates' element={<StringsTemplates />} /> 
+            <Route path='/numbers' element={<Numbers />} /> 
+            <Route path='/booleans' element={<Booleans />} /> 
+            <Route path='/date' element={<Date />} /> 
+            <Route path='/random' element={<Random />} /> 
+            <Route path='/conditions' element={<Conditions />} /> 
+            <Route path='/switch' element={<Switch />} /> 
+            <Route path='/arrays-part-1' element={<ArraysPart1 />} /> 
+            <Route path='/arrays-part-2' element={<ArraysPart2 />} /> 
+            <Route path='/objects' element={<Objects />} /> 
+            <Route path='/loop-for' element={<LoopFor />} /> 
+            <Route path='/loop-while' element={<LoopWhile />} /> 
+            <Route path='/break' element={<Break />} /> 
+            <Route path='/conversion' element={<Conversion />} /> 
+            <Route path='/modules' element={<Modules />} /> 
+            <Route path='/errors' element={<Errors />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/' element={<Introduction />} /> 
         </Routes>
     </section>
 </main>
