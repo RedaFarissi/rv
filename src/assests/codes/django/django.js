@@ -17,9 +17,16 @@ import {
     index7get_absolute_url11,index7get_absolute_url12,index7get_absolute_url13,index7annotate0,
     index7annotate1,index7annotate2,index7annotate3,index7annotate4,index7annotate5,index7annotate6,
     index7annotate7,index8include_urls_and_files_html0,index8include_urls_and_files_html1,
+    index8include_urls_and_files_html2,index8include_urls_and_files_html3,index8include_urls_and_files_html4,
+    index8include_urls_and_files_html5,index8include_urls_and_files_html6,index8include_urls_and_files_html7,
+    index8include_urls_and_files_html8,index8include_urls_and_files_html9,index8include_urls_and_files_html10,
+    index8Sign_Up0,index8Sign_Up1,index8Sign_Up2,index8Sign_Up3,index8Sign_Up4,index8Sign_Up5,
+    index8Add_fields_to_User_SignUp0,index8Add_fields_to_User_SignUp1,index8Add_fields_to_User_SignUp2,
+    index9send_email0,index9send_email1,index9send_email2,index9send_email3,index9send_email4,index9send_email5,
+    index9list_emails0,index9list_emails1,index9list_emails2,index10Django_Pagination0,index10Django_Pagination1,
+    index10Django_Pagination2, index10Django_Pagination3,index10Django_Pagination4,index10Django_Pagination5,
+    index11Form0,index11Form1,index11Form2,index11Form3,index11Form4,index11Form5,
     
-    
-
 } from "./pathCodeDjango";
 const codes = [
     {
@@ -93,29 +100,23 @@ const codes = [
     {
         title:"User_Authentication",
         User_and_authontication:[],
-        include_urls_and_files_html:[index8include_urls_and_files_html0(),index8include_urls_and_files_html1(),],
-        Sign_Up:[],
-        Add_fields_to_User_SignUp:[],
-        verificationEmailInSignUp:[],
-        Add_Social_Login_to_Django:[],
+        include_urls_and_files_html:[index8include_urls_and_files_html0(),index8include_urls_and_files_html1(),index8include_urls_and_files_html2(),index8include_urls_and_files_html3(),index8include_urls_and_files_html4(),index8include_urls_and_files_html5(),index8include_urls_and_files_html6(),index8include_urls_and_files_html7(),index8include_urls_and_files_html8(),index8include_urls_and_files_html9(),index8include_urls_and_files_html10(),],
+        Sign_Up:[index8Sign_Up0(),index8Sign_Up1(),index8Sign_Up2(),index8Sign_Up3(),index8Sign_Up4(),index8Sign_Up5(),],
+        Add_fields_to_User_SignUp:[index8Add_fields_to_User_SignUp0(),index8Add_fields_to_User_SignUp1(),index8Add_fields_to_User_SignUp2(),],
     },
     {
         title:"Django_Email",
-        send_email:[],
-        list_emails:[],
-        UseEmailAsUsername:[],
+        send_email:[index9send_email0(),index9send_email1(),index9send_email2(),index9send_email3(),index9send_email4(),index9send_email5(),],
+        list_emails:[index9list_emails0(),index9list_emails1(),index9list_emails2(),],
     },
     {
-        Django_Pagination:[],
+        Django_Pagination:[index10Django_Pagination0(),index10Django_Pagination1(),index10Django_Pagination2(),index10Django_Pagination3(),index10Django_Pagination4(),index10Django_Pagination5(),],
     },
     {
-        Django_Slug:[]
+        Form:[index11Form0(),index11Form1(),index11Form2(),index11Form3(),index11Form4(),index11Form5(),],
     },
     {
         ModelForm:[],
-    },
-    {
-        Form:[],
     },
     {
         title: "Django_Filter",

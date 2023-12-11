@@ -4,9 +4,9 @@ import { CodeCommand , CodeHighlighter , Result } from "../../path";
 
 export default function ModelFieldReference(){
     return(
-        <article id="Model_Field_Reference">  
-            <h2 className="title-h2"> 4 - Model Field Reference </h2>
-            <h3 className="title-h3" id="Definition">1 - تعريف </h3>
+         <article id="Model_Field_Reference"> 
+            <h1 className="heading-style heading-style-django-color"> Django Model Field Reference</h1> 
+            <h2 className="title-h2" id="Definition">1 - تعريف </h2>
             <p className="style_divv">
                في Django يشير (Model Field Reference) إلى مجموعة من الأنواع المدمجة للحقول التي يمكنك استخدامها لتعريف البيانات في نموذج Django. تُستخدم حقول النموذج لتحديد نوع البيانات التي يمكن أن يحتوي عليها كل حقل في نموذج Django، وبالتالي، يساعد في تحديد هيكل ومظهر قاعدة البيانات.<br/><br/>
                ببساطة، حقول النموذج تعتبر "البنية الأساسية" لنموذج Django وتحدد كيف يجب تخزين وتمثيل مختلف أنواع البيانات مثل النصوص، والأرقام، والتواريخ، وغيرها. عند تحديد نموذج Django، يمكنك استخدام حقول النموذج لتحديد ما إذا كان الحقل سيكون نصيًا أو رقميًا أو تاريخيًا، وما إذا كان يجب أن يكون له قيمة افتراضية أو لا.<br/><br/>
@@ -39,82 +39,82 @@ export default function ModelFieldReference(){
                   </li>
                </ol>     
             </p>
-            <h3 className="title-h3" id="Fields">2 - الحقول Fields </h3>
-            <h5 className="title-h5">1 - CharField </h5> 
+            <h2 className="title-h2" id="Fields">2 - الحقول Fields </h2>
+            <h3 className="title-h3">1 - CharField </h3> 
             <p className="style_divv">
                يستخدم CharField عمومًا لتخزين سلاسل صغيرة مثل الاسم الأول واسم العائلة وما إلى ذلك.<br/>
                max_length: هو الحد الأقصى لطول الأحرف المسموح استخدامها.
                <CodeHighlighter code={`column_name = models.CharField(max_length = 200,**options)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-            <h5 className="title-h5">2 - TextField </h5>
+            <h3 className="title-h3">2 - TextField </h3>
             <p className="style_divv">
                يستخدم TextField بشكل عام لتخزين السلاسل الكبيرة (نص).
                <CodeHighlighter code={`column_name = models.TextField(**options)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>       
-            <h5 className="title-h5"> 3 - IntegerField </h5>
+            <h3 className="title-h3"> 3 - IntegerField </h3>
             <p className="style_divv">
                يستخدم IntegerField بشكل عام لتخزين الأعداد الصحيحة .              
                <CodeHighlighter code={`column_name = models.IntegerField(default=default_Number)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-            <h5 className="title-h5"> 4 - PositiveIntegerField </h5>
+            <h3 className="title-h3"> 4 - PositiveIntegerField </h3>
             <p className="style_divv">
                يشبه IntegerField، ولكنه يسمح فقط بالقيم الموجبة.
                <CodeHighlighter code={`column_name = models.PositiveIntegerField()`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-            <h5 className="title-h5">5 -  BigIntegerField </h5>
+            <h3 className="title-h3">5 -  BigIntegerField </h3>
             <p className="style_divv">
                يستخدم BigIntegerField لتخزين القيم الصحيحة الكبيرة.
                <CodeHighlighter code={`column_name = models.BigIntegerField()`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-            <h5 className="title-h5">6 - DateTimeField </h5>
+            <h3 className="title-h3">6 - DateTimeField </h3>
             <p className="style_divv">
                يمثل DateTimeField التاريخ والوقت. 
                <CodeHighlighter code={`column_name = models.DateTimeField()`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
                لجعله يحفظ البيانات تلقائيا
                <CodeHighlighter code={`column_name = models.DateTimeField(("Date"), auto_now_add = True)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-            <h5 className="title-h5">7 -  EmailField </h5>
+            <h3 className="title-h3">7 -  EmailField </h3>
             <p className="style_divv">
                مصمم خصيصًا لتخزين عناوين البريد الإلكتروني.
                <CodeHighlighter code={`column_name = models.EmailField(max_length=Number)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-            <h5 className="title-h5"> 8 - BooleanField </h5>
+            <h3 className="title-h3"> 8 - BooleanField </h3>
             <p className="style_divv">
                يخزن BooleanField قيم True  أو False.
                <CodeHighlighter code={`column_name = models.BooleanField(default=False)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-            <h5 className="title-h5">9 - DecimalField </h5>
+            <h3 className="title-h3">9 - DecimalField </h3>
             <p className="style_divv">
                يستخدم DecimalField لتخزين الأرقام العشرية.
                <CodeHighlighter code={`column_name = models.DecimalField(max_digits=10, decimal_places=2)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-            <h5 className="title-h5">10 - URLField </h5>
+            <h3 className="title-h3">10 - URLField </h3>
             <p className="style_divv">
                مصمم خصيصًا لتخزين عناوين URL.
                <CodeHighlighter code={`column_name = models.URLField()`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-            <h5 className="title-h5">11 - FileField </h5>
+            <h3 className="title-h3">11 - FileField </h3>
             <p className="style_divv">
                يستخدم لتحميل الملفات (مثل الصور والمستندات وما إلى ذلك).
                <CodeHighlighter code={`column_name = models.FileField(upload_to="folder_to_upload_in_media")`} language="python" addclassName="mt-3 mb-3" copie={true}/>                
                لتحميل الملف تحتاج إلى استخدام  <a className="text-light" href="#Media_files">media</a>
             </p>
-            <h5 className="title-h5">12 - ImageField </h5>
+            <h3 className="title-h3">12 - ImageField </h3>
             <p className="style_divv">
                يستخدم ImageField للتعامل مع تحميلات الصور.
                <CodeHighlighter code={`column_name = models.ImageField(upload_to='folder_to_upload_in_media/')`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
                لتحميل الملف تحتاج إلى استخدام  <a className="text-light" href="#Media_files">media</a>
             </p>
-            <h5 className="title-h5">13 - SlugField </h5>
+            <h3 className="title-h3">13 - SlugField </h3>
             <p className="style_divv">
                يُستخدم لتخزين تسمية قصيرة تحتوي فقط على أحرف أو أرقام أو واصلات أو شرطات سفلية.
                <CodeHighlighter code={`column_name = models.SlugField(unique=True)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-            <h3 className="title-h3" id="Relations"> 3 - Relations </h3>
+            <h2 className="title-h2" id="Relations"> 3 - Relations </h2>
             <p className="style_divv">
                في Django، عند تحديد النماذج، يتم إنشاء العلاقات بينها باستخدام الحقول التي تمثل أنواعًا مختلفة من العلاقات. حقول العلاقة الأساسية الثلاثة التي يوفرها Django هي:
             </p>
-            <h5 className="title-h5">1 - OneToOneField </h5>
+            <h3 className="title-h3">1 - OneToOneField </h3>
             <p className="style_divv">
                OneToOneField هو حقل يُستخدم لإنشاء علاقة واحد إلى واحد بين نموذجين. يُستخدم عندما يكون لكل مثيل من مثيلات نموذج واحد تمامًا مرتبط مع مثيل واحد من نموذج آخر، والعكس صحيح. <br/><br/>
                مثل العلاقات بين المستخدم والملف الشخصي، يمكن للمستخدم أن يكون له ملف شخصي واحد، والملف الشخصي له مستخدم واحد.
@@ -122,7 +122,7 @@ export default function ModelFieldReference(){
             </p>
             <CodeHighlighter code={codes[3].Relations[0]} file_name="models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             
-            <h5 className="title-h5">2 - Foreginkey </h5>
+            <h3 className="title-h3">2 - Foreginkey </h3>
             <p className="style_divv">
                ForeignKey هو حقل يُستخدم لإنشاء علاقة كثير إلى واحد بين نموذجين. يُستخدم عندما يكون لدى نموذج علاقة مع نموذج آخر، ويمكن ربط كل مثيل من مثيلات النموذج المتعلق بعدة مثيلات من نموذج المصدر، ولكن يتم ربط كل مثيل من مثيلات النموذج المصدر بمثيل واحد فقط من النموذج المتعلق.<br/><br/>
                مثل العلاقات بين المستخدم والمنشور، يمكن للمستخدم إنشاء العديد من المنشورات، ولكن يتم التحكم في النشر من قبل مستخدم واحد.
@@ -130,21 +130,21 @@ export default function ModelFieldReference(){
             </p>
             <CodeHighlighter code={codes[3].Relations[1]} file_name="models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             
-            <h5 className="title-h5">3 - ManyToManyField </h5>
+            <h3 className="title-h3">3 - ManyToManyField </h3>
             <p className="style_divv">
                ManyToManyField هو حقل يُستخدم لإنشاء علاقة كثير إلى كثير بين نموذجين. يُستخدم عندما يكون لكل مثيل من مثيلات نموذج واحد قد تم ارتباطه بمثيلات متعددة من نموذج آخر، والعكس صحيح.<br/><br/>
                مثل العلاقات بين المستخدم والمجموعات، يمكن للمستخدم إنشاء العديد من المجموعات ويمكن أن تضم المجموعات العديد من المستخدمين.
                <CodeHighlighter code={`column_name = models.ManyToManyField(ClassModelsToRelation,related_name='name_to_get_related_data')`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
             <CodeHighlighter code={codes[3].Relations[2]} file_name="models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-            <h3 className="title-h3" id="Parameter"> 4 - Parameter</h3>
-            <h5 className="title-h5">1 - choices</h5>
+            <h2 className="title-h2" id="Parameter"> 4 - Parameter</h2>
+            <h3 className="title-h3">1 - choices</h3>
             <p className="style_divv">
                لإنشاء خيار، تحتاج إلى (tuple) يتم فرضها من خلال التحقق من صحة النموذج وستكون أداة النموذج الافتراضية عبارة عن مربع تحديد يحتوي على هذه الاختيارات بدلاً من حقل النص القياسي.            
                <CodeHighlighter code={`choices=(  ("Key1", "value1"),    ("Key2", "value2"),   )`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
             <CodeHighlighter code={codes[3].Parameter[0]} file_name="models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-            <h5 className="title-h5">2 - blank</h5>
+            <h3 className="title-h3">2 - blank</h3>
             <p className="style_divv"> 
                لإخبار جانغو إذا كان الحقل إجباري أو إختياري .<br/><br/>
                <ul>
@@ -154,7 +154,7 @@ export default function ModelFieldReference(){
                <CodeHighlighter code="blank=True" language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
             <CodeHighlighter code={codes[3].Parameter[1]} file_name="models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-            <h5 className="title-h5">3 - related_name</h5>
+            <h3 className="title-h3">3 - related_name</h3>
             <p className="style_divv">
                يستخدم Django الخاصية related_name في حقل ForeignKey أو OneToOneField لتحديد اسم العلاقة العكسية من النموذج المتعلق إلى النموذج الذي يعرّف المفتاح الخارجي. يتيح لك ذلك تحديد اسم أكثر إيضاحاً أو فهمًا للعلاقة العكسية.<br/><br/>
                في نماذج Django، عند إنشاء حقل ForeignKey أو OneToOneField، يقوم Django تلقائيًا بإنشاء علاقة عكسية من النموذج المتعلق إلى النموذج الذي يعرّف المفتاح الخارجي. يتم إنشاء هذه العلاقة العكسية كمدير يتيح لك الوصول إلى الكائنات المتعلقة بسهولة.<br/><br/>

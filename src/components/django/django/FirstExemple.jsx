@@ -4,35 +4,35 @@ import { CodeCommand , CodeHighlighter , Result } from "../../path";
 
 export default function FirstExemple(){
     return(
-        <article id="First_Exemple">
-            <h2 className="title-h2 mt-5"> 3 - المثال الأول </h2>
+         <article id="First_Exemple">
+            <h1 className="heading-style heading-style-django-color"> Django First Exemple</h1> 
             <ol>
                <li> أنشاء virtualenv </li>
                <li> تثبيت django  </li>
                <li> إنشاء مشروع django بالاسم project</li>
             </ol>
-            <h3 className="title-h3" id="Creation_app_in_project"> 1- إنشاء app helloapp في المشروع .</h3> 
+            <h2 className="title-h2" id="Creation_app_in_project"> 1- إنشاء app helloapp في المشروع .</h2> 
             <p className="style_divv">
                يتألف مشروع Django عادةً من عدة تطبيقات، ويتم تصميم كل تطبيق ليكون وحدة مستقلة يمكن إعادة استخدامها في مشاريع أخرى.<br/><br/>
             </p>
             <CodeCommand>python manage.py startapp helloapp</CodeCommand>
-            <h3 className="title-h3" id="settings"> 2- Setting .</h3> 
+            <h2 className="title-h2" id="settings"> 2- Setting .</h2> 
             <ul><li>تحتاج إلى إضافة اسم التطبيق إلى INSTALLED_APPS في settings.py :</li></ul>
             <CodeHighlighter code={codes[2].settings[0]} file_name="project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             
-            <h3 className="title-h3" id="includes_app_to_urlpatterns">3 - تضمين helloapp على urlpatterns .</h3> 
-            <h5 className="title-h5">متال 1 : </h5>
+            <h2 className="title-h2" id="includes_app_to_urlpatterns">3 - تضمين helloapp على urlpatterns .</h2> 
+            <h3 className="title-h3">متال 1 : </h3>
             <CodeHighlighter code={codes[2].includes_app_to_urlpatterns[0]} file_name="project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             <ul>
                <li>الآن كل المسار الذي تم إنشاؤها في helloapp/urls.py موجود في : <bdi><b>localhost:8000/helloapp/</b></bdi></li>
                <li> <b>سنستخدم المتال 1 في بقية المشروع </b> </li>
             </ul>
-            <h5 className="title-h5">متال 2 : </h5>
+            <h3 className="title-h3">متال 2 : </h3>
             <CodeHighlighter code={codes[2].includes_app_to_urlpatterns[1]} file_name="project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             <ul><li>الآن كل المسار الذي تم إنشاؤها في helloapp/urls.py موجود في : <bdi><b>localhost:8000/</b></bdi></li></ul>
             
          
-            <h3 className="title-h3" id="templates"> 4 - مجلد templates/</h3>
+            <h2 className="title-h2" id="templates"> 4 - مجلد templates/</h2>
             <p className="style_divv">
                في Django، يتم استخدام مجلد templates لتخزين ملفات القوالب (templates) الخاصة بتطبيقك. هذا المجلد يتيح لك تنظيم وتخزين أي ملفات HTML أو قوالب Django خاصة بواجهة مستخدم التطبيق.<br/>
                لتفعيل استخدام مجلد templates، يجب أن تتبع الخطوات التالية:<br/>
@@ -44,18 +44,18 @@ export default function FirstExemple(){
             <CodeHighlighter code={codes[2].templates[0]} file_name="project / helloapp / templates / home.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             <CodeHighlighter code={codes[2].templates[1]} file_name="project / helloapp / templates / articles.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             <CodeHighlighter code={codes[2].templates[2]} file_name="project / helloapp / templates / article.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-            <h3 className="title-h3" id="urls"> 5 - ملف urls </h3>
+            <h2 className="title-h2" id="urls"> 5 - ملف urls </h2>
             <p className="style_divv">
                في Django، يُستخدم ملف urls.py لتحديد كيفية ربط عناوين الـURL بدوال (views) محددة في تطبيقك. يحدد هذا الملف الطريقة التي يمكن للمستخدمين من خلالها الوصول إلى محتوى معين في تطبيقك.
             </p>
             <CodeHighlighter code={codes[2].urls[0]} file_name="project / helloapp / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-            <h3 className="title-h3" id="views"> 6 - ملف views </h3>
+            <h2 className="title-h2" id="views"> 6 - ملف views </h2>
             <p className="style_divv">
                في Django، الـViews تمثل الوحدات التي تدير المنطق الأساسي لتطبيقك. يمكنك تصور الـView كلمفتاح الوصول إلى البيانات والمنطق الخاص بتطبيقك، وهي المسؤولة عن استعراض البيانات وتحويلها إلى صيغة تظهر للمستخدم في المستعرض.<br/><br/>
                في Django، الـView هي دالة برمجية تستقبل طلب HTTP وتعيد استجابة. يمكن أن تقوم بالتفاعل مع قاعدة البيانات، والحصول على بيانات، وإرسال بيانات إلى القالب ليتم عرضها، أو تنفيذ أي منطق أخرى ذات صلة.
             </p>
             <CodeHighlighter code={codes[2].views[0]} file_name="project / helloapp / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>   
-            <h3 className="title-h3" id="models"> 7 - ملف models</h3>
+            <h2 className="title-h2" id="models"> 7 - ملف models</h2>
             <p className="style_divv">
                في Django، ال models هو تمثيل لجدول في قاعدة البيانات. يستخدم ال models  لتحديد هيكل البيانات والعلاقات بينها، ويوفر وسيلة للتفاعل مع قاعدة البيانات بطريقة برمجية.<br/><br/>
                عند بدء مشروع Django جديد أو إجراء تغييرات على النماذج في مشروع موجود، فإنك تحتاج إلى إنشاء عمليات migrations  للتأكد من أن مخطط قاعدة البيانات الخاص بك متزامن مع التعليمات البرمجية الخاصة بك.<br/><br/>
@@ -72,11 +72,11 @@ export default function FirstExemple(){
                   <li>Initial Database Setup </li>
                </ul>
             </p>
-            <h5 className="title-h5"> 1 - إعداد قاعدة البيانات الأولي</h5>
+            <h3 className="title-h3"> 1 - إعداد قاعدة البيانات الأولي</h3>
             <CodeCommand>python manage.py migrate</CodeCommand>
-            <h5 className="title-h5"> 2 -  إسناد أوامر المرغوب تنفيدها على قواعد البيانات ذاخل ملف models و الذي بدوره ذاخل تطبيق helloapp </h5>
+            <h3 className="title-h3"> 2 -  إسناد أوامر المرغوب تنفيدها على قواعد البيانات ذاخل ملف models و الذي بدوره ذاخل تطبيق helloapp </h3>
             <CodeHighlighter code={codes[2].models[0]} file_name="project / helloapp / models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-            <h5 className="title-h5"> 3 -  عكس الأوامر على قاعدة البيانات <bdi>( يجب إستخدامه في كل مرة قمة بإجراء تعديلات )</bdi></h5>
+            <h3 className="title-h3"> 3 -  عكس الأوامر على قاعدة البيانات <bdi>( يجب إستخدامه في كل مرة قمة بإجراء تعديلات )</bdi></h3>
             <CodeCommand>python manage.py makemigrations</CodeCommand>
             <CodeCommand>python manage.py migrate</CodeCommand>
             <div className="alert bg-dark text-light" dir="ltr">
@@ -105,9 +105,9 @@ export default function FirstExemple(){
             <ul><li>تشير المخرجات إلى أنه تم تطبيق عمليات الترحيل بنجاح. يؤكد كل سطر ينتهي بـ "OK" أنه تم تطبيق الترحيل المقابل لتطبيق معين دون أي مشاكل.</li></ul>
             <CodeHighlighter code={codes[2].models[1]} file_name="project / helloapp / migrations / 0001_initial.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             <ul><li> سيتم إنشاء ملف projectظhelloapp/migrations/0001_initial.py تلقائيا . </li></ul>
-            <h5 className="title-h5"> 4 - تشغيل خادم التطوير  </h5>
+            <h3 className="title-h3"> 4 - تشغيل خادم التطوير  </h3>
             <CodeCommand>python manage.py runserver</CodeCommand>
-            <h5 className="title-h5"> 5 - نتيجة التشغيل  </h5>
+            <h3 className="title-h3"> 5 - نتيجة التشغيل  </h3>
             <ul> <li>http://localhost:8000/helloapp/home/</li> </ul>
             <Result title='home'  route="http://localhost:8000/helloapp/home/">
                <h1>Home</h1>
@@ -143,14 +143,14 @@ export default function FirstExemple(){
                </div>
             </Result>
             <ul><li>ستواجه هذا الخطأ لأننا لم نقم بإدراج أي article بهذا id </li></ul>
-            <h3 className="title-h3" id="createsuperuser">8 - إنشاء مستخدم فائق  </h3>
+            <h2 className="title-h2" id="createsuperuser">8 - إنشاء مستخدم فائق  </h2>
             <p className="style_divv">
                إنشاء مستخدم فائق (superuser) في Django يتيح لك الوصول إلى واجهة الإدارة والتحكم الكامل في قاعدة البيانات. يمكنك إنشاء مستخدم فائق باستخدام أمر createsuperuser.
             </p>
             <CodeCommand>python manage.py createsuperuser</CodeCommand>
             <ul><li>   اذهب إلى الرابط <bdi>http://127.0.0.1:8000/admin/</bdi> وقم بتسجيل الدخول باستخدام الحساب الذي قمت بإنشائه</li></ul>
             <img src={images.django5} className="w-100 my-2 "/>
-            <h3 className="title-h3" id="admin">9 - ملف admin </h3>
+            <h2 className="title-h2" id="admin">9 - ملف admin </h2>
             <p className="style_divv">
                ملف admin.py هو ملف في مشروع Django يستخدم لتكوين وتخصيص واجهة الإدارة لتطبيق محدد. يحتوي هذا الملف عادة على إعدادات خاصة بالإدارة التي تسمح للمطور بتحديد كيفية عرض وتحرير البيانات في واجهة الإدارة. يتم تسجيل النماذج (Models) التي يرغب المطور في إدارتها في هذا الملف، ويمكن أيضًا إضافة تخصيصات إضافية مثل تحديد الحقول المعروضة، وتحديد البحث، وتطبيق الفلاتر، وغيرها من الإعدادات التي تجعل عملية الإدارة أكثر سهولة وفعالية
             </p>
@@ -158,7 +158,7 @@ export default function FirstExemple(){
             <ul> <li> تحديث صفحة : <bdi>http://127.0.0.1:8000/admin/</bdi> </li> </ul>
             <img src={images.django5_5} className="w-100 my-2 "/>
             <ul> <li> انقر على add في Articles وأضاف article  تم اذهب إلى الرابط http://localhost:8000/helloapp/article/1/ </li> </ul>
-            <h3 className="title-h3" id="layout_file_to_avoid_repeat"> 10 - إنشاء ملف layoute لتجنب التكرار وتعديل الملفات .  </h3>
+            <h2 className="title-h2" id="layout_file_to_avoid_repeat"> 10 - إنشاء ملف layoute لتجنب التكرار وتعديل الملفات .  </h2>
             <CodeHighlighter code={codes[2].layout_file_to_avoid_repeat[0]} file_name="project / helloapp / templates / layoute.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             <CodeHighlighter code={codes[2].layout_file_to_avoid_repeat[1]} file_name="project / helloapp / templates / articles.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             <CodeHighlighter code={codes[2].layout_file_to_avoid_repeat[2]} file_name="project / helloapp / templates / article.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 

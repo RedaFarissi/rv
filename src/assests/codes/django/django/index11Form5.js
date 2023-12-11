@@ -1,0 +1,13 @@
+export default function index11Form5(){
+    return `{% extends "base.html" %}
+
+{% block content %}
+    
+    <form action="{% url 'my_form_view' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock content %}`
+}

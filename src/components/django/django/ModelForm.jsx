@@ -5,7 +5,13 @@ import { CodeCommand , CodeHighlighter , Result } from "../../path";
 export default function ModelForm(){
     return(
         <article id="ModelForm">
-            <h1>forms.ModelForm</h1>
+            <h1 className="heading-style heading-style-django-color"> Django forms.ModelForm</h1> 
+            <p className="style_divv mt-5">
+                في Django، Forms.ModelForm عبارة عن فئة مقدمة من إطار عمل Django لإنشاء forms استنادًا إلى models. تعد هذه الفئة جزءًا من نظام التعامل مع form الخاص بـ Django، والذي يسمح لك بإنشاء HTML forms بسهولة لجمع مدخلات المستخدم والتحقق من صحتها . <br/>
+            </p>
+            <CodeCommand>python manage.py startapp app</CodeCommand>
+
+
             <div>
                <ul><li><b>my startapp in this case named <u><i>app</i></u></b></li></ul>
                <h2>use models Table <small><small>(database)</small></small> to affiche input fields to user and save it </h2>

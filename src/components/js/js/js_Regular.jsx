@@ -2,9 +2,9 @@
 <h1 className="heading-style-js"><u><i> JavaScript Regular </i></u></h1>
 <h3>1. ما هو Regular </h3>
 <div className="style_divv">
-    التعبير العادي هو سلسلة من الأحرف التي تشكل نمط بحث.<br>
-    عندما تبحث عن بيانات في نص ، يمكنك استخدام نمط البحث هذا لوصف ما تبحث عنه.<br>
-    يمكن أن يكون التعبير العادي حرفًا واحدًا أو نمطًا أكثر تعقيدًا.<br>
+    التعبير العادي هو سلسلة من الأحرف التي تشكل نمط بحث.<br/>
+    عندما تبحث عن بيانات في نص ، يمكنك استخدام نمط البحث هذا لوصف ما تبحث عنه.<br/>
+    يمكن أن يكون التعبير العادي حرفًا واحدًا أو نمطًا أكثر تعقيدًا.<br/>
     تستخدم <b>Regular</b> مع <bdi><b>search</b></bdi> و <bdi><b>replace()</b></bdi> و <bdi><b>split()</b></bdi> تم <bdi><b>test()</b></bdi>
     <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
         <pre><span style="color:rgb(235,50,40)">/pattern/modifiers;</span></pre>
@@ -74,5 +74,5 @@
     <h4 style="color:green"> الكود </h4>
     <img src="{% static 'js/js25_Regular5.png' %}" className="img">
     <h4 style="color:green"> بعد تشغيل الأكواد </h4>
-    <div className="styleee img"><h2>true<br>A,B,C,D,a,b,c,d</h2></div>
+    <div className="styleee img"><h2>true<br/>A,B,C,D,a,b,c,d</h2></div>
 </div>

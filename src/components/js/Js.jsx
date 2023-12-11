@@ -1,14 +1,34 @@
+import { useEffect, useRef} from 'react';
 import { Routes, Route , Link } from "react-router-dom";
 import { 
     Introduction,Statements,Output,Variables,Arithmetic,Assignment,Types,String,StringSearch,
     StringsTemplates,Numbers,Booleans,Date,Random,Conditions,Switch,ArraysPart1,ArraysPart2,
     Objects,LoopFor,LoopWhile,Break,Conversion,Modules,Errors,JSON,
-    
+    //function
     Functions,Bind,Call,Apply,Map,Filter,
+    //class
+    ClassIntro,Static,Private,Inheritance,Alert,Confirm,Btoa,Prompt,Atob,Location,Frames,
+    InnerWidth,InnerHeight,ClientWidth,ScrollBy,PageXOffset,PageX,PageY,ScrollIntoView,
+    ScrollTop,Console,GetComputedStyle,LocalStorage,MatchMedia,Navigator,Print,
+    //dom
+    AddEventListener,RemoveEventListener,Doctype,GetElementById,GetElementsByClassName,
+    GetElementsByName,CreateComment,GetElementsByTagName,ActiveElement,Children,Body,
+    DocumentElement,Cookie,ClassList,CreateElement,AppendChild,SetAttribute,CreateAttribute,
+    RemoveAttribute,CreateTextNode,Remove,Head,Images,Links,QuerySelector,QuerySelectorAll,
+    RequestFullscreen,ExitFullscreen,Contains,Focus,Blur,Scripts,Title,BaseURI,Play,Pause,Load,
+    //events
+    
+    //api
+    Intro,Fetch,ValidationAPI,History,SetInterval,ClearInterval,SetTimeout,
 } from './pathJs.js';
 import "./Js.sass"
 
 export default function Js(props){
+    const AsideRef = useRef(null);
+    useEffect(() => {
+       AsideRef.current.scrollTop = localStorage.getItem("js_aside") || 0;
+    }, []); 
+
     const matrix = props.js_matrix.map( e =>(
         <dl>
             { 
@@ -23,7 +43,7 @@ export default function Js(props){
 return(
 <>
  <main>
-    <aside className="aside">
+    <aside className="aside" onScroll={()=>{ localStorage.setItem("js_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
         {matrix}
     </aside>
     <section>
@@ -63,9 +83,117 @@ return(
             <Route path='/map' element={<Map />} /> 
             <Route path='/filter' element={<Filter />} /> 
 
+            <Route path='/class-introduction' element={<ClassIntro />} /> 
+            <Route path='/static' element={<Static />} /> 
+            <Route path='/private' element={<Private />} /> 
+            <Route path='/inheritance' element={<Inheritance />} /> 
+
+            <Route path='/alert' element={<Alert />} /> 
+            <Route path='/confirm' element={<Confirm />} /> 
+            <Route path='/btoa' element={<Btoa />} /> 
+            <Route path='/prompt' element={<Prompt />} /> 
+            <Route path='/atob' element={<Atob />} /> 
+            <Route path='/location' element={<Location />} /> 
+            <Route path='/frames' element={<Frames />} /> 
+            <Route path='/innerwidth' element={<InnerWidth />} /> 
+            <Route path='/innerheight' element={<InnerHeight />} /> 
+            <Route path='/clientwidth' element={<ClientWidth />} /> 
+            <Route path='/scrollby' element={<ScrollBy />} /> 
+            <Route path='/pagexoffset' element={<PageXOffset />} /> 
+            <Route path='/pagex' element={<PageX />} /> 
+            <Route path='/pagey' element={<PageY />} /> 
+            <Route path='/scrollintoview' element={<ScrollIntoView />} /> 
+            <Route path='/scrolltop' element={<ScrollTop />} /> 
+            <Route path='/console' element={<Console />} /> 
+            <Route path='/getcomputedstyle' element={<GetComputedStyle />} /> 
+            <Route path='/localstorage' element={<LocalStorage />} /> 
+            <Route path='/matchmedia' element={<MatchMedia />} /> 
+            <Route path='/navigator' element={<Navigator />} /> 
+            <Route path='/print' element={<Print />} /> 
+            
+            
+            <Route path='/addeventlistener' element={<AddEventListener />} /> 
+            <Route path='/removeeventlistener' element={<RemoveEventListener />} /> 
+            <Route path='/doctype' element={<Doctype />} /> 
+            <Route path='/getelementbyid' element={<GetElementById />} /> 
+            <Route path='/getElementsbyclassname' element={<GetElementsByClassName />} /> 
+            <Route path='/getelementsbyname' element={<GetElementsByName />} /> 
+            <Route path='/getelementsbytagname' element={<GetElementsByTagName />} /> 
+            <Route path='/activeelement' element={<ActiveElement />} /> 
+            <Route path='/children' element={<Children />} /> 
+            <Route path='/body' element={<Body />} /> 
+            <Route path='/documentelement' element={<DocumentElement />} /> 
+            <Route path='/cookie' element={<Cookie />} /> 
+            <Route path='/classlist' element={<ClassList />} /> 
+            <Route path='/createelement' element={<CreateElement />} /> 
+            <Route path='/appendchild' element={<AppendChild />} /> 
+            <Route path='/setattribute' element={<SetAttribute />} /> 
+            <Route path='/createattribute' element={<CreateAttribute />} /> 
+            <Route path='/createcomment' element={<CreateComment />} /> 
+            <Route path='/removeattribute' element={<RemoveAttribute />} /> 
+            <Route path='/createtextnode' element={<CreateTextNode />} /> 
+            <Route path='/remove' element={<Remove />} /> 
+            <Route path='/head' element={<Head />} /> 
+            <Route path='/images' element={<Images />} /> 
+            <Route path='/links' element={<Links />} /> 
+            <Route path='/queryselector' element={<QuerySelector />} /> 
+            <Route path='/queryselectorall' element={<QuerySelectorAll />} /> 
+            <Route path='/requestfullscreen' element={<RequestFullscreen />} /> 
+            <Route path='/exitfullscreen' element={<ExitFullscreen />} /> 
+            <Route path='/contains' element={<Contains />} /> 
+            <Route path='/focus' element={<Focus />} /> 
+            <Route path='/blur' element={<Blur />} /> 
+            <Route path='/scripts' element={<Scripts />} /> 
+            <Route path='/title' element={<Title />} /> 
+            <Route path='/baseuri' element={<BaseURI />} /> 
+            <Route path='/play' element={<Play />} /> 
+            <Route path='/pause' element={<Pause />} /> 
+            <Route path='/load' element={<Load />} /> 
+
             <Route path='/json' element={<JSON />} /> 
             <Route path='/json' element={<JSON />} /> 
             <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+            <Route path='/json' element={<JSON />} /> 
+
+
+            <Route path='/intro' element={<Intro />} /> 
+            <Route path='/forms' element={<ValidationAPI />} /> 
+            <Route path='/fetch' element={<Fetch />} /> 
+            <Route path='/history' element={<History />} /> 
+            <Route path='/setinterval' element={<SetInterval />} /> 
+            <Route path='/clearinterval' element={<ClearInterval />} /> 
+            <Route path='/settimeout' element={<SetTimeout />} /> 
         </Routes>
     </section>
 </main>

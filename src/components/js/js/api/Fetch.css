@@ -1,0 +1,11 @@
+#reSulTa_real_exemple *{ padding: 0px; margin: 0px;  color:white; }
+.H2{ margin-top:20px; padding-left:15px; border-radius: 9px;}
+#reSulTa_real_exemple{display: flex;justify-content: space-evenly;flex-wrap: wrap; gap:9px;}
+.box{ 
+    width:  450px; height:  450px; margin-bottom: 20px; 
+    border:2px solid black; position: relative; border-radius: 9px; 
+}
+.img_person{ 
+    width: 100%; height:86%; position:absolute; bottom:0px; 
+    border-radius: 0px 0px 9px 9px; 
+}

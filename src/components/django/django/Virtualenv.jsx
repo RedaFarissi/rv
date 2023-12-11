@@ -3,9 +3,10 @@ import { CodeCommand , CodeHighlighter , Result } from "../../path";
 
 export default function Virtualenv(){
     return(
+    <>
+        <h1 className="heading-style heading-style-django-color"> Django virtualenv</h1> 
         <article className="mt-5" id="virtualenv">
-            <h2 className="title-h2"> 2- virtualenv .</h2> 
-            <h3 className="title-h3" id="What_is_virtualenv">1 - ما هو virtualenv</h3>
+            <h2 className="title-h2" id="What_is_virtualenv">1 - ما هو virtualenv</h2>
             <p className="style_divv"> 
                virtualenv (اختصار ل virtual environment) هو أداة في Python تساعد في إدارة عدة بيئات Python على نفس الجهاز. إليك بعض الأسباب الرئيسية التي تجعل استخدام البيئات الظاهرية، مثل virtualenv، شائعًا في تطوير Python:<br/><br/>
                <ul>
@@ -19,53 +20,53 @@ export default function Virtualenv(){
                   <li  className="mb-3"><span className="text-success">تعطيل وحذف البيئة الظاهرية بسهولة (Easy Deactivation and Deletion)</span> : تفعيل أو تعطيل بيئة ظاهرية أمر بسيط، مما يجعل من السهل الانتقال بين بيئات المشروع المختلفة. أيضًا، حذف البيئة الظاهرية يتم بسهولة ولا يترك ملفات أو تبعيات متبقية على النظام.</li>
                </ul>
             </p>
-            <h3 className="title-h3" id="Install_virtualenv"> 1 - تثبيت virtualenv </h3>
+            <h2 className="title-h2" id="Install_virtualenv"> 1 - تثبيت virtualenv </h2>
             <ul><li>لتثبيت Virtualenv، افتح موجه الأوامر (Command Prompt) واستخدمه  :</li></ul>
             <CodeCommand>pip install virtualenv</CodeCommand>
             <img src={images.django26} className="img"/>
-            <h3 className="title-h3" id="Create_virtualenv"> 2 - إنشاء virtualenv </h3>
+            <h2 className="title-h2" id="Create_virtualenv"> 2 - إنشاء virtualenv </h2>
             <ul><li>لإنشاء virtualenv، انتقل إلى المسار الذي تريد إنشاء virtualenv فيه واستخدمه :</li></ul>
             <CodeCommand>python -m virtualenv Your_Folder_Name</CodeCommand>
             <div className="mital">متال : </div>
             <img src={images.django27} className="img"/>
-            <h3 className="title-h3" id="Activate_virtualenv"> 3 - تفعيل  virtualenv </h3>
+            <h2 className="title-h2" id="Activate_virtualenv"> 3 - تفعيل  virtualenv </h2>
             <CodeCommand>cd Your_Folder_Name</CodeCommand>
             <CodeCommand>.\\Scripts\activate</CodeCommand>
             <img src={images.django28} className="img"/>
-            <h3 className="title-h3" id="Deactivate_virtualenv"> 4 - إلغاء التنشيط virtualenv </h3>
+            <h2 className="title-h2" id="Deactivate_virtualenv"> 4 - إلغاء التنشيط virtualenv </h2>
             <CodeCommand>deactivate</CodeCommand>
-            <h3 className="title-h3" id="Check_packages_installed"> 5 -  التحقق من الحزم المثبتة</h3>
+            <h2 className="title-h2" id="Check_packages_installed"> 5 -  التحقق من الحزم المثبتة</h2>
             <CodeCommand>pip freeze</CodeCommand>
             <img src={images.django29} className="img"/>
             <ul><li>في هذه الحالة لم نقوم بتثبيت أي شيء حتى الآن</li></ul>
-            <h3 className="title-h3" id="Install_django"> 6 -  تثبيت django في virtualenv</h3>
+            <h2 className="title-h2" id="Install_django"> 6 -  تثبيت django في virtualenv</h2>
             <ul><li>لدي تثبيت django في جهازي، ولكن لاستخدامه داخل virtualenv أحتاج إلى تثبيته مرة أخرى</li></ul>
             <CodeCommand>python -m pip install django</CodeCommand>
             <img src={images.django30} className="img"/>
             <img src={images.django31} className="img"/>
-            <h3 className="title-h3" id="Creating_Django_project"> 7 - إنشاء مشروع django </h3>
+            <h2 className="title-h2" id="Creating_Django_project"> 7 - إنشاء مشروع django </h2>
             <CodeCommand>django-admin startproject project_name</CodeCommand>
             <ul><li> إذا كان لديك أخطاء استخدم :</li></ul>
             <CodeCommand> python -m django startproject project_name  </CodeCommand>
             <ul><li> إذا كنت ترغب في إنشاء مشروع في نفس الدليل استخدم : </li></ul>
             <CodeCommand>python -m django startproject project_name .</CodeCommand>
             <img src={images.django32} className="img"/>
-            <h3 className="title-h3" id="Get_version_installed_django">8 - احصل على إصدار Django المثبت لديك</h3>
+            <h2 className="title-h2" id="Get_version_installed_django">8 - احصل على إصدار Django المثبت لديك</h2>
             <CodeCommand>python -m django --version</CodeCommand>
-
-            <h3 className="title-h3" id="requirements">9 - ملف requirements.txt </h3>
+            <h2 className="title-h2" id="requirements">9 - ملف requirements.txt </h2>
             <p className="style_divv">
                في Django، يتم استخدام ملف requirements.txt عادةً لتحديد وإدارة تبعيات المشروع. يتيح لك هذا الملف سرد جميع حزم Python وإصداراتها التي يعتمد عليها مشروعك. وهذا مفيد بشكل خاص لإنشاء بيئة تطوير قابلة لإعادة الإنتاج.<br/><br/>
                يمكنك استخدام اسم مختلف لملف requirements.txt. تتمثل الاتفاقية في استخدام requirements.txt لأنه معترف به على نطاق واسع في مجتمع تطوير Python. ومع ذلك، إذا كنت تفضل اسمًا مختلفًا لأي سبب من الأسباب، فيمكنك اختيار الاسم المناسب لمشروعك.
             </p>
-            <h5 className="title-h5"> 1 - احفظ جميع الحزم المستخدمة في virtualenv في ملف بامتداد txt </h5>
+            <h3 className="title-h3"> 1 - احفظ جميع الحزم المستخدمة في virtualenv في ملف بامتداد txt </h3>
             <CodeCommand>pip freeze {">"} requirements.txt .</CodeCommand>
             <img src={images.django33} className="img"/>
-            <h3 className="title-h5"> 2 - لتحميل كل هذه الحزم من مشروع آخر أو عند استخدام جيثب  </h3>
+            <h3 className="title-h3"> 2 - لتحميل كل هذه الحزم من مشروع آخر أو عند استخدام جيثب  </h3>
             <CodeCommand>pip install -r requirements.txt .</CodeCommand>
-            <h3 className="title-h3" id="Running_development_server"> 10 - تشغيل خادم التطوير .</h3> 
+            <h2 className="title-h2" id="Running_development_server"> 10 - تشغيل خادم التطوير .</h2> 
             <CodeCommand>cd project_name</CodeCommand>
             <CodeCommand>python manage.py runserver</CodeCommand>
         </article>
+    </>
     )
 }

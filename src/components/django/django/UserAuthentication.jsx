@@ -2,13 +2,13 @@ import codes from "../../../assests/codes/django/django"
 import images from "../imagesDjango";
 import { CodeCommand , CodeHighlighter , Result } from "../../path";
 
+
 export default function UserAuthentication(){
     return(
-    <article id="User_Authentication">
-        <h2 className="title-h2"> User Authentication </h2>
+   <article id="User_Authentication">
+      <h1 className="heading-style heading-style-django-color"> Django User Authentication</h1>   
         <h4><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication" target="_blank"> Toturial </a></h4>
-
-        <h3 className="title-h3" id="User_and_authontication"> 1 -  العلاقة بين فئة المستخدم (class User) والمصادقة (Authentication)  </h3>
+        <h2 className="title-h2" id="User_and_authontication"> 1 -  العلاقة بين فئة المستخدم (class User) والمصادقة (Authentication)  </h2>
         <p className="style_divv">
            في Django، تلعب فئة المستخدم (User class) دورًا مركزيًا في نظام المصادقة (Authentication) . إنه يمثل حساب مستخدم ويوفر طرقًا وسمات مختلفة تتعلق بالمصادقة. يتم تعريف فئة المستخدم في الوحدة النمطية "django.contrib.auth.models".<br/><br/>
           <ul>
@@ -41,8 +41,8 @@ export default function UserAuthentication(){
            </ul> 
         </p>
 
-        <h3 className="title-h3" id="include_urls_and_files_html"> 2 - تضمين عناوين URL وملفات HTML </h3>
-        <h5 className="title-h5"> 1 - project/urls.py </h5>
+        <h2 className="title-h2" id="include_urls_and_files_html"> 2 - تضمين عناوين URL وملفات HTML </h2>
+        <h3 className="title-h3"> 1 - project/urls.py </h3>
         <p className="style_divv">
            تُعتبر URL (الروابط) الخاصة بالمصادقة المدمجة في Django مجموعة من أنماط الروابط والواجهات المُعرفة مُسبقًا تم توفيرها من قِبل Django للتعامل مع مهام المصادقة الشائعة للمستخدمين. عندما تقوم بتضمين django.contrib.auth.urls في تكوين الروابط الخاص بمشروعك، يتم إعداد تلك الروابط تلقائيًا لتنفيذ عمليات المصادقة مثل تسجيل الدخول، وتسجيل الخروج، وإعادة تعيين كلمة المرور، وغيرها.<br/><br/>
            تُبسط هذه الميزة عملية تنفيذ مصادقة المستخدم في مشروع Django عن طريق القضاء على الحاجة إلى تحديد كل رابط وواجهة عرض تتعلق بالمصادقة يدويًا. من خلال الاستفادة من هذه الروابط المدمجة، يستطيع المطورون إعداد نظام مصادقة آمن بسرعة دون الحاجة إلى كود مخصص طويل.<br/><br/>
@@ -77,98 +77,56 @@ export default function UserAuthentication(){
         </Result>
 
         <ul><li>كل هذا المسار في الحسابات جاهز لاستخدام كل ما تحتاجه هو templates/ </li></ul>
-        <h5 className="title-h5">2 - Create templates  </h5>
+        <h3 className="title-h3">2 - Create templates  </h3>
         <ul>
            <li> يمكنك إنشاء تطبيق باسم accounts وإنشاء templates بداخله وإنشاء مجلد آخر بالاسم <bdi>registration/</bdi> في مجلد <bdi>templates/</bdi> ثم إنشاء كافة الملفات التي تحتاجها بداخله</li>
            <li>أو يمكنك إنشاء مجلد templates/ ويجب أن يكون في الدليل الجذر لمشروعكه</li>
         </ul>
         <CodeHighlighter code={codes[8].include_urls_and_files_html[1]} file_name="project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-       
-        
-        <h5 className="title-h5"> Create All Conetnt html file in <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication" target="_blank"> Toturial </a> in <u><i>registration</i></u> folder</h5>
-        <p className="fs-5"> After Creating all file </p>
-        <img src={images.django202} className="img"/>
-        <img src={images.django203} className="img"/> 
-     
-
-        <h3 className="title-h3" id="Sign_Up">3 - Sign Up </h3>
-        <p className="fs-5"> By default Django give you <b className='text-success'>User</b> models  </p>
-        <img src={images.django204} className="img"/> 
-        <p className="fs-4"> Django give you build-in class to create User Form by using <b className="text-success">UserCreationForm</b></p>
-        <img src={images.django205} className="img"/> 
-        <img src={images.django206} className="img"/> 
-        <img src={images.django207} className="img"/> 
-        <img src={images.django208} className="w-100 mt-2 mb-3"/> 
-        <p className="fs-5"> You can use any app to use <b className="text-success">UserCreationForm</b> and you need to create file html content code the handle <b>signUp</b></p>
-     
-        <h3 className="title-h3" id="Add_fields_to_User_SignUp">4 - Add fields to User Sign Up</h3>
-        <h3> create forms file to add fields to User </h3>
+        <CodeHighlighter code={codes[8].include_urls_and_files_html[2]} file_name="project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[8].include_urls_and_files_html[3]} file_name="project / templates / base.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[8].include_urls_and_files_html[4]} file_name="project / templates / registration / login.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[8].include_urls_and_files_html[5]} file_name="project / templates / registration / logged_out.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[8].include_urls_and_files_html[6]} file_name="project / templates / registration / password_reset_form.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[8].include_urls_and_files_html[7]} file_name="project / templates / registration / password_reset_done.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[8].include_urls_and_files_html[8]} file_name="project / templates / registration / password_reset_email.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[8].include_urls_and_files_html[9]} file_name="project / templates / registration / password_reset_confirm.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[8].include_urls_and_files_html[10]} file_name="project / templates / registration / password_reset_complete.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+        <img src={images.django202} alt="django"  className="img"/>
+        <CodeCommand>python manage.py createsuperuser</CodeCommand>
+        <CodeCommand>
+        Username (leave blank to use 'surfacebook'): reda <br/>
+        Email address: reda@gmail.com <br/>
+        paswword: ****<br/>
+        Password (again): ****<br/>
+        Bypass password validation and create user anyway? [y/N]: y<br/>
+        Superuser created successfully.<br/>
+        </CodeCommand>
+        <img src={images.django203} alt="django"  className="img"/> 
+         
+        <h2 className="title-h2" id="Sign_Up">3 - Sign Up </h2>
+        <p className="style_divv"> 
+            في <bdi>Django</bdi> ، UserCreationForm عبارة عن فئة نموذج مضمنة توفرها الوحدة النمطية django.contrib.auth.forms.<br/>
+            تم تصميم هذا النموذج لتبسيط عملية إنشاء مستخدم جديد في تطبيق الويب Django. غالبًا ما يتم استخدامه مع نموذج المستخدم الذي توفره الوحدة النمطية django.contrib.auth.models.
+         </p>
+        <h3 className="title-h3">1 - تحتوي صفحة إدارة Django بشكل افتراضي على خيار إضافة مستخدم</h3>
+        <img src={images.django204} alt="django"  className="img"/> 
+        <h3 className="title-h3"> 2 - لإنشاء حساب مستخدم خارج صفحة المسؤول استخدم  </h3>
+        <CodeCommand>python manage.py startapp handleAccount </CodeCommand>
+        <CodeHighlighter code={codes[8].Sign_Up[0]} file_name="project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[8].Sign_Up[1]} file_name="project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[8].Sign_Up[2]} file_name="project / handleAccount /urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[8].Sign_Up[3]} file_name="project / handleAccount / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[8].Sign_Up[4]} file_name="project / handleAccount / templates / signup.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[8].Sign_Up[5]} file_name="project / templates / base.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <img src={images.django207} alt="django" className="img"/> 
+        <img src={images.django208} alt="django" className="w-100 mt-2 mb-3"/> 
+        <h2 className="title-h2" id="Add_fields_to_User_SignUp">4 - أضف الحقول إلى تسجيل المستخدم </h2>
+        <p className="style_divv"> إنشاء ملف forms.py لإضافة حقول إلى المستخدم (User) </p>
+        <CodeHighlighter code={codes[8].Add_fields_to_User_SignUp[0]} file_name="project / handleAccount / forms.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[8].Add_fields_to_User_SignUp[1]} file_name="project / handleAccount / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[8].Add_fields_to_User_SignUp[2]} file_name="project / handleAccount / templates / signup.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
         <img src={images.django209} className="w-100 mt-2 mb-3"/> 
-        <h3> add login to your views for login when user created </h3>
-        <img src={images.django210} className="img"/> 
-        <img src={images.django211} className="img"/> 
-        <img src={images.django212} className="img"/> 
-     
-     
-        <h3 className="title-h3" id="verificationEmailInSignUp"> 5 - Confirmation Email in Sign Up</h3>
-        <img src={images.django231} className="img"/> 
-        <img src={images.django232} className="img"/> 
-        <img src={images.django233} className="img"/> 
-        <img src={images.django234} className="img"/> 
-        <img src={images.django235} className="img"/> 
-        <img src={images.django236} className="img"/> 
-        <p className='fs-5'>On clikc link in email the user create </p>
-        <p className="fs-3"> this <b>not</b> the most secure or robust solution for email verification. There are some potential weaknesses and areas for improvement:</p>
-        <h3> To save this probleme about secure use Tutorial bellow: </h3>
-        <p className="fs-4">
-           Instead of create signup function to create registration , use :
-           <a href="https://www.javatpoint.com/django-user-registration-with-email-confirmation" target="_blank"> django-user-registration-with-email-confirmation </a>
-        </p>
-     
-        <h3 className="title-h3" id="Add_Social_Login_to_Django"> 6 - Add Social Login to Django</h3>
-        <ul>
-           <li><a href="https://studygyaan.com/django/how-to-add-social-login-to-django" target="_blank"> Tutorial </a></li>
-           <li><a href="https://www.youtube.com/watch?v=E6LxUleoloU" target="_blank"> video Youtube to explain  </a></li>
-        </ul>
-
-     
-        <h5><ul><li>Facebook Login Django</li></ul></h5>
-        <p>Go to <a href="https://developers.facebook.com/">developers.facebook.com/</a> Login with your account and create app </p>
-        <img src={images.django237} className="img"/> 
-        <img src={images.django238} className="img"/> 
-        <img src={images.django239} className="img"/> 
-        <img src={images.django240} className="img"/> 
-        <img src={images.django241} className="img"/> 
-        <img src={images.django242} className="img"/> 
-        <img src={images.django243} className="img"/> 
-        <img src={images.django244} className="img"/> 
-     
-     
-        <p className='fs-5 mt-3'>
-           In <b>settings.py</b> change App ID and App Secret with yours
-        </p>
-        {/* <div className=''><pre>
-        SOCIAL_AUTH_FACEBOOK_KEY = '985292215170699'  # App ID
-        SOCIAL_AUTH_FACEBOOK_SECRET = '7b8483ff422109a7c17b3f7a03966bbf'  # App Secret
-        </pre></div> */}
-
-        <br/>
-        <h5><ul><li>Linkedin Login Django</li></ul></h5>
-        <ul>  <li><a href="https://www.youtube.com/watch?v=m5sHDaBwxjc" target="_blank"> video Youtube to explain  </a></li> </ul>
-     
-        <p>Go to <a href="https://developer.linkedin.com/">https://developer.linkedin.com/</a> Login with your account and create app </p>
-        <img src={images.django245} className="img"/>
-        <img src={images.django246} className="img"/> 
-        <img src={images.django247} className="img"/> 
-        <img src={images.django248} className="img"/> 
-        <img src={images.django249} className="img"/> 
-        <p className='fs-5 mt-3'>
-           In <b>settings.py</b> change App ID and App Secret with yours
-        </p>
-        <div className=''><pre>
-        SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY =  = '985292215170699'  # App ID
-        SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = '7b8483ff422109a7c17b3f7a03966bbf'  # App Secret
-        </pre></div>
     </article>
     )
 }

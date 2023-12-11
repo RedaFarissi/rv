@@ -1,3 +1,32 @@
 export default function index8include_urls_and_files_html9(){
-    return ``
+    return `{% extends "base.html" %}
+
+{% block content %}
+    {% if validlink %}
+        <p>Please enter (and confirm) your new password.</p>
+        <form action="" method="post">
+        {% csrf_token %}
+            <table>
+                <tr>
+                    <td>{{ form.new_password1.errors }}
+                        <label for="id_new_password1">New password:</label></td>
+                    <td>{{ form.new_password1 }}</td>
+                </tr>
+                <tr>
+                    <td>{{ form.new_password2.errors }}
+                        <label for="id_new_password2">Confirm password:</label></td>
+                    <td>{{ form.new_password2 }}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Change my password"></td>
+                </tr>
+            </table>
+        </form>
+    {% else %}
+        <h1>Password reset failed</h1>
+        <p>The password reset link was invalid, possibly because it has already been used. Please request a new password reset.</p>
+    {% endif %}
+{% endblock %}
+`
 }

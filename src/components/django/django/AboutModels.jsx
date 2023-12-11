@@ -23,14 +23,14 @@ export default function AboutModels(){
 
     return(
         <article className="mt-5" id='about_models'>
-            <h2 className="title-h2"> 8 - models </h2>
-            <h3 className="title-h3" id="get_absolute_url">1 - <bdi>get_absolute_url()</bdi> </h3>
+            <h1 className="heading-style heading-style-django-color"> Django models</h1> 
+            <h2 className="title-h2" id="get_absolute_url">1 - <bdi>get_absolute_url()</bdi> </h2>
             <p className="style_divv">
                get_absolute_url هي طريقة في نماذج Django تقوم بإرجاع عنوان URL للوصول إلى كائن معين، مما يسمح بربط هذا الكائن بسهولة في القوالب وطرق العرض. من خلال تحديد get_absolute_url فيmodels.py، يمكنك إنشاء عنوان URL للوصول إلى هذا الكائن دون بذل جهد كبير.<br/><br/>
                تُستخدم هذه الطريقة عادةً مع نظام توجيه URL الخاص بـ Django لتحديد أنماط URL التي تطابق عناوين URL التي يتم إرجاعها بواسطة get_absolute_url.
             </p>
             <div className="mital">مثال 1 : </div>
-            <h5 className="title-h5">إنشاء app بالاسم testing</h5>
+            <h3 className="title-h3">إنشاء app بالاسم testing</h3>
             <CodeCommand>python manage.py startapp testing</CodeCommand>
             <CodeHighlighter code={codes[7].get_absolute_url[0]} file_name="projet / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[7].get_absolute_url[1]} file_name="projet / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
@@ -94,7 +94,7 @@ export default function AboutModels(){
                )}
             </Result>  
             <div className="mital"> مثال 2 : </div>
-            <h5 className="title-h5">إنشاء app بالاسم shop</h5>
+            <h3 className="title-h3">إنشاء app بالاسم shop</h3>
             <CodeCommand>python manage.py startapp shop</CodeCommand>
             <CodeHighlighter code={codes[7].get_absolute_url[7]}  file_name="projet / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[7].get_absolute_url[8]}  file_name="projet / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
@@ -161,18 +161,18 @@ export default function AboutModels(){
             <ul>
                <li>تشغيل الأمر في دليل مشروع Django الخاص بك سيقوم بإنشاء نسخة احتياطية لقاعدة البيانات الخاصة بك بأكملها، بما في ذلك جميع البيانات من جميع التطبيقات داخل مشروعك.</li>
             </ul>
-            <h3 className="title-h3" id="restore_the_data_from_the_backup"> 3 -استعادة البيانات من النسخة الاحتياطية </h3>
+            <h2 className="title-h2" id="restore_the_data_from_the_backup"> 3 -استعادة البيانات من النسخة الاحتياطية </h2>
             <CodeCommand>python manage.py loaddata backup.json</CodeCommand>
             
-            <h3 className="title-h3" id="remove_all_from_db_models"> 4 - إزالة جميع الأعمدة والصفوف من تطبيق معين في قاعدة البيانات</h3>
-            <h5 className="title-h5"> 1 - افتح Django shell </h5>
+            <h2 className="title-h2" id="remove_all_from_db_models"> 4 - إزالة جميع الأعمدة والصفوف من تطبيق معين في قاعدة البيانات</h2>
+            <h3 className="title-h3"> 1 - افتح Django shell </h3>
             <CodeCommand>python manage.py shell</CodeCommand>
-            <h5 className="title-h5"> 2 -داخل الصدفة، قم باستيراد نماذج التطبيق الذي تريد مسحه</h5>
+            <h3 className="title-h3"> 2 -داخل الصدفة، قم باستيراد نماذج التطبيق الذي تريد مسحه</h3>
             <CodeCommand>{">>>"}from myapp.models import *</CodeCommand>
-            <h5 className="title-h5"> 3 - قم بتشغيل الأمر التالي لحذف كافة الصفوف في جداول النماذج</h5>
+            <h3 className="title-h3"> 3 - قم بتشغيل الأمر التالي لحذف كافة الصفوف في جداول النماذج</h3>
             <CodeCommand>{">>>"}MyModelCLASS.objects.all().delete()</CodeCommand>
             
-            <h3 className="title-h3" id="annotate">5 - annotate</h3>
+            <h2 className="title-h2" id="annotate">5 - annotate</h2>
             <p className="style_divv">
                في Django، يقوم نظام الربط الكائني (ORM) تلقائيًا بتستخلص العلاقة بين النماذج استنادًا إلى تعاريف الحقول والعلاقات الرئيسية الخارجية التي قمت بتعريفها في ملف models.py <br/><br/>
                في نموذج Like الخاص بك، قمت بتعريف حقل مفتاح خارجي يسمى product والذي يشير إلى نموذج Product. يستخدم Django هذه العلاقة لفهم الاتصال بين نموذج Like ونموذج Product.<br/><br/>

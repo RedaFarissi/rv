@@ -4,10 +4,10 @@ import { CodeCommand , CodeHighlighter , Result } from "../../path";
 
 export default function Exercise(){
     return(
-        <article id="Exercise">
+   <>
+         <h1 className="heading-style heading-style-django-color"> Django Exercise</h1> 
+         <article id="Exercise">
             <div className="border-5 m-2">
-               <h1>Exercise</h1>
-               <a href="https://www.youtube.com/watch?v=FTUxl5ZCMb8">Youtube Video</a>
                <ul>
                   <li><b> app name is core </b></li>
                </ul>
@@ -39,5 +39,6 @@ export default function Exercise(){
                <img src={images.django69} className="w-100 mt-3"/>
             </div>
         </article>
+   </>
     )
 }

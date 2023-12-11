@@ -3,17 +3,17 @@ import images from "../imagesDjango";
 import { CodeCommand , CodeHighlighter , Result } from "../../path";
 
 export default function StaticAndMediaFiles(){
-    return(
+    return( 
         <article id="Static_and_Media_files">
-            <h2  className="title-h2 mt-5" > 5 - Static files && Media files </h2>
-            <h3 className="title-h3" id="Manage_static_files"> 1 - إدارة الملفات الثابتة (static/)</h3>
+            <h1 className="heading-style heading-style-django-color"> Django Static files && Media files</h1> 
+            <h2 className="title-h2 mt-5" id="Manage_static_files"> 1 - إدارة الملفات الثابتة (static/)</h2>
             <p className="style_divv">
                في Django، يعتبر مجلد "static" مجلدًا حيث يمكنك تنظيم وتخزين الملفات الثابتة الخاصة بتطبيق الويب الخاص بك. تتضمن هذه الملفات الثابتة موارد مثل الصور وملفات JavaScript وورق الأنماط CSS وموارد أخرى يستخدمها صفحات الويب الخاصة بك. إليك تفصيل للغرض واستخدام مجلد "static" في Django:
             </p>
-            <h5 className="title-h5"> 1 - أضف في ملف settings.py </h5>
+            <h3 className="title-h3"> 1 - أضف في ملف settings.py </h3>
             <CodeHighlighter code={codes[4].Manage_static_files[0]} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             <CodeHighlighter code={codes[4].Manage_static_files[1]} file_name="project / settings.py" language="python" addclassName="mt-3 mb-3" copie={true}/> 
-            <h5 className="title-h5"> 2 -  أضف في ملف urls.py </h5>
+            <h3 className="title-h3"> 2 -  أضف في ملف urls.py </h3>
             <CodeHighlighter code={codes[4].Manage_static_files[2]} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             <CodeHighlighter code={codes[4].Manage_static_files[3]} file_name="project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             <ul><li>قم بإنشاء مجلد باسم static/ في نفس مسار ملف manage.py مما يعنب بجانب تطبيقات المنشأت في مشروعك </li></ul>
@@ -27,14 +27,14 @@ export default function StaticAndMediaFiles(){
             </p>
             <CodeHighlighter code={codes[4].Manage_static_files[4]} file_name="test_static.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
          
-            <h3 className="title-h3" id="Media_files"> 2 - إدارة ملفات الوسائط (media/)</h3>
-            <h5 className="title-h5"> 1 - أضف في ملف settings.py </h5>
+            <h2 className="title-h2" id="Media_files"> 2 - إدارة ملفات الوسائط (media/)</h2>
+            <h3 className="title-h3"> 1 - أضف في ملف settings.py </h3>
             <CodeHighlighter code={codes[4].Media_files[0]}  language="python" addclassName="mt-3 mb-3" copie={true}/> 
             <CodeHighlighter code={codes[4].Media_files[1]} file_name="project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-            <h5 className="title-h5"> 2 -  أضف في ملف urls.py </h5>
+            <h3 className="title-h3"> 2 -  أضف في ملف urls.py </h3>
             <CodeHighlighter code={codes[4].Media_files[2]}  language="python" addclassName="mt-3 mb-3" copie={true}/> 
             <CodeHighlighter code={codes[4].Media_files[3]} file_name="project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-            <h5 className="title-h5" id="Media_files"> 3 - تثبيت الحزمة Pillow</h5>
+            <h3 className="title-h3" id="Media_files"> 3 - تثبيت الحزمة Pillow</h3>
             <p className="style_divv">
                للسماح للمستخدم بتحميل الملفات في Django، يجب عليك تثبيت Pillow 
             </p>
