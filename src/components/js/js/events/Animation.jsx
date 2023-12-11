@@ -70,57 +70,62 @@ return(
 <section className="section-conetent">
   <h1 className="heading-style heading-style-js-color">JavaScript Animation</h1>
   <article>
-<p className="style_divv mt-5">
-    عند تشغيل رسم متحرك CSS ، هناك ثلاثة أحداث يمكن أن تحدث:
-    <ul>
-        <li><b>animationstart</b> : يحدث عند بدء الرسوم المتحركة لـ CSS </li>
-        <li><b>animationiteration</b> : يحدث عندما يتم تكرار الرسوم المتحركة CSS</li>
-        <li><b>animationend</b> : يحدث عند اكتمال الرسوم المتحركة لـ CSS</li>
-    </ul>
-</p>
-<h3>1- animationstart</h3>
-<div className="style_divv">
-    يقع حدث <bdi><b>Animationstart</b></bdi> عندما يبدأ تشغيل الرسوم المتحركة <b>CSS</b>.<br/>
-    {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr">
-         <pre><span style="color:var(--js-color)">Object</span>.<span style="color:gold">addEventListener(</span><span style="color:orange;">"animationstart"</span>, function_name<span style="color:orange"></span><span style="color: gold;">)</span></pre>  
-    </div> */}
-</div>
-
-    <div className="mital"> متال :  </div>
-    <img src="{% static 'js/js84_animation.png' %}" className="img"/>
-    <div className="styleee" style="height: 360px;">
-        <div id="id_DIV" onclick="myFunction()">Click me to start the animation.</div>
-    </div>
-<h3>2- animationiteration </h3>
-<div className="style_divv">
-  يقع حدث <b>animationiteration</b> عند تكرار رسم متحرك <b>CSS</b> .<br/>
-  {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr">
-    <pre><span style="color:var(--js-color)">Object</span>.<span style="color:gold">addEventListener(</span><span style="color:orange;">"animationiteration"</span>, function_name<span style="color:orange"></span><span style="color: gold;">)</span></pre>  
-  </div> */}
-</div>
-  <div className="mital"> متال :  </div>
-  <img src="{% static 'js/js84_animation2.png' %}" className="img"/>
-  <div className="styleee" style={{height: "400px"}}>
-    <div style="width:100%;height:300px;position:relative;background-color:thistle;">
-      <div id="DIV">  </div>
-    </div>
-    <button className="btn btn-primary mt-2" onclick="Myfunction()"> Click </button>
-  </div>
-<h3>3- animationend </h3>
-<div className="style_divv">
-  يقع الحدث <bdi><b>animationend</b></bdi> عند اكتمال رسم متحرك <b>CSS</b> .<br/>
-  {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr">
-    <pre><span style="color:var(--js-color)">Object</span>.<span style="color:gold">addEventListener(</span><span style="color:orange;">"animationend"</span>, function_name <span style="color:orange"></span><span style="color: gold;">)</span></pre>  
-  </div> */}
-</div>
-    <div className="mital"> متال :  </div>
-    <img src="{% static 'js/js84_animation3.png' %}" className="img"/>
-    <div className="styleee" style={{height: "400px"}}>
-      <div style="width:100%;height:300px;position:relative;background-color:thistle;">
-        <div id="DIV2">  </div>
+    <p className="style_divv mt-5">
+        عند تشغيل رسم متحرك CSS ، هناك ثلاثة أحداث يمكن أن تحدث:
+        <ul>
+            <li><b>animationstart</b> : يحدث عند بدء الرسوم المتحركة لـ CSS </li>
+            <li><b>animationiteration</b> : يحدث عندما يتم تكرار الرسوم المتحركة CSS</li>
+            <li><b>animationend</b> : يحدث عند اكتمال الرسوم المتحركة لـ CSS</li>
+        </ul>
+    </p>
+    </article>
+    <article>
+        <h2 className="title-h2">1- animationstart</h2>
+        <p className="style_divv">
+            يقع حدث <bdi><b>Animationstart</b></bdi> عندما يبدأ تشغيل الرسوم المتحركة <b>CSS</b>.<br/>
+            {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr">
+                 <pre><span style="color:var(--js-color)">Object</span>.<span style="color:gold">addEventListener(</span><span style="color:orange;">"animationstart"</span>, function_name<span style="color:orange"></span><span style="color: gold;">)</span></pre>  
+            </div> */}
+        </p>
+        <div className="mital"> متال :  </div>
+        <img src="{% static 'js/js84_animation.png' %}" className="img"/>
+        <div className="styleee" style={{height: "360px"}}>
+              <div id="id_DIV" onclick="myFunction()">Click me to start the animation.</div>
+        </div>
+    </article>
+    <article>
+      <h2 className="title-h2">2- animationiteration </h2>
+      <p className="style_divv">
+        يقع حدث <b>animationiteration</b> عند تكرار رسم متحرك <b>CSS</b> .<br/>
+        {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr">
+          <pre><span style="color:var(--js-color)">Object</span>.<span style="color:gold">addEventListener(</span><span style="color:orange;">"animationiteration"</span>, function_name<span style="color:orange"></span><span style="color: gold;">)</span></pre>  
+        </div> */}
+      </p>
+      <div className="mital"> متال :  </div>
+      <img src="{% static 'js/js84_animation2.png' %}" className="img"/>
+      <div className="styleee" style={{height: "400px"}}>
+        <div style={{width:"100%",height:"300px",position:"relative",backgroundColor:"thistle"}}>
+          <div id="DIV">  </div>
+        </div>
+        <button className="btn btn-primary mt-2" onclick="Myfunction()"> Click </button>
       </div>
-      <button className="btn btn-primary mt-2" onclick="Myfunction2()"> Click </button>
-    </div>
+    </article>
+    <article>
+        <h2 className="title-h2">3- animationend </h2>
+        <div className="style_divv">
+          يقع الحدث <bdi><b>animationend</b></bdi> عند اكتمال رسم متحرك <b>CSS</b> .<br/>
+          {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr">
+            <pre><span style="color:var(--js-color)">Object</span>.<span style="color:gold">addEventListener(</span><span style="color:orange;">"animationend"</span>, function_name <span style="color:orange"></span><span style="color: gold;">)</span></pre>  
+          </div> */}
+        </div>
+        <div className="mital"> متال :  </div>
+        <img src="{% static 'js/js84_animation3.png' %}" className="img"/>
+        <div className="styleee" style={{height: "400px"}}>
+          <div style={{width:"100%",height:"300px",position:"relative",backgroundColor:"thistle"}}>
+            <div id="DIV2">  </div>
+          </div>
+          <button className="btn btn-primary mt-2" onclick="Myfunction2()"> Click </button>
+        </div>
     </article>
   </section>
   )

@@ -17,7 +17,12 @@ import {
     RemoveAttribute,CreateTextNode,Remove,Head,Images,Links,QuerySelector,QuerySelectorAll,
     RequestFullscreen,ExitFullscreen,Contains,Focus,Blur,Scripts,Title,BaseURI,Play,Pause,Load,
     //events
-    
+    Animation,CtrlKey,CurrentTarget,Data,Onafterprint,Onbeforeprint,Onblur,Oncanplay,Onchange,
+    Onclick,Oncontextmenu,Oncopy,Oncut,Ondblclick,Ondrag,Ondurationchange,Onended,Onerror,Onfocus,
+    Onfocusin,Onfocusout,Onfullscreenchange,Oninput,Oninvalid,Onkeydown,Onkeypress,Onkeyup,Onload,
+    Onloadeddata,Onloadedmetadata,Onloadstart,Onmousedown,Onmouseenter,Onmouseleave,Onmousemove,
+    Onmouseout,Onmouseover,Onmouseup,Onpagehide,Onpaste,Onpause,Onplay,Onprogress,Onreset,Onresize,
+    Onscroll,Onselect,Onsubmit,Ontoggle,Onunload,Onvolumechange,Target,
     //api
     Intro,Fetch,ValidationAPI,History,SetInterval,ClearInterval,SetTimeout,
 } from './pathJs.js';
@@ -150,42 +155,58 @@ return(
             <Route path='/pause' element={<Pause />} /> 
             <Route path='/load' element={<Load />} /> 
 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-            <Route path='/json' element={<JSON />} /> 
-
+            <Route path='/animation' element={<Animation />} /> 
+            <Route path='/ctrlKey' element={<CtrlKey />} /> 
+            <Route path='/currentTarget' element={<CurrentTarget />} /> 
+            <Route path='/data' element={<Data />} /> 
+            <Route path='/onafterprint' element={<Onafterprint />} /> 
+            <Route path='/onbeforeprint' element={<Onbeforeprint />} /> 
+            <Route path='/onblur' element={<Onblur />} /> 
+            <Route path='/oncanplay' element={<Oncanplay />} /> 
+            <Route path='/onchange' element={<Onchange />} /> 
+            <Route path='/onclick' element={<Onclick />} /> 
+            <Route path='/oncontextmenu' element={<Oncontextmenu />} /> 
+            <Route path='/oncopy' element={<Oncopy />} /> 
+            <Route path='/oncut' element={<Oncut />} /> 
+            <Route path='/ondblclick' element={<Ondblclick />} /> 
+            <Route path='/ondrag' element={<Ondrag />} /> 
+            <Route path='/ondurationchange' element={<Ondurationchange />} /> 
+            <Route path='/onended' element={<Onended />} /> 
+            <Route path='/onerror' element={<Onerror />} /> 
+            <Route path='/onfocus' element={<Onfocus />} /> 
+            <Route path='/onfocusin' element={<Onfocusin />} /> 
+            <Route path='/onfocusout' element={<Onfocusout />} /> 
+            <Route path='/onfullscreenchange' element={<Onfullscreenchange />} /> 
+            <Route path='/oninput' element={<Oninput />} /> 
+            <Route path='/oninvalid' element={<Oninvalid />} /> 
+            <Route path='/onkeydown' element={<Onkeydown />} /> 
+            <Route path='/onkeypress' element={<Onkeypress />} /> 
+            <Route path='/onkeyup' element={<Onkeyup />} /> 
+            <Route path='/onload' element={<Onload />} /> 
+            <Route path='/onloadeddata' element={<Onloadeddata />} /> 
+            <Route path='/onloadedmetadata' element={<Onloadedmetadata />} /> 
+            <Route path='/onloadstart' element={<Onloadstart />} /> 
+            <Route path='/onmousedown' element={<Onmousedown />} /> 
+            <Route path='/onmouseenter' element={<Onmouseenter />} />
+            <Route path='/onmouseleave' element={<Onmouseleave />} /> 
+            <Route path='/onmousemove' element={<Onmousemove />} /> 
+            <Route path='/onmouseout' element={<Onmouseout />} /> 
+            <Route path='/onmouseover' element={<Onmouseover />} /> 
+            <Route path='/onmouseup' element={<Onmouseup />} /> 
+            <Route path='/onpagehide' element={<Onpagehide />} /> 
+            <Route path='/onpaste' element={<Onpaste />} /> 
+            <Route path='/onpause' element={<Onpause />} /> 
+            <Route path='/onplay' element={<Onplay />} /> 
+            <Route path='/onprogress' element={<Onprogress />} /> 
+            <Route path='/onreset' element={<Onreset />} /> 
+            <Route path='/onresize' element={<Onresize />} /> 
+            <Route path='/onscroll' element={<Onscroll />} /> 
+            <Route path='/onselect' element={<Onselect />} /> 
+            <Route path='/onsubmit' element={<Onsubmit />} /> 
+            <Route path='/ontoggle' element={<Ontoggle />} /> 
+            <Route path='/onunload' element={<Onunload />} /> 
+            <Route path='/onvolumechange' element={<Onvolumechange />} /> 
+            <Route path='/target' element={<Target />} />
 
             <Route path='/intro' element={<Intro />} /> 
             <Route path='/forms' element={<ValidationAPI />} /> 

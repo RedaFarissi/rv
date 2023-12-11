@@ -25,7 +25,11 @@ import {
     index9send_email0,index9send_email1,index9send_email2,index9send_email3,index9send_email4,index9send_email5,
     index9list_emails0,index9list_emails1,index9list_emails2,index10Django_Pagination0,index10Django_Pagination1,
     index10Django_Pagination2, index10Django_Pagination3,index10Django_Pagination4,index10Django_Pagination5,
-    index11Form0,index11Form1,index11Form2,index11Form3,index11Form4,index11Form5,
+    index11Form0,index11Form1,index11Form2,index11Form3,index11Form4,index11Form5,index12ModelForm0,
+    index12ModelForm1,index12ModelForm2,index12ModelForm3,index12ModelForm4,index12ModelForm5,
+    index12ModelForm6,index12ModelForm7,index13models_Objecjs_filter0,index13models_Objecjs_filter1,
+    index13models_Objecjs_filter2,index13models_Objecjs_filter3,index13models_Objecjs_filter4,
+    index13models_Objecjs_filter5,index13models_Objecjs_filter6,index13row_filter,
     
 } from "./pathCodeDjango";
 const codes = [
@@ -116,17 +120,17 @@ const codes = [
         Form:[index11Form0(),index11Form1(),index11Form2(),index11Form3(),index11Form4(),index11Form5(),],
     },
     {
-        ModelForm:[],
+        ModelForm:[index12ModelForm0(),index12ModelForm1(),index12ModelForm2(),index12ModelForm3(),index12ModelForm4(),index12ModelForm5(),index12ModelForm6(),index12ModelForm7(),],
     },
     {
         title: "Django_Filter",
-        models_Objecjs_filter:[],
-        filter_from_dataBase_directly:[],
-        filter_using_Q:[],
+        models_Objecjs_filter:[index13models_Objecjs_filter0(),index13models_Objecjs_filter1(),index13models_Objecjs_filter2(),index13models_Objecjs_filter3(),index13models_Objecjs_filter4(),index13models_Objecjs_filter5(),index13models_Objecjs_filter6()],
+        row_filter:[index13row_filter()],
         lookup_expr:[],
+        Q_filter:[],
     },
     {
-        Exercice:[]
+        Exercise:[]
     },
     {
         Session:[]

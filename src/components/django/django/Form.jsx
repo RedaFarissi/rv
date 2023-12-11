@@ -29,6 +29,11 @@ export default function Form(){
             [10/Dec/2023 23:15:02] <span className="text-info">"POST /testing/ HTTP/1.1"</span> <span className="text-success">200</span> 1301<br/>
             </pre>
         </div>
+        <p className="style_divv">
+            form.cleaned_data :  هو قاموس يحتوي على البيانات التي تم تنظيفها والتحقق من صحتها من النموذج المقدم.
+            يتوفر قاموس البيانات النظيفة بعد التحقق من صحة النموذج بنجاح.
+            تتوافق المفاتيح الموجودة في القاموس مع أسماء الحقول المحددة في النموذج، والقيم هي البيانات المنظفة لكل حقل.
+        </p>
     </article>
     )
 }
