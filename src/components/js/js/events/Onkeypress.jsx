@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Onkeypress(){
     // document.body.addEventListener('keypress',function(event){
     //     alert(" event = " + event.key +"\ntype is = " + typeof event.key)

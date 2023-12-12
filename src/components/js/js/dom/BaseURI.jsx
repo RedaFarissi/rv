@@ -1,3 +1,5 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function BaseURI(){
     //document.getElementById("h2").innerHTML = document.baseURI ;
@@ -14,7 +16,7 @@ export default function BaseURI(){
                 الخاصية <b>baseURI</b> غير مدعومة في <bdi>Internet Explorer 11</bdi>
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js59_baseURI.png' %}" className="img"/>
+        <img src={images.js59_baseURI} className="img"/>
         <div className="styleee">
             <h2 id="h2"></h2>
         </div>

@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function ScrollTop(){
     // const scroller = document.querySelector("#dV1");
     // const output = document.querySelector("#h2");
@@ -17,7 +20,7 @@ export default function ScrollTop(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js45_scrollTop.png' %}" className="img"/>
+        <img src={images.js45_scrollTop} className="img"/>
         <div className="styleee">
             <div id="dV1" style={{width: "50%", height:"150px", overflow: "auto", backgroundColor:"brown",padding: "20px"}} onscroll="function_scroll()"> 
                 <div id="dV2" style={{ backgroundColor:"yellow", border: "2px solid black",margin:"500px 0px"}}>

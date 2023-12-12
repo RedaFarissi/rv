@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Onscroll(){
     // #DIV{ margin: auto;width: 70%;background-color:red;height: 450px;border: 4px solid black;overflow: scroll;  }
     // #child{ margin: auto;width: 70%;background-color:green;min-height: 900px;border: 0.9px solid white;  }

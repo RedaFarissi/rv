@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Onmousedown(){
 
     // #para{ font-size: 23px; color: black; padding: 1rem; }

@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Load(){
   // var vid = document.getElementById("myVideo"); 
   // function playVid() { 
@@ -25,7 +28,7 @@ export default function Load(){
         </div> */}
     </p>
     <div className="mital">متال :  </div>
-    <img src="{% static 'js/js89_load.' %}" className="img"/>
+    <img src={images.js89_load} className="img"/>
     <div className="styleee"> 
         <button onclick="playVid()" type="button" className="btn btn-outline-primary mb-2">
           Play Video

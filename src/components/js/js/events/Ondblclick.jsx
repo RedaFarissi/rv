@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Ondblclick(){
     // function myFunction() {
     //     const result = document.getElementById("result")

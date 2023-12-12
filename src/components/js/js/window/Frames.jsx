@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Frames(){
     // const frames = window.frames;
     // function name_function() {
@@ -19,7 +22,7 @@ export default function Frames(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js37_frames.png' %}" className="img"/>
+        <img src={images.js37_frames} className="img"/>
         <div className="styleee">
             <button onclick="name_function()">Try it</button>
             <br/><br/>
@@ -27,7 +30,7 @@ export default function Frames(){
             <iframe src="https://academy.codershiyar.com" style={{width:"100%",height:"300px",border:"2px solid black"}}></iframe>
         </div>
         <div className="mital"> متال 2 : </div>
-        <img src="{% static 'js/js37_frames.png' %}" className="img"/>
+        <img src={images.js37_frames} className="img"/>
         <div className="styleee">
             <iframe style={{width:"100%",height:"70px"}}></iframe>
             <iframe style={{width:"100%",height:"70px"}}></iframe>

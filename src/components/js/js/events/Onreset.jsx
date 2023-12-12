@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Onreset(){
     // function function_name() {
     //     var form = document.getElementById("id_Form")

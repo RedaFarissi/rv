@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function CreateTextNode(){
     return(
 <section className="section-conetent">
@@ -21,7 +24,7 @@ export default function CreateTextNode(){
         </ul>
         </div>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js67_createTextNode.png' %}" className="img"/>
+        <img src={images.js67_createTextNode} className="img"/>
         <div className="styleee">
            <div className="h2">heading with createTextNode</div>
         </div>

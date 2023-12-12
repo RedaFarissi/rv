@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Console(){
     // let x = 5;
     // let y = 5;
@@ -30,7 +33,7 @@ export default function Console(){
             إذا تم تقييم <b>expression</b> إلى خطأ ، فستتم كتابة رسالة في وحدة التحكم.
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js46_console.png' %}" className="img"/>
+        <img src={images.js46_console} className="img"/>
         <div className="styleee">       
             <h2>Remember to open the console Press <kbd>F12</kbd></h2>
         </div>

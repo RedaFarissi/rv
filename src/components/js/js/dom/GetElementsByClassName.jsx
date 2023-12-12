@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function GetElementsByClassName(){
     // const h2 = document.getElementsByClassName("h2")
     // for(let i=0 ; i<h2.length ; i++){
@@ -27,12 +30,12 @@ export default function GetElementsByClassName(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js70_getElementsByClassName.png' %}" className="img"/>
+        <img src={images.js70_getElementsByClassName} className="img"/>
         <div className="styleee img">
             <h2>4</h2>
         </div>
         <div className="mital">متال 2 : </div>
-        <img src="{% static 'js/js70_getElementsByClassName2.png' %}" className="img"/>
+        <img src={images.js70_getElementsByClassName2} className="img"/>
         <div className="styleee">
             <h2 className="h2"></h2>
             <h2 className="h2"></h2>

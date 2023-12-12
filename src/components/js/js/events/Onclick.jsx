@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Onclick(){
     // const y = document.getElementById("div_test")
     // function function_name1(){

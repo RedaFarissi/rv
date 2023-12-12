@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function QuerySelector(){
     return(
 <section className="section-conetent">
@@ -13,14 +16,14 @@ export default function QuerySelector(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js76_querySelector.png' %}" className="img"/>
+        <img src={images.js76_querySelector} className="img"/>
         <div className="styleee img" id="reSulta"> 
             <a href="https://www.google.com">google</a><br/>
             <a href="https://www.facebook.com">facebook</a><br/>
             https://www.google.com/
         </div>
         <div className="mital">متال 2:  </div>
-        <img src="{% static 'js/js76_querySelector2.png' %}" className="img"/>
+        <img src={images.js76_querySelector2} className="img"/>
         <div className="styleee img"> 
             <div className="partent">
                 <div className="child" style={{backgroundColor:"red"}}> child 1 </div>

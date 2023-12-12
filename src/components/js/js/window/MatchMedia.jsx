@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function MatchMedia(){
     // const id = document.getElementById("h2")
     // if(matchMedia("(max-width: 500px)").matches){
@@ -17,7 +20,7 @@ export default function MatchMedia(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js50_matchMedia.png' %}" className="img"/>
+        <img src={images.js50_matchMedia} className="img"/>
         <div className="styleee img">       
             <h2  id="h2" dir="rtl"></h2>
         </div>

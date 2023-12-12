@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Prompt(){
     // function name_function() {
     //     var id = document.getElementById("h2")
@@ -26,7 +29,7 @@ export default function Prompt(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js31_prompt.png' %}" className="img"/>
+        <img src={images.js31_prompt} className="img"/>
         <div className="styleee">
             <button onclick="name_function()">Click Here</button>
             <h2 id="h2"></h2> 

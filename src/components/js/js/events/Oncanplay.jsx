@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Canplay(){
     // function myFunction() {
     //     alert("Can start playing video");

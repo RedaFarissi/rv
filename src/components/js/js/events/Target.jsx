@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function EventTarget(){
 //     #parent{background-color: yellow;padding:9px;  }
 //     #div_box{ background-color: red; color:white;min-height:1rem; font-size: 23px;  } 

@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Onsubmit(){
   // function test(event){
   //   var email = document.getElementById("myEmail").value

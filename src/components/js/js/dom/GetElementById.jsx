@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function GetElementById(){
     return(
 <section className="section-conetent">
@@ -20,7 +23,7 @@ export default function GetElementById(){
         </p>
         
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js69_getElementById.png' %}" className="img"/>
+        <img src={images.js69_getElementById} className="img"/>
         <div className="styleee">
           <div  className="h2" id="id1"> heading with id1 </div>
           <div  id= "id2"> div with id2</div>

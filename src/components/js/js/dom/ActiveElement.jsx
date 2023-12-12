@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function ActiveElement(){
   // function Event_mouseup() {
   //   document.getElementById('output-element-id').innerHTML = document.activeElement.id
@@ -26,7 +29,7 @@ export default function ActiveElement(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js57_activeElement.png' %}" className="img"/>
+        <img src={images.js57_activeElement} className="img"/>
         <div className="styleee">
             <textarea name="ta-example-one" id="ta-example-one" rows="7" cols="40">   
               This is Text Area One. Lorem ipsum dolor sit amet, consectetur adipiscing elit.     
@@ -41,7 +44,7 @@ export default function ActiveElement(){
             <p>Full text: <span id="output-text"></span></p>    
         </div>    
         <div className="mital"> متال 2 : </div>   
-        <img src="{% static 'js/js57_activeElement2.png' %}" className="img"/>    
+        <img src={images.js57_activeElement2} className="img"/>    
         <div className="styleee img">   
             <main onclick="tag_name()">   
                 <h2 style={{backgroundColor: "yellow"}}>The activeElement Property</h2>   

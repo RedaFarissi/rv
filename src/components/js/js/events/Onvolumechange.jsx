@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Onvolumechange(){
   // function myFunction() {
   //   alert("The volume has been changed!");

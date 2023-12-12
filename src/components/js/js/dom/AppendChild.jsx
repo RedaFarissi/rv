@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function AppendChild(){
     return(
 <section className="section-conetent">
@@ -14,7 +17,7 @@ export default function AppendChild(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js66_appendChild.png' %}" className="img"/>
+        <img src={images.js66_appendChild} className="img"/>
         <div className="styleee">
             <ul id="ul" className="fs-4">
                 <li> HTML </li>

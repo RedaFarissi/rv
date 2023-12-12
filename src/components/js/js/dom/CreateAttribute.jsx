@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function CreateAttribute(){
     // document.getElementById("BuTton").addEventListener("click",function(){
     //     const styling  = document.createAttribute("class") 
@@ -22,13 +25,13 @@ export default function CreateAttribute(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js63_createAttribute.png' %}" className="img"/>
+        <img src={images.js63_createAttribute} className="img"/>
         <div className="styleee">
             <div id="id"> Hello Word </div>
             <button id="BuTton" className="btn btn-primary mt-2"> Click Ici </button>
         </div>
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js63_createAttribute2.png' %}" className="img"/>
+        <img src={images.js63_createAttribute2} className="img"/>
         <div className="styleee">
             <a id="myAnchor"> Go to google </a><br/>
             <button onclick="fun()" id="BuTton2" className="btn btn-primary mt-2">Add</button>

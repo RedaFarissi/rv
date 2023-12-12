@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function RemoveAttribute(){
   // function removeAttributE(){
   //   document.getElementById("id_name").removeAttribute("class")
@@ -13,7 +16,7 @@ export default function RemoveAttribute(){
         </div> */}
     </p>
     <div className="mital"> متال :  </div>
-    <img src="{% static 'js/js83_removeAttributre.png' %}" className="img"/>
+    <img src={images.js83_removeAttributre} className="img"/>
     <div className="styleee">
         <div id="id_name"  style={{ height:"90px", fontSize: "24px",backgroundColor:"red", color: "white",  textAlign:"center", lineHeight:"90px",}}  onclick="removeAttributE()">  
           Click me to remove attribue 

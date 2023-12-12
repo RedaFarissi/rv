@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function SetInterval(){
     // let id = document.getElementById("h2")
     // function function_name(){
@@ -23,13 +26,13 @@ export default function SetInterval(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js35_setInterval.png' %}" className="img"/>
+        <img src={images.js35_setInterval} className="img"/>
         <div className="styleee">
             <button onclick="setInterval( function_name ,1000)" style={{outline:"none",borderRadius:"2px",border:"1px solid black"}}> Cick Here </button>
             <h2 id='h2'>HELLO </h2>
         </div>
         <div className="mital"> متال 2 :  </div>
-        <img src="{% static 'js/js35_setInterval2.png' %}" className="img"/>
+        <img src={images.js35_setInterval2} className="img"/>
         <div className="styleee">
             <h2 id='h22'> 0 : 0 : 0 </h2>
         </div>

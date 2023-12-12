@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function ScrollIntoView(){
     // function name_function(){
     //     // scroll top
@@ -24,7 +27,7 @@ export default function ScrollIntoView(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js44_scrollIntoView.png' %}" className="img"/>
+        <img src={images.js44_scrollIntoView} className="img"/>
         <div className="styleee">
             <button onclick="name_function()"> TOP </button>
             <button onclick="name_function2()"> BOTTOM </button>

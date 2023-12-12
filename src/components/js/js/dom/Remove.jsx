@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Remove(){
   // function myFunction() {
   //   const element = document.getElementById("paragraph");
@@ -22,7 +25,7 @@ export default function Remove(){
         </div> */}
     </p>
     <div className="mital"> متال 1 :  </div>
-    <img src="{% static 'js/js145_remove.png' %}" className="img"/>
+    <img src={images.js145_remove} className="img"/>
     <div className="styleee">
         <h1>The Element Object</h1>
         <h2>The remove() Method</h2>
@@ -30,7 +33,7 @@ export default function Remove(){
         <button onclick="myFunction()">Remove</button>
     </div>
     <div className="mital"> متال 2 :  </div>
-    <img src="{% static 'js/js145_remove2.png' %}" className="img"/>
+    <img src={images.js145_remove2} className="img"/>
     <div className="styleee">
         <h2> Headding </h2>
         <p> click element to remove </p>

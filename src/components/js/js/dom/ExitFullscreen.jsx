@@ -1,4 +1,7 @@
- export default function ExitFullscreen(){
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
+export default function ExitFullscreen(){
 //   style = /* Safari */  :-webkit-full-screen{ background-color: yellow; }
 //   /* IE11 syntax */ :-ms-fullscreen { background-color: yellow; }
 //   /* Standard syntax */ :fullscreen { background-color: yellow; }
@@ -53,7 +56,7 @@
 }</pre>
 </div> */}
 <div className="mital"> متال :  </div>
-<img src="{% static 'js/js121_exitFullscreen.png' %}" className="img"/>
+<img src={images.js121_exitFullscreen} className="img"/>
 <div className="styleee">      
     <p>Click on the "Open Fullscreen" button to open this page in fullscreen mode.Close it by either clicking the "Esc" key on your keyboard, or with the"Close Fullscreen" button.</p>
     <button className="btn btn-outline-success" onclick="openFullscreen();">Open Fullscreen</button>

@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function PageXOffset(){
     // function name_function2(){
     //     alert( "pageXOffset  = " + pageXOffset)
@@ -20,7 +23,7 @@ export default function PageXOffset(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js42_pageXOffset.png' %}" className="img"/>
+        <img src={images.js42_pageXOffset} className="img"/>
         <div className="styleee">       
              <button onclick="name_function2()" style={{outline:"none",border:"1px solid black"}}>Click me to get scroolX</button>
         </div>

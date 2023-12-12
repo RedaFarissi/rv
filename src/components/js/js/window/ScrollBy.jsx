@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function ScrollBy(){
     // function Scrol_function(){
     //     document.getElementById("div_H").scrollBy(0,2500)
@@ -15,7 +18,7 @@ export default function ScrollBy(){
         </p>
         <div className="sum_exemple_style">
             <div className="mital"> متال :  </div>
-            <img src="{% static 'js/js41_scrollBy.png' %}" className="img"/>
+            <img src={images.js41_scrollBy} className="img"/>
             <div className="styleee">
                 <button onclick="Scrol_function()" id="button" style={{outline:"none", border: "1px solid black"}}> OK </button>
                 <h2 id="h2"></h2>

@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function LocalStorage(){
     return(
 <section className="section-conetent">
@@ -24,12 +27,12 @@ export default function LocalStorage(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js48_localStorage.png' %}" className="img"/>
+        <img src={images.js48_localStorage} className="img"/>
         <div className="styleee">       
             <h2>true</h2>
         </div>
         <div className="mital"> متال 2 :  </div>
-        <img src="{% static 'js/js48_localStorage2.png' %}" className="img"/>
+        <img src={images.js48_localStorage2} className="img"/>
         <div className="styleee">       
             <h2>Reda Eskouni <br/> <span>null</span></h2>
         </div>

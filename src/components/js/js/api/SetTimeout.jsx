@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function SetTimeout(){
     // function sayHello(){
     //     let res = document.getElementById("resut")
@@ -17,7 +20,7 @@ export default function SetTimeout(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js151_setTimeout.png' %}" className="img"/>
+        <img src={images.js151_setTimeout} className="img"/>
         <div className="styleee">
             <p> click button to run function one time after 3 seconds </p>
             <button onclick="setTimeout(sayHello,3000)" className="btn bg-primary"> click  </button>

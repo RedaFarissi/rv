@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Intro(){
     // const result = document.getElementById("result");
     // function getLocation() {
@@ -40,7 +43,7 @@ export default function Intro(){
             على سبيل المثال ، يمكن لواجهة برمجة تطبيقات <bdi>(Geolocation API)</bdi> تحديد الموقع الجغرافي أن ترجع إحداثيات مكان المتصفح.
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js137_geolocation.png' %}" className="img"/>
+        <img src={images.js137_geolocation} className="img"/>
         <div className="styleee">
             <div id="h2">JavaScript Geolocation</div>
             <p>Click the button to get your coordinates.</p>

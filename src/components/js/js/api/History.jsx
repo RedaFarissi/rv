@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function History(){
     // document.getElementById("h2").innerHTML =  history.length
     return(
@@ -29,7 +32,7 @@ export default function History(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js38_history2.png' %}" className="img"/>
+        <img src={images.js38_history2} className="img"/>
         <div className="styleee">
             <button onclick="history.back()" style={{outline:"none", border:"1px solid black"}}> Go Back </button>
         </div>
@@ -45,7 +48,7 @@ export default function History(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js38_history3.png' %}" className="img"/>
+        <img src={images.js38_history3} className="img"/>
         <div className="styleee">
             <button onclick="history.forward()" style={{outline:"none", border:"1px solid black"}}> forward </button>
         </div>
@@ -61,7 +64,7 @@ export default function History(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js38_history.png' %}" className="img"/>
+        <img src={images.js38_history} className="img"/>
         <div className="styleee">
             <h2 id="h2">  </h2>
         </div>

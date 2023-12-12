@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Oncontextmenu(){
   // #div_element{
   //   padding:9px 5px; 

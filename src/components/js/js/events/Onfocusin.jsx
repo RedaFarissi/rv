@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Onfocusin(){
     // // Focus = Changes the background color of input to green
     // function inf() {

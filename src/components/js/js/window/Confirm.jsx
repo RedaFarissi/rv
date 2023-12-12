@@ -1,3 +1,5 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Confirm(){
     // function name_function() {
@@ -23,7 +25,7 @@ export default function Confirm(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js30_confirm.png' %}" className="img"/>
+        <img src={images.js30_confirm} className="img"/>
         <div className="styleee">
             <button onclick="name_function()"> Click Here </button>
             <h2 id="h222"></h2>

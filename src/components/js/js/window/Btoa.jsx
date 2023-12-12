@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Btoa(){
     // function buton(){
     //     let id = document.getElementById("h2")
@@ -17,10 +20,10 @@ export default function Btoa(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js32_btoa.png' %}" className="img"/>
+        <img src={images.js32_btoa} className="img"/>
         <div className="styleee img"> <h2> EçZÉ(ºx </h2> </div>
         <div className="mital"> متال 2 :  </div>
-        <img src="{% static 'js/js32_btoa2.png' %}" className="img"/>
+        <img src={images.js32_btoa2} className="img"/>
         <div className="styleee">    
             <input type="text" id="text"/>
             <button onclick="buton()"> OK </button>

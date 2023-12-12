@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function OnctrlKey(){
 
   // #span1{ color: green; font-size: 24px;}

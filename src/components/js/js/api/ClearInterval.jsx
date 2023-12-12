@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function ClearInterval(){
     // let id = document.getElementById("h2")
     // let s=0 ; m=0 , h=0 ; 
@@ -27,7 +30,7 @@ export default function ClearInterval(){
         </p>
         
         <div className="mital"> متال  :  </div>
-        <img src="{% static 'js/js36_clearInterval.png' %}" className="img"/>
+        <img src={images.js36_clearInterval} className="img"/>
         <div className="styleee">
             <h2 id='h2'>  0 : 0 : 0  </h2>
             <button onclick="stop_Inter()" style={{outline:"none",borderRadius:"2px",border:"1px solid black"}}> STOP </button>

@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function QuerySelectorAll(){
     return(
 <section className="section-conetent">
@@ -12,7 +15,7 @@ export default function QuerySelectorAll(){
             </div> */}
         </div>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js77_querySelectorAll.png' %}" className="img"/>
+        <img src={images.js77_querySelectorAll} className="img"/>
         <div className="styleee" id="reSulta"> 
             <div className="child" style={{ backgroundColor: "red",color:"white",fontSize: "22px"}}> child 1 </div>
             <div className="child" style={{ backgroundColor: "red",color:"white",fontSize: "22px"}}> child 2 </div>

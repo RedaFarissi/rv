@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Onkeyup(){
     // document.body.addEventListener('keyup',function(event){
     //     alert(" event = " + event.code +"\ntype is = " + typeof event.code)

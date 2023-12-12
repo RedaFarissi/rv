@@ -1,3 +1,5 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function ClientWidth(){
     // var c_Width = document.getElementById("div_H").clientWidth
@@ -19,12 +21,12 @@ export default function ClientWidth(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js40_clientWidth2.png' %}" className="img"/>
+        <img src={images.js40_clientWidth2} className="img"/>
         <div className="styleee img">
             <h2 id="h2"></h2>
             <div id="div_H" style={{width:"50%" , height:"90px"}}>  Hello World  </div>
         </div>
-        <img src="{% static 'js/js40_clientWidth.png' %}" className="img"/>
+        <img src={images.js40_clientWidth} className="img"/>
     </article>
 </section>
     )

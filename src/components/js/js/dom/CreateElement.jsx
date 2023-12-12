@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function CreateElement(){
     // function myFunction() {
     //     var y = document.createElement("INPUT");
@@ -16,19 +19,19 @@ export default function CreateElement(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js65_createElement.png' %}" className="img"/>
+        <img src={images.js65_createElement} className="img"/>
         <div className="styleee img">
             <h2>Heading Element 1</h2>
             <h2>Heading Element 2</h2>
         </div>
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js65_createElement2.png' %}" className="img"/>
+        <img src={images.js65_createElement2} className="img"/>
         <div className="styleee img">
             <h2>Heading Element 1</h2>
-            <div><img src="{% static 'js/hajime.jpg' %}"  style={{height: "250px",objectFit:"contain"}}/></div>
+            <div><img src={images.hajime}  style={{height: "250px",objectFit:"contain"}}/></div>
         </div>
         <div className="mital">متال 3 :  </div>
-        <img src="{% static 'js/js65_createElement3.png' %}" className="img"/>
+        <img src={images.js65_createElement3} className="img"/>
         <div className="styleee img">
             <button onclick="myFunction()" className="btn btn-primary mb-2">click</button>
             <div id="resulTa">

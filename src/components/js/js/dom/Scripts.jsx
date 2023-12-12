@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Scripts(){
     return(
 <section className="section-conetent">
@@ -18,7 +21,7 @@ export default function Scripts(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js78_scripts.png' %}" className="img"/>
+        <img src={images.js78_scripts} className="img"/>
         <div className="styleee"> 
             <div className="h2">document scripts</div>
             Hello World!
@@ -26,7 +29,7 @@ export default function Scripts(){
             3
         </div>
         <div className="mital">متال 2 : </div>
-        <img src="{% static 'js/js78_scripts2.png' %}" className="img"/>
+        <img src={images.js78_scripts2} className="img"/>
         <div className="styleee"> 
             Hello World!<br/>
             document.write("Hello World!");<br/>

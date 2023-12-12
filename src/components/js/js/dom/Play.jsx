@@ -1,3 +1,5 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Play(){
   // var vid = document.getElementById("myAudio"); 
@@ -23,7 +25,7 @@ export default function Play(){
         <div className="alert alert-warning">نصيحة: استخدم طريقة الإيقاف المؤقت () لإيقاف الصوت / الفيديو الحالي مؤقتًا.</div>
     </div>
     <div className="mital">متال :  </div>
-    <img src="{% static 'js/js87_play.png' %}" className="img"/>
+    <img src={images.js87_play} className="img"/>
     <div className="styleee"> 
         <button onclick="playAudio()" type="button" className="mb-2">Play Video</button>
         <button onclick="pauseAudio()" type="button" className="bm-2">Pause Video  </button>

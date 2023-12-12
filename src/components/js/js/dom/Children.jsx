@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Children(){
     // document.getElementById("HTMLCollection-result").style.display="none"
     //         let ressult_test = true
@@ -29,14 +32,14 @@ export default function Children(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js58_children.png' %}" className="img"/>
+        <img src={images.js58_children} className="img"/>
         <div className="styleee img">
             <h2>Heading</h2>
             <p>Paragraph</p>
             <div> H2<br/>P<br/>DIV<br/>SCRIPT</div>
         </div>
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js58_children2.png' %}" className="img"/>
+        <img src={images.js58_children2} className="img"/>
         <div className="styleee img">
             <ol>
                 <li>Lemon</li>

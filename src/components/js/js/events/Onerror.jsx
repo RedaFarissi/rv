@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Onerror(){
   // function myFunction() {
   //   alert('The image could not be loaded.');

@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Onload(){
     // document.body.onload = function(){
     //     alert("Page is loaded")

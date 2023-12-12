@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function ValidationAPI(){
     //table ,tr,th,td { border-collapse:collapse; border: 2px solid white; }
 
@@ -33,7 +36,7 @@ export default function ValidationAPI(){
         </table>
 
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js138_checkValidity.png' %}" className="img"/>
+        <img src={images.js138_checkValidity} className="img"/>
         <div className="styleee">
             <input id="Id1" type="number" min="100" required/>
             <button onclick="myFunction()">OK</button>

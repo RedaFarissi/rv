@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Onchange(){
     // var a = document.getElementById("Select");
     // const result = document.getElementById("result")

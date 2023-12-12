@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function GetElementsByName(){
     // function val(){
     //     const name = document.getElementsByName("text")
@@ -18,10 +21,10 @@ export default function GetElementsByName(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js71_getElementsByName.png' %}" className="img"/>
+        <img src={images.js71_getElementsByName} className="img"/>
         <div className="styleee">  2  </div>
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js71_getElementsByName2.png' %}" className="img"/>
+        <img src={images.js71_getElementsByName2} className="img"/>
         <div className="styleee">  
             <input type="text" name="text"/>
             <button className="btn btn-light mb-3" onclick="val()"> value </button>

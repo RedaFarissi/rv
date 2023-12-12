@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function DocumentElement(){
     return(
 <section className="section-conetent">
@@ -24,8 +27,8 @@ export default function DocumentElement(){
             </div> */}
         </div>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js120_documentElement.png' %}" className="img"/>
-        <img src="{% static 'js/js120_documentElement2.png' %}" className="img"/>
+        <img src={images.js120_documentElement} className="img"/>
+        <img src={images.js120_documentElement2} className="img"/>
     </article>
 </section>
     )

@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Onmouseover(){
     {/* .div {
       width: max-content; height: max-content; margin: 9px;border: 1px solid black; text-align: center;

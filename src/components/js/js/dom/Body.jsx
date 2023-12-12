@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Body(){
     return(
 <section className="section-conetent">
@@ -20,11 +23,11 @@ export default function Body(){
             </div>
         </p>
         <div className="mital"> متال 1 :  </div>
-        <img src="{% static 'js/js60_body.png' %}" className="img"/>
-        <img src="{% static 'js/js60_body 2.png' %}" className="img"/>
+        <img src={images.js60_body} className="img"/>
+        <img src={images.js60_body_2} className="img"/>
         <div className="mital"> متال 2 :  </div>
-        <img src="{% static 'js/js60_body2.png' %}" className="img"/>
-        <img src="{% static 'js/js60_body2 2.png' %}" className="img"/>
+        <img src={images.js60_body2} className="img"/>
+        <img src={images.js60_body2_2} className="img"/>
     </article>
 </section>
     )

@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Oninvalid(){
   // document.getElementById("Input").addEventListener("invalid", myFunction);
   // function myFunction() {

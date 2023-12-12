@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Images(){
     return(
 <section className="section-conetent">
@@ -17,10 +20,10 @@ export default function Images(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js74_images.png' %}" className="img"/>
+        <img src={images.js74_images} className="img"/>
         <div className="styleee img" id="reSulta"> 
-            <img src="{% static 'js/hajime.jpg" className="w-25" style={{height:"200px"}}/>
-            <img src="{% static 'js/hajime2.jpg" className="w-25" style={{height:"200px"}}/>
+            <img src={images.hajime} className="w-25" style={{height:"200px"}}/>
+            <img src={images.hajime2} className="w-25" style={{height:"200px"}}/>
             <div className="mt-2"> length = 2 </div>
         </div>
     </article>

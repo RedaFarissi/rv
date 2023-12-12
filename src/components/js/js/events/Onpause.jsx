@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Onpause(){
     // function myFunction() {
     //     alert("The video was paused.");

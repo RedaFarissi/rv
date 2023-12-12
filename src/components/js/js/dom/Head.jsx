@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Head(){
     // document.getElementById("reSulta").innerText = `<head>
     // <title> head JavaScript </title>
@@ -21,10 +24,10 @@ export default function Head(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js73_head.png' %}" className="img"/>
+        <img src={images.js73_head} className="img"/>
         <div className="styleee img" id="reSulta">  </div>
         <div className="mital">متال 2 : </div>
-        <img src="{% static 'js/js73_head2.png' %}" className="img"/>
+        <img src={images.js73_head2} className="img"/>
         <div className="styleee "> TITLE<br/>META </div>
     </article>
 </section>

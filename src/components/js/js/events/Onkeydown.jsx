@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Onkeydown(){
     // function myFunction() {
     //     alert("You pressed a key inside the input field");

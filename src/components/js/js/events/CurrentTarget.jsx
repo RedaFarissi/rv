@@ -1,5 +1,7 @@
-export default function EventCurrentTarget(){
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
 
+export default function EventCurrentTarget(){
     // #parent{ background-color: yellow;padding:9px;}
 
     // function function_name(event){

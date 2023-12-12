@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Blur(){
     // const text = document.getElementById("text")
     // const btn = document.getElementById("bottona")
@@ -16,7 +19,7 @@ export default function Blur(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js82_blur.png' %}" className="img"/>
+        <img src={images.js82_blur} className="img"/>
         <div className="styleee"> 
             <input type="email" id="text"/>
             <button id="bottona"> remove focus </button>

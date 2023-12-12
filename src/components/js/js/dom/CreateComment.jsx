@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function CreateComment(){
     return(
 <section className="section-conetent">
@@ -11,9 +14,9 @@ export default function CreateComment(){
             </div> */}
         </div>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js64_createComment.png' %}" className="img"/>
+        <img src={images.js64_createComment} className="img"/>
         <ul className="mb-0"><li> بعد النقر على <kbd>F12</kbd> </li></ul>
-        <img src="{% static 'js/js64_createComment 2.png' %}" className="img"/>
+        <img src={images.js64_createComment_2} className="img"/>
     </article>
 </section>
     )

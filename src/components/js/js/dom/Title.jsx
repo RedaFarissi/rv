@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Title(){
     return(
 <section className="section-conetent">
@@ -14,12 +17,12 @@ export default function Title(){
             </div> */}
         </div>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js79_title.png' %}" className="img"/>
+        <img src={images.js79_title} className="img"/>
         <div className="styleee"> 
             document title
         </div>
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js79_title2.png' %}" className="img"/>
+        <img src={images.js79_title2} className="img"/>
         <div className="styleee"> 
             JAVASCRIPT TITLE
         </div>

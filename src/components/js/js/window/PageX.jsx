@@ -1,3 +1,5 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function PageX(){
   // function showCoords(event) {
@@ -20,7 +22,7 @@ export default function PageX(){
         </div> */}
     </div>
     <div className="mital">متال :  </div>
-    <img src="{% static 'js/js103_pageX.png' %}" className="img"/>
+    <img src={images.js103_pageX} className="img"/>
     <div className="styleee">
       <h2 onmousemove="showCoords(event)"> Move mouse in this heading to get the x (horizontal) and y (vertical) coordinates of the mouse pointer .</h2>
       <p> <strong>Tip:</strong>Try to click different places in the heading. </p>

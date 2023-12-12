@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Pause(){
   // var vid = document.getElementById("myVideo"); 
   // function playVid() { 
@@ -23,8 +26,8 @@ export default function Pause(){
         <div className="alert alert-warning"> <b>نصيحة</b> : استخدم طريقة <bdi><b>play()</b></bdi> لبدء تشغيل الصوت / الفيديو الحالي.</div>
     </div>
     <div className="mital">متال :  </div>
-    <img src="{% static 'js/js88_pause.png' %}" className="img"/>
-    <div className="styleee img"> 
+    <img src={images.js88_pause} className="img"/>
+    <div className="styleee"> 
         <button onclick="playVid()" type="button" className="btn btn-outline-primary mb-2">
             Play Video
         </button>
@@ -33,7 +36,7 @@ export default function Pause(){
         </button>
         <br/> 
         <video id="myVideo" width="40%" height="176">
-          <source src="./js/video.mp4" type="video/mp4"/>
+          <source src={images.video} type="video/mp4"/>
           Your browser does not support HTML5 video.
         </video>
     </div>

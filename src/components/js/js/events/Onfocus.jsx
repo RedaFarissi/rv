@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Onfocus(){
     // function function_name(){
     //     const id = document.getElementById("InPuT")

@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function SetAttribute(){
     // const res = document.getElementById("result")
     // const div = document.createElement("div");
@@ -16,7 +19,7 @@ export default function SetAttribute(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js146_setAttribute.png' %}" className="img"/>
+        <img src={images.js146_setAttribute} className="img"/>
         <div className="styleee">
             <div id="result">  
                 <h2> Heading </h2>

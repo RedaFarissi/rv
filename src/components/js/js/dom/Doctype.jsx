@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Doctype(){
     return(
 <section className="section-conetent">
@@ -14,7 +17,7 @@ export default function Doctype(){
         </div>
         
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js68_docktype.png' %}" className="img"/>
+        <img src={images.js68_docktype} className="img"/>
         <div className="styleee img">
            html
         </div>

@@ -1,4 +1,6 @@
 //import "./GetComputedStyle.css"
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function GetComputedStyle(){
     // const id = document.getElementById("h2");
@@ -32,19 +34,19 @@ export default function GetComputedStyle(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js47_getComputedStyle.png' %}" className="img"/>
+        <img src={images.js47_getComputedStyle} className="img"/>
         <div className="styleee">       
             <div id="DV"> getComputedStyle </div>
             <h2 id="h2"> </h2>
         </div>
         <div className="mital"> متال 2 :  </div>
-        <img src="{% static 'js/js47_getComputedStyle2.png' %}" className="img"/>
+        <img src={images.js47_getComputedStyle2} className="img"/>
         <div className="styleee">       
             <div id="DV2"> getComputedStyle </div>
             <h2 id="h22"> </h2>
         </div>
         <div className="mital"> متال 3 :  </div>
-        <img src="{% static 'js/js47_getComputedStyle3.png' %}" className="img"/>
+        <img src={images.js47_getComputedStyle3} className="img"/>
         <div className="styleee">       
             <div id="div_test"> getComputedStyle </div>
             <h2 id="h222"></h2>

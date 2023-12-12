@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Cookie(){
     return(
 <section className="section-conetent">
@@ -46,7 +49,7 @@ export default function Cookie(){
             سيعيد document.cookie جميع  <b>cookie</b> في سلسلة واحدة <bdi> cookie1=value; cookie2=value; cookie3=value; </bdi>
         </div>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js61_cookie.png' %}" className="img"/>
+        <img src={images.js61_cookie} className="img"/>
         <div className="styleee">
             user_name = Reda Eskouni;age = 25ans;<br/>
         </div>
@@ -58,7 +61,7 @@ export default function Cookie(){
             باستخدام <b>JavaScript</b> ، يمكنك تغيير <b>cookie</b> بنفس طريقة إنشائه . <br/>
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js61_cookie2.png' %}" className="img"/>
+        <img src={images.js61_cookie2} className="img"/>
         <div className="styleee">
             user_name = Reda Eskouni;age = 25ans;<br/>
             <b>string</b><br/>

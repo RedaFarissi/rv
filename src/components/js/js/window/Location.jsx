@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Location(){
     // document.getElementById("h2").innerHTML = location.host ;
     // document.getElementById("h22").innerHTML = location.hostname ;
@@ -29,7 +32,7 @@ export default function Location(){
             <br style="clear:both;"> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js34_location.png' %}" className="img"/>
+        <img src={images.js34_location} className="img"/>
         <div className="styleee">
             <h2 id="h2"> </h2>
         </div>
@@ -46,7 +49,7 @@ export default function Location(){
             <br style="clear:both;"> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js34_location2.png' %}" className="img"/>
+        <img src={images.js34_location2} className="img"/>
         <div className="styleee">
             <h2 id="h22"> </h2>
         </div>
@@ -61,7 +64,7 @@ export default function Location(){
         </p>
         <div className="sum_exemple_style">
             <div className="mital"> متال :  </div>
-            <img src="{% static 'js/js34_location3.png' %}" className="img"/>
+            <img src={images.js34_location3} className="img"/>
             <div className="styleee">
                 <h2 id="h222"> </h2>  
             </div>
@@ -76,7 +79,7 @@ export default function Location(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js34_location4.png' %}" className="img"/>
+        <img src={images.js34_location4} className="img"/>
         <div className="styleee">
             <h2 id="h2222"> </h2>  
         </div>
@@ -90,7 +93,7 @@ export default function Location(){
             </div>  */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js34_location5.png' %}" className="img"/>
+        <img src={images.js34_location5} className="img"/>
         <div className="styleee">
             <h2 id="h22222"> </h2>  
         </div>
@@ -105,7 +108,7 @@ export default function Location(){
             </div>    */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js34_location6.png' %}" className="img"/>
+        <img src={images.js34_location6} className="img"/>
         <div className="styleee">
             <h2 id="h222222"> </h2>
         </div>
@@ -120,7 +123,7 @@ export default function Location(){
             </div>    */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js34_location7.png' %}" className="img"/>
+        <img src={images.js34_location7} className="img"/>
         <div className="styleee">
             <button onclick="location.reload()">Click Here</button>
             <div style={{width:"50%",height:"200px"}}>

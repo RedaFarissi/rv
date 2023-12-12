@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Ondrag(){
 
     // #drag1{ width:170px; height:170px; border-radius:50%; }

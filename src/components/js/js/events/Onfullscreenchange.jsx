@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Onfullscreenchange(){
 
     // #myP {background-color: yellow;padding: 20px;font-size: 30px;  }

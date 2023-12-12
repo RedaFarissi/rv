@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Links(){
     // id_result = document.getElementById("resulta")
     // id_result.innerText = document.links[0].outerHTML
@@ -22,7 +25,7 @@ export default function Links(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js75_links.png' %}" className="img"/>
+        <img src={images.js75_links} className="img"/>
         <div className="styleee img" id="reSulta"> 
             <a href="https://www.google.com"> google</a><br/>
             <a href="https://www.facebook.com/"> facebook </a>

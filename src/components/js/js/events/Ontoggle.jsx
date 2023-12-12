@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Ontoggle(){
     // #DIV{background-color: red; color: white; min-height: 200px; border:2px solid brown; font-size: 35px;}
 

@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Animation(){
   // var x = document.getElementById("id_DIV");
   // // Start the animation with JavaScript

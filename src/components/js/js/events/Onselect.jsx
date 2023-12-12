@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Onselect(){
     // function function_name() {
     //     alert("You selected some text!");

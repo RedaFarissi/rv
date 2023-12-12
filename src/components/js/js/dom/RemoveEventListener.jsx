@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function RemoveEventListener(){
     // const myDiv = document.getElementById("divvv");
     // myDiv.addEventListener("mousemove", myFunction);
@@ -20,7 +23,7 @@ export default function RemoveEventListener(){
         </p>
 
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js56_removeEventListener.png' %}" className="img"/>
+        <img src={images.js56_removeEventListener} className="img"/>
         <div className="styleee img" style={{cursor:"default"}}>
             <div id="divvv">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 

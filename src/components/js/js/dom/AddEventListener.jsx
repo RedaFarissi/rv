@@ -1,3 +1,5 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function AddEventListener(){
   // document.getElementById("DIVV").addEventListener("click",clik_function)
@@ -96,20 +98,20 @@ export default function AddEventListener(){
             </ul>
         </div>
         <div class="mital">متال :  </div>
-        <img src="{% static 'js/js55_addEventListener.png' %}" class="img"/>
+        <img src={images.js55_addEventListener} class="img"/>
         <div class="styleee">
             <div id="DIVV">
               click Here 
             </div>
         </div>
         <div class="mital">متال 2 :  </div>
-        <img src="{% static 'js/js55_addEventListener2.png' %}" class="img"/>
+        <img src={images.js55_addEventListener2} class="img"/>
         <div class="styleee">
           <p>Click anywhere in the document to display Date . </p>
           <h2 id="date"> </h2>
         </div>
         <div class="mital">متال 3 :  </div>
-        <img src="{% static 'js/js55_addEventListener3.png' %}" class="img"/>
+        <img src={images.js55_addEventListener3} class="img"/>
         <div class="styleee">
           <div id="grandparent" class="d-flex justify-content-center align-items-center m-5">
             <div id="parent" class="d-flex justify-content-center align-items-center">
@@ -119,7 +121,7 @@ export default function AddEventListener(){
         </div>
         <div class="mital">متال 4 :  </div>
         <ul><li>capture</li></ul>
-        <img src="{% static 'js/js55_addEventListener4.png' %}" class="img"/>
+        <img src={images.js55_addEventListener4} class="img"/>
         <div class="styleee">
           <div id="grandparent2" class="d-flex justify-content-center align-items-center m-5">
             <div id="parent2" class="d-flex justify-content-center align-items-center">
@@ -140,7 +142,7 @@ export default function AddEventListener(){
           </div> */}
         </div>
             <div class="mital">متال : </div>
-            <img src="{% static 'js/js55_addEventListener5.png' %}" class="img"/>
+            <img src={images.js55_addEventListener5} class="img"/>
             <div class="styleee">
               <div onclick="Myfunc2()" class="diV mb-3">DIV 2
                 <div onclick="Myfunc1()" class="diV">DIV 1</div>
@@ -165,7 +167,7 @@ export default function AddEventListener(){
             </div> */}
         </div>
             <div class="mital">متال : </div>
-            <img src="{% static 'js/js55_addEventListener6.png' %}" class="img"/>
+            <img src={images.js55_addEventListener6} class="img"/>
             <div class="styleee">  
               Try to check this box: <input type="checkbox" id="myCheckbox"/><hr/>
               <a id="myAnchor" href="https://www.google.com/">Go to google</a>
@@ -188,7 +190,7 @@ export default function AddEventListener(){
         </div>
         <div class="sum_exemple_style">
             <div class="mital">متال : </div>
-            <img src="{% static 'js/js55_addEventListener7.png' %}" class="img"/>
+            <img src={images.js55_addEventListener7} class="img"/>
             <div class="styleee">  
               <button id="myButton" class="btn btn-primary">
                   click
@@ -215,7 +217,7 @@ export default function AddEventListener(){
         </div>
         <div class="sum_exemple_style">
             <div class="mital">متال : </div>
-            <img src="{% static 'js/js55_addEventListener8.png' %}" class="img"/>
+            <img src={images.js55_addEventListener8} class="img"/>
             <div class="styleee"> 
               <div id="myButton2" class="btn btn-primary">click</div>
               <button id="anuler2" class="btn btn-outline-danger">

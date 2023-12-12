@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Navigator(){
     // document.getElementById("h2").innerHTML  = navigator.appCodeName + "<br/>"
     // document.getElementById("h22").innerHTML = navigator.appName + "<br/>"
@@ -30,7 +33,7 @@ export default function Navigator(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js51_navigator.png' %}" className="img"/>
+        <img src={images.js51_navigator} className="img"/>
         <div className="styleee img">       
             <h2 id="h2"> </h2>
         </div>
@@ -45,7 +48,7 @@ export default function Navigator(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js51_navigator2.png' %}" className="img"/>
+        <img src={images.js51_navigator2} className="img"/>
         <div className="styleee img">       
             <h2 id="h22"> </h2>
         </div>
@@ -60,7 +63,7 @@ export default function Navigator(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js51_navigator3.png' %}" className="img"/>
+        <img src={images.js51_navigator3} className="img"/>
         <div className="styleee img">       
             <h2 id="h222"> </h2>
         </div>
@@ -75,7 +78,7 @@ export default function Navigator(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js51_navigator4.png' %}" className="img"/>
+        <img src={images.js51_navigator4} className="img"/>
         <div className="styleee img">       
             <h2 id="h2222"> </h2>
         </div>
@@ -90,7 +93,7 @@ export default function Navigator(){
             </div> */}
         </p>  
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js51_navigator5.png' %}" className="img"/>
+        <img src={images.js51_navigator5} className="img"/>
         <div className="styleee img">       
             <h2 id="h22222"> </h2>
         </div>

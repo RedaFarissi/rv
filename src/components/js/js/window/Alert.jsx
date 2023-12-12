@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Alert(){
     return(
 <section className="section-conetent">
@@ -16,7 +19,7 @@ export default function Alert(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js29_alert.png' %}" className="img"/>
+        <img src={images.js29_alert} className="img"/>
         <div className="styleee img">
             <button onclick="add_alert()"> Click Here </button>
         </div>

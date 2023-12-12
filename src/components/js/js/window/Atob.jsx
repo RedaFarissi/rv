@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Atob(){
     // function buton(){
     //     let id = document.getElementById("h2")
@@ -18,7 +21,7 @@ export default function Atob(){
         </div>
         <div className="sum_exemple_style">
             <div className="mital"> متال :  </div>
-            <img src="{% static 'js/js33_atob.png' %}" className="img"/>
+            <img src={images.js33_atob} className="img"/>
             <div className="styleee">
                 <input type="text" id="text"/>
                 <button onclick="buton()"> OK </button>

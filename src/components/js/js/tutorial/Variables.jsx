@@ -6,7 +6,7 @@ export default function Variables(){
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Variables</h1>
     <article>
-        <h3>1. ما هي Variables </h3>
+        <h2 className="title-h2">1. ما هي Variables </h2>
         <p className="style_divv">
             المتغيرات عبارة عن حاويات لتخزين البيانات (تخزين قيم البيانات).<br/>
             يمكن إختيار إسم المتغير الذي يناسبك على شرط أن  يكون غير محجوز من قبل لغة <b>JavaScript</b> .<br/>
@@ -64,7 +64,7 @@ export default function Variables(){
         </div>
     </article>
     <article>
-        <h3>2.  متى تستخدم متغير  const </h3>
+        <h2  className="title-h2">2.  متى تستخدم متغير  const </h2>
         <p className="style_divv">
             كقاعدة عامة المتغيرات التابة التي لن تحتاج إلى تغييره قم بكتابة  <b>const</b> قبله للإشارة إلى أنه لا يمكن تغيير قيمة ذالك المتغير .<br/>
             {/* <div className="codeStudio alert bg-dark mt-2" dir="ltr" style="padding-bottom:0pt;">
@@ -85,7 +85,7 @@ export default function Variables(){
         </div>
     </article>
     <article>
-        <h3>3.  متى تستخدم متغير  var و let </h3>
+        <h2 className="title-h2">3.  متى تستخدم متغير  var و let </h2>
         <p className="style_divv">
             أعلن دائمًا عن متغيرات <b>JavaScript</b> باستخدام <b>var</b> أو <b>let</b> أو <b>const</b> .<br/>
             تُستخدم الكلمة الأساسية <b>var</b> في جميع أكواد <b>JavaScript</b> من 1995 إلى 2015.<br/>
@@ -111,7 +111,7 @@ export default function Variables(){
         </div>
     </article>
     <article>
-        <h3>4.  قوانين المتغيرات  </h3>
+        <h2 className="title-h2">4.  قوانين المتغيرات  </h2>
         <p className="style_divv">
             يجب تحديد جميع متغيرات <b>JavaScript</b> بأسماء فريدة .<br/>
             تسمى هذه الأسماء الفريدة بالمعرفات.<br/>
@@ -127,7 +127,7 @@ export default function Variables(){
         </p>
     </article>
     <article>
-        <h3>5. أنواع بيانات JavaScript </h3>
+        <h2 className="title-h2">5. أنواع بيانات JavaScript </h2>
         <p className="style_divv">
             يمكن أن تحتوي متغيرات جافا سكريبت على أرقام مثل 100 وقيم نصية مثل "Hello Word".<br/>
             في البرمجة ، تسمى القيم النصية <b>string</b> .<br/>

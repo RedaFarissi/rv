@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function InnerHeight(){
     // document.getElementById("h2").innerHTML =  "innerHeight : " + innerHeight + "<br/>" ;
     // document.getElementById("h2").innerHTML += "outerHeight : " + window.outerHeight  ;
@@ -18,7 +21,7 @@ export default function InnerHeight(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js39_innerWidth2.png' %}" className="img"/>
+        <img src={images.js39_innerWidth2} className="img"/>
         <div className="styleee">
             <h2 id="h2"></h2>
         </div>

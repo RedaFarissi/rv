@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Print(){
     return(
 <section className="section-conetent">
@@ -11,7 +14,7 @@ export default function Print(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js52_print.png' %}" className="img"/>
+        <img src={images.js52_print} className="img"/>
         <div className="styleee">       
             <h2 id="h2">  <button onclick="window.print()" style={{border:"1px solid black",outline:"none",borderRadius:"2px",padding:"3px 9px"}}> Print page </button> </h2>
         </div>

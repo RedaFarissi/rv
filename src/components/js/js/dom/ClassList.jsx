@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function ClassList(){
     return(
 <section className="section-conetent">
@@ -11,16 +14,16 @@ export default function ClassList(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js62_classList.png' %}" className="img"/>
+        <img src={images.js62_classList} className="img"/>
         <div className="styleee">
                 alert alert-primary <br/>
                 <b>object</b>
         </div>
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js62_classList2.png' %}" className="img"/>
-        <img src="{% static 'js/js62_classList2 2.png' %}" className="img"/>
+        <img src={images.js62_classList2} className="img"/>
+        <img src={images.js62_classList2_2} className="img"/>
         <div className="mital">متال 3 :  </div>
-        <img src="{% static 'js/js62_classList5.png' %}" className="img"/>
+        <img src={images.js62_classList5} className="img"/>
         <div className="styleee">
             alert alert-primary border border-primary
         </div>
@@ -38,12 +41,12 @@ export default function ClassList(){
         </p>
         
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js62_classList3.png' %}" className="img"/>
+        <img src={images.js62_classList3} className="img"/>
         <div className="styleee">
             alert alert-primary border border-primary
         </div>
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js62_classList4.png' %}" className="img"/>
+        <img src={images.js62_classList4} className="img"/>
         <div className="styleee">
             alert 
         </div>

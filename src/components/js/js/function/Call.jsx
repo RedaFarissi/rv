@@ -6,7 +6,7 @@ export default function Call(){
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Call</h1>
     <article>
-        <p className="style_divv mt-5 pb-0">
+        <p className="style_divv mt-5">
             باستخدام الدالة  <bdi><b>call()</b></bdi>  يمكن استخدام <b>method</b> على كائنات مختلفة.<br/>
             يمكن استخدام الدالة  <bdi><b>call()</b></bdi> لاستدعاء method مع كائن مالك كوسيطة
             {/* <div className="codeStudio alert bg-dark  mt-2 pb-0" dir="ltr">

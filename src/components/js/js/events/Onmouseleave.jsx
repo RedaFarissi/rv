@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Onmouseleave(){
     // #box{
     //     width: 100%; height:200px; 

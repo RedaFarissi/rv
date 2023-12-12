@@ -1,3 +1,5 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Focus(){
     //document.getElementById("email_id").focus()
@@ -12,7 +14,7 @@ export default function Focus(){
             </div> */}
         </div>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js81_focus.png' %}" className="img"/>
+        <img src={images.js81_focus} className="img"/>
         <div className="styleee"> 
             <input type="email" id="email_id"/> <br/>
             <input type="password" id="password"/>

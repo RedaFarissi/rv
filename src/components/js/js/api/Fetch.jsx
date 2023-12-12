@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Fetch(){
     // //exemple 1
     // var lien_json = "https://ipapi.co/8.8.8.8/json/";
@@ -65,21 +68,21 @@ export default function Fetch(){
         </pre> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js136_fetch.png' %}" className="img"/>
+        <img src={images.js136_fetch} className="img"/>
         <div className="styleee">
             <h2> fetch API </h2>
             <div id='result'>  </div>
         </div>   
         <div className="mital">متال 2 : </div>
-        <img src="{% static 'js/js136_fetch2.png' %}" className="img"/>
-        <img src="{% static 'js/js136_fetch2 2.png' %}" className="img"/>
+        <img src={images.js136_fetch2} className="img"/>
+        <img src={images.js136_fetch2_2} className="img"/>
         <div className="mital">متال 3 : </div>
-        <img src="{% static 'js/js136_fetch3.png' %}" className="img"/>
+        <img src={images.js136_fetch3} className="img"/>
         <div className="styleee">
             <div id='resulta'>  </div>
         </div>
         <div className="mital">متال 4 : </div>
-        <img src="{% static 'js/js136_fetch4.png' %}" className="img"/>
+        <img src={images.js136_fetch4} className="img"/>
         <div className="styleee" id="reSulTa_real_exemple" style={{height:"150vh",overflowY:"auto",backgroundColor:"red",}}>  </div>
     </article>
 </section>

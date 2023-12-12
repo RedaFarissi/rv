@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Onblur(){
     // document.getElementById("InPuT2").onfocus = function(){
     //     const id = document.getElementById("InPuT2")

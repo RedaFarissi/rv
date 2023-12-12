@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function GetElementsByTagName(){
     return(
 <section className="section-conetent">
@@ -18,7 +21,7 @@ export default function GetElementsByTagName(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js72_getElementsByTagName.png' %}" className="img"/>
+        <img src={images.js72_getElementsByTagName} className="img"/>
         <div className="styleee">  
             <div>div 1</div>
             <div>div 2</div>
