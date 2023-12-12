@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function LoopFor(){
     return(
 <section className="section-conetent">
@@ -52,17 +55,17 @@ export default function LoopFor(){
             </p>
             <div className="mital">متال :  </div>
             <ul><li> سيتم تكرار السطر البرمجي 5 مرات .</li></ul> 
-            <img src="{% static 'js/js19_Loop.png' %}" className="img"/>
+            <img src={images.js19_Loop} className="img"/>
             <div className="styleee">
                 <h2> 0 1 2 3 4 </h2>
             </div>
             <div className="mital">متال 2 :  </div>
             <ul><li>في المتال المصفوفة تحتوي على 3 قيم و الحلقة <b>for</b> تقوم بتكرار 5 مراة مم يخلق قيم غير موجودة </li></ul> 
-            <img src="{% static 'js/js19_Loop2.png' %}" className="img"/>
+            <img src={images.js19_Loop2} className="img"/>
             <div className="styleee"><h2>reda<br/>eskouni<br/>25<br/>undefined<br/>undefined</h2></div>
             <div className="mital">متال 3 :  </div>
             <ul><li> يمكن إستخدام الخاصية <b>length</b> لإنشاء حلقة تقوم بتكرار الأوامر بنفس عدد عناصر المصفوفة </li></ul> 
-            <img src="{% static 'js/js19_Loop3.png' %}" className="img"/>
+            <img src={images.js19_Loop3} className="img"/>
             <div className="styleee"><h2> reda <br/> eskouni <br/> 25 </h2></div>
     </article>
     <article>
@@ -79,10 +82,10 @@ export default function LoopFor(){
         }</pre></div>*/}
         </p> 
         <div className="mital">متال :  </div> 
-        <img src="{% static 'js/js19_Loop4.png' %}" className="img"/>
+        <img src={images.js19_Loop4} className="img"/>
         <div className="styleee"><h2> Reda <br/> Eskouni <br/> 25 </h2></div>
         <div className="mital">متال 2 :  </div> 
-        <img src="{% static 'js/js19_Loop5.png' %}" className="img"/>
+        <img src={images.js19_Loop5} className="img"/>
         <div className="styleee">
             <h2> Reda <br/> Eskouni <br/> 25 </h2>
         </div>
@@ -99,12 +102,12 @@ export default function LoopFor(){
             </div> */}
         </p>
        <div className="mital">متال  :  </div> 
-        <img src="{% static 'js/js19_Loop6.png' %}" className="img"/>
+        <img src={images.js19_Loop6} className="img"/>
         <div className="styleee">
             <h2> Reda<br/>Kamal<br/>Manal<br/>hajar </h2>
         </div>
         <div className="mital">متال 2 :  </div> 
-        <img src="{% static 'js/js19_Loop7.png' %}" className="img"/>
+        <img src={images.js19_Loop7} className="img"/>
         <div className="styleee">
             <h2>c<br/>o<br/>d<br/>d<br/>i<br/>n<br/>g </h2>
         </div>
@@ -131,22 +134,22 @@ export default function LoopFor(){
         <span style="color:var(--js-color)">Arrays</span>.<b style="color:gold">forEach(</b>name_Function<b style="color:gold">)</b></pre></div>*/}
         </p> 
         <div className="mital">متال :  </div> 
-        <img src="{% static 'js/js19_Loop8.png' %}" className="img"/>
+        <img src={images.js19_Loop8} className="img"/>
         <div className="styleee">
             <h2>1 x 2 = 2<br/>2 x 2 = 4<br/>3 x 2 = 6<br/>4 x 2 = 8<br/>5 x 2 = 10<br/>6 x 2 = 12<br/>7 x 2 = 14<br/>8 x 2 = 16<br/>9 x 2 = 18<br/>10 x 2 = 20</h2>
         </div>
         <div className="mital">متال 2 :  </div> 
-        <img src="{% static 'js/js19_Loop9.png' %}" className="img"/>
+        <img src={images.js19_Loop9} className="img"/>
         <div className="styleee">
             <h2>1 x 20 = 20<br/>2 x 20 = 40<br/>3 x 20 = 60<br/>4 x 20 = 80<br/>5 x 20 = 100<br/>6 x 20 = 120<br/>7 x 20 = 140<br/>8 x 20 = 160<br/>9 x 20 = 180<br/>10 x 20 = 200</h2>
         </div>
         <div className="mital">متال 3 :  </div> 
-        <img src="{% static 'js/js19_Loop10.png' %}" className="img"/>
+        <img src={images.js19_Loop10} className="img"/>
         <div className="styleee">
             <h2>20 40 60 80 0</h2>
         </div>
         <div className="mital">متال 4 :  </div> 
-        <img src="{% static 'js/js19_Loop11.png' %}" className="img"/>
+        <img src={images.js19_Loop11} className="img"/>
         <div className="styleee">
             <h2>a[0] = reda<br/>a[1] = 2<br/>a[2] = 3<br/>a[3] = 13<br/>a[4] = 2<br/>a[5] = 9<br/>a[6] = 6</h2>
         </div>

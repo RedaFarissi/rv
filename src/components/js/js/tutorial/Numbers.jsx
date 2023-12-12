@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Numbers(){
     return(
 <section className="section-conetent">
@@ -21,10 +24,10 @@ export default function Numbers(){
             </div> */}
         </p>
         <div className="mital">متال 1 :  </div>
-        <img src="{% static 'js/js11_Numbers.png' %}" className="img"/>
+        <img src={images.js11_Numbers} className="img"/>
         <div className="styleee"><h2> 9 + 9.5 = 18.5 </h2></div>
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js11_Numbers2.png' %}" className="img"/>
+        <img src={images.js11_Numbers2} className="img"/>
         <div className="styleee"><h2>123000 <br/> 0.123 </h2></div>
         <div className="alert alert-danger" role="alert">
             الحد الأقصى لعدد الكسور العشرية هو 17.
@@ -40,10 +43,10 @@ export default function Numbers(){
             </div> */}
         </p>
         <div className="mital">متال 1 :  </div>
-        <img src="{% static 'js/js11_Numbers3.png' %}" className="img"/>
+        <img src={images.js11_Numbers3} className="img"/>
         <div className="styleee"><h2> 123 type is string </h2></div>
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js11_Numbers4.png' %}" className="img"/>
+        <img src={images.js11_Numbers4} className="img"/>
         <div className="styleee"><h2> 123 </h2></div>
         <h5>2. <bdi> toFixed() Method </bdi></h5>
         <p className="style_divv">
@@ -57,7 +60,7 @@ export default function Numbers(){
         </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js11_Numbers5.png' %}" className="img"/>
+        <img src={images.js11_Numbers5} className="img"/>
         <div className="styleee"> <h2> 32<br/>32.24<br/>32.2360<br/>32.236000 </h2></div>
         <h5>2. <bdi> toPrecision() Method </bdi></h5>
         <p className="style_divv">
@@ -71,7 +74,7 @@ export default function Numbers(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js11_Numbers6.png' %}" className="img"/>
+        <img src={images.js11_Numbers6} className="img"/>
         <div className="styleee"><h2> 32.236<br/>32<br/>32.24<br/>32.2360 </h2></div>
         <h5>3. <bdi> Converting Variables to Numbers </bdi></h5>
         <p className="style_divv">
@@ -84,13 +87,13 @@ export default function Numbers(){
             هذه الطرق ليست طرقًا للأرقام ، ولكنها طرق <b>JavaScript</b> عامة.
         </p>
         <div className="mital">متال 1:  </div>
-        <img src="{% static 'js/js11_Numbers7.png' %}" className="img"/>
-        <img src="{% static 'js/js11_Numbers7 2.png' %}" className="img"/>
+        <img src={images.js11_Numbers7} className="img"/>
+        <img src={images.js11_Numbers7_2} className="img"/>
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js11_Numbers8.png' %}" className="img"/>
-        <img src="{% static 'js/js11_Numbers8 2.png' %}" className="img"/>
+        <img src={images.js11_Numbers8} className="img"/>
+        <img src={images.js11_Numbers8_2} className="img"/>
         <div className="mital">متال 3 :  </div>
-        <img src="{% static 'js/js11_Numbers9.png' %}" className="img"/>
+        <img src={images.js11_Numbers9} className="img"/>
         <div className="styleee"><h2>2042.5</h2></div>
     </article>
     <article>
@@ -102,10 +105,10 @@ export default function Numbers(){
             </div> */}
         </p>
         <div className="mital">متال 1 :  </div>
-        <img src="{% static 'js/js11_Numbers10.png' %}" className="img"/>
+        <img src={images.js11_Numbers10} className="img"/>
         <div className="styleee"><h2>5.3333333333<br/>5.33</h2></div>
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js11_Numbers11.png' %}" className="img"/>
+        <img src={images.js11_Numbers11} className="img"/>
         <div className="styleee"><h2>5.00</h2></div>       
     </article>
 </section>

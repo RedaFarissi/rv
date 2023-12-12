@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Filter(){
     return(
 <section className="section-conetent">
@@ -19,7 +22,7 @@ export default function Filter(){
         </p>
         <div className="mital"> الطريقة 1 :  </div>
         <ul><li> في المتال أسفله  </li></ul>
-        <img src="{% static 'js/js144_filter.png' %}" className="img"/>
+        <img src={images.js144_filter} className="img"/>
         <div className="styleee">
             <div id="result" className="resulta">
                 6<br/>8<br/>10<br/>
@@ -27,7 +30,7 @@ export default function Filter(){
         </div>
         <div className="mital"> الطريقة 2 :  </div>
         <ul><li> في المتال أسفله  </li></ul>
-        <img src="{% static 'js/js144_filter3.png' %}" className="img"/>
+        <img src={images.js144_filter3} className="img"/>
         <div className="styleee">
             <div  className="resulta"> more_5 length = 3 </div>
             <table>
@@ -38,7 +41,7 @@ export default function Filter(){
         </div>
         <div className="mital"> الطريقة 3 :  </div>
         <ul><li> في المتال أسفله  </li></ul>
-        <img src="{% static 'js/js144_filter2.png' %}" className="img"/>
+        <img src={images.js144_filter2} className="img"/>
         <div className="styleee">
             <div className="resulta">
              6<br/>8<br/>10<br/>

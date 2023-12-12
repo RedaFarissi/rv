@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Bind(){
     // const person = {
     //     F_Name: "Reda",
@@ -46,7 +49,7 @@ export default function Bind(){
         
         <div className="mital"> متال :  </div>
         <ul><li> عند كتابة إسم object نقطة إسم الدالة بدون أقواس فإنك تقوم بنسخ الدالة فقط و لن تستطيع إستخدام المعلومات داخل ال object  </li></ul>
-        <img src="{% static 'js/js147_bind2.png' %}" className="img"/>
+        <img src={images.js147_bind2} className="img"/>
         <div className="styleee">
           <div id="result"></div>
         </div>
@@ -55,7 +58,7 @@ export default function Bind(){
             <li> يمكن الإستفادة من نسخة الدالة التي بداخل object و ذالك من خلال إسنادها إلى متغير وإضافة أقواس . </li>
             <li> سيحاول هذا المثال عرض اسم الشخص  ، لكنه سيعرض undefined بدلاً من ذلك . وذالك لأنه لا يستطيع الوصول إلى  F_Name و L_Name و Age لأنه دالة منفصلة </li>
         </ul>
-        <img src="{% static 'js/js147_bind.png' %}" className="img"/>
+        <img src={images.js147_bind} className="img"/>
         <div className="styleee">
             <p>undefined</p>
         </div>
@@ -63,7 +66,7 @@ export default function Bind(){
         <ul>
             <li> عند إستخدام الخاصية bind يمكن تمرير البيانات الخاصة ب object أخر شرط أن يحتوي العنصر على نفس key مع الدالة المستوردة .</li>    
         </ul>
-        <img src="{% static 'js/js147_bind3.png' %}" className="img"/>
+        <img src={images.js147_bind3} className="img"/>
         <div className="styleee">
             <div id="resulta"></div>
         </div>
@@ -71,10 +74,10 @@ export default function Bind(){
         <ul>
             <li> يمكن إستدعاء نسخة الدالة بواسطة أقواس أخر الدالة أو من خلال إسنادها إلى متغير أخر كالأمتلة السابقة . </li>    
         </ul>
-        <img src="{% static 'js/js147_bind4.png' %}" className="img"/>
-        <img src="{% static 'js/js147_bind5.png' %}" className="img"/>
+        <img src={images.js147_bind4} className="img"/>
+        <img src={images.js147_bind5} className="img"/>
         <div className="mital"> متال 5 :  </div>
-        <img src="{% static 'js/js147_bind6.png' %}" className="img"/>
+        <img src={images.js147_bind6} className="img"/>
         <div className="styleee">
             <div className="h2"> function () {"{"} [native code] {"}"}<br/>Rabab Thing 26 </div>
         </div>

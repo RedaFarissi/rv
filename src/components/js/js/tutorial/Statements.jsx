@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Statements(){
     return(
 <section className="section-conetent">
@@ -18,7 +21,7 @@ export default function Statements(){
         </p>
         <div className="mital">متال :  </div>
         <ul><li> هذا السطر البرمجي يخبر المتصفح بكتابة <b>Hello Word</b> . داخل عنصر <b>HTML</b> الذي يحتوي على السمة  <bdi><b>id="hw"</b></bdi> :</li></ul>
-        <img src="{% static 'js/js3_Statements.png' %}" className="img"/>
+        <img src={images.js3_Statements} className="img"/>
         <div className="styleee img"><h2> Hello Word </h2></div>
         <ul>
             <li> تحتوي معظم برامج <b>JavaScript</b> على العديد من عبارات <b>JavaScript</b> . </li>
@@ -33,7 +36,7 @@ export default function Statements(){
             أضف فاصلة منقوطة في نهاية كل عبارة قابلة للتنفيذ لكي لا تحصل على خطأ عند تشغيل الكود .
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js3_Statements2.png' %}" className="img"/>
+        <img src={images.js3_Statements2} className="img"/>
         <div className="styleee"><h2> 6 </h2></div>
         <div className="mital"> متال 2 :  </div>
         <ul>
@@ -41,7 +44,7 @@ export default function Statements(){
             <li> عبارات النهاية بالفاصلة المنقوطة غير مطلوبة ، ولكن يوصى بها بشدة.</li>
             <li>عند الفصل بفاصلة منقوطة ، يُسمح بعبارات متعددة في سطر واحد </li>
         </ul>
-        <img src="{% static 'js/js3_Statements3.png' %}" className="img"/>
+        <img src={images.js3_Statements3} className="img"/>
         <div className="styleee"><h2>6</h2></div>
     </article>
 </section>

@@ -1,5 +1,6 @@
-import "./Variables.css"
-
+//import "./Variables.css"
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
 export default function Variables(){
     return(
 <section className="section-conetent">
@@ -22,7 +23,7 @@ export default function Variables(){
         </p>
         <div className="mital">متال :  </div>
         <ul><li> في هذا المثال ، تعتبر <b>x</b> و <b>y</b> و <b>z</b> متغيرات معرّفة بالكلمة الأساسية <b>var</b>  </li></ul>
-        <img src="{% static 'js/js4_Variables.png' %}" className="img"/>
+        <img src={images.js4_Variables} className="img"/>
         <div className="styleee">
             <h2>JavaScript Variables</h2>
             <div id="d"></div>
@@ -35,7 +36,7 @@ export default function Variables(){
         </div>
         <div className="mital"> متال 2 :  </div>
         <ul><li> في هذا المثال ، تعتبر <b>x2</b> و <b>y2</b> و <b>z2</b> متغيرات معرّفة بالكلمة  <b>let</b>  </li></ul>
-        <img src="{% static 'js/js4_Variables2.png' %}" className="img"/>
+        <img src={images.js4_Variables2} className="img"/>
         <div className="styleee">
             <h2>JavaScript Variables </h2>
             <div id="d2"></div>
@@ -49,7 +50,7 @@ export default function Variables(){
         <div className="sum_exemple_style">
         <div className="mital"> متال 3 :  </div>
         <ul><li> في هذا المثال ، تعتبر <b>x3</b> و <b>y3</b> و <b>z3</b> متغيرات معرّفة بدون أي الكلمة .</li></ul>
-        <img src="{% static 'js/js4_Variables3.png' %}" className="img"/>
+        <img src={images.js4_Variables3} className="img"/>
         <div className="styleee">
             <h2>JavaScript Variables </h2>
             <div id="d3"></div>
@@ -73,7 +74,7 @@ export default function Variables(){
 
         <div className="mital"> متال :  </div>
         <ul><li> يتم التصريح عن المتغير <b>pi</b> بالكلمة الأساسية <b>const</b>. ويعني ذالك أن هذه قيم ثابتة ولا يمكن تغييرها </li></ul>
-        <img src="{% static 'js/js4_Variables4.png' %}" className="img"/>
+        <img src={images.js4_Variables4} className="img"/>
         <div className="styleee">
             <h2>JavaScript Variables width const </h2>
             <div id="con"></div>
@@ -94,7 +95,7 @@ export default function Variables(){
             
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js4_Variables5.png' %}" className="img"/>
+        <img src={images.js4_Variables5} className="img"/>
         <div className="styleee">
             {/* <p id="var" style="color:brown;background-color: yellow;">  </p>
             <p id="var2" style="color:orange;background-color: black;"> </p>
@@ -134,7 +135,7 @@ export default function Variables(){
             تتم كتابة المتغيرات النصية داخل علامتي اقتباس مزدوجتين أو مفردة. الأرقام تكتب بدون علامات اقتباس .<br/>
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js4_Variables6.png' %}" className="img"/>
+        <img src={images.js4_Variables6} className="img"/>
         <div className="styleee">
             <div id="String"> </div>
             <div id="number"> </div>

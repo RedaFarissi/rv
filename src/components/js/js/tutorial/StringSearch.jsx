@@ -1,3 +1,5 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function StringSearch(){
     return(
@@ -24,12 +26,12 @@ export default function StringSearch(){
             str.<span style="color:gold">indexOf(</span><span style="color:orange;">"locate"</span><span style="color:gold">)</span>;</pre>
                </div> */}
             </p>
-            <div className="mital">متال :  </div>
-            <img src="{% static 'js/js9_Search.png' %}" className="img"/>
-            <img src="{% static 'js/js9_Search 2.png' %}" className="img"/>
+            <div className="mital">متال 1 :  </div>
+            <img src={images.js9_Search} className="img"/>
+            <img src={images.js9_Search_2} className="img"/>
             <div className="mital">متال 2 :  </div>
-            <img src="{% static 'js/js9_Search2.png' %}" className="img"/>
-            <img src="{% static 'js/js9_Search2 2.png' %}" className="img"/>
+            <img src={images.js9_Search2} className="img"/>
+            <img src={images.js9_Search2_2} className="img"/>
         </article>
         <article>
             <h2 className="title-h2" id="lastIndexOf">2. <bdi>JavaScript String lastIndexOf()</bdi></h2>
@@ -41,8 +43,8 @@ export default function StringSearch(){
                 </div> */}
             </p>
             <div className="mital">متال :  </div>
-            <img src="{% static 'js/js9_Search3.png' %}" className="img"/>
-            <img src="{% static 'js/js9_Search3 2.png' %}" className="img"/>
+            <img src={images.js9_Search3} className="img"/>
+            <img src={images.js9_Search3_2} className="img"/>
             <div className="alert bg-warning">
                 يحسب <b>JavaScript</b> المواضع من الصفر. <br/>
                 0 هو الموضع الأول في السلسلة ، 1 هو الموضع الثاني ، 2 هو الموضع الثالث ...<br/>
@@ -58,8 +60,8 @@ export default function StringSearch(){
                 </div> */}
             </p>
             <div className="mital">متال :  </div>
-            <img src="{% static 'js/js9_Search4.png' %}" className="img"/>
-            <img src="{% static 'js/js9_Search4 2.png' %}" className="img"/>
+            <img src={images.js9_Search4} className="img"/>
+            <img src={images.js9_Search4_2} className="img"/>
         </article>
         <article>
             <h2 className="title-h2" id="match">4. <bdi>JavaScript String match()</bdi></h2>
@@ -72,7 +74,7 @@ export default function StringSearch(){
                 </div> */}
             </p>
             <div className="mital">متال :  </div>
-            <img src="{% static 'js/js9_Search5.png' %}" className="img"/>
+            <img src={images.js9_Search5} className="img"/>
             <div className="styleee">
                 <h2> E,E </h2>
                 <h2> i,i,i,i,i,i,i </h2>
@@ -89,11 +91,11 @@ export default function StringSearch(){
                 </div> */}
             </p>
             <div className="mital">متال :  </div>
-            <img src="{% static 'js/js9_Search6.png' %}" className="img"/>
-            <img src="{% static 'js/js9_Search6 2.png' %}" className="img"/>
+            <img src={images.js9_Search6} className="img"/>
+            <img src={images.js9_Search6_2} className="img"/>
             <div className="mital">متال 2 :  </div>
-            <img src="{% static 'js/js9_Search7.png' %}" className="img"/>
-            <img src="{% static 'js/js9_Search7 2.png' %}" className="img"/>
+            <img src={images.js9_Search7} className="img"/>
+            <img src={images.js9_Search7_2} className="img"/>
         </article>
         <article>
             <h2 className="title-h2" id="startsWith">6. <bdi>JavaScript String startsWith()</bdi></h2>
@@ -113,8 +115,8 @@ export default function StringSearch(){
                 </div> */}
             </p>
             <div className="mital">متال :  </div>
-            <img src="{% static 'js/js9_Search8.png' %}" className="img"/>
-            <img src="{% static 'js/js9_Search8 2.png' %}" className="img"/>
+            <img src={images.js9_Search8} className="img"/>
+            <img src={images.js9_Search8_2} className="img"/>
         </article>
         <article>   
             <h2 className="title-h2" id="endsWith">7. <bdi>JavaScript String endsWith()</bdi> </h2>
@@ -122,7 +124,7 @@ export default function StringSearch(){
                 تعيد الدالة  <b><bdi>endsWith()</bdi></b> true إذا <u>إنتهى</u>  سلسلة نصية (string) بقيمة محددة ، وإلا فهي false .<br/>
             </p>
             <div className="mital">متال :  </div>
-            <img src="{% static 'js/js9_Search9.png' %}" className="img"/>
+            <img src={images.js9_Search9} className="img"/>
             <div className="styleee">
                 <h2> true </h2>
             </div>

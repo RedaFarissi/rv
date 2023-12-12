@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Booleans(){
     return(
 <section className="section-conetent">
@@ -12,7 +15,7 @@ export default function Booleans(){
             </ul>
         </div>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js12_Booleans.png' %}" className="img"/>
+        <img src={images.js12_Booleans} className="img"/>
         <div className="styleee img">
             <h2>false</h2>
             <h2>true</h2>
@@ -23,7 +26,7 @@ export default function Booleans(){
             يمكنك استخدام الدالة <bdi><b>Boolean()</b></bdi> لمعرفة ما إذا كان التعبير (أو المتغير) صحيحًا
         </div>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js12_Booleans2.png' %}" className="img"/>
+        <img src={images.js12_Booleans2} className="img"/>
         <div className="styleee img">
             <h2>true</h2>
         </div>

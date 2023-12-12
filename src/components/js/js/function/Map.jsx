@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Map(){
     return(
 <section className="section-conetent">
@@ -21,17 +24,17 @@ export default function Map(){
         </p>
         <div className="mital"> الطريقة 1 :  </div>
         <ul><li> في المتال أسفله  </li></ul>
-        <img src="{% static 'js/js143_map.png' %}" className="img"/>
+        <img src={images.js143_map} className="img"/>
         <div className="styleee">
             4<br/> 16<br/> 36<br/> 64<br/> 100
         </div>
         <div className="mital"> الطريقة 2 :  </div>
-        <img src="{% static 'js/js143_map2.png' %}" className="img"/>
+        <img src={images.js143_map2} className="img"/>
         <div className="styleee">
             4<br/> 16<br/> 36<br/> 64<br/> 100
         </div>
         <div className="mital"> الطريقة 3 :  </div>
-        <img src="{% static 'js/js143_map3.png' %}" className="img"/>
+        <img src={images.js143_map3} className="img"/>
         <div className="styleee">
             4<br/> 16<br/> 36<br/> 64<br/> 100
         </div>

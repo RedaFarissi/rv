@@ -1,4 +1,6 @@
-import "./String.css"
+//import "./String.css"
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function String(){
     return(
@@ -36,12 +38,12 @@ export default function String(){
             <li> في المتال التالي قمنا  بإسناد قيمة حرفية إلى المتغير <b>text</b> . </li>
             <li> تم بعد ذالك أسندنا القيم إلى متغير أخر . </li>
         </ul>
-        <img src="{% static 'js/js8_string.png' %}" className="img"/>
-        <img src="{% static 'js/js8_string 2.png' %}" className="img"/>
+        <img src={images.js8_string} className="img"/>
+        <img src={images.js8_string_2} className="img"/>
         <div className="mital"> متال 2 :  </div>
         <ul><li> في هاذا المتال قمنا بعرض النتيجة مباشرة . </li></ul>
-        <img src="{% static 'js/js8_string2.png' %}" className="img"/>
-        <img src="{% static 'js/js8_string2 2.png' %}" className="img"/>
+        <img src={images.js8_string2} className="img"/>
+        <img src={images.js8_string2_2} className="img"/>
         <h2 className="title-h2" id="character">2. Escape Character</h2>
         <p className="style_divv">
             سيتم تقطيع السلسلة إلى  نحن من يسمى.<br/>
@@ -56,8 +58,8 @@ export default function String(){
 
         <div className="mital"> متال :  </div>
         <div className="character">
-        <div> <img src="{% static 'js/js8_string3.png' %}"/>   <h2>عند إستخدام  شرطة مائلة للخلف </h2> </div>
-        <div> <img src="{% static 'js/js8_string3 2.png' %}"/> <h2>بدون إستخدام  شرطة مائلة للخلف</h2> </div>
+        <div> <img src={images.js8_string3}/>   <h2>عند إستخدام  شرطة مائلة للخلف </h2> </div>
+        <div> <img src={images.js8_string3_2}/> <h2>بدون إستخدام  شرطة مائلة للخلف</h2> </div>
         </div>
         <ul><li>قم بتجربة باقي العلامات للفهم بشكل أفضل </li></ul>
         <table>
@@ -70,11 +72,11 @@ export default function String(){
             <tr> <td><bdi>\v</bdi></td> <td> جدولة عمودية </td>  </tr>
         </table>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js8_string4.png' %}" className="img"/>
-        <img src="{% static 'js/js8_string4 2.png' %}" className="img"/>
+        <img src={images.js8_string4} className="img"/>
+        <img src={images.js8_string4_2} className="img"/>
         <div className="mital"> متال 2 :  </div>
-        <img src="{% static 'js/js8_string5.png' %}" className="img"/>
-        <img src="{% static 'js/js8_string5 2.png' %}" className="img"/>
+        <img src={images.js8_string5} className="img"/>
+        <img src={images.js8_string5_2} className="img"/>
         <h2 className="title-h2" id="objects">3. JavaScript Strings as Objects</h2>
         <p className="style_divv">
             عادةً ما تكون متغيرات من نوع <b>string</b> في لغة  <b>JavaScript</b> عبارة عن قيم أولية تم إنشاؤها من العناصر الحرفية:<br/><br/>
@@ -88,10 +90,10 @@ export default function String(){
         </div> */}
         </p>
         <div className="mital"> متال  :  </div>
-        <img src="{% static 'js/js8_string6.png' %}" className="img"/>
-        <img src="{% static 'js/js8_string6 2.png' %}" className="img"/>
+        <img src={images.js8_string6} className="img"/>
+        <img src={images.js8_string6_2} className="img"/>
         <div className="mital"> متال 2 :  </div>
-        <img src="{% static 'js/js8_string7.png' %}" className="img"/>
+        <img src={images.js8_string7} className="img"/>
         <div className="styleee"><h2>Reda</h2></div>
         <div className="alert bg-warning">
         <ul>
@@ -125,10 +127,10 @@ export default function String(){
             يقطع هذا المثال جزءًا من سلسلة من الموضع 7 إلى الموضع 13
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js8_string8.png' %}" className="img"/>
+        <img src={images.js8_string8} className="img"/>
         <div className="styleee"><h2> Banana </h2></div>
         <div className="mital"> متال 2 :  </div>
-        <img src="{% static 'js/js8_string12.png' %}" className="img"/>
+        <img src={images.js8_string12} className="img"/>
         <div className="styleee"><h2> Banana </h2></div>
         <h5 className="title-h5">2. <bdi>substring() method</bdi></h5>
         <p className="style_divv">
@@ -136,7 +138,7 @@ export default function String(){
             الفرق هو أن <bdi><b>substring()</b></bdi> لا يمكنها قبول الفهارس السالبة
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js8_string9.png' %}" className="img"/>
+        <img src={images.js8_string9} className="img"/>
         <div className="styleee"><h2> Kiwi </h2></div>
         <h5 className="title-h5">3. <bdi>substr() method</bdi></h5>
         <p className="style_divv">
@@ -144,11 +146,11 @@ export default function String(){
             الفرق هو أن المعلمة الثانية تحدد طول الجزء المستخرج.
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js8_string10.png' %}" className="img"/>
+        <img src={images.js8_string10} className="img"/>
         <div className="styleee"><h2> Ba </h2></div>
         <div className="mital"> متال 2 :  </div>
         <ul><li> تستقبل الدالة القيم السالبة أيضا </li></ul>
-        <img src="{% static 'js/js8_string11.png' %}" className="img"/>
+        <img src={images.js8_string11} className="img"/>
         <div className="styleee"><h2> Kiwi </h2></div>
         <h2 className="title-h2" id="replace">5. Replace String</h2>
         <p className="style_divv">
@@ -160,7 +162,7 @@ export default function String(){
         </p>
         <div className="mital"> متال :  </div>
         <ul><li> يمكن تغيير محتوى <b>HTML</b> عبر إستخدام الدالة <b><bdi>replace()</bdi></b> .</li></ul>
-        <img src="{% static 'js/js8_string13.png' %}" className="img"/>
+        <img src={images.js8_string13} className="img"/>
         <div className="styleee"><h2> Please visit JavaScript </h2></div>
         <div className="alert bg-warning" >
         <ul>
@@ -183,10 +185,10 @@ export default function String(){
         </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js8_string14.png' %}" className="img"/>
+        <img src={images.js8_string14} className="img"/>
         <div className="styleee"><h2> HELLO WORD </h2></div>
         <div className="mital"> متال 2 :  </div>
-        <img src="{% static 'js/js8_string15.png' %}" className="img"/>
+        <img src={images.js8_string15} className="img"/>
         <div className="styleee"><h2> hello word </h2></div>
         
         <h2 className="title-h2" id="concat">7. JavaScript String concat</h2>
@@ -200,10 +202,10 @@ export default function String(){
         </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js8_string16.png' %}" className="img"/>
+        <img src={images.js8_string16} className="img"/>
         <div className="styleee"><h2> Reda Eskouni </h2></div>
         <div className="mital"> متال 2 :  </div>
-        <img src="{% static 'js/js8_string17.png' %}" className="img"/>
+        <img src={images.js8_string17} className="img"/>
         <div className="styleee"><h2> Reda Eskouni </h2></div>
         <h2 className="title-h2" id="trim">8. JavaScript String trim</h2>
         <p className="style_divv">
@@ -214,7 +216,7 @@ export default function String(){
         </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js8_string18.png' %}" className="img"/>
+        <img src={images.js8_string18} className="img"/>
         <div className="styleee"><h2> Reda </h2></div>
         <h2 className="title-h2" id="Padding">9. JavaScript String Padding</h2>
         <p className="style_divv">
@@ -222,14 +224,14 @@ export default function String(){
         </p>
         <h5 className="title-h5">1. <bdi>padStart()</bdi></h5>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js8_string19.png' %}" className="img"/>
+        <img src={images.js8_string19} className="img"/>
         <div className="styleee"><h2>0005</h2></div>
         <div className="mital"> متال 2 :  </div>
-        <img src="{% static 'js/js8_string20.png' %}" className="img"/>
+        <img src={images.js8_string20} className="img"/>
         <div className="styleee"><h2>0000Reda</h2></div>
         <h5 className="title-h5">2. <bdi>padEnd()</bdi></h5>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js8_string21.png' %}" className="img"/>
+        <img src={images.js8_string21} className="img"/>
         <div className="styleee"><h2>5000</h2></div>
         <h2 className="title-h2" id="charAt">10. JavaScript String charAt</h2>
         <p className="style_divv">
@@ -240,7 +242,7 @@ export default function String(){
         </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js8_string22.png' %}" className="img"/>
+        <img src={images.js8_string22} className="img"/>
         <div className="styleee"><h2>H</h2></div>
         <h2 className="title-h2" id="split">11. JavaScript String split</h2>
         <p className="style_divv">
@@ -254,7 +256,7 @@ export default function String(){
         </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js8_string23.png' %}" className="img"/>
+        <img src={images.js8_string23} className="img"/>
         <div className="styleee"><h2> HTML <br/> CSS<br/> JavaScript<br/> PHP<br/> MYSQL<br/> React<br/> undefined </h2></div>
     </article>
 </section>

@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Random(){
     // let d = Math.random();
     // document.getElementById("id").innerHTML = d;
@@ -31,7 +34,7 @@ export default function Random(){
         </p>
         <div className="mital">متال :  </div>
         <ul><li> في كل مرة تقوم بتحديت الصفحة يتم تحديد رقم عشوائي بين 0 و 1.</li></ul>
-        <img src="{% static 'js/js14_random.png' %}" className="img"/>
+        <img src={images.js14_random} className="img"/>
         <div className="styleee">
             <h2 id="id">  </h2>       
         </div>
@@ -51,20 +54,20 @@ export default function Random(){
         </p>
         <div className="mital">متال 1 :  </div>
         <ul><li> في كل مرة تقوم بتحديت الصفحة يتم تحديد رقم عشوائي  بين 0 و 9.</li></ul>
-        <img src="{% static 'js/js14_random2.png' %}" className="img"/>
+        <img src={images.js14_random2} className="img"/>
         <div className="styleee">
             <h2 id="ran">  </h2>
         </div>
         <div className="mital">متال 2 :  </div>
         <ul><li> في كل مرة تقوم بتحديت الصفحة يتم تحديد رقم عشوائي  بين 0 و 10.</li></ul>
-        <img src="{% static 'js/js14_random3.png' %}" className="img"/>
+        <img src={images.js14_random3} className="img"/>
         <div className="styleee">
             <h2 id="id-random">  </h2>
         
         </div>
         <div className="mital">متال 3:  </div>
         <ul><li> في كل مرة تقوم بتحديت الصفحة يتم تحديد رقم عشوائي  بين 90 و 199.</li></ul>
-        <img src="{% static 'js/js14_random4.png' %}" className="img"/>
+        <img src={images.js14_random4} className="img"/>
         <div className="styleee">
             <h2 id="result">  </h2>
            </div>
@@ -86,13 +89,13 @@ export default function Random(){
         </p>
         <div className="mital">متال 1 :  </div>
         <ul><li>   تعرض وظيفة <b>JavaScript</b> هذه دائمًا رقمًا عشوائيًا بين <b>min</b> (مضمن) و <b>max</b> (مستبعد): </li></ul>
-        <img src="{% static 'js/js14_random5.png' %}" className="img"/>
+        <img src={images.js14_random5} className="img"/>
         <div className="styleee">
             <h2 id="result2">  </h2>
         </div>
         <div className="mital">متال 2 :  </div>
         <ul><li>عرض وظيفة <b>JavaScript</b> هذه دائمًا رقمًا عشوائيًا بين <b>min</b> و <b>max</b> (كلاهما مضمن): </li></ul>
-        <img src="{% static 'js/js14_random6.png' %}" className="img"/>
+        <img src={images.js14_random6} className="img"/>
         <div className="styleee">
             <h2 id="result3">  </h2>
         </div>

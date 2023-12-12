@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Introduction(){
     function changer(){ document.getElementById("h2").innerHTML = "Reda Eskouni"}
 	function P(){ document.getElementById("p").innerHTML = Date();}
@@ -23,7 +26,7 @@ export default function Introduction(){
         </p>
         <ul><li>في هاذا المتال قمنا بتسمية الملفين <b>reda</b> ولاكن يختلف الإمتداد فالملف الأول يحمل إمتداد <b>js</b> والملف التاني يحمل إمتداد <b>html</b> .</li></ul>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js_Introduction3.png' %}" className="img"/>
+        <img src={images.js_Introduction3} className="img"/>
     </article>
     <article>
         <h2 className="title-h2">2. طريقة ربط الملف html ب js</h2>
@@ -31,9 +34,9 @@ export default function Introduction(){
             لربط ملف <b>html</b> بملف <b>js</b> يجب إستخدام الوسم <kbd>&lt;script&gt;</kbd> مع السمة <b>src</b> و مسار الملف .
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js_Introduction4.png' %}" className="img"/>
-        <img src="{% static 'js/js_Introduction4 2.png' %}" className="img"/>
-        <img src="{% static 'js/js_Introduction4 3.png' %}" className="img"/>
+        <img src={images.js_Introduction4} className="img"/>
+        <img src={images.js_Introduction4_2} className="img"/>
+        <img src={images.js_Introduction4_3} className="img"/>
         <div className="mital">متال 2 :  </div>
         <ul><li> <b>defer</b> لتشعيل ملف js بعد تحميل عناصر  html </li></ul>
         <div className="alert bg-dark text-light w-75 m-auto" >
@@ -71,7 +74,7 @@ export default function Introduction(){
             المثال أدناه يجد العانصر <b>HTML</b> عبر <b>id</b> ، ويغير محتوى العنصر 
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js_Introduction.png' %}" className="img"/>
+        <img src={images.js_Introduction} className="img"/>
         <div className="style-result">
             <h2 id="h2"> Heading </h2>
         	<p id="p"> Date </p>
@@ -82,7 +85,7 @@ export default function Introduction(){
     <article>
         <h2 className="title-h2">5. تغيير تصميم CSS عبر لغة JavaScript </h2>
             <div className="mital">متال :  </div>
-            <img src="{% static 'js/js_Introduction2.png' %}" className="img"/>
+            <img src={images.js_Introduction2} className="img"/>
             <div className="style-result">
                 <p id="demo">JavaScript can change the style of an HTML element.</p>
             	<button type="button" onclick="document.getElementById('demo').style.fontSize='35px'"> Click Me </button>

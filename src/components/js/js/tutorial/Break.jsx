@@ -1,3 +1,7 @@
+
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Break(){
     return(
 <section className="section-conetent">
@@ -15,7 +19,7 @@ export default function Break(){
             يمكن أيضًا استخدام تعليمة <b>break</b> للقفز من الحلقة
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js23_break.png' %}" className="img"/>
+        <img src={images.js23_break} className="img"/>
         <div className="styleee">
             <h2>i = 0<br/>i = 1<br/>i = 2<br/>i = 3</h2>
         </div>
@@ -31,7 +35,7 @@ export default function Break(){
             </div> */}
         </div>
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js23_break2.png' %}" className="img"/>
+        <img src={images.js23_break2} className="img"/>
         <div className="styleee">
             <h2>i = 0<br/>i = 1<br/>i = 2<br/>i = 3<br/>i = 5<br/>i = 6<br/>i = 7<br/>i = 8</h2>
         </div>

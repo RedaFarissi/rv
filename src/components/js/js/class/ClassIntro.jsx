@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function ClassIntro(){
 //   class Car {
 //     constructor(name , speed){
@@ -50,7 +53,7 @@ export default function ClassIntro(){
         }</pre></div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js139_class_Intro.png' %}" className="img"/>
+        <img src={images.js139_class_Intro} className="img"/>
         <div className="styleee">
             <div id="h1">JavaScript Class</div>
             <p>How to use a JavaScript Class.</p>
@@ -69,7 +72,7 @@ export default function ClassIntro(){
         </p>
         <div className="sum_exemple_style">
             <div className="mital"> متال :  </div>
-            <img src="{% static 'js/js139_class_Intro2.png' %}" className="img"/>
+            <img src={images.js139_class_Intro2} className="img"/>
             <div className="styleee">
                 <p>How to use a JavaScript Class.</p>   
                 <p> Ford 2014 </p>     
@@ -105,14 +108,14 @@ export default function ClassIntro(){
         </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js139_class_Intro3.png' %}" className="img"/>
+        <img src={images.js139_class_Intro3} className="img"/>
         <div className="styleee">
             <h2>JavaScript Class Method</h2>
             <p>How to define and use a Class method.</p>
             <p id="demo"></p>
         </div>
         <div className="mital"> متال 2 :  </div>
-        <img src="{% static 'js/js139_class_Intro4.png' %}" className="img"/>
+        <img src={images.js139_class_Intro4} className="img"/>
         <div className="styleee">
           <h2>JavaScript Class Method</h2>
           <p>How to define and use a Class method.</p>

@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Objects(){
     return(
 <section className="section-conetent">
@@ -29,14 +32,14 @@ export default function Objects(){
         </p>
         <div className="mital"> متال :  </div>
         <ul><li>يمكن عرض عناصر الكائن <small><small>(Object)</small></small> عبر إستخدام المفتاح <small><small>(key)</small></small></li></ul>
-        <img src="{% static 'js/js20_Object.png' %}" className="img"/>
+        <img src={images.js20_Object} className="img"/>
         <div className="styleee "><h2> The car name is : BMW<br/>The car model is : M440i/M440d<br/>The car color is : black<br/>The car max speed is : 300 KM </h2></div>
         <div className="mital"> متال 2 :  </div>
-        <img src="{% static 'js/js20_Object3.png' %}" className="img"/>
+        <img src={images.js20_Object3} className="img"/>
         <div className="styleee img"><h2> The car name is : BMW<br/>The car model is : M440i/M440d<br/>The car color is : black<br/>The car max speed is : 300 KM </h2></div>
         <div className="mital"> متال 3 :  </div>
         <ul><li> على عكس المصفوفة<small><small>(Array)</small></small>  لا يمكن عرض عناصر الكائن <small><small>(Object)</small></small> كنص من نوع <b>string</b> من خلال كتابة إسم الكائن </li></ul>
-        <img src="{% static 'js/js20_Object2.png' %}" className="img"/>
+        <img src={images.js20_Object2} className="img"/>
         <div className="styleee"><h2> [object Object] </h2></div>
     </article>
     <article>
@@ -73,14 +76,14 @@ export default function Objects(){
         </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js20_Object4.png' %}" className="img"/>
+        <img src={images.js20_Object4} className="img"/>
         <div className="styleee"><h2> Reda Eskouni </h2></div>
         <div className="mital"> متال 2 :  </div>
-        <img src="{% static 'js/js20_Object5.png' %}" className="img"/>
+        <img src={images.js20_Object5} className="img"/>
         <div className="styleee"><h2> Reda Eskouni </h2></div>
         <div className="mital"> متال 3 :  </div>
         <ul><li>إذا قمت بالوصول إلى الدالة بدون الأقواس () ، فستعيد تعريف الوظيفة</li></ul>
-        <img src="{% static 'js/js20_Object6.png' %}" className="img"/>
+        <img src={images.js20_Object6} className="img"/>
         <div className="styleee">
             <h2> function() {"{"} if(this.Age{">"}20){"{"} return this.FirstName + " " + this.LastName; {"} }"} </h2>
         </div>

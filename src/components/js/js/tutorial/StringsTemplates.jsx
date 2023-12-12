@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function StringsTemplates(){
     return(
 <section className="section-conetent">
@@ -14,8 +17,8 @@ export default function StringsTemplates(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js10_Templates.png' %}" className="img"/>
-        <img src="{% static 'js/js10_Templates 2.png' %}" className="img"/>
+        <img src={images.js10_Templates} className="img"/>
+        <img src={images.js10_Templates_2} className="img"/>
     </article>
     <article>
         <h2 className="title-h2">2. Interpolation</h2>
@@ -27,12 +30,12 @@ export default function StringsTemplates(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js10_Templates2.png' %}" className="img"/>
+        <img src={images.js10_Templates2} className="img"/>
         <div className="styleee">
             <h2>Hello Mr Reda Eskouni</h2>
         </div>
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js10_Templates3.png' %}" className="img"/>
+        <img src={images.js10_Templates3} className="img"/>
         <div className="styleee">
             <h2> Hello Mr Reda Eskouni 25years </h2>
         </div>

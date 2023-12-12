@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Switch(){
     return(
 <section className="section-conetent">
@@ -15,17 +18,17 @@ export default function Switch(){
         </div> */}
         </div>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js16_Switch.png' %}" className="img"/>
+        <img src={images.js16_Switch} className="img"/>
         <div className="styleee img">
             <h2>3</h2>
         </div>
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js16_Switch2.png' %}" className="img"/>
+        <img src={images.js16_Switch2} className="img"/>
         <div className="styleee img">
             <h2>is case 4</h2>
         </div>
         <div className="mital"> متال 3 : </div>
-        <img src="{% static 'js/js16_Switch3.png' %}" className="img"/>
+        <img src={images.js16_Switch3} className="img"/>
         <div className="styleee img">
             <h2>Not Found</h2>
         </div>

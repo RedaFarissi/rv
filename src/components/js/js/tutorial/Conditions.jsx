@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Conditions(){
   return(
 <section className="section-conetent">
@@ -26,7 +29,7 @@ export default function Conditions(){
         </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js15_Conditions.png' %}" className="img"/>
+        <img src={images.js15_Conditions} className="img"/>
         <div className="styleee img"><h2> true </h2></div>
   </article>
   <article>
@@ -42,10 +45,10 @@ export default function Conditions(){
         </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js15_Conditions2.png' %}" className="img"/>
+        <img src={images.js15_Conditions2} className="img"/>
         <div className="styleee img"><h2> true </h2></div>
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js15_Conditions3.png' %}" className="img"/>
+        <img src={images.js15_Conditions3} className="img"/>
         <div className="styleee img"><h2> false </h2></div> 
   </article>
   <article>
@@ -61,7 +64,7 @@ export default function Conditions(){
         </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js15_Conditions4.png' %}" className="img"/>
+        <img src={images.js15_Conditions4} className="img"/>
         <div className="styleee img"><h2> false </h2></div>
   </article>
 </section>

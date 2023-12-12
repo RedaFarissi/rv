@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Inheritance(){
     // function super_function(){
     //     alert("first name : Reda last name : Eskouni") ;
@@ -19,7 +22,7 @@ export default function Inheritance(){
             ترث ال <b>class</b> التي تم إنشاؤها باستخدام ميراث  جميع <b>methods</b> من <b>class</b> لأخرى .<br/>
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js142_class_Inheritance.png' %}" className="img"/>
+        <img src={images.js142_class_Inheritance} className="img"/>
         <div className="styleee img">
             <h2>JavaScript Class Inheritance</h2>
             <p className="Sty"> Use the "extends" keyword to inherit all methods from another class. </p>
@@ -34,7 +37,7 @@ export default function Inheritance(){
             من خلال استدعاء طريقة <bdi><b>super()</b></bdi> في طريقة <b>constructor</b> ، فإننا نطلق على طريقة <b>constructor</b> الخاصة بالوالدين ونحصل على إمكانية الوصول إلى <b>properties</b> و <b>methods</b> الخاصة بالوالدين    
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js142_class_Inheritance3.png' %}" className="img"/>
+        <img src={images.js142_class_Inheritance3} className="img"/>
         <div className="styleee img">
             <button id="btn_test" className="btn btn-primary"> click here </button> 
         </div>
@@ -47,7 +50,7 @@ export default function Inheritance(){
             لإضافة <b>getters</b> و <b>setters</b> في <b>class</b> ، استخدم الكلمات الأساسية <b>get</b> و <b>set</b>.
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js142_class_Inheritance2.png' %}" className="img"/>
+        <img src={images.js142_class_Inheritance2} className="img"/>
         <div className="styleee img">
             <h2>JavaScript Class Gettter/Setter</h2>
             <p>A demonstration of how to add getters and setters in a class, and how to use the getter to get the property value.</p>

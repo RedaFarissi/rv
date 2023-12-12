@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Output(){
     //function Pr(){ document.getElementById("print").innerHTML = print() }
     return(
@@ -31,7 +34,7 @@ export default function Output(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js2_output.png' %}" className="img"/>
+        <img src={images.js2_output} className="img"/>
         <div className="styleee"><h2 id="Paragraph"> 11  </h2></div>
     </article>
     <article>
@@ -46,8 +49,8 @@ export default function Output(){
         </p>
     
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js2_output2.png' %}" className="img"/>
-        <img src="{% static 'js/js2_output2 2.png' %}" className="img"/>
+        <img src={images.js2_output2} className="img"/>
+        <img src={images.js2_output2_2} className="img"/>
         <div className="alert alert-dark" role="alert">
             <ul><li> يجب استخدام طريقة <bdi><b>document.write()</b></bdi> للاختبار فقط.</li></ul>
         </div>
@@ -67,8 +70,8 @@ export default function Output(){
             <button onclick="document.write('Hello Word')" style="width:30%;border:0.5px solid black;outline:0px;border-radius:9px"> click me </button>
         </div> */}
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js2_output3.png' %}" className="img"/>
-        <img src="{% static 'js/js2_output3 2.png' %}" className="img"/>
+        <img src={images.js2_output3} className="img"/>
+        <img src={images.js2_output3_2} className="img"/>
     </article>
     <article>
         <h2 className="title-h2">4. <bdi>console.log()</bdi> </h2>
@@ -81,8 +84,8 @@ export default function Output(){
             </div> */}
         </p>
         <div className="mital"> متال : </div>
-        <img src="{% static 'js/js2_output4.png' %}" className="img"/>
-        <img src="{% static 'js/js2_output4 2.png' %}" className="img"/>
+        <img src={images.js2_output4} className="img"/>
+        <img src={images.js2_output4_2} className="img"/>
     </article>
     <article>
         <h2 className="title-h2">5. <bdi>console.print()</bdi> </h2>

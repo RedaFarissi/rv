@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function JSON(){
     return(
 <section className="section-conetent">
@@ -16,11 +19,11 @@ export default function JSON(){
             <li> يكتب مفتاح <b>JSON</b> داخل علامة الإقتباس الخاصة ب <small><small>string</small></small> ذالك هو الفرق بينه وبين ال <small><small>Object</small></small></li>
             <li> يمكن إسترجاع المعلومات المخزنة داخل <b>JSON</b> بطريقتين </li>
         </ul>
-        <img src="{% static 'js/js27_JSON.png' %}" className="img"/>
+        <img src={images.js27_JSON} className="img"/>
         <div className="styleee"><h2> REDA<br/>Eskouni<br/>25 </h2></div>
         <div className="mital">متال 2 :  </div>
         <ul><li>يمكن إستعمال المصفوفات و الكائنات داخل <b>JSON</b></li></ul>
-        <img src="{% static 'js/js27_JSON2.png' %}" className="img"/>
+        <img src={images.js27_JSON2} className="img"/>
         <div className="styleee"><h2>Reda<br/>Adil<br/>Majda</h2></div>
     </article>
     <article>
@@ -67,12 +70,12 @@ export default function JSON(){
         </p>
         <div className="mital">متال : </div>
         <ul><li>الكائن <small>(object)</small> بصيغة <b>JSON</b> مخزن داخل متغير <b>string</b> .</li></ul>
-        <img src="{% static 'js/js27_JSON3.png' %}" className="img"/>
+        <img src={images.js27_JSON3} className="img"/>
         <div className="styleee"><h2> string </h2></div>
         <div className="mital">متال 2: </div>
         <ul><li>ننصح بستعمال الطريقة التالية لمعرفة محتوي الكائن لأنه غالبا ما تكون الأمور صعبة القراءة</li></ul>
-        <img src="{% static 'js/js27_JSON4.png' %}" className="img"/>
-        <img src="{% static 'js/js27_JSON4 2.png' %}" className="img"/>
+        <img src={images.js27_JSON4} className="img"/>
+        <img src={images.js27_JSON4_2} className="img"/>
     </article>
     <article>
         <h2 className="title-h2">4. <bdi>JSON.stringify</bdi></h2>
@@ -92,7 +95,7 @@ export default function JSON(){
         </p>
         <div className="mital">متال : </div>
         <ul><li> ستكون النتيجة عبارة عن سلسلة تتبع تدوين <b>JSON</b> .</li></ul>
-        <img src="{% static 'js/js27_JSON5.png' %}" className="img"/>
+        <img src={images.js27_JSON5} className="img"/>
         <div className="styleee">typeof str = string<br/>{"{"}"name":"BMW","color":"green","module":"2000"{"}"}</div>
         <ul><li> المتغير <b>str</b> هو الآن سلسلة ، وجاهزة للإرسال إلى الخادم </li></ul>
         <h5 className="title-h5">2. stringify Array </h5>
@@ -105,7 +108,7 @@ export default function JSON(){
         </p>
         <div className="mital">متال : </div>
         <ul><li> ستكون النتيجة عبارة عن سلسلة تتبع تدوين <b>JSON</b> .</li></ul>
-        <img src="{% static 'js/js27_JSON6.png' %}" className="img"/>
+        <img src={images.js27_JSON6} className="img"/>
         <div className="styleee">typeof str = string<br/>["BMW","green",2000]</div>
     </article>
     <article>   
@@ -121,7 +124,7 @@ export default function JSON(){
             </div> */}
         </p>
         <div className="mital">متال : </div>
-        <img src="{% static 'js/js27_JSON7.png' %}" className="img"/>
+        <img src={images.js27_JSON7} className="img"/>
         <div className="styleee"><h2>full name is RedaEskouni and Age 25 years</h2></div>
     </article>
 </section>

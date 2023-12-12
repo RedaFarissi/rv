@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Conversion(){
     // var date = new Date()
     // let a = 123;
@@ -33,13 +36,13 @@ export default function Conversion(){
         </p>
 
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js24_Conversion.png' %}" className="img"/>
+        <img src={images.js24_Conversion} className="img"/>
         <div className="styleee img"><h2>3.14<br/>0<br/>0<br/>20000<br/>NaN<br/>NaN</h2></div>
         <div className="mital"> متال 2 :  </div>
-        <img src="{% static 'js/js24_Conversion2.png' %}" className="img"/>
+        <img src={images.js24_Conversion2} className="img"/>
         <div className="styleee img"><h2>3.14<br/>24<br/>9<br/>NaN</h2></div>
         <div className="mital"> متال 3 :  </div>
-        <img src="{% static 'js/js24_Conversion3.png' %}" className="img"/>
+        <img src={images.js24_Conversion3} className="img"/>
         <div className="styleee img"><h2>3<br/>24<br/>92</h2></div>
     </article>
     <article>
@@ -53,10 +56,10 @@ export default function Conversion(){
             يمكن استخدام الطريقة <b>toString</b> 
         </p>
         <div className="mital"> متال 1 :  </div>
-        <img src="{% static 'js/js24_Conversion4.png' %}" className="img"/>
+        <img src={images.js24_Conversion4} className="img"/>
         <div className="styleee img"><h2>123<br/>123<br/>123</h2></div>
         <div className="mital"> متال 2 :  </div>
-        <img src="{% static 'js/js24_Conversion5.png' %}" className="img"/>
+        <img src={images.js24_Conversion5} className="img"/>
         <div className="styleee img"><h2>123<br/>200<br/>203</h2></div>
     </article>
     <article>
@@ -72,10 +75,10 @@ export default function Conversion(){
             </div> */}
         </p>
         <div className="mital"> متال 1 :  </div>
-        <img src="{% static 'js/js24_Conversion6.png' %}" className="img"/>
+        <img src={images.js24_Conversion6} className="img"/>
         <div className="styleee img"><h2 className="string_date"></h2></div>
         <div className="mital"> متال 2 :  </div>
-        <img src="{% static 'js/js24_Conversion7.png' %}" className="img"/>
+        <img src={images.js24_Conversion7} className="img"/>
         <div className="styleee img"><h2 className="string_date"></h2></div>
     </article>
     <article>
@@ -88,7 +91,7 @@ export default function Conversion(){
             </div> */}
         </p>
         <div className="mital"> متال  :  </div>
-        <img src="{% static 'js/js24_Conversion8.png' %}" className="img"/>
+        <img src={images.js24_Conversion8} className="img"/>
         <div className="styleee img"><h2 className="string_date"></h2></div>
     </article>
     <article>
@@ -101,7 +104,7 @@ export default function Conversion(){
             </div> */}
         </p>
         <div className="mital"> متال  :  </div>
-        <img src="{% static 'js/js24_Conversion9.png' %}" className="img"/>
+        <img src={images.js24_Conversion9} className="img"/>
         <div className="styleee img"><h2>true = 1<br/>false = 0</h2></div>
     </article>
 </section>

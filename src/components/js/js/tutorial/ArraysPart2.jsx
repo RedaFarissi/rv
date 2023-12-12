@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function ArraysPart2(){
     return(
 <section className="section-conetent">
@@ -44,16 +47,16 @@ export default function ArraysPart2(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js18_Arrays.png' %}" className="img"/>
+        <img src={images.js18_Arrays} className="img"/>
         <div className="styleee"><h2>Orange,Banana,Apple,Mango,Lemon,Kiwi,Pear,Fig</h2></div>
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js18_Arrays2.png' %}" className="img"/>
+        <img src={images.js18_Arrays2} className="img"/>
         <div className="styleee"><h2><pre>Orange,Banana,Apple,Mango,Lemon,Kiwi,Pear,Fig,Apricots,Jackfruit,Honeydew Melon,Watermelon</pre></h2></div>
         <div className="mital">متال 3 :  </div>
-        <img src="{% static 'js/js18_Arrays3.png' %}" className="img"/>
+        <img src={images.js18_Arrays3} className="img"/>
         <div className="styleee"> <h2>Orange,Banana,Mango,Apple</h2></div>
         <div className="mital">متال 4 :  </div>
-        <img src="{% static 'js/js18_Arrays4.png' %}" className="img"/>
+        <img src={images.js18_Arrays4} className="img"/>
         <div className="styleee"><h2>Orange,Banana,Mango,Kiwi,Mango</h2></div>
         <div className="bg-warning" >
             لا يغير أسلوب <bdi><b>concat()</b></bdi> المصفوفات الموجودة. يقوم دائما بإرجاع مصفوفة جديدة.
@@ -82,10 +85,10 @@ export default function ArraysPart2(){
             </div> */}
         </p>
         <div className="mital">متال  :  </div>
-        <img src="{% static 'js/js18_Arrays6.png' %}" className="img"/>
+        <img src={images.js18_Arrays6} className="img"/>
         <div className="styleee"><h2>Orange,Mango,Banana</h2></div>
         <div className="mital">متال 2  : </div>
-        <img src="{% static 'js/js18_Arrays7.png' %}" className="img"/>
+        <img src={images.js18_Arrays7} className="img"/>
         <div className="styleee"><h2>Mango,Kiwi</h2></div>
     </article>
     <article>
@@ -103,10 +106,10 @@ export default function ArraysPart2(){
             </div> */}
         </p>
         <div className="mital">متال  :  </div>
-        <img src="{% static 'js/js18_Arrays8.png' %}" className="img"/>
+        <img src={images.js18_Arrays8} className="img"/>
         <div className="styleee"><h2>A,B,C,E,F,K,M,O,T,Z</h2></div>
         <div className="mital"> متال 2 : </div>
-        <img src="{% static 'js/js18_Arrays9.png' %}" className="img"/>   
+        <img src={images.js18_Arrays9} className="img"/>   
         <div className="styleee"><h2>-22,0,1,2,3,4,6,7,8,9</h2></div>
     </article>
     <article>
@@ -125,10 +128,10 @@ export default function ArraysPart2(){
         <span style="color:var(--js-color)">alphabets</span>.<b style="color:gold">reverse()</b>;</pre> </div>*/}
         </p>
         <div className="mital">متال  :  </div>
-        <img src="{% static 'js/js18_Arrays10.png' %}" className="img"/>
+        <img src={images.js18_Arrays10} className="img"/>
         <div className="styleee"><h2>T,B,F,Z,C,A,K,M,E,O</h2></div>
         <div className="mital"> متال 2 : </div>
-        <img src="{% static 'js/js18_Arrays11.png' %}" className="img"/>
+        <img src={images.js18_Arrays11} className="img"/>
         <div className="styleee"><h2>Z,T,O,M,K,F,E,C,B,A</h2></div>
     </article>
     <article>
@@ -146,7 +149,7 @@ export default function ArraysPart2(){
             </div> */}
         </p>
         <div className="mital"> متال : </div>
-        <img src="{% static 'js/js18_Arrays12.png' %}" className="img"/>
+        <img src={images.js18_Arrays12} className="img"/>
         <div className="styleee"><h2>Reda Eskouni</h2></div>
         <ul><li><small><small> ستتعلم حول Object بشكل أفضل في دروس قادمة</small></small></li></ul>
     </article>
@@ -168,7 +171,7 @@ export default function ArraysPart2(){
             </div> */}
         </p>
         <div className="mital"> متال : </div>
-        <img src="{% static 'js/js18_Arrays13.png' %}" className="img"/>
+        <img src={images.js18_Arrays13} className="img"/>
         <div className="styleee"><h2>90,8,18,20,25000</h2></div>
     </article>
     <article>
@@ -186,7 +189,7 @@ export default function ArraysPart2(){
             </div>   */}
         </p>
         <div className="mital"> متال : </div>
-        <img src="{% static 'js/js18_Arrays14.png' %}" className="img"/>
+        <img src={images.js18_Arrays14} className="img"/>
         <div className="styleee"><h2>45,10,25</h2></div>
     </article>
     <article>
@@ -201,7 +204,7 @@ export default function ArraysPart2(){
             </div> */}
         </p>
         <div className="mital"> متال : </div>
-        <img src="{% static 'js/js18_Arrays15.png' %}" className="img"/>
+        <img src={images.js18_Arrays15} className="img"/>
         <div className="styleee"><h2> 1 </h2></div>
     </article>
     <article>
@@ -214,7 +217,7 @@ export default function ArraysPart2(){
             </div> */}
         </p>
         <div className="mital"> متال : </div>
-        <img src="{% static 'js/js18_Arrays16.png' %}" className="img"/>
+        <img src={images.js18_Arrays16} className="img"/>
         <div className="styleee"><h2> 3 </h2></div>
     </article>
 </section>

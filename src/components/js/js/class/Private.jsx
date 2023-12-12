@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Static(){
     return(
 <section className="section-conetent">
@@ -9,12 +12,12 @@ export default function Static(){
             يمكن إنشاء <b>private methode</b> داخل ال <b>class</b> أيضا .
         </p> 
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js141_class_private.png' %}" className="img"/>
+        <img src={images.js141_class_private} className="img"/>
         <div className="styleee">
             <h2>JavaScript Class Private variable</h2>
             <p> 110 <br/> undefined </p>
         </div>
-        <img src="{% static 'js/js141_class_private2.png' %}" className="img"/>
+        <img src={images.js141_class_private2} className="img"/>
         <div className="styleee">
             <h2>JavaScript Class Private variable</h2>    
             <p> 2022 </p>

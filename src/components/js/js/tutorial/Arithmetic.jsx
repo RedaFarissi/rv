@@ -1,4 +1,6 @@
 import "./Arithmetic.css"
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Arithmetic(){
     return(
@@ -23,47 +25,47 @@ export default function Arithmetic(){
     <article>
         <h2 className="title-h2">1. Addition</h2>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js5_Arithmetic.png' %}" className="img"/>
+        <img src={images.js5_Arithmetic} className="img"/>
         <div className="styleee img"><div id="adition"> 95 </div></div>
     </article>
     <article>
         <h2 className="title-h2">2. Subtraction</h2>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js5_Arithmetic2.png' %}" className="img"/>
+        <img src={images.js5_Arithmetic2} className="img"/>
         <div className="styleee img"><div id="soustraction"> -85 </div></div>
     </article>
     <article>
         <h2 className="title-h2">3. Multiplication</h2>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js5_Arithmetic3.png' %}" className="img"/>
+        <img src={images.js5_Arithmetic3} className="img"/>
         <div className="styleee img"><div id="multip"> 450 </div></div>
     </article>
     <article>
         <h2 className="title-h2">5. Division</h2>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js5_Arithmetic4.png' %}" className="img"/>
+        <img src={images.js5_Arithmetic4} className="img"/>
         <div className="styleee img">  0.05555555555555555 </div>
         <h2 className="title-h2">5. Exponentiation</h2>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js5_Arithmetic5.png' %}" className="img"/>
+        <img src={images.js5_Arithmetic5} className="img"/>
         <div className="styleee img"><div id="Expo"> 125 </div></div>
     </article>
     <article>
         <h2 className="title-h2">6. Modulus (Remainder)</h2>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js5_Arithmetic6.png' %}" className="img"/>
+        <img src={images.js5_Arithmetic6} className="img"/>
         <div className="styleee img">2</div>
     </article>
     <article>
         <h2 className="title-h2">7. Increment</h2>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js5_Arithmetic7.png' %}" className="img"/>
+        <img src={images.js5_Arithmetic7} className="img"/>
         <div className="styleee img"> 6  </div>
     </article>
     <article>
         <h2 className="title-h2">8. Decrement</h2>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js5_Arithmetic8.png' %}" className="img"/>
+        <img src={images.js5_Arithmetic8} className="img"/>
         <div className="styleee img"> 4 </div>
 
     </article>

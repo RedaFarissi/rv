@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Functions(){
     return(
 <section className="section-conetent">
@@ -19,20 +22,20 @@ export default function Functions(){
         </p>
         <div class="mital"> متال :  </div>
         <ul><li> عند تشغيل الكود لن يحدت أي شيء لأننا لم نقم بستدعاء الدالة <small><small>(function)</small></small> </li></ul>
-        <img src="{% static 'js/js21_Function.png' %}" class="img"/>
+        <img src={images.js21_Function} class="img"/>
         <div class="mital"> متال 2 :  </div>
-        <img src="{% static 'js/js21_Function2.png' %}" class="img"/>
+        <img src={images.js21_Function2} class="img"/>
         <div class="styleee"><h2> reda Eskouni </h2></div>
         <div class="mital"> متال 3 :  </div>
-        <img src="{% static 'js/js21_Function3.png' %}" class="img"/>
+        <img src={images.js21_Function3} class="img"/>
         <div class="styleee"><h2> Aymane El Toumi </h2></div>
         <div class="mital"> متال 4 :  </div>
         <ul><li>يمكن إنشاء دالة <small><small>(function)</small></small> بدون <b>parameters</b></li></ul>
-        <img src="{% static 'js/js21_Function4.png' %}" class="img"/>
+        <img src={images.js21_Function4} class="img"/>
         {/* <div class="sum_exemple_style">
         <div class="mital"> متال 5 :  </div>
         <ul><li> يمكن تنفيد الدالة <small><small>(function)</small></small> عدة مرات وذالك عن طريق إستدعائها  </li></ul>
-        <img src="{% static 'js/js21_Function5.png' %}" class="img"/>
+        <img src={images.js21_Function5} class="img"/>
         <div class="styleee"><h2> 
         <div style="color:green;border:2px solid black;padding:9px;width:60%;margin:9px auto;font-size:75%;">
         <span style="color:black;">First Name :</span> Reda</span><br/>
@@ -71,7 +74,7 @@ export default function Functions(){
         }</pre></div> */}
         </p>
         <div class="mital"> متال :  </div>
-        <img src="{% static 'js/js21_Function6.png' %}" class="img"/>
+        <img src={images.js21_Function6} class="img"/>
         <div class="styleee"><h2>2<br/>4<br/>6<br/>8<br/>10<br/>12<br/>14<br/>16<br/>18<br/>20 </h2></div>
     </article> 
     <article> 
@@ -84,7 +87,7 @@ export default function Functions(){
             </div> */}
         </p>
         <div class="mital"> متال :  </div>
-        <img src="{% static 'js/js21_Function7.png' %}" class="img"/>
+        <img src={images.js21_Function7} class="img"/>
         <div class="styleee"><h2>520</h2></div>
     </article> 
     <article> 
@@ -104,7 +107,7 @@ export default function Functions(){
         </p>
         <div class="mital"> متال :  </div>
         <ul><li> في المتال أسفله لا يمكن إستخدام المتغير sum خارج الدالة لأنه معرف وسط الدالة </li></ul>
-        <img src="{% static 'js/js21_Function8.png' %}" class="img"/>
+        <img src={images.js21_Function8} class="img"/>
         <div class="styleee">
             <h2>199</h2>
         </div>

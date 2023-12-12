@@ -1,5 +1,7 @@
-export default function ArraysPart1(){
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
 
+export default function ArraysPart1(){
     //const fruits = [ "Orange","Banana","Apple","Mango"];
     //fruits[9] = "Lemon"
     //for( let i=0 ; i<fruits.length ; i++){
@@ -34,7 +36,7 @@ export default function ArraysPart1(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js17_Arrays.png' %}" className="img"/>
+        <img src={images.js17_Arrays} className="img"/>
         <div className="styleee"><h2> Saab <br/> Volvo <br/> BMW </h2></div>
     </article>
     <article>
@@ -93,10 +95,10 @@ export default function ArraysPart1(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js17_Arrays2.png' %}" className="img"/>
+        <img src={images.js17_Arrays2} className="img"/>
         <div className="styleee"><h2> Mercedes  <br/> Volvo <br/> BMW </h2></div>
         <div className="mital"> متال 2 : </div>
-        <img src="{% static 'js/js17_arrays3.png' %}" className="img"/>
+        <img src={images.js17_arrays3} className="img"/>
         <div className="styleee"><h2> Reda Eskouni 25 ans </h2></div>
     </article>
     <article>
@@ -109,7 +111,7 @@ export default function ArraysPart1(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js17_Arrays3 2.png' %}" className="img"/>
+        <img src={images.js17_Arrays3_2} className="img"/>
         <div className="styleee"><h2> Saab,Volvo,BMW </h2></div>
     </article>
     <article>
@@ -119,7 +121,7 @@ export default function ArraysPart1(){
             لكن أفضل وصف لمصفوفات <b>JavaScript</b> هي  <b>arrays</b> 
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js17_Arrays4.png' %}" className="img"/>
+        <img src={images.js17_Arrays4} className="img"/>
         <div className="styleee"><h2> object </h2></div>
     </article>
     <article>
@@ -133,7 +135,7 @@ export default function ArraysPart1(){
         </p>
         <div className="sum_exemple_style">
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js17_Arrays5.png' %}" className="img"/>
+        <img src={images.js17_Arrays5} className="img"/>
         <div className="styleee"><h2> 3 </h2></div>
         </div>
     </article>
@@ -146,7 +148,7 @@ export default function ArraysPart1(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js17_Arrays7.png' %}" className="img"/>
+        <img src={images.js17_Arrays7} className="img"/>
         <div className="styleee"><h2> Pineapple </h2></div>
     </article>
     <article>
@@ -158,7 +160,7 @@ export default function ArraysPart1(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js17_Arrays8.png' %}" className="img"/>
+        <img src={images.js17_Arrays8} className="img"/>
         <div className="styleee"><h2> Mango </h2></div>
     </article>
     <article>
@@ -176,13 +178,13 @@ export default function ArraysPart1(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js17_Arrays9.png' %}" className="img"/>
+        <img src={images.js17_Arrays9} className="img"/>
         <div className="styleee"><h2> Lemon </h2></div>
         <div className="mital">متال 2 :</div>
-        <img src="{% static 'js/js17_Arrays10.png' %}" className="img"/>
+        <img src={images.js17_Arrays10} className="img"/>
         <div className="styleee"><h2> Lemon </h2></div>
         <div className="mital">متال 3 :</div>
-        <img src="{% static 'js/js17_Arrays11.png' %}" className="img"/>
+        <img src={images.js17_Arrays11} className="img"/>
         <div className="styleee">
             <h2 id="h2">  </h2>
         </div>
@@ -205,10 +207,10 @@ export default function ArraysPart1(){
             </div> */}
         </p>
         <div className="mital">متال :</div>
-        <img src="{% static 'js/js17_Arrays12.png' %}" className="img"/>
+        <img src={images.js17_Arrays12} className="img"/>
         <div className="styleee"><h2>true</h2></div>
         <div className="mital">متال 2 :</div>
-        <img src="{% static 'js/js17_Arrays13.png' %}" className="img"/>
+        <img src={images.js17_Arrays13} className="img"/>
         <div className="styleee"><h2>true</h2></div>
     </article>
     <article>
@@ -222,7 +224,7 @@ export default function ArraysPart1(){
             </div> */}
         </p>
         <div className="mital">متال :</div>
-        <img src="{% static 'js/js17_Arrays14.png' %}" className="img"/>
+        <img src={images.js17_Arrays14} className="img"/>
         <div className="styleee"><h2>Banana,Orange,Apple,Mango</h2></div>
         <h5 className="title-h5" id="join">2. <bdi>join()</bdi></h5>
         <p className="style_divv">
@@ -233,7 +235,7 @@ export default function ArraysPart1(){
             </div> */}
         </p>
         <div className="mital">متال :</div>
-        <img src="{% static 'js/js17_Arrays15.png' %}" className="img"/>
+        <img src={images.js17_Arrays15} className="img"/>
         <div className="styleee"><h2>Banana / Orange / Apple / Mango</h2></div>
     </article>
     <article>   
@@ -251,7 +253,7 @@ export default function ArraysPart1(){
             </div> */}
         </p>
         <div className="mital">متال :</div>
-        <img src="{% static 'js/js17_Arrays16.png' %}" className="img"/>
+        <img src={images.js17_Arrays16} className="img"/>
         <div className="styleee"><h2>Banana,Orange,Apple</h2></div>
         
         <h5  className="title-h5" id="push">2. الخاصية <bdi>push()</bdi></h5>
@@ -263,7 +265,7 @@ export default function ArraysPart1(){
             </div> */}
         </p>
         <div className="mital">متال :</div>
-        <img src="{% static 'js/js17_Arrays17.png' %}" className="img"/>
+        <img src={images.js17_Arrays17} className="img"/>
         <div className="styleee"><h2>Banana,Orange,Apple,Lemon</h2></div>
         <h5  className="title-h5" id="shift">3. الخاصية <bdi>shift()</bdi></h5>
         <p className="style_divv">
@@ -274,7 +276,7 @@ export default function ArraysPart1(){
             </div> */}
         </p>
         <div className="mital">متال :</div>
-        <img src="{% static 'js/js17_Arrays18.png' %}" className="img"/>
+        <img src={images.js17_Arrays18} className="img"/>
         <div className="styleee"><h2>Orange,Apple</h2></div>
         <h5 className="title-h5" id="unshift">4. الخاصية <bdi>unshift()</bdi></h5>
         <p className="style_divv">
@@ -285,10 +287,10 @@ export default function ArraysPart1(){
             </div> */}
         </p>
         <div className="mital">متال :</div>
-        <img src="{% static 'js/js17_Arrays19.png' %}" className="img"/>
+        <img src={images.js17_Arrays19} className="img"/>
         <div className="styleee"><h2>Kiwi,Banana,Orange,Apple</h2></div>
         <div className="mital">متال 2 :</div>
-        <img src="{% static 'js/js17_Arrays20.png' %}" className="img"/>
+        <img src={images.js17_Arrays20} className="img"/>
         <div className="styleee"><h2>Kiwi,Orange,Lemon,Apple</h2></div>
         <h5 className="title-h5" id="delete">4. الخاصية delete </h5>
         <p className="style_divv">
@@ -300,7 +302,7 @@ export default function ArraysPart1(){
             </div> */}
         </p>
         <div className="mital">متال :</div>
-        <img src="{% static 'js/js17_Arrays21.png' %}" className="img"/>
+        <img src={images.js17_Arrays21} className="img"/>
         <div className="styleee">
             <h2>Banana,Orange,,,Lemon,Fig,Pear</h2>
             <h2>index 2 = undefined index 3 = undefined</h2>

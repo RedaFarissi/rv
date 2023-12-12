@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Errors(){
     // function division(a,b){
     //     try{
@@ -71,7 +74,7 @@ export default function Errors(){
             </div> */}
         </p>
         <h4 className="mital">متال :  </h4>
-        <img src="{% static 'js/js26_Errors.png' %}" className="img"/>
+        <img src={images.js26_Errors} className="img"/>
         <div className="styleee">
             <h2> document.e is not a function </h2>
         </div>
@@ -88,12 +91,12 @@ export default function Errors(){
         </p>
         <h4 className="mital">متال :  </h4>
         <ul><li>عند تنفيد الأمر البرمجي <b>throw</b> يتم تجاوز باقي الكود داخل <b>try</b> تم يتم الذهاب مباشرة إلى <b>catch</b></li></ul>
-        <img src="{% static 'js/js26_Errors2.png' %}" className="img"/>
+        <img src={images.js26_Errors2} className="img"/>
         <div className="styleee">
             <h2 id="h2"></h2><button id="button" onclick="division(9,0)">Click here</button>
         </div>
         <h4 className="mital">متال :  </h4>
-        <img src="{% static 'js/js26_Errors3.png' %}" className="img"/>
+        <img src={images.js26_Errors3} className="img"/>
         <div className="styleee">
             <input type="text" placeholder="input 25" id="input"/>
             <button  onclick="OK(document.getElementById('input').value)">OK</button><h2 id="h22"></h2>
@@ -114,7 +117,7 @@ export default function Errors(){
             </div> */}
         </p>
         <h4 className="mital">متال :  </h4>
-        <img src="{% static 'js/js26_Errors4.png' %}" className="img"/>
+        <img src={images.js26_Errors4} className="img"/>
         <div className="styleee">
             <input type="text" placeholder="input 25" id="input_2"/>
             <button  onclick="OK2(document.getElementById('input_2').value)">OK</button><h2 id="h23"></h2>

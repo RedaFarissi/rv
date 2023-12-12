@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function LoopWhile(){
     return(
 <section className="section-conetent">
@@ -20,25 +23,25 @@ export default function LoopWhile(){
           <li>عند عدم تحقق الشرط يتم تجاوز الحلقة <b>while</b></li>
           <li>في كل مرة يتم تنفيد الكود داخل الحلقة يتم إضافة واحد إلى العداد <b>i</b></li>
         </ul>
-        <img src="{% static 'js/js22_While.png' %}" className="img"/>
+        <img src={images.js22_While} className="img"/>
         <div className="styleee">
             <h2> Hello Hello Hello Hello Hello </h2>
         </div>
         <div className="mital">متال 2 :  </div>
         <ul><li>الفرق بين المتالين  أن الأول يتم إضافة 1 لقيمة العداد i في كل مرة أما المتال الحالي يتم إضافة 3  للعداد في كل مرة</li></ul>
-        <img src="{% static 'js/js22_While2.png' %}" className="img"/>
+        <img src={images.js22_While2} className="img"/>
         <div className="styleee">
             <h2> Hello Hello  </h2>
         </div>
         <div className="mital">متال 3 :  </div>
         <ul><li>في المتال التالي يتم عرض قيمة i في كل مرة يتم إضافة 1 إلى i</li></ul>
-        <img src="{% static 'js/js22_While3.png' %}" className="img"/>
+        <img src={images.js22_While3} className="img"/>
         <div className="styleee">
             <h2> i = 0<br/>i = 1<br/>i = 2<br/>i = 3<br/>i = 4<br/>i = 5<br/>i = 6<br/>i = 7<br/>i = 8<br/>i = 9<br/>i = 10  </h2>
         </div>
         <div className="mital">متال 4 :  </div>
         <ul><li>في المتال التالي يتم عرض قيمة i في كل مرة يتم إضافة 1 إلى i</li></ul>
-        <img src="{% static 'js/js22_While4.png' %}" className="img"/>
+        <img src={images.js22_While4} className="img"/>
         <div className="styleee">
             <h2> fb - wh - ins - tele - </h2>
         </div>
@@ -55,7 +58,7 @@ export default function LoopWhile(){
         </p>
         <div className="mital">متال  :  </div>
         <ul><li> مع أن الشرط ليس صحيح يتم تنفيد الكود مرة واحدة </li></ul>
-        <img src="{% static 'js/js22_While5.png' %}" className="img"/>
+        <img src={images.js22_While5} className="img"/>
         <div className="styleee">
             <h2> Reda </h2>
         </div>

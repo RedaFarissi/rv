@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Apply(){
     return(
 <section className="section-conetent">
@@ -12,24 +15,24 @@ export default function Apply(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js150_apply.png' %}" className="img"/>
+        <img src={images.js150_apply} className="img"/>
         <div className="styleee img">
             <div className="h2"> Adam Taziyat </div>
         </div>
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js150_apply2.png' %}" className="img"/>
+        <img src={images.js150_apply2} className="img"/>
         <div className="styleee img">
             <div className="h2"> Adam Taziyat 2 , 3 , 4 , 5 </div>
         </div>
         <div className="mital">متال 3 :  </div>
         <ul><li> تستخدم arguments للإشارة إلى عناصر المصفوفة .</li></ul>
-        <img src="{% static 'js/js150_apply3.png' %}" className="img"/>
+        <img src={images.js150_apply3} className="img"/>
         <div className="styleee img">
             <div className="h2"> Sum all element array is : 35 </div>
         </div>
         <div className="mital">متال 4 :  </div>
         <ul><li> تستخدم arguments للإشارة إلى عناصر المصفوفة .</li></ul>
-        <img src="{% static 'js/js150_apply4.png' %}" className="img"/>
+        <img src={images.js150_apply4} className="img"/>
         <div className="styleee img">
             <div className="h2">Name : Reda Eskouni <br/> Moyen : 8.75 <hr/> </div>
         </div>

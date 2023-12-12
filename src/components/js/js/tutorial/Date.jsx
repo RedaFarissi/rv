@@ -1,3 +1,6 @@
+import images from "../../imagesJs"
+import { CodeHighlighter ,  Result} from "../../../path";
+
 export default function Date(){
     return(
 <section className="section-conetent">
@@ -12,7 +15,7 @@ export default function Date(){
         </p>
         <div className="mital">متال :  </div>
         <ul><li>من خلال الكائن <b><bdi>Date()</bdi></b> يمكن للمتصفح عرض التاريخ الحالي لك .</li></ul>
-        <img src="{% static 'js/js13_Date.png' %}" className="img"/>
+        <img src={images.js13_Date} className="img"/>
         <div className="styleee">
             <h2 id="Date">  </h2>
             <script>
@@ -21,12 +24,12 @@ export default function Date(){
             </script>
         </div>
         <div className="mital"> متال 2 :  </div>
-        <img src="{% static 'js/js13_Date2.png' %}" className="img"/>
+        <img src={images.js13_Date2} className="img"/>
         <div className="styleee">
             <h2> Tue Aug 17 2021 10:33:30 GMT+0100 (UTC+01:00) </h2>
         </div>
         <div className="mital"> متال 3 :  </div>
-        <img src="{% static 'js/js13_Date3.png' %}" className="img"/>
+        <img src={images.js13_Date3} className="img"/>
         <div className="styleee">
             <h2> Fri Dec 24 2021 00:00:00 GMT+0100 (UTC+01:00) </h2>
         </div>
@@ -40,7 +43,7 @@ export default function Date(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js13_Date4.png' %}" className="img"/>
+        <img src={images.js13_Date4} className="img"/>
         <div className="styleee">
             <h2>Sun Oct 17 2021 11:14:00 GMT+0100 (UTC+01:00)</h2>
         </div>
