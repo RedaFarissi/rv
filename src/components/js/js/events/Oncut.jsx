@@ -36,7 +36,7 @@ export default function Oncut(){
             </div> */}
         </div>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js102_oncut.png' %}" className="img"/>
+        <img src={images.js102_oncut} className="img"/>
         <div className="styleee">
             <input type="text" id="inP" value="cut this text"/>
         </div>

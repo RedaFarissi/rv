@@ -29,7 +29,7 @@ export default function Ontoggle(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js131_ontoggle.png' %}" className="img"/>
+        <img src={images.js131_ontoggle} className="img"/>
         <div className="styleee">
             <div className="h2" style={{color: "red"}}>ontoggle event attribute (open the details)</div>
             <details ontoggle="function_name()">

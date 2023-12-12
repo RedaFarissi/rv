@@ -34,7 +34,7 @@ export default function Onchange(){
         </p>
         
         <div className="mital">متال 1 :  </div>
-        <img src="{% static 'js/js96_onchange.png' %}" className="img"/>
+        <img src={images.js96_onchange} className="img"/>
         <div className="styleee"> 
             <select id="Select" >
               <option value="Html">HTML</option>
@@ -45,7 +45,7 @@ export default function Onchange(){
             <p id="result"></p>
         </div>
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js96_onchange2.png' %}" className="img"/>
+        <img src={images.js96_onchange2} className="img"/>
         <div className="styleee"> 
             <input type="text" onchange="alert(this.value)"/>
         </div>

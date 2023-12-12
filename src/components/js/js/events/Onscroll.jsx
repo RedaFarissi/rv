@@ -37,7 +37,7 @@ export default function Onscroll(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js129_onscroll.png' %}" className="img"/>
+        <img src={images.js129_onscroll} className="img"/>
         <div className="styleee">
             <div id="DIV" onscroll="function_name()">
                 <div id="child">
@@ -46,7 +46,7 @@ export default function Onscroll(){
             </div> 
         </div>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js129_onscroll2.png' %}" className="img"/>
+        <img src={images.js129_onscroll2} className="img"/>
         <div className="styleee">
             <div id="Parent" onscroll="function_name2()">
                 <div id="Child">

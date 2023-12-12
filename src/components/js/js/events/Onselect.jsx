@@ -27,7 +27,7 @@ export default function Onselect(){
         </p>
         
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js130_onselect.png' %}" className="img"/>
+        <img src={images.js130_onselect} className="img"/>
         <div className="styleee">
             Select some of the text: 
             <input type="text" value="Hello world!" onselect="function_name()"/>

@@ -28,7 +28,7 @@ export default function Onload(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js108_onload.png' %}" className="img"/>
+        <img src={images.js108_onload} className="img"/>
         <div className="styleee">
             <div className="h1"> Hello World </div>
         </div>

@@ -22,4 +22,6 @@ export {default as CodeCommand} from './codeCommand/CodeCommand';
 
 export {default as Result} from './result/Result';
 
+export {default as ResultConsole} from './resultConsole/ResultConsole';
+
 export {default as InteractivCss} from './css/InteractivCss';

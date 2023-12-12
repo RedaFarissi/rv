@@ -35,7 +35,7 @@ export default function Oncontextmenu(){
           </div> */}
       </p>
       <div className="mital">متال :  </div>
-      <img src="{% static 'js/js100_oncontextmenu.png' %}" className="img"/>
+      <img src={images.js100_oncontextmenu} className="img"/>
       <div className="styleee">
           <div id="div_element"> 
             div element with Event oncontextmenu

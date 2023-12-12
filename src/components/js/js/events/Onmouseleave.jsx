@@ -47,7 +47,7 @@ export default function Onmouseleave(){
             </div> */}
         </p>
         <div className="mital">متال : </div>
-        <img src="{% static 'js/js112_onmouseleave.png' %}" className="img"/>
+        <img src={images.js112_onmouseleave} className="img"/>
         <div className="styleee img">
             <div>
                 <button className="btn btn-primary" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()">

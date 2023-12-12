@@ -36,7 +36,7 @@ export default function Onmouseup(){
             </div> */}
         </p>
         <div className="mital">متال : </div>
-        <img src="{% static 'js/js110_onmouseup.png' %}" className="img"/>
+        <img src={images.js110_onmouseup} className="img"/>
         <div className="styleee">
             <p id="para" onmousedown="mouseDown()" onmouseup="mouseUp()" onclick="Click()">Click the text! The mouseDown() function is triggered when the mouse button is pressed down over this paragraph, and sets the colorof the text to red. The mouseUp() function istriggered when the mouse button is released,and sets the color of the text to green.  </p>
         </div>

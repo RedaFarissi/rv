@@ -33,7 +33,7 @@ export default function Onkeypress(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js106_onkeypress.png' %}" className="img"/>
+        <img src={images.js106_onkeypress} className="img"/>
     </article>
 </section>
     )

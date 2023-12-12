@@ -1,8 +1,4 @@
-import "./Result.sass"
-
-
-export default function Result(props){
-    
+export default function ResultConsole(props){
     return(
         <div className={`style-result`}>
             <div className="style-result-header">
@@ -44,14 +40,17 @@ export default function Result(props){
                     </div>
               </div>
             </div>
-            <div className={`add-style-body  ${props.styleAdd}`}>
-                <div dir="rtl" className={`alert window-alert bg-secondary text-light ${(props.displayAlert)?"d-block":"d-none"}`}>
-                    <h5 className="text-center">This page says </h5>
-                    <p className="text-center">{props.alertValue}</p>
-                    <button  className="btn btn-primary">OK</button>
+            <div className={`console-style  ${props.styleAdd}`}>
+                <div className="console-body">
+                    <div className="console-head">
+                        <span className="d-inline-block h-100 text-light p-2 bg-secondary">Console</span> <span className="text-light">{">>"}</span>
+                    </div>
+                    <div className="p-2 text-light">
+                        {props.children}
+                    </div>
                 </div>
-                {props.children}
             </div>
         </div>
+
     )
 }

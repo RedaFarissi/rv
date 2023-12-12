@@ -92,7 +92,7 @@ export default function Onfullscreenchange(){
         }</pre>
         </div> */}
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js122_onfullscreenchange.png' %}" className="img"/>
+        <img src={images.js122_onfullscreenchange} className="img"/>
         <div className="styleee">  
             <div className="h2">Fullscreen with JavaScript</div>
             <button onclick="openFullscreen();">Go Fullscreen Mode</button>

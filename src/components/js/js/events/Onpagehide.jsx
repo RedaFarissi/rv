@@ -26,7 +26,7 @@ export default function Onpagehide(){
             </div> */}
         </div>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js123_onpagehide.png" className="img"/>
+        <img src={images.js123_onpagehide} className="img"/>
     </article>
 </section>
     )

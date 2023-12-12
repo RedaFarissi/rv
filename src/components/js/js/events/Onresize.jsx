@@ -23,7 +23,7 @@ export default function Onresize(){
             </div> */}
         </p>    
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js127_onresize.png' %}" className="img"/>
+        <img src={images.js127_onresize} className="img"/>
     </article>
 </section>
     )

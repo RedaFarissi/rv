@@ -31,7 +31,7 @@ export default function Onsubmit(){
           </div> */}
       </p>
       <div className="mital"> متال :  </div>
-      <img src="{% static 'js/js116_onsubmit.png' %}" className="img"/>
+      <img src={images.js116_onsubmit} className="img"/>
       <div className="styleee">   
           <form onsubmit="test(event)" action="./js/test_submit.php" method="POST">
              <input type="email" name="Email_submit" id="myEmail" required/>

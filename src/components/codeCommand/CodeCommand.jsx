@@ -31,7 +31,7 @@ export default function CodeCommand(props){
 
     return(
         <div className="alert bg-dark text-light my-3 pb-0">
-            <pre className='positon-relative' style={{overflow:"hidden"}}>
+            <pre style={{overflow:"hidden"}} className={`positon-relative ${props.preClass}}`}>
                 {props.children}
             </pre>
             <button onClick={handleCopyClick} className={`btn bg-dark position-absolute text-light btn-CodeCommand`}>  

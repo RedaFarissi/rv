@@ -91,7 +91,7 @@ return(
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js84_animation.png' %}" className="img"/>
+        <img src={images.js84_animation} className="img"/>
         <div className="styleee" style={{height: "360px"}}>
               <div id="id_DIV" onclick="myFunction()">Click me to start the animation.</div>
         </div>
@@ -105,7 +105,7 @@ return(
         </div> */}
       </p>
       <div className="mital"> متال :  </div>
-      <img src="{% static 'js/js84_animation2.png' %}" className="img"/>
+      <img src={images.js84_animation2} className="img"/>
       <div className="styleee" style={{height: "400px"}}>
         <div style={{width:"100%",height:"300px",position:"relative",backgroundColor:"thistle"}}>
           <div id="DIV">  </div>
@@ -122,7 +122,7 @@ return(
           </div> */}
         </div>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js84_animation3.png' %}" className="img"/>
+        <img src={images.js84_animation3} className="img"/>
         <div className="styleee" style={{height: "400px"}}>
           <div style={{width:"100%",height:"300px",position:"relative",backgroundColor:"thistle"}}>
             <div id="DIV2">  </div>

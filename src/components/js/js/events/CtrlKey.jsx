@@ -42,7 +42,7 @@ export default function OnctrlKey(){
   </div> */}
 
     <div className="mital"> متال :  </div>
-    <img src="{% static 'js/js133_ctrlKey.png' %}" className="img"/>
+    <img src={images.js133_ctrlKey} className="img"/>
     <div className="styleee">
         <p>    use event.ctrlKey width event  onkeypress    </p>
     </div>

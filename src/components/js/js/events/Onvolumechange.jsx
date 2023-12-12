@@ -43,19 +43,19 @@ export default function Onvolumechange(){
           </div> */}
       </p>
       <div className="mital"> متال :  </div>
-      <img src="{% static 'js/js134_onvolumechange.png' %}" className="img"/>
+      <img src={images.js134_onvolumechange} className="img"/>
       <div className="styleee img">
           <p> Try to change the volume  in the bottom right corner.</p>
           <video controls onvolumechange="myFunction()"  width="500">
-            <source src="./js/video.mp4" type="video/mp4"/>
+            <source src={images.video} type="video/mp4"/>
             Your browser does not support HTML5 video.
           </video>
       </div>
       <div className="mital"> متال 2 :  </div>
-      <img src="{% static 'js/js134_onvolumechange2.png' %}" className="img"/>
+      <img src={images.js134_onvolumechange2} className="img"/>
       <div className="styleee img">
           <video id="myVideo" width="320" height="240" controls>
-            <source src="./js/video.mp4" type="video/mp4"/>
+            <source src={images.video} type="video/mp4"/>
             Your browser does not support the video tag.
           </video>
           <p> Change the volume by either clicking the buttons or by adjusting the volume in the bottom right corner.</p>

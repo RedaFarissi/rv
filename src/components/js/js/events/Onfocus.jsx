@@ -38,13 +38,13 @@ export default function Onfocus(){
             </div>
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js85_onfocus.png' %}" className="img"/>
-        <div className="styleee img">
+        <img src={images.js85_onfocus} className="img"/>
+        <div className="styleee">
             <input type="text" id="InPuT" onfocus="function_name()"/>
         </div>
         <div className="mital"> متال 2 : </div>
-        <img src="{% static 'js/js85_onfocus2.png' %}" className="img"/>
-        <div className="styleee img">
+        <img src={images.js85_onfocus2} className="img"/>
+        <div className="styleee">
             <input type="text" id="InPuT2"/>
         </div>
     </article>

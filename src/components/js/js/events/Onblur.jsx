@@ -43,7 +43,7 @@ export default function Onblur(){
             </div>
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js86_onblur.png' %}" className="img"/>
+        <img src={images.js86_onblur} className="img"/>
         <div className="styleee">
             <input type="text" id="InPuT2"/>
         </div>

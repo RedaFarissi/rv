@@ -35,7 +35,7 @@ export default function EventTarget(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js114_event_target.png' %}" className="img"/>
+        <img src={images.js114_event_target} className="img"/>
         <div className="styleee">
             <div id="parent2" onclick="function_name(event)" >
                 <p id="paragraph"> this  is paragraph click </p>
@@ -44,7 +44,7 @@ export default function EventTarget(){
             </div>
         </div>
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js114_event_target2.png' %}" className="img"/>
+        <img src={images.js114_event_target2} className="img"/>
         <div className="styleee">
             <div id="parent2" onclick="myfunction(event)" >
                 <p id="child-p"> this  is paragraph click </p>

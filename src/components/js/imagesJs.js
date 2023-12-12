@@ -219,13 +219,6 @@ import js27_JSON6 from "../../assests/images/js/js27_JSON6.png"
 import js27_JSON7 from "../../assests/images/js/js27_JSON7.png"
 import js28_Class from "../../assests/images/js/js28_Class.png"
 import js29_alert from "../../assests/images/js/js29_alert.png"
-import js2_output from "../../assests/images/js/js2_output.png"
-import js2_output2_2 from "../../assests/images/js/js2_output2 2.png"
-import js2_output2 from "../../assests/images/js/js2_output2.png"
-import js2_output3_2 from "../../assests/images/js/js2_output3 2.png"
-import js2_output3 from "../../assests/images/js/js2_output3.png"
-import js2_output4_2 from "../../assests/images/js/js2_output4 2.png"
-import js2_output4 from "../../assests/images/js/js2_output4.png"
 import js30_confirm from "../../assests/images/js/js30_confirm.png"
 import js31_prompt from "../../assests/images/js/js31_prompt.png"
 import js32_btoa from "../../assests/images/js/js32_btoa.png"
@@ -248,9 +241,6 @@ import js38_history2 from "../../assests/images/js/js38_history2.png"
 import js38_history3 from "../../assests/images/js/js38_history3.png"
 import js39_innerWidth from "../../assests/images/js/js39_innerWidth.png"
 import js39_innerWidth2 from "../../assests/images/js/js39_innerWidth2.png"
-import js3_Statements from "../../assests/images/js/js3_Statements.png"
-import js3_Statements2 from "../../assests/images/js/js3_Statements2.png"
-import js3_Statements3 from "../../assests/images/js/js3_Statements3.png"
 import js40_clientWidth from "../../assests/images/js/js40_clientWidth.png"
 import js40_clientWidth2 from "../../assests/images/js/js40_clientWidth2.png"
 import js41_scrollBy from "../../assests/images/js/js41_scrollBy.png"
@@ -267,12 +257,6 @@ import js48_localStorage2 from "../../assests/images/js/js48_localStorage2.png"
 import js49_sessionStorage from "../../assests/images/js/js49_sessionStorage.png"
 import js49_sessionStorage2 from "../../assests/images/js/js49_sessionStorage2.png"
 import js4_Arithmetic from "../../assests/images/js/js4_Arithmetic.png"
-import js4_Variables from "../../assests/images/js/js4_Variables.png"
-import js4_Variables2 from "../../assests/images/js/js4_Variables2.png"
-import js4_Variables3 from "../../assests/images/js/js4_Variables3.png"
-import js4_Variables4 from "../../assests/images/js/js4_Variables4.png"
-import js4_Variables5 from "../../assests/images/js/js4_Variables5.png"
-import js4_Variables6 from "../../assests/images/js/js4_Variables6.png"
 import js50_matchMedia from "../../assests/images/js/js50_matchMedia.png"
 import js51_navigator from "../../assests/images/js/js51_navigator.png"
 import js51_navigator2 from "../../assests/images/js/js51_navigator2.png"
@@ -441,15 +425,10 @@ import js9_Search7 from "../../assests/images/js/js9_Search7.png"
 import js9_Search8_2 from "../../assests/images/js/js9_Search8 2.png"
 import js9_Search8 from "../../assests/images/js/js9_Search8.png"
 import js9_Search9 from "../../assests/images/js/js9_Search9.png"
-import js_Introduction from "../../assests/images/js/js_Introduction.png"
-import js_Introduction2 from "../../assests/images/js/js_Introduction2.png"
 import js_Introduction3 from "../../assests/images/js/js_Introduction3.png"
-import js_Introduction4_2 from "../../assests/images/js/js_Introduction4 2.png"
-import js_Introduction4_3 from "../../assests/images/js/js_Introduction4 3.png"
-import js_Introduction4 from "../../assests/images/js/js_Introduction4.png"
 import music from "../../assests/images/js/music.mp3"
 import video from "../../assests/images/js/video.mp4"
-
+import html_logo from "../../assests/images/logo/html_logo.png"
 
 const images = {  
     hajime,hajime2,js100_oncontextmenu,js101_oncopy,js102_oncut,js103_pageX,js104_oninvalid,
@@ -486,16 +465,15 @@ const images = {
     js24_Conversion2,js24_Conversion3,js24_Conversion4,js24_Conversion5,js24_Conversion6,js24_Conversion7,
     js24_Conversion8,js24_Conversion9,js25_Regular,js25_Regular2,js25_Regular3,js25_Regular4,js25_Regular5,
     js26_Errors,js26_Errors2,js26_Errors3,js26_Errors4,js27_JSON,js27_JSON2,js27_JSON3,js27_JSON4_2,
-    js27_JSON4,js27_JSON5,js27_JSON6,js27_JSON7,js28_Class,js29_alert,js2_output,js2_output2_2,js2_output2,
-    js2_output3_2,js2_output3,js2_output4_2,js2_output4,js30_confirm,js31_prompt,js32_btoa,js32_btoa2,
+    js27_JSON4,js27_JSON5,js27_JSON6,js27_JSON7,js28_Class,js29_alert,
+    js30_confirm,js31_prompt,js32_btoa,js32_btoa2,
     js33_atob,js34_location,js34_location2,js34_location3,js34_location4,js34_location5,js34_location6,
     js34_location7,js35_setInterval,js35_setInterval2,js36_clearInterval,js37_frames,js37_frames2,
-    js38_history,js38_history2,js38_history3,js39_innerWidth,js39_innerWidth2,js3_Statements,
-    js3_Statements2,js3_Statements3,js40_clientWidth,js40_clientWidth2,js41_scrollBy,js42_pageXOffset,
+    js38_history,js38_history2,js38_history3,js39_innerWidth,js39_innerWidth2,
+    js40_clientWidth,js40_clientWidth2,js41_scrollBy,js42_pageXOffset,
     js43_pageYOffset,js44_scrollIntoView,js45_scrollTop,js46_console,js47_getComputedStyle,
     js47_getComputedStyle2,js47_getComputedStyle3,js48_localStorage,js48_localStorage2,
-    js49_sessionStorage,js49_sessionStorage2,js4_Arithmetic,js4_Variables,js4_Variables2,
-    js4_Variables3,js4_Variables4,js4_Variables5,js4_Variables6,js50_matchMedia,js51_navigator,
+    js49_sessionStorage,js49_sessionStorage2,js4_Arithmetic,js50_matchMedia,js51_navigator,
     js51_navigator2,js51_navigator3,js51_navigator4,js51_navigator5,js52_print,js53_beforeprint_2,
     js53_beforeprint_3,js53_beforeprint,js54_afterprint_2,js54_afterprint_3,js54_afterprint,
     js55_addEventListener,js55_addEventListener2,js55_addEventListener3,js55_addEventListener4,
@@ -525,7 +503,7 @@ const images = {
     js97_onclick,js97_onclick2,js98_ondblclick,js99_oninput,js9_Search_2,js9_Search,
     js9_Search2_2,js9_Search2,js9_Search3_2,js9_Search3,js9_Search4_2,js9_Search4,
     js9_Search5,js9_Search6_2,js9_Search6,js9_Search7_2,js9_Search7,js9_Search8_2,
-    js9_Search8,js9_Search9,js_Introduction,js_Introduction2,js_Introduction3,
-    js_Introduction4_2,js_Introduction4_3,js_Introduction4,music,video
+    js9_Search8,js9_Search9,js_Introduction3,
+    music,video,html_logo,
  }
 export default images ;

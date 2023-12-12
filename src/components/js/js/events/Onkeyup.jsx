@@ -33,7 +33,7 @@ export default function Onkeyup(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js107_onkeyup.png' %}" className="img"/>
+        <img src={images.js107_onkeyup} className="img"/>
     </article>
 </section>
     )

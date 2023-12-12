@@ -29,17 +29,14 @@ export default function Onpause(){
         </p>
         
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js125_onpause.png' %}" className="img"/>
+        <img src={images.js125_onpause} className="img"/>
         <div className="styleee">  
-            <div>
-              This example demonstrates how to assign an 
+            <div>=monstrates how to assign an 
               "onpause" event to a video element.
             </div>
-        
             <p>Play and pause the video.</p>
-        
             <video  onpause="myFunction()" controls width="330" height="250">
-              <source src="./js/video.mp4" type="video/mp4"/>
+              <source src={images.video} type="video/mp4"/>
               Your browser does not support the video tag.
             </video>
         </div>

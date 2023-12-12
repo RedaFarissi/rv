@@ -32,7 +32,7 @@ export default function Oninvalid(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js104_oninvalid.png' %}" className="img"/>
+        <img src={images.js104_oninvalid} className="img"/>
         <div className="styleee img">
             <form action="./js/test_submit.php" method="GET">
                   Pick a number between 2 and 9: 
@@ -42,7 +42,7 @@ export default function Oninvalid(){
             <p>If you submit the form with a number that is less than 2 or greater than 9, an alert message will occur. </p>
         </div>
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js104_oninvalid2.png' %}" className="img"/>
+        <img src={images.js104_oninvalid2} className="img"/>
         <div className="styleee img">
             <form method="POST" action="./js/test_submit.php">
               <label for="Email"> Email : </label>

@@ -45,10 +45,10 @@ export default function Onloadedmetadata(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js92_onloadedmetadata.png' %}" className="img"/>
+        <img src={images.js92_onloadedmetadata} className="img"/>
         <div className="styleee"> 
            <video controls onloadstart="function_name()" ondurationchange="function_name2()" onloadedmetadata="function_name3()" width="50%">
-              <source src="{% static 'js/video.mp4' %}" type="video/mp4"/>
+              <source src={images.video} type="video/mp4"/>
               Your browser does not support HTML5 video.
             </video>
         </div>

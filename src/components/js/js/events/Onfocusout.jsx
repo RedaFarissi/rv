@@ -33,7 +33,7 @@ export default function Onfocusout(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js118_onfocusin.png' %}" className="img"/>
+        <img src={images.js118_onfocusin} className="img"/>
         <div className="styleee">      
             Enter your name: 
             <input type="email" id="Input" onfocusin="inf()" onfocusout="outf()"/>

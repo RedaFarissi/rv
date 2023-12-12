@@ -40,10 +40,10 @@ export default function Ondurationchange(){
           </div> */}
       </div>
       <div className="mital">متال :  </div>
-      <img src="{% static 'js/js91_ondurationchange.png' %}" className="img"/>
+      <img src={images.js91_ondurationchange} className="img"/>
       <div className="styleee"> 
         <video controls onloadstart="function_name()" ondurationchange="function_name2()" width="50%">
-            <source src="./js/video.mp4" type="video/mp4"/>
+            <source src={images.video} type="video/mp4"/>
             Your browser does not support HTML5 video.
           </video>
       </div>

@@ -27,7 +27,7 @@ export default function Oninput(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js99_oninput.png' %}" className="img"/>
+        <img src={images.js99_oninput} className="img"/>
         <div className="styleee">
             <input type="text" oninput="alert(this.value)"/>
         </div>

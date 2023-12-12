@@ -39,7 +39,7 @@ export default function Onreset(){
         
         <div className="mital"> متال :  </div>
         <ul><li> الخاصية <bdi>reset()</bdi> بدون Event </li></ul>
-        <img src="{% static 'js/js128_onreset.png' %}" className="img"/>
+        <img src={images.js128_onreset} className="img"/>
         <div className="styleee">
             <p>Enter some text in the fields below,then press the "Reset form" button to reset the form.</p>
             <form id="id_Form">
@@ -50,7 +50,7 @@ export default function Onreset(){
         </div>    
         <div className="mital"> متال 2 :  </div>
         <ul><li> الخاصية <bdi>reset()</bdi> مع ال <bdi>Event onreset</bdi></li></ul>
-        <img src="{% static 'js/js128_onreset2.png' %}" className="img"/>
+        <img src={images.js128_onreset2} className="img"/>
         <div className="styleee">
             <form id="myForm">
               <label for="email">Email : </label>

@@ -43,11 +43,11 @@ export default function Onplay(){
         </div> */}
     </p>
     <div className="mital"> متال :  </div>
-    <img src="{% static 'js/js126_onplay.png' %}" className="img"/>
+    <img src={images.js126_onplay} className="img"/>
     <div className="styleee">  
         <p><b>Play and pause the video.</b></p>
         <video id="video_test" onplay="function_play()"  onpause="function_pause()" controls width="330" height="250">
-          <source src="./js/video.mp4" type="video/mp4"/>
+          <source src={images.video} type="video/mp4"/>
           Your browser does not support the video tag.
         </video><br/>
         <button className="btn btn-primary" id="plAy">

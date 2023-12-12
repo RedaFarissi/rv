@@ -38,7 +38,7 @@ export default function Canplay(){
         <img src="{% static 'js/js95_oncanplay.png' %}" className="img"/>
         <div className="styleee"> 
             <video controls oncanplay="myFunction()" width="60%">
-                <source src="./js/video.mp4" type="video/mp4"/>
+                <source src={images.video} type="video/mp4"/>
                 Your browser does not support HTML5 video.
             </video>
         </div>

@@ -24,7 +24,7 @@ export default function Onunload(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js132_onunload.png' %}" className="img"/>
+        <img src={images.js132_onunload} className="img"/>
     </article>
 </section>
     )

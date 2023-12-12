@@ -38,7 +38,7 @@ export default function Onmousemove(){
         </div> */}
     </p>
     <div className="mital">متال : </div>
-    <img src="{% static 'js/js113_onmousemove.png' %}" className="img"/>
+    <img src={images.js113_onmousemove} className="img"/>
     <div className="styleee">
         <div id="div" onmousemove="myFunction(event)" onmouseout="clearCoor()"></div>
         <p>Mouse over the rectangle above, and get the coordinates of your mouse pointer.</p>

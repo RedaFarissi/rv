@@ -38,7 +38,7 @@ export default function Onmouseover(){
             </div> */}
         </p>
         <div className="mital">متال : </div>
-        <img src="{% static 'js/js115_onmousemove.png' %}" className="img"/>
+        <img src={images.js115_onmousemove} className="img"/>
         <div className="styleee img">
             <div className="div" onmousemove="myMoveFunction()"> <p className="p">onmousemove: <br/> <span id="id_name"> Mouse over me!</span></p> </div>
             <div className="div" onmouseenter="myEnterFunction()"> <p className="p">onmouseenter: <br/> <span id="id_name2"> Mouse over me!</span></p> </div>

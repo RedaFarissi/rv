@@ -26,7 +26,7 @@ export default function Ondblclick(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js98_ondblclick.png' %}" className="img"/>
+        <img src={images.js98_ondblclick} className="img"/>
         <div className="styleee"> 
             <p ondblclick="myFunction()">
                 Double-click this paragraph to trigger a function.

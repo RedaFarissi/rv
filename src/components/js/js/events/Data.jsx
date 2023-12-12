@@ -21,7 +21,7 @@ export default function Data(){
           </div> */}
       </p>
       <div className="mital"> متال :  </div>
-      <img src="{% static 'js/js135_data.png' %}" className="img"/>
+      <img src={images.js135_data} className="img"/>
       <div className="styleee">
           <p> Write something in the text field . </p>
           <input type="text"  oninput="myFunction(event)"/>

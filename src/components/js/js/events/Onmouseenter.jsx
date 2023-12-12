@@ -37,7 +37,7 @@ export default function Onmouseenter(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js111_onmouseenter.png' %}" className="img"/>
+        <img src={images.js111_onmouseenter} className="img"/>
         <div className="styleee img">
             <img id="img" onmouseenter="big(this)" onmouseleave="small(this)" src="./js/hajime.jpg" style={{width:"30px",height:"30px",borderRadius:"50%"}}/>
             <p> The function big() is triggered when the  moves the mouse pointer onto the image.</p>

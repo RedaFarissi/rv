@@ -25,9 +25,9 @@ export default function Onerror(){
           </div> */}
       </p>
       <div className="mital"> متال :  </div>
-      <img src="{% static 'js/js119_onerror.png' %}" className="img"/>
+      <img src={images.js119_onerror} className="img"/>
       <div className="styleee">      
-          <img src="image.gif" onerror="myFunction()"/>
+          <img src={images.gif} onerror="myFunction()"/>
           <p>
             A function is triggered if an error
             occurs when loading the image. 

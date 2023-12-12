@@ -35,10 +35,10 @@ export default function Onprogress(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js94_onprogress.png' %}" className="img"/>
+        <img src={images.js94_onprogress} className="img"/>
         <div className="styleee"> 
             <video controls onprogress="function_name()" width="50%">
-              <source src="./js/video.mp4" type="video/mp4"/>
+              <source src={images.video} type="video/mp4"/>
               Your browser does not support HTML5 video.
             </video>
         </div>

@@ -35,7 +35,7 @@ export default function Oncopy(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js101_oncopy.png' %}" className="img"/>
+        <img src={images.js101_oncopy} className="img"/>
         <div className="styleee">
             <p oncopy="myFunction()">
               Try to copy this text

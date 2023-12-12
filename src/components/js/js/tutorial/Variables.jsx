@@ -2,6 +2,85 @@
 import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 export default function Variables(){
+    const code1 = `var variable_name = value ;`;
+    const code2 = `const pi =  3.14 ;`;
+
+    const codeExemple1= { 
+    code: `     <h1>JavaScript Variables</h1>
+    <div id="d"></div>
+
+    <script src="./index.js"></script>`,
+    script:`var x = 5;
+var y = 6;
+var z = x * y;
+    
+document.getElementById("d").innerHTML = "The value of z is: " + z;`
+        }
+    const codeExemple2= { 
+    code: `     <h1>JavaScript Variables</h1>
+    <div id="d2"></div>
+
+    <script src="./index.js"></script>`,
+    script:`let x2 = 5
+let y2 = 9
+let z2 = y2 / x2
+
+document.getElementById("d2").innerHTML = "The value of z2 is: " + z2;`
+    }
+    const codeExemple3= { 
+    code: `    <h1>JavaScript Variables</h1>
+    <div id="d3"></div> 
+
+    <script src="./index.js"></script>`,
+    script:`x3 = 5
+y3 = 9
+z3 = y3 - x3
+document.getElementById("d3").innerHTML = "The value of z3 is: " + z3;`
+    } 
+    const codeExemple4= { 
+    code: `    <h2>JavaScript Variable const</h2>
+    <div id="my-id"></div> 
+
+    <script src="./index.js"></script>`,
+    script:`const pi = 3.14;
+
+document.getElementById("my-id").innerHTML = pi * 2 `
+    }   
+    const codeExemple5= { 
+    code: `    <p id="var" style="color:brown;background-color: yellow;">  </p>
+    <p id="var2" style="color:orange;background-color: black;"> </p>
+    <p id="var3" style="color:brown;"> </p>
+
+    <script src="./index.js"></script>`,
+    script:`document.getElementById("var").innerHTML = test;
+test = "Reda Eskouni";
+document.getElementById("var2").innerHTML = test;
+test = "<b>Reda Eskouni</b>";
+document.getElementById("var3").innerHTML = test;`
+    }
+    const codeExemple6= { 
+    head:`  
+    <style>
+        #String {
+          font-size: xx-large;
+          color: blueviolet;
+        }
+
+        #number {
+          font-size: xx-large;
+          color: green;
+        }
+    </style>`,
+    code: `    <div id="String"></div>
+    <div id="number"></div>
+    
+    <script src="./index.js"></script>`,
+    script:`var num = 2000;
+let str = "Hello Word";
+
+document.getElementById("number").innerHTML = num;
+document.getElementById("String").innerHTML = str;`
+    }   
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Variables</h1>
@@ -12,77 +91,48 @@ export default function Variables(){
             يمكن إختيار إسم المتغير الذي يناسبك على شرط أن  يكون غير محجوز من قبل لغة <b>JavaScript</b> .<br/>
             في لغة <b>JavaScript</b> يجب تعريف المتغير بالكلمة <b>var</b> أو <b>let</b>  أو <b>const</b> .<br/>
             يتم تعرف بالكلمة لمرة واحد أتناء أول إستعمال .
-            {/* <div className="codeStudio alert bg-dark mt-2" dir="ltr" style="padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags)">var</span> variable_name = content ;</pre>
-            </div>  
-            <div className="codeStudio alert bg-dark mt-2" dir="ltr" style="padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags)">var</span> x = <span style="color:rgb(80,210,80);">5</span> ;
-        <span style="color:var(--html-color-tags)">var</span> y = <span style="color:rgb(80,210,80);">6</span> ;
-        <span style="color:var(--html-color-tags)">var</span> z = <span style="color:rgb(80,210,80);">11</span> ;</pre>
-            </div>   */}
+            <CodeHighlighter code={code1} language="js" addClass="mt-3 mb-3" copie={true}/>
         </p>
         <div className="mital">متال :  </div>
         <ul><li> في هذا المثال ، تعتبر <b>x</b> و <b>y</b> و <b>z</b> متغيرات معرّفة بالكلمة الأساسية <b>var</b>  </li></ul>
-        <img src={images.js4_Variables} className="img"/>
-        <div className="styleee">
-            <h2>JavaScript Variables</h2>
-            <div id="d"></div>
-            <script>
-                var x = 5;
-                var y = 6;
-                var z = x + y;
-                document.getElementById("d").innerHTML = "The value of z is: " + z;
-            </script>
-        </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="variables" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='variables' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h1>JavaScript Variables</h1>
+            <p>The value of z is: 30</p>
+        </Result>
         <div className="mital"> متال 2 :  </div>
         <ul><li> في هذا المثال ، تعتبر <b>x2</b> و <b>y2</b> و <b>z2</b> متغيرات معرّفة بالكلمة  <b>let</b>  </li></ul>
-        <img src={images.js4_Variables2} className="img"/>
-        <div className="styleee">
-            <h2>JavaScript Variables </h2>
-            <div id="d2"></div>
-            <script>
-                let x2 = 5;
-                let y2 = 9;
-                let z2 = x2 + y2;
-                document.getElementById("d2").innerHTML = "The value of z2 is: " + z2;
-            </script>
-        </div>
-        <div className="sum_exemple_style">
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="variables" addClass="mt-3 mb-3" copie={true} number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='variables' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h1>JavaScript Variables</h1>
+            <p>The value of z2 is: 1.8</p>
+        </Result>
         <div className="mital"> متال 3 :  </div>
         <ul><li> في هذا المثال ، تعتبر <b>x3</b> و <b>y3</b> و <b>z3</b> متغيرات معرّفة بدون أي الكلمة .</li></ul>
-        <img src={images.js4_Variables3} className="img"/>
-        <div className="styleee">
-            <h2>JavaScript Variables </h2>
-            <div id="d3"></div>
-            <script>
-                x3 = 20;
-                y3 = 9;
-                z3 = x3 + y3;
-                document.getElementById("d3").innerHTML = "The value of z3 is: " + z3;
-            </script>
-        </div>
-        </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="variables" addClass="mt-3 mb-3" copie={true} number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='variables' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h1>JavaScript Variables</h1>
+            The value of z3 is: 4
+        </Result>
     </article>
     <article>
         <h2  className="title-h2">2.  متى تستخدم متغير  const </h2>
         <p className="style_divv">
             كقاعدة عامة المتغيرات التابة التي لن تحتاج إلى تغييره قم بكتابة  <b>const</b> قبله للإشارة إلى أنه لا يمكن تغيير قيمة ذالك المتغير .<br/>
-            {/* <div className="codeStudio alert bg-dark mt-2" dir="ltr" style="padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags)">const</span> pi =  <span style="color:rgb(80,210,80);">3.14</span> ;</pre>
-            </div>  */}
+            <CodeHighlighter code={code2} language="js" addClass="mt-3 mb-3" copie={true}/>
         </p>
 
         <div className="mital"> متال :  </div>
         <ul><li> يتم التصريح عن المتغير <b>pi</b> بالكلمة الأساسية <b>const</b>. ويعني ذالك أن هذه قيم ثابتة ولا يمكن تغييرها </li></ul>
-        <img src={images.js4_Variables4} className="img"/>
-        <div className="styleee">
-            <h2>JavaScript Variables width const </h2>
-            <div id="con"></div>
-            <script>
-               const pi = 3.14 ;
-                document.getElementById("con").innerHTML = pi * 2;
-            </script>
-        </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="variables" addClass="mt-3 mb-3" copie={true} number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='variables' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>JavaScript Variable const</h2>
+            <p>6.28</p> 
+        </Result>
     </article>
     <article>
         <h2 className="title-h2">3.  متى تستخدم متغير  var و let </h2>
@@ -92,23 +142,15 @@ export default function Variables(){
             تمت إضافة الكلمتين الأساسيتين <b>let</b> و <b>const</b> إلى <b>JavaScript</b> في عام 2015.<br/>
             إذا كنت تريد تشغيل التعليمات البرمجية الخاصة بك في متصفح أقدم ، فيجب عليك استخدام <b>var</b> .<br/><br/>
             عند إعلان  عن متغير بإستخدام <b>var</b>  أو <b>let</b> يمكن تغيير قيمة المتغير بحرية .
-            
         </p>
         <div className="mital"> متال :  </div>
-        <img src={images.js4_Variables5} className="img"/>
-        <div className="styleee">
-            {/* <p id="var" style="color:brown;background-color: yellow;">  </p>
-            <p id="var2" style="color:orange;background-color: black;"> </p>
-            <p id="var3" style="color:brown;"> </p>
-            <script>
-                var test = 20 ;
-                document.getElementById("var").innerHTML = test;
-                test = "Reda Eskouni";
-                document.getElementById("var2").innerHTML = test;
-                test = "<b>Reda Eskouni</b>";
-                document.getElementById("var3").innerHTML = test;
-            </script> */}
-        </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="variables" addClass="mt-3 mb-3" copie={true} number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='variables' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <p style={{color: "brown",backgroundColor: "yellow"}}>20  </p>
+            <p style={{color:"orange",backgroundColor: "black"}}> Reda Eskouni</p>
+            <p style={{color:"brown"}}> <b>Reda Eskouni</b> </p>
+        </Result>
     </article>
     <article>
         <h2 className="title-h2">4.  قوانين المتغيرات  </h2>
@@ -135,19 +177,14 @@ export default function Variables(){
             تتم كتابة المتغيرات النصية داخل علامتي اقتباس مزدوجتين أو مفردة. الأرقام تكتب بدون علامات اقتباس .<br/>
         </p>
         <div className="mital"> متال :  </div>
-        <img src={images.js4_Variables6} className="img"/>
-        <div className="styleee">
-            <div id="String"> </div>
-            <div id="number"> </div>
-            <script>
-                var num = 2000;
-                let str = "Hello Word"
-                document.getElementById("number").innerHTML = num;
-                document.getElementById("String").innerHTML = str;
-            </script>
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple6.code} head={codeExemple6.head} language="html" is_html={true} title="variables" addClass="mt-3 mb-3" copie={true} number={true}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple6.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='variables' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <div style={{fontSize: "xx-large", color: "blueviolet"}}>Hello Word</div>
+            <div style={{fontSize: "xx-large", color: "green"}}>2000</div>
+        </Result>
         <ul><li> من الممارسة البرمجية الجيدة الإعلان عن جميع المتغيرات في بداية البرنامج .</li></ul>
-    </article>
+    </article> 
 </section>
     )
 }

@@ -23,7 +23,7 @@ export default function EventCurrentTarget(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js148_currentTarget.png' %}" className="img"/>
+        <img src={images.js148_currentTarget} className="img"/>
         <div className="styleee">       
             <div id="parent" onclick="function_name(event)" >
                 <p id="paragraph"> this  is paragraph click </p>

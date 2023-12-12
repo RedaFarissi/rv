@@ -77,7 +77,7 @@ export default function Ondrag(){
         </div> */}
 
             <div className="mital"> متال :  </div>
-            <img src="{% static 'js/js115_ondrag.png' %}" className="img"/>
+            <img src={images.js115_ondrag} className="img"/>
             <div className="styleee">   
                 <div className="d-flex justify-content-around flex-wrap">
                     <div ondrop="drop(event)" ondragover="allowDrop(event)" className="div center"></div>

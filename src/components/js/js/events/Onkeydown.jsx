@@ -33,7 +33,7 @@ export default function Onkeydown(){
             </div> */}
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js105_onkeydown.png' %}" className="img"/>
+        <img src={images.js105_onkeydown} className="img"/>
         <div className="styleee">
             <p> A function is triggered when the user is pressing a key in the input field.   </p>
             <input type="text" onkeydown="myFunction()"/>      

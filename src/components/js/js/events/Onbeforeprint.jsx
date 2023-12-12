@@ -14,9 +14,9 @@ export default function Onbeforeprint(){
             </div> */}
         </div>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js53_beforeprint.png' %}" className="img"/>
-        <img src="{% static 'js/js53_beforeprint 2.png' %}" className="img"/>
-        <img src="{% static 'js/js53_beforeprint 3.png' %}" className="img"/>
+        <img src={images.js53_beforeprint} className="img"/>
+        <img src={images.js53_beforeprint_2} className="img"/>
+        <img src={images.js53_beforeprint_3} className="img"/>
     </article>
 </section>
     )

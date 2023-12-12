@@ -30,7 +30,6 @@ export default function Onclick(){
   <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript onclick</h1>
     <article>
-
         <p className="style_divv mt-5">
             يقع حدث <b>onclick</b> عندما ينقر المستخدم على عنصر.
             {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr" >
@@ -47,7 +46,7 @@ export default function Onclick(){
             </div> */}
         </p>
         <div className="mital">متال 1 :  </div>
-        <img src="{% static 'js/js97_onclick.png' %}" className="img"/>
+        <img src={images.js97_onclick} className="img"/>
         <div className="styleee"> 
             <div id="div_test"> 
               <button className="btn btn-primary" onclick="function_name1()">
@@ -62,7 +61,7 @@ export default function Onclick(){
             </div>
         </div>
         <div className="mital">متال 2 :  </div>
-        <img src="{% static 'js/js97_onclick2.png' %}" className="img"/>
+        <img src={images.js97_onclick2} className="img"/>
         <div className="styleee"> 
             <div>Field1: <input type="text" id="f1" value="JavaScript"/></div>
             <div>Field2: <input type="text" id="f2"/></div>

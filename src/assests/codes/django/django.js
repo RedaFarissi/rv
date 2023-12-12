@@ -125,12 +125,10 @@ const codes = [
     {
         title: "Django_Filter",
         models_Objecjs_filter:[index13models_Objecjs_filter0(),index13models_Objecjs_filter1(),index13models_Objecjs_filter2(),index13models_Objecjs_filter3(),index13models_Objecjs_filter4(),index13models_Objecjs_filter5(),index13models_Objecjs_filter6()],
-        row_filter:[index13row_filter()],
+        raw_filter:[index13row_filter()],
         lookup_expr:[],
         Q_filter:[],
-    },
-    {
-        Exercise:[]
+        select_related:[],
     },
     {
         Session:[]

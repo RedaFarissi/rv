@@ -2,8 +2,61 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Introduction(){
-    function changer(){ document.getElementById("h2").innerHTML = "Reda Eskouni"}
-	function P(){ document.getElementById("p").innerHTML = Date();}
+    const code1 = `<!DOCTYPE html>
+<html>
+   <head>
+      <title> Page Title </title>
+      <!-- to work with different device -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--  defer  to run the js file after loading the html elements-->
+      <script defer src="viewport"> </script> 
+   </head >
+   <body>
+     Content
+   </body>
+</html>`
+
+    
+    const codeExemple1= { 
+    code:`      <script src="./reda.js"></script>`,
+    script: `var d = "Reda Eskouni";
+for (var i = 0 ;  i < 5 ; i++) {
+   document.write("<h2>" + d + "</h2>")
+}`
+    }
+
+
+    const codeExemple2= { 
+        code:
+    `<!DOCTYPE html>
+    <html>
+    <head>
+       <title> Reda Eskouni  </title>
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h2 id="h2">Heading</h2>
+    
+        <p id="p">Date</p>
+      
+        <button onclick="header()">Change Heading</button>
+      
+        <button onclick="paragragh()">Date</button>
+      
+        <script src="./index.js"></script>  
+    </body>
+    </html>`,
+        script: `function header() {
+    document.getElementById("h2").innerHTML = "Reda Eskouni";
+}
+
+function paragragh() {
+    document.getElementById("p").innerHTML = Date();
+}`
+    }
+    function js_intro_header(){ document.getElementById("h2").innerHTML = "Reda Eskouni"}
+	function js_paragragh(){ document.getElementById("p").innerHTML = Date();}
+    
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Introduction</h1>
@@ -34,25 +87,18 @@ export default function Introduction(){
             لربط ملف <b>html</b> بملف <b>js</b> يجب إستخدام الوسم <kbd>&lt;script&gt;</kbd> مع السمة <b>src</b> و مسار الملف .
         </p>
         <div className="mital">متال :  </div>
-        <img src={images.js_Introduction4} className="img"/>
-        <img src={images.js_Introduction4_2} className="img"/>
-        <img src={images.js_Introduction4_3} className="img"/>
+        <CodeHighlighter file_name="reda.html"code={codeExemple1.code} language="html" is_html={true} title="Reda eskouni" addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="reda.js"code={codeExemple1.script} language="js" addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='Reda Eskouni' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
+            <h2>Reda Eskouni</h2>            
+            <h2>Reda Eskouni</h2>            
+            <h2>Reda Eskouni</h2>            
+            <h2>Reda Eskouni</h2>            
+            <h2>Reda Eskouni</h2>            
+        </Result>
         <div className="mital">متال 2 :  </div>
         <ul><li> <b>defer</b> لتشعيل ملف js بعد تحميل عناصر  html </li></ul>
-        <div className="alert bg-dark text-light w-75 m-auto" >
-        {/* <pre>&lt;!DOCTYPE <span style="color:var(--js-color)">html</span>&gt;
-        &lt;html&gt;
-           &lt;head&gt;
-              &lt;title&gt; <span style="color:white;">Page Title</span> &lt;/title&gt;
-              <span style='color:green'>&lt;!-- to work with different device --&gt;</span>
-              &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-              <span className='b'>&lt;script <span className='bc'>defer</span> <span className="bc">src</span>=<span className='o'>"viewport"</span>&gt; &lt;/script&gt;</span>
-           &lt;/head &gt;
-           &lt;body&gt;
-             Content
-           &lt;/body&gt;
-        &lt;/html&gt;</pre> */}
-        </div>
+        <CodeHighlighter code={code1} language="html" addClass="mt-3 mb-3" copie={true}/>
     </article>
     <article>
         <h2 className="title-h2">3. التعليقات في لغة JavaScript </h2>
@@ -61,10 +107,10 @@ export default function Introduction(){
             يمكن أيضًا استخدام تعليقات <b>JavaScript</b> لمنع التنفيذ ، عند اختبار كود بديل.<br/>
             تبدأ التعليقات المكونة من سطر واحد بـ //.<br/>
             سيتم تجاهل أي نص بين // ونهاية السطر بواسطة <b>JavaScript</b> (لن يتم تنفيذه). يكتب التعليق كالتالي :<br/>
-            {/* <div style="color:green;direction:ltr;"> <bdi>//Comment</bdi></div><br/> */}
+            <div style={{color:"green",direction:"ltr"}}> <bdi>//Comment</bdi></div><br/>
             تبدأ التعليقات متعددة الأسطر بـ /* وتنتهي بـ */.    سيتم تجاهل أي نص بين /* و */ بواسطة <b>JavaScript</b>. <br/>
             يستخدم هذا المثال تعليقًا متعدد الأسطر (جزء تعليق) لشرح الكود يكتب التعليق كالتالي :
-            {/* <div style="color:green;direction:ltr;"> <bdi>/* Comments * /</bdi></div> */}
+            <div style={{color:"green",direction:"ltr"}}> <bdi>/* Comments * /</bdi></div>
         </p>
     </article>
     <article>
@@ -74,24 +120,16 @@ export default function Introduction(){
             المثال أدناه يجد العانصر <b>HTML</b> عبر <b>id</b> ، ويغير محتوى العنصر 
         </p>
         <div className="mital">متال :  </div>
-        <img src={images.js_Introduction} className="img"/>
-        <div className="style-result">
-            <h2 id="h2"> Heading </h2>
-        	<p id="p"> Date </p>
-        	<button onclick="changer()"> change Heading </button>
-        	<button onclick="P()"> Date </button>
-        </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Reda eskouni" addClass="mt-3 mb-3" copie={true} number={true}/>
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js" addClass="mt-3 mb-3" copie={true} number={true}/>
+        <Result title='Reda Eskouni' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2 id="h2">Heading</h2>
+            <p id="p">Date</p>        
+            <button onClick={js_intro_header}>Change Heading</button>
+            <button onClick={js_paragragh}>Date</button>                 
+        </Result>
     </article>
-    <article>
-        <h2 className="title-h2">5. تغيير تصميم CSS عبر لغة JavaScript </h2>
-            <div className="mital">متال :  </div>
-            <img src={images.js_Introduction2} className="img"/>
-            <div className="style-result">
-                <p id="demo">JavaScript can change the style of an HTML element.</p>
-            	<button type="button" onclick="document.getElementById('demo').style.fontSize='35px'"> Click Me </button>
-            </div>
-        <ul><li> لا تقلق ستتعلم كل ذالك خلال الدروس القادمة . </li></ul>
-    </article>
+   
 </section>
     )
 }

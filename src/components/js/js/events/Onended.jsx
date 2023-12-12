@@ -36,10 +36,10 @@ export default function Onended(){
             </div> */}
         </div>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js117_onended.png' %}" className="img"/>
+        <img src={images.js117_onended} className="img"/>
         <div className="styleee">   
             <video id="video" controls oncanplay="myFunction()" onended="videO()" width="50%">
-              <source src="./js/video.mp4" type="video/mp4" for="2"/>
+              <source src={images.video} type="video/mp4" for="2"/>
               Your browser does not support HTML5 video.
             </video>
         </div>

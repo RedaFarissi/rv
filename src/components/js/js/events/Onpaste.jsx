@@ -44,7 +44,7 @@ export default function Onpaste(){
             </div> */}
         </p>
         <div className="mital"> متال :  </div>
-        <img src="{% static 'js/js124_onpaste.png' %}" className="img"/>
+        <img src={images.js124_onpaste} className="img"/>
         <div className="styleee">  
             <input id="input_test" type="text" onpaste="passer()"/>
             <p id="result"></p>
