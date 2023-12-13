@@ -3,14 +3,19 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Assignment(){
+    
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Assignment</h1>
     <article>
         <p className="style_divv mt-5">
             تقوم عوامل التعيين بتعيين قيم لمتغيرات <b>JavaScript</b>. <br/>
-            <table dir="ltr">
-                <tr> <th> Operator </th> <th> Example </th> <th> Same As</th> </tr>
+        </p>
+        <table dir="ltr">
+            <thead className="bg-secondary">
+                <tr  className="text-center fs-5"> <th> Operator </th> <th> Example </th> <th> Same As</th> </tr>
+            </thead>
+            <tbody>
                 <tr> <td>= </td> <td>x = y  </td> <td>x = y </td> </tr>
                 <tr> <td>+=</td> <td>x += y </td> <td>x = x + y</td></tr>
                 <tr> <td>-+</td> <td>x -= y </td> <td>x = x - y</td></tr>
@@ -23,8 +28,8 @@ export default function Assignment(){
                 <tr> <td>^=</td> <td>x ^= y </td> <td>x = x ^ y</td></tr>
                 <tr> <td>|=</td> <td>x |= y </td> <td>x = x | y</td></tr>
                 <tr> <td>**=</td> <td>x **= y </td> <td>x = x ** y</td></tr>
-            </table>
-        </p>
+            </tbody>
+        </table>
     </article>
     <article>
         <h2 className="title-h2">1. عامل الإسناد</h2>

@@ -30,7 +30,7 @@ import {
     index12ModelForm6,index12ModelForm7,index13models_Objecjs_filter0,index13models_Objecjs_filter1,
     index13models_Objecjs_filter2,index13models_Objecjs_filter3,index13models_Objecjs_filter4,
     index13models_Objecjs_filter5,index13models_Objecjs_filter6,index13row_filter,
-    
+    index14Session0,index14Session1,index14Session2,
 } from "./pathCodeDjango";
 const codes = [
     {
@@ -131,7 +131,7 @@ const codes = [
         select_related:[],
     },
     {
-        Session:[]
+        Session:[index14Session0(),index14Session1(),index14Session2(),]
     },
     {
         Context_Processors:[]

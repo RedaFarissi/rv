@@ -256,7 +256,6 @@ import js48_localStorage from "../../assests/images/js/js48_localStorage.png"
 import js48_localStorage2 from "../../assests/images/js/js48_localStorage2.png"
 import js49_sessionStorage from "../../assests/images/js/js49_sessionStorage.png"
 import js49_sessionStorage2 from "../../assests/images/js/js49_sessionStorage2.png"
-import js4_Arithmetic from "../../assests/images/js/js4_Arithmetic.png"
 import js50_matchMedia from "../../assests/images/js/js50_matchMedia.png"
 import js51_navigator from "../../assests/images/js/js51_navigator.png"
 import js51_navigator2 from "../../assests/images/js/js51_navigator2.png"
@@ -284,14 +283,6 @@ import js57_activeElement2 from "../../assests/images/js/js57_activeElement2.png
 import js58_children from "../../assests/images/js/js58_children.png"
 import js58_children2 from "../../assests/images/js/js58_children2.png"
 import js59_baseURI from "../../assests/images/js/js59_baseURI.png"
-import js5_Arithmetic from "../../assests/images/js/js5_Arithmetic.png"
-import js5_Arithmetic2 from "../../assests/images/js/js5_Arithmetic2.png"
-import js5_Arithmetic3 from "../../assests/images/js/js5_Arithmetic3.png"
-import js5_Arithmetic4 from "../../assests/images/js/js5_Arithmetic4.png"
-import js5_Arithmetic5 from "../../assests/images/js/js5_Arithmetic5.png"
-import js5_Arithmetic6 from "../../assests/images/js/js5_Arithmetic6.png"
-import js5_Arithmetic7 from "../../assests/images/js/js5_Arithmetic7.png"
-import js5_Arithmetic8 from "../../assests/images/js/js5_Arithmetic8.png"
 import js60_body_2 from "../../assests/images/js/js60_body 2.png"
 import js60_body from "../../assests/images/js/js60_body.png"
 import js60_body2_2 from "../../assests/images/js/js60_body2 2.png"
@@ -473,14 +464,13 @@ const images = {
     js40_clientWidth,js40_clientWidth2,js41_scrollBy,js42_pageXOffset,
     js43_pageYOffset,js44_scrollIntoView,js45_scrollTop,js46_console,js47_getComputedStyle,
     js47_getComputedStyle2,js47_getComputedStyle3,js48_localStorage,js48_localStorage2,
-    js49_sessionStorage,js49_sessionStorage2,js4_Arithmetic,js50_matchMedia,js51_navigator,
+    js49_sessionStorage,js49_sessionStorage2,js50_matchMedia,js51_navigator,
     js51_navigator2,js51_navigator3,js51_navigator4,js51_navigator5,js52_print,js53_beforeprint_2,
     js53_beforeprint_3,js53_beforeprint,js54_afterprint_2,js54_afterprint_3,js54_afterprint,
     js55_addEventListener,js55_addEventListener2,js55_addEventListener3,js55_addEventListener4,
     js55_addEventListener5,js55_addEventListener6,js55_addEventListener7,js55_addEventListener8,
     js56_removeEventListener,js57_activeElement,js57_activeElement2,js58_children,js58_children2,
-    js59_baseURI,js5_Arithmetic,js5_Arithmetic2,js5_Arithmetic3,js5_Arithmetic4,js5_Arithmetic5,
-    js5_Arithmetic6,js5_Arithmetic7,js5_Arithmetic8,js60_body_2,js60_body,js60_body2_2,js60_body2,
+    js59_baseURI,js60_body_2,js60_body,js60_body2_2,js60_body2,
     js61_cookie,js61_cookie2,js62_classList,js62_classList2_2,js62_classList2,js62_classList3,
     js62_classList4,js62_classList5,js63_createAttribute,js63_createAttribute2,js64_createComment_2,
     js64_createComment,js65_createElement,js65_createElement2,js65_createElement3,js66_appendChild,
