@@ -2,6 +2,37 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Errors(){
+    const codeExemple1= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple2= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple3= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple4= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple5= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+
     // function division(a,b){
     //     try{
     //         if( b == 0){throw "Error 404"};

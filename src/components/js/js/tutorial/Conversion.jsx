@@ -2,6 +2,13 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Conversion(){
+    const codeExemple1= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+
     // var date = new Date()
     // let a = 123;
     // var d = document.getElementsByClassName("string_date")

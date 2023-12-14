@@ -2,7 +2,7 @@ import { useEffect, useRef} from 'react';
 import { Routes, Route , Link } from "react-router-dom";
 import { 
     Introduction,Statements,Output,Variables,Arithmetic,Assignment,Types,String,StringSearch,
-    StringsTemplates,Numbers,Booleans,Date,Random,Conditions,Switch,ArraysPart1,ArraysPart2,
+    StringsTemplates,Numbers,Booleans,DateJS,Random,Conditions,Switch,ArraysPart1,ArraysPart2,
     Objects,LoopFor,LoopWhile,Break,Conversion,Modules,Errors,JSON,
     //function
     Functions,Bind,Call,Apply,Map,Filter,
@@ -66,7 +66,7 @@ return(
             <Route path='/strings-templates' element={<StringsTemplates />} /> 
             <Route path='/numbers' element={<Numbers />} /> 
             <Route path='/booleans' element={<Booleans />} /> 
-            <Route path='/date' element={<Date />} /> 
+            <Route path='/date' element={<DateJS />} /> 
             <Route path='/random' element={<Random />} /> 
             <Route path='/conditions' element={<Conditions />} /> 
             <Route path='/switch' element={<Switch />} /> 

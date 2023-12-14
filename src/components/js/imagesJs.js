@@ -11,10 +11,6 @@ import js106_onkeypress from "../../assests/images/js/js106_onkeypress.png"
 import js107_onkeyup from "../../assests/images/js/js107_onkeyup.png"
 import js108_onload from "../../assests/images/js/js108_onload.png"
 import js109_onmousedown from "../../assests/images/js/js109_onmousedown.png"
-import js10_Templates_2 from "../../assests/images/js/js10_Templates 2.png"
-import js10_Templates from "../../assests/images/js/js10_Templates.png"
-import js10_Templates2 from "../../assests/images/js/js10_Templates2.png"
-import js10_Templates3 from "../../assests/images/js/js10_Templates3.png"
 import js110_onmouseup from "../../assests/images/js/js110_onmouseup.png"
 import js111_onmouseenter from "../../assests/images/js/js111_onmouseenter.png"
 import js112_onmouseleave from "../../assests/images/js/js112_onmouseleave.png"
@@ -27,19 +23,6 @@ import js116_onsubmit from "../../assests/images/js/js116_onsubmit.png"
 import js117_onended from "../../assests/images/js/js117_onended.png"
 import js118_onfocusin from "../../assests/images/js/js118_onfocusin.png"
 import js119_onerror from "../../assests/images/js/js119_onerror.png"
-import js11_Numbers from "../../assests/images/js/js11_Numbers.png"
-import js11_Numbers10 from "../../assests/images/js/js11_Numbers10.png"
-import js11_Numbers11 from "../../assests/images/js/js11_Numbers11.png"
-import js11_Numbers2 from "../../assests/images/js/js11_Numbers2.png"
-import js11_Numbers3 from "../../assests/images/js/js11_Numbers3.png"
-import js11_Numbers4 from "../../assests/images/js/js11_Numbers4.png"
-import js11_Numbers5 from "../../assests/images/js/js11_Numbers5.png"
-import js11_Numbers6 from "../../assests/images/js/js11_Numbers6.png"
-import js11_Numbers7_2 from "../../assests/images/js/js11_Numbers7 2.png"
-import js11_Numbers7 from "../../assests/images/js/js11_Numbers7.png"
-import js11_Numbers8_2 from "../../assests/images/js/js11_Numbers8 2.png"
-import js11_Numbers8 from "../../assests/images/js/js11_Numbers8.png"
-import js11_Numbers9 from "../../assests/images/js/js11_Numbers9.png"
 import js120_documentElement from "../../assests/images/js/js120_documentElement.png"
 import js120_documentElement2 from "../../assests/images/js/js120_documentElement2.png"
 import js121_exitFullscreen from "../../assests/images/js/js121_exitFullscreen.png"
@@ -53,8 +36,6 @@ import js128_onreset from "../../assests/images/js/js128_onreset.png"
 import js128_onreset2 from "../../assests/images/js/js128_onreset2.png"
 import js129_onscroll from "../../assests/images/js/js129_onscroll.png"
 import js129_onscroll2 from "../../assests/images/js/js129_onscroll2.png"
-import js12_Booleans from "../../assests/images/js/js12_Booleans.png"
-import js12_Booleans2 from "../../assests/images/js/js12_Booleans2.png"
 import js130_onselect from "../../assests/images/js/js130_onselect.png"
 import js131_ontoggle from "../../assests/images/js/js131_ontoggle.png"
 import js132_onunload from "../../assests/images/js/js132_onunload.png"
@@ -73,10 +54,6 @@ import js139_class_Intro from "../../assests/images/js/js139_class_Intro.png"
 import js139_class_Intro2 from "../../assests/images/js/js139_class_Intro2.png"
 import js139_class_Intro3 from "../../assests/images/js/js139_class_Intro3.png"
 import js139_class_Intro4 from "../../assests/images/js/js139_class_Intro4.png"
-import js13_Date from "../../assests/images/js/js13_Date.png"
-import js13_Date2 from "../../assests/images/js/js13_Date2.png"
-import js13_Date3 from "../../assests/images/js/js13_Date3.png"
-import js13_Date4 from "../../assests/images/js/js13_Date4.png"
 import js140_class_static from "../../assests/images/js/js140_class_static.png"
 import js140_class_static2 from "../../assests/images/js/js140_class_static2.png"
 import js141_class_private from "../../assests/images/js/js141_class_private.png"
@@ -306,12 +283,6 @@ import js66_appendChild from "../../assests/images/js/js66_appendChild.png"
 import js67_createTextNode from "../../assests/images/js/js67_createTextNode.png"
 import js68_docktype from "../../assests/images/js/js68_docktype.png"
 import js69_getElementById from "../../assests/images/js/js69_getElementById.png"
-import js6_Assignment from "../../assests/images/js/js6_Assignment.png"
-import js6_Assignment2 from "../../assests/images/js/js6_Assignment2.png"
-import js6_Assignment3 from "../../assests/images/js/js6_Assignment3.png"
-import js6_Assignment4 from "../../assests/images/js/js6_Assignment4.png"
-import js6_Assignment5 from "../../assests/images/js/js6_Assignment5.png"
-import js6_Assignment6 from "../../assests/images/js/js6_Assignment6.png"
 import js70_getElementsByClassName from "../../assests/images/js/js70_getElementsByClassName.png"
 import js70_getElementsByClassName2 from "../../assests/images/js/js70_getElementsByClassName2.png"
 import js71_getElementsByName from "../../assests/images/js/js71_getElementsByName.png"
@@ -328,22 +299,6 @@ import js78_scripts from "../../assests/images/js/js78_scripts.png"
 import js78_scripts2 from "../../assests/images/js/js78_scripts2.png"
 import js79_title from "../../assests/images/js/js79_title.png"
 import js79_title2 from "../../assests/images/js/js79_title2.png"
-import js7_types from "../../assests/images/js/js7_types.png"
-import js7_types10 from "../../assests/images/js/js7_types10.png"
-import js7_types11 from "../../assests/images/js/js7_types11.png"
-import js7_types12_2 from "../../assests/images/js/js7_types12 2.png"
-import js7_types12 from "../../assests/images/js/js7_types12.png"
-import js7_types2 from "../../assests/images/js/js7_types2.png"
-import js7_types3 from "../../assests/images/js/js7_types3.png"
-import js7_types4 from "../../assests/images/js/js7_types4.png"
-import js7_types5_2 from "../../assests/images/js/js7_types5 2.png"
-import js7_types5 from "../../assests/images/js/js7_types5.png"
-import js7_types6_2 from "../../assests/images/js/js7_types6 2.png"
-import js7_types6 from "../../assests/images/js/js7_types6.png"
-import js7_types7_2 from "../../assests/images/js/js7_types7 2.png"
-import js7_types7 from "../../assests/images/js/js7_types7.png"
-import js7_types8 from "../../assests/images/js/js7_types8.png"
-import js7_types9 from "../../assests/images/js/js7_types9.png"
 import js80_contains from "../../assests/images/js/js80_contains.png"
 import js80_contains2 from "../../assests/images/js/js80_contains2.png"
 import js80_contains3 from "../../assests/images/js/js80_contains3.png"
@@ -359,35 +314,6 @@ import js86_onblur from "../../assests/images/js/js86_onblur.png"
 import js87_play from "../../assests/images/js/js87_play.png"
 import js88_pause from "../../assests/images/js/js88_pause.png"
 import js89_load from "../../assests/images/js/js89_load.png"
-import js8_string_2 from "../../assests/images/js/js8_string 2.png"
-import js8_string from "../../assests/images/js/js8_string.png"
-import js8_string10 from "../../assests/images/js/js8_string10.png"
-import js8_string11 from "../../assests/images/js/js8_string11.png"
-import js8_string12 from "../../assests/images/js/js8_string12.png"
-import js8_string13 from "../../assests/images/js/js8_string13.png"
-import js8_string14 from "../../assests/images/js/js8_string14.png"
-import js8_string15 from "../../assests/images/js/js8_string15.png"
-import js8_string16 from "../../assests/images/js/js8_string16.png"
-import js8_string17 from "../../assests/images/js/js8_string17.png"
-import js8_string18 from "../../assests/images/js/js8_string18.png"
-import js8_string19 from "../../assests/images/js/js8_string19.png"
-import js8_string2_2 from "../../assests/images/js/js8_string2 2.png"
-import js8_string2 from "../../assests/images/js/js8_string2.png"
-import js8_string20 from "../../assests/images/js/js8_string20.png"
-import js8_string21 from "../../assests/images/js/js8_string21.png"
-import js8_string22 from "../../assests/images/js/js8_string22.png"
-import js8_string23 from "../../assests/images/js/js8_string23.png"
-import js8_string3_2 from "../../assests/images/js/js8_string3 2.png"
-import js8_string3 from "../../assests/images/js/js8_string3.png"
-import js8_string4_2 from "../../assests/images/js/js8_string4 2.png"
-import js8_string4 from "../../assests/images/js/js8_string4.png"
-import js8_string5_2 from "../../assests/images/js/js8_string5 2.png"
-import js8_string5 from "../../assests/images/js/js8_string5.png"
-import js8_string6_2 from "../../assests/images/js/js8_string6 2.png"
-import js8_string6 from "../../assests/images/js/js8_string6.png"
-import js8_string7 from "../../assests/images/js/js8_string7.png"
-import js8_string8 from "../../assests/images/js/js8_string8.png"
-import js8_string9 from "../../assests/images/js/js8_string9.png"
 import js90_onloadstart from "../../assests/images/js/js90_onloadstart.png"
 import js91_ondurationchange from "../../assests/images/js/js91_ondurationchange.png"
 import js92_onloadedmetadata from "../../assests/images/js/js92_onloadedmetadata.png"
@@ -400,22 +326,6 @@ import js97_onclick from "../../assests/images/js/js97_onclick.png"
 import js97_onclick2 from "../../assests/images/js/js97_onclick2.png"
 import js98_ondblclick from "../../assests/images/js/js98_ondblclick.png"
 import js99_oninput from "../../assests/images/js/js99_oninput.png"
-import js9_Search_2 from "../../assests/images/js/js9_Search 2.png"
-import js9_Search from "../../assests/images/js/js9_Search.png"
-import js9_Search2_2 from "../../assests/images/js/js9_Search2 2.png"
-import js9_Search2 from "../../assests/images/js/js9_Search2.png"
-import js9_Search3_2 from "../../assests/images/js/js9_Search3 2.png"
-import js9_Search3 from "../../assests/images/js/js9_Search3.png"
-import js9_Search4_2 from "../../assests/images/js/js9_Search4 2.png"
-import js9_Search4 from "../../assests/images/js/js9_Search4.png"
-import js9_Search5 from "../../assests/images/js/js9_Search5.png"
-import js9_Search6_2 from "../../assests/images/js/js9_Search6 2.png"
-import js9_Search6 from "../../assests/images/js/js9_Search6.png"
-import js9_Search7_2 from "../../assests/images/js/js9_Search7 2.png"
-import js9_Search7 from "../../assests/images/js/js9_Search7.png"
-import js9_Search8_2 from "../../assests/images/js/js9_Search8 2.png"
-import js9_Search8 from "../../assests/images/js/js9_Search8.png"
-import js9_Search9 from "../../assests/images/js/js9_Search9.png"
 import js_Introduction3 from "../../assests/images/js/js_Introduction3.png"
 import music from "../../assests/images/js/music.mp3"
 import video from "../../assests/images/js/video.mp4"
@@ -424,18 +334,16 @@ import html_logo from "../../assests/images/logo/html_logo.png"
 const images = {  
     hajime,hajime2,js100_oncontextmenu,js101_oncopy,js102_oncut,js103_pageX,js104_oninvalid,
     js104_oninvalid2,js105_onkeydown,js106_onkeypress,js107_onkeyup,js108_onload,js109_onmousedown,
-    js10_Templates_2,js10_Templates,js10_Templates2,js10_Templates3,js110_onmouseup,
+    js110_onmouseup,
     js111_onmouseenter,js112_onmouseleave,js113_onmousemove,js114_event_target,js114_event_target2,
     js115_ondrag,js115_onmousemove,js116_onsubmit,js117_onended,js118_onfocusin,js119_onerror,
-    js11_Numbers,js11_Numbers10,js11_Numbers11,js11_Numbers2,js11_Numbers3,js11_Numbers4,
-    js11_Numbers5,js11_Numbers6,js11_Numbers7_2,js11_Numbers7,js11_Numbers8_2,js11_Numbers8,
-    js11_Numbers9,js120_documentElement,js120_documentElement2,js121_exitFullscreen,
+    js120_documentElement,js120_documentElement2,js121_exitFullscreen,
     js122_onfullscreenchange,js123_onpagehide,js124_onpaste,js125_onpause,js126_onplay,
-    js127_onresize,js128_onreset,js128_onreset2,js129_onscroll,js129_onscroll2,js12_Booleans,
-    js12_Booleans2,js130_onselect,js131_ontoggle,js132_onunload,js133_ctrlKey,js134_onvolumechange,
+    js127_onresize,js128_onreset,js128_onreset2,js129_onscroll,js129_onscroll2,
+    js130_onselect,js131_ontoggle,js132_onunload,js133_ctrlKey,js134_onvolumechange,
     js134_onvolumechange2,js135_data,js136_fetch,js136_fetch2_2,js136_fetch2,js136_fetch3,
     js136_fetch4,js137_geolocation,js138_checkValidity,js139_class_Intro,js139_class_Intro2,
-    js139_class_Intro3,js139_class_Intro4,js13_Date,js13_Date2,js13_Date3,js13_Date4,
+    js139_class_Intro3,js139_class_Intro4,
     js140_class_static,js140_class_static2,js141_class_private,js141_class_private2,
     js142_class_Inheritance,js142_class_Inheritance2,js142_class_Inheritance3,js143_map,
     js143_map2,js143_map3,js144_filter,js144_filter2,js144_filter3,js145_remove,js145_remove2,
@@ -474,26 +382,18 @@ const images = {
     js61_cookie,js61_cookie2,js62_classList,js62_classList2_2,js62_classList2,js62_classList3,
     js62_classList4,js62_classList5,js63_createAttribute,js63_createAttribute2,js64_createComment_2,
     js64_createComment,js65_createElement,js65_createElement2,js65_createElement3,js66_appendChild,
-    js67_createTextNode,js68_docktype,js69_getElementById,js6_Assignment,js6_Assignment2,js6_Assignment3,
-    js6_Assignment4,js6_Assignment5,js6_Assignment6,js70_getElementsByClassName,
+    js67_createTextNode,js68_docktype,js69_getElementById,js70_getElementsByClassName,
     js70_getElementsByClassName2,js71_getElementsByName,js71_getElementsByName2,
     js72_getElementsByTagName,js73_head,js73_head2,js74_images,js75_links,js76_querySelector,
     js76_querySelector2,js77_querySelectorAll,js78_scripts,js78_scripts2,js79_title,js79_title2,
-    js7_types,js7_types10,js7_types11,js7_types12_2,js7_types12,js7_types2,js7_types3,js7_types4,
-    js7_types5_2,js7_types5,js7_types6_2,js7_types6,js7_types7_2,js7_types7,js7_types8,js7_types9,
     js80_contains,js80_contains2,js80_contains3,js81_focus,js82_blur,js83_removeAttributre,
     js84_animation,js84_animation2,js84_animation3,js85_onfocus,js85_onfocus2,js86_onblur,
-    js87_play,js88_pause,js89_load,js8_string_2,js8_string,js8_string10,js8_string11,
-    js8_string12,js8_string13,js8_string14,js8_string15,js8_string16,js8_string17,
-    js8_string18,js8_string19,js8_string2_2,js8_string2,js8_string20,js8_string21,
-    js8_string22,js8_string23,js8_string3_2,js8_string3,js8_string4_2,js8_string4,
-    js8_string5_2,js8_string5,js8_string6_2,js8_string6,js8_string7,js8_string8,
-    js8_string9,js90_onloadstart,js91_ondurationchange,js92_onloadedmetadata,
+    js87_play,js88_pause,js89_load,js90_onloadstart,
+    js91_ondurationchange,js92_onloadedmetadata,
     js93_onloadeddata,js94_onprogress,js95_oncanplay,js96_onchange,js96_onchange2,
-    js97_onclick,js97_onclick2,js98_ondblclick,js99_oninput,js9_Search_2,js9_Search,
-    js9_Search2_2,js9_Search2,js9_Search3_2,js9_Search3,js9_Search4_2,js9_Search4,
-    js9_Search5,js9_Search6_2,js9_Search6,js9_Search7_2,js9_Search7,js9_Search8_2,
-    js9_Search8,js9_Search9,js_Introduction3,
-    music,video,html_logo,
+    js97_onclick,js97_onclick2,js98_ondblclick,js99_oninput,
+    
+    
+    js_Introduction3,music,video,html_logo,
  }
 export default images ;

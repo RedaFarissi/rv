@@ -34,7 +34,6 @@ export default function DjangoEmail(){
             <img src={images.django213} className="w-100 mt-2 mb-3"/> 
             <CodeHighlighter code={codes[9].send_email[0]} file_name="project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeCommand>python manage.py startapp sendEmail</CodeCommand>
-            
             <CodeHighlighter code={codes[9].send_email[1]} file_name="project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[9].send_email[2]} file_name="project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[9].send_email[3]} file_name="project / sendEmail / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>

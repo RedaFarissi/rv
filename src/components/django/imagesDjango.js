@@ -39,18 +39,11 @@ import django143 from "../../assests/images/django/django143.png"
 import django149 from "../../assests/images/django/django149.png"
 import django16  from "../../assests/images/django/django16.png"
 import django160 from "../../assests/images/django/django160.png"
-import django161 from "../../assests/images/django/django161.png"
 import django166 from "../../assests/images/django/django166.png"
 import django172 from "../../assests/images/django/django172.png"
 import django174 from "../../assests/images/django/django174.png"
 import django176 from "../../assests/images/django/django176.png"
-import django177 from "../../assests/images/django/django177.png"
-import django178 from "../../assests/images/django/django178.png"
-import django179 from "../../assests/images/django/django179.png"
 import django18  from "../../assests/images/django/django18.png"
-import django180 from "../../assests/images/django/django180.png"
-import django181 from "../../assests/images/django/django181.png"
-import django182 from "../../assests/images/django/django182.png"
 import django183 from "../../assests/images/django/django183.png"
 import django188 from "../../assests/images/django/django188.png"
 import django189 from "../../assests/images/django/django189.png"
@@ -78,7 +71,6 @@ import django223 from "../../assests/images/django/django223.png"
 import django224 from "../../assests/images/django/django224.png"
 import django227 from "../../assests/images/django/django227.png"
 import django23  from "../../assests/images/django/django23.png"
-
 import django24  from "../../assests/images/django/django24.png"
 import django25  from "../../assests/images/django/django25.png"
 import django26  from "../../assests/images/django/django26.png"
@@ -115,26 +107,7 @@ import django75  from "../../assests/images/django/django75.png"
 import django76  from "../../assests/images/django/django76.png"
 import django77  from "../../assests/images/django/django77.png"
 import django78  from "../../assests/images/django/django78.png"
-import django79  from "../../assests/images/django/django79.png"
-import django80  from "../../assests/images/django/django80.png"
-import django81  from "../../assests/images/django/django81.png"
-import django82  from "../../assests/images/django/django82.png"
-import django83  from "../../assests/images/django/django83.png"
-import django84  from "../../assests/images/django/django84.png"
-import django85  from "../../assests/images/django/django85.png"
-import django86  from "../../assests/images/django/django86.png"
-import django87  from "../../assests/images/django/django87.png"
-import django88  from "../../assests/images/django/django88.png"
-import django89  from "../../assests/images/django/django89.png"
 import django9   from "../../assests/images/django/django9.png"
-import django90  from "../../assests/images/django/django90.png"
-import django91  from "../../assests/images/django/django91.png"
-import django92  from "../../assests/images/django/django92.png"
-import django93  from "../../assests/images/django/django93.png"
-import django94  from "../../assests/images/django/django94.png"
-import django95  from "../../assests/images/django/django95.png"
-import django96  from "../../assests/images/django/django96.png"
-import django97  from "../../assests/images/django/django97.png"
 import django98  from "../../assests/images/django/django98.png"
 import django99  from "../../assests/images/django/django99.png"
 import django5  from "../../assests/images/django/django5.png"
@@ -150,9 +123,9 @@ const images = {
     django121,django122,django123,django124,django125,
     django126,django127,django128,django129,django130,django131,django132,
     django133,django134,django135,django141,django142,
-    django143,django149,django16,django160,django161,django166,django172,
-    django174,django176,django177,django178,django179,
-    django18,django180,django181,django182,django183,django188,django189,
+    django143,django149,django16,django160,django166,django172,
+    django174,django176,
+    django18,django183,django188,django189,
     django19,django190,django194,django2,django202,
     django203,django204,django207,django208,django209,
     django213,django214,django215,django216,django217,
@@ -164,10 +137,7 @@ const images = {
     django46,django47,django48,django49,django50,
     django51,django52,django53,django54,django55,
     django56,django57,django61,django67,django73,django74,
-    django75,django76,django77,django78,django79,django80,
-    django81,django82,django83,django84,django85,django86,
-    django87,django88,django89,django9,django90,django91,
-    django92,django93,django94,django95,django96,django97,
+    django75,django76,django77,django78,django9,
     django98,django99,django_path,django5,django5_5,
 }
 

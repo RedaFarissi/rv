@@ -2,6 +2,37 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function LoopWhile(){
+    const codeExemple1= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }    
+    const codeExemple2= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple3= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple4= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple5= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Loop While</h1>
@@ -10,6 +41,7 @@ export default function LoopWhile(){
         <p className="style_divv">
             تتكرر حلقة <b>while</b> خلال كتلة من التعليمات البرمجية طالما أن الشرط المحدد صحيح. <br/>
             يبدأ تنفيد الكود بعد التحقق من الشرط 
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
         {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
         <pre><span style="color:var(--violet-color);">while</span> (<span style="color:var(--js-color)">condition</span>) {
           <span style="color:green">//code block to be executed</span>
@@ -50,6 +82,7 @@ export default function LoopWhile(){
         <h2 className="title-h2">2. do while Loop</h2>
         <p className="style_divv">
           حلقة <bdi><b>do while</b></bdi> هي نوع مختلف من حلقة <b>while</b>. ستنفذ هذه الحلقة كتلة الكود مرة واحدة ، قبل التحقق مما إذا كان الشرط صحيحًا ، ثم ستكرر الحلقة طالما أن الشرط صحيح.
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
           {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
         <pre><span style="color:var(--violet-color);">do</span>{
           <span style="color:green">//code block to be executed</span>

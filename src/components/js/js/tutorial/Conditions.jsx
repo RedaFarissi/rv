@@ -2,6 +2,27 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Conditions(){
+  const code1 = `if(condition){
+    //JavaScript code 
+}
+`;
+  const code2 = `if(condition){
+    //JavaScript code
+}else{
+    //JavaScript code
+}`
+  const code3 = `if(condition){
+    //JavaScript code
+}else if(condition){
+    //JavaScript code
+}`;
+
+  const codeExemple1= { 
+  code: `     
+  
+   <script src="./index.js"></script>`,
+  script:``
+  }
   return(
 <section className="section-conetent">
   <h1 className="heading-style heading-style-js-color">JavaScript Conditions</h1>
@@ -22,11 +43,7 @@ export default function Conditions(){
         <h2 className="title-h2">1.<bdi> JavaScript Condition if() </bdi></h2>
         <p className="style_divv">
             استخدم عبارة <b>if</b> لتحديد كتلة من تعليمات <b>JavaScript</b> البرمجية ليتم تنفيذها إذا كان الشرط صحيحًا .
-        {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--violet-color);">if</span><span style="color:gold;">(</span>condition<span style="color:gold;">){</span>
-          <span style="color:green">//JavaScript code</span> 
-        <span style="color:gold;">}</span></pre>
-        </div> */}
+            <CodeHighlighter code={code1} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
         <img src={images.js15_Conditions} className="img"/>
@@ -36,13 +53,7 @@ export default function Conditions(){
         <h2 className="title-h2">2.<bdi> JavaScript Condition if() else()</bdi></h2>
         <p className="style_divv">
             استخدم تعليمة <b>else</b> لتحديد كتلة من التعليمات البرمجية ليتم تنفيذها إذا كان الشرط <b>if</b> خاطئًا.
-        {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><b style="color:var(--violet-color);">if</b><span style="color:gold;">(</span>condition<span style="color:gold;">){</span>
-          <span style="color:green">//JavaScript code</span>
-        <span style="color:gold;">}</span><b style="color:var(--violet-color);">else</b><span style="color:gold;"></span><span style="color:gold;">{</span>
-          <span style="color:green">//JavaScript code</span>
-        <span style="color:gold;">}</span></pre>
-        </div> */}
+            <CodeHighlighter code={code2} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
         <img src={images.js15_Conditions2} className="img"/>
@@ -55,13 +66,7 @@ export default function Conditions(){
         <h2 className="title-h2">3.<bdi> JavaScript Condition if()  else if()</bdi></h2>
         <p className="style_divv">
             استخدم تعليمة <b>else</b> لتحديد كتلة من التعليمات البرمجية ليتم تنفيذها إذا كان الشرط <b>if</b> خاطئًا.
-        {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--violet-color)">if</span><span style="color:gold;">(</span>condition<span style="color:gold;">){</span>
-          <span style="color:green">//JavaScript code</span>
-        <span style="color:gold;">}</span><span style="color:var(--violet-color)">else if</span><span style="color:gold;">(</span>condition<span style="color:gold;">){</span>
-          <span style="color:green">//JavaScript code</span>
-        <span style="color:gold;">}</span></pre>
-        </div> */}
+            <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
         <img src={images.js15_Conditions4} className="img"/>

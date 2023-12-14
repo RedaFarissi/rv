@@ -43,9 +43,9 @@ export default function ResultConsole(props){
             <div className={`console-style  ${props.styleAdd}`}>
                 <div className="console-body">
                     <div className="console-head">
-                        <span className="d-inline-block h-100 text-light p-2 bg-secondary">Console</span> <span className="text-light">{">>"}</span>
+                        <span className="d-inline-block h-100 text-light p-2 bg-secondary">Console</span>
                     </div>
-                    <div className="p-2 text-light">
+                    <div className="console-body-children p-2 text-light" >
                         {props.children}
                     </div>
                 </div>

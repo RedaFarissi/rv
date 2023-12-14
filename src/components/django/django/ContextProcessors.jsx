@@ -3,40 +3,26 @@ import images from "../imagesDjango";
 import { CodeCommand , CodeHighlighter , Result } from "../../path";
 
 export default function ContextProcessors(){
+    const code1 =``
     return(
     <article  id="Context_Processors">
-        <h2 className="title-h2"> Context Processors  </h2>
-        <div>
-        <p className="fs-3"> Use context processors to Share data in all template . </p>
-        <h2>Exemple </h2>
-        <p className="fs-4">
-           in this case we create file <b>context_processors.py</b> in app <b>requests_app_test</b>
-           and we add to settings      
+     <h1 className="heading-style heading-style-django-color"> Django Context Processors</h1>
+        <p className="style_divv"> 
+            تعد معالجات السياق أداة قوية في Django تسمح لك بمشاركة البيانات المشتركة عبر جميع قوالب (templates) الخاصة بك دون تكرار التعليمات البرمجية في طرق العرض الفردية. يمكن أن يساعد هذا في الحفاظ على الكود الخاص بك جافًا (لا تكرر نفسك) ويسهل صيانته.
         </p>
-        <div className=" text-black">
-        {/* <pre>TEMPLATES = [
-        {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
-        'APP_DIRS': True,
-        'OPTIONS': {
-             'context_processors': [
-                 'django.template.context_processors.debug',
-                 'django.template.context_processors.request',
-                 'django.contrib.auth.context_processors.auth',
-                 'django.contrib.messages.context_processors.messages',
-                 <span className="text-success">#app_name.file_name.function_name</span>
-                 <b className="b">'requests_app_test.context_processors.requests_app',</b>
-             ],
-        },
-        },
-        ]</pre> */}
-        </div>
-        </div>
-        <p className="fs-4">After that i can use data returned from function_name <small>(requests_app)</small> in any templates in my projects</p>
+        <CodeCommand>python manage.py startapp requests_app_test</CodeCommand>
+        <CodeHighlighter code={codes[15].Context_Processors[0]} file_name="project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeCommand>pip install requests</CodeCommand>
+        <CodeHighlighter code={codes[15].Context_Processors[1]} file_name="project / requests_app_test /context_processors.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[15].Context_Processors[2]} file_name="project / app / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[15].Context_Processors[3]} file_name="project / app / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[15].Context_Processors[4]} file_name="project / app / templates / request_products_to_test.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
         <img src={images.django160} className="img"/>
-        <p className="fs-4">Know i can use data retrned from <b>requests_app</b> in any templates in my project </p>
-        <img src={images.django161} className="img"/>
+        <ul>
+            <li>في هذه الحالة نقوم بإنشاء ملف context_processors.py في التطبيق "requests_app_test" ونضيفه إلى الإعدادات</li>
+            <li>بعد ذلك يمكنني استخدام البيانات التي تم إرجاعها من (requests_app) في أي قوالب في مشاريعي</li>
+            <li>أعلم أنه يمكنني استخدام البيانات المستردة من request_app في أي قوالب في مشروعي</li>
+        </ul>
    </article>
     )
 }

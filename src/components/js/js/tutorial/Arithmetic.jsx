@@ -80,7 +80,7 @@ document.getElementById("power").innerHTML = number1-- `
         <p className="style_divv mt-5">
             تؤدي العوامل الحسابية العمليات الحسابية على الأرقام (المتغيرات أو الحرفية).<br/>
         </p>
-        <table dir="ltr">
+        <table className="table" dir="ltr">
             <thead className="bg-secondary">
                 <tr className="text-center fs-5"><th> Operator  </th><th> Description </th></tr>
             </thead>

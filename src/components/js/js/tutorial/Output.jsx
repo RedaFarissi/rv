@@ -108,8 +108,10 @@ console.log(f_name + " " + l_name)`
         <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="Output" addClass="mt-3 mb-3" copie={true} number={true}/>  
         <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js" addClass="mt-3 mb-3" copie={true} number={true}/>
         <ResultConsole title='Output' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
-            Reda Eskouni
-            <hr/>
+            <div className="d-flex justify-content-between align-items-center">
+                <span>Reda Eskouni</span>
+                <span>index.js : 4</span>
+            </div>
         </ResultConsole>
     </article>
     <article>

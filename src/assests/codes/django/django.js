@@ -30,7 +30,8 @@ import {
     index12ModelForm6,index12ModelForm7,index13models_Objecjs_filter0,index13models_Objecjs_filter1,
     index13models_Objecjs_filter2,index13models_Objecjs_filter3,index13models_Objecjs_filter4,
     index13models_Objecjs_filter5,index13models_Objecjs_filter6,index13row_filter,
-    index14Session0,index14Session1,index14Session2,
+    index14Session0,index14Session1,index14Session2,index15Context_Processors0,index15Context_Processors1,
+    index15Context_Processors2,index15Context_Processors3,index15Context_Processors4,
 } from "./pathCodeDjango";
 const codes = [
     {
@@ -134,26 +135,10 @@ const codes = [
         Session:[index14Session0(),index14Session1(),index14Session2(),]
     },
     {
-        Context_Processors:[]
-    },
-    {
-        How_Django_Work:[]
-    },
-    {
-        title:"Ussing_Class_View",
-        Push_data_from_urls_directly:[],
-        use_basic_class:[],
-        get_context_data:[],
-        context_object_name:[],
-        ordering:[],
-        queryset:[],
-        get_queryset:[],
+        Context_Processors:[index15Context_Processors0(),index15Context_Processors1(),index15Context_Processors2(),index15Context_Processors3(),index15Context_Processors4(),]
     },
     {
         ngrok:[]
-    },
-    {
-        End_project_in_DJANGO:[]
     },
 ]
 

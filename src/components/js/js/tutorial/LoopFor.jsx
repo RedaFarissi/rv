@@ -2,6 +2,37 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function LoopFor(){
+    const codeExemple1= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple2= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple3= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple4= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple5= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Loop</h1>
@@ -16,6 +47,7 @@ export default function LoopFor(){
             الحلقات سهلة الاستخدام ، إذا كنت تريد تشغيل نفس الرمز مرارًا وتكرارًا ، في كل مرة بقيمة مختلفة.<br/>
             غالبًا ما يكون هذا هو الحال عند العمل مع المصفوفات:<br/><br/>
         <span><b>بدلا من كتابة :</b></span>
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
         {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
         <pre>text += cars[<span style="color:var(--arr-num-color);">0</span>] + <span style="color:orange;">"&lt;br&gt;"</span>;
         text += cars[<span style="color:var(--arr-num-color)">1</span>] + <span style="color:orange;">"&lt;br&gt;"</span>;
@@ -25,6 +57,7 @@ export default function LoopFor(){
         text += cars[<span style="color:var(--arr-num-color)">5</span>] + <span style="color:orange;">"&lt;br&gt;"</span>;</pre>
     </div> */}
         <span><b>يمكنك كتابة:</b></span>
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
         {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
         <pre><b style="color:rgb(193 131 188)">for</b>(<span style="color: var(--html-color-tags);">let</span> i=0 ; i< cars.<span style="color:#8fdcfe;">length</span> ; i++){
             text += cars[<span style="color:rgb(80,210,80);">i</span>] + <span style="color:orange;">"&lt;br&gt;"</span>
@@ -43,6 +76,7 @@ export default function LoopFor(){
         <h2 className="title-h2">2. For Loop </h2>
         <p className="style_divv">
             تحتوي الحلقة <b>for</b> على الصيغة التالية 
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
             {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
         <pre><span style="color:var(--violet-color);">for</span>(statement 1,statement 2,statement 3){
             <span style="color:green">//code block to be executed</span>
@@ -95,6 +129,7 @@ export default function LoopFor(){
         <p className="style_divv">
             تتكرر  <bdi><b>for of</b></bdi> عبر قيم الكائن القابل للتكرار.<br/>
             يتيح لك إجراء حلقة حول هياكل البيانات القابلة للتكرار مثل <b>Arrays</b> و <b>Strings</b> و <b>Maps</b> و <b>NodeLists</b> والمزيد
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
             {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
         <pre><b style="color:var(--violet-color)">for</b>(variable <span style="color:var(--js-color)">of</span> iterable) {
           <span style="color: green;">//code block to be executed</span>
@@ -117,6 +152,7 @@ export default function LoopFor(){
         <p className="style_divv">
             تسمح لك طريقة <bdi><b>forEach()</b></bdi> بتنفيذ وظيفة معينة على كل عنصر من عناصر المصفوفة.<br/>
             تستدعي طريقة <bdi><b>forEach()</b></bdi> دالة (دالة رد نداء) مرة واحدة لكل عنصر مصفوفة
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
             {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
         <pre><span style="color:var(--js-color)">Arrays</span>.<span style="color:gold">forEach(</span> <span style="color:var(--js-color)">i</span> <span style="color:var(--html-color-tags)">=></span> { 
             <span style="color:green">//code to be executed</span>

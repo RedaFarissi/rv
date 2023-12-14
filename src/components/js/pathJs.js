@@ -10,7 +10,7 @@ export {default as StringSearch} from './js/tutorial/StringSearch';
 export {default as StringsTemplates} from './js/tutorial/StringsTemplates';
 export {default as Numbers} from './js/tutorial/Numbers';
 export {default as Booleans} from './js/tutorial/Booleans';
-export {default as Date} from './js/tutorial/Date';
+export {default as DateJS} from './js/tutorial/Date';
 export {default as Random} from './js/tutorial/Random';
 export {default as Conditions} from './js/tutorial/Conditions';
 export {default as Switch} from './js/tutorial/Switch';

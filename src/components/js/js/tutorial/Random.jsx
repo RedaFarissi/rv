@@ -2,6 +2,45 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Random(){
+    const code1 = `function name_function(){
+    return Math.floor(Math.random() * (max - min) )+ min ;
+}`;
+    const code2 = `function name_function(){
+    return Math.floor(Math.random() * (max - min + 1) )+ min ;
+}`
+
+
+    const codeExemple1= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple2= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple3= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple4= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple5= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+
     // let d = Math.random();
     // document.getElementById("id").innerHTML = d;
 
@@ -27,10 +66,8 @@ export default function Random(){
         <p className="style_divv">
             تُرجع <b><bdi>Math.random()</bdi></b> رقمًا عشوائيًا بين 0 (ضمنيًا) و 1 (حصريًا) .<br/>
             تُرجع <b><bdi>Math.random()</bdi></b> دائمًا رقمًا أقل من 1.<br/>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><span style="color:green"><bdi>// إرجاع عدد صحيح عشوائي من 0 إلى أقل من 1</bdi></span>
-        <span style="color:var(--html-color-tags)">let</span> d = <span style="color:lime">Math</span>.<span style="color:gold">random()</span>;</pre>
-            </div> */}
+           <ul><li>إرجاع عدد صحيح عشوائي من 0 إلى أقل من 1</li></ul>
+            <CodeHighlighter code={`let d = Math.random();`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
         <ul><li> في كل مرة تقوم بتحديت الصفحة يتم تحديد رقم عشوائي بين 0 و 1.</li></ul>
@@ -43,14 +80,10 @@ export default function Random(){
         <h2 className="title-h2">2. <bdi>JavaScript Random Integers</bdi></h2>
         <p className="style_divv">
             يمكن استخدام <bdi><b>Math.random()</b></bdi> مع <bdi><b>Math.floor()</b></bdi> لإرجاع أعداد صحيحة عشوائية .
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><span style="color:green">// <bdi> إرجاع عدد صحيح عشوائي من 0 إلى max_number </bdi></span>
-        <span style="color:var(--html-color-tags);">let</span> d = <span style="color:lime">Math</span>.<span style="color:gold">floor(</span><span style="color:lime">Math</span>.<span style="color:gold">random()</span> * max_number+1  <span style="color:gold">)</span>;</pre>
-            </div>
-            <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><span style="color:green">// <bdi> إرجاع عدد صحيح عشوائي من min إلى max-1 </bdi></span>
-        <span style="color:var(--html-color-tags);">let</span> d = <span style="color:lime">Math</span>.<span style="color:gold">floor(</span><span style="color:lime">Math</span>.<span style="color:gold">random()</span> * (max - min) <span style="color:gold">)</span>+ min ;</pre>
-            </div> */}
+            <ul><li> إرجاع عدد صحيح عشوائي من 0 إلى max_number</li></ul>
+            <CodeHighlighter code={`let d = Math.floor(Math.random() * max_number+1  );`} language="js" addClass="mt-3 mb-3" copie={true} />
+            <ul><li>  إرجاع عدد صحيح عشوائي من min إلى max-1 </li></ul>
+            <CodeHighlighter code={`let d = Math.floor(Math.random() * (max - min) )+ min ;`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال 1 :  </div>
         <ul><li> في كل مرة تقوم بتحديت الصفحة يتم تحديد رقم عشوائي  بين 0 و 9.</li></ul>
@@ -76,16 +109,8 @@ export default function Random(){
         <h2 className="title-h2">3. Random Function</h2>
         <p className="style_divv">
             كما ترى من الأمثلة أسفله ، قد يكون من الجيد إنشاء دالة عشوائية مناسبة لاستخدامها في جميع أغراض الأعداد الصحيحة العشوائية.<br/>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><span style="color:dodgerblue;">function</span> <span style="color:gold">name_function()</span>{
-            <span style="color:rgb(193 131 188)">return</span> <span style="color:lime">Math</span>.<span style="color:gold">floor(</span><span style="color:lime">Math</span>.<span style="color:gold">random()</span> * (max - min) <span style="color:gold">)</span>+ min ;
-        }</pre>
-            </div> */}
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags);">function</span> <span style="color:gold">name_function()</span>{
-            <span style="color:var(--violet-color)">return</span> <span style="color:lime">Math</span>.<span style="color:gold">floor(</span><span style="color:lime">Math</span>.<span style="color:gold">random()</span> * (max - min + <span>1</span>) <span style="color:gold">)</span>+ min ;
-        }</pre>
-            </div> */}
+            <CodeHighlighter code={code1} language="js" addClass="mt-3 mb-3" copie={true} />
+            <CodeHighlighter code={code2} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال 1 :  </div>
         <ul><li>   تعرض وظيفة <b>JavaScript</b> هذه دائمًا رقمًا عشوائيًا بين <b>min</b> (مضمن) و <b>max</b> (مستبعد): </li></ul>

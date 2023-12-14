@@ -3,6 +3,12 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Break(){
+    const codeExemple1= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Break</h1>
@@ -10,6 +16,7 @@ export default function Break(){
         <h2 className="title-h2">1. break</h2>
         <p className="style_divv">
             العبارة break تقفز خارج من الحلقة .
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
             {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
         <pre><span style="color:var(--violet-color);">for</span> (i = <span style="color:var(--arr-num-color)">0</span> ; i &gt; <span style="color:var(--arr-num-color)">10</span> ; i++){
             <span style="color:var(--violet-color);">if</span>(condition){<span style="color:var(--violet-color);">break</span>}
@@ -26,14 +33,15 @@ export default function Break(){
     </article>
     <article>
         <h2 className="title-h2">2. continue </h2>
-        <div className="style_divv">
+        <p className="style_divv">
             تكسر تعليمة المتابعة تكرارًا واحدًا (في الحلقة) ، إذا حدث شرط محدد ، وتستمر مع التكرار التالي في الحلقة.
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
             {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
         <pre><span style="color:var(--violet-color);">for</span> (i = <span style="color:var(--arr-num-color)">0</span> ; i &gt; <span style="color:var(--arr-num-color)">10</span> ; i++){
             <span style="color:var(--violet-color);">if</span>(condition){<span style="color:var(--violet-color);">continue</span>}
         }</pre>
             </div> */}
-        </div>
+        </p>
         <div className="mital">متال 2 :  </div>
         <img src={images.js23_break2} className="img"/>
         <div className="styleee">

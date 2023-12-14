@@ -15,6 +15,4 @@ export {default as ModelForm} from './django/ModelForm';
 export {default as DjangoFilter} from './django/DjangoFilter';
 export {default as Session} from './django/Session';
 export {default as ContextProcessors} from './django/ContextProcessors';
-export {default as HowDjangoWork} from './django/HowDjangoWork';
-export {default as UssingClassView} from './django/UssingClassView';
 export {default as Ngrok} from './django/Ngrok';

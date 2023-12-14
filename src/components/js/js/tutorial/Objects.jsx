@@ -2,6 +2,37 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Objects(){
+    const codeExemple1= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple2= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple3= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple4= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple5= { 
+    code: `     
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
+
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Objects</h1>
@@ -16,6 +47,7 @@ export default function Objects(){
             </div> */}
             يمكن عرض عناصر الكائن بطريقين <br/>
             <b> الطريقة 1</b>
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
             {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
         <pre><span style="color:var(--js-color)">car</span>.<span style="color:var(--js-color)">name</span>
         <span style="color:var(--js-color)">car</span>.<span style="color:var(--js-color)">model</span>
@@ -23,6 +55,7 @@ export default function Objects(){
         <span style="color:var(--js-color)">car</span>.<span style="color:var(--js-color)">max_speed</span></pre>
             </div> */}
             <b> الطريقة 2</b>
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
             {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
         <pre><span style="color:var(--js-color)">car</span>[<span style="color:orange">"name"</span>]
         <span style="color:var(--js-color)">car</span>[<span style="color:orange">"model"</span>]
@@ -49,6 +82,7 @@ export default function Objects(){
             <b>methods</b> هي الإجراءات التي يمكن تنفيذها على الكائنات.<br/>
             يتم تخزين <b>methods</b> في الخصائص كتعاريف للدالة .<br/>
             <b> الطريقة 1 </b>
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
         {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
         <pre><b style="color:var(--html-color-tags);">const</b> person = {
             FirstName: <span style="color:orange;">"Reda"</span>,
@@ -62,6 +96,7 @@ export default function Objects(){
         };</pre>
         </div> */}
         <b> الطريقة 2 </b>
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
         {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
         <pre><b style="color:var(--html-color-tags);">const</b> person = {
             FirstName: <span style="color:orange;">"Reda"</span>,
