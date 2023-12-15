@@ -1,7 +1,22 @@
 import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
+import { useState, useEffect } from 'react';
 
 export default function Random(){
+
+    const [randomNum, setRandomNum] = useState(Math.floor(Math.random() * 10) + 1);
+    const [randomNum2, setRandomNum2] = useState(Math.floor(Math.random() * 10) );
+    const [randomNum3, setRandomNum3] = useState(Math.floor(Math.random() * (200 - 90) )+90 );
+    const [randomNum4, setRandomNum4] = useState(Math.floor(Math.random() * (21 - 9) )+ 9 );
+    const [randomNum5, setRandomNum5] = useState(Math.floor(Math.random() * (21 - 9 + 1) )+ 9 );
+    useEffect(() => {
+        setRandomNum(Math.floor(Math.random() * 10) + 1); 
+        setRandomNum2(Math.floor(Math.random() * 10));
+        setRandomNum3(Math.floor(Math.random() * (200 - 90) ) + 90);
+        setRandomNum4(Math.floor(Math.random() * (21 - 9) ) + 9);
+        setRandomNum5(Math.floor(Math.random() * (21 - 9 + 1) ) + 9);
+    },[]); 
+
     const code1 = `function name_function(){
     return Math.floor(Math.random() * (max - min) )+ min ;
 }`;
@@ -11,53 +26,42 @@ export default function Random(){
 
 
     const codeExemple1= { 
-    code: `     
+    code: `     <h2 id="random-id"></h2>
     
      <script src="./index.js"></script>`,
-    script:``
+    script:`document.getElementById("random-id").innerHTML = Math.floor(Math.random() * 10) + 1`
     }
     const codeExemple2= { 
-    code: `     
+    code: `     <h2 id="random-id"></h2>
     
      <script src="./index.js"></script>`,
-    script:``
+    script:`document.getElementById("random-id").innerHTML = Math.floor(Math.random()*10)`
     }
     const codeExemple3= { 
-    code: `     
+    code: `     <h2 id="random-id"></h2>
     
      <script src="./index.js"></script>`,
-    script:``
+    script:`document.getElementById("random-id").innerHTML = Math.floor(Math.random() * (200 - 90) )+90`
     }
     const codeExemple4= { 
-    code: `     
+    code: `     <h2 id="random-id"></h2>
     
      <script src="./index.js"></script>`,
-    script:``
+    script:`function random_integer(min, max){
+  document.getElementById("random-id").innerHTML = Math.floor(Math.random() * (max - min) )+ min
+}
+random_integer(10,21)`
     }
     const codeExemple5= { 
-    code: `     
+    code: `     <h2 id="random-id"></h2>
     
      <script src="./index.js"></script>`,
-    script:``
+    script:`function random_integer(min, max){
+  let r = Math.floor(Math.random() * (max - min + 1 ) )+ min
+  document.getElementById("random-id").innerHTML = r
+}
+random_integer(10,21)`
     }
-
-    // let d = Math.random();
-    // document.getElementById("id").innerHTML = d;
-
-    //document.getElementById("ran").innerHTML = Math.floor(Math.random()*10)
-
-    // function getRndInteger2(min, max) {
-    //     return Math.floor(Math.random() * (max - min +1) ) + min;
-    // }   
-    // document.getElementById("result3").innerHTML =  getRndInteger2(9,20)
-
-    // function getRndInteger(min, max) {
-    //     return Math.floor(Math.random() * (max - min) ) + min;
-    // }   
-    // document.getElementById("result2").innerHTML =  getRndInteger(9,20)
-
-    //  document.getElementById("result").innerHTML += Math.floor(Math.random() * (200-90) ) + 90 ;
-    //document.getElementById("id-random").innerHTML = Math.floor(Math.random()*10)+1;
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Random</h1>
@@ -70,11 +74,13 @@ export default function Random(){
             <CodeHighlighter code={`let d = Math.random();`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
-        <ul><li> في كل مرة تقوم بتحديت الصفحة يتم تحديد رقم عشوائي بين 0 و 1.</li></ul>
-        <img src={images.js14_random} className="img"/>
-        <div className="styleee">
-            <h2 id="id">  </h2>       
-        </div>
+        <ul><li> في كل مرة تقوم بتحديت الصفحة يتم تحديد رقم عشوائي بين 0 و 10.</li></ul>
+        
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>{randomNum}</h2>
+        </Result>
     </article>
     <article>
         <h2 className="title-h2">2. <bdi>JavaScript Random Integers</bdi></h2>
@@ -87,23 +93,18 @@ export default function Random(){
         </p>
         <div className="mital">متال 1 :  </div>
         <ul><li> في كل مرة تقوم بتحديت الصفحة يتم تحديد رقم عشوائي  بين 0 و 9.</li></ul>
-        <img src={images.js14_random2} className="img"/>
-        <div className="styleee">
-            <h2 id="ran">  </h2>
-        </div>
-        <div className="mital">متال 2 :  </div>
-        <ul><li> في كل مرة تقوم بتحديت الصفحة يتم تحديد رقم عشوائي  بين 0 و 10.</li></ul>
-        <img src={images.js14_random3} className="img"/>
-        <div className="styleee">
-            <h2 id="id-random">  </h2>
-        
-        </div>
-        <div className="mital">متال 3:  </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>{randomNum2}</h2>
+        </Result>
+        <div className="mital">متال 2:  </div>
         <ul><li> في كل مرة تقوم بتحديت الصفحة يتم تحديد رقم عشوائي  بين 90 و 199.</li></ul>
-        <img src={images.js14_random4} className="img"/>
-        <div className="styleee">
-            <h2 id="result">  </h2>
-           </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>{randomNum3}</h2>
+        </Result>
     </article>
     <article>
         <h2 className="title-h2">3. Random Function</h2>
@@ -114,16 +115,18 @@ export default function Random(){
         </p>
         <div className="mital">متال 1 :  </div>
         <ul><li>   تعرض وظيفة <b>JavaScript</b> هذه دائمًا رقمًا عشوائيًا بين <b>min</b> (مضمن) و <b>max</b> (مستبعد): </li></ul>
-        <img src={images.js14_random5} className="img"/>
-        <div className="styleee">
-            <h2 id="result2">  </h2>
-        </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>{randomNum4}</h2>
+        </Result>
         <div className="mital">متال 2 :  </div>
         <ul><li>عرض وظيفة <b>JavaScript</b> هذه دائمًا رقمًا عشوائيًا بين <b>min</b> و <b>max</b> (كلاهما مضمن): </li></ul>
-        <img src={images.js14_random6} className="img"/>
-        <div className="styleee">
-            <h2 id="result3">  </h2>
-        </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>{randomNum5}</h2>
+        </Result>
         <ul><li><small>لا تقلق إن لم تفهم بخصوص الدالة function ستتعلم ذالك خلال دروس القادمة .</small></li></ul>
     </article>
 </section>

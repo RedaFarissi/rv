@@ -48,20 +48,8 @@ export default function LoopFor(){
             غالبًا ما يكون هذا هو الحال عند العمل مع المصفوفات:<br/><br/>
         <span><b>بدلا من كتابة :</b></span>
             <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
-        {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre>text += cars[<span style="color:var(--arr-num-color);">0</span>] + <span style="color:orange;">"&lt;br&gt;"</span>;
-        text += cars[<span style="color:var(--arr-num-color)">1</span>] + <span style="color:orange;">"&lt;br&gt;"</span>;
-        text += cars[<span style="color:var(--arr-num-color)">2</span>] + <span style="color:orange;">"&lt;br&gt;"</span>;
-        text += cars[<span style="color:var(--arr-num-color)">3</span>] + <span style="color:orange;">"&lt;br&gt;"</span>;
-        text += cars[<span style="color:var(--arr-num-color)">4</span>] + <span style="color:orange;">"&lt;br&gt;"</span>;
-        text += cars[<span style="color:var(--arr-num-color)">5</span>] + <span style="color:orange;">"&lt;br&gt;"</span>;</pre>
-    </div> */}
         <span><b>يمكنك كتابة:</b></span>
             <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
-        {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><b style="color:rgb(193 131 188)">for</b>(<span style="color: var(--html-color-tags);">let</span> i=0 ; i< cars.<span style="color:#8fdcfe;">length</span> ; i++){
-            text += cars[<span style="color:rgb(80,210,80);">i</span>] + <span style="color:orange;">"&lt;br&gt;"</span>
-        }</pre></div> */}
             يدعم <b>JavaScript</b> أنواعًا مختلفة من الحلقات:
             <ul>
                 <li><span>for</span> - حلقات من خلال كتلة من التعليمات البرمجية عدة مرات .</li>
@@ -130,11 +118,6 @@ export default function LoopFor(){
             تتكرر  <bdi><b>for of</b></bdi> عبر قيم الكائن القابل للتكرار.<br/>
             يتيح لك إجراء حلقة حول هياكل البيانات القابلة للتكرار مثل <b>Arrays</b> و <b>Strings</b> و <b>Maps</b> و <b>NodeLists</b> والمزيد
             <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><b style="color:var(--violet-color)">for</b>(variable <span style="color:var(--js-color)">of</span> iterable) {
-          <span style="color: green;">//code block to be executed</span>
-        }</pre>
-            </div> */}
         </p>
        <div className="mital">متال  :  </div> 
         <img src={images.js19_Loop6} className="img"/>
@@ -153,21 +136,6 @@ export default function LoopFor(){
             تسمح لك طريقة <bdi><b>forEach()</b></bdi> بتنفيذ وظيفة معينة على كل عنصر من عناصر المصفوفة.<br/>
             تستدعي طريقة <bdi><b>forEach()</b></bdi> دالة (دالة رد نداء) مرة واحدة لكل عنصر مصفوفة
             <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--js-color)">Arrays</span>.<span style="color:gold">forEach(</span> <span style="color:var(--js-color)">i</span> <span style="color:var(--html-color-tags)">=></span> { 
-            <span style="color:green">//code to be executed</span>
-        }<span style="color:gold">)</span>;</pre>
-            </div>
-            <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--js-color)">Arrays</span>.<span style="color:gold">forEach(</span><span style="color:var(--html-color-tags)">function(</span><span style="color:var(--js-color)">i</span><span style="color:var(--html-color-tags)">)</span>{
-            <span style="color:green">//code to be executed</span>
-        }<span style="color:gold">)</span>;</pre>
-            </div>
-            <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags)">function</span> <b style="color:gold">name_Function(</b><span style="color:var(--js-color)">i</span><b style="color:gold">)</b>{
-            <span style="color:green">//code to be executed</span>
-        }
-        <span style="color:var(--js-color)">Arrays</span>.<b style="color:gold">forEach(</b>name_Function<b style="color:gold">)</b></pre></div>*/}
         </p> 
         <div className="mital">متال :  </div> 
         <img src={images.js19_Loop8} className="img"/>

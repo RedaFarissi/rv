@@ -2,6 +2,44 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function ArraysPart1(){
+    const code1 = `let car1 = "Saab";
+let car2 = "Volvo";
+let car3 = "BMW";`
+    const code2 = `const array_name = [ ];
+array_name [0] = item1 
+array_name [1] = item2 
+array_name [2] = item3 `
+    const code3 = `const array_name = [item1 , item2 , ... ];
+array_name[0] = new_item ;`
+    const code4 = `const cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("id").innerHTML = cars`
+    const code5 = `const cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("id").innerHTML = cars.length`
+    const code6 = `const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits[0];`
+    const code7 = `const fruits = [ "Orange","Banana","Apple","Mango"];
+let fruit = fruits[fruits.length - 1];`
+    const code8 = `const fruits = ["Orange","Banana","Apple","Mango"];
+fruits.push("Lemon");`
+    const code9 = `const fruits = [ "Orange","Banana","Apple","Mango"];
+fruits[fruits.length] = "Lemon"`
+    const code10 = `const names = ["Banana","Orange","Apple"];
+names instanceof Array;`
+    const code11 = `const fruits = ["Banana","Orange","Apple","Mango"];
+document.getElementById("h2").innerHTML = fruits.toString();`
+    const code12 = `const fruits = ["Banana","Orange","Apple","Mango"];
+document.getElementById("h2").innerHTML = fruits.join(" / ");`
+    const code13 = `const fruits = ["Banana","Orange","Apple","Mango"];
+fruits.pop();`
+    const code14 = `const fruits = ["Banana","Orange","Apple"];
+fruits.push("Lemon");`
+    const code15 = `const fruits = ["Banana","Orange","Apple"];
+fruits.shift();`
+    const code16 = `const fruits = ["Banana","Orange","Apple"];
+fruits.unshift("Kiwi");`
+    const code17 = `const fruits = ["Banana","Orange","Apple"];
+delete fruits[2];`
+
     //const fruits = [ "Orange","Banana","Apple","Mango"];
     //fruits[9] = "Lemon"
     //for( let i=0 ; i<fruits.length ; i++){
@@ -31,9 +69,7 @@ export default function ArraysPart1(){
     <article>
         <p className="style_divv mt-5">
             المصفوفة هي متغير خاص يمكن أن يحتوي على أكثر من قيمة .<br/>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--html-color-tags);">const</span> cars = [<span style="color:orange">"Saab"</span>, <span style="color:orange">"Volvo"</span>, <span style="color:orange">"BMW"</span>];</pre>
-            </div> */}
+            <CodeHighlighter code={`const cars = ["Saab", "Volvo", "BMW"];`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
         <img src={images.js17_Arrays} className="img"/>
@@ -43,11 +79,7 @@ export default function ArraysPart1(){
         <h2 className="title-h2">1. لماذا استخدام المصفوفة؟</h2>
         <p className="style_divv">
             إذا كانت لديك قائمة بالعناصر (قائمة بأسماء السيارات ، على سبيل المثال) ، فقد يبدو تخزين السيارات في متغيرات فردية بهذا الشكل
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags);">let</span> car1 = <span style="color:orange">"Saab"</span>;
-        <span style="color:var(--html-color-tags);">let</span> car2 = <span style="color:orange">"Volvo"</span>;
-        <span style="color:var(--html-color-tags);">let</span> car3 = <span style="color:orange">"BMW"</span>;</pre>
-            </div> */}
+            <CodeHighlighter code={code1} language="js" addClass="mt-3 mb-3" copie={true} />
             ومع ذلك ، ماذا لو كنت تريد المرور عبر السيارات والعثور على واحدة محددة؟ وماذا لو لم يكن لديك 3 سيارات ، بل 300؟<br/>
             الحل هو مصفوفة!<br/>
             يمكن أن تحتوي المصفوفة على العديد من القيم تحت اسم واحد ، ويمكنك الوصول إلى القيم بالإشارة إلى رقم الفهرس.<br/>
@@ -57,20 +89,11 @@ export default function ArraysPart1(){
         <h2 className="title-h2">2. إنشاء مصفوفة</h2>
         <p className="style_divv">
             يعد استخدام المصفوفة الحرفية أسهل طريقة لإنشاء مصفوفة <b>JavaScript</b>.<br/>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--html-color-tags);">const</span> array_name = [item1 , item2 , ... ];</pre>
-            </div> */}
+            <CodeHighlighter code={`const array_name = [item1 , item2 , ... ];`} language="js" addClass="mt-3 mb-3" copie={true} />
             يمكنك أيضًا إنشاء مصفوفة ، ثم توفير العناصر:
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags);">const</span> array_name = [ ];
-        array_name [<span style="color:var(--arr-num-color)">0</span>] = item1 
-        array_name [<span style="color:var(--arr-num-color)">1</span>] = item2 
-        array_name [<span style="color:var(--arr-num-color)">2</span>] = item3 </pre>
-            </div> */}
+            <CodeHighlighter code={code2} language="js" addClass="mt-3 mb-3" copie={true} />
             يمكنك أيضًا إنشاء مصفوفة ، بطريقة التالية :
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--html-color-tags)">const</span> cars = <span style="color:var(--html-color-tags)">new</span> <span style="color:lime">Array</span>(item1, item2, item3 , ..);</pre>
-            </div> */}
+            <CodeHighlighter code={`const cars = new Array(item1, item2, item3 , ..);`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="alert bg-warning">
             إنها ممارسة شائعة للإعلان عن المصفوفات باستخدام الكلمة الأساسية <b>const</b>.<br/>
@@ -89,10 +112,7 @@ export default function ArraysPart1(){
         <h2 className="title-h2">4. تغيير عناصر المصفوفة</h2>
         <p className="style_divv">
             هذا البيان يغير قيمة العنصر الأول في المصفوفة  <br/>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags)">const</span> array_name = [item1 , item2 , ... ];
-        array_name[<span style="color:var(--arr-num-color)">0</span>] = new_item ;</pre>
-            </div> */}
+            <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
         <img src={images.js17_Arrays2} className="img"/>
@@ -105,10 +125,7 @@ export default function ArraysPart1(){
         <h2 className="title-h2">5. الوصول إلى المصفوفة كامل</h2>
         <p className="style_divv">
             باستخدام <b>JavaScript</b> ، يمكن الوصول إلى المصفوفة الكاملة بالرجوع إلى اسم المصفوفة
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags);">const</span> cars = [<span style="color:orange">"Saab"</span>, <span style="color:orange">"Volvo"</span>, <span style="color:orange">"BMW"</span>];
-        <span style="color:var(--js-color);">document</span>.<span style="color:gold">getElementById(<span style="color:orange">"id"</span>)</span>.<span style="color:var(--js-color);">innerHTML</span> = cars</pre>
-            </div> */}
+            <CodeHighlighter code={code4} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
         <img src={images.js17_Arrays3_2} className="img"/>
@@ -128,24 +145,16 @@ export default function ArraysPart1(){
         <h2 className="title-h2" id="length">7. المصفوفات و الخاصية length</h2>
         <p className="style_divv">
             ترجع خاصية <b>length</b> لمصفوفة طول المصفوفة (عدد عناصر المصفوفة).<br/>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags);">const</span> cars = [<span style="color:orange">"Saab"</span>, <span style="color:orange">"Volvo"</span>, <span style="color:orange">"BMW"</span>];
-        <span style="color:var(--js-color)">document</span>.<span style="color:gold">getElementById(<span style="color:orange">"id"</span>)</span>.<span style="color:var(--js-color);">innerHTML</span> = <span style="color:var(--js-color);">cars</span>.<span style="color:var(--js-color);">length</span></pre>
-            </div> */}
+            <CodeHighlighter code={code5} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
-        <div className="sum_exemple_style">
         <div className="mital">متال :  </div>
         <img src={images.js17_Arrays5} className="img"/>
         <div className="styleee"><h2> 3 </h2></div>
-        </div>
     </article>
     <article>
         <h2 className="title-h2">8. الوصول إلى عنصر المصفوف الأول </h2>
         <p className="style_divv">
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags);">const</span> fruits = [<span style="color:orange">"Banana"</span>, <span style="color:orange">"Orange"</span>, <span style="color:orange">"Apple"</span>, <span style="color:orange">"Mango"</span>];
-        <span style="color:var(--html-color-tags);">let</span> fruit = fruits[<span style="color:rgb(80,210,80)">0</span>];</pre>
-            </div> */}
+            <CodeHighlighter code={code6} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
         <img src={images.js17_Arrays7} className="img"/>
@@ -154,10 +163,7 @@ export default function ArraysPart1(){
     <article>
         <h2 className="title-h2">9. الوصول إلى آخر عناصر المصفوف</h2>
         <p className="style_divv">
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags);">const</span> fruits = [ <span style="color:orange">"Orange"</span>,<span style="color:orange">"Banana"</span>,<span style="color:orange">"Apple"</span>,<span style="color:orange">"Mango"</span>];
-        <span style="color:var(--html-color-tags);">let</span> fruit = fruits[fruits.<span style="color:var(--js-color);">length</span> - 1];</pre>
-            </div> */}
+            <CodeHighlighter code={code7} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
         <img src={images.js17_Arrays8} className="img"/>
@@ -167,15 +173,9 @@ export default function ArraysPart1(){
         <h2 className="title-h2" id="push">10. إضافة عناصر إلى المصفوفة </h2>
         <p className="style_divv">
             أسهل طريقة لإضافة عنصر جديد إلى المصفوفة هي استخدام طريقة <bdi><b>push()</b></bdi> .
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags);">const</span> fruits = [<span style="color:orange">"Orange"</span>,<span style="color:orange">"Banana"</span>,<span style="color:orange">"Apple"</span>,<span style="color:orange">"Mango"</span>];
-        fruits.<span style="color:gold">push(</span><span style="color:orange">"Lemon"</span><span style="color:gold">)</span>;</pre>
-            </div> */}
+            <CodeHighlighter code={code8} language="js" addClass="mt-3 mb-3" copie={true} />
             يمكن أيضًا إضافة عنصر جديد إلى مصفوفة باستخدام خاصية <b>length</b>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags)">const</span> fruits = [ <span style="color:orange">"Orange"</span>,<span style="color:orange">"Banana"</span>,<span style="color:orange">"Apple"</span>,<span style="color:orange">"Mango"</span>];
-        fruits[fruits.<span style="color:var(--js-color)">length</span>] = <span style="color:orange">"Lemon"</span></pre>
-            </div> */}
+            <CodeHighlighter code={code9} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
         <img src={images.js17_Arrays9} className="img"/>
@@ -197,14 +197,9 @@ export default function ArraysPart1(){
             تكمن المشكلة في أن عامل تشغيل <bdi><b>JavaScript typeof</b></bdi> يعرض "object" <br/>  
             لحل هذه المشكلة توجد طريقتين <br/>
             <span><b>الطريقة 1 :</b></span>
-            {/* <div  className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-                <pre><span style="color:lime;">Array</span>.<span style="color:gold">isArray(</span>names<span style="color:gold">)</span></pre>
-            </div> */}
+            <CodeHighlighter code={`Array.isArray(names)`} language="js" addClass="mt-3 mb-3" copie={true} />
             <span><b>الطريقة 2 :</b></span>
-            {/* <div  className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags)">const</span> names = [<span style="color:orange">"Banana"</span>,<span style="color:orange">"Orange"</span>,<span style="color:orange">"Apple"</span>];
-        names <span style="color:gold">instanceof</span> <span style="color:lime">Array</span>;</pre>
-            </div> */}
+            <CodeHighlighter code={code10} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :</div>
         <img src={images.js17_Arrays12} className="img"/>
@@ -218,10 +213,7 @@ export default function ArraysPart1(){
         <h5 className="title-h5" id="toString">1. <bdi>toString()</bdi></h5>
         <p className="style_divv">
             تحوّل طريقة <b><bdi>toString()</bdi></b> مصفوفة (<small>array</small>) إلى <b>string</b> من قيم الصفيف (<small>مفصولة بفاصلة</small>) .
-            {/* <div  className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags);">const</span> fruits = [<span style="color:orange">"Banana"</span>,<span style="color:orange">"Orange"</span>,<span style="color:orange">"Apple"</span>,<span style="color:orange">"Mango"</span>];
-        <span style="color:var(--js-color);">document</span>.<span style="color:gold;">getElementById(</span><span style="color:orange;">"h2"</span><span style="color:gold;">)</span>.<span style="color:var(--js-color);">innerHTML</span> = <span style="color:var(--js-color);">fruits</span>.<bdi><span style="color:gold;">toString()</span></bdi>;</pre>
-            </div> */}
+            <CodeHighlighter code={code11} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :</div>
         <img src={images.js17_Arrays14} className="img"/>
@@ -229,10 +221,7 @@ export default function ArraysPart1(){
         <h5 className="title-h5" id="join">2. <bdi>join()</bdi></h5>
         <p className="style_divv">
             يقوم <b><bdi>join()</bdi></b> أيضًا بضم جميع عناصر المصفوفة في سلسلة نصية يتصرف تمامًا مثل <b><bdi>toString()</bdi></b> ، ولكن بالإضافة إلى ذلك ، يمكنك تحديد الفاصل.
-            {/* <div  className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags)">const</span> fruits = [<span style="color:orange">"Banana"</span>,<span style="color:orange">"Orange"</span>,<span style="color:orange">"Apple"</span>,<span style="color:orange">"Mango"</span>];
-        <span style="color:var(--js-color)">document</span>.<span style="color:gold;">getElementById(</span><span style="color:orange;">"h2"</span><span style="color:gold;">)</span>.<span style="color:var(--js-color)">innerHTML</span> = <span style="color:var(--js-color);">fruits</span>.<bdi><span style="color:gold;">join(</span><span style="color:orange">" / "</span><span style="color:gold;">)</span></bdi>;</pre>
-            </div> */}
+            <CodeHighlighter code={code12} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :</div>
         <img src={images.js17_Arrays15} className="img"/>
@@ -244,47 +233,35 @@ export default function ArraysPart1(){
             عندما تعمل مع المصفوفات ، فمن السهل إزالة العناصر وإضافة عناصر جديدة.<br/>
             إخراج العناصر من المصفوفة  <b>Popping</b>  ، أو دفع العناصر إلى المصفوفة <b>Pushing</b>.
         </p>
-        <h5 className="title-h5" id="pop">1. الخاصية <bdi>pop()</bdi></h5>
+        <h3 className="title-h3" id="pop">1. الخاصية <bdi>pop()</bdi></h3>
         <p className="style_divv">
             تزيل طريقة <bdi><b>pop()</b></bdi> العنصر الأخير من المصفوفة <br/>
-            {/* <div  className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags)">const</span> fruits = [<span style="color:orange">"Banana"</span>,<span style="color:orange">"Orange"</span>,<span style="color:orange">"Apple"</span>,<span style="color:orange">"Mango"</span>];
-        <span style="color:var(--js-color);">fruits</span>.<bdi><span style="color:gold;">pop()</span></bdi>;</pre>
-            </div> */}
+            <CodeHighlighter code={code13} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :</div>
         <img src={images.js17_Arrays16} className="img"/>
         <div className="styleee"><h2>Banana,Orange,Apple</h2></div>
         
-        <h5  className="title-h5" id="push">2. الخاصية <bdi>push()</bdi></h5>
+        <h3 className="title-h3" id="push">2. الخاصية <bdi>push()</bdi></h3>
         <p className="style_divv">
             تضيف <b><bdi>push()</bdi></b> عنصرًا جديدًا في نهاية المصفوفة
-            {/* <div  className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags);">const</span> fruits = [<span style="color:orange">"Banana"</span>,<span style="color:orange">"Orange"</span>,<span style="color:orange">"Apple"</span>];
-        <span style="color:var(--js-color);">fruits</span>.<bdi><b style="color:gold;">push(</b></bdi><span style="color:orange">"Lemon"</span><bdi><span style="color:gold;">)</span></bdi>;</pre>
-            </div> */}
+            <CodeHighlighter code={code14} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :</div>
         <img src={images.js17_Arrays17} className="img"/>
         <div className="styleee"><h2>Banana,Orange,Apple,Lemon</h2></div>
-        <h5  className="title-h5" id="shift">3. الخاصية <bdi>shift()</bdi></h5>
+        <h3  className="title-h3" id="shift">3. الخاصية <bdi>shift()</bdi></h3>
         <p className="style_divv">
             تقوم طريقة <bdi><b>shift()</b></bdi> بإزالة عنصر المصفوفة الأول و "إزاحة" جميع العناصر الأخرى إلى فهرس أقل.
-            {/* <div  className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags);">const</span> fruits = [<span style="color:orange">"Banana"</span>,<span style="color:orange">"Orange"</span>,<span style="color:orange">"Apple"</span>];
-        <span style="color:var(--js-color);">fruits</span>.<bdi><span style="color:gold;">shift()</span></bdi>;</pre>
-            </div> */}
+            <CodeHighlighter code={code15} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :</div>
         <img src={images.js17_Arrays18} className="img"/>
         <div className="styleee"><h2>Orange,Apple</h2></div>
-        <h5 className="title-h5" id="unshift">4. الخاصية <bdi>unshift()</bdi></h5>
+        <h3 className="title-h3" id="unshift">4. الخاصية <bdi>unshift()</bdi></h3>
         <p className="style_divv">
             تضيف طريقة  <bdi><b>unshift()</b></bdi> عنصرًا جديدًا إلى مصفوفة (في البداية) .<br/>
-            {/* <div  className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags);">const</span> fruits = [<span style="color:orange">"Banana"</span>,<span style="color:orange">"Orange"</span>,<span style="color:orange">"Apple"</span>];
-        <span style="color:var(--js-color);">fruits</span>.<bdi><b style="color:gold;">unshift(<small style="color:orange">"Kiwi"</small>)</b></bdi>;</pre>
-            </div> */}
+            <CodeHighlighter code={code16} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :</div>
         <img src={images.js17_Arrays19} className="img"/>
@@ -292,14 +269,11 @@ export default function ArraysPart1(){
         <div className="mital">متال 2 :</div>
         <img src={images.js17_Arrays20} className="img"/>
         <div className="styleee"><h2>Kiwi,Orange,Lemon,Apple</h2></div>
-        <h5 className="title-h5" id="delete">4. الخاصية delete </h5>
+        <h3 className="title-h3" id="delete">4. الخاصية delete </h3>
         <p className="style_divv">
             يمكن حذف عناصر المصفوفة باستخدام عامل الحذف <b>delete</b>.<br/>
             استخدام <b>delete</b> يترك ثقوبًا غير محددة في المصفوفة.
-            {/* <div  className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags);">const</span> fruits = [<span style="color:orange">"Banana"</span>,<span style="color:orange">"Orange"</span>,<span style="color:orange">"Apple"</span>];
-        <span style="color:var(--violet-color);">delete</span> fruits[<span style="color:var(--arr-num-color)">2</span>];</pre>
-            </div> */}
+            <CodeHighlighter code={code17} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :</div>
         <img src={images.js17_Arrays21} className="img"/>

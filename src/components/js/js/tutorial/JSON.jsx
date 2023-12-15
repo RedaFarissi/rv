@@ -31,30 +31,22 @@ export default function JSON(){
         <p className="style_divv">
             في JSON ، يجب أن تكون القيم أحد أنواع البيانات التالية:
             <ul dir="ltr"><li> string </li></ul>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-                <pre>{<span style="color:orange">"key"</span> : <span style="color:orange">"STRING text"</span>}</pre>
-            </div> */}
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
+           
             <ul dir="ltr"><li> number </li></ul>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-                <pre>{<span style="color:orange">"key"</span> : <span style="color:var(--arr-num-color)">9</span>}</pre>
-            </div> */}
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
+            
             <ul dir="ltr"><li> object (JSON object) </li></ul>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-                <pre>{<span style="color:orange">"key"</span>:{<span style="color:orange">"name"</span>:<span style="color:orange">"Reda Eskouni"</span> , <span style="color:orange">"Age"</span>:<span style="color:var(--arr-num-color)">25</span>} }</pre>
-            </div> */}
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
+           
             <ul dir="ltr"><li> array </li></ul>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-                <pre>{<span style="color:orange">"key"</span>:[<span style="color:orange">"element1"</span>,<span style="color:orange">"element2"</span>,<span style="color:orange">"element3"</span>]}</pre>
-            </div> */}
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
+            
             <ul dir="ltr"><li> boolean (true/false)</li></ul>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-                <pre>{<span style="color:orange">"key"</span> : <span style="color:var(--html-color-tags)">true</span>}
-        {<span style="color:orange">"key"</span> : <span style="color:var(--html-color-tags)">false</span>}</pre>
-            </div> */}
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
+            
             <ul dir="ltr"><li> null </li></ul>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-                <pre>{<span style="color:orange">"key"</span> : <span style="color:var(--html-color-tags)">null</span>}</pre>
-            </div> */}
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
     </article>
     <article>
@@ -64,9 +56,7 @@ export default function JSON(){
             بسبب هذا التشابه ، يمكن لبرنامج <b>JavaScript</b> تحويل بيانات <b>JSON</b> بسهولة إلى كائنات <b>JavaScript</b> أصلية.
             الاستخدام الشائع لـ <b>JSON</b> هو قراءة البيانات من خادم الويب ، وعرض البيانات في صفحة ويب.<br/>
             غالب ما ستتعامل مع الصغة <b>JSON</b> مكتوبة على شكل  <b>String</b>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--html-color-tags);">const</span> obj = <span style="color:lime">JSON</span>.<b style="color:gold">parse(</b>text_JSON<b style="color:gold">)</b>;</span></pre>
-            </div> */}
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال : </div>
         <ul><li>الكائن <small>(object)</small> بصيغة <b>JSON</b> مخزن داخل متغير <b>string</b> .</li></ul>
@@ -88,10 +78,7 @@ export default function JSON(){
         <p className="style_divv">
             عند إرسال البيانات إلى خادم ويب ، يجب أن تكون البيانات عبارة عن سلسلة.<br/>
             يمكن تحويل كائن <small><small>(Object)</small></small> إلى سلسلة نصية تدعم <b>JSON</b> عبر <bdi><b>Stringify</b></bdi>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags);">var</span> obj = {name: <span style="color:orange">"Reda"</span>, age: <span  style="color:var(--arr-num-color)">25</span>};
-        <span style="color:var(--html-color-tags);">var</span> str = <span style="color:lime">JSON</span>.<b style="color:gold">stringify(</b>obj<b style="color:gold">)</b></pre> 
-            </div> */}
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال : </div>
         <ul><li> ستكون النتيجة عبارة عن سلسلة تتبع تدوين <b>JSON</b> .</li></ul>
@@ -101,10 +88,7 @@ export default function JSON(){
         <h5 className="title-h5">2. stringify Array </h5>
         <p className="style_divv">
             من الممكن أيضًا ترميز مصفوفات JavaScript بواسطة الخاصية <b>stringify</b> وتحولها إلى سلسلة <small><small>(string)</small></small> وذالك من أجل إرسالها إلى الخادم .
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags);">var</span> arr = [ <span style="color:orange">"Reda"</span>, <span  style="color:var(--arr-num-color)">25</span>];
-        <span style="color:var(--html-color-tags);">var</span> str = <span style="color:lime">JSON</span>.<b style="color:gold">stringify(</b>arr<b style="color:gold">)</b></pre> 
-            </div> */}
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال : </div>
         <ul><li> ستكون النتيجة عبارة عن سلسلة تتبع تدوين <b>JSON</b> .</li></ul>
@@ -118,10 +102,7 @@ export default function JSON(){
             في <b>JSON</b> ، يجب أن تكون قيم الصفيف من النوع سلسلة <small><small>(string)</small></small> ، أو رقم <small><small>(number)</small></small> ، أو كائن <small><small>(object)</small></small> ، أو مصفوفة <small><small>(array)</small></small> ، أو منطقية <small><small>(boolean)</small></small> ، أو خالية <small><small>(null)</small></small> .<br/>
             في <b>JavaScript</b> ، يمكن أن تكون قيم الصفيف كل ما سبق ، بالإضافة إلى أي تعبير <b>JavaScript</b> صالح آخر ، بما في ذلك الدوال <small><small>(function)</small></small>  والتواريخ <small><small>(date)</small></small>  وغير المعرفة <small><small>(null)</small></small> .<br/>
             يمكن تحويل المتغير من نوع <b>string JSON</b> يحتوي على مصفوفة إلى مصفوفة بستعمال <b>JSON.parse</b>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top:9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags);">var</span> str = <span style="color:orange">'["Reda" , "Eskouni", 25]'</span>
-        <span style="color:var(--html-color-tags);">var</span> arr = <span style="color:lime">JSON</span>.<b style="color:gold">parse(</b>str<b style="color:gold">)</b></pre> 
-            </div> */}
+            <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال : </div>
         <img src={images.js27_JSON7} className="img"/>

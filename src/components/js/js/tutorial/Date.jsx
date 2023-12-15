@@ -1,6 +1,7 @@
 import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 import { useState, useEffect } from 'react';
+
 export default function DateJS(){
     const [currentDate, setCurrentDate] = useState(new Date());
     useEffect(() => {

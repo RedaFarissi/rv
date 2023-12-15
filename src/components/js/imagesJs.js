@@ -80,12 +80,6 @@ import js148_currentTarget from "../../assests/images/js/js148_currentTarget.png
 import js149_call from "../../assests/images/js/js149_call.png"
 import js149_call2 from "../../assests/images/js/js149_call2.png"
 import js149_call3 from "../../assests/images/js/js149_call3.png"
-import js14_random from "../../assests/images/js/js14_random.png"
-import js14_random2 from "../../assests/images/js/js14_random2.png"
-import js14_random3 from "../../assests/images/js/js14_random3.png"
-import js14_random4 from "../../assests/images/js/js14_random4.png"
-import js14_random5 from "../../assests/images/js/js14_random5.png"
-import js14_random6 from "../../assests/images/js/js14_random6.png"
 import js150_apply from "../../assests/images/js/js150_apply.png"
 import js150_apply2 from "../../assests/images/js/js150_apply2.png"
 import js150_apply3 from "../../assests/images/js/js150_apply3.png"
@@ -348,8 +342,8 @@ const images = {
     js142_class_Inheritance,js142_class_Inheritance2,js142_class_Inheritance3,js143_map,
     js143_map2,js143_map3,js144_filter,js144_filter2,js144_filter3,js145_remove,js145_remove2,
     js146_setAttribute,js147_bind,js147_bind2,js147_bind3,js147_bind4,js147_bind5,js147_bind6,
-    js148_currentTarget,js149_call,js149_call2,js149_call3,js14_random,js14_random2,js14_random3,
-    js14_random4,js14_random5,js14_random6,js150_apply,js150_apply2,js150_apply3,js150_apply4,
+    js148_currentTarget,js149_call,js149_call2,js149_call3,
+    js150_apply,js150_apply2,js150_apply3,js150_apply4,
     js151_setTimeout,js15_Conditions,js15_Conditions2,js15_Conditions3,js15_Conditions4,js16_Switch,
     js16_Switch2,js16_Switch3,js17_Arrays,js17_Arrays10,js17_Arrays11,js17_Arrays12,js17_Arrays13,
     js17_Arrays14,js17_Arrays15,js17_Arrays16,js17_Arrays17,js17_Arrays18,js17_Arrays19,js17_Arrays2,
