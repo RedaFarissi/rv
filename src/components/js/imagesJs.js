@@ -85,9 +85,6 @@ import js150_apply2 from "../../assests/images/js/js150_apply2.png"
 import js150_apply3 from "../../assests/images/js/js150_apply3.png"
 import js150_apply4 from "../../assests/images/js/js150_apply4.png"
 import js151_setTimeout from "../../assests/images/js/js151_setTimeout.png"
-import js16_Switch from "../../assests/images/js/js16_Switch.png"
-import js16_Switch2 from "../../assests/images/js/js16_Switch2.png"
-import js16_Switch3 from "../../assests/images/js/js16_Switch3.png"
 import js17_Arrays from "../../assests/images/js/js17_Arrays.png"
 import js17_Arrays10 from "../../assests/images/js/js17_Arrays10.png"
 import js17_Arrays11 from "../../assests/images/js/js17_Arrays11.png"
@@ -339,8 +336,8 @@ const images = {
     js143_map2,js143_map3,js144_filter,js144_filter2,js144_filter3,js145_remove,js145_remove2,
     js146_setAttribute,js147_bind,js147_bind2,js147_bind3,js147_bind4,js147_bind5,js147_bind6,
     js148_currentTarget,js149_call,js149_call2,js149_call3,
-    js150_apply,js150_apply2,js150_apply3,js150_apply4,js151_setTimeout,js16_Switch,
-    js16_Switch2,js16_Switch3,js17_Arrays,js17_Arrays10,js17_Arrays11,js17_Arrays12,js17_Arrays13,
+    js150_apply,js150_apply2,js150_apply3,js150_apply4,js151_setTimeout,
+    js17_Arrays,js17_Arrays10,js17_Arrays11,js17_Arrays12,js17_Arrays13,
     js17_Arrays14,js17_Arrays15,js17_Arrays16,js17_Arrays17,js17_Arrays18,js17_Arrays19,js17_Arrays2,
     js17_Arrays20,js17_Arrays21,js17_Arrays3_2,js17_Arrays3,js17_Arrays4,js17_Arrays5,js17_Arrays6,
     js17_Arrays7,js17_Arrays8,js17_Arrays9,js18_Arrays,js18_Arrays10,js18_Arrays11,js18_Arrays12,
