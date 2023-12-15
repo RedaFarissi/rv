@@ -18,10 +18,52 @@ export default function Conditions(){
 }`;
 
   const codeExemple1= { 
-  code: `     
+  code: `     <h2 id="condition1">condition1 : </h2>
+     <h2 id="condition2">condition2 :</h2>
   
-   <script src="./index.js"></script>`,
-  script:``
+     <script src="./index.js"></script>`,
+  script:`if(7 > 8){
+    document.getElementById("condition1").innerHTML += "false"
+}
+  
+if( 7 == 7){
+  document.getElementById("condition2").innerHTML += "true"
+}`
+  }
+  const codeExemple2= { 
+  code: `    <h2 id="condition"> condition : </h2> 
+  
+     <script src="./index.js"></script>`,
+  script:`if(7 > 8){
+    document.getElementById("condition").innerHTML += "true"
+}else{
+    document.getElementById("condition").innerHTML += "false"
+}`
+  }
+
+  const codeExemple3= { 
+  code: `     <h2 id="condition"> condition : </h2>
+  
+     <script src="./index.js"></script>`,
+  script:`if(7 < 8){
+    document.getElementById("condition").innerHTML += "true"
+}else{
+    document.getElementById("condition").innerHTML += "false"
+}`
+  }
+  const codeExemple4= { 
+  code: `     <h2 id="condition"></h2>
+  
+     <script src="./index.js"></script>`,
+  script:`let age = 17;
+
+if (age >= 18){
+    document.getElementById("condition").innerHTML = "Welcome! You are old enough to proceed."
+}else if(age < 18){
+    document.getElementById("condition").innerHTML ="Sorry, you must be 18 or older to access this content."
+}else{
+    document.getElementById("condition").innerHTML ="Please enter a valid age.";
+}`
   }
   return(
 <section className="section-conetent">
@@ -46,8 +88,12 @@ export default function Conditions(){
             <CodeHighlighter code={code1} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
-        <img src={images.js15_Conditions} className="img"/>
-        <div className="styleee img"><h2> true </h2></div>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Conditions" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='Conditions' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>condition1 :</h2>
+            <h2>condition2 :true</h2>
+        </Result>
   </article>
   <article>
         <h2 className="title-h2">2.<bdi> JavaScript Condition if() else()</bdi></h2>
@@ -55,12 +101,18 @@ export default function Conditions(){
             استخدم تعليمة <b>else</b> لتحديد كتلة من التعليمات البرمجية ليتم تنفيذها إذا كان الشرط <b>if</b> خاطئًا.
             <CodeHighlighter code={code2} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
-        <div className="mital">متال :  </div>
-        <img src={images.js15_Conditions2} className="img"/>
-        <div className="styleee img"><h2> true </h2></div>
+        <div className="mital">متال 1 :  </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Conditions" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='Conditions' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>condition : false</h2>
+        </Result>
         <div className="mital">متال 2 :  </div>
-        <img src={images.js15_Conditions3} className="img"/>
-        <div className="styleee img"><h2> false </h2></div> 
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Conditions" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='Conditions' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>condition : true</h2>
+        </Result>
   </article>
   <article>
         <h2 className="title-h2">3.<bdi> JavaScript Condition if()  else if()</bdi></h2>
@@ -69,8 +121,11 @@ export default function Conditions(){
             <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
-        <img src={images.js15_Conditions4} className="img"/>
-        <div className="styleee img"><h2> false </h2></div>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="Conditions" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='Conditions' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>Sorry, you must be 18 or older to access this content.</h2>
+        </Result>
   </article>
 </section>
   )
