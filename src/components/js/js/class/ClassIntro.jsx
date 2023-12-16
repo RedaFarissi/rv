@@ -2,6 +2,23 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function ClassIntro(){
+  const code1 = `class Class_Name {
+  constructor(){ ... }
+}`
+  const code2 = `class Class_Name {
+  constructor(){ ... }
+}
+
+var obj = new Class_Name()`
+  const code3 = `class Class_Name {
+  constructor(){ ... }
+  method_1() { ... }
+  method_2() { ... }
+  method_3() { ... }
+}
+
+var obj = new Class_Name()`
+
 //   class Car {
 //     constructor(name , speed){
 //       const r = document.getElementById("resulta")
@@ -38,7 +55,42 @@ export default function ClassIntro(){
 //      }
 //   var obJ = new Moyen(20 , 0)
 //   obJ.name("reda")
+  const codeExemple1= { 
+    code: `       <h2 id="result"></h2>
 
+     <script src="./index.js"></script>`,
+    script:``
+  };
+  const codeExemple2= { 
+    code: `       <h2 id="result"></h2>
+    
+     <script src="./index.js"></script>`,
+    script:``
+  };
+  const codeExemple3= { 
+    code: `       <h2 id="result"></h2>
+    
+     <script src="./index.js"></script>`,
+    script:``
+  };
+  const codeExemple4= { 
+    code: `       <h2 id="result"></h2>
+    
+     <script src="./index.js"></script>`,
+    script:``
+  }
+  const codeExemple5= { 
+    code: `       <h2 id="result"></h2>
+    
+     <script src="./index.js"></script>`,
+    script:``
+  }
+  const codeExemple6= { 
+    code: `       <h2 id="result"></h2>
+    
+     <script src="./index.js"></script>`,
+    script:``
+  }
   return(
 <section className="section-conetent">
   <h1 className="heading-style heading-style-js-color">JavaScript Classes </h1>
@@ -47,10 +99,7 @@ export default function ClassIntro(){
         <p className="style_divv">
             استخدم  الكلمات <b>class</b> الرئيسية لإنشاء فصل دراسي.<br/>
             أضف دائمًا طريقة باسم <bdi><b>constructor()</b></bdi>
-            {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr">
-        <pre><span style="color:var(--html-color-tags)">class</span> <span style="color:lime">Class_Name</span> {
-          <span style="color:gold">constructor()</span>{ ... }
-        }</pre></div> */}
+            <CodeHighlighter code={code1} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
         <img src={images.js139_class_Intro} className="img"/>
@@ -64,11 +113,7 @@ export default function ClassIntro(){
         <h2 className="title-h2">2 - Using a Class</h2>
         <p className="style_divv">
             عندما يكون لديك class ، يمكنك استخدامه وذالك لإنشاء كائن أو كائنات <bdi>(object)</bdi> .
-            {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr">
-            <pre><span style="color:var(--html-color-tags)">class</span> <span style="color:lime">Class_Name</span> {
-              <span style="color:gold">constructor()</span>{ ... }
-            }
-            <span style="color:var(--html-color-tags)">var</span> obj = <span style="color:var(--html-color-tags)">new</span> <span style="color:lime">Class_Name()</span></pre></div> */}
+            <CodeHighlighter code={code2} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="sum_exemple_style">
             <div className="mital"> متال :  </div>
@@ -96,16 +141,7 @@ export default function ClassIntro(){
             استخدم <b>class</b> الكلمة الأساسية لإنشاء <b>class</b> .<br/>
             أضف دائمًا طريقة <bdi><b>constructor()</b></bdi>.<br/>
             ثم أضف أي عدد من <b>Method</b>.
-            {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr">
-        <pre><span style="color:var(--html-color-tags)">class</span> <span style="color:lime">Class_Name</span> {
-          <span style="color:gold">constructor()</span>{ ... }
-          <span style="color:gold">method_1()</span> { ... }
-          <span style="color:gold">method_2()</span> { ... }
-          <span style="color:gold">method_3()</span> { ... }
-        }
-
-        <span style="color:var(--html-color-tags)">var</span> obj = <span style="color:var(--html-color-tags)">new</span> <span style="color:lime">Class_Name()</span></pre></div>
-        </div> */}
+            <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
         <img src={images.js139_class_Intro3} className="img"/>

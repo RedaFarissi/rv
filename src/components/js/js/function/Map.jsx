@@ -2,6 +2,50 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Map(){
+    const codeExemple1= { 
+    code: `       <h2 id="result"></h2>
+    
+     <script src="./index.js"></script>`,
+    script:`const arr = [2, 4, 6, 8, 10];
+const res = document.getElementById("result");
+
+let power = arr.map(function(element) {
+  return element * element;
+});
+
+for (let i = 0; i < power.length; i++) {
+  res.innerHTML += \`\${power[i]} <br/>\`;
+}`
+    }
+    const codeExemple2= { 
+    code: `       <h2 id="result"></h2>
+    
+     <script src="./index.js"></script>`,
+    script:`const arr = [2, 4, 6, 8, 10];
+
+let power = arr.map((element) =>  element * element );
+
+for (let i = 0; i<power.length; i++) {
+    document.getElementById("result").innerHTML += \`\${power[i]} <br/>\`;
+}`
+    }
+    const codeExemple3= { 
+    code: `       <h2 id="result"></h2>
+    
+     <script src="./index.js"></script>`,
+    script:`const arr = [2, 4, 6, 8, 10];
+
+function power(num){
+  return num * num
+}
+
+let powerArr = arr.map(power);
+
+for (let i = 0; i<powerArr.length; i++) {
+    document.getElementById("result").innerHTML += \`\${powerArr[i]} <br/>\`;
+}`
+    }
+    
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Map</h1>
@@ -18,26 +62,26 @@ export default function Map(){
             تستدعي <bdi><b>map()</b></bdi> دالة مرة واحدة لكل عنصر في المصفوفة.<br/>
             لا ينفذ <bdi><b>map()</b></bdi> الوظيفة للعناصر الفارغة.<br/>
             الدالة داخل الدالة <b>map</b> يجب أن تحتوي <small>parametre</small> واحد على الأقل . و يمتل  عنصر المصفوفة في كل مرة .<br/>
-            {/* <div className="alert bg-dark pb-0 mt-3">
-        <pre> <span style="color:var(--js-color)">array</span>.<span style="color:gold">map(</span><span style="color:var(--html-color-tags)">function</span><span style="color:gold">(</span><span style="color:var(--js-color)">element</span> , <span style="color:var(--js-color)">index</span> , <span style="color:var(--js-color)">array</span><span style="color:gold">)</span>, thisValue<span style="color:gold">)</span></pre></div>
-            </div> */}
+            <CodeHighlighter code={`array.map(function(element , index , array), thisValue)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> الطريقة 1 :  </div>
-        <ul><li> في المتال أسفله  </li></ul>
-        <img src={images.js143_map} className="img"/>
-        <div className="styleee">
-            4<br/> 16<br/> 36<br/> 64<br/> 100
-        </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Apply" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='Apply' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>4<br/>16<br/>36<br/>64<br/>100</h2>
+        </Result>
         <div className="mital"> الطريقة 2 :  </div>
-        <img src={images.js143_map2} className="img"/>
-        <div className="styleee">
-            4<br/> 16<br/> 36<br/> 64<br/> 100
-        </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Apply" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='Apply' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>4<br/>16<br/>36<br/>64<br/>100</h2>
+        </Result>
         <div className="mital"> الطريقة 3 :  </div>
-        <img src={images.js143_map3} className="img"/>
-        <div className="styleee">
-            4<br/> 16<br/> 36<br/> 64<br/> 100
-        </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Apply" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='Apply' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>4<br/>16<br/>36<br/>64<br/>100</h2>
+        </Result>
     </article>
 </section>
     )

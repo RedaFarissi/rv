@@ -61,38 +61,11 @@ import js141_class_private2 from "../../assests/images/js/js141_class_private2.p
 import js142_class_Inheritance from "../../assests/images/js/js142_class_Inheritance.png"
 import js142_class_Inheritance2 from "../../assests/images/js/js142_class_Inheritance2.png"
 import js142_class_Inheritance3 from "../../assests/images/js/js142_class_Inheritance3.png"
-import js143_map from "../../assests/images/js/js143_map.png"
-import js143_map2 from "../../assests/images/js/js143_map2.png"
-import js143_map3 from "../../assests/images/js/js143_map3.png"
-import js144_filter from "../../assests/images/js/js144_filter.png"
-import js144_filter2 from "../../assests/images/js/js144_filter2.png"
-import js144_filter3 from "../../assests/images/js/js144_filter3.png"
 import js145_remove from "../../assests/images/js/js145_remove.png"
 import js145_remove2 from "../../assests/images/js/js145_remove2.png"
 import js146_setAttribute from "../../assests/images/js/js146_setAttribute.png"
-import js147_bind from "../../assests/images/js/js147_bind.png"
-import js147_bind2 from "../../assests/images/js/js147_bind2.png"
-import js147_bind3 from "../../assests/images/js/js147_bind3.png"
-import js147_bind4 from "../../assests/images/js/js147_bind4.png"
-import js147_bind5 from "../../assests/images/js/js147_bind5.png"
-import js147_bind6 from "../../assests/images/js/js147_bind6.png"
 import js148_currentTarget from "../../assests/images/js/js148_currentTarget.png"
-import js149_call from "../../assests/images/js/js149_call.png"
-import js149_call2 from "../../assests/images/js/js149_call2.png"
-import js149_call3 from "../../assests/images/js/js149_call3.png"
-import js150_apply from "../../assests/images/js/js150_apply.png"
-import js150_apply2 from "../../assests/images/js/js150_apply2.png"
-import js150_apply3 from "../../assests/images/js/js150_apply3.png"
-import js150_apply4 from "../../assests/images/js/js150_apply4.png"
 import js151_setTimeout from "../../assests/images/js/js151_setTimeout.png"
-import js21_Function from "../../assests/images/js/js21_Function.png"
-import js21_Function2 from "../../assests/images/js/js21_Function2.png"
-import js21_Function3 from "../../assests/images/js/js21_Function3.png"
-import js21_Function4 from "../../assests/images/js/js21_Function4.png"
-import js21_Function5 from "../../assests/images/js/js21_Function5.png"
-import js21_Function6 from "../../assests/images/js/js21_Function6.png"
-import js21_Function7 from "../../assests/images/js/js21_Function7.png"
-import js21_Function8 from "../../assests/images/js/js21_Function8.png"
 import js25_Regular from "../../assests/images/js/js25_Regular.png"
 import js25_Regular2 from "../../assests/images/js/js25_Regular2.png"
 import js25_Regular3 from "../../assests/images/js/js25_Regular3.png"
@@ -249,13 +222,9 @@ const images = {
     js136_fetch4,js137_geolocation,js138_checkValidity,js139_class_Intro,js139_class_Intro2,
     js139_class_Intro3,js139_class_Intro4,
     js140_class_static,js140_class_static2,js141_class_private,js141_class_private2,
-    js142_class_Inheritance,js142_class_Inheritance2,js142_class_Inheritance3,js143_map,
-    js143_map2,js143_map3,js144_filter,js144_filter2,js144_filter3,js145_remove,js145_remove2,
-    js146_setAttribute,js147_bind,js147_bind2,js147_bind3,js147_bind4,js147_bind5,js147_bind6,
-    js148_currentTarget,js149_call,js149_call2,js149_call3,
-    js150_apply,js150_apply2,js150_apply3,js150_apply4,js151_setTimeout,
-    js21_Function,js21_Function2,
-    js21_Function3,js21_Function4,js21_Function5,js21_Function6,js21_Function7,js21_Function8,
+    js142_class_Inheritance,js142_class_Inheritance2,js142_class_Inheritance3,
+    js145_remove,js145_remove2,
+    js146_setAttribute, js148_currentTarget,js151_setTimeout,
     js25_Regular,js25_Regular2,js25_Regular3,js25_Regular4,js25_Regular5,js28_Class,js29_alert,
     js30_confirm,js31_prompt,js32_btoa,js32_btoa2,
     js33_atob,js34_location,js34_location2,js34_location3,js34_location4,js34_location5,js34_location6,

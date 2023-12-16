@@ -2,6 +2,45 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Filter(){
+    const codeExemple1= { 
+    code: `       <h2 id="result"></h2>
+    
+     <script src="./index.js"></script>`,
+    script:`const arr = [2, 4, 6, 8, 10];
+
+let more_5 = arr.filter(function(num){ return num>5});
+
+more_5.forEach(i=>{
+    document.getElementById("result").innerHTML += \`\${i} <br/>\`;
+})`
+    }
+    const codeExemple2= { 
+    code: `       <h2 id="result"></h2>
+    
+     <script src="./index.js"></script>`,
+    script:`const arr = [2, 4, 6, 8, 10];
+
+let more_5 = arr.filter((num) => num>5 );
+more_5.forEach(i=>{
+    document.getElementById("result").innerHTML += \`\${i} <br/>\`;
+})`
+    }
+    const codeExemple3= { 
+    code: `       <h2 id="result"></h2>
+    
+     <script src="./index.js"></script>`,
+    script:`function more_than_5(num){
+  return num>5
+}
+
+const arr = [2, 4, 6, 8, 10];
+
+let more_5 = arr.filter(more_than_5);
+
+more_5.forEach(i=>{
+    document.getElementById("result").innerHTML += \`\${i} <br/>\`;
+})`
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Filter</h1>
@@ -16,37 +55,26 @@ export default function Filter(){
             </div>
            لا تقوم طريقة <bdi><b>filter()</b></bdi> بتنفيذ الوظيفة للعناصر الفارغة.<br/>
            لا يغير أسلوب <bdi><b>filter()</b></bdi> المصفوفة الأصلية.<br/>
-           {/* <div className="alert bg-dark pb-0 mt-3">
-        <pre> <span style="color:var(--js-color)">array</span>.<span style="color:gold">filter(</span><span style="color:var(--html-color-tags)">function</span><span style="color:gold">(</span><span style="color:var(--js-color)">element</span> , <span style="color:var(--js-color)">index</span> , <span style="color:var(--js-color)">array</span><span style="color:gold">)</span>, thisValue<span style="color:gold">)</span></pre></div>
-            </div> */}
+            <CodeHighlighter code={`array.filter(function(element , index , array), thisValue)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> الطريقة 1 :  </div>
-        <ul><li> في المتال أسفله  </li></ul>
-        <img src={images.js144_filter} className="img"/>
-        <div className="styleee">
-            <div id="result" className="resulta">
-                6<br/>8<br/>10<br/>
-            </div>
-        </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Apply" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='Apply' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>6<br/>8<br/>10</h2>
+        </Result>
         <div className="mital"> الطريقة 2 :  </div>
-        <ul><li> في المتال أسفله  </li></ul>
-        <img src={images.js144_filter3} className="img"/>
-        <div className="styleee">
-            <div  className="resulta"> more_5 length = 3 </div>
-            <table>
-                <tr><td>6</td></tr>
-                <tr><td>8</td></tr>
-                <tr><td>10</td></tr>
-            </table>
-        </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Apply" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='Apply' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>6<br/>8<br/>10</h2>
+        </Result>
         <div className="mital"> الطريقة 3 :  </div>
-        <ul><li> في المتال أسفله  </li></ul>
-        <img src={images.js144_filter2} className="img"/>
-        <div className="styleee">
-            <div className="resulta">
-             6<br/>8<br/>10<br/>
-            </div>
-        </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Apply" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='Apply' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>6<br/>8<br/>10</h2>
+        </Result>
     </article>
 </section>
    )

@@ -2,6 +2,42 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Static(){
+    const codeExemple1= { 
+    code: `       <h2 id="result"></h2>
+
+     <script src="./index.js"></script>`,
+    script:``
+    };
+    const codeExemple2= { 
+    code: `       <h2 id="result"></h2>
+
+     <script src="./index.js"></script>`,
+    script:``
+    };
+    const codeExemple3= { 
+    code: `       <h2 id="result"></h2>
+
+     <script src="./index.js"></script>`,
+    script:``
+    };
+    const codeExemple4= { 
+    code: `       <h2 id="result"></h2>
+
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple5= { 
+    code: `       <h2 id="result"></h2>
+
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple6= { 
+    code: `       <h2 id="result"></h2>
+
+     <script src="./index.js"></script>`,
+    script:``
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Static</h1>
