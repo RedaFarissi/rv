@@ -50,11 +50,6 @@ import js136_fetch3 from "../../assests/images/js/js136_fetch3.png"
 import js136_fetch4 from "../../assests/images/js/js136_fetch4.png"
 import js137_geolocation from "../../assests/images/js/js137_geolocation.png"
 import js138_checkValidity from "../../assests/images/js/js138_checkValidity.png"
-import js141_class_private from "../../assests/images/js/js141_class_private.png"
-import js141_class_private2 from "../../assests/images/js/js141_class_private2.png"
-import js142_class_Inheritance from "../../assests/images/js/js142_class_Inheritance.png"
-import js142_class_Inheritance2 from "../../assests/images/js/js142_class_Inheritance2.png"
-import js142_class_Inheritance3 from "../../assests/images/js/js142_class_Inheritance3.png"
 import js145_remove from "../../assests/images/js/js145_remove.png"
 import js145_remove2 from "../../assests/images/js/js145_remove2.png"
 import js146_setAttribute from "../../assests/images/js/js146_setAttribute.png"
@@ -213,8 +208,7 @@ const images = {
     js127_onresize,js128_onreset,js128_onreset2,js129_onscroll,js129_onscroll2,
     js130_onselect,js131_ontoggle,js132_onunload,js133_ctrlKey,js134_onvolumechange,
     js134_onvolumechange2,js135_data,js136_fetch,js136_fetch2_2,js136_fetch2,js136_fetch3,
-    js136_fetch4,js137_geolocation,js138_checkValidity,js141_class_private,js141_class_private2,
-    js142_class_Inheritance,js142_class_Inheritance2,js142_class_Inheritance3,
+    js136_fetch4,js137_geolocation,js138_checkValidity,
     js145_remove,js145_remove2,
     js146_setAttribute, js148_currentTarget,js151_setTimeout,
     js25_Regular,js25_Regular2,js25_Regular3,js25_Regular4,js25_Regular5,js28_Class,js29_alert,
