@@ -67,7 +67,7 @@ export default function Fetch(){
         </div>
         </pre> */}
         </p>
-        <div className="mital">متال :  </div>
+        <div className="mital">متال 1 :  </div>
         <img src={images.js136_fetch} className="img"/>
         <div className="styleee">
             <h2> fetch API </h2>

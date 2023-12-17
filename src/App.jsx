@@ -16,7 +16,18 @@ function App() {
     ["Events","currentTarget","target","ctrlKey","data","onclick","ondblclick","onbeforeprint","animation","onfocus","onblur","onloadstart","ondurationchange","onloadedmetadata","onloadeddata","onprogress","onprogress","onended","onchange","oninput","oncontextmenu","oncopy","oninvalid","onkeydown","onkeypress","onkeyup","onload","onmousedown","onmouseup","onmouseenter","onmouseleave","onmouseover","onmouseout","ondrag","onsubmit","onfocusin","onfocusout","onerror","onfullscreenchange","onpagehide","onpaste","onpause","onplay","onresize","onreset","onscroll","onselect","ontoggle","onunload","onvolumechange",],
     ["API","Intro","Forms","fetch","History","setInterval","clearInterval","setTimeout"],
   ]
-
+  const laravel_matrix = [
+      ["MVC" , "what_is_laravel","what_we_need_to_use_laravel","First_Laravel_Project","run_project","artisan","views","route","route_to_views_without_puch_data","route_to_views_and_puch_data","request","Controller","group_duplicate_items_on_one_page","ussing_css_and_javaScript","route_and_name","handle_data_in_views","create_controller_to_use_data","method_in_controller","recource","list_all_route_in_project",],
+      ["database" , "Connect_with_database","Create_models","create_table_in_db_from_laravel","AddColumnInTable","Foreign_Keys","droppingColumnsFromTable","truncate_models_table","dropTheLastMigrateInDB","Clearalltableindbandcreatehimagain","soft_delete","eloquent_scopes","Seeder_class",  ],
+      ["Route::resource" , "GetAllDataFromDB","Upload_image","Multiple_Images_Upload","ShowDetail_with_recource","Update_by_id_with_recource","Delete_by_id_with_recource","only_and_except",      ],
+      ["Query builder" , "Intro_QueryBuilder","insertInQueryBuilder","GetWithQueryBuilder","full_Exemple_Create_Edit_Delete","Delete_all_Data_with_Query_Builder","truncate_with_Query_Builder",],
+      ["middleware" , "middlewareExemple1", "middlewareExemple2"],
+      ["Tinker" , "useTinker","TinkerExemple1",  ],
+      ["Mail","send-mail"],
+      ["Packages" ,"Authentication_UI","Authentication_Breeze","Paypal_Payment","Stripe_Payment_Integration"],
+      ["github" ,"clone_laravel_project","laravel_docker"],
+      
+  ]
   
   return (
     <Router>

@@ -19,7 +19,7 @@ export default function SetTimeout(){
                 <pre><span style="color:gold;">setTimeout(<span className="text-light">function_name</span>,<span className="text-light">milliseconds</span>)</span></pre>
             </div> */}
         </p>
-        <div className="mital"> متال :  </div>
+        <div className="mital"> متال 1 :  </div>
         <img src={images.js151_setTimeout} className="img"/>
         <div className="styleee">
             <p> click button to run function one time after 3 seconds </p>

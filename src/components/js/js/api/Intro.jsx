@@ -28,7 +28,7 @@ export default function Intro(){
         </p>
     </article>
     <article>
-        <h3>1- ما هي واجهة برمجة تطبيقات الويب <bdi>(API)</bdi> ?</h3>
+        <h2 className="title-h2">1- ما هي واجهة برمجة تطبيقات الويب <bdi>(API)</bdi> ?</h2>
         <p className="style_divv">    
             <b>API</b> وتعني  <b>Application Programming Interface</b> (واجهة برمجة التطبيقات).<br/>
             <bdi><b>Web API</b></bdi>   هو واجهة برمجة تطبيقات للويب .<br/>
@@ -37,7 +37,7 @@ export default function Intro(){
         </p>
     </article>
     <article>
-        <h3>2- المتصفحات و واجهة برمجة تطبيقات <bdi>API</bdi></h3>
+        <h2 className="title-h2">2- المتصفحات و واجهة برمجة تطبيقات <bdi>API</bdi></h2>
         <p className="style_divv">
             تحتوي جميع المتصفحات على مجموعة من واجهات برمجة تطبيقات الويب المدمجة لدعم العمليات المعقدة ، وللمساعدة في الوصول إلى البيانات.<br/>
             على سبيل المثال ، يمكن لواجهة برمجة تطبيقات <bdi>(Geolocation API)</bdi> تحديد الموقع الجغرافي أن ترجع إحداثيات مكان المتصفح.
@@ -52,7 +52,7 @@ export default function Intro(){
         </div> 
     </article>
     <article>
-        <h3> 3-  واجهات برمجة تطبيقات الطرف الثالث <bdi><small><small>(Third Party APIs)</small></small></bdi></h3>
+        <h2 className="title-h2"> 3-  واجهات برمجة تطبيقات الطرف الثالث <bdi><small><small>(Third Party APIs)</small></small></bdi></h2>
         <p className="style_divv">
             تقدم واجهة برمجة التطبيقات <bdi><b>(API)</b></bdi> معلومات عن برامج التطبيقات. يوفر أحد التطبيقات واجهة برمجة تطبيقات للمطورين للاتصال بتطبيقاتهم الخاصة. تقدم <bdi><b>Youtube API</b></bdi> معلومات الفيديو. تقدم واجهة برمجة تطبيقات خرائط <b>Google</b> معلومات تحديد الموقع الجغرافي. باستخدام واجهة برمجة التطبيقات ، يمكن لتطبيقك تلقي المعلومات المقدمة وتحسين كيفية أدائها للمستخدمين.
         </p>

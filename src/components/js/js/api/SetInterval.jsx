@@ -25,7 +25,7 @@ export default function SetInterval(){
                 <pre><span style="color:gold">setInterval(</span> Function_name <span style="color:gold">,</span> milliseconds<span style="color:gold">)</span></pre>
             </div> */}
         </p>
-        <div className="mital"> متال :  </div>
+        <div className="mital"> متال 1 :  </div>
         <img src={images.js35_setInterval} className="img"/>
         <div className="styleee">
             <button onclick="setInterval( function_name ,1000)" style={{outline:"none",borderRadius:"2px",border:"1px solid black"}}> Cick Here </button>
