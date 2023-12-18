@@ -1,5 +1,5 @@
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
-import { Header , Home , Html , Css, Js , React , Cmd , Git , Django} from './components/path';
+import { Header , Home , Html , Css, Js , React , Cmd , Git , Django , Laravel} from './components/path';
 import "./App.sass"
 
 function App() {
@@ -16,17 +16,47 @@ function App() {
     ["Events","currentTarget","target","ctrlKey","data","onclick","ondblclick","onbeforeprint","animation","onfocus","onblur","onloadstart","ondurationchange","onloadedmetadata","onloadeddata","onprogress","onprogress","onended","onchange","oninput","oncontextmenu","oncopy","oninvalid","onkeydown","onkeypress","onkeyup","onload","onmousedown","onmouseup","onmouseenter","onmouseleave","onmouseover","onmouseout","ondrag","onsubmit","onfocusin","onfocusout","onerror","onfullscreenchange","onpagehide","onpaste","onpause","onplay","onresize","onreset","onscroll","onselect","ontoggle","onunload","onvolumechange",],
     ["API","Intro","Forms","fetch","History","setInterval","clearInterval","setTimeout"],
   ]
+  const react_matrix  = [
+    ["Introduction","What_is_React","How_react_work","What_you_need_to_get_started","Verify_required_installations","ES6","Create_React_App","Run_React_App",],
+    ["Component","JSX","function_Component","function_Component_props","class_Component","class_Component_this_props","Components_in_Component",],
+    "Events",
+    "Lists",
+    "Handle_images_react",
+    "Handle_import",
+    "props_children",
+    ["hooks","useState","this_state"],
+    ["packages","npm_list","axios","react_paypal_js","react_sass","Router","useNavigate_Router","useParams_Router","react_syntax_highlighter"],
+  ]
+  const django_matrix = [
+    ["Introduction", "What_is_Django","What_you_need_to_get_started","Verify_required_installations","Struct_Django",],
+    ["virtualenv",  "What_is_virtualenv","Install_virtualenv","Create_virtualenv","Activate_virtualenv","Deactivate_virtualenv","Check_packages_installed","Install_django",       "Creating_Django_project","Get_version_installed_django","requirements","Running_development_server",],
+    ["First_Exemple", "Creation_app_in_project","settings","includes_app_to_urlpatterns","templates","urls","views","models","admin","createsuperuser","layout_file_to_avoid_repeat"],
+    ["Model_Field_Reference","Definition","Fields","Relations","Parameter" ],
+    ["Static_and_Media_files","Manage_static_files"  ,"Media_files"],
+    ["about_templates","Create_Public_templates","templates_tags","csrf_token","template_filters"  ],
+    ["about_admin","list_display", "prepopulated_fields", "list_editable", "inlines",],
+    ["about_models","get_absolute_url","create_a_database_backup","restore_the_data_from_the_backup","remove_all_from_db_models","annotate"],
+    ["User_Authentication","User_and_authontication","include_urls_and_files_html","Sign_Up","Add_fields_to_User_SignUp" ,],
+    ["Django_Email","send_email","list_emails"],
+    "Django_Pagination",
+    "Form",
+    "ModelForm",
+    ["Django_Filter","models_Objecjs_filter","raw_filter","lookup_expr","Q_filter","select_related",],
+    "Session",
+    "Context_Processors",
+    "ngrok"
+]
+
   const laravel_matrix = [
       ["MVC" , "what_is_laravel","what_we_need_to_use_laravel","First_Laravel_Project","run_project","artisan","views","route","route_to_views_without_puch_data","route_to_views_and_puch_data","request","Controller","group_duplicate_items_on_one_page","ussing_css_and_javaScript","route_and_name","handle_data_in_views","create_controller_to_use_data","method_in_controller","recource","list_all_route_in_project",],
       ["database" , "Connect_with_database","Create_models","create_table_in_db_from_laravel","AddColumnInTable","Foreign_Keys","droppingColumnsFromTable","truncate_models_table","dropTheLastMigrateInDB","Clearalltableindbandcreatehimagain","soft_delete","eloquent_scopes","Seeder_class",  ],
-      ["Route::resource" , "GetAllDataFromDB","Upload_image","Multiple_Images_Upload","ShowDetail_with_recource","Update_by_id_with_recource","Delete_by_id_with_recource","only_and_except",      ],
-      ["Query builder" , "Intro_QueryBuilder","insertInQueryBuilder","GetWithQueryBuilder","full_Exemple_Create_Edit_Delete","Delete_all_Data_with_Query_Builder","truncate_with_Query_Builder",],
+      ["database Route::resource" , "GetAllDataFromDB","Upload_image","Multiple_Images_Upload","ShowDetail_with_recource","Update_by_id_with_recource","Delete_by_id_with_recource","only_and_except",      ],
+      ["database Query builder" , "Intro_QueryBuilder","insertInQueryBuilder","GetWithQueryBuilder","full_Exemple_Create_Edit_Delete","Delete_all_Data_with_Query_Builder","truncate_with_Query_Builder",],
       ["middleware" , "middlewareExemple1", "middlewareExemple2"],
       ["Tinker" , "useTinker","TinkerExemple1",  ],
       ["Mail","send-mail"],
       ["Packages" ,"Authentication_UI","Authentication_Breeze","Paypal_Payment","Stripe_Payment_Integration"],
       ["github" ,"clone_laravel_project","laravel_docker"],
-      
   ]
   
   return (
@@ -37,8 +67,9 @@ function App() {
             <Route path='/html/*' element={<Html  html_list={html_list} />} />
             <Route path='/css/*' element={<Css  css_list={css_list}  />} />
             <Route path='/js/*' element={<Js js_matrix={js_matrix} />} />
-            <Route path='/react/' element={<React  />} />
-            <Route path='/django/*' element={<Django  />} />
+            <Route path='/react/' element={<React react_matrix={react_matrix} />} />
+            <Route path='/django/*' element={<Django django_matrix={django_matrix} />} />
+            <Route path='/laravel/*' element={<Laravel laravel_matrix={laravel_matrix}  />} />
             <Route path='/power-shell' element={<Cmd cmd_list={cmd_list}  />} />
             <Route path='/git' element={<Git git_list={git_list}  />} />
         </Routes>  
@@ -46,15 +77,4 @@ function App() {
   );
 }
 
-  // const react_list  = [
-  //   "Introduction","What_is_React","How_react_work","What_you_need_to_get_started","Verify_required_installations","ES6","Create_React_App","Run_React_App",
-  //   "Component","JSX","function_Component","function_Component_props","class_Component","class_Component_this_props","Components_in_Component",
-  //   "Events",
-  //   "Lists",
-  //   "Handle_images_react",
-  //   "Handle_import",
-  //   "props_children",
-  //   "hooks","useState","this_state",
-  //   "packages","npm_list","axios","react_paypal_js","react_sass","Router","useNavigate_Router","useParams_Router","react_syntax_highlighter"
-  // ]
 export default App;

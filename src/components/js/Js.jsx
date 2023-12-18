@@ -26,7 +26,6 @@ import {
     //api
     Intro,Fetch,ValidationAPI,History,SetInterval,ClearInterval,SetTimeout,
 } from './pathJs.js';
-import "./Js.sass"
 
 export default function Js(props){
     const AsideRef = useRef(null);

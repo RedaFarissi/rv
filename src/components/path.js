@@ -12,6 +12,8 @@ export {default as React} from './react/React';
 
 export {default as Django} from './django/Django';
 
+export {default as Laravel} from './laravel/Laravel';
+
 export {default as Cmd} from './cmd/Cmd';
 
 export {default as Git} from './git/Git';

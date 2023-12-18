@@ -1,4 +1,3 @@
-import codes from "../../assests/codes/django/django"
 import { Routes, Route , Link } from "react-router-dom";
 import {
    Introduction,Virtualenv,FirstExemple,ModelFieldReference,StaticAndMediaFiles,AboutTemplates,
@@ -12,18 +11,17 @@ export default function Django(props){
    useEffect(() => {
       AsideRef.current.scrollTop = localStorage.getItem("django_aside") || 0;
    }, []); 
-
-   const arrays = codes.map(e =>{ 
-      const keys = Object.keys(e) 
-      var keys_map;
-      if (keys.includes("title")) { 
+   
+   const matrix = props.django_matrix.map(e =>{ 
+      var keys_map;  
+      if (Array.isArray(e)) { 
          let dt_title;
-         keys_map = keys.map((key,index) => {
-            if(key === "title"){
-               dt_title = e[key].toLowerCase().replace(/_/g, '-');
+         keys_map = e.map((key,index) => {
+            if(index === 0){
+               dt_title = key.toLowerCase().replace(/_/g, '-');
               return(<dt className="aside-dl-dt" key={key}>
                         <Link to={`/django/${dt_title}/`}>
-                           <i className="fa-solid fa-caret-right"></i> {e[key].replace(/_/g, ' ')}
+                           <i className="fa-solid fa-caret-right"></i> {key.replace(/_/g, ' ')}
                         </Link>
                      </dt>)  
             }else{
@@ -35,16 +33,16 @@ export default function Django(props){
             } 
           });
       }else {
-         keys_map = <dt className="aside-dl-simple" key={keys[0]}><a href={`/django/${keys[0].toLowerCase().replace(/_/g, '-')}`}><i className="fa-solid fa-caret-right"></i> {keys[0].replace(/_/g, ' ')} </a></dt>;
+         keys_map = <dt className="aside-dl-simple" key={e}><a href={`/django/${e.toLowerCase().replace(/_/g, '-')}`}><i className="fa-solid fa-caret-right"></i> {e.replace(/_/g, ' ')} </a></dt>;
       }
       return keys_map
    });
 
-    return (
+   return (
 <main>
    <aside className="aside" onScroll={()=>{ localStorage.setItem("django_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
        <ul className="list-group m-0">
-          {arrays}
+          {matrix}
        </ul>
    </aside>
    <section className="section-conetent">
