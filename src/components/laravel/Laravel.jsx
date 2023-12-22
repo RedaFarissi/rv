@@ -1,5 +1,6 @@
 import { useEffect, useRef} from 'react';
 import { Routes, Route , Link } from "react-router-dom";
+import { CodeCommand , CodeHighlighter , Result } from "../path";
 
 
 export default function Js(props){
@@ -41,35 +42,53 @@ export default function Js(props){
    <section className="section-conetent">
      <h1 className="heading-style heading-style-laravel-color"> Laravel Introduction</h1>
       <article>
-         <h2 className='title-h2' id="what_is_laravel"> 1 - what is laravel  </h2>
-         <div className="alert alert-warning text-black fs-5">
-            <p>
-               The PHP Framework <br/> for Web Artisans
-            </p>
-            laravel is MVC = Modele View Controller : <br/>
+         <h2 className='title-h2' id="what_is_laravel"> 1 - ما هو laravel  </h2>
+         <p className="style_divv">
+            لارافيل هو إطار عمل PHP مفتوح المصدر لتطوير تطبيقات الويب. تأتي مع ORM يُسمى Eloquent ومحرك Blade لتصميم الواجهات. يوفر أداة Artisan لإدارة المهام والتكوين. يتبع نمط MVC ويشمل Middleware لمرشحات HTTP. يوفر توجيهًا بسيطًا وحقن إعتماد لإدارة التبعيات. يشمل نظام ترتيب قواعد البيانات وزرع البيانات. لديه بيئة نشطة ومجتمع وثائق جيدة. اشتهر ببنية أنيقة وميزات مطور ودية، مما يجعله خيارًا شائعًا لبناء تطبيقات الويب الحديثة.<br/><br/>
+            MVC، أو Model-View-Controller، هو نمط هندسة برمجيات يستخدم عادة في تطوير الويب. يقسم التطبيق إلى ثلاث مكونات مترابطة:<br/>
+               <ul>
+                  <li>النموذج (Model): يُمثل البيانات والمنطق التجاري للتطبيق. يدير البيانات، ويستجيب للاستعلامات، ويعالج التعليمات من المُتحكم.</li>
+                  <li>العرض (View): يقدم البيانات للمستخدم ويتعامل مع تفاعلات واجهة المستخدم. يستقبل الإدخالات، ويعرض النتائج، ويُرسل تفاعلات المستخدم إلى المتحكم.</li>
+                  <li>المتحكم (Controller): يدير تدفق البيانات بين النموذج والعرض. يفسر إدخالات المستخدم من العرض، ويُحدث النموذج وفقًا لذلك، ويضمن أن العرض يعكس التغييرات.</li>
+               </ul>
+            يعزز نمط MVC فصل الاهتمامات، مما يجعل قاعدة الشيفرة أكثر تنظيمًا وسهولة في الصيانة. ويسمح بالتعاون بشكل أسهل بين المطورين العاملين على جوانب مختلفة من التطبيق.
+         </p>
+
+         <h2 className='title-h2' id="what_we_need_to_use_laravel"> 2 - ما نحتاجه لاستخدام laravel  </h2>
+         <p className='style_divv'>
+            نحتاج إلى بيئة تشغيل محلية لتطوير تطبيقات Laravel باستخدام PHP. هناك اثنان من أشهر البيئات هما XAMPP و MAMP، ويمكنك اختيار أي منهما حسب نظام التشغيل الخاص بك.<br/>
             <ul>
-               <li><b>Modele</b> : anything about data </li>
-               <li><b>View</b> : anything about front-end </li>
-               <li><b>Controller</b> : Control between Modele and View </li>
+               <li>
+                  <b>XAMPP أو MAMP:</b>
+                  <ul>
+                     <li>قم بتثبيت XAMPP (أو MAMP) على جهاز الكمبيوتر الخاص بك. هذا سيوفر لك خوادم Apache وMySQL و PHP جاهزة للاستخدام.</li>
+                     <li>قم بتشغيل الخوادم لبدء تشغيل بيئتك المحلية.</li>
+                  </ul>
+               </li>
+               <li>
+                  <b>Composer:</b>
+                  <ul>
+                     <li>تحقق من توافر Composer على نظامك عبر الأمر  في واجهة الأوامر. إذا لم يكن مثبتًا، يمكنك تنزيله وتثبيته من الموقع الرسمي للمكتبة.</li>
+                     <li><CodeCommand>composer</CodeCommand></li>
+                  </ul>
+               </li>
+               <li>
+                  <b>Node.js:</b>
+                  <ul>
+                     <li>لتجميع ملفات CSS و JavaScript، ستحتاج إلى تثبيت Node.js. يمكنك تحقق من توافره باستخدام الأمر .</li>
+                     <li><CodeCommand>node -v</CodeCommand></li>
+                  </ul>
+               </li>
             </ul>
+         </p>
+         <div className='row mt-2'>
+            <img src="{% static  'laravel/laravel0_env.png' %}"  className="col-md-4"/>
+            <img src="{% static  'laravel/laravel0_env2.png' %}" className="col-md-4"/>
+            <img src="{% static  'laravel/laravel0_env3.png' %}" className="col-md-4"/>
          </div>
 
-         <h2 className='title-h2' id="what_we_need_to_use_laravel"> 2 - what we need to use laravel  </h2>
-         <div>
-            <ul className="alert alert-warning text-black fs-5">
-               <li> <b>XAMPP</b>  <small>or</small> <b>MAMP</b> <small>(or another server for ussing php)</small></li>
-               <li> <b>Composer</b> : check for composer if exist in command ="{">"}"  composer </li>
-               <li> <b>node.js</b> : compile css and javascript </li>
-            </ul>
-            <div className='row mt-2'>
-               <img src="{% static  'laravel/laravel0_env.png' %}"  className="col-md-4"/>
-               <img src="{% static  'laravel/laravel0_env2.png' %}" className="col-md-4"/>
-               <img src="{% static  'laravel/laravel0_env3.png' %}" className="col-md-4"/>
-            </div>
-         </div>
-
-         <h2 className='title-h2' id="First_Laravel_Project">3 - First Laravel Project</h2>
-         <p>
+         <h2 className='title-h2' id="First_Laravel_Project">3 - مشروع Laravel الأول</h2>
+         <p className='style_divv'>
             <ul>
                <li> Open the <kbd>php.ini</kbd> file used by your <b>XAMPP</b> installation. You mentioned that it's located at <kbd>C:\xampp\php\php.ini</kbd></li>
                <li>Search for the line that contains <kbd>;extension=zip</kbd></li>
