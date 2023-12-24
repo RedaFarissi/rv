@@ -2,23 +2,29 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function PageX(){
-  // function showCoords(event) {
-  //   var x1 = event.pageX;
-  //   var y1 = event.pageY;
-  //   var coords = "X coords: " + x1 + ", Y coords: " + y1;
-  //   document.getElementById("id_name").innerHTML = coords;
-  // }
+  function showCoords(event) {
+    var x = event.pageX;
+    var y = event.pageY;
+
+    var coords = "X coords: " + x + "<br/>Y coords: " + y;
+    document.getElementById("id_name").innerHTML = coords;
+  }
+
   const codeExemple1= { 
-    code: `     
+    code: `     <h2 class="bg-danger" onmousemove="showCoords(event)">
+         Move mouse in this heading to get the x (horizontal)
+         and y (vertical) coordinates of the mouse pointer
+     </h2>
+     <h2 id="id_name"></h2>
 
      <script src="./index.js"></script>`,
-    script:``
-    }
-    const codeExemple2= { 
-    code: `     
+    script:`function showCoords (event) {
+    var x = event.pageX;
+    var y = event.pageY;
 
-     <script src="./index.js"></script>`,
-    script:``
+    var coords = "X coords: " + x + "<br/>Y coords: " + y;
+    document.getElementById("id_name").innerHTML = coords;
+}`
     }
 
   return(
@@ -31,14 +37,18 @@ export default function PageX(){
         للحصول على الإحداثيات الرأسية (وفقا للوثيقة) لمؤشر الماوس، استخدم الخاصية <b>pageY</b>.<br/>
         هذه الخاصية للقراءة فقط.
         <CodeHighlighter code={`event.pageX`} language="js" addClass="mt-3 mb-3" copie={true} />
+        <CodeHighlighter code={`event.pageY`} language="js" addClass="mt-3 mb-3" copie={true} />
     </div>
     <div className="mital">متال :  </div>
-    <img src={images.js103_pageX} className="img"/>
-    <div className="styleee">
-      <h2 onmousemove="showCoords(event)"> Move mouse in this heading to get the x (horizontal) and y (vertical) coordinates of the mouse pointer .</h2>
-      <p> <strong>Tip:</strong>Try to click different places in the heading. </p>
-      <p id="id_name"></p>
-    </div>
+    <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="pageX" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+    <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+    <Result title='pageX' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+      <h2 className="bg-danger" onMouseMove={(event)=>{showCoords(event)}}>
+          Move mouse in this heading to get the x (horizontal)
+          and y (vertical) coordinates of the mouse pointer
+      </h2>
+      <h2 id="id_name"></h2>
+    </Result>
   </article>
 </section>
   )

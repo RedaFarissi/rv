@@ -3,20 +3,25 @@ import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function SessionStorage(){
     const codeExemple1= { 
-    code: `     
+    code: `     <h2 id="result"></h2>
 
      <script src="./index.js"></script>`,
-    script:``
-    }
-    const codeExemple2= { 
-    code: `     
+    script:`const result = document.getElementById("result");
 
-     <script src="./index.js"></script>`,
-    script:``
+sessionStorage.setItem('username', 'Reda Eskouni');
+sessionStorage.setItem('userRole', 'admin');
+
+// Retrieve data from sessionStorage
+var username = sessionStorage.getItem('username');
+var userRole = sessionStorage.getItem('userRole');
+
+result.innerHTML = \`Username: \${username}<br/>\`;
+result.innerHTML += 'User Role: ' + userRole;`
     }
+
 
     return(
-        <section className="section-conetent">
+<section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript sessionStorage</h1>
     <article>
         <p className="style_divv mt-5">
@@ -32,17 +37,13 @@ export default function SessionStorage(){
             لإزالة الكل البيانات المخزنة داخل <b>sessionStorage</b>  إستخدم :
             <CodeHighlighter code={`sessionStorage.clear()`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
-        <div className="mital"> متال 1 :  </div>
-        <img src="{% static 'js/js49_sessionStorage.png' %}" className="img"/>
-        <div className="styleee img">       
-            <h2>Reda</h2>
-        </div>
-        <div className="mital"> متال 2 :  </div>
-        <img src="{% static 'js/js49_sessionStorage2.png' %}" className="img"/>
-        <div className="styleee img">       
-            <h2> Reda <br/> null </h2>
-        </div>
-        </article>
-    </section>
+        <div className="mital"> متال :  </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="sessionStorage" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='sessionStorage' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>Username: Reda Eskouni<br/>User Role: admin</h2>
+        </Result>   
+    </article>
+</section>
     )
 }

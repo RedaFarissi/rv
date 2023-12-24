@@ -1,18 +1,25 @@
 import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
+import { useEffect, useState } from "react";
 
 export default function MatchMedia(){
-    // const id = document.getElementById("h2")
-    // if(matchMedia("(max-width: 500px)").matches){
-    //     id.innerHTML = "عرض صفحتك يقل عن  <bdi>500px</bdi> "
-    // }else{
-    //     id.innerHTML = "عرض صفحتك يتجاوز <bdi>500px</bdi> "
-    // }
+    const [matched,setMatched] = useState()
+    
+    useEffect(()=>{
+       (matchMedia("(max-width: 500px)").matches)? setMatched("Your page width is less than 500px"):setMatched("Your page width exceeds 500px");         
+    },[])
+
     const codeExemple1= { 
-    code: `     
+    code: `     <h2 id="result"></h2>
 
      <script src="./index.js"></script>`,
-    script:``
+    script:`const result = document.getElementById("result");
+
+if (matchMedia("(max-width: 500px)").matches) {
+    result.innerHTML = "Your page width is less than 500px";
+}else{
+    result.innerHTML = "Your page width exceeds 500px";
+}`
     }
 
     return(
@@ -25,10 +32,11 @@ export default function MatchMedia(){
             <CodeHighlighter code={`window.matchMedia("mediaQuery")`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
-        <img src={images.js50_matchMedia} className="img"/>
-        <div className="styleee img">       
-            <h2  id="h2" dir="rtl"></h2>
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="matchMedia" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='matchMedia' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>{matched}</h2>
+        </Result>   
     </article>
 </section>
     )

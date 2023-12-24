@@ -1,7 +1,2 @@
-.styleee button{
-    margin: 9px 2px;
-    outline :none;
-    border:1px solid black ;
-}
-#dV1{width: 50%; height:150px; overflow: auto; background-color: brown;padding: 20px;}
-#dV2{  background-color: yellow; border: 2px solid black;margin:500px 0px;}
+#ScrollIntoView-DV1{width: 50%; height:150px; overflow: auto; background-color: brown;padding: 20px;}
+#ScrollIntoView-DV2{  background-color: yellow; border: 2px solid black;margin:500px 0px;}

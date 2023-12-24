@@ -10,7 +10,7 @@ import {
     ClassIntro,Static,Private,Inheritance,
     //window
     Alert,Confirm,Btoa,Prompt,Atob,Location,InnerWidth,InnerHeight,ClientWidth,ScrollBy,
-    PageXOffset,PageYOffset,PageX,PageY,ScrollIntoView,ScrollTop,Console,GetComputedStyle,
+    PageXOffset,PageX,ScrollIntoView,ScrollTop,Console,GetComputedStyle,
     LocalStorage,SessionStorage,MatchMedia,Navigator,Print,
     //dom
     AddEventListener,RemoveEventListener,Doctype,GetElementById,GetElementsByClassName,
@@ -105,9 +105,7 @@ return(
             <Route path='/clientwidth' element={<ClientWidth />} /> 
             <Route path='/scrollby' element={<ScrollBy />} /> 
             <Route path='/pagexoffset' element={<PageXOffset />} /> 
-            <Route path='/Pageyoffset' element={<PageYOffset />} /> 
             <Route path='/pagex' element={<PageX />} /> 
-            <Route path='/pagey' element={<PageY />} /> 
             <Route path='/scrollintoview' element={<ScrollIntoView />} /> 
             <Route path='/scrolltop' element={<ScrollTop />} /> 
             <Route path='/console' element={<Console />} /> 

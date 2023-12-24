@@ -1,5 +1,3 @@
-#DV{ background-color: red; border: 2px solid black; padding: 10px;}
-#DV2{background-color:#fc9909; border:2px solid black; padding:10px; font-size:150%;}
-#div_test{background-color: #fc9909; border: 2px solid black; padding: 10px; font-size: 150%;}
-#div_test::before{ content:"Hello"; color: white; }
-#div_test::after{ content:"Word"; color: greenyellow; }
+#getComputedStyle-div_test{background-color: #fc9909; border: 2px solid black; padding: 10px; font-size: 150%;}
+#getComputedStyle-div_test::before{ content:"Hello"; color: white; }
+#getComputedStyle-div_test::after{ content:"Word"; color: greenyellow; }

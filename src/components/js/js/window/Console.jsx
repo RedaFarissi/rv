@@ -1,41 +1,14 @@
 import images from "../../imagesJs"
-import { CodeHighlighter ,  Result} from "../../../path";
+import { CodeHighlighter ,  ResultConsole} from "../../../path";
 
 export default function Console(){
-    // let x = 5;
-    // let y = 5;
-    // console.assert(x > y + 1, "Expression returned 'False'");
-        const codeExemple1= { 
-    code: `     
-
-     <script src="./index.js"></script>`,
-    script:``
+    
+    const codeExemple1= { 
+    code: `     <script src="./index.js"></script>`,
+    script:`let x = 5;
+let y = 5;
+console.assert ( x > y + 1 , "Expression returned 'False'");`
     }
-    const codeExemple2= { 
-    code: `     
-
-     <script src="./index.js"></script>`,
-    script:``
-    }
-    const codeExemple3= { 
-    code: `     
-
-     <script src="./index.js"></script>`,
-    script:``
-    }
-    const codeExemple4= { 
-    code: `     
-
-     <script src="./index.js"></script>`,
-    script:``
-    }
-    const codeExemple5= { 
-    code: `     
-
-     <script src="./index.js"></script>`,
-    script:``
-    }
-
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript console</h1>
@@ -58,10 +31,14 @@ export default function Console(){
             إذا تم تقييم <b>expression</b> إلى خطأ ، فستتم كتابة رسالة في وحدة التحكم.
         </p>
         <div className="mital"> متال :  </div>
-        <img src={images.js46_console} className="img"/>
-        <div className="styleee">       
-            <h2>Remember to open the console Press <kbd>F12</kbd></h2>
-        </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="console" addClass="mt-3 mb-3" copie={true} number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js" addClass="mt-3 mb-3" copie={true} number={true}/>
+        <ResultConsole title='console' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <div className="alert alert-danger d-flex justify-content-between align-items-center">
+                <span><b>Assertion failed</b>: Expression returned 'False'</span>
+                <span style={{textDecoration:"underline"}}>index.js : 3</span>
+            </div>
+        </ResultConsole>
     </article> 
     <article> 
         <h2 className="title-h2">2. <bdi>console.clear()</bdi></h2>
