@@ -22,8 +22,10 @@ export {default as CodeHighlighter} from './codeHighlighter/CodeHighlighter';
 
 export {default as CodeCommand} from './codeCommand/CodeCommand';
 
-export {default as Result} from './result/Result';
-
-export {default as ResultConsole} from './resultConsole/ResultConsole';
-
 export {default as InteractivCss} from './css/InteractivCss';
+
+export {default as Result} from './result/Result';
+export {default as ResultConsole} from './result/ResultConsole';
+export {default as ResultAlert} from './result/ResultAlert';
+export {default as ResultConfirm} from './result/ResultConfirm';
+export {default as ResultPrompt} from './result/ResultPrompt';

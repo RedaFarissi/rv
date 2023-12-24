@@ -61,7 +61,6 @@ import js25_Regular3 from "../../assests/images/js/js25_Regular3.png"
 import js25_Regular4 from "../../assests/images/js/js25_Regular4.png"
 import js25_Regular5 from "../../assests/images/js/js25_Regular5.png"
 import js28_Class from "../../assests/images/js/js28_Class.png"
-import js29_alert from "../../assests/images/js/js29_alert.png"
 import js30_confirm from "../../assests/images/js/js30_confirm.png"
 import js31_prompt from "../../assests/images/js/js31_prompt.png"
 import js32_btoa from "../../assests/images/js/js32_btoa.png"
@@ -211,7 +210,7 @@ const images = {
     js136_fetch4,js137_geolocation,js138_checkValidity,
     js145_remove,js145_remove2,
     js146_setAttribute, js148_currentTarget,js151_setTimeout,
-    js25_Regular,js25_Regular2,js25_Regular3,js25_Regular4,js25_Regular5,js28_Class,js29_alert,
+    js25_Regular,js25_Regular2,js25_Regular3,js25_Regular4,js25_Regular5,js28_Class,
     js30_confirm,js31_prompt,js32_btoa,js32_btoa2,
     js33_atob,js34_location,js34_location2,js34_location3,js34_location4,js34_location5,js34_location6,
     js34_location7,js35_setInterval,js35_setInterval2,js36_clearInterval,js37_frames,js37_frames2,

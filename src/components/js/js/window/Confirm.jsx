@@ -1,17 +1,44 @@
 import images from "../../imagesJs"
-import { CodeHighlighter ,  Result} from "../../../path";
+import { CodeHighlighter ,  ResultConfirm} from "../../../path";
+import { useState } from "react";
 
 export default function Confirm(){
-    // function name_function() {
-    //     let id =  document.getElementById("h222")
-    //     let text;
-    //     if (confirm("Press a button!") == true) {
-    //       text = "<span style='color:green'>You pressed OK</span>";
-    //     }else{
-    //       text = "<span style='color:red'>You canceled</span>";
-    //     }
-    //     id.innerHTML = text;
-    // }
+    const [displayConfirm ,setDisplayConfirm] = useState(false)
+    const [resultConfirmValue ,setResultConfirmValue] = useState("")
+    
+
+    function click_button(){
+        setDisplayConfirm(true)
+    }
+    function click_on_ok(){
+        setDisplayConfirm(false)
+        setResultConfirmValue(<span style={{color:"green"}}>You pressed OK</span>)
+    }
+    function click_on_cancel(){
+        setDisplayConfirm(false)
+        setResultConfirmValue(<span style={{color:'red'}}>You canceled</span>)
+    }
+
+    
+
+    const codeExemple1= { 
+    code: `     <button onclick="name_function()"> Click Here </button>
+     <h2 id="h2"></h2>
+
+     <script src="./index.js"></script>`,
+    script:`function name_function() {
+    let id = document.getElementById("h2");
+    let text;
+
+    if (confirm("Press a button!") == true) {
+        text = "<span style='color:green'>You pressed OK</span>";
+    }else{
+        text = "<span style='color:red'>You canceled</span>";
+    }
+
+    id.innerHTML = text;
+}`
+    }
 
     return(
 <section className="section-conetent">
@@ -20,16 +47,15 @@ export default function Confirm(){
         <p className="style_divv mt-5">
             تعرض طريقة <bdi><b>confirm()</b></bdi> مربع حوار به رسالة وزر موافق وزر إلغاء.<br/>
             تُرجع طريقة <bdi><b>confirm()</b></bdi> إلى القيمة <b>true</b> إذا نقر المستخدم على "موافق" ، وإلا فسيكون ذلك خطأ .<br/>
-            {/* <div className="codeStudio alert bg-dark pb-0 mt-3" dir="ltr">
-                <pre><span style="color:gold;">confirm(<span style="color:orange;">"message"</span>)</span></pre>
-            </div> */}
+            <CodeHighlighter code={`confirm("message")`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
-        <img src={images.js30_confirm} className="img"/>
-        <div className="styleee">
-            <button onclick="name_function()"> Click Here </button>
-            <h2 id="h222"></h2>
-        </div>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="confirm" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js" addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <ResultConfirm title='confirm' logo={images.html_logo} clickCancel={click_on_cancel} clickOk={click_on_ok} displayConfirm={displayConfirm} confirmValue="Press a button!" route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <button onClick={click_button}> Click Here </button>            
+            <h2> {resultConfirmValue} </h2>
+        </ResultConfirm>        
     </article>
 </section>
     )

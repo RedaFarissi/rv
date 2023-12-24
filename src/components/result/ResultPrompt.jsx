@@ -1,7 +1,7 @@
 import "./Result.sass"
 
 
-export default function Result(props){
+export default function ResultPrompt(props){
     
     return(
         <div className={`style-result`}>
@@ -45,6 +45,15 @@ export default function Result(props){
               </div>
             </div>
             <div className={`add-style-body  ${props.styleAdd}`}>
+                <div dir="ltr" className={`alert window-prompt bg-secondary text-light ${(props.displayPrompt)?"d-block":"d-none"}`}>
+                    <h6 className="text-center">This page says </h6>
+                    <p className="text-center">{props.promptValue}</p>
+                    <input type="text" onChange={props.inputChange} ref={props.inputRef} className="w-100 mb-2 rounded" />
+                    <div className="d-flex flex-row-reverse gap-1">
+                        <button onClick={props.clickCancel} className="btn btn-primary me-2">cancel</button>
+                        <button onClick={props.clickOk} className="btn btn-primary">OK</button>
+                    </div>
+                </div>
                 {props.children}
             </div>
         </div>

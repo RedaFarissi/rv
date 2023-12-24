@@ -14,6 +14,12 @@ export default function ScrollIntoView(){
     //     // scroll behavior : smooth
     //     document.getElementById("dV2").scrollIntoView({behavior:"smooth"})
     // }
+    const codeExemple1= { 
+    code: `     
+
+     <script src="./index.js"></script>`,
+    script:``
+    }
 
     return(
 <section className="section-conetent">
@@ -22,9 +28,7 @@ export default function ScrollIntoView(){
         <p className="style_divv mt-5">
             تقوم طريقة <bdi><b>scrollIntoView()</b></bdi> بتمرير محدد إلى المنطقة المرئية من نافذة المتصفح.<br/>
             يتم الوصول إلى  <b>pageYOffset</b> باستخدام :<br/>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">  
-                <pre><span style="color:var(--js-color)">element</span>.<span style="color:var(--js-color)">scrollIntoView()</span></pre>
-            </div> */}
+            <CodeHighlighter code={`element.scrollIntoView()`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
         <img src={images.js44_scrollIntoView} className="img"/>

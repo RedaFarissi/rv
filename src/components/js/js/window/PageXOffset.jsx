@@ -2,9 +2,23 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function PageXOffset(){
-    // function name_function2(){
-    //     alert( "pageXOffset  = " + pageXOffset)
-    // } 
+    const codeExemple1= { 
+    head:`
+    <style>
+        #div_H{ 
+            width: 120%; 
+            background-color: red; 
+            color:white;  
+        }
+    </style>`,
+    code: `       <div id="div_H">Hello Word</div>
+     <h2 id="result"> </h2>
+
+     <script src="./index.js"></script>`,
+    script:`const result = document.getElementById("result")
+result.innerHTML = window.pageXOffset`
+    }
+
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript pageXOffset</h1>
@@ -14,19 +28,17 @@ export default function PageXOffset(){
             تساوي الخاصية <b>pageXOffset</b> الخاصية <b>scrollX</b> .<br/>
             خاصية <b>pageXOffset</b> للقراءة فقط .<br/>
             يتم الوصول إلى  <b>pageXOffset</b> باستخدام :<br/>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">  
-                <pre><span style="color:var(--js-color)">window</span>.<span style="color:var(--js-color)">pageXOffset</span></pre>
-            </div> */}
+            <CodeHighlighter code={`pageXOffset`} language="js" addClass="mt-3 mb-3" copie={true} />
             أو
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">  
-                <pre><span style="color:var(--js-color)">pageXOffset</span></pre>
-            </div> */}
+            <CodeHighlighter code={`window.pageXOffset`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
-        <img src={images.js42_pageXOffset} className="img"/>
-        <div className="styleee">       
-             <button onclick="name_function2()" style={{outline:"none",border:"1px solid black"}}>Click me to get scroolX</button>
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="pageXOffset" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='pageXOffset' styleAdd="overflow-xx p-0" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <div style={{width: "120%",backgroundColor: "red",color: "white"}}>Hello Word</div>
+            <h2 id="result"> 0 </h2>
+        </Result>
     </article>
 </section>
     )

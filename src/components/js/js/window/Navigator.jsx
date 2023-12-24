@@ -7,6 +7,40 @@ export default function Navigator(){
     // document.getElementById("h222").innerHTML = navigator.appVersion + "<br/>"
     // document.getElementById("h2222").innerHTML = navigator.language + "<br/>"
     // document.getElementById("h22222").innerHTML = navigator.platform + "<br/>"
+        const codeExemple1= { 
+    code: `     
+
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple2= { 
+    code: `     
+
+     <script src="./index.js"></script>`,
+    script:``
+    }
+
+    const codeExemple3= { 
+    code: `     
+
+     <script src="./index.js"></script>`,
+    script:``
+    }
+
+    const codeExemple4= { 
+    code: `     
+
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple5= { 
+    code: `     
+
+     <script src="./index.js"></script>`,
+    script:``
+    }
+
+
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript navigator</h1>
@@ -14,13 +48,9 @@ export default function Navigator(){
         <div className="style_divv mt-5">
             يحتوي كائن <b>navigator</b> على معلومات حول المتصفح.<br/>
             يتم الوصول إلى الكائن <b>navigator</b> من خلال:<br/>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--js-color)">window</span>.<span style="color:var(--js-color)">navigator</span></pre>
-            </div> */}
+            <CodeHighlighter code={`navigator`} language="js" addClass="mt-3 mb-3" copie={true} />
             أو
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--js-color)">navigator</span></pre>
-            </div> */}
+            <CodeHighlighter code={`window.navigator`} language="js" addClass="mt-3 mb-3" copie={true} />
         </div>
     </article>
     <article>
@@ -28,9 +58,7 @@ export default function Navigator(){
         <p className="style_divv">
             تقوم الخاصية <b>appCodeName</b> بإرجاع الاسم الرمزي للمتصفح.<br/>
             خاصية <b>appCodeName</b> للقراءة فقط.
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--js-color)">navigator</span>.<span style="color:var(--js-color)">appCodeName</span></pre>
-            </div> */}
+            <CodeHighlighter code={`navigator.appCodeName`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
         <img src={images.js51_navigator} className="img"/>
@@ -43,9 +71,7 @@ export default function Navigator(){
         <p className="style_divv">
             تقوم الخاصية <b>appName</b> بإرجاع اسم المستعرض.<br/>
             الخاصية <b>appName</b> للقراءة فقط
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--js-color)">navigator</span>.<span style="color:var(--js-color)">appName</span></pre>
-            </div> */}
+            <CodeHighlighter code={`navigator.appName`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
         <img src={images.js51_navigator2} className="img"/>
@@ -58,9 +84,7 @@ export default function Navigator(){
         <p className="style_divv">
             تقوم الخاصية <b>appVersion</b> بإرجاع إصدار المتصفح.<br/>
             الخاصية <b>appVersion</b> للقراءة فقط.
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--js-color)">navigator</span>.<span style="color:var(--js-color)">appVersion</span></pre>
-            </div> */}
+            <CodeHighlighter code={`navigator.appVersion`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
         <img src={images.js51_navigator3} className="img"/>
@@ -73,9 +97,7 @@ export default function Navigator(){
         <p className="style_divv">
             تقوم خاصية <b>language</b> بإرجاع لغة المتصفح.<br/>
             خاصية <b>language</b> للقراءة فقط.
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--js-color)">navigator</span>.<span style="color:var(--js-color)">language</span></pre>
-            </div> */}
+            <CodeHighlighter code={`navigator.language`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
         <img src={images.js51_navigator4} className="img"/>
@@ -88,9 +110,7 @@ export default function Navigator(){
         <p className="style_divv">
             تعود خاصية <b>platform</b> للنظام الأساسي الذي تم تجميع المتصفح من أجله.<br/>
             خاصية <b>platform</b> للقراءة فقط.<br/>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--js-color)">navigator</span>.<span style="color:var(--js-color)">platform</span></pre>
-            </div> */}
+            <CodeHighlighter code={`navigator.platform`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>  
         <div className="mital"> متال :  </div>
         <img src={images.js51_navigator5} className="img"/>

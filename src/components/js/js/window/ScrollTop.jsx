@@ -7,6 +7,13 @@ export default function ScrollTop(){
     // function function_scroll(){
     //   output.textContent = `scrollTop: ${scroller.scrollTop}px`;
     // }
+    const codeExemple1= { 
+    code: `     
+
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    
 
     return(
 <section className="section-conetent">
@@ -15,9 +22,7 @@ export default function ScrollTop(){
         <p className="style_divv mt-5">
             تحصل الخاصية <b>scrollTop</b> على عدد وحدات البكسل التي يتم تمرير محتوى العنصر فيها عموديًا أو تعينها.<br/>
             إن قيمة <b>scrollTop</b> الخاصة بالعنصر هي قياس المسافة من أعلى العنصر إلى أعلى محتوى مرئي له. عندما لا يُنشئ محتوى عنصر شريط تمرير رأسي ، تكون قيمة <b>scrollTop</b> الخاصة به هي 0.
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--js-color)">element</span>.<span style="color:var(--js-color)">scrollTop</span></pre>
-            </div> */}
+            <CodeHighlighter code={`element.scrollTop`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
         <img src={images.js45_scrollTop} className="img"/>

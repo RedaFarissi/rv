@@ -1,4 +1,8 @@
-export default function ResultConsole(props){
+import "./Result.sass"
+
+
+export default function ResultConfirm(props){
+    
     return(
         <div className={`style-result`}>
             <div className="style-result-header">
@@ -40,17 +44,17 @@ export default function ResultConsole(props){
                     </div>
               </div>
             </div>
-            <div className={`console-style  ${props.styleAdd}`}>
-                <div className="console-body">
-                    <div className="console-head">
-                        <span className="d-inline-block h-100 text-light p-2 bg-secondary">Console</span>
-                    </div>
-                    <div className="console-body-children p-2 text-light" >
-                        {props.children}
+            <div className={`add-style-body  ${props.styleAdd}`}>
+                <div dir="ltr" className={`alert window-confirm bg-secondary text-light ${(props.displayConfirm)?"d-block":"d-none"}`}>
+                    <h6 className="text-center">This page says </h6>
+                    <p className="text-center">{props.confirmValue}</p>
+                    <div className="d-flex flex-row-reverse gap-1">
+                        <button onClick={props.clickCancel} className="btn btn-primary me-2">cancel</button>
+                        <button onClick={props.clickOk} className="btn btn-primary">OK</button>
                     </div>
                 </div>
+                {props.children}
             </div>
         </div>
-
     )
 }

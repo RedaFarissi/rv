@@ -20,6 +20,26 @@ export default function GetComputedStyle(){
     // const BG2 = window.getComputedStyle( div ,":after").content;
     // id3.innerHTML += " content before :  " + BG  + "<br/>"; 
     // id3.innerHTML += " content after  :  " + BG2 ; 
+    const codeExemple1= { 
+    code: `     
+
+     <script src="./index.js"></script>`,
+    script:``
+    }
+
+    const codeExemple2= { 
+    code: `     
+
+     <script src="./index.js"></script>`,
+    script:``
+    }
+
+    const codeExemple3= { 
+    code: `     
+
+     <script src="./index.js"></script>`,
+    script:``
+    }
 
     return(
 <section className="section-conetent">
@@ -29,11 +49,9 @@ export default function GetComputedStyle(){
             تقوم  <bdi><b>Window.getComputedStyle()</b></bdi> بإرجاع كائن يحتوي على قيم جميع خصائص <b>CSS</b> لعنصر ، بعد تطبيق أوراق الأنماط النشطة وحل أي حساب أساسي قد تحتويه هذه القيم.<br/>
             يتم الوصول إلى قيم خصائص <b>CSS</b> الفردية من خلال واجهات برمجة التطبيقات التي يوفرها الكائن ، أو عن طريق الفهرسة باستخدام أسماء خصائص <b>CSS</b>.<br/>
             تستخدم <b>getPropertyValue</b>  لتحديد إسم الخاصية .<br/>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--js-color)">window</span>.<span style="color:gold">getComputedStyle(</span>element <span style="color:gold">,</span> pseudoElement	<span style="color:gold">)</span></pre>
-            </div> */}
+            <CodeHighlighter code={`window.getComputedStyle(element , pseudoElement	)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
-        <div className="mital"> متال :  </div>
+        <div className="mital"> متال 1 :  </div>
         <img src={images.js47_getComputedStyle} className="img"/>
         <div className="styleee">       
             <div id="DV"> getComputedStyle </div>

@@ -8,6 +8,13 @@ export default function MatchMedia(){
     // }else{
     //     id.innerHTML = "عرض صفحتك يتجاوز <bdi>500px</bdi> "
     // }
+    const codeExemple1= { 
+    code: `     
+
+     <script src="./index.js"></script>`,
+    script:``
+    }
+
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript matchMedia</h1>
@@ -15,9 +22,7 @@ export default function MatchMedia(){
         <p className="style_divv mt-5">
             تقوم طريقة <bdi><b>matchMedia()</b></bdi> بإرجاع <b>MediaQueryList</b> بالنتائج من الاستعلام .<br/>
             كن أن تكون استعلامات الوسائط الخاصة بطريقة <bdi><b>matchMedia()</b></bdi> أيًا من ميزات الوسائط الخاصة بقاعدة <b>CSS</b> <bdi><b>@media</b></bdi> ، مثل <b>min-height</b> و <b>min-width</b> و <b> orientation</b>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--js-color)">window</span>.<span style="color:gold">matchMedia(<span style="color:orange">"mediaQuery"</span>)</span></pre>
-            </div> */}
+            <CodeHighlighter code={`window.matchMedia("mediaQuery")`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
         <img src={images.js50_matchMedia} className="img"/>

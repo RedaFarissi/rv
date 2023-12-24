@@ -7,9 +7,11 @@ import {
     //function
     Functions,Bind,Call,Apply,Map,Filter,
     //class
-    ClassIntro,Static,Private,Inheritance,Alert,Confirm,Btoa,Prompt,Atob,Location,Frames,
-    InnerWidth,InnerHeight,ClientWidth,ScrollBy,PageXOffset,PageX,PageY,ScrollIntoView,
-    ScrollTop,Console,GetComputedStyle,LocalStorage,MatchMedia,Navigator,Print,
+    ClassIntro,Static,Private,Inheritance,
+    //window
+    Alert,Confirm,Btoa,Prompt,Atob,Location,InnerWidth,InnerHeight,ClientWidth,ScrollBy,
+    PageXOffset,PageYOffset,PageX,PageY,ScrollIntoView,ScrollTop,Console,GetComputedStyle,
+    LocalStorage,SessionStorage,MatchMedia,Navigator,Print,
     //dom
     AddEventListener,RemoveEventListener,Doctype,GetElementById,GetElementsByClassName,
     GetElementsByName,CreateComment,GetElementsByTagName,ActiveElement,Children,Body,
@@ -98,12 +100,12 @@ return(
             <Route path='/prompt' element={<Prompt />} /> 
             <Route path='/atob' element={<Atob />} /> 
             <Route path='/location' element={<Location />} /> 
-            <Route path='/frames' element={<Frames />} /> 
             <Route path='/innerwidth' element={<InnerWidth />} /> 
             <Route path='/innerheight' element={<InnerHeight />} /> 
             <Route path='/clientwidth' element={<ClientWidth />} /> 
             <Route path='/scrollby' element={<ScrollBy />} /> 
             <Route path='/pagexoffset' element={<PageXOffset />} /> 
+            <Route path='/Pageyoffset' element={<PageYOffset />} /> 
             <Route path='/pagex' element={<PageX />} /> 
             <Route path='/pagey' element={<PageY />} /> 
             <Route path='/scrollintoview' element={<ScrollIntoView />} /> 
@@ -111,6 +113,7 @@ return(
             <Route path='/console' element={<Console />} /> 
             <Route path='/getcomputedstyle' element={<GetComputedStyle />} /> 
             <Route path='/localstorage' element={<LocalStorage />} /> 
+            <Route path='/sessionstorage' element={<SessionStorage />} /> 
             <Route path='/matchmedia' element={<MatchMedia />} /> 
             <Route path='/navigator' element={<Navigator />} /> 
             <Route path='/print' element={<Print />} /> 

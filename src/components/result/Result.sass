@@ -121,19 +121,40 @@
 
 .add-style-body
     padding: 9px 9px 30px 9px
-    min-height: 250px
+    height: 300px
     position: relative
-    .window-alert
+    top:-5px
+    .window-alert , .window-confirm , .window-prompt
         width: 320px
         position: absolute
         top:0
         left: calc(50% - 160px)
-        height: 120px
-        button
+        height: 130px
+        h6
+            margin-top: -9px
+            margin-bottom: 14px
+        p
+            font-size: 13px 
+        .button-alert-ok
             position: absolute
             right:11px
             bottom:11px
-    
+        .button-confirm-cancel
+            position: absolute
+            right:11px
+            bottom:11px
+        .button-confirm-ok
+            position: absolute
+            right:11px
+            bottom:11px
+    .window-prompt
+        width: 390px
+        height: 164px
+        input 
+            height: 34px
+            outline: none
+            border: none
+            padding: 4px
 .console-style
     height: 400px
     display: flex
@@ -141,6 +162,9 @@
     .console-head
         background-color: #343436
         height: 45px
+        span
+            font-size: 13px
+            
     .console-body
         height: 100%
         background-color: #202124

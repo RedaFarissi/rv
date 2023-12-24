@@ -1,7 +1,7 @@
 import "./Result.sass"
 
 
-export default function Result(props){
+export default function ResultAlert(props){
     
     return(
         <div className={`style-result`}>
@@ -45,6 +45,11 @@ export default function Result(props){
               </div>
             </div>
             <div className={`add-style-body  ${props.styleAdd}`}>
+                <div dir="ltr" className={`alert window-alert bg-secondary text-light ${(props.displayAlert)?"d-block":"d-none"}`}>
+                    <h6 className="text-center">This page says </h6>
+                    <p className="text-center">{props.alertValue}</p>
+                    <button onClick={props.clickOk} className="button-alert-ok btn btn-primary">OK</button>
+                </div>
                 {props.children}
             </div>
         </div>

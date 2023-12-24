@@ -8,18 +8,23 @@ export default function PageY(){
   //   var coords = "X coords: " + x1 + ", Y coords: " + y1;
   //   document.getElementById("id_name").innerHTML = coords;
   // }
+      const codeExemple1= { 
+    code: `     
+
+     <script src="./index.js"></script>`,
+    script:``
+    }
+
   return(
 <section className="section-conetent">
   <h1 className="heading-style heading-style-js-color">JavaScript pageY</h1>
   <article>
     <p className="style_divv mt-5">
-        ترجع الخاصية <b>pageY</b> الإحداثيات العمودية (وفقا للوثيقة) لمؤشر الماوس عند تشغيل حدث ماوس.<br/>
-        المستند هو صفحة الويب.<br/>
-        للحصول على الإحداثيات الأفقية (وفقا للوثيقة) لمؤشر الماوس، استخدم الخاصية <b>pageX</b>.<br/>
-        هذه الخاصية للقراءة فقط.
-        {/* <div className="codeStudio alert bg-dark  mt-2 pb-0" dir="ltr">
-            <pre><span style="color:var(--js-color)">event</span>.<span style="color:var(--js-color)">pageY</span></pre>
-        </div> */}
+          ترجع الخاصية <b>pageY</b> الإحداثيات العمودية (وفقا للوثيقة) لمؤشر الماوس عند تشغيل حدث ماوس.<br/>
+          المستند هو صفحة الويب.<br/>
+          للحصول على الإحداثيات الأفقية (وفقا للوثيقة) لمؤشر الماوس، استخدم الخاصية <b>pageX</b>.<br/>
+          هذه الخاصية للقراءة فقط.
+          <CodeHighlighter code={`event.pageY`} language="js" addClass="mt-3 mb-3" copie={true} />
     </p>
     <div className="sum_exemple_style">
         <div className="mital">متال :  </div>

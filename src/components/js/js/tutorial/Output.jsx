@@ -1,7 +1,14 @@
 import images from "../../imagesJs"
-import { CodeHighlighter ,  Result , ResultConsole} from "../../../path";
+import { CodeHighlighter ,  Result , ResultConsole ,ResultAlert} from "../../../path";
+import { useState } from "react";
 
 export default function Output(){
+    const [resultAlertDisplayAlert ,setResultAlertDisplayAlert] = useState(true)
+
+    function clickOk(){
+        setResultAlertDisplayAlert(false)
+    }
+
     const code1= `document.getElementById("id").innerHTML = content
 document.write(content)
 window.alert(content)
@@ -93,8 +100,8 @@ console.log(f_name + " " + l_name)`
         <div className="mital">متال  :  </div>
         <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Output" addClass="mt-3 mb-3" copie={true} number={true}/>  
         <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true} number={true}/>
-        <Result title='Output' logo={images.html_logo} displayAlert="true" alertValue="5 + 7 = 12" route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
-        </Result>
+        <ResultAlert title='Output' logo={images.html_logo} clickOk={clickOk} displayAlert={resultAlertDisplayAlert} alertValue="5 + 7 = 12" route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+        </ResultAlert>
     </article>
     <article>
         <h2 className="title-h2">4. <bdi>console.log()</bdi> </h2>
