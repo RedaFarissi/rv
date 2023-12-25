@@ -2,42 +2,41 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Navigator(){
-    // document.getElementById("h2").innerHTML  = navigator.appCodeName + "<br/>"
     // document.getElementById("h22").innerHTML = navigator.appName + "<br/>"
     // document.getElementById("h222").innerHTML = navigator.appVersion + "<br/>"
     // document.getElementById("h2222").innerHTML = navigator.language + "<br/>"
     // document.getElementById("h22222").innerHTML = navigator.platform + "<br/>"
         const codeExemple1= { 
-    code: `     
+    code: `     <h2 id="result"></h2>
 
      <script src="./index.js"></script>`,
-    script:``
+    script:`document.getElementById("result").innerHTML  = navigator.appCodeName`
     }
     const codeExemple2= { 
-    code: `     
+    code: `     <h2 id="result"></h2>
 
      <script src="./index.js"></script>`,
-    script:``
+    script:`document.getElementById("result").innerHTML  = navigator.appName `
     }
 
     const codeExemple3= { 
-    code: `     
+    code: `     <h2 id="result"></h2>
 
      <script src="./index.js"></script>`,
-    script:``
+    script:`document.getElementById("result").innerHTML  = window.navigator.appVersion`
     }
 
     const codeExemple4= { 
-    code: `     
+    code: `     <h2 id="result"></h2>
 
      <script src="./index.js"></script>`,
-    script:``
+    script:`document.getElementById("result").innerHTML  = window.navigator.language`
     }
     const codeExemple5= { 
-    code: `     
+    code: `     <h2 id="result"></h2>
 
      <script src="./index.js"></script>`,
-    script:``
+    script:`document.getElementById("result").innerHTML  = window.navigator.platform`
     }
 
 
@@ -61,10 +60,11 @@ export default function Navigator(){
             <CodeHighlighter code={`navigator.appCodeName`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
-        <img src={images.js51_navigator} className="img"/>
-        <div className="styleee img">       
-            <h2 id="h2"> </h2>
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="navigator" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='navigator' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>{window.navigator.appCodeName}</h2>
+        </Result> 
     </article>
     <article>
         <h2 className="title-h2">2. appName</h2>
@@ -74,10 +74,11 @@ export default function Navigator(){
             <CodeHighlighter code={`navigator.appName`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
-        <img src={images.js51_navigator2} className="img"/>
-        <div className="styleee img">       
-            <h2 id="h22"> </h2>
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="navigator" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='navigator' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>{window.navigator.appName}</h2>
+        </Result> 
     </article>
     <article>
         <h2 className="title-h2">3. appVersion</h2>
@@ -87,10 +88,11 @@ export default function Navigator(){
             <CodeHighlighter code={`navigator.appVersion`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
-        <img src={images.js51_navigator3} className="img"/>
-        <div className="styleee img">       
-            <h2 id="h222"> </h2>
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple3.code} language="html" is_html={true} title="navigator" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='navigator' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>{window.navigator.appVersion}</h2>
+        </Result> 
     </article>
     <article>
         <h2 className="title-h2">4. language</h2>
@@ -100,10 +102,11 @@ export default function Navigator(){
             <CodeHighlighter code={`navigator.language`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
-        <img src={images.js51_navigator4} className="img"/>
-        <div className="styleee img">       
-            <h2 id="h2222"> </h2>
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple4.code} language="html" is_html={true} title="navigator" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='navigator' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>{window.navigator.language}</h2>
+        </Result> 
     </article>
     <article>
         <h2 className="title-h2">5. platform</h2>
@@ -113,10 +116,11 @@ export default function Navigator(){
             <CodeHighlighter code={`navigator.platform`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>  
         <div className="mital"> متال :  </div>
-        <img src={images.js51_navigator5} className="img"/>
-        <div className="styleee img">       
-            <h2 id="h22222"> </h2>
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple5.code} language="html" is_html={true} title="navigator" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title='navigator' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>{window.navigator.platform}</h2>
+        </Result>
     </article>
 </section>
     )
