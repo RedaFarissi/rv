@@ -2,6 +2,26 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Scripts(){
+    const codeExemple1= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple2= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript scripts</h1>
@@ -16,9 +36,7 @@ export default function Scripts(){
                 ترجع خاصية <b>length</b> عدد العناصر في مجموعة <b>HTML</b>.<br/>
             </div>.<br/>
             خاصية البرامج النصية للقراءة فقط.
-            {/* <div className="codeStudio alert bg-dark  mt-2 pb-0" dir="ltr">
-                <pre><span style="color:var(--js-color)">document</span>.<span style="color:var(--js-color)">scripts</span></pre>
-            </div> */}
+            <CodeHighlighter code={`document.scripts`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
         <img src={images.js78_scripts} className="img"/>

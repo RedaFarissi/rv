@@ -2,6 +2,16 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Images(){
+        const codeExemple1= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript images</h1>
@@ -15,9 +25,7 @@ export default function Images(){
                 يمكن الوصول إلى العناصر الموجودة في مجموعة بواسطة فهرس يبدأ من 0.<br/>
                 ترجع خاصية <b>length</b> عدد العناصر في مجموعة <b>HTML</b>.<br/>
             </div>
-            {/* <div className="codeStudio alert bg-dark  mt-2 pb-0" dir="ltr">
-                <pre><span style="color:var(--js-color)">document</span>.<span style="color:gold">images</span></pre>
-            </div> */}
+            <CodeHighlighter code={`document.images`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
         <img src={images.js74_images} className="img"/>

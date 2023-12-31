@@ -15,9 +15,7 @@ export default function SetTimeout(){
             يتم تنفيذ <bdi><b>setTimeout()</b></bdi> مرة واحدة فقط.<br/>
             إذا كنت بحاجة إلى عمليات تنفيذ متكررة ، فاستخدم <bdi><b>setInterval()</b></bdi> بدلاً من ذلك.<br/>
             استخدم طريقة <bdi><b>clearTimeout()</b></bdi> لمنع بدء تشغيل الوظيفة.
-            {/* <div className="codeStudio alert bg-dark pb-0 mt-3" dir="ltr">
-                <pre><span style="color:gold;">setTimeout(<span className="text-light">function_name</span>,<span className="text-light">milliseconds</span>)</span></pre>
-            </div> */}
+            <CodeHighlighter code={`setTimeout(function_name,milliseconds)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال 1 :  </div>
         <img src={images.js151_setTimeout} className="img"/>

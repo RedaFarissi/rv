@@ -13,6 +13,16 @@ export default function Children(){
     //                 ressult_test = true
     //             }
     //         });
+    const codeExemple1= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript children</h1>
@@ -27,9 +37,7 @@ export default function Children(){
                 ترجع خاصية <b>length</b> عدد العناصر في مجموعة <b>HTML</b>.</small>
             </div>
 
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--js-color)">Element</span>.<span style="color:var(--js-color)">children</span></pre>
-            </div> */}
+            <CodeHighlighter code={`Element.children`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
         <img src={images.js58_children} className="img"/>

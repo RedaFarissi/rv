@@ -2,6 +2,16 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Contains(){
+        const codeExemple1= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript contains</h1>
@@ -9,9 +19,7 @@ export default function Contains(){
         <div className="style_divv mt-5">
             يعيد <b><bdi>contains()</bdi></b> <b>true</b> إذا كانت العقدة سليلة العقدة.<br/>
             أسلوب <b><bdi>contains()</bdi></b> يرجع القيمة <b>false</b> إذا كان العنصر لا يحتوي على العقدة سليلة
-            {/* <div className="codeStudio alert bg-dark  mt-2 pb-0" dir="ltr">
-                <pre><span style="color:var(--js-color)">document</span>.<span style="color:gold">contains(</span>node<span style="color:gold">)</span></pre>
-            </div> */}
+            <CodeHighlighter code={`document.contains(node)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </div>
         <div className="mital">متال :  </div>
         <img src={images.js80_contains} className="img"/>

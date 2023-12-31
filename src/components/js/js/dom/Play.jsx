@@ -9,6 +9,16 @@ export default function Play(){
   // function pauseAudio() { 
   //   vid.pause(); 
   // } 
+      const codeExemple1= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
 
   return(
 <section className="section-conetent">
@@ -16,12 +26,8 @@ export default function Play(){
   <article>
     <div className="style_divv mt-5">
         تبدأ طريقة <bdi><b>play()</b></bdi> في تشغيل <b>audio</b> أو <b>video</b> الحالي.<br/>
-        {/* <div className="codeStudio alert bg-dark  mt-2 pb-0" dir="ltr">
-            <pre><span style="color:var(--js-color)">video</span>.<span style="color:gold">play()</span></pre>
-        </div> */}
-        {/* <div className="codeStudio alert bg-dark  mt-2 pb-0" dir="ltr">
-            <pre><span style="color:var(--js-color)">audio</span>.<span style="color:gold">play()</span></pre>
-        </div> */}
+            <CodeHighlighter code={`video.play()`} language="js" addClass="mt-3 mb-3" copie={true} />
+            <CodeHighlighter code={`audio.play()`} language="js" addClass="mt-3 mb-3" copie={true} />
         <div className="alert alert-warning">نصيحة: استخدم طريقة الإيقاف المؤقت () لإيقاف الصوت / الفيديو الحالي مؤقتًا.</div>
     </div>
     <div className="mital">متال :  </div>

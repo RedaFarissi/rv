@@ -18,9 +18,7 @@ export default function EventCurrentTarget(){
             ترجع خاصية الحدث <b>currentTarget</b> العنصر الذي قامت مستمعات الحدث الخاصة به بتشغيل الحدث. العنصر الأب .<br/>
             هذا مفيد بشكل خاص أثناء الالتقاط والفقاعات <small><bdi>(capturing and bubbling)</bdi></small><br/>
             تشير الخاصية <b>currentTarget</b> دائمًا إلى العنصر الذي قام مستمع الحدث الخاص به بتشغيل الحدث ، على عكس خاصية <b>target</b> ، التي تُرجع العنصر الذي أطلق الحدث.<br/>
-            {/* <div className="codeStudio alert bg-dark mt-3 pb-0" dir="ltr">
-                <pre><span style="color:var(--js-color)">event</span>.<span style="color:var(--js-color)">currentTarget</span></pre>
-            </div> */}
+            <CodeHighlighter code={`event.currentTarget`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
         <img src={images.js148_currentTarget} className="img"/>

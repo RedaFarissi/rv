@@ -30,11 +30,9 @@ export default function EventTarget(){
         <p className="style_divv mt-5">
             ترجع خاصية <bdi><b>event.target</b></bdi> العنصر الذي أطلق الحدث.<br/>
             تحصل الخاصية <b>target</b> على العنصر الذي حدث فيه الحدث في الأصل ، على عكس الخاصية <b>currentTarget</b> ، والتي تشير دائمًا إلى العنصر الأب.<br/>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--js-color)">event</span>.<span style="color:var(--js-color)">target</span></pre>
-            </div> */}
+            <CodeHighlighter code={`event.target`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
-        <div className="mital">متال :  </div>
+        <div className="mital">متال 1 :  </div>
         <img src={images.js114_event_target} className="img"/>
         <div className="styleee">
             <div id="parent2" onclick="function_name(event)" >

@@ -10,6 +10,12 @@ export default function Onfocusin(){
     // function outf() {
     //   document.getElementById("Input").style.background = "red";
     // }
+    const code1 = `<!-- Code HTML -->
+<element onfocusin="//script">`
+    const code2 = `// Code JavaScript
+object.onfocusin = function(){  //myScript  }`
+    const code3 = `//Code JavaScript using the addEventListener()
+object.addEventListener("focusin", function_name )`
   return(
 <section className="section-conetent">
   <h1 className="heading-style heading-style-js-color">JavaScript onfocusin</h1>
@@ -18,18 +24,9 @@ export default function Onfocusin(){
           يحدث حدث <b>onfocusin</b> عندما يكون عنصر على وشك الحصول على التركيز.<br/>
           حدث <b>onfocusin</b> مشابه لحدث <b>onfocus</b>. الاختلاف الرئيسي هو أن حدث <b>onfocus</b> لا ينفجر. لذلك ، إذا كنت تريد معرفة ما إذا كان عنصر ما أو طفله يحصل على التركيز ، فيجب عليك استخدام حدث <b>onfocusin</b>.<br/>
           حدث <b>onfocusin</b> هو عكس حدث <b>onfocusout</b>.
-          {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr" >
-              <pre><span style="color:green">&lt;!-- Code HTML --&gt;</span>
-      <span style="color:var(--html-color-tags)">&lt;element</span> <span style="color:var(--js-color)">onfocusin</span>=<span style="color:orange;">"<span style="color:green">//script</span>"</span><span style="color:var(--html-color-tags);">&gt;</span></pre>  
-          </div>
-          <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr" >
-              <pre><span style="color:green">&lt;!-- Code JavaScript --&gt;</span>
-      <span style="color:var(--js-color)">object</span>.<span style="color:var(--js-color)">onfocusin</span> = <span style="color:var(--html-color-tags)">function()</span>{ <span style="color:green"> //myScript </span> }</pre>  
-          </div>
-          <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr" >
-              <pre><span style="color:green">&lt;!-- Code JavaScript using the addEventListener() --&gt;</span>
-      <span style="color:var(--js-color)">object</span>.<span style="color:gold">addEventListener(</span><span style="color:orange;">"focusin"</span>, function_name <span style="color:gold">)</span></pre>  
-          </div> */}
+          <CodeHighlighter code={code1} language="html" addClass="mt-3 mb-3" copie={true} />
+          <CodeHighlighter code={code2} language="js" addClass="mt-3 mb-3" copie={true} />
+          <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
       </p>
       <div className="mital"> متال :  </div>
       <img src={images.js118_onfocusin} className="img"/>

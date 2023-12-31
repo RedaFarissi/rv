@@ -86,9 +86,7 @@ return(
         <h2 className="title-h2">1- animationstart</h2>
         <p className="style_divv">
             يقع حدث <bdi><b>Animationstart</b></bdi> عندما يبدأ تشغيل الرسوم المتحركة <b>CSS</b>.<br/>
-            {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr">
-                 <pre><span style="color:var(--js-color)">Object</span>.<span style="color:gold">addEventListener(</span><span style="color:orange;">"animationstart"</span>, function_name<span style="color:orange"></span><span style="color: gold;">)</span></pre>  
-            </div> */}
+            <CodeHighlighter code={`Object.addEventListener("animationstart", function_name)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
         <img src={images.js84_animation} className="img"/>
@@ -100,9 +98,7 @@ return(
       <h2 className="title-h2">2- animationiteration </h2>
       <p className="style_divv">
         يقع حدث <b>animationiteration</b> عند تكرار رسم متحرك <b>CSS</b> .<br/>
-        {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr">
-          <pre><span style="color:var(--js-color)">Object</span>.<span style="color:gold">addEventListener(</span><span style="color:orange;">"animationiteration"</span>, function_name<span style="color:orange"></span><span style="color: gold;">)</span></pre>  
-        </div> */}
+        <CodeHighlighter code={`Object.addEventListener("animationiteration", function_name)`} language="js" addClass="mt-3 mb-3" copie={true} />
       </p>
       <div className="mital"> متال :  </div>
       <img src={images.js84_animation2} className="img"/>
@@ -115,12 +111,10 @@ return(
     </article>
     <article>
         <h2 className="title-h2">3- animationend </h2>
-        <div className="style_divv">
+        <p className="style_divv">
           يقع الحدث <bdi><b>animationend</b></bdi> عند اكتمال رسم متحرك <b>CSS</b> .<br/>
-          {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr">
-            <pre><span style="color:var(--js-color)">Object</span>.<span style="color:gold">addEventListener(</span><span style="color:orange;">"animationend"</span>, function_name <span style="color:orange"></span><span style="color: gold;">)</span></pre>  
-          </div> */}
-        </div>
+          <CodeHighlighter code={`Object.addEventListener("animationend", function_name )`} language="js" addClass="mt-3 mb-3" copie={true} />
+        </p>
         <div className="mital"> متال :  </div>
         <img src={images.js84_animation3} className="img"/>
         <div className="styleee" style={{height: "400px"}}>

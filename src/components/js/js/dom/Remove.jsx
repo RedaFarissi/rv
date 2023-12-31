@@ -14,15 +14,33 @@ export default function Remove(){
   //   document.getElementById("result").appendChild(arr[i])
   //   document.querySelectorAll(".reda")[i].innerHTML = i
   // }
+    const codeExemple1= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple2= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
   return(
 <section className="section-conetent">
   <h1 className="heading-style heading-style-js-color">JavaScript remove</h1>
   <article>
     <p className="style_divv mt-5">
         تزيل طريقة <bdi><b>remove()</b></bdi> عنصرًا (أو node) من المستند.
-       {/* <div className="alert bg-dark pb-0 mt-3">
-            <pre> <span style="color:var(--js-color)">element</span>.<span style="color:gold">remove()</span></pre></div>
-        </div> */}
+            <CodeHighlighter code={`element.remove()`} language="js" addClass="mt-3 mb-3" copie={true} />
     </p>
     <div className="mital"> متال 1 :  </div>
     <img src={images.js145_remove} className="img"/>

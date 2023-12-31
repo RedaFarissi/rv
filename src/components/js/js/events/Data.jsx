@@ -16,9 +16,7 @@ export default function Data(){
       <p className="style_divv mt-5">
           تقوم خاصية <b>event.data</b> بإرجاع الحرف الذي تم إدراجه مع الحدث.<br/>
           هذه الخاصية للقراءة فقط.
-          {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr" >
-              <pre><span style="color:var(--js-color)">event</span>.<span style="color:var(--js-color)">data</span></pre>  
-          </div> */}
+          <CodeHighlighter code={`event.data`} language="js" addClass="mt-3 mb-3" copie={true} />
       </p>
       <div className="mital"> متال :  </div>
       <img src={images.js135_data} className="img"/>

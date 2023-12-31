@@ -2,6 +2,16 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function DocumentElement(){
+        const codeExemple1= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript documentElement</h1>
@@ -21,10 +31,7 @@ export default function DocumentElement(){
                 كائن <b>HTML DOM HTML</b><br/>
                 علامة <b>HTML</b> <kbd>&lt;html&gt;</kbd>
             </div>
-            {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr" >
-                <pre><span style="color:green">&lt;!-- return html document  --&gt;</span>
-        <span style="color:var(--js-color)">document</span>.<span style="color:var(--js-color)">documentElement</span></pre>  
-            </div> */}
+            <CodeHighlighter code={`document.documentElement`} language="js" addClass="mt-3 mb-3" copie={true} />
         </div>
         <div className="mital"> متال :  </div>
         <img src={images.js120_documentElement} className="img"/>

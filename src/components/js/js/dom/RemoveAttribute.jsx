@@ -5,15 +5,23 @@ export default function RemoveAttribute(){
   // function removeAttributE(){
   //   document.getElementById("id_name").removeAttribute("class")
   // }
+  const codeExemple1= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
   return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript removeAttribute</h1>
     <h2 className="title-h2">1- removeAttribute</h2>
     <p className="style_divv">
         تزيل طريقة <bdi>removeAttribute()</bdi> سمة من عنصر. 
-        {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr">
-            <pre><span style="color:var(--js-color)">document</span>.<span style="color:gold">getElementById(<span style="color:orange">"id"</span>)</span>.<span style="color:gold">removeAttribute(<span style="color:orange">"name"</span>)</span></pre>
-        </div> */}
+        <CodeHighlighter code={`document.getElementById("id").removeAttribute("name")`} language="js" addClass="mt-3 mb-3" copie={true} />
     </p>
     <div className="mital"> متال :  </div>
     <img src={images.js83_removeAttributre} className="img"/>

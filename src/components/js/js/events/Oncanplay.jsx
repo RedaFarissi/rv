@@ -5,6 +5,9 @@ export default function Canplay(){
     // function myFunction() {
     //     alert("Can start playing video");
     //   }
+    const code1 = ``
+    const code2 = ``
+    const code3 = ``
     return(
   <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript canplay</h1>
@@ -21,18 +24,9 @@ export default function Canplay(){
                 <li> <b>oncanplay</b> </li>
                 <li> <b>oncanplaythrough</b> </li>
             </ol>
-            {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr" >
-                <pre><span style="color:green">&lt;!-- Code HTML --&gt;</span>
-        <span style="color:var(--html-color-tags)">&lt;video</span> <span style="color:var(--js-color)">src</span>=<span style="color:orange;">"name.type"</span> <span style="color:var(--js-color)">oncanplay</span>=<span style="color:orange;">"<span style="color:green">//script</span>"</span><span style="color:var(--html-color-tags);">&gt;</span>  <span style="color:var(--html-color-tags)">&lt;/video&gt;</span> </pre>  
-            </div>
-            <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr" >
-                <pre><span style="color:green">&lt;!-- Code JavaScript --&gt;</span>
-        <span style="color:var(--js-color)">object</span>.<span style="color:var(--js-color)">oncanplay</span> = <span style="color:var(--html-color-tags)">function()</span>{ <span style="color:green"> //myScript </span> }</pre>  
-            </div>
-            <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr" >
-                <pre><span style="color:green">&lt;!-- Code JavaScript using the addEventListener() --&gt;</span>
-        <span style="color:var(--js-color)">object</span>.<span style="color:gold">addEventListener(</span><span style="color:orange;">"canplay"</span>, function_name <span style="color:gold">)</span></pre>  
-            </div> */}
+            <CodeHighlighter code={code1} language="html" addClass="mt-3 mb-3" copie={true} />
+            <CodeHighlighter code={code2} language="js" addClass="mt-3 mb-3" copie={true} />
+            <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
         <img src="{% static 'js/js95_oncanplay.png' %}" className="img"/>

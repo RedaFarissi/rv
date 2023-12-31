@@ -13,13 +13,9 @@ export default function History(){
             يحتوي كائن <b>history</b> على عناوين <b>URL</b> التي زارها المستخدم (في نافذة المتصفح).<br/>
             كائن <b>history</b> هو خاصية لكائن <b>window</b>.<br/>
             يتم الوصول إلى كائن <b>history</b> باستخدام :
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--js-color)">window</span>.<span style="color:var(--js-color)">history</span></pre>
-            </div> */}
+            <CodeHighlighter code={`window.history`} language="js" addClass="mt-3 mb-3" copie={true} />
             أو 
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--js-color)">history</span></pre>
-            </div> */}
+            <CodeHighlighter code={`history`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
     </article>
     <article>
@@ -27,9 +23,7 @@ export default function History(){
         <p className="style_divv">
             تقوم طريقة <bdi><b>history.back()</b></bdi> بتحميل عنوان <b>URL</b> السابق (الصفحة) في قائمة المحفوظات.<br/>
             تعمل طريقة <bdi><b>history.back()</b></bdi> فقط في حالة وجود صفحة سابقة.<br/>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--js-color)">window</span>.<span style="color:var(--js-color)">history</span>.<span style="color:gold">back()</span></pre>
-            </div> */}
+            <CodeHighlighter code={`window.history.back()`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
         <img src={images.js38_history2} className="img"/>
@@ -43,9 +37,7 @@ export default function History(){
             تقوم طريقة <bdi><b>history.forward()</b></bdi> بتحميل عنوان <b>URL</b> التالي (الصفحة) في قائمة المحفوظات.<br/>
             تعمل طريقة <bdi><b>history.forward()</b></bdi> فقط في حالة وجود الصفحة التالية.<br/>
             <bdi>history.forward()</bdi> هو نفسه <bdi>history.go()</bdi>.
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--js-color)">window</span>.<span style="color:var(--js-color)">history</span>.<span style="color:gold">forward()</span></pre>
-            </div> */}
+            <CodeHighlighter code={`window.history.forward()`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
         <img src={images.js38_history3} className="img"/>
@@ -59,9 +51,7 @@ export default function History(){
             تعرض خاصية <b>lengt</b> عدد عناوين <b>URL</b> في قائمة المحفوظات لنافذة المستعرض الحالية.<br/>
             تقوم الخاصية بإرجاع 1 على الأقل ، لأن القائمة تتضمن الصفحة الحالية.<br/>
             هذه الخاصية مفيدة لمعرفة عدد الصفحات التي زارها المستخدم في جلسة التصفح الحالية.<br/>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--js-color)">history</span>.<span style="color:var(--js-color)">length</span></pre>
-            </div> */}
+            <CodeHighlighter code={`history.length`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
         <img src={images.js38_history} className="img"/>

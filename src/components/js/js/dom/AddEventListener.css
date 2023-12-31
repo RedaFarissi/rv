@@ -1,21 +1,21 @@
-#DIVV{
-  width: max-content; background-color: yellow;padding: 20px;
-  border: 0.9px solid black;margin: auto;border-radius: 4px;
+#addEventListener-ex1 {
+  width: max-content;
+  background-color: yellow;
+  padding: 20px;
+  border: 0.9px solid black;
+  margin: auto;
+  border-radius: 4px;
 }
-#grandparent,#grandparent2{ width:250px; height:250px; background-color:red; }
-#parent,#parent2{ width:180px; height: 180px; background-color:green; }
-#child,#child2{ width:100px; height:100px; background-color:yellow; }
 
+#addEventListener-ex3-grandparent,#addEventListener-ex3-grandparent2{ width:250px; height:250px; background-color:red; }
 
+#addEventListener-ex3-parent,#addEventListener-ex3-parent2{ width:180px; height: 180px; background-color:green; }
 
+#addEventListener-ex3-child,#addEventListener-ex3-child2{ width:100px; height:100px; background-color:yellow; }
 
-
-
-
-
-.diV {
+.addEventListener-ex4 {
     padding: 50px;
     background-color: rgba(29, 90, 30, 0.3);
     text-align: center;
     cursor: pointer;
-  }
+}

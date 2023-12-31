@@ -8,17 +8,25 @@ export default function CreateElement(){
     //     y.setAttribute("value", "Donald");
     //     document.getElementById("resulTa").appendChild(y);
     //   }
+        const codeExemple1= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript createElement</h1>
     <article>
         <p className="style_divv mt-5">
             طريقة <bdi><b>createElement()</b></bdi> تنشئ عقدة عنصر <small><small><bdi>(element node)</bdi></small></small>.<br/>
-            {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr">
-                <pre><span style="color:var(--html-color-tags)">let</span> variable = <span style="color:var(--js-color)">document</span>.<span style="color:gold">createElement(<span style="color:orange">'type'</span>)</span></pre>
-            </div> */}
+            <CodeHighlighter code={`let variable = document.createElement('type')`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
-        <div className="mital">متال :  </div>
+        <div className="mital">متال 1 :  </div>
         <img src={images.js65_createElement} className="img"/>
         <div className="styleee img">
             <h2>Heading Element 1</h2>

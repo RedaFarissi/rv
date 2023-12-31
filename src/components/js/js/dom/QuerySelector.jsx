@@ -2,6 +2,26 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function QuerySelector(){
+    const codeExemple1= { 
+        head:`
+        <style>
+          
+        </style>`,
+        code: `      <h2 id="result"></h2>
+          
+         <script src="./index.js"></script>`,
+        script:``
+        }
+    const codeExemple2= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript querySelector</h1>
@@ -11,20 +31,18 @@ export default function QuerySelector(){
             تُرجع طريقة <bdi><b>querySelector()</b></bdi> العنصر الأول الذي يطابق محدد <b>CSS</b>.<br/>
             لإرجاع جميع التطابقات (وليس الأولى فقط) ، استخدم <bdi><b>querySelectorAll()</b></bdi> بدلاً من ذلك.<br/>
             يطرح كل من <bdi><b>querySelector()</b></bdi> و <bdi><b>querySelectorAll()</b></bdi> استثناء <b className="text-danger">SYNTAX_ERR</b> إذا كان المحدد (المحددات) غير صالح.
-            {/* <div className="codeStudio alert bg-dark  mt-2 pb-0" dir="ltr">
-                <pre><span style="color:var(--js-color)">document</span>.<span style="color:gold">querySelector(<span style="color:white">CSS selectors</span>)</span></pre>
-            </div> */}
+            <CodeHighlighter code={`document.querySelector(CSS selectors)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
         <img src={images.js76_querySelector} className="img"/>
-        <div className="styleee img" id="reSulta"> 
+        <div className="styleee" id="reSulta"> 
             <a href="https://www.google.com">google</a><br/>
             <a href="https://www.facebook.com">facebook</a><br/>
             https://www.google.com/
         </div>
         <div className="mital">متال 2:  </div>
         <img src={images.js76_querySelector2} className="img"/>
-        <div className="styleee img"> 
+        <div className="styleee"> 
             <div className="partent">
                 <div className="child" style={{backgroundColor:"red"}}> child 1 </div>
                 <div className="child"> child 2 </div>

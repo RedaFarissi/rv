@@ -32,6 +32,21 @@ export default function Fetch(){
     //     </div>`
     //   } 
     // }
+
+    const code1 = `fetch(lien_api).then( variable => { return variable.json() }).then(data =>{
+    console.log(data)
+})`
+    const code2 = `fetch(lien_api).then( variable => { return variable.text() }).then(data =>{
+    console.log(data)
+})`
+    const code3 = `fetch(lien_api).then( function(variable) { return variable.json() } ).then(data =>{
+    console.log(data)
+})`
+    const code4 = `async function function_name(){
+    const variable = await fetch(lien_api)
+    const data = await  variable.json()
+}
+function_name()`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript fetch</h1>
@@ -39,33 +54,13 @@ export default function Fetch(){
         <p className="style_divv mt-5">
             تسمح واجهة <bdi><b>Fetch API</b></bdi> لمتصفح الويب بإجراء طلبات <b>HTTP</b> لخوادم الويب.<br/>
             لا حاجة ل <b>XMLHttpRequest</b> بعد الآن .<br/>
-            {/* <b style="text-shadow:0.9px 0.9px red;"> الطريقة الأولى : </b>
-            <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><span style="color:gold">fetch(</span>lien_api<span style="color:gold">)</span>.<span style="color:gold">then(</span> <span style="color:var(--js-color)">variable</span> <span style="color:var(--html-color-tags)">=></span> { <span style="color:var(--violet-color)">return</span> <span style="color:var(--js-color)">variable</span>.<span style="color:gold">json()</span> }<span style="color:gold">)</span>.<span style="color:gold">then(</span>data <span style="color:var(--html-color-tags)">=></span>{
-            <span style="color:var(--arr-num-color)">console</span>.<span style="color:var(--js-color)">log(</span>data<span style="color:var(--js-color)">)</span>
-        }<span style="color:gold">)</span></pre>
-            </div>
-            <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><span style="color:gold">fetch(</span>lien_api<span style="color:gold">)</span>.<span style="color:gold">then(</span> <span style="color:var(--js-color)">variable</span> <span style="color:var(--html-color-tags)">=></span> { <span style="color:var(--violet-color)">return</span> <span style="color:var(--js-color)">variable</span>.<span style="color:gold">text()</span> }<span style="color:gold">)</span>.<span style="color:gold">then(</span>data <span style="color:var(--html-color-tags)">=></span>{
-            <span style="color:var(--arr-num-color)">console</span>.<span style="color:var(--js-color)">log(</span>data<span style="color:var(--js-color)">)</span>
-        }<span style="color:gold">)</span></pre>
-            </div>
-            <b style="text-shadow:0.9px 0.9px red;"> الطريقة التانية : </b>
-            <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><span style="color:gold">fetch(</span>lien_api<span style="color:gold">)</span>.<span style="color:gold">then(</span> <span style="color:var(--html-color-tags)">function(</span><span style="color:var(--js-color)">variable</span><span style="color:var(--html-color-tags)">)</span> { <span style="color:var(--violet-color)">return</span> <span style="color:var(--js-color)">variable</span>.<span style="color:gold">json()</span> } <span style="color:gold">)</span>.<span style="color:gold">then(</span>data <span style="color:var(--html-color-tags)">=></span>{
-            <span style="color:var(--arr-num-color)">console</span>.<span style="color:var(--js-color)">log(</span>data<span style="color:var(--js-color)">)</span>
-        }<span style="color:gold">)</span></pre>
-            </div>
-
-            <b style="text-shadow:0.9px 0.9px red;"> الطريقة الثالثة و الأحدت : </b>
-            <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags)">async function</span> <span style="color:gold">function_name()</span>{
-            <span style="color:var(--html-color-tags)">const</span> <span style="color:var(--js-color)">variable</span> = <span style="color:var(--violet-color)">await</span> <span style="color:gold">fetch(</span>lien_api<span style="color:gold">)</span>
-            <span style="color:var(--html-color-tags)">const</span> <span style="color:var(--js-color)">data</span> = <span style="color:var(--violet-color)">await</span>  <span style="color:var(--js-color)">variable</span>.<span style="color:gold">json()</span>
-        }
-        <span style="color:gold">function_name()</span>
-        </div>
-        </pre> */}
+             <b className="d-block mt-3" style={{textShadow:"0.9px 0.9px red"}}> الطريقة الأولى : </b>
+            <CodeHighlighter code={code1} language="js" addClass="mt-3 mb-3" copie={true} />
+            <CodeHighlighter code={code2} language="js" addClass="mt-3 mb-3" copie={true} />
+            <b style={{textShadow:"0.9px 0.9px red"}}> الطريقة التانية : </b>
+            <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
+            <b style={{textShadow:"0.9px 0.9px red"}}> الطريقة الثالثة و الأحدت : </b>
+            <CodeHighlighter code={code4} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال 1 :  </div>
         <img src={images.js136_fetch} className="img"/>

@@ -27,8 +27,17 @@ export default function ExitFullscreen(){
 //     document.msExitFullscreen();
 //   }
 // }
-
-  return(
+    const codeExemple1= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
+return(
 <section className="section-conetent">
   <h1 className="heading-style heading-style-js-color">JavaScript exitFullscreen</h1>
   <article>
@@ -38,6 +47,7 @@ export default function ExitFullscreen(){
 <p className="style_divv mt-5">
     تلغي طريقة <bdi><b>exitFullscreen()</b></bdi> عنصرًا في وضع ملء الشاشة.<br/>
     استخدم طريقة <bdi><b>requestFullscreen()</b></bdi> لفتح عنصر في وضع ملء الشاشة.<br/>
+    <CodeHighlighter code={``} language="js" addClass="mt-3 mb-3" copie={true} />
     {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr" >
         <pre><span style="color:var(--js-color)">HTMLElementObject</span>.<span style="color:var(--js-color)">exitFullscreen()</span></pre>  
     </div> */}

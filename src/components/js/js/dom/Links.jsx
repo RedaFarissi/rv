@@ -4,7 +4,16 @@ import { CodeHighlighter ,  Result} from "../../../path";
 export default function Links(){
     // id_result = document.getElementById("resulta")
     // id_result.innerText = document.links[0].outerHTML
-
+    const codeExemple1= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript links</h1>
@@ -20,9 +29,7 @@ export default function Links(){
             </div>
             خاصية الروابط للقراءة فقط.<br/>
             تمثل الروابط الموجودة في المجموعة عناصر <kbd>&lt;a&gt;</kbd> و <kbd>&lt;area&gt;</kbd> بسمة <b>href</b>.
-            {/* <div className="codeStudio alert bg-dark  mt-2 pb-0" dir="ltr">
-                <pre><span style="color:var(--js-color)">document</span>.<span style="color:var(--js-color)">links</span></pre>
-            </div> */}
+            <CodeHighlighter code={`document.links`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
         <img src={images.js75_links} className="img"/>

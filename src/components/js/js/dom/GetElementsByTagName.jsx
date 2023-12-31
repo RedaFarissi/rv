@@ -2,6 +2,18 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function GetElementsByTagName(){
+        const codeExemple1= { 
+    code: `      <div>div 1</div>
+     <div>div 2</div>
+     <div>div 3</div>
+     <div>div 4</div>
+    
+     <h2 id="result"> </h2>
+      
+     <script src="./index.js"></script>`,
+    script:`const div = document.getElementsByTagName("div");
+document.getElementById("result").innerHTML = \`Numbers div = \${div.length}\``
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript getElementsByTagName</h1>
@@ -16,21 +28,18 @@ export default function GetElementsByTagName(){
                 ترجع خاصية <b>length</b> عدد العناصر في مجموعة <b>HTML</b>.<br/>
             </div>
             خاصية <bdi><b>getElementsByTagName()</b></bdi> للقراءة فقط.<br/>
-            {/* <div className="codeStudio alert bg-dark  mt-2 pb-0" dir="ltr">
-                <pre><span style="color:var(--js-color)">document</span>.<span style="color:gold">getElementsByTagName(<span style="color:orange">"name"</span>)</span></pre>
-            </div> */}
+            <CodeHighlighter code={`document.getElementsByTagName("name")`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
-        <img src={images.js72_getElementsByTagName} className="img"/>
-        <div className="styleee">  
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="getElementsByTagName" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title="getElementsByTagName" logo={images.html_logo} styleAdd={"p-0"} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div>div 1</div>
             <div>div 2</div>
             <div>div 3</div>
             <div>div 4</div>
-            <div className="h4">
-                NUmbers div = 5
-            </div>
-        </div>
+            <h2> Numbers div = 5 </h2>
+        </Result>
     </article>
 </section>
     )

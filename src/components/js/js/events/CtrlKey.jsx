@@ -28,19 +28,14 @@ export default function OnctrlKey(){
     <p className="style_divv mt-5">
         تقوم الخاصية <b>onctrlKey</b> بإرجاع قيمة منطقية تشير إلى ما إذا كان قد تم الضغط على مفتاح <kbd>CTRL</kbd> عند تشغيل حدث الماوس أم لا.<br/>
         هذه الخاصية للقراءة فقط.
-        {/* <div className="codeStudio codeStudio alert bg-dark mt-2 pb-0" dir="ltr" >
-            <pre><span style="color:var(--js-color)">event</span>.<span style="color:var(--js-color)">ctrlKey</span></pre>  
-        </div> */}
+        <CodeHighlighter code={`event.ctrlKey`} language="js" addClass="mt-3 mb-3" copie={true} />
     </p>
-    {/* 
-    <div className="codeStudio alert bg-dark my-3 pb-0" dir="ltr" >
-    <pre><span style="color:var(--violet-color)">if</span>(<span style="color:var(--js-color)">event</span>.<span style="color:var(--js-color)">ctrlKey</span>){
-        <span style="color:green">// JavaScript Code </span>
-    }<span style="color:var(--violet-color)">else</span>{
-        <span style="color:green">// JavaScript Code </span>
-    }</pre>
-  </div> */}
-
+    <CodeHighlighter code={`if(event.ctrlKey){
+    // JavaScript Code 
+}else{
+    // JavaScript Code 
+}`} language="js" addClass="mt-3 mb-3" copie={true} />
+    
     <div className="mital"> متال :  </div>
     <img src={images.js133_ctrlKey} className="img"/>
     <div className="styleee">

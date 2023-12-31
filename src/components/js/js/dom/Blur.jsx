@@ -8,15 +8,23 @@ export default function Blur(){
     // btn.addEventListener('click', function(){
     //   text.blur()
     // });
+    const codeExemple1= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript blur</h1>
     <article>
         <p className="style_divv mt-5">
             تزيل طريقة <bdi><b>blur()</b></bdi> التركيز من عنصر.
-            {/* <div className="codeStudio alert bg-dark  mt-2 pb-0" dir="ltr">
-                <pre><span style="color:var(--js-color)">element</span>.<span style="color:gold">blur()</span></pre>
-            </div> */}
+            <CodeHighlighter code={`element.blur()`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
         <img src={images.js82_blur} className="img"/>

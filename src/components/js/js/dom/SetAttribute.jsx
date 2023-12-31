@@ -6,6 +6,16 @@ export default function SetAttribute(){
     // const div = document.createElement("div");
     // div.setAttribute("class","reda")
     // res.appendChild(div)
+        const codeExemple1= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript setAttribute</h1>
@@ -14,9 +24,7 @@ export default function SetAttribute(){
         <p className="style_divv mt-5">
             يعين الأسلوب <bdi><b>setAttribute()</b></bdi> قيمة جديدة للسمة.<br/>
             إذا كانت السمة غير موجودة ، يتم إنشاؤها أولاً.
-            {/* <div className="alert bg-dark pb-0 mt-3">
-                <pre> <span style="color:var(--js-color)">element</span>.<span style="color:gold">setAttribute(<span style="color:white;">name</span>, <span style="color:white;">value</span>)</span></pre></div>
-            </div> */}
+            <CodeHighlighter code={`element.setAttribute(name, value)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
         <img src={images.js146_setAttribute} className="img"/>

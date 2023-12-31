@@ -38,6 +38,12 @@ export default function Onfullscreenchange(){
     // document.addEventListener("fullscreenchange", function() {
     //   output.innerHTML = "<h2>fullscreenchange event fired!</h2>";
     // });
+    const code1 = `<!-- Code HTML -->
+<element onfullscreenchange="//script">`
+    const code2 = `// Code JavaScript
+object.onfullscreenchange = function(){  //myScript  }`
+    const code3 = `//  Code JavaScript using the addEventListener()
+object.addEventListener("fullscreenchange", function_name )`
   return(
 <section className="section-conetent">
   <h1 className="heading-style heading-style-js-color">JavaScript onfullscreenchange</h1>
@@ -53,18 +59,9 @@ export default function Onfullscreenchange(){
                 </ul>
             </div>
 
-            {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr" >
-                <pre><span style="color:green">&lt;!-- Code HTML --&gt;</span>
-        <span style="color:var(--html-color-tags)">&lt;element</span> <span style="color:var(--js-color)">onfullscreenchange</span>=<span style="color:orange;">"<span style="color:green">//script</span>"</span><span style="color:var(--html-color-tags);">&gt;</span></pre>  
-            </div>
-            <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr" >
-                <pre><span style="color:green">&lt;!-- Code JavaScript --&gt;</span>
-        <span style="color:var(--js-color)">object</span>.<span style="color:var(--js-color)">onfullscreenchange</span> = <span style="color:var(--html-color-tags)">function()</span>{ <span style="color:green"> //myScript </span> }</pre>  
-            </div>
-            <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr" >
-                <pre><span style="color:green">&lt;!-- Code JavaScript using the addEventListener() --&gt;</span>
-        <span style="color:var(--js-color)">object</span>.<span style="color:gold">addEventListener(</span><span style="color:orange;">"fullscreenchange"</span>, function_name <span style="color:gold">)</span></pre>  
-            </div>*/}
+            <CodeHighlighter code={code1} language="html" addClass="mt-3 mb-3" copie={true} />
+            <CodeHighlighter code={code2} language="js" addClass="mt-3 mb-3" copie={true} />
+            <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
         </p> 
         {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr" >
         <b className="d-block mt-3 text-danger"> Open fullscreen </b>

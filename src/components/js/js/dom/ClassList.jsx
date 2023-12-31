@@ -2,6 +2,16 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function ClassList(){
+        const codeExemple1= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript classList</h1>
@@ -9,9 +19,7 @@ export default function ClassList(){
         <h2 className="title-h2">1- classList </h2>
         <p className="style_divv">
             <bdi><b>Element.classList</b></bdi> هي خاصية للقراءة فقط تقوم بإرجاع مجموعة <b>DOMTokenList</b> الحية لسمات فئة العنصر. يمكن بعد ذلك استخدام هذا لمعالجة قائمة الفصل.
-            {/* <div className="codeStudio codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--js-color)">document</span>.<span style="color:var(--js-color)">classList</span> ;</pre>
-            </div> */}
+            <CodeHighlighter code={`document.classList ;`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
         <img src={images.js62_classList} className="img"/>
@@ -32,15 +40,12 @@ export default function ClassList(){
         <h2 className="title-h2">2- classList value </h2>
         <p className="style_divv">
             على الرغم من أن خاصية <b>classList</b> نفسها للقراءة فقط ، يمكنك تعديل <b>DOMTokenList</b> المقترنة بها باستخدام طرق <b><bdi>add()</bdi></b> ، <b><bdi>remove()</bdi></b> ،  <b><bdi>replace()</bdi></b> ، و <b><bdi>toggle()</bdi></b>.
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:var(--js-color)">document</span>.<span style="color:var(--js-color)">classList</span>.<span style="color:gold">add(<span style="color: orange;">"className1"</span>, <span style="color: orange;">"className2"</span>, ... )</span> ;
-        <span style="color:var(--js-color)">document</span>.<span style="color:var(--js-color)">classList</span>.<span style="color:gold">remove(<span style="color: orange;">"className1"</span>, <span style="color: orange;">"className2"</span>, ... )</span> ;
-        <span style="color:var(--js-color)">document</span>.<span style="color:var(--js-color)">classList</span>.<span style="color:gold">toggle(<span style="color: orange;">"className1"</span>, <span style="color: orange;">"className2"</span>, ... )</span> ;
-        <span style="color:var(--js-color)">document</span>.<span style="color:var(--js-color)">classList</span>.<span style="color:gold">replace(<span style="color: orange;">"className1"</span>, <span style="color: orange;">"className2"</span>)</span> ;</pre>
-            </div> */}
+            <CodeHighlighter code={`document.classList.add("className1", "className2", ... ) ;
+document.classList.remove("className1", "className2", ... ) ;
+document.classList.toggle("className1", "className2", ... ) ;
+document.classList.replace("className1", "className2") ;`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
-        
-        <div className="mital">متال :  </div>
+        <div className="mital">متال 1 :  </div>
         <img src={images.js62_classList3} className="img"/>
         <div className="styleee">
             alert alert-primary border border-primary

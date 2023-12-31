@@ -21,9 +21,7 @@ export default function SetInterval(){
         <p className="style_divv mt-5">
             تستدعي طريقة <bdi><b>setInterval()</b></bdi> دالة في فترات زمنية محددة (بالمللي ثانية).<br/>
             تستمر طريقة <bdi><b>setInterval()</b></bdi> في استدعاء الوظيفة حتى يتم استدعاء <bdi>clearInterval()</bdi> أو تصبح النافذة
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-                <pre><span style="color:gold">setInterval(</span> Function_name <span style="color:gold">,</span> milliseconds<span style="color:gold">)</span></pre>
-            </div> */}
+            <CodeHighlighter code={`setInterval( Function_name , milliseconds)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال 1 :  </div>
         <img src={images.js35_setInterval} className="img"/>

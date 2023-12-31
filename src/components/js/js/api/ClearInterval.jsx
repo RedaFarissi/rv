@@ -15,18 +15,16 @@ export default function ClearInterval(){
     // function stop_Inter(){
     //     clearInterval(clear)
     // }
+    const code11 = `let variable =  setInterval( Function_name , milliseconds);
 
+clearInterval(variable);`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript clearInterval</h1>
     <article>
         <p className="style_divv mt-5">
             لمسح فاصل زمني ، قم إدخال قيمة  <bdi><b>setInterval()</b></bdi> داخل متغير تم قم بإسناد قيمة المتغير داخل <bdi><b>clearInterval()</b></bdi> .<br/>
-            {/* <div className="codeStudio alert bg-dark" dir="ltr" style="margin-top: 9px;padding-bottom:0pt;">
-        <pre><span style="color:var(--html-color-tags)">let</span> variable =  <span style="color:gold">setInterval(</span> Function_name <span style="color:gold">,</span> milliseconds<span style="color:gold">)</span>;
-
-        <span style="color:gold">clearInterval(</span>variable<span style="color:gold">)</span>;</pre>
-            </div> */}
+            <CodeHighlighter code={code11} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         
         <div className="mital"> متال  :  </div>

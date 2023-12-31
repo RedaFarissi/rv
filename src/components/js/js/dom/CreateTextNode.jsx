@@ -2,15 +2,23 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function CreateTextNode(){
+        const codeExemple1= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript createTextNode</h1>
     <article>
         <p className="style_divv mt-5">
             يقوم أسلوب <bdi><b>createTextNode()</b></bdi> بإنشاء عقدة نصية.<br/>
-            {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr">
-                <pre><span style="color:var(--js-color)">document</span>.<span style="color:gold">createTextNode(</span>text<span style="color:gold">)</span></pre>
-            </div> */}
+            <CodeHighlighter code={`document.createTextNode(text)`} language="js" addClass="mt-3 mb-3" copie={true} />
             <div className="alert alert-info d-inline-block"> عقد = node</div>
         </p>
         <div className="alert alert-warning">

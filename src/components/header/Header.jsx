@@ -9,6 +9,7 @@ export default function Header(){
     {name:"JAVASCRIPT" , link:"js"},
     {name:"REACT.js" , link:"react"},
     {name:"VUE.js" , link:"vue"},
+    {name:"SQL" , link:"sql"},
     {name:"PYTHON" , link:"python"},
     {name:"DJANGO" , link:"django"},
     {name:"DJANGO API" , link:"django_api"},

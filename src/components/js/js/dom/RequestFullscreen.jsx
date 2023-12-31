@@ -22,6 +22,26 @@ export default function RequestFullscreen(){
   //       document.msExitFullscreen();
   //     }
   //   }
+    const codeExemple1= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    const codeExemple2= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
   return(
 <section className="section-conetent">
   <h1 className="heading-style heading-style-js-color">JavaScript requestFullscreen</h1>
@@ -29,10 +49,20 @@ export default function RequestFullscreen(){
       <p className="style_divv mt-5">
           فتح طريقة <bdi><b>requestFullscreen()</b></bdi> عنصرًا في وضع ملء الشاشة.<br/>
           استخدم طريقة <bdi><b>exitFullscreen()</b></bdi> لإلغاء وضع ملء الشاشة.<br/>
-          {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr" >
-              <pre><span style="color:var(--js-color)">HTMLElementObject</span>.<span style="color:var(--js-color)">requestFullscreen()</span></pre>  
-          </div> */}
+            <CodeHighlighter code={`HTMLElementObject.requestFullscreen()`} language="js" addClass="mt-3 mb-3" copie={true} />
       </p>
+      <CodeHighlighter code={`//Open fullscreen
+var elem = document.decumentElement
+function function openFullscreen() {
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    }else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+    }else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+    }
+}`} language="js" addClass="mt-3 mb-3" copie={true} />
+
       {/* <div className="codeStudio alert bg-dark mt-2 pb-0" dir="ltr" >
           <b className="d-block my-3 text-danger"> Open fullscreen </b>
           <pre><span style="color:var(--html-color-tags)">var</span> elem = <span style="color:var(--js-color)">document</span>.<span style="color:var(--js-color)">decumentElement</span>
