@@ -2,22 +2,51 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function CreateElement(){
-    // function myFunction() {
-    //     var y = document.createElement("INPUT");
-    //     y.setAttribute("type", "text");
-    //     y.setAttribute("value", "Donald");
-    //     document.getElementById("resulTa").appendChild(y);
-    //   }
-        const codeExemple1= { 
-    head:`
-    <style>
-      
-    </style>`,
-    code: `      <h2 id="result"></h2>
+    const codeExemple1= { 
+    code: `      <h2>Heading Element 1</h2>
       
      <script src="./index.js"></script>`,
-    script:``
+    script:`var h2 = document.createElement("h2");
+h2.innerHTML = "Heading Element 2";
+document.body.appendChild(h2);`
     }
+    const codeExemple2= { 
+    code: `      <h2>Heading Element</h2>
+     <div id="DIV"> </div>
+          
+     <script src="./index.js"></script>`,
+    script:`var img = document.createElement("img");
+img.src = "./hajime.jpg";
+document.getElementById("DIV").appendChild(img);`
+    }
+    const codeExemple3= { 
+    code: `      <button onclick="myFunction()" class="btn btn-primary"> click </button>
+     <div id="resulTa"> </div>
+      
+     <script src="./index.js"></script>`,
+    script:`function myFunction() {
+    var x = document.createElement("FORM");
+    x.setAttribute("id", "IdForm");
+    document.getElementById("resulTa").appendChild(x);
+
+    var y = document.createElement("INPUT");
+    y.setAttribute("type", "text");
+    document.getElementById("IdForm").appendChild(y);
+
+    y.setAttribute("value", "Donald");
+}`
+    }
+    function myFunction() {
+        var x = document.createElement("FORM");
+        x.setAttribute("id", "IdForm");
+        document.getElementById("resulTa").appendChild(x);
+      
+        var y = document.createElement("INPUT");
+        y.setAttribute("type", "text");
+        document.getElementById("IdForm").appendChild(y);
+      
+        y.setAttribute("value", "Donald");
+      }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript createElement</h1>
@@ -27,25 +56,27 @@ export default function CreateElement(){
             <CodeHighlighter code={`let variable = document.createElement('type')`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال 1 :  </div>
-        <img src={images.js65_createElement} className="img"/>
-        <div className="styleee img">
-            <h2>Heading Element 1</h2>
-            <h2>Heading Element 2</h2>
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="createElement" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title="createElement" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>Heading Element 1<br/>Heading Element 2</h2>
+        </Result>
         <div className="mital">متال 2 :  </div>
-        <img src={images.js65_createElement2} className="img"/>
-        <div className="styleee img">
-            <h2>Heading Element 1</h2>
-            <div><img src={images.hajime}  style={{height: "250px",objectFit:"contain"}}/></div>
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="createElement" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title="createElement" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>Heading Element</h2>
+            <img src={images.hajime}  style={{height: "250px",objectFit:"contain"}}/>
+        </Result>
         <div className="mital">متال 3 :  </div>
-        <img src={images.js65_createElement3} className="img"/>
-        <div className="styleee img">
-            <button onclick="myFunction()" className="btn btn-primary mb-2">click</button>
+        <CodeHighlighter file_name="index.html" code={codeExemple3.code} language="html" is_html={true} title="createElement" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title="createElement" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <button onClick={myFunction} className="btn btn-primary mb-2">click</button>
             <div id="resulTa">
         
             </div>
-        </div>
+        </Result>
     </article>
 </section>
     )

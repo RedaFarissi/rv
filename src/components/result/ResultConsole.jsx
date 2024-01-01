@@ -2,7 +2,7 @@ export default function ResultConsole(props){
     return(
         <div className={`style-result`}>
             <div className="style-result-header">
-              <div className="style-result-header-1">
+                <div className="style-result-header-1">
                     <div className="style-result-header-1-left">
                         <div className="result-header-1-tab"> 
                             <div>
@@ -23,8 +23,8 @@ export default function ResultConsole(props){
                         <i className="fa-regular fa-square me-5"></i>
                         <i className="fa-solid fa-xmark me-3"></i>
                     </div>
-              </div>
-              <div className="style-result-header-2">
+                </div>
+                <div className="style-result-header-2">
                     <div className="style-result-header-2-left">
                         <i className="fa-solid fa-arrow-left"></i>
                         <i className="fa-solid fa-arrow-right"></i>
@@ -38,7 +38,7 @@ export default function ResultConsole(props){
                     <div className="style-result-header-2-right">
                         <i className="fa-solid fa-ellipsis-vertical"></i>
                     </div>
-              </div>
+                </div>
             </div>
             <div className={`console-style  ${props.styleAdd}`}>
                 <div className="console-body">

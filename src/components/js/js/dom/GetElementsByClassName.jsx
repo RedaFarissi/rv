@@ -60,13 +60,13 @@ for (let i = 0; i < h2.length; i++) {
         <div className="mital">متال 1 :  </div>
         <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="getElementsByClassName" addClass="mt-3 mb-3" copie={true}  number={true}/>  
         <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
-        <Result title="getElementsByClassName" logo={images.html_logo} styleAdd={"p-0"} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+        <Result title="getElementsByClassName" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>4</h2>
         </Result>
         <div className="mital">متال 2 : </div>
         <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="getElementsByClassName" addClass="mt-3 mb-3" copie={true}  number={true}/>  
         <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
-        <Result title="getElementsByClassName" logo={images.html_logo} styleAdd={"p-0"} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+        <Result title="getElementsByClassName" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2 style={{backgroundColor: "brown", fontSize: "23px"}} class="h2">0</h2>
             <h2 style={{backgroundColor: "brown", fontSize: "23px"}} class="h2">1</h2>
             <h2 style={{backgroundColor: "yellow", fontSize: "23px"}} class="h2">2</h2>

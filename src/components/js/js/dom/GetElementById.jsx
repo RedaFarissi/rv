@@ -37,7 +37,7 @@ document.getElementById("result").innerHTML += d + "<br>";`
         <div className="mital">متال :  </div>
         <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="getElementById" addClass="mt-3 mb-3" copie={true}  number={true}/>  
         <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
-        <Result title="getElementById" logo={images.html_logo} styleAdd={"p-0"} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+        <Result title="getElementById" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2 id="id1">heading with id1</h2>
             <div id="id2">div with id2</div>
             <input id="id3" type="text" value="input with id3"/>

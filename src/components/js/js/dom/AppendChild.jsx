@@ -3,14 +3,16 @@ import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function AppendChild(){
     const codeExemple1= { 
-    head:`
-    <style>
-      
-    </style>`,
-    code: `      <h2 id="result"></h2>
+    code: `      <ul id="ul" class="fs-4">
+         <li>HTML</li>
+         <li>CSS</li>
+     </ul>
       
      <script src="./index.js"></script>`,
-    script:``
+    script:`const node = document.createElement("li");
+const textnode = document.createTextNode("JavaScript");
+node.appendChild(textnode);
+document.getElementById("ul").appendChild(node);`
     }
     return(
 <section className="section-conetent">
@@ -23,14 +25,15 @@ export default function AppendChild(){
             <CodeHighlighter code={`node.appendChild(node)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
-        <img src={images.js66_appendChild} className="img"/>
-        <div className="styleee">
-            <ul id="ul" className="fs-4">
-                <li> HTML </li>
-                <li> CSS </li>
-                <li> JavaScript </li>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="appendChild" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title="appendChild" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <ul id="ul" class="fs-4">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
             </ul>
-        </div>
+        </Result>
     </article>
 </section>
     )

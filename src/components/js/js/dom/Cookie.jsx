@@ -2,16 +2,28 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Cookie(){
-        const codeExemple1= { 
-    head:`
-    <style>
-      
-    </style>`,
+    const codeExemple1= { 
     code: `      <h2 id="result"></h2>
       
      <script src="./index.js"></script>`,
-    script:``
+    script:`let a = document.cookie = "user_name = Reda Eskouni; age = 25ans;"
+document.getElementById("result").innerHTML = a + "<br>"
+document.getElementById("result").innerHTML += \`<b>\${typeof(a)}</b>\``
     }
+    const codeExemple2= { 
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:`const result = document.getElementById("result")
+let a = document.cookie = "user_name = Reda Eskouni; age = 25ans;"
+
+result.innerHTML = a + "<br/>"
+result.innerHTML += \`<b>\${typeof(a)}</b><br/>\`
+
+a = document.cookie = "user_name = Adil Toumi..; age = 18ans;"
+result.innerHTML += a + "<br>"`
+    }
+
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript cookie</h1>
@@ -51,11 +63,11 @@ export default function Cookie(){
             سيعيد document.cookie جميع  <b>cookie</b> في سلسلة واحدة <bdi> cookie1=value; cookie2=value; cookie3=value; </bdi>
         </div>
         <div className="mital"> متال :  </div>
-        <img src={images.js61_cookie} className="img"/>
-        <div className="styleee">
-            user_name = Reda Eskouni;age = 25ans;<br/>
-        </div>
-        <b>string</b>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="cookie" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title="cookie" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>user_name = Reda Eskouni; age = 25ans;<br/>string</h2>
+        </Result>
     </article>
     <article>
         <h2 className="title-h2">4- Change a Cookie with JavaScript</h2>
@@ -63,12 +75,11 @@ export default function Cookie(){
             باستخدام <b>JavaScript</b> ، يمكنك تغيير <b>cookie</b> بنفس طريقة إنشائه . <br/>
         </p>
         <div className="mital"> متال :  </div>
-        <img src={images.js61_cookie2} className="img"/>
-        <div className="styleee">
-            user_name = Reda Eskouni;age = 25ans;<br/>
-            <b>string</b><br/>
-            user_name = Aymane Toumi;age = 18ans;
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="cookie" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title="cookie" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2> user_name = Reda Eskouni; age = 25ans;<br/>string<br/>user_name = Adil Toumi..; age = 18ans; </h2>
+        </Result>
     </article>
     <article>
         <h2 className="title-h2">5- Delete a Cookie with JavaScript </h2>
