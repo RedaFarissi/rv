@@ -10,6 +10,8 @@ export {default as Js} from './js/Js';
 
 export {default as React} from './react/React';
 
+export {default as Vue} from './vue/Vue';
+
 export {default as Django} from './django/Django';
 
 export {default as Laravel} from './laravel/Laravel';

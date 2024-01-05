@@ -21,7 +21,7 @@ export default function Onvolumechange(){
 <input onvolumechange="function_name()"/>`
   const code2 = `// Code JavaScript 
 object.onvolumechange = function(){  //myScript  }`
-  const code3 = ` Code JavaScript using the addEventListener()
+  const code3 = `// Code JavaScript using the addEventListener()
 object.addEventListener("volumechange", function_name )`
     const codeExemple1= { 
     head:`
@@ -45,11 +45,11 @@ object.addEventListener("volumechange", function_name )`
               <li>كتم صوت مشغل الوسائط أو إلغاء كتمه .</li>
           </ul>
           استخدم خاصية <b>volume</b>  لكائن <b>video</b>/<b>audio</b> لتعيين أو إرجاع مستوى صوت <b>video</b>/<b>audio</b>.<br/>
-          <CodeHighlighter code={code1} language="js" addClass="mt-3 mb-3" copie={true} />
+          <CodeHighlighter code={code1} language="html" addClass="mt-3 mb-3" copie={true} />
           <CodeHighlighter code={code2} language="js" addClass="mt-3 mb-3" copie={true} />
           <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
       </p>
-      <div className="mital"> متال :  </div>
+      <div className="mital"> متال 1 :  </div>
       <img src={images.js134_onvolumechange} className="img"/>
       <div className="styleee img">
           <p> Try to change the volume  in the bottom right corner.</p>

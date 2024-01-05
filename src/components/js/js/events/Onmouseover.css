@@ -1,0 +1,14 @@
+.js-onmouseover-div-box {
+    margin: 9px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 2rem ;
+    background-color: lightgray;
+  }
+.js-onmouseover-p {
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    background-color: white;
+    font-size: 20px
+  }

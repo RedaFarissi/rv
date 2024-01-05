@@ -1,5 +1,5 @@
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
-import { Header , Home , Html , Css, Js , React , Cmd , Git , Django , Laravel} from './components/path';
+import { Header , Home , Html , Css, Js , React , Vue , Cmd , Git , Django , Laravel} from './components/path';
 import "./App.sass"
 
 function App() {
@@ -45,20 +45,32 @@ function App() {
     "Session",
     "Context_Processors",
     "ngrok"
-]
-
-  const laravel_matrix = [
-      ["MVC" , "what_is_laravel","what_we_need_to_use_laravel","First_Laravel_Project","run_project","artisan","views","route","route_to_views_without_puch_data","route_to_views_and_puch_data","request","Controller","group_duplicate_items_on_one_page","ussing_css_and_javaScript","route_and_name","handle_data_in_views","create_controller_to_use_data","method_in_controller","recource","list_all_route_in_project",],
-      ["database" , "Connect_with_database","Create_models","create_table_in_db_from_laravel","AddColumnInTable","Foreign_Keys","droppingColumnsFromTable","truncate_models_table","dropTheLastMigrateInDB","Clearalltableindbandcreatehimagain","soft_delete","eloquent_scopes","Seeder_class",  ],
-      ["database Route::resource" , "GetAllDataFromDB","Upload_image","Multiple_Images_Upload","ShowDetail_with_recource","Update_by_id_with_recource","Delete_by_id_with_recource","only_and_except",      ],
-      ["database Query builder" , "Intro_QueryBuilder","insertInQueryBuilder","GetWithQueryBuilder","full_Exemple_Create_Edit_Delete","Delete_all_Data_with_Query_Builder","truncate_with_Query_Builder",],
-      ["middleware" , "middlewareExemple1", "middlewareExemple2"],
-      ["Tinker" , "useTinker","TinkerExemple1",  ],
-      ["Mail","send-mail"],
-      ["Packages" ,"Authentication_UI","Authentication_Breeze","Paypal_Payment","Stripe_Payment_Integration"],
-      ["github" ,"clone_laravel_project","laravel_docker"],
   ]
-  
+  const laravel_matrix = [
+    ["MVC" , "what_is_laravel","what_we_need_to_use_laravel","First_Laravel_Project","run_project","artisan","views","route","route_to_views_without_puch_data","route_to_views_and_puch_data","request","Controller","group_duplicate_items_on_one_page","ussing_css_and_javaScript","route_and_name","handle_data_in_views","create_controller_to_use_data","method_in_controller","recource","list_all_route_in_project",],
+    ["database" , "Connect_with_database","Create_models","create_table_in_db_from_laravel","AddColumnInTable","Foreign_Keys","droppingColumnsFromTable","truncate_models_table","dropTheLastMigrateInDB","Clearalltableindbandcreatehimagain","soft_delete","eloquent_scopes","Seeder_class",  ],
+    ["database Route::resource" , "GetAllDataFromDB","Upload_image","Multiple_Images_Upload","ShowDetail_with_recource","Update_by_id_with_recource","Delete_by_id_with_recource","only_and_except",      ],
+    ["database Query builder" , "Intro_QueryBuilder","insertInQueryBuilder","GetWithQueryBuilder","full_Exemple_Create_Edit_Delete","Delete_all_Data_with_Query_Builder","truncate_with_Query_Builder",],
+    ["middleware" , "middlewareExemple1", "middlewareExemple2"],
+    ["Tinker" , "useTinker","TinkerExemple1",  ],
+    ["Mail","send-mail"],
+    ["Packages" ,"Authentication_UI","Authentication_Breeze","Paypal_Payment","Stripe_Payment_Integration"],
+    ["github" ,"clone_laravel_project","laravel_docker"],
+  ]
+  const vue_matrix = [
+    [ "How_to_create_Vuejs","install_dependencies","ship_your_app_to_production"],
+    "create_state_in_Vuejs",
+    "v-text",
+    "v-html",
+    "v-for",
+    "v-if_and_v-else-if_and_v-else",
+    "v-once",
+    "v-show",
+    "v-bind",
+    "v-model",
+    "Component_in_vuejs",
+    "change_value_state_when_click_button_in_another_Component",
+  ]
   return (
     <Router>
         <Header />
@@ -68,6 +80,7 @@ function App() {
             <Route path='/css/*' element={<Css  css_list={css_list}  />} />
             <Route path='/js/*' element={<Js js_matrix={js_matrix} />} />
             <Route path='/react/' element={<React react_matrix={react_matrix} />} />
+            <Route path='/vue/' element={<Vue vue_matrix={vue_matrix} />} />
             <Route path='/django/*' element={<Django django_matrix={django_matrix} />} />
             <Route path='/laravel/*' element={<Laravel laravel_matrix={laravel_matrix}  />} />
             <Route path='/power-shell' element={<Cmd cmd_list={cmd_list}  />} />

@@ -28,16 +28,16 @@ object.addEventListener("loadeddata", function_name )`
       
      <script src="./index.js"></script>`,
     script:`  function function_name() {
-  alert("Starting to load video");
+    alert("Starting to load video");
 }
 function function_name2() {
-  alert("durationchange to load video");
+    alert("durationchange to load video");
 }
 function function_name3() {
-  alert("Meta data for video loaded");
+    alert("Meta data for video loaded");
 }
 function function_name4() {
-  alert("onloadeddata");
+    alert("onloadeddata");
 }`
     }
   return(
@@ -64,7 +64,7 @@ function function_name4() {
         <div className="mital">متال :  </div>
         <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="onloadeddata" addClass="mt-3 mb-3" copie={true}  number={true}/>  
         <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
-        <ResultAlert title='onloadeddata' logo={images.html_logo} clickOk={clickOk} displayAlert={displayAlertExemple} alertValue={valueAlertExemple} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+        <ResultAlert title="onloadeddata" logo={images.html_logo} clickOk={clickOk} displayAlert={displayAlertExemple} alertValue={valueAlertExemple} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <video controls width="50%">
                 <source src={images.video} type="video/mp4"/>
                 Your browser does not support HTML5 video.
