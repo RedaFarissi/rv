@@ -20,6 +20,29 @@ export default function Oncontextmenu(){
 object.oncontextmenu = function(){  //myScript  }`
   const code3 = `// Code JavaScript using the addEventListener() 
 object.addEventListener("contextmenu", function_name )`
+    const codeExemple1= { 
+    code: `      <div id="div_element">
+         div element with Event oncontextmenu
+     </div>
+      
+     <script src="./index.js"></script>`,
+    script:`const div_element = document.getElementById("div_element");
+div_element.oncontextmenu = () => {
+    div_element.style.backgroundColor = "red";
+    div_element.style.color = "white";
+    div_element.style.fontSize = "22px";
+    div_element.style.border = "2px solid black";
+    div_element.style.padding = "20px";
+};`
+    }
+    function functionContextMenu(){
+      const div_element = document.getElementById("oncontextmenu-js");
+      div_element.style.backgroundColor = "red";
+      div_element.style.color = "white";
+      div_element.style.fontSize = "22px";
+      div_element.style.border = "2px solid black";
+      div_element.style.padding = "20px";
+    }
   return(
 <section className="section-conetent">
   <h1 className="heading-style heading-style-js-color">JavaScript oncontextmenu</h1>
@@ -32,12 +55,13 @@ object.addEventListener("contextmenu", function_name )`
           <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
       </p>
       <div className="mital">متال :  </div>
-      <img src={images.js100_oncontextmenu} className="img"/>
-      <div className="styleee">
-          <div id="div_element"> 
+      <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="oncontextmenu" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+      <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+      <Result title="oncontextmenu" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+          <div id="oncontextmenu-js" onContextMenu={functionContextMenu}> 
             div element with Event oncontextmenu
           </div>
-      </div>
+      </Result>
   </article>
 </section>
     )

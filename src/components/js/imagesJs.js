@@ -1,5 +1,11 @@
+//will stay
 import hajime from "../../assests/images/js/hajime.jpg"
 import hajime2 from "../../assests/images/js/hajime2.jpg"
+import js_Introduction3 from "../../assests/images/js/js_Introduction3.png"
+import js64_createComment_2 from "../../assests/images/js/js64_createComment 2.png"
+import js53_beforeprint_3 from "../../assests/images/js/js53_beforeprint 3.png"
+
+//will delete
 import js100_oncontextmenu from "../../assests/images/js/js100_oncontextmenu.png"
 import js101_oncopy from "../../assests/images/js/js101_oncopy.png"
 import js102_oncut from "../../assests/images/js/js102_oncut.png"
@@ -106,7 +112,6 @@ import js51_navigator4 from "../../assests/images/js/js51_navigator4.png"
 import js51_navigator5 from "../../assests/images/js/js51_navigator5.png"
 import js52_print from "../../assests/images/js/js52_print.png"
 import js53_beforeprint_2 from "../../assests/images/js/js53_beforeprint 2.png"
-import js53_beforeprint_3 from "../../assests/images/js/js53_beforeprint 3.png"
 import js53_beforeprint from "../../assests/images/js/js53_beforeprint.png"
 import js54_afterprint_2 from "../../assests/images/js/js54_afterprint 2.png"
 import js54_afterprint_3 from "../../assests/images/js/js54_afterprint 3.png"
@@ -139,7 +144,6 @@ import js62_classList4 from "../../assests/images/js/js62_classList4.png"
 import js62_classList5 from "../../assests/images/js/js62_classList5.png"
 import js63_createAttribute from "../../assests/images/js/js63_createAttribute.png"
 import js63_createAttribute2 from "../../assests/images/js/js63_createAttribute2.png"
-import js64_createComment_2 from "../../assests/images/js/js64_createComment 2.png"
 import js64_createComment from "../../assests/images/js/js64_createComment.png"
 import js65_createElement from "../../assests/images/js/js65_createElement.png"
 import js65_createElement2 from "../../assests/images/js/js65_createElement2.png"
@@ -191,13 +195,18 @@ import js97_onclick from "../../assests/images/js/js97_onclick.png"
 import js97_onclick2 from "../../assests/images/js/js97_onclick2.png"
 import js98_ondblclick from "../../assests/images/js/js98_ondblclick.png"
 import js99_oninput from "../../assests/images/js/js99_oninput.png"
-import js_Introduction3 from "../../assests/images/js/js_Introduction3.png"
+
 import music from "../../assests/images/js/music.mp3"
 import video from "../../assests/images/js/video.mp4"
 import html_logo from "../../assests/images/logo/html_logo.png"
 
 const images = {  
-    hajime,hajime2,js100_oncontextmenu,js101_oncopy,js102_oncut,js103_pageX,js104_oninvalid,
+    // used
+    hajime,hajime2,js_Introduction3,music,video,html_logo,js64_createComment_2,
+    js53_beforeprint_3,
+    
+    //delete it 
+    js100_oncontextmenu,js101_oncopy,js102_oncut,js103_pageX,js104_oninvalid,
     js104_oninvalid2,js105_onkeydown,js106_onkeypress,js107_onkeyup,js108_onload,js109_onmousedown,
     js110_onmouseup,
     js111_onmouseenter,js112_onmouseleave,js113_onmousemove,js114_event_target,js114_event_target2,
@@ -220,13 +229,13 @@ const images = {
     js47_getComputedStyle2,js47_getComputedStyle3,js48_localStorage,js48_localStorage2,
     js49_sessionStorage,js49_sessionStorage2,js50_matchMedia,js51_navigator,
     js51_navigator2,js51_navigator3,js51_navigator4,js51_navigator5,js52_print,js53_beforeprint_2,
-    js53_beforeprint_3,js53_beforeprint,js54_afterprint_2,js54_afterprint_3,js54_afterprint,
+    js53_beforeprint,js54_afterprint_2,js54_afterprint_3,js54_afterprint,
     js55_addEventListener,js55_addEventListener2,js55_addEventListener3,js55_addEventListener4,
     js55_addEventListener5,js55_addEventListener6,js55_addEventListener7,js55_addEventListener8,
     js56_removeEventListener,js57_activeElement,js57_activeElement2,js58_children,js58_children2,
     js59_baseURI,js60_body_2,js60_body,js60_body2_2,js60_body2,
     js61_cookie,js61_cookie2,js62_classList,js62_classList2_2,js62_classList2,js62_classList3,
-    js62_classList4,js62_classList5,js63_createAttribute,js63_createAttribute2,js64_createComment_2,
+    js62_classList4,js62_classList5,js63_createAttribute,js63_createAttribute2,
     js64_createComment,js65_createElement,js65_createElement2,js65_createElement3,js66_appendChild,
     js67_createTextNode,js68_docktype,js69_getElementById,js70_getElementsByClassName,
     js70_getElementsByClassName2,js71_getElementsByName,js71_getElementsByName2,
@@ -240,6 +249,6 @@ const images = {
     js97_onclick,js97_onclick2,js98_ondblclick,js99_oninput,
     
     
-    js_Introduction3,music,video,html_logo,
+    
  }
 export default images ;

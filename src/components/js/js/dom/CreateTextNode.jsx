@@ -3,14 +3,11 @@ import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function CreateTextNode(){
         const codeExemple1= { 
-    head:`
-    <style>
-      
-    </style>`,
-    code: `      <h2 id="result"></h2>
-      
-     <script src="./index.js"></script>`,
-    script:``
+    code: `      <script src="./index.js"></script>`,
+    script:`const element = document.createElement("h2");
+const textNode = document.createTextNode("heading with createTextNode");
+element.appendChild(textNode);
+document.body.appendChild(element);`
     }
     return(
 <section className="section-conetent">
@@ -19,7 +16,6 @@ export default function CreateTextNode(){
         <p className="style_divv mt-5">
             يقوم أسلوب <bdi><b>createTextNode()</b></bdi> بإنشاء عقدة نصية.<br/>
             <CodeHighlighter code={`document.createTextNode(text)`} language="js" addClass="mt-3 mb-3" copie={true} />
-            <div className="alert alert-info d-inline-block"> عقد = node</div>
         </p>
         <div className="alert alert-warning">
         <div className="h4 pb-2">عناصر <b>HTML</b> هي عقد  </div> 
@@ -32,10 +28,11 @@ export default function CreateTextNode(){
         </ul>
         </div>
         <div className="mital">متال :  </div>
-        <img src={images.js67_createTextNode} className="img"/>
-        <div className="styleee">
-           <div className="h2">heading with createTextNode</div>
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="createTextNode" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title="createTextNode" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>heading with createTextNode</h2>
+        </Result>     
     </article>
 </section>
     )

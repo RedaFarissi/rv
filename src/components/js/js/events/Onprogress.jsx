@@ -1,16 +1,30 @@
 import images from "../../imagesJs"
-import { CodeHighlighter ,  Result} from "../../../path";
+import { CodeHighlighter ,  ResultAlert} from "../../../path";
+import { useState } from "react";
 
 export default function Onprogress(){
-    // function function_name(){
-    //     alert("onprogress");
-    //   }
+    const [displayAlertExemple,setDisplayAlertExemple] = useState(true)
+    function clickOk(){
+        setDisplayAlertExemple(false)
+    }
+
     const code1 = `<!-- Code HTML -->
 <video src="name.type" onprogress="//script">  </video> `
     const code2 = `// Code JavaScript 
 object.onprogress = function(){  //myScript  }`
     const code3 = `// Code JavaScript using the addEventListener() 
 object.addEventListener("progress", function_name )`
+    const codeExemple1= { 
+    code: `      <video controls width="50%">
+         <source src="./video.mp4" type="video/mp4"/>
+       Your browser does not support HTML5 video.
+     </video>
+      
+     <script src="./index.js"></script>`,
+    script:`function function_name(){
+     alert("onprogress");
+}`
+    }
     return(
   <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript onprogress</h1>
@@ -32,13 +46,14 @@ object.addEventListener("progress", function_name )`
             <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
-        <img src={images.js94_onprogress} className="img"/>
-        <div className="styleee"> 
-            <video controls onprogress="function_name()" width="50%">
-              <source src={images.video} type="video/mp4"/>
-              Your browser does not support HTML5 video.
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="onprogress" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <ResultAlert title='onprogress' logo={images.html_logo} clickOk={clickOk} displayAlert={displayAlertExemple} alertValue={`onprogress`} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <video controls width="50%" >
+                <source src={images.video} type="video/mp4"/>
+                Your browser does not support HTML5 video.
             </video>
-        </div>
+        </ResultAlert>   
     </article>
 </section>
     )

@@ -2,32 +2,22 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Onplay(){
-  // #input_test{ width: 50%;}
-
-  // var play = document.getElementById("plAy")
-  //   var pause = document.getElementById("pauSe")
-
-  //   play.addEventListener('click',function(){
-  //     document.getElementById('video_test').play()
-  //   })
-
-  //   pause.addEventListener('click',function(){
-  //     document.getElementById('video_test').pause()
-  //   })
-
-  //   function function_pause() {
-  //     alert("The video was paused.");
-  //   }
-    
-  //   function function_play(){
-  //     alert("The video was played.");
-  //   }
   const code1 = `<!-- Code HTML -->
 <element onplay="//script">`
   const code2 = `// Code JavaScript
 object.onplay = function(){  //myScript  }`
   const code3 = `// Code JavaScript using the addEventListener() 
 object.addEventListener("play", function_name )`
+    const codeExemple1= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
   return(
 <section className="section-conetent">
   <h1 className="heading-style heading-style-js-color">JavaScript onplay</h1>

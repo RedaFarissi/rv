@@ -7,20 +7,23 @@ export default function Title(){
     <style>
       
     </style>`,
-    code: `      <h2 id="result"></h2>
-      
+    code: `        <h2 id="result"> </h2>
+
      <script src="./index.js"></script>`,
-    script:``
+    script:`const result = document.getElementById("result")
+result.innerHTML = document.title`
     }
     const codeExemple2= { 
     head:`
     <style>
       
     </style>`,
-    code: `      <h2 id="result"></h2>
+    code: `      <h2 id="result"> </h2>
       
      <script src="./index.js"></script>`,
-    script:``
+    script:`const result = document.getElementById("result")
+document.title = "JAVASCRIPT TITLE"
+result.innerHTML = document.title`
     }
     return(
 <section className="section-conetent">
@@ -33,15 +36,17 @@ export default function Title(){
             <CodeHighlighter code={`document.title = "A new title"`} language="js" addClass="mt-3 mb-3" copie={true} />
         </div>
         <div className="mital">متال 1 :  </div>
-        <img src={images.js79_title} className="img"/>
-        <div className="styleee"> 
-            document title
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="JavaScript title" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title="JavaScript title" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>JavaScript title</h2>
+        </Result>   
         <div className="mital">متال 2 :  </div>
-        <img src={images.js79_title2} className="img"/>
-        <div className="styleee"> 
-            JAVASCRIPT TITLE
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="title" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title="JAVASCRIPT TITLE" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>JAVASCRIPT TITLE</h2>
+        </Result>
     </article>
 </section>
     )

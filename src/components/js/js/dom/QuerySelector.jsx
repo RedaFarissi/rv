@@ -3,24 +3,29 @@ import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function QuerySelector(){
     const codeExemple1= { 
-        head:`
-        <style>
-          
-        </style>`,
-        code: `      <h2 id="result"></h2>
-          
-         <script src="./index.js"></script>`,
-        script:``
-        }
-    const codeExemple2= { 
     head:`
     <style>
       
     </style>`,
-    code: `      <h2 id="result"></h2>
+    code: `     <a href="https://www.google.com" target="_blanck"> google</a> <br/>
+     <a href="https://www.facebook.com/" target="_blanck">facebook </a>
+     <h2 id="result"> </h2>
       
      <script src="./index.js"></script>`,
-    script:``
+    script:`const result = document.querySelector("#result")
+const first_a = document.querySelector("a")
+result.innerText = first_a `
+        }
+    const codeExemple2= { 
+    code: `        <div class="parent">
+         <div class="child"> child 1 </div>
+         <div class="child"> child 2 </div>
+         <div class="child"> child 3 </div>
+     </div>
+      
+     <script src="./index.js"></script>`,
+    script:`let First_child = document.querySelector(".parent > .child");
+First_child.style.backgroundColor = "red";`
     }
     return(
 <section className="section-conetent">
@@ -33,22 +38,24 @@ export default function QuerySelector(){
             يطرح كل من <bdi><b>querySelector()</b></bdi> و <bdi><b>querySelectorAll()</b></bdi> استثناء <b className="text-danger">SYNTAX_ERR</b> إذا كان المحدد (المحددات) غير صالح.
             <CodeHighlighter code={`document.querySelector(CSS selectors)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
-        <div className="mital">متال :  </div>
-        <img src={images.js76_querySelector} className="img"/>
-        <div className="styleee" id="reSulta"> 
-            <a href="https://www.google.com">google</a><br/>
-            <a href="https://www.facebook.com">facebook</a><br/>
-            https://www.google.com/
-        </div>
+        <div className="mital">متال 1 :  </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="querySelector" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title="querySelector" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <a href="https://www.google.com" target="_blanck"> google</a> <br/>
+            <a href="https://www.facebook.com/" target="_blanck">facebook </a>
+            <h2>https://www.google.com/</h2>
+        </Result>
         <div className="mital">متال 2:  </div>
-        <img src={images.js76_querySelector2} className="img"/>
-        <div className="styleee"> 
-            <div className="partent">
-                <div className="child" style={{backgroundColor:"red"}}> child 1 </div>
-                <div className="child"> child 2 </div>
-                <div className="child"> child 3 </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="querySelector" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title="querySelector" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <div class="parent">
+                <div class="child"  style={{backgroundColor:"red"}}> child 1 </div>
+                <div class="child"> child 2 </div>
+                <div class="child"> child 3 </div>
             </div>
-        </div>
+        </Result>
     </article>
     <article>
         <h2 className="title-h2">2- The Difference Between an HTMLCollection and a NodeList</h2>

@@ -3,14 +3,11 @@ import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function CreateComment(){
         const codeExemple1= { 
-    head:`
-    <style>
-      
-    </style>`,
-    code: `      <h2 id="result"></h2>
+    code: `       <div id="id"> </div>
       
      <script src="./index.js"></script>`,
-    script:``
+    script:`let com = document.createComment(" Comment in HTML 5 with javaScript ");
+document.getElementById("id").appendChild(com);`
     }
     return(
 <section className="section-conetent">
@@ -22,7 +19,8 @@ export default function CreateComment(){
 document.getElementById("id").appendChild(comment)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </div>
         <div className="mital">متال :  </div>
-        <img src={images.js64_createComment} className="img"/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="createAttribute" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
         <ul className="mb-0"><li> بعد النقر على <kbd>F12</kbd> </li></ul>
         <img src={images.js64_createComment_2} className="img"/>
     </article>

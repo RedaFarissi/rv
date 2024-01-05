@@ -9,10 +9,13 @@ export default function Links(){
     <style>
       
     </style>`,
-    code: `      <h2 id="result"></h2>
+    code: `     <a href="https://www.google.com" target="_blanck"> google</a><br>
+     <a href="https://www.facebook.com/" target="_blanck"> facebook </a>
+     <h2 id="result"></h2>
       
      <script src="./index.js"></script>`,
-    script:``
+    script:`result = document.getElementById("result")
+result.innerText = document.links[0].outerHTML`
     }
     return(
 <section className="section-conetent">
@@ -32,13 +35,13 @@ export default function Links(){
             <CodeHighlighter code={`document.links`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
-        <img src={images.js75_links} className="img"/>
-        <div className="styleee img" id="reSulta"> 
-            <a href="https://www.google.com"> google</a><br/>
-            <a href="https://www.facebook.com/"> facebook </a>
-            <div id="resulta">
-            </div>
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="head" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title="head" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <a href="https://www.google.com" target="_blanck"> google</a><br/>
+            <a href="https://www.facebook.com/" target="_blanck"> facebook </a>
+            <h2>{`<a href="https://www.google.com" target="_blanck"> google</a>`}</h2>
+        </Result>
     </article>
 </section>
 )

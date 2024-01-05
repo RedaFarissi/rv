@@ -17,7 +17,7 @@ import {
     GetElementsByName,CreateComment,GetElementsByTagName,ActiveElement,Children,Body,
     DocumentElement,Cookie,ClassList,CreateElement,AppendChild,SetAttribute,CreateAttribute,
     RemoveAttribute,CreateTextNode,Remove,Head,Images,Links,QuerySelector,QuerySelectorAll,
-    RequestFullscreen,ExitFullscreen,Contains,Focus,Blur,Scripts,Title,BaseURI,Play,Pause,Load,
+    RequestFullscreen,Contains,Focus,Blur,Scripts,Title,Play,Pause,Load,
     //events
     Animation,CtrlKey,CurrentTarget,Data,Onafterprint,Onbeforeprint,Onblur,Oncanplay,Onchange,
     Onclick,Oncontextmenu,Oncopy,Oncut,Ondblclick,Ondrag,Ondurationchange,Onended,Onerror,Onfocus,
@@ -144,13 +144,11 @@ return(
             <Route path='/queryselector' element={<QuerySelector />} /> 
             <Route path='/queryselectorall' element={<QuerySelectorAll />} /> 
             <Route path='/requestfullscreen' element={<RequestFullscreen />} /> 
-            <Route path='/exitfullscreen' element={<ExitFullscreen />} /> 
             <Route path='/contains' element={<Contains />} /> 
             <Route path='/focus' element={<Focus />} /> 
             <Route path='/blur' element={<Blur />} /> 
             <Route path='/scripts' element={<Scripts />} /> 
             <Route path='/title' element={<Title />} /> 
-            <Route path='/baseuri' element={<BaseURI />} /> 
             <Route path='/play' element={<Play />} /> 
             <Route path='/pause' element={<Pause />} /> 
             <Route path='/load' element={<Load />} /> 

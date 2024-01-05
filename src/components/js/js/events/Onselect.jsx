@@ -11,6 +11,16 @@ export default function Onselect(){
 object.onselect = function(){  //myScript  }`
     const code3 = `// Code JavaScript using the addEventListener()
 object.addEventListener("select", function_name )`
+    const codeExemple1= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
     return(
   <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript onselect</h1>

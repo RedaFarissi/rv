@@ -1,6 +1,26 @@
-#id_DIV { margin: 25px; width:400px; height:100px; background:orange; position:relative; font-size: 20px; padding:7px}
-@keyframes mymove {  from {top: 0px;}        to {top: 120px;} }   
-#DIV{width:90px; height:90px; background-color:red; position:absolute;}
+#js-animation-id_DIV {
+  margin: 25px;
+  width: 400px;
+  height: 100px;
+  background: orange;
+  position: relative;
+  font-size: 20px;
+  padding: 7px;
+}
+
+@keyframes mymove {
+  from { top: 0px; }
+  to { top: 120px; }
+}
+
+/********************************************************/
+
+#js-animation-DIV{
+  width:90px; 
+  height:90px; 
+  background-color:red; 
+  position:absolute;
+}
 @keyframes example {
   0%   {background-color:red; left:0px; top:0px;}
   25%  {background-color:yellow; left:calc(100% - 90px); top:0px;}
@@ -8,6 +28,9 @@
   75%  {background-color:green; left:0px; top:200px;}
   100% {background-color:red; left:0px; top:0px;}
 }
+
+/********************************************************/
+
 #DIV2{width: 90px;height: 90px;background-color: red;position: absolute;}
 @keyframes example2 {
   0%   {background-color:red; left:0px; top:0px;}

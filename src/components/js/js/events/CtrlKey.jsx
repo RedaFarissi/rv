@@ -1,26 +1,38 @@
 import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
+import { useState } from "react";
 
 export default function OnctrlKey(){
+  const [exemple,setExemple] = useState("")
 
-  // #span1{ color: green; font-size: 24px;}
-  // #span2{ color: red; font-size: 24px; }
-
-
-
-  // function function_KeyPressed(event) {
-  //   var r = document.getElementById("result")
-  //   if (event.ctrlKey && event.code == "KeyI") {
-  //     alert("you press Ctrl + i ")
-  //   }else if (event.ctrlKey) {
-  //     alert("you press Ctrl + " + event.code )
-  //   }
-  //   else {
-  //     alert("The CTRL key was NOT pressed!")
-  //   }
-  // }
-  // document.body.addEventListener("keypress", function_KeyPressed)
-
+  const codeExemple1= { 
+    code: `      <p> use event.ctrlKey width event onkeypress </p>
+     <h2 id="result">  </h2>
+      
+      <script src="./index.js"></script>`,
+    script:`function function_KeyPressed(event) {
+    var result = document.getElementById("result");    
+    if (event.ctrlKey && event.code == "KeyI") {
+      result.innerHTML = "you press Ctrl + I "
+    } else if (event.ctrlKey) {
+      result.innerHTML = "you press Ctrl + "+ event.code;
+    } else {
+      result.innerHTML = "The CTRL key was NOT pressed!"
+    }
+}`
+    }
+  
+  function function_KeyPressed(event) {
+      if (event.ctrlKey && event.code == "KeyI") {
+        setExemple("you press Ctrl + I ")
+      } else if (event.ctrlKey) {
+        setExemple("you press Ctrl + "+ event.code)
+      } else {
+        setExemple("The CTRL key was NOT pressed!")
+      }
+  }
+  
+  document.body.addEventListener("keypress", function_KeyPressed);
   return(
 <section className="section-conetent">
   <h1 className="heading-style heading-style-js-color">JavaScript onctrlKey</h1>
@@ -35,12 +47,13 @@ export default function OnctrlKey(){
 }else{
     // JavaScript Code 
 }`} language="js" addClass="mt-3 mb-3" copie={true} />
-    
     <div className="mital"> متال :  </div>
-    <img src={images.js133_ctrlKey} className="img"/>
-    <div className="styleee">
-        <p>    use event.ctrlKey width event  onkeypress    </p>
-    </div>
+    <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="ctrlKey" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+    <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+    <Result title='ctrlKey  ' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+        <p> use event.ctrlKey width event  onkeypress  </p>
+        <h2> {exemple} </h2>
+    </Result>
   </article>
 </section>
   )

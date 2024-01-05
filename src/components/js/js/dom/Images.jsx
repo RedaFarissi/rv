@@ -3,14 +3,13 @@ import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Images(){
         const codeExemple1= { 
-    head:`
-    <style>
-      
-    </style>`,
-    code: `      <h2 id="result"></h2>
+    code: `      <img src="./hajime.jpg" class="w-25" style="height:200px;"/>
+     <img src="./hajime2.jpg" class="w-25" style="height:200px;"/>  
+     <div id="result">  </div>
       
      <script src="./index.js"></script>`,
-    script:``
+    script:`const result = document.getElementById("result")
+result.innerHTML = \`images length = \${document.images.length}\``
     }
     return(
 <section className="section-conetent">
@@ -28,12 +27,13 @@ export default function Images(){
             <CodeHighlighter code={`document.images`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
-        <img src={images.js74_images} className="img"/>
-        <div className="styleee img" id="reSulta"> 
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="head" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title="head" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <img src={images.hajime} className="w-25" style={{height:"200px"}}/>
             <img src={images.hajime2} className="w-25" style={{height:"200px"}}/>
-            <div className="mt-2"> length = 2 </div>
-        </div>
+            <div className="mt-2"> images length = 2 </div>
+        </Result>
     </article>
 </section>
     )

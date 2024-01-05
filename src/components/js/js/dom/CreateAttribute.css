@@ -1,4 +1,7 @@
-.dIv{ 
-    background-color:red; border:2px solid black; 
-    padding:5px; color:blueviolet; font-size:45px;
-  }
+.createAttribute-ex1-style {
+  background-color: red;
+  border: 2px solid black;
+  padding: 5px;
+  color: blueviolet;
+  font-size: 45px;
+}

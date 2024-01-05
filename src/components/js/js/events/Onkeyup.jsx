@@ -1,16 +1,33 @@
-import images from "../../imagesJs"
-import { CodeHighlighter ,  Result} from "../../../path";
+import { CodeHighlighter } from "../../../path";
 
 export default function Onkeyup(){
-    // document.body.addEventListener('keyup',function(event){
-    //     alert(" event = " + event.code +"\ntype is = " + typeof event.code)
-    // })
     const code1 = `<!-- Code HTML -->
 <element onkeyup="//script">`
     const code2 = `// Code JavaScript 
 object.onkeyup = function(){  //myScript  }`
     const code3 = `// Code JavaScript using the addEventListener() 
 object.addEventListener("keyup", function_name )`
+    const codeExemple1= { 
+    code: `<!DOCTYPE html>
+<html>
+<head>
+     <title> keyup </title>
+     <link rel="icon" href="./html_logo.png" type="image/png">
+     <meta name="viewport" content="width=device-width, initial-scale=1"> 
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+  <script>
+      document.body.addEventListener('keyup', function(event) {
+        alert(" event = " + event.code + "\\ntype is = " + typeof event.code);
+      });
+  </script>
+  
+</body>
+</html>`,
+    }
     return(
   <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript onkeyup</h1>
@@ -30,7 +47,8 @@ object.addEventListener("keyup", function_name )`
             <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
-        <img src={images.js107_onkeyup} className="img"/>
+        <ul><li>عند النقر على أي حرف أو رقم ضمن موقعك</li></ul>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" addClass="mt-3 mb-3" copie={true}  number={true}/>  
     </article>
 </section>
     )

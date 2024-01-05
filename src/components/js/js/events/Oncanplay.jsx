@@ -8,6 +8,17 @@ export default function Canplay(){
     const code1 = ``
     const code2 = ``
     const code3 = ``
+    const codeExemple1= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
+    
     return(
   <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript canplay</h1>

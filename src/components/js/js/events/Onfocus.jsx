@@ -2,10 +2,7 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Onfocus(){
-    // function function_name(){
-    //     const id = document.getElementById("InPuT")
-    //     id.style.border = "5px solid red"
-    //   }
+
     //   document.getElementById("InPuT2").onfocus = function(){
     //     const id = document.getElementById("InPuT2")
     //     id.style.border = "5px solid red"
@@ -20,7 +17,28 @@ export default function Onfocus(){
 object.onfocus = function(){  //myScript  }`
     const code3 = `// Code JavaScript using the addEventListener() 
 object.addEventListener("focus", function_name )`
-
+    const codeExemple1= { 
+    code: `      <input type="text" id="InPuT" onfocus="function_name(this.id)"/>
+      
+     <script src="./index.js"></script>`,
+    script:`function function_name(id) {
+    const element = document.getElementById(id);
+    element.style.border = "5px solid red";
+}`
+    }
+    const codeExemple2= { 
+    code: `      <input type="text" id="InPuT2"/>
+      
+     <script src="./index.js"></script>`,
+    script:`document.getElementById("InPuT2").onfocus = function(){
+        const id = document.getElementById("InPuT2")
+        id.style.border = "5px solid red"
+        id.style.width = "50%"
+        id.style.backgroundColor = "green"
+        id.style.color = "white"
+        id.style.fontSize = "23px"
+}`
+    }
     return(
   <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript onfocus</h1>
@@ -36,15 +54,22 @@ object.addEventListener("focus", function_name )`
             </div>
         </p>
         <div className="mital"> متال 1 :  </div>
-        <img src={images.js85_onfocus} className="img"/>
-        <div className="styleee">
-            <input type="text" id="InPuT" onfocus="function_name()"/>
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="onfocus" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js" addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title="onfocus" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <input type="text" id="InPuT" onFocus={()=>{ document.getElementById("InPuT").style.border = "5px solid red"}}/>
+        </Result>
         <div className="mital"> متال 2 : </div>
-        <img src={images.js85_onfocus2} className="img"/>
-        <div className="styleee">
-            <input type="text" id="InPuT2"/>
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="onfocus" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js" addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title="onfocus" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <input type="text" id="InPuT2"  onFocus={()=>{ 
+            document.getElementById("InPuT2").style.border = "5px solid red"
+            document.getElementById("InPuT2").style.width = "50%"
+            document.getElementById("InPuT2").style.backgroundColor = "green"
+            document.getElementById("InPuT2").style.color = "white"
+            document.getElementById("InPuT2").style.fontSize = "23px"}}/>
+        </Result>
     </article>
 </section>
     )

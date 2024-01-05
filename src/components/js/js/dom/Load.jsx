@@ -14,14 +14,41 @@ export default function Load(){
   //   vid.play(); 
   // }
     const codeExemple1= { 
-    head:`
-    <style>
-      
-    </style>`,
-    code: `      <h2 id="result"></h2>
+    code: `      <button onclick="playVid()" type="button" class="btn btn-outline-primary">
+        Play Video
+     </button>
+     <button onclick="pauseVid()" type="button" class="btn btn-outline-danger">
+        Pause Video
+     </button>
+     <button onclick="loadVid()" type="button" class="btn btn-outline-dark">
+        Load Video
+     </button>
       
      <script src="./index.js"></script>`,
-    script:``
+   script:`function playVid() {
+    document.getElementById("myVideo").play();
+}
+ 
+function pauseVid() {
+    document.getElementById("myVideo").pause();
+}
+
+function loadVid(){
+    document.getElementById("myVideo").load();
+    document.getElementById("myVideo").play();
+}`
+    }
+    function playVid() {
+      document.getElementById("myVideo").play();
+    }
+  
+    function pauseVid() {
+      document.getElementById("myVideo").pause();
+    }
+
+    function loadVid(){
+      document.getElementById("myVideo").load();
+      document.getElementById("myVideo").play();
     }
   return(
 <section className="section-conetent">
@@ -34,24 +61,18 @@ export default function Load(){
         <CodeHighlighter code={`audio.load()`} language="js" addClass="mt-3 mb-3" copie={true} />
     </p>
     <div className="mital">متال :  </div>
-    <img src={images.js89_load} className="img"/>
-    <div className="styleee"> 
-        <button onclick="playVid()" type="button" className="btn btn-outline-primary mb-2">
-          Play Video
-        </button>
-        <button onclick="pauseVid()" type="button" className="btn btn-outline-danger mb-2">
-          Pause Video
-        </button>
-        <button onclick="loadVid()" type="button" className="btn btn-outline-dark mb-2">
-          Load Video
-        </button>
-        <br/> 
-
-        <video id="myVideo" width="40%" height="176" controls>
-          <source src="./js/video.mp4" type="video/mp4"/>
+    <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="load" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+    <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+    <Result title="load" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+        <button onClick={playVid} type="button" class="btn btn-outline-primary">Play Video</button>
+        <button onClick={pauseVid} type="button" class="btn btn-outline-danger">Pause Video</button>
+        <button onClick={loadVid} type="button" class="btn btn-outline-dark">Load Video</button>
+        <br/>
+        <video id="myVideo" width="40%" height="176" className="mt-2">
+          <source src={images.video} type="video/mp4"/>
           Your browser does not support HTML5 video.
         </video>
-    </div>
+    </Result>  
   </article>
 </section>
   )

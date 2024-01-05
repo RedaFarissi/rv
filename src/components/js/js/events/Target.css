@@ -1,0 +1,10 @@
+#parent {
+    background-color: yellow;
+    padding: 9px;
+  }
+  .styling {
+    border: 5px outset white;
+    border-radius: 7px;
+    padding: 16px;
+    font-size: 24px;
+  }

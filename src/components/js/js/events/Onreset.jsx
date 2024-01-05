@@ -2,26 +2,22 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Onreset(){
-    // function function_name() {
-    //     var form = document.getElementById("id_Form")
-    //     form.reset();
-    // }
-
-    // function function_N() {
-    //     var form = document.getElementById("myForm")
-    //     form.reset();
-    // }
-    
-    // var myForm = document.getElementById("myForm")
-    // myForm.onreset = function(){
-    //     alert("the form was reset")
-    // }
     const code1 = `<!-- Code HTML -->
 <form onreset="//script">`
     const code2 = `// Code JavaScript -->
 object.onreset = function(){  //myScript  }`
     const code3 = `// Code JavaScript using the addEventListener() 
 object.addEventListener("reset", function_name )`
+    const codeExemple1= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
     return(
   <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript onreset</h1>

@@ -1,21 +1,38 @@
 import images from "../../imagesJs"
-import { CodeHighlighter ,  Result} from "../../../path";
+import { CodeHighlighter ,  ResultAlert} from "../../../path";
+import { useState } from "react";
 
 export default function Ondurationchange(){
-  // function function_name() 
-  // {
-  //   alert("Starting to load video");
-  // }
-  // function function_name2() 
-  // {
-  //   alert("durationchange to load video");
-  // }
+
   const code1 = `<!-- Code HTML -->
 <video src="name.type" ondurationchange="//script"> </video> `
   const code2 = `// Code JavaScript 
 object.ondurationchange = function(){  //myScript  }`
   const code3 = `// Code JavaScript using the addEventListener() 
   object.addEventListener("durationchange", function_name )`
+      const codeExemple1= { 
+    code: `      <video controls onloadstart="function_name()" ondurationchange="function_name2()" width="50%">
+          <source src="./video.mp4" type="video/mp4"/>
+        Your browser does not support HTML5 video.
+    </video>
+      
+     <script src="./index.js"></script>`,
+    script:`function function_name(){
+    alert("Starting to load video");
+}
+
+function function_name2(){
+    alert("durationchange to load video");
+}`
+    }
+    const [displayAlertExemple,setDisplayAlertExemple] = useState(true)
+    const [valueAlertExemple,setValueAlertExemple] = useState("Starting to load video")
+    function clickOk(){
+        switch(valueAlertExemple){
+          case "Starting to load video": setValueAlertExemple("durationchange to load video"); break;
+          case "durationchange to load video": setDisplayAlertExemple(false); break;
+        }
+    }
   return(
   <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript ondurationchange</h1>
@@ -37,13 +54,14 @@ object.ondurationchange = function(){  //myScript  }`
         <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
       </p>
       <div className="mital">متال :  </div>
-      <img src={images.js91_ondurationchange} className="img"/>
-      <div className="styleee"> 
-        <video controls onloadstart="function_name()" ondurationchange="function_name2()" width="50%">
-            <source src={images.video} type="video/mp4"/>
-            Your browser does not support HTML5 video.
+      <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="ondurationchange" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+      <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+      <ResultAlert title='ondurationchange' logo={images.html_logo} clickOk={clickOk} displayAlert={displayAlertExemple} alertValue={valueAlertExemple} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+          <video controls width="50%" >
+              <source src={images.video} type="video/mp4"/>
+              Your browser does not support HTML5 video.
           </video>
-      </div>
+      </ResultAlert>   
   </article>
 </section>
     )

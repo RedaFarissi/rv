@@ -3,24 +3,29 @@ import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Scripts(){
     const codeExemple1= { 
-    head:`
-    <style>
-      
-    </style>`,
-    code: `      <h2 id="result"></h2>
-      
-     <script src="./index.js"></script>`,
-    script:``
+    code: `       <h2> document scripts </h2>
+     <script>
+         document.write("Hello World!");
+     </script>
+        
+     <p>The number of script elements in the document:</p>
+     <p id="result"></p>
+         
+     <script>                              
+       const result = document.getElementById("result")
+       result.innerHTML = document.scripts.length;
+     </script>`,
     }
     const codeExemple2= { 
-    head:`
-    <style>
-      
-    </style>`,
-    code: `      <h2 id="result"></h2>
-      
-     <script src="./index.js"></script>`,
-    script:``
+    code: `      <script>
+         document.write("Hello World!");
+     </script>
+         <p id="result"></p>
+     <script>
+         const result = document.getElementById("result");
+         result.innerText += document.scripts[0].text+"<br/>";
+         result.innerText += document.scripts[1].text;
+     </script> `,
     }
     return(
 <section className="section-conetent">
@@ -38,22 +43,26 @@ export default function Scripts(){
             خاصية البرامج النصية للقراءة فقط.
             <CodeHighlighter code={`document.scripts`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
-        <div className="mital">متال :  </div>
-        <img src={images.js78_scripts} className="img"/>
-        <div className="styleee"> 
-            <div className="h2">document scripts</div>
-            Hello World!
-            <p>The number of script elements in the document:</p>
-            3
-        </div>
+        <div className="mital">متال 1 :  </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="scripts" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <Result title="scripts" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>document scripts</h2>
+            <div>
+                Hello World!<br/>
+                The number of script elements in the document:<br/><br/>
+                3
+            </div>
+        </Result>   
         <div className="mital">متال 2 : </div>
-        <img src={images.js78_scripts2} className="img"/>
-        <div className="styleee"> 
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="scripts" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <Result title="scripts" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             Hello World!<br/>
             document.write("Hello World!");<br/>
-            const result = document.getElementById("result") result.innerHTML = document.scripts[0].text + "";<br/>
-            result.innerHTML += document.scripts[1].text
-        </div>
+            {"<br/>"}<br/>
+            const result = document.getElementById("result");<br/>
+            result.innerText += document.scripts[1].text+"{"<br/>"}";<br/>
+            result.innerText += document.scripts[2].text;<br/>
+        </Result> 
     </article>
 </section>
     )

@@ -2,22 +2,29 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Play(){
-  // var vid = document.getElementById("myAudio"); 
-  // function playAudio() { 
-  //   vid.play(); 
-  // } 
-  // function pauseAudio() { 
-  //   vid.pause(); 
-  // } 
+     
+    function playAudio() { 
+      document.getElementById("myAudio").play(); 
+    } 
+    function pauseAudio() { 
+      document.getElementById("myAudio").pause(); 
+    } 
       const codeExemple1= { 
-    head:`
-    <style>
-      
-    </style>`,
-    code: `      <h2 id="result"></h2>
+    code: `      <button onclick="playAudio()" type="button"> Play Audio </button>
+     <button onclick="pauseAudio()" type="button"> Pause Audio </button>   
+     <br/>
+     <audio id="myAudio" controls>
+       <source src="./music.mp3" type="audio/mp3"/>
+       Your browser does not support HTML5 video.
+     </audio>
       
      <script src="./index.js"></script>`,
-    script:``
+    script:`function playAudio() { 
+    document.getElementById("myAudio").play(); 
+} 
+function pauseAudio() { 
+    document.getElementById("myAudio").pause(); 
+} `
     }
 
   return(
@@ -31,16 +38,17 @@ export default function Play(){
         <div className="alert alert-warning">نصيحة: استخدم طريقة الإيقاف المؤقت () لإيقاف الصوت / الفيديو الحالي مؤقتًا.</div>
     </div>
     <div className="mital">متال :  </div>
-    <img src={images.js87_play} className="img"/>
-    <div className="styleee"> 
-        <button onclick="playAudio()" type="button" className="mb-2">Play Video</button>
-        <button onclick="pauseAudio()" type="button" className="bm-2">Pause Video  </button>
-        <br/> 
-        {/* <audio id="myAudio" controls>
-          <source src="./js/music.mp3" type="audio/mp3"/>
-          Your browser does not support HTML5 video.
-        </audio> */}
-    </div>
+    <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="play" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+    <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+    <Result title="play" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+      <button onClick={playAudio} type="button"> Play Audio </button>
+      <button onClick={pauseAudio} type="button"> Pause Audio </button>
+      <br/>
+      <audio id="myAudio" controls>
+        <source src={images.music} type="audio/mp3"/>
+        Your browser does not support HTML5 video.
+      </audio>
+    </Result>  
   </article>
 </section>
   )

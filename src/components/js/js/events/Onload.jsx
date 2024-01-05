@@ -1,16 +1,27 @@
 import images from "../../imagesJs"
-import { CodeHighlighter ,  Result} from "../../../path";
+import { CodeHighlighter ,  ResultAlert} from "../../../path";
+import { useState } from "react";
 
 export default function Onload(){
-    // document.body.onload = function(){
-    //     alert("Page is loaded")
-    // }  
+    const [displayAlertExemple,setDisplayAlertExemple] = useState(true)
+    function clickOk(){
+        setDisplayAlertExemple(false)
+    }
+
     const code1 = `<!-- Code HTML -->
 <element onload="//script">`
     const code2 = `// Code JavaScript 
 object.onload = function(){  //myScript  }`
     const code3 = `//Code JavaScript using the addEventListener()
 object.addEventListener("load", function_name )`
+    const codeExemple1= { 
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:`document.body.onload = function(){
+     alert("Page is loaded")
+}`
+    }
     return(
   <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript onload</h1>
@@ -25,10 +36,11 @@ object.addEventListener("load", function_name )`
             <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
-        <img src={images.js108_onload} className="img"/>
-        <div className="styleee">
-            <div className="h1"> Hello World </div>
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="onload" addClass="mt-3 mb-3" copie={true} number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <ResultAlert title='onload' logo={images.html_logo} clickOk={clickOk} displayAlert={displayAlertExemple} alertValue={"Page is loaded"} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h1> Hello World</h1>
+        </ResultAlert>
     </article>
 </section>
     )

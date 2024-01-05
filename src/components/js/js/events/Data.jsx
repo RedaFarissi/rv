@@ -1,13 +1,35 @@
 import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
+import { useRef } from "react";
 
 export default function Data(){
-  // #resulta{  font-size: x-large;  color: green;}
+  const exempleRef = useRef()
 
-  // function myFunction(event) {
-  //   var r = document.getElementById("resulta")
-  //   r.innerHTML = event.data;
-  // }
+  const codeExemple1= { 
+    head:`
+    <style>
+      #result1 , #result2   {
+        font-size: x-large;
+        color: green;
+      }
+    </style>`,
+    code: `       <input type="text" oninput="myFunction(event)"/>
+     <ul>
+         <li><b id="result"></b></li>
+     </ul>
+   
+     <p>
+            <strong>Note:</strong> This property is not fully supported, and can change before the final release.
+     </p>
+      
+     <script src="./index.js"></script>`,
+    script:`function myFunction(event) {
+    document.getElementById("result").innerHTML += event.data;
+}`
+    }
+    function myFunction(event) {
+        document.getElementById("js-data-result1").innerHTML = exempleRef.current.value;
+    }
 
   return(
 <section className="section-conetent">
@@ -19,13 +41,18 @@ export default function Data(){
           <CodeHighlighter code={`event.data`} language="js" addClass="mt-3 mb-3" copie={true} />
       </p>
       <div className="mital"> متال :  </div>
-      <img src={images.js135_data} className="img"/>
-      <div className="styleee">
-          <p> Write something in the text field . </p>
-          <input type="text"  oninput="myFunction(event)"/>
-          <p>The inserted character: <b id="resulta"></b></p>
-          <p><strong>Note:</strong> : This property is not fully supported, and can change before the final release.</p>
-      </div>
+      <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head}  language="html" is_html={true} title="data" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+      <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+      <Result title="data" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+          <input type="text" ref={exempleRef} onInput={(event)=>{myFunction(event)}}/>
+          <ul>
+              <li><b id="js-data-result1" style={{fontSize: "x-large",color: "green"}}></b></li>
+          </ul>
+          <p>
+              <strong>Note:</strong> 
+              This property is not fully supported, and can change before the final release.
+          </p>
+      </Result>
   </article>
 </section>
     )

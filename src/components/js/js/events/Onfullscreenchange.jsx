@@ -44,6 +44,17 @@ export default function Onfullscreenchange(){
 object.onfullscreenchange = function(){  //myScript  }`
     const code3 = `//  Code JavaScript using the addEventListener()
 object.addEventListener("fullscreenchange", function_name )`
+
+    const codeExemple1= { 
+    head:`
+    <style>
+      
+    </style>`,
+    code: `      <h2 id="result"></h2>
+      
+     <script src="./index.js"></script>`,
+    script:``
+    }
   return(
 <section className="section-conetent">
   <h1 className="heading-style heading-style-js-color">JavaScript onfullscreenchange</h1>
