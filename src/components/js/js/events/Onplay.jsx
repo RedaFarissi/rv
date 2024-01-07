@@ -11,13 +11,29 @@ object.addEventListener("play", function_name )`
     const codeExemple1= { 
     head:`
     <style>
-      
+        video{ width : 50%;}
     </style>`,
-    code: `      <h2 id="result"></h2>
+    code: `      <p>Play and pause the video.</p>
+    <h2 id="result">  </h2>
+    <video style={{width:"50%"}} onPlay={playFunction} onPause={pauseFunction} controls>
+        <source src={images.video} type="video/mp4"/>
+        Your browser does not support the video tag.
+    </video>
       
      <script src="./index.js"></script>`,
-    script:``
-    }
+    script:`function pauseFunction() {
+    document.getElementById("result").innerHTML = "The video was paused."
+}
+function playFunction() {
+    document.getElementById("result").innerHTML = "The video was played."
+}`
+  }
+  function pauseFunction() {
+      document.getElementById("result").innerHTML = "The video was paused."
+  }
+  function playFunction() {
+      document.getElementById("result").innerHTML = "The video was played."
+  }
   return(
 <section className="section-conetent">
   <h1 className="heading-style heading-style-js-color">JavaScript onplay</h1>
@@ -30,20 +46,16 @@ object.addEventListener("play", function_name )`
         <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
     </p>
     <div className="mital"> متال :  </div>
-    <img src={images.js126_onplay} className="img"/>
-    <div className="styleee">  
-        <p><b>Play and pause the video.</b></p>
-        <video id="video_test" onplay="function_play()"  onpause="function_pause()" controls width="330" height="250">
-          <source src={images.video} type="video/mp4"/>
-          Your browser does not support the video tag.
-        </video><br/>
-        <button className="btn btn-primary" id="plAy">
-           play 
-        </button>
-        <button className="btn btn-danger" id="pauSe"> 
-          pause 
-        </button>
-    </div>
+    <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="onmouseenter" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+    <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+    <Result title="onmouseenter"  logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+        <p>Play and pause the video.</p>
+        <h2 id="result">  </h2>
+        <video style={{width:"50%"}} onPlay={playFunction} onPause={pauseFunction} controls>
+            <source src={images.video} type="video/mp4"/>
+            Your browser does not support the video tag.
+        </video>
+    </Result>
   </article>
 </section>
     )

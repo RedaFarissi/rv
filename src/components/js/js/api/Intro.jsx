@@ -2,18 +2,40 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Intro(){
-    // const result = document.getElementById("result");
-    // function getLocation() {
-    //   try {
-    //     navigator.geolocation.getCurrentPosition(showPosition);
-    //   } catch {
-    //     result.innerHTML = err;
-    //   }
-    // }
-    // function showPosition(position) {
-    //     result.innerHTML = "Latitude: " + position.coords.latitude + 
-    //   "<br/>Longitude: " + position.coords.longitude;
-    // }
+    const codeExemple1= { 
+        code: `      <h2>JavaScript Geolocation</h2>
+     <p>Click the button to get your coordinates.</p>
+     <button onclick="getLocation()">Try It</button>
+     
+     <p id="result"></p>
+       
+     <script src="./index.js"></script>`,
+    script:`const result = document.getElementById("result");
+
+function getLocation() {
+  try {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } catch (err) {
+    result.innerHTML = err
+  }
+}
+
+function showPosition(position) {
+  result.innerHTML = \`Latitude: \${position.coords.latitude}  <br/>Longitude:  \${position.coords.longitude}\`;
+}`
+    }
+
+    function getLocation() {
+      try {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } catch (err) {
+        document.getElementById("result").innerHTML = err
+      }
+    }
+    
+    function showPosition(position) {
+        document.getElementById("result").innerHTML = `Latitude: ${position.coords.latitude}  <br/>Longitude:  ${position.coords.longitude}`;
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript API introduction</h1>
@@ -43,13 +65,14 @@ export default function Intro(){
             على سبيل المثال ، يمكن لواجهة برمجة تطبيقات <bdi>(Geolocation API)</bdi> تحديد الموقع الجغرافي أن ترجع إحداثيات مكان المتصفح.
         </p>
         <div className="mital">متال :  </div>
-        <img src={images.js137_geolocation} className="img"/>
-        <div className="styleee">
-            <div id="h2">JavaScript Geolocation</div>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="Geolocation" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js" addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title="Geolocation" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>JavaScript Geolocation</h2>
             <p>Click the button to get your coordinates.</p>
-            <button onclick="getLocation()" className="btn btn-primary"> Try It </button>
-            <p id="result" style={{marginTop:"12px"}}></p>
-        </div> 
+            <button onClick={getLocation}>Try It</button>
+            <p id="result"></p>
+        </Result>
     </article>
     <article>
         <h2 className="title-h2"> 3-  واجهات برمجة تطبيقات الطرف الثالث <bdi><small><small>(Third Party APIs)</small></small></bdi></h2>

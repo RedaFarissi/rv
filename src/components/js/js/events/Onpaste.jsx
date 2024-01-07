@@ -20,12 +20,25 @@ object.addEventListener("paste", function_name )`
     const codeExemple1= { 
     head:`
     <style>
-      
+      input{ 
+        width : 50%;
+      }
     </style>`,
-    code: `      <h2 id="result"></h2>
+    code: `     <input type="text" onpaste="passer()">
+     <p id="result"></p>
       
      <script src="./index.js"></script>`,
-    script:``
+    script:`var input = document.querySelector("input")
+    input.value = "Try to paste something in here"
+
+function passer() {
+    var result = document.getElementById("result")
+    result.innerHTML += "You pasted text<br/>"
+}`
+    }
+    function passer(){
+        var result = document.getElementById("result")
+        result.innerHTML += "You pasted text<br/>"
     }
     return(
   <section className="section-conetent">
@@ -50,11 +63,12 @@ object.addEventListener("paste", function_name )`
             <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
-        <img src={images.js124_onpaste} className="img"/>
-        <div className="styleee">  
-            <input id="input_test" type="text" onpaste="passer()"/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="onpaste" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title="onpaste"  logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <input type="text" onPaste={passer} style={{width:"50%"}}/>
             <p id="result"></p>
-        </div>
+        </Result>
     </article>
 </section>
     )

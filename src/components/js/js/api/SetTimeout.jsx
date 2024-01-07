@@ -6,6 +6,12 @@ export default function SetTimeout(){
     //     let res = document.getElementById("resut")
     //     res.innerHTML = `<b> Hello App </b>`
     // }
+    const codeExemple1= { 
+    code: `      
+    
+     <script src="./index.js"></script>`,
+    script:``
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript setTimeout</h1>
@@ -17,7 +23,7 @@ export default function SetTimeout(){
             استخدم طريقة <bdi><b>clearTimeout()</b></bdi> لمنع بدء تشغيل الوظيفة.
             <CodeHighlighter code={`setTimeout(function_name,milliseconds)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
-        <div className="mital"> متال 1 :  </div>
+        <div className="mital"> متال :  </div>
         <img src={images.js151_setTimeout} className="img"/>
         <div className="styleee">
             <p> click button to run function one time after 3 seconds </p>

@@ -118,7 +118,6 @@ export {default as Onerror} from './js/events/Onerror';
 export {default as Onfocus} from './js/events/Onfocus';
 export {default as Onfocusin} from './js/events/Onfocusin';
 export {default as Onfocusout} from './js/events/Onfocusout';
-export {default as Onfullscreenchange} from './js/events/Onfullscreenchange';
 export {default as Oninput} from './js/events/Oninput';
 export {default as Oninvalid} from './js/events/Oninvalid';
 export {default as Onkeydown} from './js/events/Onkeydown';

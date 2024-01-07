@@ -1,5 +1,6 @@
 import images from "../../imagesJs"
-import { CodeHighlighter ,  Result} from "../../../path";
+import { CodeHighlighter ,  ResultAlert} from "../../../path";
+import { useState } from "react";
 
 export default function Onreset(){
     const code1 = `<!-- Code HTML -->
@@ -9,14 +10,29 @@ object.onreset = function(){  //myScript  }`
     const code3 = `// Code JavaScript using the addEventListener() 
 object.addEventListener("reset", function_name )`
     const codeExemple1= { 
-    head:`
-    <style>
-      
-    </style>`,
-    code: `      <h2 id="result"></h2>
-      
-     <script src="./index.js"></script>`,
-    script:``
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title> onreset </title>
+   <link rel="icon" href="./html_logo.png" type="image/png">
+   <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>     
+</head>
+<body>
+     
+    <form id="myForm"  onreset="alert('The form was reset.')">
+        <label for="name">Name :</label>
+        <input type="text" id="name" name="name"/><br/>
+        <input type="reset" class="btn btn-primary" value="reset"/>
+    </form>
+  
+</body>  
+</html>`,
+    }
+    const [displayAlertExemple,setDisplayAlertExemple] = useState(false)
+    function clickOk(){
+        setDisplayAlertExemple(false)
     }
     return(
   <section className="section-conetent">
@@ -29,32 +45,15 @@ object.addEventListener("reset", function_name )`
             <CodeHighlighter code={code2} language="js" addClass="mt-3 mb-3" copie={true} />
             <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} /> 
         </p>
-        
         <div className="mital"> متال :  </div>
-        <ul><li> الخاصية <bdi>reset()</bdi> بدون Event </li></ul>
-        <img src={images.js128_onreset} className="img"/>
-        <div className="styleee">
-            <p>Enter some text in the fields below,then press the "Reset form" button to reset the form.</p>
-            <form id="id_Form">
-              First name: <input type="text" name="fname"/><br/>
-              Last name: <input type="text" name="lname"/><br/><br/>
-              <button type="button" onclick="function_name()"> Reset form </button>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <ResultAlert title='onreset' logo={images.html_logo} clickOk={clickOk} displayAlert={displayAlertExemple} alertValue={"The form was reset."} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <form id="myForm" onReset={()=>{setDisplayAlertExemple(true)}} onSubmit={(event)=>{event.preventDefault()}}>
+                <label for="name">Name :</label>
+                <input type="text" id="name" name="name"/><br/>
+                <input type="reset" className="btn btn-primary mt-1" value="reset" />
             </form>
-        </div>    
-        <div className="mital"> متال 2 :  </div>
-        <ul><li> الخاصية <bdi>reset()</bdi> مع ال <bdi>Event onreset</bdi></li></ul>
-        <img src={images.js128_onreset2} className="img"/>
-        <div className="styleee">
-            <form id="myForm">
-              <label for="email">Email : </label>
-              <input type="email" id="email" name="email"/>
-              <br/>
-              <label for="password">Password : </label>
-              <input type="password" name="password" id="password"/><br/>
-        
-              <input type="reset" value="reset" onreset="function_N()"/>
-            </form>
-        </div>
+        </ResultAlert>
     </article>
 </section>
     )

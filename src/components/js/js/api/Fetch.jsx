@@ -47,6 +47,40 @@ export default function Fetch(){
     const data = await  variable.json()
 }
 function_name()`
+    const codeExemple1= { 
+    code: `      <h2> fetch API </h2>
+     <div id='result'></div>
+    
+     <script src="./index.js"></script>`,
+    script:`fetch("https://ipapi.co/8.8.8.8/json/")
+.then(variable => variable.json())
+.then(data => {
+  document.getElementById("result").innerHTML = typeof data;
+});`
+    }
+    const codeExemple2= { 
+    code: `     <div id="main"></div>
+    
+     <script src="./index.js"></script>`,
+    script:`async function api() {
+    const response = await fetch("https://breakingbadapi.com/api/characters/");
+    const data = await response.json();
+    getData(data);
+}
+
+api();
+
+function getData(data) {
+    for (let i in data) {
+        document.getElementById("main").innerHTML += \`
+            <div class="box">
+              <h2>\${data[i].char_id}. \${data[i].name}</h2>
+              <img class="img_person" src="\${data[i].img}"/>
+            </div>
+        \`;
+    }
+}    `
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript fetch</h1>
@@ -62,23 +96,15 @@ function_name()`
             <b style={{textShadow:"0.9px 0.9px red"}}> الطريقة الثالثة و الأحدت : </b>
             <CodeHighlighter code={code4} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
-        <div className="mital">متال 1 :  </div>
-        <img src={images.js136_fetch} className="img"/>
-        <div className="styleee">
-            <h2> fetch API </h2>
-            <div id='result'>  </div>
-        </div>   
-        <div className="mital">متال 2 : </div>
-        <img src={images.js136_fetch2} className="img"/>
-        <img src={images.js136_fetch2_2} className="img"/>
-        <div className="mital">متال 3 : </div>
-        <img src={images.js136_fetch3} className="img"/>
-        <div className="styleee">
-            <div id='resulta'>  </div>
-        </div>
-        <div className="mital">متال 4 : </div>
-        <img src={images.js136_fetch4} className="img"/>
-        <div className="styleee" id="reSulTa_real_exemple" style={{height:"150vh",overflowY:"auto",backgroundColor:"red",}}>  </div>
+        <div className="mital"> متال 1 :  </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="Geolocation" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js" addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title="Geolocation" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>fetch API</h2>
+        </Result>
+        <div className="mital"> متال 2 : </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="Geolocation" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js" addClass="mt-3 mb-3" copie={true}  number={true}/>
     </article>
 </section>
     )

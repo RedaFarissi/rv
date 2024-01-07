@@ -7,7 +7,6 @@ export default function Onload(){
     function clickOk(){
         setDisplayAlertExemple(false)
     }
-
     const code1 = `<!-- Code HTML -->
 <element onload="//script">`
     const code2 = `// Code JavaScript 

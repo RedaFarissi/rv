@@ -1,12 +1,8 @@
 import images from "../../imagesJs"
-import { CodeHighlighter ,  Result} from "../../../path";
+import { CodeHighlighter ,  ResultAlert} from "../../../path";
+import { useState } from "react";
 
 export default function Ontoggle(){
-    // #DIV{background-color: red; color: white; min-height: 200px; border:2px solid brown; font-size: 35px;}
-
-    // function function_name() {
-    //     alert("The ontoggle event occured");
-    //   }
     const code1 = `<!-- Code HTML -->
 <details ontoggle="//script">`
     const code2 = `// Code JavaScript 
@@ -16,12 +12,38 @@ object.addEventListener("toggle", function_name )`
     const codeExemple1= { 
     head:`
     <style>
-      
+        h2{ 
+            color: red; 
+        }
+        #DIV{ 
+            background-color: red; 
+            color: white; 
+            min-height: 200px; 
+            border: 2px solid black;
+            font-size: 35px;
+        }
     </style>`,
-    code: `      <h2 id="result"></h2>
+    code: `      <h2>ontoggle event attribute (open the details)</h2>
+     <details ontoggle="toggleFunction()">
+       <summary style="color:blue;">
+         is the full form of HTML
+       </summary>
+     
+       <p>Hyper Text Markup Language</p>
+       <div id="DIV"> DIV BOX </div>
+     </details>
       
      <script src="./index.js"></script>`,
-    script:``
+    script:`function toggleFunction() {
+    alert("The ontoggle event occured");
+}`
+    }
+    const [displayAlertExemple,setDisplayAlertExemple] = useState(false)
+    function clickOk(){
+        setDisplayAlertExemple(false)
+    }
+    function toggleFunction(){
+        setDisplayAlertExemple(true);
     }
     return(
   <section className="section-conetent">
@@ -35,17 +57,16 @@ object.addEventListener("toggle", function_name )`
             <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
-        <img src={images.js131_ontoggle} className="img"/>
-        <div className="styleee">
-            <div className="h2" style={{color: "red"}}>ontoggle event attribute (open the details)</div>
-            <details ontoggle="function_name()">
-                <summary style={{color:"blue"}}>
-                    is the full form of HTML
-                </summary> 
-                <p>Hyper Text Markup Language</p>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="ontoggle" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <ResultAlert title='ontoggle' logo={images.html_logo} clickOk={clickOk} displayAlert={displayAlertExemple} alertValue={"The ontoggle event occured"} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <h2>ontoggle event attribute (open the details)</h2>
+            <details onToggle={toggleFunction}>
+                <summary style={{color:"blue"}}> is the full form of HTML </summary>
+                <p> Hyper Text Markup Language </p>
                 <div id="DIV"> DIV BOX </div>
             </details>
-        </div>
+        </ResultAlert>
     </article>
 </section>
     )

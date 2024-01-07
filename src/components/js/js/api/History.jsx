@@ -2,7 +2,21 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function History(){
-    // document.getElementById("h2").innerHTML =  history.length
+    const codeExemple1= { 
+        code: `     <button onclick="history.back()"> Go Back </button>`,
+    }
+    const codeExemple2= { 
+        code: `     <button onclick="history.forward()"> forward </button>`,
+    }
+    const codeExemple3= { 
+        code: `     
+      <h2 id="result">  </h2>
+    
+      <script>
+           document.getElementById("result").innerHTML = history.length
+      </script>
+      `,
+    }
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript history</h1>
@@ -26,10 +40,7 @@ export default function History(){
             <CodeHighlighter code={`window.history.back()`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
-        <img src={images.js38_history2} className="img"/>
-        <div className="styleee">
-            <button onclick="history.back()" style={{outline:"none", border:"1px solid black"}}> Go Back </button>
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="history.back()" addClass="mt-3 mb-3" copie={true}  number={true}/>  
     </article>
     <article>
         <h2 className="title-h2">3. <bdi>history.forward()</bdi></h2>
@@ -40,10 +51,7 @@ export default function History(){
             <CodeHighlighter code={`window.history.forward()`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
-        <img src={images.js38_history3} className="img"/>
-        <div className="styleee">
-            <button onclick="history.forward()" style={{outline:"none", border:"1px solid black"}}> forward </button>
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="history.forward()" addClass="mt-3 mb-3" copie={true}  number={true}/>  
     </article>
     <article>
         <h2 className="title-h2">4. <bdi>history.length</bdi></h2>
@@ -54,10 +62,7 @@ export default function History(){
             <CodeHighlighter code={`history.length`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
-        <img src={images.js38_history} className="img"/>
-        <div className="styleee">
-            <h2 id="h2">  </h2>
-        </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple3.code} language="html" is_html={true} title="history.length" addClass="mt-3 mb-3" copie={true}  number={true}/>  
     </article>
 </section>
     )

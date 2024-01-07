@@ -21,7 +21,7 @@ import {
     //events
     Animation,CtrlKey,CurrentTarget,Data,Onafterprint,Onbeforeprint,Onblur,Oncanplay,Onchange,
     Onclick,Oncontextmenu,Oncopy,Oncut,Ondblclick,Ondrag,Ondurationchange,Onended,Onerror,Onfocus,
-    Onfocusin,Onfocusout,Onfullscreenchange,Oninput,Oninvalid,Onkeydown,Onkeypress,Onkeyup,Onload,
+    Onfocusin,Onfocusout,Oninput,Oninvalid,Onkeydown,Onkeypress,Onkeyup,Onload,
     Onloadeddata,Onloadedmetadata,Onloadstart,Onmousedown,Onmouseenter,Onmouseleave,Onmousemove,
     Onmouseout,Onmouseover,Onmouseup,Onpagehide,Onpaste,Onpause,Onplay,Onprogress,Onreset,Onresize,
     Onscroll,Onselect,Onsubmit,Ontoggle,Onunload,Onvolumechange,Target,
@@ -174,7 +174,6 @@ return(
             <Route path='/onfocus' element={<Onfocus />} /> 
             <Route path='/onfocusin' element={<Onfocusin />} /> 
             <Route path='/onfocusout' element={<Onfocusout />} /> 
-            <Route path='/onfullscreenchange' element={<Onfullscreenchange />} /> 
             <Route path='/oninput' element={<Oninput />} /> 
             <Route path='/oninvalid' element={<Oninvalid />} /> 
             <Route path='/onkeydown' element={<Onkeydown />} /> 
