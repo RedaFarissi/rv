@@ -4,8 +4,8 @@ import { CodeHighlighter , CodeCommand } from "../path";
 export default function Sql(props){
     const sql_list = [
         "Intro" , "Install Mysql","Create Database","Drop Database",
-        "Data Types","Comments","Create Table","Drop Table","Select Database",
-        "Insert Row","Auto-increment","Retrieving Data from Table",
+        "Comments","Data Types","Create Table","Drop Table",
+        "Select Database","Insert Row","Auto-increment","Retrieving Data from Table",
         "Merge Columns while Retrieving","Column Name Repetition in Query",
         "Retrieve Data with Conditions","Retrieve Data with Sorting",
         "Retrieve Distinct Data","Merge Tables into One",
@@ -98,32 +98,111 @@ export default function Sql(props){
             <CodeHighlighter  code={"CREATE DATABASE my_db;"} language="sql" addclassName="mt-3 mb-3" copie={true}/>
             <img src={images.mysql_create_db1} className="w-100"/>
         </article>
+        <article> 
+            <h2 className="title-h2 mt-4" id="drop-database"> 4 - حدف قاعدة بيانات .</h2>
+            <p className="style_divv">
+                قاعدة البيانات هي مجموعة من البيانات المنظمة والمخزنة بحيث يمكن الوصول إليها وإدارتها بسهولة. تستخدم لتخزين مجموعة من المعلومات ذات الصلة مثل معلومات المستخدمين، الطلبات، المنتجات، وغيرها، وتوفر وسيلة فعالة لتنظيم وإدارة هذه البيانات.<br/><br/>
+                عند حذف قاعدة البيانات، يتم محو كل البيانات المخزنة في هذه القاعدة بشكل دائم، وهو عملية لا رجعة فيها، ولا يمكن استعادة البيانات بعد حذفها ما لم يكن هناك نسخ احتياطية مخزنة.
+                <CodeHighlighter  code={"DROP DATABASE database_name;"} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            </p>
+            <div className="mital">متال : </div>
+            <CodeHighlighter  code={"DROP DATABASE my_db;"} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            <img src={images.mysql_drop_db} className="w-100"/>
+            <ul className="mt-3"><li>في هذا المثال، "my_db" هو اسم قاعدة البيانات التي تريد حذفها. يجب أن تكون متأكدًا تمامًا من القاعدة التي تود حذفها قبل تنفيذ هذا الأمر، لأنه سيؤدي إلى حذف كل البيانات في تلك القاعدة دون إمكانية استعادتها.         </li></ul>
+        </article>
         <article>  
-        
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_1} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_2} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_3} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_4} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_5} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_6} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_7} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_8} className="w-100"/>
-            </div>
+            <h2 className="title-h2 mt-4" id="comments"> 5 - التعليقات .</h2>
+            <p className="style_divv">
+                في <b>MySQL</b>، يمكنك إضافة تعليقات (comments) إلى أوامر SQL لتوفير شرح أو وصف إضافي حول الجداول أو الأعمدة أو أي أمر <b>SQL</b> آخر. تعليقات <b>SQL</b> تكون مفيدة للتوثيق وفهم الشيفرة ويمكن أن تساعد المطورين الآخرين أو نفسك في المستقبل عند فحص الشيفرة. هناك عدة طرق لإضافة تعليقات في <b>MySQL</b>
+            </p>
+            <h3 className="title-h3">1 - تعليقات السطر الواحد</h3>
+            <p className="style_divv">تستخدم لإضافة تعليق في سطر واحد.</p>
+            <CodeHighlighter  code={`-- This is a one-line comment
+CREATE TABLE users (
+    user_id INT, -- Comment on a column
+    username VARCHAR(50)
+);`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            <h3 className="title-h3">2 - تعليقات العديد من الأسطر</h3>
+            <p className="style_divv">تستخدم لإضافة تعليق عبر عدة أسطر.</p>
+            <CodeHighlighter  code={`/*
+    This is a 
+    comment Multi-line
+*/
+CREATE TABLE orders (
+    order_id INT,
+    product_id INT,
+    quantity INT
+);`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+        </article>
+        <article>  
+            <h2 className="title-h2 mt-4" id="data-types"> 6 - أنواع بيانات المستخدم .</h2>
+            <p className="style_divv">
+                MySQL يدعم مجموعة متنوعة من أنواع البيانات التي يمكن استخدامها لتحديد نوع القيم التي يمكن تخزينها في الجداول. فيما يلي بعض أنواع البيانات الشائعة في MySQL
+                <CodeHighlighter  code={"DROP DATABASE database_name;"} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            </p>
+            <h3 className="title-h3"> 1 - INTEGER (INT)</h3>
+            <p  className="style_divv"> يُستخدم لتخزين الأرقام الصحيحة (الأعداد الصحيحة) بدون أجزاء عشرية</p>
+            <CodeHighlighter  code={`CREATE TABLE example_table ( id INT , age INT );`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            <h3 className="title-h3"> 2 - VARCHAR</h3>
+            <p  className="style_divv">يُستخدم لتخزين السلاسل النصية (النصوص) بطول متغير (حتى حد معين)</p>
+            <CodeHighlighter  code={`CREATE TABLE example_table ( name VARCHAR(50), address VARCHAR(255) );`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            <h3 className="title-h3"> 3 - DECIMAL</h3>
+            <p  className="style_divv">يُستخدم لتخزين الأرقام العشرية (الأعداد الكسرية).</p>
+            <CodeHighlighter  code={`CREATE TABLE example_table ( price DECIMAL(10, 2) );`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            <h3 className="title-h3"> 4 - DATE</h3>
+            <p  className="style_divv">يُستخدم لتخزين التواريخ.</p>
+            <CodeHighlighter  code={`CREATE TABLE example_table ( birthdate DATE );`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            <h3 className="title-h3"> 5 - TIME</h3>
+            <p  className="style_divv">يُستخدم لتخزين الأوقات.</p>
+            <CodeHighlighter  code={`CREATE TABLE example_table ( log_time TIME );`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            <h3 className="title-h3"> 6 - BOOLEAN</h3>
+            <p  className="style_divv">يُستخدم لتخزين القيم الصحيحة أو الخاطئة (صح أو خطأ).</p>
+            <CodeHighlighter  code={`CREATE TABLE example_table ( is_active BOOLEAN );`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            <h3 className="title-h3"> 7 - CHAR</h3>
+            <p  className="style_divv">يُستخدم لتخزين السلاسل النصية بطول ثابت. يتم تحديد الطول عند إنشاء الجدول، ويتم ملء القيمة بواسطة مسافات إضافية إذا كانت القيمة أقل من الطول المحدد.</p>
+            <CodeHighlighter  code={`CREATE TABLE example_table ( code CHAR(5) );`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            <h3 className="title-h3"> 8 - ENUM</h3>
+            <p  className="style_divv">يُستخدم لتخزين قائمة ثابتة من القيم. يمكن تحديد القيم المسموح بها عند إنشاء الجدول.</p>
+            <CodeHighlighter  code={`CREATE TABLE example_table ( status ENUM('active', 'inactive', 'pending') );`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            <h3 className="title-h3"> 9 - TEXT</h3>
+            <p  className="style_divv"> يُستخدم لتخزين نصوص طويلة، ويمكن أن يكون لها حجم غير محدود. </p>
+            <CodeHighlighter  code={`CREATE TABLE example_table ( description TEXT );`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            <h3 className="title-h3"> 10 - BLOB</h3>
+            <p  className="style_divv">يُستخدم لتخزين بيانات ثنائية كبيرة مثل الصور والملفات.</p>
+            <CodeHighlighter  code={`CREATE TABLE example_table ( image BLOB );`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            <h3 className="title-h3"> 11 - DATETIME</h3>
+            <p  className="style_divv">يُستخدم لتخزين التواريخ والأوقات.</p>
+            <CodeHighlighter  code={`CREATE TABLE example_table ( creation_time DATETIME );`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            <h3 className="title-h3"> 12 - INT UNSIGNED</h3>
+            <p  className="style_divv">يستخدم لتخزين الأعداد الصحيحة بشكل إيجابي فقط (بدون قيم سالبة).</p>
+            <CodeHighlighter  code={`CREATE TABLE example_table ( quantity INT UNSIGNED );`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            <h3 className="title-h3"> 13 - FLOAT و DOUBLE</h3>
+            <p  className="style_divv">تُستخدم لتخزين الأرقام العائمة (الأعداد ذات الفاصلة العائمة).</p>
+            <CodeHighlighter  code={`CREATE TABLE example_table ( price FLOAT, temperature DOUBLE );`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            <h3 className="title-h3"> 14 - JSON</h3>
+            <p  className="style_divv">يستخدم لتخزين البيانات بتنسيق JSON.</p>
+            <CodeHighlighter  code={`CREATE TABLE example_table ( data JSON );`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            <h3 className="title-h3"> 15 - GEOMETRY</h3>
+            <p  className="style_divv">يستخدم لتخزين البيانات المكانية والهندسية مثل النقاط والخطوط والمضلعات.</p>
+            <CodeHighlighter  code={`CREATE TABLE example_table ( location GEOMETRY );`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            <h3 className="title-h3"> 16 - SET</h3>
+            <p  className="style_divv">يُستخدم لتخزين مجموعة من القيم، حيث يمكنك اختيار أكثر من قيمة من بين مجموعة محددة.</p>
+            <CodeHighlighter  code={`CREATE TABLE example_table ( permissions SET('read', 'write', 'execute') );`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            <h3 className="title-h3"> 17 - TIMESTAMP</h3>
+            <p  className="style_divv">يُستخدم لتخزين التواريخ والأوقات، ويتم تخزينه بتنسيق خاص يعكس الزمن بتوقيت UTC.</p>
+            <CodeHighlighter  code={`CREATE TABLE example_table ( last_updated TIMESTAMP );`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            <h3 className="title-h3"> 18 - BIT</h3>
+            <p  className="style_divv">يُستخدم لتخزين القيم الثنائية (0 أو 1) ويمكن أيضًا تعريفه بحيث يحتفظ بعدد محدد من البتات.</p>
+            <CodeHighlighter  code={`CREATE TABLE example_table ( flags BIT(8) );`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            <h3 className="title-h3"> 19 - YEAR</h3>
+            <p  className="style_divv">يُستخدم لتخزين السنوات، حيث يمكن تحديد القيمة بأربعة أرقام أو اثنين فقط (مثل 2022 أو 22).</p>
+            <CodeHighlighter  code={`CREATE TABLE example_table ( graduation_year YEAR );`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+        </article>
+        <article>
+
+
+
+
             <div className="w-100 border border-primary border-2 my-4 rounded"> 
                 <img src={images.SQL_9} className="w-100"/>
             </div>
