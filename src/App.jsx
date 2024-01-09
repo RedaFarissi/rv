@@ -1,5 +1,5 @@
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
-import { Header , Home , Html , Css, Js , React , Vue , Cmd , Git , Django , Laravel} from './components/path';
+import { Header , Home , Html , Css, Js , React ,Mysql ,Django , Laravel , Cmd , Git , } from './components/path';
 import "./App.sass"
 
 function App() {
@@ -57,20 +57,10 @@ function App() {
     ["Packages" ,"Authentication_UI","Authentication_Breeze","Paypal_Payment","Stripe_Payment_Integration"],
     ["github" ,"clone_laravel_project","laravel_docker"],
   ]
-  const vue_matrix = [
-    [ "How_to_create_Vuejs","install_dependencies","ship_your_app_to_production"],
-    "create_state_in_Vuejs",
-    "v-text",
-    "v-html",
-    "v-for",
-    "v-if_and_v-else-if_and_v-else",
-    "v-once",
-    "v-show",
-    "v-bind",
-    "v-model",
-    "Component_in_vuejs",
-    "change_value_state_when_click_button_in_another_Component",
+  const sql_list = [
+    "Intro","Syntax","Select","Select Distinct","Where","Order By","And","Or","Not","Insert Into","Null Values","Update","Delete","Select Top","Min and Max","Count","Sum","Avg","Like","Wildcards","In","Between","Aliases","Joins","Inner Join","Left Join","Right Join","Full Join","Self Join","Union","Group By","Having","Exists","Any, All","Select Into","Insert Into Select","Case","Null Functions","Stored Procedures","Comments","Operators",
   ]
+
   return (
     <Router>
         <Header />
@@ -80,7 +70,7 @@ function App() {
             <Route path='/css/*' element={<Css  css_list={css_list}  />} />
             <Route path='/js/*' element={<Js js_matrix={js_matrix} />} />
             <Route path='/react/' element={<React react_matrix={react_matrix} />} />
-            <Route path='/vue/' element={<Vue vue_matrix={vue_matrix} />} />
+            <Route path='/mysql/*' element={<Mysql sql_list={sql_list} />} />
             <Route path='/django/*' element={<Django django_matrix={django_matrix} />} />
             <Route path='/laravel/*' element={<Laravel laravel_matrix={laravel_matrix}  />} />
             <Route path='/power-shell' element={<Cmd cmd_list={cmd_list}  />} />

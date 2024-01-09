@@ -7,32 +7,6 @@ import { Routes, Route , Link } from "react-router-dom";
 
 
 function React(props){
-
-  // const matrix = props.react_matrix.map(e =>{ 
-  //   var keys_map;  
-  //   if (Array.isArray(e)) { 
-  //      let dt_title;
-  //      keys_map = e.map((key,index) => {
-  //         if(index === 0){
-  //            dt_title = key.toLowerCase().replace(/_/g, '-');
-  //           return(<dt className="aside-dl-dt" key={key}>
-  //                     <Link to={`/react/${dt_title}/`}>
-  //                        <i className="fa-solid fa-caret-right"></i> {key.replace(/_/g, ' ')}
-  //                     </Link>
-  //                  </dt>)  
-  //         }else{
-  //             return(<dd className="aside-dl-dd" key={key}>
-  //                        <a href={`/react/${dt_title}#${key}`}>
-  //                          <i className="fa-solid fa-circle"></i> {key.replace(/_/g, ' ')}
-  //                        </a>
-  //                     </dd>)
-  //         } 
-  //       });
-  //   }else {
-  //      keys_map = <dt className="aside-dl-simple" key={e}><a href={`/react/${e.toLowerCase().replace(/_/g, '-')}`}><i className="fa-solid fa-caret-right"></i> {e.replace(/_/g, ' ')} </a></dt>;
-  //   }
-  //   return keys_map
-  // });
   
   const arrays = codes.map(e =>{ 
     const keys = Object.keys(e) 
@@ -123,7 +97,6 @@ return(
         <img src={images.react2} alt="react"  className="img"/>
         <img src={images.react3} alt="react"  className="img"/>
   </article>
-
   <article id="Component">
     <h2 className="title-h2">2 - المكوّنات (Components) </h2>
       <p className="style_divv">
