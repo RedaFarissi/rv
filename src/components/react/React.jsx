@@ -3,7 +3,7 @@ import { CodeHighlighter , CodeCommand , Result } from "../path";
 import react_logo from "../../assests/images/logo/react_logo.svg";
 import ThisState from "./exemple/ThisState"
 import codes from "../../assests/codes/react-js/react"
-import { Routes, Route , Link } from "react-router-dom";
+// import { Routes, Route , Link } from "react-router-dom";
 
 
 function React(props){

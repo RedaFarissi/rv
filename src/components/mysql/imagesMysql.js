@@ -8,6 +8,9 @@ import mysql_install7 from "../../assests/images/sql/mysql_install7.png"
 import mysql_install8 from "../../assests/images/sql/mysql_install8.png"
 import mysql_create_db1 from "../../assests/images/sql/mysql_create_db1.png"
 import mysql_drop_db from "../../assests/images/sql/mysql_drop_db.png"
+import mysql_create_table from "../../assests/images/sql/mysql_create_table.png"
+import mysql_create_table2 from "../../assests/images/sql/mysql_create_table2.png"
+import mysql_drop_table from "../../assests/images/sql/mysql_drop_table.png"
 
 
 
@@ -83,7 +86,8 @@ import select_try_table2 from "../../assests/images/sql/Relationships between ta
 const images = {
     mysql_install1,mysql_install2,mysql_install3,mysql_install4,
     mysql_install5,mysql_install6,mysql_install7,mysql_install8,
-    mysql_create_db1,mysql_drop_db,
+    mysql_create_db1,mysql_drop_db,mysql_create_table,
+    mysql_create_table2,mysql_drop_table,
     
     
 
