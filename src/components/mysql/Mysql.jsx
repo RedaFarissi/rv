@@ -4,9 +4,9 @@ import { CodeHighlighter  } from "../path";
 export default function Sql(props){
     const sql_list = [
         "Intro" , "Install Mysql","Create Database","Drop Database",
-        "Comments","Data Types","Create Table","Drop Table",
-        "Insert Row","Select Database","Retrieving Data from Table","Auto-increment",
-        "Merge Columns while Retrieving","Column Name Repetition in Query",
+        "Comments","Data Types","Select Database","Create Table","Drop Table",
+        "Insert Row","Auto-increment","Retrieving Data from Table",
+        "Merge Columns while Retrieving","IF EXISTS","IF NOT EXISTS",
         "Retrieve Data with Conditions","Retrieve Data with Sorting",
         "Retrieve Distinct Data","Merge Tables into One",
         "Delete Data from Table Command","Update Table Data Command",
@@ -16,15 +16,15 @@ export default function Sql(props){
         "Conditions on Aggregated Fields","Copy Data to Another Table",
         "Set Default Value for Column","Store Uniform Values in Column",
     ]   
-    const arr = sql_list.map(e => <li className="list-group-item">
-        <a href={`/mysql#${e.toLowerCase().replace(/\s/g, '-')}`}>
+    const arr = sql_list.map(e => <li className="p-0 m-0 list-group-item">
+        <a href={`/mysql#${e.toLowerCase().replace(/\s/g, '-')}`} className="p-2">
             <i className="fa-solid fa-caret-right me-1"></i> SQL {e}
         </a>
     </li>)
     return(    
 <main>
     <aside className="aside">
-        <ul className="list-group m-0">
+        <ul className="list-group m-0 p-0">
             {arr}
             {
                 // props.sql_list.map(e => <li className="list-group-item">
@@ -241,7 +241,18 @@ CREATE TABLE orders (
             </p>
         </article>
         <article>
-            <h2 className="title-h2 mt-4" id="create-table"> 7 - إنشاء جدول .</h2>
+            <h2 className="title-h2 mt-4" id="select-database"> 7 - تحديد قاعدة البيانات المراد التعامل معها .</h2>
+            <p className="style_divv">
+                في <b>MySQL</b>، لتحديد قاعدة البيانات، يمكنك استخدام البيان <b>USE</b>. إليك الصياغة الأساسية:
+                <CodeHighlighter  code={`USE database_name;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>    
+                <ul>
+                    <li><b className="text-success">USE :</b> هذا هو أمر SQL المستخدم لتحديد قاعدة البيانات المعينة.</li>
+                    <li><b className="text-success">database_name :</b> هذا هو اسم قاعدة البيانات التي تريد الانتقال إليها.</li>
+                </ul>
+            </p>            
+        </article>
+        <article>
+            <h2 className="title-h2 mt-4" id="create-table"> 8 - إنشاء جدول .</h2>
             <p className="style_divv">
                 في <b>MySQL،</b> يُستخدم البيان <b>CREATE TABLE</b> لإنشاء جدول جديد في قاعدة البيانات. فيما يلي البنية الأساسية لإنشاء جدول:
                 <CodeHighlighter  code={`CREATE TABLE table_name (
@@ -265,7 +276,7 @@ CREATE TABLE orders (
             <img src={images.mysql_create_table2} className="w-100" />
         </article>
         <article>
-            <h2 className="title-h2 mt-4" id="drop-table"> 8 - حذف جدول .</h2>
+            <h2 className="title-h2 mt-4" id="drop-table"> 9 - حذف جدول .</h2>
             <p className="style_divv">
                 لحذف جدول في <b>MySQL</b>، يُستخدم البيان <b>DROP TABLE</b>. إليك كيفية استخدامه:
                 <CodeHighlighter  code={`DROP TABLE table_name;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
@@ -274,7 +285,7 @@ CREATE TABLE orders (
             <img src={images.mysql_drop_table} className="w-100" />
         </article>
         <article>
-            <h2 className="title-h2 mt-4" id="insert-row"> 9 - أمر إضافة سطر جديد في الجدول .</h2>
+            <h2 className="title-h2 mt-4" id="insert-row"> 10 - أمر إضافة سطر جديد في الجدول .</h2>
             <p className="style_divv">
                 لإضافة سطر جديد إلى جدول في <b>MySQL،</b> يُستخدم الأمر <b>INSERT INTO</b> . إليك كيفية استخدامه:
                 <CodeHighlighter  code={`INSERT INTO table_name (
@@ -288,6 +299,12 @@ CREATE TABLE orders (
             <div className="mital"> متال : </div>
             <CodeHighlighter  code={`USE my_database;
 
+CREATE TABLE student ( 
+    id INT(9),
+    nom VARCHAR(50),
+    ville VARCHAR(50)
+);
+
 INSERT INTO student (id, nom, ville) values (2000000, 'fatah', 'marakech');
 INSERT INTO student (id, nom, ville) values (2000001, 'mouad' ,'sidi slimane');
 INSERT INTO student (id, nom, ville) values (2000002 ,'malak' ,'casa blanca');
@@ -295,20 +312,41 @@ INSERT INTO student (id, nom, ville) values (2000003, 'louae', 'sidi hya');
 INSERT INTO student (id, nom, ville) values (2000004, 'manal', 'taroudant');`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
         </article>
         <article>
-            <h2 className="title-h2 mt-4" id="select-database"> 10 - تحديد قاعدة البيانات المراد التعامل معها .</h2>
+            <h2 className="title-h2 mt-4" id="auto-increment"> 11 - الترقيم التلقائي .</h2>
             <p className="style_divv">
-                في <b>MySQL</b>، لتحديد قاعدة البيانات، يمكنك استخدام البيان USE. إليك الصياغة الأساسية:
-                <CodeHighlighter  code={`USE database_name;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>    
+                في <b>MySQL</b>، يمكنك تحقيق الترقيم التلقائي باستخدام خاصية <b>AUTO_INCREMENT</b> مع عمود يكون هو المفتاح الرئيسي للجدول. يتيح ذلك لك تعيين قيم فريدة ومتتابعة لهذا العمود بدون الحاجة إلى تحديدها يدويًا، مما يُسهل إدارة السجلات.<br/><br/>
+                الصياغة الأساسية لاستخدام <b>AUTO_INCREMENT</b> في <b>MySQL</b>:
+                <CodeHighlighter  code={`CREATE TABLE table_name (
+    column1 datatype AUTO_INCREMENT PRIMARY KEY,
+    column2 datatype,
+    ...
+);`} language="sql" addclassName="mt-3 mb-3" copie={true}/>    
                 <ul>
-                    <li><b className="text-success">USE :</b> هذا هو أمر SQL المستخدم لتحديد قاعدة البيانات المعينة.</li>
-                    <li><b className="text-success">database_name :</b> هذا هو اسم قاعدة البيانات التي تريد الانتقال إليها.</li>
+                    <li><b className="text-success">AUTO_INCREMENT :</b> يُستخدم لتحديد أن القيمة في هذا العمود ستزداد تلقائيًا وفقًا لترتيب متسلسل.</li>
+                    <li><b className="text-success">PRIMARY KEY :</b> يحدد أن هذا العمود هو المفتاح الرئيسي للجدول.</li>
                 </ul>
-            </p>            
+            </p>
+            <div className="mital"> متال : </div>
+            <CodeHighlighter  code={`USE my_database;
+
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50),
+    email VARCHAR(100)
+);
+
+INSERT INTO users VALUES ( Null , "Reda Eskouni" , "reda@gmail.com");
+INSERT INTO users VALUES ( Null , "AMAL ..." , "amal@gmail.com");
+INSERT INTO users VALUES ( Null , "Name3 ..." , "Name3@gmail.com");
+INSERT INTO users VALUES ( Null , "Name4 ..." , "Name4@gmail.com");
+INSERT INTO users VALUES ( Null , "Name5 ..." , "Name5@gmail.com");
+INSERT INTO users VALUES ( Null , "Name6 ..." , "Name6@gmail.com");
+INSERT INTO users VALUES ( Null , "Name7 ..." , "Name7@gmail.com");`} language="sql" addclassName="mt-3 mb-3" copie={true}/>    
         </article>
         <article>
-            <h2 className="title-h2 mt-4" id="retrieving-data-from-table"> 11 - جلب البيانات من جدول .</h2>
+            <h2 className="title-h2 mt-4" id="retrieving-data-from-table"> 12 - جلب البيانات من جدول .</h2>
             <p className="style_divv">
-                في <b>MySQL،</b> يُستخدم البيان <b>SELECT</b> لاسترجاع البيانات من جدول أو أكثر. إليك بنية الأساسية لبيان SELECT:
+                في <b>MySQL،</b> يُستخدم البيان <b>SELECT</b> لاسترجاع البيانات من جدول أو أكثر. إليك بنية الأساسية لبيان <b>SELECT</b>:
                 <CodeHighlighter  code={`SELECT column1, column2, ... FROM table_name`} language="sql" addclassName="mt-3 mb-3" copie={true}/>    
                 <ul>
                     <li><b className="text-success">SELECT :</b> هذا هو أمر SQL المستخدم لاسترجاع البيانات من قاعدة البيانات.</li>
@@ -316,8 +354,13 @@ INSERT INTO student (id, nom, ville) values (2000004, 'manal', 'taroudant');`} l
                     <li><b className="text-success">FROM :</b> اسم_الجدول: هذا يحدد الجدول من الذي تريد استرجاع البيانات.</li>
                 </ul>
             </p>
-            <div className="mital"> متال : </div>
+            <div className="mital"> متال 1: </div>
             <CodeHighlighter  code={`USE my_database;
+CREATE TABLE student ( 
+    id INT(9),
+    nom VARCHAR(50),
+    ville VARCHAR(50)
+);
 
 INSERT INTO student (id, nom, ville) values (2000000, 'fatah', 'marakech');
 INSERT INTO student (id, nom, ville) values (2000001, 'mouad' ,'sidi slimane');
@@ -338,221 +381,370 @@ SELECT id, nom, ville FROM student;`} language="sql" addclassName="mt-3 mb-3" co
                     <tr> <td>2000004</td> <td>manal</td> <td>taroudant</td> </tr>
                 </tbody>
             </table>
+            <div className="mital"> متال 2: </div>
+            <CodeHighlighter  code={`USE my_database;
+
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50),
+    email VARCHAR(100)
+);
+
+INSERT INTO users VALUES ( Null , "Reda Eskouni" , "reda@gmail.com");
+INSERT INTO users VALUES ( Null , "AMAL ..." , "amal@gmail.com");
+INSERT INTO users VALUES ( Null , "Name3 ..." , "Name3@gmail.com");
+INSERT INTO users VALUES ( Null , "Name4 ..." , "Name4@gmail.com");
+INSERT INTO users VALUES ( Null , "Name5 ..." , "Name5@gmail.com");
+INSERT INTO users VALUES ( Null , "Name6 ..." , "Name6@gmail.com");
+INSERT INTO users VALUES ( Null , "Name7 ..." , "Name7@gmail.com");
+
+SELECT * FROM users ;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+            <table dir="ltr" className="table"> 
+                <thead className="bg-secondary">
+                    <tr> <th>user_id</th> <th>username</th> <th>email</th> </tr>
+                </thead>
+                <tbody>
+                    <tr> <td>1</td> <td>Reda Eskouni</td> <td>reda@gmail.com</td> </tr>
+                    <tr> <td>2</td> <td>AMAL ...</td> <td>amal@gmail.com</td> </tr>
+                    <tr> <td>3</td> <td>Name3 ...</td> <td>Name3@gmail.com</td> </tr>
+                    <tr> <td>4</td> <td>Name4 ...</td> <td>Name4@gmail.com</td> </tr>
+                    <tr> <td>5</td> <td>Name5 ...</td> <td>Name5@gmail.com</td> </tr>
+                    <tr> <td>6</td> <td>Name6 ...</td> <td>Name6@gmail.com</td> </tr>
+                    <tr> <td>7</td> <td>Name7 ...</td> <td>Name7@gmail.com</td> </tr>
+                </tbody>
+            </table>
         </article>
         <article>
-        <h2 className="title-h2 mt-4" id="auto-increment"> 12 - الترقيم التلقائي .</h2>
+            <h2 className="title-h2 mt-4" id="merge-columns-while-retrieving"> 13 - دمج الأعمدة أثناء الاسترجاع .</h2>
+            <h3 className="title-h3">1 - دمج النصوص (string)</h3>
             <p className="style_divv">
-
+                في <b>MySQL</b>، يمكنك دمج أو توحيد الأعمدة أثناء استرجاع البيانات باستخدام وظيفة <b>CONCAT</b>. تُستخدم وظيفة <b>CONCAT</b> لدمج قيم اثنين أو أكثر من الأعمدة في سلسلة واحدة. فيما يلي الصيغة الأساسية:
+                <CodeHighlighter  code={`SELECT CONCAT(column1, column2, ...) AS merged_column
+FROM table_name;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+                <ul>
+                    <li><b className="text-success">CONCAT(column1, column2, ...) :</b> تقوم هذه الوظيفة بدمج قيم الأعمدة المحددة.</li>
+                    <li><b className="text-success">AS merged_column :</b> يُعين هذا الجزء اسمًا بديلاً للنتيجة باعتبارها عمودًا جديدًا يُسمى merged_column. يمكنك تخصيص الاسم بحسب تفضيلك.</li>
+                    <li><b className="text-success">FROM table_name :</b> يحدد الجدول الذي تريد استرجاع البيانات منه</li>
+                </ul>
             </p>
-            
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_9} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_10} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_11} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_12} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_13} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_14} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_15} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_16} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_17} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_18} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_19} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_20} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_21} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_22} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_23} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_24} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_25} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_26} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_27} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_28} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_29} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_31} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_32} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_33} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_34} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_35} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_36} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_37} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_38} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_39} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_40} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_41} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_42} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_43} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_44} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_45} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_46} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_47} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_48} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_49} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_50} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_51} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_52} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_53} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_54} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_54_5} className="w-100"/>
-                <p className="alert alert-warning"><em>Skip 6 rows and return 3 rows </em></p>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_55} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_56} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_57} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_58} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_when_then} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.Relationships_between_tables_0} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.Relationships_between_tables_1} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.Relationships_between_tables_2} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.Relationships_between_tables_3} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.select_4_table} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.select_try_table} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.select_try_table2} className="w-100"/>
-            </div>
-            <br/><br/><br/><br/><br/><br/><br/><br/>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL__1} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_1_5} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_1_6} className="w-100"/>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_1_7} className="w-100"/>
-                <p className="alert alert-warning">
-                    <em> REGEXP so powerfull for search for string in<br/>in this exemple<br/> <b>WHERE last_name LIKE '%field%'</b> <b><b>{"<"}=={">"}</b></b> <b>WHERE last_name REGEXP 'field'</b> </em>
-                </p>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_1_8} className="w-100"/>
-                <p className="alert alert-warning"><em> in this exemple will return just string <b><u>start</u></b> with <b>field</b> </em></p>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_1_9} className="w-100"/>
-                <p className="alert alert-warning"><em> in this exemple will return just string <b><u>end</u></b> with <b>field</b> </em></p>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_1_91} className="w-100"/>
-                <p className="alert alert-warning"><em> in this exemple will return just string <b><u>content</u></b> with <b>field</b> or <b>mac</b> </em></p>
-            </div>
-            <div className="w-100 border border-primary border-2 my-4 rounded"> 
-                <img src={images.SQL_0} className="w-100"/>
-            </div>
+            <div className="mital"> متال : </div>
+            <CodeHighlighter  code={`USE my_database;
+
+CREATE TABLE student ( 
+    id INT(9),
+    nom VARCHAR(50),
+    ville VARCHAR(50)
+);
+
+INSERT INTO student (id, nom, ville) values (2000000, 'fatah', 'marakech');
+INSERT INTO student (id, nom, ville) values (2000001, 'mouad' ,'sidi slimane');
+INSERT INTO student (id, nom, ville) values (2000002 ,'malak' ,'casa blanca');
+INSERT INTO student (id, nom, ville) values (2000003, 'louae', 'sidi hya');
+INSERT INTO student (id, nom, ville) values (2000004, 'manal', 'taroudant');
+
+SELECT CONCAT("Name is : " , nom , ' ville is : ', ville) AS info FROM student;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+            <table dir="ltr" className="table"> 
+                <thead className="bg-secondary">
+                    <tr> <th>info </th> </tr>
+                </thead>
+                <tbody>
+                    <tr> <td className="text-start p-2">Name is : fatah ville is : marakech</td> </tr>
+                    <tr> <td className="text-start p-2">Name is : mouad ville is : sidi slimane</td> </tr>
+                    <tr> <td className="text-start p-2">Name is : malak ville is : casa blanca</td> </tr>
+                    <tr> <td className="text-start p-2">Name is : louae ville is : sidi hya</td> </tr>
+                    <tr> <td className="text-start p-2">Name is : manal ville is : taroudant</td> </tr>
+                </tbody>
+            </table>
+            <h3 className="title-h3">2 - دمج الأرقام (Num)</h3>
+            <p className="style_divv">
+                يمكنك استخدام العمليات الرياضية الأربعة (+ للجمع، - للطرح، * للضرب، / للقسمة) لإجراء عمليات رياضية بين الأعداد في استعلام <b>SQL</b>. هذا يمكن أن يكون مفيدًا عند العمل مع أعمدة تحتوي على قيم رقمية.<br/>
+                فيما يلي مثال على كيفية استخدام العمليات الرياضية في استعلام <b>SQL</b>:
+                <CodeHighlighter  code={`SELECT column1 + column2 + ... AS 'newly_column_name'`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            </p>
+            <div className="mital"> متال : </div>
+            <CodeHighlighter  code={`USE my_database;
+
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50),
+    email VARCHAR(100)
+);
+
+INSERT INTO users VALUES ( Null , "Reda Eskouni" , "reda@gmail.com");
+INSERT INTO users VALUES ( Null , "AMAL ..." , "amal@gmail.com");
+INSERT INTO users VALUES ( Null , "Name3 ..." , "Name3@gmail.com");
+INSERT INTO users VALUES ( Null , "Name4 ..." , "Name4@gmail.com");
+INSERT INTO users VALUES ( Null , "Name5 ..." , "Name5@gmail.com");
+INSERT INTO users VALUES ( Null , "Name6 ..." , "Name6@gmail.com");
+INSERT INTO users VALUES ( Null , "Name7 ..." , "Name7@gmail.com");
+
+SELECT 
+	user_id ,
+	10 + user_id AS add_10 ,
+    10 - user_id AS subtraction_10 ,
+    10 * user_id AS multiplication_10  ,
+    10 / user_id AS division_10 
+FROM users;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+            <table dir="ltr" className="table"> 
+                <thead className="bg-secondary">
+                    <tr> <th>user_id</th> <th>add_10</th> <th>subtraction_10</th> <th>multiplication_10</th> <th>division_10</th> </tr>
+                </thead>
+                <tbody>
+                    <tr> <td className="text-start">1</td> <td className="text-start">11</td> <td className="text-start">9</td> <td className="text-start">10</td> <td className="text-start">10.0000</td> </tr>
+                    <tr> <td className="text-start">2</td> <td className="text-start">12</td> <td className="text-start">8</td> <td className="text-start">20</td> <td className="text-start">5.0000</td> </tr>
+                    <tr> <td className="text-start">3</td> <td className="text-start">13</td> <td className="text-start">7</td> <td className="text-start">30</td> <td className="text-start">3.3333</td> </tr>
+                    <tr> <td className="text-start">4</td> <td className="text-start">14</td> <td className="text-start">6</td> <td className="text-start">40</td> <td className="text-start">2.5000</td> </tr>
+                    <tr> <td className="text-start">5</td> <td className="text-start">15</td> <td className="text-start">5</td> <td className="text-start">50</td> <td className="text-start">2.0000</td> </tr>
+                    <tr> <td className="text-start">6</td> <td className="text-start">16</td> <td className="text-start">4</td> <td className="text-start">60</td> <td className="text-start">1.6667</td> </tr>
+                    <tr> <td className="text-start">7</td> <td className="text-start">17</td> <td className="text-start">3</td> <td className="text-start">70</td> <td className="text-start">1.4286</td> </tr>
+                </tbody>
+            </table>
         </article>
-    </section>
+        <article>
+            <h2 className="title-h2 mt-4" id="if-exists"> 14 - IF EXISTS .</h2>
+            <p className="style_divv">
+                في <b>MySQL</b>، يُستخدم الجملة <b>IF EXISTS</b> عادةً بالتزامن مع بعض البيانات لفحص وجود كائن قاعدة بيانات (مثل جدول، فهرس، أو مشغل) قبل تنفيذ عملية عليه. إذا كان الكائن موجودًا، يتم تنفيذ العملية؛ وإلا، يتم تجاوزها.
+                <CodeHighlighter  code={`IF EXISTS (SELECT * FROM information_schema.some_table WHERE some_condition)
+THEN
+    -- Your SQL statement or block of code here
+END IF;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+                <ul>
+                    <li><b className="text-success">IF EXISTS:</b> هذا هو فحص شرطي لوجود شرط محدد في بيان SELECT.</li>
+                    <li><b className="text-success">SELECT * FROM information_schema.some_table WHERE some_condition:</b> يقوم بيان SELECT بفحص ما إذا كان شرط معين قد تحقق في جدول معين داخل قاعدة بيانات information_schema. يمكنك تخصيص هذا الجزء بناءً على احتياجاتك.</li>
+                    <li><b className="text-success">THEN :</b> إذا كان الشرط صحيحًا (أي، الكائن موجود)، يتم تنفيذ كتلة الشيفرة أو العبارة الـ SQL التالية.</li>
+                    <li><b className="text-success">END IF :</b> يميز نهاية الكتلة الشرطية.</li>
+                </ul>
+                هذا النوع من الهيكل يُستخدم عادة في الإجراءات المخزنة أو <b>SQL</b> الدينامي حيث ترغب في تنفيذ الإجراءات شرطيًا استنادًا إلى وجود كائنات قاعدة البيانات معينة.<br/><br/>
+                إذا كان لديك سيناريو محدد أو عملية معينة في الاعتبار، يرجى تقديم المزيد من التفاصيل، وسأقدم لك مثالًا يتناسب أكثر مع طلبك.
+            </p>
+            <h3 className="title-h3">1 - حذف الجدول إذا كان موجودًا .</h3>
+            <p className="style_divv">
+                سيؤدي هذا البيان إلى حذف الجدول فقط إذا كان موجودًا. إذا كان الجدول غير موجود، فلن يتم طرح أي خطأ.
+                <CodeHighlighter  code={`DROP TABLE IF EXISTS table_name;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+            </p>
+            <h3 className="title-h3">2 - حذف قاعدة البيانات إذا كانت موجودة .</h3>
+            <p className="style_divv">
+                سيقوم هذا البيان بحذف قاعدة البيانات فقط إذا كانت موجودة. إذا كانت قاعدة البيانات غير موجودة، فلن يتم طرح أي خطأ.
+                <CodeHighlighter  code={`DROP DATABASE IF EXISTS database_name;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+            </p>
+        </article>
+        <article>
+            <h2 className="title-h2 mt-4" id="if-not-exists"> 15 - IF NOT EXISTS .</h2>
+            <h3 className="title-h3"> 1 - إنشاء الجدول إذا لم يكن موجودًا .</h3>
+            <p className="style_divv">
+                في <b>MySQL</b>، يتم استخدام <b>IF NOT EXISTS</b> في كثير من الأحيان بالتزامن مع بعض البيانات لفحص ما إذا كان كائن قاعدة البيانات المحدد، مثل جدول أو قاعدة بيانات، غير موجود قبل تنفيذ عملية معينة. إليك كيف يمكنك استخدامه مع بيان <b>CREATE TABLE</b> كمثال:
+                <CodeHighlighter  code={`CREATE TABLE IF NOT EXISTS table_name (
+    column1 datatype,
+    column2 datatype,
+    ...
+);`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+            </p>
+            <h3 className="title-h3"> 2 - إنشاء قاعدة البيانات إذا لم تكن موجودة .</h3>
+            <p className="style_divv">
+                لإنشاء قاعدة بيانات في <b>MySQL</b> مع شرط التحقق مما إذا كانت غير موجودة بالفعل.
+                <CodeHighlighter  code={`CREATE DATABASE IF NOT EXISTS db_name;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+            </p>
+        </article>
+        <article>
+            <h2 className="title-h2 mt-4" id="retrieve-data-with-conditions"> 16 - جلب البيانات محددة بشروط .</h2>
+            <p className="style_divv">
+                لاسترجاع البيانات باستخدام شروط في <b>MySQL</b>، يمكنك استخدام بيان <b>SELECT</b> مع شرط <b>WHERE</b>. الشرط <b>WHERE</b> يسمح لك بتصفية الصفوف بناءً على شرط محدد. إليك الصيغة الأساسية:
+                <CodeHighlighter  code={`SELECT column1, column2, ...
+FROM table_name
+WHERE condition;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+            </p>
+        <div className="mital"> متال : </div>
+        <CodeHighlighter  code={`USE my_database;
+
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50),
+    email VARCHAR(100)
+    );
+
+INSERT INTO users VALUES ( Null , "Reda Eskouni" , "reda@gmail.com");
+INSERT INTO users VALUES ( Null , "AMAL ..." , "amal@gmail.com");
+INSERT INTO users VALUES ( Null , "Name3 ..." , "Name3@gmail.com");
+INSERT INTO users VALUES ( Null , "Name4 ..." , "Name4@gmail.com");
+INSERT INTO users VALUES ( Null , "Name5 ..." , "Name5@gmail.com");
+INSERT INTO users VALUES ( Null , "Name6 ..." , "Name6@gmail.com");
+INSERT INTO users VALUES ( Null , "Name7 ..." , "Name7@gmail.com");
+
+SELECT * FROM users WHERE user_id > 4 OR username = "Reda Eskouni";`} language="sql" addclassName="mt-3 mb-3" copie={true}/>       
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th>user_id</th> <th>username</th> <th>email</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">1</td> <td className="text-start">Reda Eskouni</td> <td className="text-start">reda@gmail.com</td> </tr>
+                <tr> <td className="text-start">5</td> <td className="text-start">Name5 ...</td> <td className="text-start">Name5@gmail.com</td> </tr>
+                <tr> <td className="text-start">6</td> <td className="text-start">Name6 ...</td> <td className="text-start">Name6@gmail.com</td> </tr>
+                <tr> <td className="text-start">7</td> <td className="text-start">Name7 ...</td> <td className="text-start">Name7@gmail.com</td> </tr>
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <h2 className="title-h2 mt-4" id="retrieve-data-with-sorting"> 17 - جلب البيانات مع ترتيبها .</h2>
+        <p className="style_divv">
+            في <b>MySQL</b> ، يمكنك استخدام البيان <b>SELECT</b> لاسترجاع البيانات من جدول ، ويمكنك استخدام الجملة <b>ORDER BY</b> لفرز النتائج. إليك البنية الأساسية:
+            <CodeHighlighter  code={`SELECT column1 ، column2 ، ...
+FROM table_name
+ORDER BY column1 [ASC | DESC] ، column2 [ASC | DESC] ، ...;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+            <ul>
+                <li><b className="text-success">SELECT :</b> يحدد الأعمدة التي تريد استرجاعها.</li>
+                <li><b className="text-success">FROM :</b> يحدد الجدول من الذي ستتم استرجاع البيانات.</li>
+                <li><b className="text-success">ORDER BY :</b> يحدد العمود (الأعمدة) التي يجب فرز مجموعة النتائج حسبها.</li>
+                <li><b className="text-success">[ASC | DESC] :</b> كلمة اختيارية لتحديد ترتيب الفرز (تصاعدي أو تنازلي). ASC هو الافتراضي.</li>
+            </ul>
+        </p>
+        <div className="mital"> متال : </div>
+        <CodeHighlighter  code={`USE my_database;
+-- Create the employees table
+CREATE TABLE employees (
+    employee_id INT PRIMARY KEY,
+    first_name VARCHAR(255),
+    last_name VARCHAR(255),
+    age INT
+);
+
+-- Insert some sample data
+INSERT INTO employees (employee_id, first_name, last_name, age) VALUES
+(1, 'Reda', 'Eskouni', 30),
+(2, 'Adil', 'Eskouni', 25),
+(3, 'Mohamed', 'Eskouni', 35),
+(4, 'Aya', 'Eskouni', 28),
+(5, 'Mohsin', 'Brown', 32);
+
+-- Retrieve and sort data
+SELECT * FROM employees ORDER BY last_name ASC, age DESC;
+SELECT * FROM employees ORDER BY last_name ASC;
+SELECT * FROM employees ORDER BY age DESC;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        <ul dir="ltr"><li><kbd>SELECT * FROM employees ORDER BY last_name ASC, age DESC;</kbd></li></ul>
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th>employee_id</th> <th>first_name</th> <th>last_name</th> <th>age</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">5</td> <td className="text-start">Mohsin</td> <td className="text-start">Brown</td> <td className="text-start">32</td> </tr>
+                <tr> <td className="text-start">3</td> <td className="text-start">Mohamed</td> <td className="text-start">Eskouni</td> <td className="text-start">35</td> </tr>
+                <tr> <td className="text-start">1</td> <td className="text-start">Reda</td> <td className="text-start">Eskouni</td> <td className="text-start">30</td> </tr>
+                <tr> <td className="text-start">4</td> <td className="text-start">Aya</td> <td className="text-start">Eskouni</td> <td className="text-start">28</td> </tr>
+                <tr> <td className="text-start">2</td> <td className="text-start">Adil</td> <td className="text-start">Eskouni</td> <td className="text-start">25</td> </tr>
+            </tbody>
+        </table>
+        <ul dir="ltr"><li><kbd>SELECT * FROM employees ORDER BY last_name ASC ;</kbd></li></ul>
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th>employee_id</th> <th>first_name</th> <th>last_name</th> <th>age</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">5</td> <td className="text-start">Mohsin</td> <td className="text-start">Brown</td> <td className="text-start">32</td> </tr>
+                <tr> <td className="text-start">1</td> <td className="text-start">Reda</td> <td className="text-start">Eskouni</td> <td className="text-start">30</td> </tr>
+                <tr> <td className="text-start">2</td> <td className="text-start">Adil</td> <td className="text-start">Eskouni</td> <td className="text-start">25</td> </tr>
+                <tr> <td className="text-start">3</td> <td className="text-start">Mohamed</td> <td className="text-start">Eskouni</td> <td className="text-start">35</td> </tr>
+                <tr> <td className="text-start">4</td> <td className="text-start">Aya</td> <td className="text-start">Eskouni</td> <td className="text-start">28</td> </tr>
+            </tbody>
+        </table>
+        <ul dir="ltr"><li><kbd>SELECT * FROM employees ORDER BY age DESC;</kbd></li></ul>
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th>employee_id</th> <th>first_name</th> <th>last_name</th> <th>age</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">3</td> <td className="text-start">Mohamed</td> <td className="text-start">Eskouni</td> <td className="text-start">35</td> </tr>
+                <tr> <td className="text-start">5</td> <td className="text-start">Mohsin</td> <td className="text-start">Brown</td> <td className="text-start">32</td> </tr>
+                <tr> <td className="text-start">1</td> <td className="text-start">Reda</td> <td className="text-start">Eskouni</td> <td className="text-start">30</td> </tr>
+                <tr> <td className="text-start">4</td> <td className="text-start">Aya</td> <td className="text-start">Eskouni</td> <td className="text-start">28</td> </tr>
+                <tr> <td className="text-start">2</td> <td className="text-start">Adil</td> <td className="text-start">Eskouni</td> <td className="text-start">25</td> </tr>
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <h2 className="title-h2 mt-4" id="retrieve-distinct-data"> 18 - جلب بيانات خالية من التكرار  .</h2>
+        <p className="style_divv">
+            في <b>MySQL</b> ، يمكنك استخدام الكلمة الرئيسية <b>DISTINCT</b> مع بيان <b>SELECT</b> لاسترجاع قيم فريدة من عمود معين أو مجموعة من الأعمدة. إليك البنية الأساسية:
+            <CodeHighlighter  code={`SELECT DISTINCT column1، column2، ... FROM table_name;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+            <ul>
+                <li>SELECT: يحدد الأعمدة التي تريد استرجاعها.</li>
+                <li>DISTINCT: كلمة رئيسية لاسترجاع قيم فريدة.</li>
+            </ul>
+        </p>
+        <div className="mital"> متال : </div>
+        <CodeHighlighter  code={`USE my_database;
+
+-- Drop the employees table if exists
+DROP TABLE IF EXISTS employees ;
+
+-- Create the employees table
+CREATE TABLE employees (
+    employee_id INT PRIMARY KEY,
+    first_name VARCHAR(255),
+    last_name VARCHAR(255),
+    department VARCHAR(50),
+    position VARCHAR(50)
+);
+
+-- Insert some sample data
+INSERT INTO employees (employee_id, first_name, last_name, department, position) VALUES
+(1, 'Reda', 'Eskouni', 'HR', 'Manager'),
+(2, 'Reda', 'Smith', 'IT', 'Developer'),
+(3, 'Kamal', 'Toumi', 'HR', 'Assistant'),
+(4, 'Emily', 'Davis', 'IT', 'Manager'),
+(5, 'David', 'Brown', 'Finance', 'Accountant'),
+(6, 'Amal', 'Eskouni', 'HR', 'Manager'),
+(7, 'Aya', 'Smith', 'IT', 'Developer'),
+(8, 'Alan', 'Johnson', 'HR', 'Assistant'),
+(9, 'Emily', 'Davis', 'IT', 'Manager');
+
+SELECT DISTINCT department, position FROM employees;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th>department</th> <th>position</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">HR</td> <td className="text-start">Manager</td> </tr>
+                <tr> <td className="text-start">IT</td> <td className="text-start">Developer</td> </tr>
+                <tr> <td className="text-start">HR</td> <td className="text-start">Assistant</td> </tr>
+                <tr> <td className="text-start">IT</td> <td className="text-start">Manager</td> </tr>
+                <tr> <td className="text-start">Finance</td> <td className="text-start">Accountant</td> </tr>
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <h2 className="title-h2 mt-4" id="merge-tables-into-one"> 19 - دمج الجداول في جدول واحد .</h2>
+        <p className="style_divv">
+            دمج الجداول في <b>MySQL</b> يتضمن عادة استخدام عاملي <b>UNION</b> أو <b>UNION ALL</b> لدمج نتائج اثنين أو أكثر من بيانات <b>SELECT</b>. يقوم المشغل <b>UNION</b> بإزالة الصفوف المكررة، بينما يحتفظ <b>UNION ALL</b> بجميع الصفوف بما في ذلك المكررة.
+            <CodeHighlighter  code={`SELECT column1، column2، ...
+FROM table1
+UNION [ALL]
+SELECT column1، column2، ...
+FROM table2
+[UNION [ALL] ...];`} language="sql" addclassName="mt-3 mb-3" copie={true}/>  
+            <ul>
+                <li><b>SELECT :</b> يحدد الأعمدة التي تريد استرجاعها.</li>
+                <li><b>FROM :</b> يحدد الجدول من الذي ستتم استرجاع البيانات.</li>
+                <li><b>UNION :</b> يدمج نتائج اثنين أو أكثر من بيانات SELECT.</li>
+                <li><b>UNION ALL :</b> يدمج النتائج مع الاحتفاظ بالصفوف المكررة.</li>
+            </ul> 
+        </p>
+        <div className="mital"> متال : </div>
+        <CodeHighlighter  code={``} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+    </article>
+
+
+    <article>
+        <h2 className="title-h2 mt-4" id=""> 20 - .</h2>
+        <p className="style_divv">
+        
+            <CodeHighlighter  code={``} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        </p>
+        <div className="mital"> متال : </div>
+        <CodeHighlighter  code={``} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+    </article>
+</section>
 </main>
     )
 }
+/*
+  <CodeHighlighter  code={``} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+*/

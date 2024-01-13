@@ -58,7 +58,6 @@ function App() {
     ["github" ,"clone_laravel_project","laravel_docker"],
   ]
   const sql_list = [
-    "Intro","Syntax","Select","Select Distinct","Where","Order By","And","Or","Not","Insert Into","Null Values","Update","Delete","Select Top","Min and Max","Count","Sum","Avg","Like","Wildcards","In","Between","Aliases","Joins","Inner Join","Left Join","Right Join","Full Join","Self Join","Union","Group By","Having","Exists","Any, All","Select Into","Insert Into Select","Case","Null Functions","Stored Procedures","Comments","Operators",
   ]
 
   return (
