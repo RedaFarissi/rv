@@ -728,12 +728,62 @@ FROM table2
             </ul> 
         </p>
         <div className="mital"> متال : </div>
-        <CodeHighlighter  code={``} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        <CodeHighlighter  code={`USE my_database;
+
+DROP TABLE IF EXISTS employees1 ;
+DROP TABLE IF EXISTS employees2 ;
+
+-- Create employees1 table
+CREATE TABLE employees1 (
+    employee_id INT PRIMARY KEY,
+    first_name VARCHAR(255),
+    last_name VARCHAR(255),
+    department VARCHAR(50)
+);
+
+-- Insert some sample data into employees1
+INSERT INTO employees1 (employee_id, first_name, last_name, department) VALUES
+(1, 'Reda', 'Eskouni', 'HR'),
+(2, 'Reda', 'Thami', 'IT'),
+(3, 'Amal', 'Jhison', 'Finance');
+
+-- Create employees2 table
+CREATE TABLE employees2 (
+    employee_id INT PRIMARY KEY,
+    first_name VARCHAR(255),
+    last_name VARCHAR(255),
+    department VARCHAR(50)
+);
+
+-- Insert some sample data into employees2
+INSERT INTO employees2 (employee_id, first_name, last_name, department) VALUES
+(4, 'Adil', 'Davis', 'IT'),
+(5, 'Malak', 'Brown', 'Marketing');
+
+
+-- Merge data from employees1 and employees2 (remove duplicates)
+SELECT employee_id, first_name, last_name, department
+FROM employees1
+UNION
+SELECT employee_id, first_name, last_name, department
+FROM employees2;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th>employee_id</th> <th>first_name</th> <th>last_name</th> <th>department</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">1</td> <td className="text-start">Reda</td>  <td className="text-start">Eskouni</td> <td className="text-start">HR</td> </tr>
+                <tr> <td className="text-start">2</td> <td className="text-start">Reda</td>  <td className="text-start">Thami</td> <td className="text-start">IT</td> </tr>
+                <tr> <td className="text-start">3</td> <td className="text-start">Amal</td>  <td className="text-start">Jhison</td> <td className="text-start">Finance</td> </tr>
+                <tr> <td className="text-start">4</td> <td className="text-start">Adil</td>  <td className="text-start">Davis</td> <td className="text-start">IT</td> </tr>
+                <tr> <td className="text-start">5</td> <td className="text-start">Malak</td> <td className="text-start">Brown</td> <td className="text-start">Marketing</td> </tr>
+            </tbody>
+        </table>
     </article>
 
 
     <article>
-        <h2 className="title-h2 mt-4" id=""> 20 - .</h2>
+        <h2 className="title-h2 mt-4" id="delete-data-from-table-command"> 20 -  حذف البيانات من الجدول.</h2>
         <p className="style_divv">
         
             <CodeHighlighter  code={``} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
