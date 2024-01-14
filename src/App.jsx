@@ -1,5 +1,7 @@
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
-import { Header , Home , Html , Css, Js , React ,Mysql ,Django , Laravel , Cmd , Git , } from './components/path';
+import { 
+  Header,Home,Html,Css,Js,React,Mysql,Python,Django,Laravel,Cmd,Git,Php,
+} from './components/path';
 import "./App.sass"
 
 function App() {
@@ -59,6 +61,23 @@ function App() {
   ]
   const sql_list = [
   ]
+  const python_list = [  
+    "HOME","Intro","Get Started","Syntax","Comments","Variables","Data Types",
+    "Numbers","Casting","Strings","Booleans","Operators","Lists","Tuples","Sets",
+    "Dictionaries","If...Else","While Loops","For Loops","Functions","Lambda",
+    "Arrays","Classes/Objects","Inheritance","Iterators","Polymorphism","Scope",
+    "Modules","Dates","Math","JSON","RegEx","PIP","Try...Except","User Input",
+    "String Formatting","File Handling","Read Files","Write/Create Files",  
+    "Delete Files",
+  ]
+  const php_list = [  
+    "HOME","Intro","Install","Syntax","Comments","Variables","Echo / Print",
+    "Data Types","Strings","Numbers","Casting","Math","Constants",
+    "Magic Constants","Operators","If...Else...Elseif","Switch","Loops",
+    "Functions","Arrays","Superglobals","RegEx",
+
+    "Form Handling","Form Validation","Form Required","Form URL/E-mail","Form Complete",
+  ]
 
   return (
     <Router>
@@ -70,7 +89,9 @@ function App() {
             <Route path='/js/*' element={<Js js_matrix={js_matrix} />} />
             <Route path='/react/' element={<React react_matrix={react_matrix} />} />
             <Route path='/mysql/*' element={<Mysql sql_list={sql_list} />} />
+            <Route path='/python/*' element={<Python python_list={python_list} />} />
             <Route path='/django/*' element={<Django django_matrix={django_matrix} />} />
+            <Route path='/php/*' element={<Php php_list={php_list}  />} />
             <Route path='/laravel/*' element={<Laravel laravel_matrix={laravel_matrix}  />} />
             <Route path='/power-shell' element={<Cmd cmd_list={cmd_list}  />} />
             <Route path='/git' element={<Git git_list={git_list}  />} />

@@ -14,11 +14,15 @@ export {default as Mysql} from './mysql/Mysql';
 
 export {default as Django} from './django/Django';
 
+export {default as Php} from './php/Php';
+
 export {default as Laravel} from './laravel/Laravel';
 
 export {default as Cmd} from './cmd/Cmd';
 
 export {default as Git} from './git/Git';
+
+export {default as Python} from './python/Python';
 
 export {default as CodeHighlighter} from './codeHighlighter/CodeHighlighter';
 

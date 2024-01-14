@@ -9,7 +9,7 @@ export default function Sql(props){
         "Merge Columns while Retrieving","IF EXISTS","IF NOT EXISTS",
         "Retrieve Data with Conditions","Retrieve Data with Sorting",
         "Retrieve Distinct Data","Merge Tables into One",
-        "Delete Data from Table Command","Update Table Data Command",
+        "Delete Data from Table","Update Table Data",
         "Limit Rows Returned","Handling Null Fields","Retrieve Minimum Value in Column",
         "Retrieve Maximum Value in Column","Count Rows in Table","Sum of Column Values",
         "Average of Column Values","Aggregate Common Field Values",
@@ -21,7 +21,7 @@ export default function Sql(props){
             <i className="fa-solid fa-caret-right me-1"></i> SQL {e}
         </a>
     </li>)
-    return(    
+    return(
 <main>
     <aside className="aside">
         <ul className="list-group m-0 p-0">
@@ -36,8 +36,8 @@ export default function Sql(props){
         </ul>
     </aside>
     <section className="section-conetent">
+        <h1 className="heading-style heading-style-css-color"> MYSQL </h1>
         <article className="mt-5">
-            <h1 className="heading-style heading-style-css-color"> MYSQL </h1>
             <h2 id="intro" className="title-h2"> 1 -مقدمة حول mysql </h2>
             <h3 className="title-h3"> 1 - ما هو mysql</h3>
             <p className="style_divv">
@@ -780,16 +780,59 @@ FROM employees2;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
             </tbody>
         </table>
     </article>
-
-
     <article>
-        <h2 className="title-h2 mt-4" id="delete-data-from-table-command"> 20 -  حذف البيانات من الجدول.</h2>
+        <h2 className="title-h2 mt-4" id="delete-data-from-table"> 20 -  حذف البيانات من الجدول.</h2>
         <p className="style_divv">
-        
-            <CodeHighlighter  code={``} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+            في <b>MySQL</b>، يمكنك استخدام بيان <b>DELETE</b> لإزالة السجلات من جدول بناءً على شروط معينة. إليك البنية الأساسية.
+            <CodeHighlighter  code={`DELETE FROM table_name WHERE condition;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+            <ul>
+                <li><b className="text-success">DELETE FROM :</b> يحدد الجدول الذي تريد حذف منه البيانات.</li>
+                <li><b className="text-success">WHERE :</b> يحدد الشرط الذي يجب تحقيقه حتى يتم حذف السجلات.</li>
+            </ul>
         </p>
         <div className="mital"> متال : </div>
-        <CodeHighlighter  code={``} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        <CodeHighlighter  code={`USE my_database;
+
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50),
+    email VARCHAR(100)
+);
+
+INSERT INTO users VALUES ( Null , "Reda Eskouni" , "reda@gmail.com");
+INSERT INTO users VALUES ( Null , "AMAL ..." , "amal@gmail.com");
+INSERT INTO users VALUES ( Null , "Name3 ..." , "Name3@gmail.com");
+INSERT INTO users VALUES ( Null , "Name4 ..." , "Name4@gmail.com");
+INSERT INTO users VALUES ( Null , "Name5 ..." , "Name5@gmail.com");
+INSERT INTO users VALUES ( Null , "Name6 ..." , "Name6@gmail.com");
+INSERT INTO users VALUES ( Null , "Name7 ..." , "Name7@gmail.com");
+
+-- Deletes all rows where the condition True
+DELETE FROM users WHERE user_id>3;
+
+SELECT * FROM users;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th>user_id</th> <th>username</th> <th>email</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">1</td> <td className="text-start">Reda Eskouni</td> <td className="text-start">reda@gmail.com</td> </tr>
+                <tr> <td className="text-start">2</td> <td className="text-start">AMAL ...</td> <td className="text-start">amal@gmail.com</td> </tr>
+                <tr> <td className="text-start">3</td> <td className="text-start">Name3 ...</td> <td className="text-start">Name3@gmail.com</td> </tr>
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <h2 className="title-h2 mt-4" id="update-table-data"> 21 - تحديث البيانات المخزنة في الجدول .</h2>
+        <p className="style_divv">
+            <CodeHighlighter  code={``} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+            <ul>
+                <li></li>
+            </ul>
+        </p>
+        <div className="mital"> متال : </div>
     </article>
 </section>
 </main>
