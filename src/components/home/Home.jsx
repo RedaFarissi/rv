@@ -56,42 +56,6 @@ export default function Home(props){
       />
 
       <HomeBox 
-          link="/vue"
-          home_box="home-box-vue"
-          h1_class="h1_vue"
-          h1="Vue.js"
-          img={images.vue_logo}
-          code={home.home_vue}
-          language="javascript"
-          img_class="img-react"
-          paragraph="Vue.js هو إطار عمل لتطوير واجهات المستخدم لتطبيقات الويب، ويعتبر أحد الأساسيات في مجال تقنيات الويب. يتم بناء Vue.js على لغة JavaScript، ويبرز بأدائه الممتاز في تطوير تطبيقات الويب الديناميكية والتفاعلية. يعتمد Vue.js على نهج مبتكر للمكونات، مما يتيح للمطورين إنشاء تطبيقات يمكن إعادة استخدامها بسهولة. يتميز Vue.js بتصميمه البسيط والخفيف."
-      />
-
-      <HomeBox 
-          link="/php"
-          home_box="home-box-php"
-          h1_class="h1_php"
-          h1="PHP"
-          img={images.php_logo}
-          code={home.home_php}
-          language="php"
-          img_class="img-php"
-          paragraph="PHP هو لغة برمجة تُستخدم بشكل رئيسي في تطوير صفحات الويب الديناميكية، وهو جزء حيوي من الأدوات المستخدمة في بناء تطبيقات الويب. يتميز PHP بقوته في التفاعل مع قواعد البيانات ومعالجة النماذج الواردة من النماذج المستخدمة على الصفحات. يعمل PHP جنبًا إلى جنب مع HTML لبناء صفحات الويب الديناميكية."
-      />
-
-      <HomeBox 
-          link="/laravel"
-          home_box="home-box-laravel"
-          h1_class="h1_laravel"
-          h1="Laravel"
-          img={images.laravel_logo}
-          code={home.home_laravel}
-          language="php"
-          img_class="img-php"
-          paragraph="Laravel هو إطار عمل PHP متطور يستخدم لتطوير تطبيقات الويب بشكل فعّال. يُعد Laravel جزءًا حيويًا من عالم تطوير الويب ويقوم بتسهيل عملية بناء تطبيقات قوية ومتقدمة. يستفيد Laravel من ميزات PHP ويضيف لها توجيهات وأساليب تطوير حديثة، مما يجعله خيارًا مثاليًا لتطوير تطبيقات الويب الديناميكية. "
-      />
-
-      <HomeBox 
           link="/python"
           home_box="home-box-python"
           h1_class="h1_python"
@@ -115,7 +79,31 @@ export default function Home(props){
           paragraph="Django هو إطار عمل Python قوي وشهير يُستخدم لتطوير تطبيقات الويب بشكل فعّال. يعتبر Django حلاً شاملاً لبناء تطبيقات الويب القائمة على Python، حيث يوفر ميزات قوية مثل نظام إدارة قواعد البيانات وتوجيهات URL وأنظمة تحديث الواجهة. يُعتبر Django سهل الاستخدام ويسمح بتطوير تطبيقات قابلة للتوسع بسرعة باستخدام مكونات قابلة لإعادة الاستخدام."
       />
 
-      <HomeBox 
+        <HomeBox 
+          link="/php"
+          home_box="home-box-php"
+          h1_class="h1_php"
+          h1="PHP"
+          img={images.php_logo}
+          code={home.home_php}
+          language="php"
+          img_class="img-php"
+          paragraph="PHP هو لغة برمجة تُستخدم بشكل رئيسي في تطوير صفحات الويب الديناميكية، وهو جزء حيوي من الأدوات المستخدمة في بناء تطبيقات الويب. يتميز PHP بقوته في التفاعل مع قواعد البيانات ومعالجة النماذج الواردة من النماذج المستخدمة على الصفحات. يعمل PHP جنبًا إلى جنب مع HTML لبناء صفحات الويب الديناميكية."
+        />
+
+        <HomeBox 
+          link="/laravel"
+          home_box="home-box-laravel"
+          h1_class="h1_laravel"
+          h1="Laravel"
+          img={images.laravel_logo}
+          code={home.home_laravel}
+          language="php"
+          img_class="img-php"
+          paragraph="Laravel هو إطار عمل PHP متطور يستخدم لتطوير تطبيقات الويب بشكل فعّال. يُعد Laravel جزءًا حيويًا من عالم تطوير الويب ويقوم بتسهيل عملية بناء تطبيقات قوية ومتقدمة. يستفيد Laravel من ميزات PHP ويضيف لها توجيهات وأساليب تطوير حديثة، مما يجعله خيارًا مثاليًا لتطوير تطبيقات الويب الديناميكية. "
+        />
+
+        <HomeBox 
           link="/git"
           home_box="home-box-git"
           h1_class="h1_git"
@@ -125,19 +113,52 @@ export default function Home(props){
           language="python"
           img_class="img-git"
           paragraph="Git هو نظام تحكم في النسخ يُستخدم بشكل رئيسي في إدارة وتتبع التغييرات على ملفات المشروع البرمجي. تم تطوير Git بواسطة لينوس تورفالدز، وهو نظام مفتوح المصدر يوفر العديد من المزايا للمطورين البرمجيين والفرق البرمجية.           يتيح Git للمستخدمين تسجيل تغييراتهم على ملفات المشروع وتتبع تاريخ هذه التغييرات. يتميز Git بالفعالية في التعامل مع الفروع ، حيث يمكن للمطورين إنشاء فروع جديدة لتجربة الميزات أو إصلاح الأخطاء دون التأثير على الكود الرئيسي."
-      />
+        />
 
         <HomeBox 
           link="/power-shell"
           home_box="home-box-powerShell"
           h1_class="h1_powerShell"
-          h1="powerShell"
+          h1="Windows PowerShell"
           img={images.powershell_log}
           code={home.home_powerSehll}
           language="python"
           img_class="img-powerShell"
           paragraph="CMD، الذي يعني واجهة الأوامر، هو تطبيق مترجم الأوامر المتوفر في معظم أنظمة التشغيل في ويندوز. يوفر واجهة نصية تسمح للمستخدمين بالتفاعل مع نظام التشغيل عبر إدخال الأوامر واستلام ردود نصية. تتيح واجهة أوامر الطرفية للمستخدمين أداء مهام مختلفة، وتنفيذ أوامر النظام، وتصفح نظام الملفات باستخدام مجموعة من الأوامر المحددة."
       />
+      
+      <footer dir="rtl">
+        <div id="footer-div1">
+            <div id="img_logo">
+              <img src="{% static 'front/img/logo.png' %}"/>
+            </div>
+            <div class="footer_p">
+              <h4 class="h4">هدف الموقع</h4>
+              تعلم  البرمجة  مجاني ومساعدة في تحسين البرمجة العربية مع التركيز على الأمتلة 
+              و هو المكان المناسب لأي شخص يطمح بأن يصبح مبرمجاً محترفاً و مبدعاً في العالم الرقمي
+            </div>
+        </div>
+        <div id="footer-div2">
+            <div id="tabara3_lilmaw9i3">
+                <h4 class="h4"><span class="material-icons" id="sovini">volunteer_activism</span> تبرع للموقع </h4>
+                في حال أردت تقديم دعم مادي لمطوري الموقع يمكنك التبرع مرة واحدة أو بشكل شهري بالمبلغ الذي تريده من خلال بايبال 
+                <button> Paypal </button>
+            </div>
+            <div class="footer_p">
+                <h4 class="h4"> <span class="material-icons"> share </span> تابعنا</h4>
+                <div style={{display: "flex"}}>
+                  <img src="{% static 'front/img/surface.jpg' %}" style={{width: "50px",height:"50px",borderRadius:"50%",marginLeft:"14px",filter:"grayscale(100%)"}}/>
+                  <samll>رضا السكوني مؤسس ومطور الموقع</samll>
+                </div>
+                <div style={{marginTop:"20px",fontSize:"105%"}}>حسابات الموقع الرسمية</div>
+                <div style={{marginTop:"20px"}}>
+                    <img class="logo-connecte" src="https://img.icons8.com/fluency/48/000000/instagram-new.png"/>
+                    <img class="logo-connecte" src="https://img.icons8.com/fluency/48/000000/facebook.png"/>
+                    <img class="logo-connecte" src="https://img.icons8.com/color/48/000000/telegram-app--v1.png"/>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     </main>
     )

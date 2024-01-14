@@ -10,10 +10,8 @@ export default function Header(){
     {name:"MYSQL" , link:"mysql"},
     {name:"PYTHON" , link:"python"},
     {name:"DJANGO" , link:"django"},
-    {name:"DJANGO API" , link:"django_api"},
     {name:"PHP" , link:"php"},
     {name:"LARAVEL" , link:"laravel"} ,
-    {name:"LARAVEL API" , link:"laravel_api"},
     {name:"Git" , link:"git"},
     {name:"CMD" , link:"power-shell"},
   ]
