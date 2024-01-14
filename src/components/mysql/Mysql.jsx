@@ -827,17 +827,162 @@ SELECT * FROM users;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
     <article>
         <h2 className="title-h2 mt-4" id="update-table-data"> 21 - تحديث البيانات المخزنة في الجدول .</h2>
         <p className="style_divv">
-            <CodeHighlighter  code={``} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+            ب <b>MySQL</b>، يمكنك استخدام بيان <b>UPDATE</b> لتعديل السجلات القائمة في جدول بناءً على شروط معينة. فيما يلي البنية الأساسية:
+            <CodeHighlighter  code={`UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
             <ul>
-                <li></li>
+                <li><b className="text-success">UPDATE :</b> يحدد الجدول الذي سيتم تحديثه.</li>
+                <li><b className="text-success">SET :</b> يسند قيمًا جديدة للأعمدة المحددة.</li>
+                <li><b className="text-success">WHERE :</b> يحدد الشرط الذي يجب تحقيقه لحدوث التحديث. إذا حذفت عبارة WHERE، سيتم تحديث جميع الصفوف في الجدول.</li>
             </ul>
         </p>
         <div className="mital"> متال : </div>
+        <CodeHighlighter  code={`USE my_database;
+
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50),
+    email VARCHAR(100)
+);
+
+INSERT INTO users VALUES ( Null , "Reda Eskouni" , "reda@gmail.com");
+INSERT INTO users VALUES ( Null , "AMAL ..." , "amal@gmail.com");
+INSERT INTO users VALUES ( Null , "Name3 ..." , "Name3@gmail.com");
+INSERT INTO users VALUES ( Null , "Name4 ..." , "Name4@gmail.com");
+INSERT INTO users VALUES ( Null , "Name5 ..." , "Name5@gmail.com");
+INSERT INTO users VALUES ( Null , "Name6 ..." , "Name6@gmail.com");
+INSERT INTO users VALUES ( Null , "Name7 ..." , "Name7@gmail.com");
+
+-- update email where user_id equal 3
+UPDATE users SET email = 'update_email@example.com' WHERE user_id = 3;
+
+SELECT * FROM users;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th>user_id</th> <th>username</th> <th>email</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">1</td> <td className="text-start">Reda Eskouni</td> <td className="text-start">reda@gmail.com</td> </tr>
+                <tr> <td className="text-start">2</td> <td className="text-start">AMAL ...</td> <td className="text-start">amal@gmail.com</td> </tr>
+                <tr> <td className="text-start">3</td> <td className="text-start">Name3 ...</td> <td className="text-start">update_email@example.com</td> </tr>
+                <tr> <td className="text-start">4</td> <td className="text-start">Name4 ...</td> <td className="text-start">Name4@gmail.com</td> </tr>
+                <tr> <td className="text-start">5</td> <td className="text-start">Name5 ...</td> <td className="text-start">Name5@gmail.com</td> </tr>
+                <tr> <td className="text-start">6</td> <td className="text-start">Name6 ...</td> <td className="text-start">Name6@gmail.com</td> </tr>
+                <tr> <td className="text-start">7</td> <td className="text-start">Name7 ...</td> <td className="text-start">Name7@gmail.com</td> </tr>
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <h2 className="title-h2 mt-4" id="limit-rows-returned"> 22 - تحديد عدد الصفوف المسترجعة من الجدول .</h2>
+        <p className="style_divv">
+           باستخدام العبارة <b>LIMIT</b> في <b>MySQL</b>، يمكنك تقييد عدد الصفوف المسترجعة من استعلام <b>SELECT</b>. يُستخدم هذا الأمر غالبًا لتقسيم النتائج أو لتحديد عدد الصفوف المسترجعة لأسباب أداء.
+            <CodeHighlighter  code={`SELECT column1, column2, ...
+FROM table_name
+WHERE condition
+LIMIT number_of_rows;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+            <ul>
+                <li><b className="text-success">LIMIT :</b> يُحدد الحد الأقصى لعدد الصفوف التي سيتم استرجاعها.</li>
+            </ul>
+        </p>
+        <div className="mital"> متال 1 : </div>
+        <CodeHighlighter  code={`USE my_database;
+
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50),
+    email VARCHAR(100)
+);
+
+INSERT INTO users VALUES ( Null , "Reda Eskouni" , "reda@gmail.com");
+INSERT INTO users VALUES ( Null , "AMAL ..." , "amal@gmail.com");
+INSERT INTO users VALUES ( Null , "Name3 ..." , "Name3@gmail.com");
+INSERT INTO users VALUES ( Null , "Name4 ..." , "Name4@gmail.com");
+INSERT INTO users VALUES ( Null , "Name5 ..." , "Name5@gmail.com");
+INSERT INTO users VALUES ( Null , "Name6 ..." , "Name6@gmail.com");
+INSERT INTO users VALUES ( Null , "Name7 ..." , "Name7@gmail.com");
+
+SELECT * FROM users LIMIT 3; `} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th>user_id</th> <th>username</th> <th>email</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">1</td> <td className="text-start">Reda Eskouni</td> <td className="text-start">reda@gmail.com</td> </tr>
+                <tr> <td className="text-start">2</td> <td className="text-start">AMAL ...</td> <td className="text-start">amal@gmail.com</td> </tr>
+                <tr> <td className="text-start">3</td> <td className="text-start">Name3 ...</td> <td className="text-start">Name3@gmail.com</td> </tr>
+            </tbody>
+        </table>
+        <div className="mital"> متال 2 : </div>
+        <ul><li>سيقوم هذا الاستعلام بتجاوز أول 3 صفوف واسترجاع ال 3 صفوف التالية من جدول "users".</li></ul>
+        <CodeHighlighter  code={`USE my_database;
+
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50),
+    email VARCHAR(100)
+);
+
+INSERT INTO users VALUES ( Null , "Reda Eskouni" , "reda@gmail.com");
+INSERT INTO users VALUES ( Null , "AMAL ..." , "amal@gmail.com");
+INSERT INTO users VALUES ( Null , "Name3 ..." , "Name3@gmail.com");
+INSERT INTO users VALUES ( Null , "Name4 ..." , "Name4@gmail.com");
+INSERT INTO users VALUES ( Null , "Name5 ..." , "Name5@gmail.com");
+INSERT INTO users VALUES ( Null , "Name6 ..." , "Name6@gmail.com");
+INSERT INTO users VALUES ( Null , "Name7 ..." , "Name7@gmail.com");
+
+SELECT * FROM users LIMIT 3 OFFSET 3;  `} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th>user_id</th> <th>username</th> <th>email</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">4</td> <td className="text-start">Name4 ...</td> <td className="text-start">Name4@gmail.com</td> </tr>
+                <tr> <td className="text-start">5</td> <td className="text-start">Name5 ...</td> <td className="text-start">Name5@gmail.com</td> </tr>
+                <tr> <td className="text-start">6</td> <td className="text-start">Name6 ...</td> <td className="text-start">Name6@gmail.com</td> </tr>
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <h2 className="title-h2 mt-4" id="handling-null-fields"> 23 - التعامل مع الحقول الفارغة .</h2>
+        <h3 className="title-h3">1 - ما هي الحقول الفارغة ز</h3>
+        <p className="style_divv">
+            الحقل الفارغ <b>(Null Value)</b> في قاعدة البيانات يشير إلى حقل لا يحتوي على قيمة محددة أو قيمة غير معروفة. يمثل الـ <b>Null</b> قيمة غير معرفة أو غير موجودة أو غير قابلة للتطبيق. يمكن أن تظهر القيمة <b>Null</b> في أي نوع من أنواع البيانات في قاعدة البيانات، سواء كانت أعدادًا أو سلاسل نصية أو تواريخ وما إلى ذلك.
+        </p>
+        <h3 className="title-h3">2 - تمثيل القيمة المفقودة أو غير المعروفة: </h3>
+        <p className="style_divv">
+            <b>Null</b> يستخدم لتمثيل حالات عدم المعرفة أو القيم المفقودة.
+        </p>
+        <h3 className="title-h3">3 - التحقق من الحقول الفارغة:</h3>
+        <p className="style_divv">
+            للتحقق مما إذا كان حقل معين فارغًا، يمكن استخدام <b>IS NULL</b> في جملة الاستعلام.
+            <CodeHighlighter  code={`SELECT * FROM table_name WHERE column_name IS NULL;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+            للتحقق من الحقول غير الفارغة، يمكن استخدام <b>IS NOT NULL</b>.
+            <CodeHighlighter  code={`SELECT * FROM table_name WHERE column_name IS NOT NULL;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        </p>
+        <h3 className="title-h3">4 - تحديث الحقول الفارغة:</h3>
+        <p className="style_divv">
+            يمكن استخدام <b>UPDATE</b> مع <b>IS NULL</b> لتحديث الحقول الفارغة
+            <CodeHighlighter  code={`UPDATE table_name SET column_name = 'new_value' WHERE column_name IS NULL;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        </p>
+        <h3 className="title-h3">5 - استخدام دوال مثل COALESCE:</h3>
+        <p className="style_divv">
+            يمكن استخدام دوال مثل <b>COALESCE</b> لتحويل القيم الفارغة إلى قيم محددة.
+            <CodeHighlighter  code={`SELECT COALESCE(column_name, 'default_value') AS cleaned_value FROM table_name;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+            هذا يعيد قيمة افتراضية إذا كانت القيمة الأصلية فارغة.
+        </p>
     </article>
 </section>
 </main>
     )
 }
+
 /*
   <CodeHighlighter  code={``} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
 */
