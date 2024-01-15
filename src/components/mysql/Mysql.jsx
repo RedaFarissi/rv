@@ -978,6 +978,197 @@ SELECT * FROM users LIMIT 3 OFFSET 3;  `} language="sql" addclassName="mt-3 mb-3
             هذا يعيد قيمة افتراضية إذا كانت القيمة الأصلية فارغة.
         </p>
     </article>
+    <article>
+        <h2 className="title-h2 mt-4" id="retrieve-minimum-value-in-column"> 24 - استرجاع القيمة الدنيا في عمود معين .</h2>
+        <p className="style_divv">
+            لاسترجاع القيمة الدنيا في عمود معين، يمكنك استخدام دالة التجميع <b>MIN</b> في عبارة <b>SELECT</b>. إليك الصياغة الأساسية:
+            <CodeHighlighter  code={`SELECT MIN(column_name) AS min_value
+FROM table_name;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        </p>
+        <div className="mital"> متال : </div>
+        <CodeHighlighter  code={`USE my_database;
+
+-- Create the products table
+CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(255),
+    price DECIMAL(10, 2),
+    category VARCHAR(50)
+);
+
+-- Insert values into the products table
+INSERT INTO products VALUES
+(1, 'Laptop', 1200.00, 'Electronics'),
+(2, 'Smartphone', 800.50, 'Electronics'),
+(3, 'Headphones', 120.00, 'Electronics'),
+(4, 'Book', 15.99, 'Books'),
+(5, 'TV', 899.99, 'Electronics');
+
+-- Retrieve the minimum price for products in the Electronics category
+SELECT MIN(price) AS "min price Electronics" FROM products
+WHERE category = 'Electronics';`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th>min price Electronics</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">120.00</td> </tr>
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <h2 className="title-h2 mt-4" id="retrieve-maximum-value-in-column"> 25 - استرجاع القيمة القصوى في عمود معين .</h2>
+        <p className="style_divv">
+            لاسترجاع القيمة القصوى في عمود معين، يمكنك استخدام دالة التجميع <b>MAX</b> في عبارة <b>SELECT</b>. إليك الصياغة الأساسية:
+            <CodeHighlighter  code={`SELECT MAX(column_name) AS max_value
+FROM table_name;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        </p>
+        <div className="mital"> متال : </div>
+        <CodeHighlighter  code={`USE my_database;
+
+-- Create the products table
+CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(255),
+    price DECIMAL(10, 2),
+    category VARCHAR(50)
+);
+
+-- Insert values into the products table
+INSERT INTO products VALUES
+(1, 'Laptop', 1200.00, 'Electronics'),
+(2, 'Smartphone', 800.50, 'Electronics'),
+(3, 'Headphones', 120.00, 'Electronics'),
+(4, 'Book', 15.99, 'Books'),
+(5, 'TV', 899.99, 'Electronics');
+
+-- Retrieve the maximum price for products in the Electronics category
+SELECT MAX(price) AS "min price Electronics" FROM products
+WHERE category = 'Electronics';`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th>max price Electronics</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">1200.00</td> </tr>
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <h2 className="title-h2 mt-4" id="count-rows-in-table"> 26 - احتساب عدد الصفوف في جدول .</h2>
+        <p className="style_divv">
+            لاحتساب عدد الصفوف في جدول، يمكنك استخدام دالة التجميع <b>COUNT</b> في عبارة <b>SELECT</b>. إليك الصياغة الأساسية:
+            <CodeHighlighter  code={`SELECT COUNT(*) AS row_count
+FROM table_name;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        </p>
+        <div className="mital"> متال : </div>
+        <CodeHighlighter  code={`USE my_database;
+
+-- Create the products table
+CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(255),
+    price DECIMAL(10, 2),
+    category VARCHAR(50)
+);
+
+-- Insert values into the products table
+INSERT INTO products VALUES
+(1, 'Laptop', 1200.00, 'Electronics'),
+(2, 'Smartphone', 800.50, 'Electronics'),
+(3, 'Headphones', 120.00, 'Electronics'),
+(4, 'Book', 15.99, 'Books'),
+(5, 'TV', 899.99, 'Electronics');
+
+-- Count the number of rows in the products table
+SELECT COUNT(*) AS "count rows" FROM products;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th>count rows</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">5</td> </tr>
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <h2 className="title-h2 mt-4" id="sum-of-column-values"> 27 - حساب مجموع قيم العمود .</h2>
+        <p className="style_divv">
+            لحساب مجموع قيم العمود، يمكنك استخدام دالة التجميع <b>SUM</b> في عبارة <b>SELECT</b>. إليك الصياغة الأساسية:
+            <CodeHighlighter  code={`SELECT SUM(column_name) AS sum_value FROM table_name;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        </p>
+        <div className="mital"> متال : </div>
+        <CodeHighlighter  code={`USE my_database;
+
+-- Create the products table
+CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(255),
+    price DECIMAL(10, 2),
+    category VARCHAR(50)
+);
+
+-- Insert values into the products table
+INSERT INTO products VALUES
+(1, 'Laptop', 1200.00, 'Electronics'),
+(2, 'Smartphone', 800.50, 'Electronics'),
+(3, 'Headphones', 120.00, 'Electronics'),
+(4, 'Book', 15.99, 'Books'),
+(5, 'TV', 899.99, 'Electronics');
+
+SELECT SUM(price) AS "sum price" FROM products;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th>sum price</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">3036.48</td> </tr>
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <h2 className="title-h2 mt-4" id="average-of-column-values"> 28 - حساب متوسط قيم العمود .</h2>
+        <p className="style_divv">
+            لحساب متوسط قيم العمود، يمكنك استخدام دالة التجميع <b>AVG</b> في عبارة <b>SELECT</b>. إليك الصياغة الأساسية:
+            <CodeHighlighter  code={`SELECT AVG(column_name) AS average_value FROM table_name;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+        </p>
+        <div className="mital"> متال : </div>
+        <CodeHighlighter  code={`USE my_database;
+
+-- Create the products table
+CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(255),
+    price DECIMAL(10, 2),
+    category VARCHAR(50)
+);
+
+-- Insert values into the products table
+INSERT INTO products VALUES
+(1, 'Laptop', 1200.00, 'Electronics'),
+(2, 'Smartphone', 800.50, 'Electronics'),
+(3, 'Headphones', 120.00, 'Electronics'),
+(4, 'Book', 15.99, 'Books'),
+(5, 'TV', 899.99, 'Electronics');
+
+SELECT AVG(price) AS "average price" FROM products;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th>average price</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">607.296000</td> </tr>
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <h2 className="title-h2 mt-4" id="aggregate-common-field-values"> 29 -  .</h2>
+        <p className="style_divv">
+            <CodeHighlighter  code={``} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+        </p>
+        <div className="mital"> متال : </div>
+        <CodeHighlighter  code={``} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+    </article>
 </section>
 </main>
     )
