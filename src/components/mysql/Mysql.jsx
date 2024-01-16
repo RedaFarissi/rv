@@ -1162,12 +1162,100 @@ SELECT AVG(price) AS "average price" FROM products;`} language="sql" addclassNam
         </table>
     </article>
     <article>
-        <h2 className="title-h2 mt-4" id="aggregate-common-field-values"> 29 -  .</h2>
+        <h2 className="title-h2 mt-4" id="aggregate-common-field-values"> 29 - تجميع قيم الحقول المشتركة في قاعدة البيانات .</h2>
         <p className="style_divv">
-            <CodeHighlighter  code={``} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+            تُستخدم وظائف التجميع في <b>MySQL</b> لأداء عمليات على مجموعة من القيم وإرجاع قيمة واحدة. تشمل وظائف التجميع الشائعة <b>COUNT</b> و <b>SUM</b> و <b>AVG</b> و <b>MIN</b> و <b>MAX</b>. لتجميع قيم الحقول المشتركة، يمكنك استخدام الجملة <b>GROUP BY</b> بالإضافة إلى هذه الوظائف.
+            <CodeHighlighter  code={`SELECT column_name, AGGREGATE_FUNCTION(column_name)
+FROM table_name
+GROUP BY column_name;
+`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
         </p>
         <div className="mital"> متال : </div>
-        <CodeHighlighter  code={``} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={`USE my_database;
+
+-- droop table "products" if exists
+DROP TABLE IF EXISTS products;
+
+-- Create the "products" table
+CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(255),
+    category VARCHAR(50)
+);
+
+-- Insert values into the "products" table
+INSERT INTO products (product_id, product_name, category) VALUES
+(1, 'Laptop', 'Electronics'),
+(2, 'Smartphone', 'Electronics'),
+(3, 'Desk Chair', 'Furniture'),
+(4, 'Coffee Table', 'Furniture'),
+(5, 'Running Shoes', 'Fashion'),
+(6, 'T-shirt', 'Fashion');
+
+-- Test the SELECT query
+SELECT category, COUNT(category) as category_count
+FROM products
+GROUP BY category;
+`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th>category</th>  <th>category_count</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">Electronics</td> <td className="text-start">2</td> </tr>
+                <tr> <td className="text-start">Furniture</td> <td className="text-start">2</td> </tr>
+                <tr> <td className="text-start">Fashion</td> <td className="text-start">2</td> </tr>
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <h2 className="title-h2 mt-4" id="conditions-on-aggregated-fields"> 30 - تطبيق شروط على الحقول المجمعة .</h2>
+        <p className="style_divv">
+            يمكنك تطبيق شروط على الحقول المجمعة باستخدام جملة <b>HAVING</b> في <b>Mysql</b>. تُستخدم جملة <b>HAVING</b> لتصفية نتائج استعلام <b>GROUP BY</b> بناءً على شرط محدد.
+            <CodeHighlighter  code={`SELECT column_name
+FROM table_name
+GROUP BY column_name
+HAVING condition;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        </p>
+        <div className="mital"> متال : </div>
+        <CodeHighlighter  code={`USE my_database;
+
+DROP TABLE IF EXISTS orders;
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    total_amount DECIMAL(10, 2)
+);
+
+INSERT INTO orders (order_id, customer_id, total_amount) VALUES
+(1, 101, 150.50),
+(2, 102, 200.75),
+(3, 101, 50.25),
+(4, 103, 300.00),
+(5, 102, 100.00);
+
+SELECT customer_id, SUM(total_amount) as total_spent
+FROM orders
+GROUP BY customer_id HAVING total_spent > 200;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th>customer_id</th>  <th>total_spent</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">101</td> <td className="text-start">200.75</td> </tr>
+                <tr> <td className="text-start">102</td> <td className="text-start">300.75</td> </tr>
+                <tr> <td className="text-start">103</td> <td className="text-start">300.00</td> </tr>
+            </tbody>
+        </table>
+    </article>    
+    <article>  
+        <h2 className="title-h2 mt-4" id="copy-data-to-another-table"> 31 - نسخ البيانات إلى جدول آخر .</h2>
+        <p className="style_divv">
+            <CodeHighlighter  code={``} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        </p>
+        <div className="mital"> متال : </div>
+        <CodeHighlighter  code={``} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
     </article>
 </section>
 </main>
