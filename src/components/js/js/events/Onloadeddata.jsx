@@ -11,6 +11,7 @@ export default function Onloadeddata(){
       case "durationchange to load video": setValueAlertExemple("Meta data for video loaded"); break;
       case "Meta data for video loaded": setValueAlertExemple("onloadeddata"); break;
       case "onloadeddata": setDisplayAlertExemple(false); break;
+      default: setDisplayAlertExemple(false); break;
     }
   }
 

@@ -73,20 +73,20 @@ export default function Sql(props){
             <h2 className="title-h2" id="install-mysql"> 2 - تثبيت mysql على windows</h2>
             <ul><li><a href='https://www.youtube.com/watch?v=5OdVJbNCSso' target="_blanck">أول 4 دقائق لتثبيت MYSQL</a></li></ul>
             <h3 className="title-h3">انتقل إلى الرابط <a href="https://www.mysql.com/" target="_blanck"> https://www.mysql.com/ </a> لتثبيت mysql : </h3>
-            <img src={images.mysql_install1} className="w-100 mt-2"/>
+            <img src={images.mysql_install1} className="w-100 mt-2" alt="exemple"/>
             <h3 className="title-h3"> انقر على DOWNLOADS</h3>
-            <img src={images.mysql_install2} className="w-100 mt-2"/>
+            <img src={images.mysql_install2} className="w-100 mt-2" alt="exemple"/>
             <h3 className="title-h3"> انتقل الصفحة إلى الأسفل تم انقر على <bdi>MySQL Community (GPL) Downloads</bdi></h3>
-            <img src={images.mysql_install3} className="w-100 mt-2"/>
+            <img src={images.mysql_install3} className="w-100 mt-2" alt="exemple"/>
             <h3 className="title-h3"> انقر على MySQL Installer for Windows</h3>
-            <img src={images.mysql_install4} className="w-100 mt-2"/>
+            <img src={images.mysql_install4} className="w-100 mt-2" alt="exemple"/>
             <h3 className="title-h3"> حدد Microsoft Windows و انقر على Download </h3>
-            <img src={images.mysql_install5} className="w-100 mt-2"/>
+            <img src={images.mysql_install5} className="w-100 mt-2" alt="exemple"/>
             <h3 className="title-h3"> انقر على No thanks, just start my download.</h3>
-            <img src={images.mysql_install6} className="w-100 mt-2"/>
+            <img src={images.mysql_install6} className="w-100 mt-2" alt="exemple"/>
             <h3 className="title-h3">  انتقل إلى الملف الذي تم تنزيله و شغله. </h3>
-            <img src={images.mysql_install7} className="w-100 mt-2"/>
-            <img src={images.mysql_install8} className="w-100 mt-2"/>            
+            <img src={images.mysql_install7} className="w-100 mt-2" alt="exemple"/>
+            <img src={images.mysql_install8} className="w-100 mt-2" alt="exemple"/>            
         </article>
         <article>
             <h2 className="title-h2 mt-4" id="create-database"> 3 - إنشاء قاعدة بيانات جديدة .</h2>
@@ -96,7 +96,7 @@ export default function Sql(props){
             </p>
             <div className="mital">متال : </div>
             <CodeHighlighter  code={"CREATE DATABASE my_db;"} language="sql" addclassName="mt-3 mb-3" copie={true}/>
-            <img src={images.mysql_create_db1} className="w-100"/>
+            <img src={images.mysql_create_db1} className="w-100" alt="exemple"/>
         </article>
         <article> 
             <h2 className="title-h2 mt-4" id="drop-database"> 4 - حدف قاعدة بيانات .</h2>
@@ -107,7 +107,7 @@ export default function Sql(props){
             </p>
             <div className="mital">متال : </div>
             <CodeHighlighter  code={"DROP DATABASE my_db;"} language="sql" addclassName="mt-3 mb-3" copie={true}/>
-            <img src={images.mysql_drop_db} className="w-100"/>
+            <img src={images.mysql_drop_db} className="w-100" alt="exemple"/>
             <ul className="mt-3"><li>في هذا المثال، "my_db" هو اسم قاعدة البيانات التي تريد حذفها. يجب أن تكون متأكدًا تمامًا من القاعدة التي تود حذفها قبل تنفيذ هذا الأمر، لأنه سيؤدي إلى حذف كل البيانات في تلك القاعدة دون إمكانية استعادتها.         </li></ul>
         </article>
         <article>  
@@ -271,9 +271,9 @@ CREATE TABLE orders (
                 </ul>
             </p>
             <div className="mital"> متال 1 : </div>
-            <img src={images.mysql_create_table} className="w-100" />
+            <img src={images.mysql_create_table} className="w-100" alt="exemple"/>
             <div className="mital"> متال 2 : </div>
-            <img src={images.mysql_create_table2} className="w-100" />
+            <img src={images.mysql_create_table2} className="w-100" alt="exemple"/>
         </article>
         <article>
             <h2 className="title-h2 mt-4" id="drop-table"> 9 - حذف جدول .</h2>
@@ -282,7 +282,7 @@ CREATE TABLE orders (
                 <CodeHighlighter  code={`DROP TABLE table_name;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
             </p>
             <div className="mital"> متال : </div>
-            <img src={images.mysql_drop_table} className="w-100" />
+            <img src={images.mysql_drop_table} className="w-100" alt="exemple"/>
         </article>
         <article>
             <h2 className="title-h2 mt-4" id="insert-row"> 10 - أمر إضافة سطر جديد في الجدول .</h2>

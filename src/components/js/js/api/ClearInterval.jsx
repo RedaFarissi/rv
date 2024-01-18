@@ -1,6 +1,4 @@
-import images from "../../imagesJs"
-import { CodeHighlighter ,  Result} from "../../../path";
-import { useEffect, useState } from "react";
+import { CodeHighlighter } from "../../../path";
 
 export default function ClearInterval(){
     const code11 = `let variable =  setInterval( Function_name , milliseconds);

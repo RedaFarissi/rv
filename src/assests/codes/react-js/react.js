@@ -6,8 +6,8 @@ import {
   index1class_Component,index1class_Component_this_props0,
   index1class_Component_this_props1,index1Components_in_Component0,
   index1Components_in_Component1,index1Components_in_Component2,
-  index2Events,index3Lists0,index3Lists1,index3Lists2,
-  index4Handle_images_react0,index4Handle_images_react1,
+  index2Events,index2Events1,index2Events2,index3Lists0,index3Lists1,
+  index3Lists2,index4Handle_images_react0,index4Handle_images_react1,
   index4Handle_images_react2,index4Handle_images_react3,
   index5Handle_import0,index5Handle_import1,index5Handle_import2,
   index5Handle_import3,index5Handle_import4,index5Handle_import5,
@@ -27,6 +27,7 @@ const codes = [
     What_is_React:[],
     How_react_work:[],
     What_you_need_to_get_started:[],
+    multiple_versions_of_Node:[],
     Verify_required_installations:[],
     ES6:{
       class:[index0class()],
@@ -51,7 +52,7 @@ const codes = [
     Components_in_Component:[index1Components_in_Component0(),index1Components_in_Component1(),index1Components_in_Component2()],
   },
   {//code[2]
-    Events:[index2Events()]
+    Events:[index2Events(),index2Events1(),index2Events2()]
   },
   {//code[3]
     Lists:[index3Lists0() , index3Lists1(), index3Lists2() ]},

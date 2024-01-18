@@ -130,31 +130,31 @@ export default function Home(props){
       <footer dir="rtl">
         <div id="footer-div1">
             <div id="img_logo">
-              <img src="{% static 'front/img/logo.png' %}"/>
+              <img src="" alt="logo"/>
             </div>
             <div class="footer_p">
-              <h4 class="h4">هدف الموقع</h4>
+              <h4 className="h4">هدف الموقع</h4>
               تعلم  البرمجة  مجاني ومساعدة في تحسين البرمجة العربية مع التركيز على الأمتلة 
               و هو المكان المناسب لأي شخص يطمح بأن يصبح مبرمجاً محترفاً و مبدعاً في العالم الرقمي
             </div>
         </div>
         <div id="footer-div2">
             <div id="tabara3_lilmaw9i3">
-                <h4 class="h4"><span class="material-icons" id="sovini">volunteer_activism</span> تبرع للموقع </h4>
+                <h4 className="h4"><span className="material-icons" id="sovini">volunteer_activism</span> تبرع للموقع </h4>
                 في حال أردت تقديم دعم مادي لمطوري الموقع يمكنك التبرع مرة واحدة أو بشكل شهري بالمبلغ الذي تريده من خلال بايبال 
                 <button> Paypal </button>
             </div>
-            <div class="footer_p">
-                <h4 class="h4"> <span class="material-icons"> share </span> تابعنا</h4>
+            <div className="footer_p">
+                <h4 className="h4"> <span className="material-icons"> share </span> تابعنا</h4>
                 <div style={{display: "flex"}}>
-                  <img src="{% static 'front/img/surface.jpg' %}" style={{width: "50px",height:"50px",borderRadius:"50%",marginLeft:"14px",filter:"grayscale(100%)"}}/>
+                  <img src="" style={{width: "50px",height:"50px",borderRadius:"50%",marginLeft:"14px",filter:"grayscale(100%)"}} alt="profile"/>
                   <samll>رضا السكوني مؤسس ومطور الموقع</samll>
                 </div>
                 <div style={{marginTop:"20px",fontSize:"105%"}}>حسابات الموقع الرسمية</div>
                 <div style={{marginTop:"20px"}}>
-                    <img class="logo-connecte" src="https://img.icons8.com/fluency/48/000000/instagram-new.png"/>
-                    <img class="logo-connecte" src="https://img.icons8.com/fluency/48/000000/facebook.png"/>
-                    <img class="logo-connecte" src="https://img.icons8.com/color/48/000000/telegram-app--v1.png"/>
+                    <img className="logo-connecte" src="https://img.icons8.com/fluency/48/000000/instagram-new.png" alt="instagram"/>
+                    <img className="logo-connecte" src="https://img.icons8.com/fluency/48/000000/facebook.png" alt="facebook"/>
+                    <img className="logo-connecte" src="https://img.icons8.com/color/48/000000/telegram-app--v1.png" alt="telegram"/>
                 </div>
             </div>
         </div>

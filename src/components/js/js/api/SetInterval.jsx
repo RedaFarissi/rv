@@ -31,11 +31,11 @@ function Clock(){
     const [time, setTime] = useState({ h: 0, m: 0, s: 0 });
 
       useEffect(() => {
-        const intervalId = setInterval(() => {
+        setInterval(() => {
             setTime(prevTime => {
                 let { h, m, s } = prevTime;
                 if (s < 59) {
-                    s = s + 0.5;
+                    s++;
                 } else {
                     m++;
                     s = 0;

@@ -2,8 +2,9 @@ import images from "./imagesReact";
 import { CodeHighlighter , CodeCommand , Result } from "../path";
 import react_logo from "../../assests/images/logo/react_logo.svg";
 import ThisState from "./exemple/ThisState"
+import EventExemple from "./exemple/EventExemple"
+import EventExemple2 from "./exemple/EventExemple2"
 import codes from "../../assests/codes/react-js/react"
-// import { Routes, Route , Link } from "react-router-dom";
 
 
 function React(props){
@@ -50,7 +51,7 @@ return(
           </ul>
         </p>
        
-        <h3 className="title-h3" id="neede_to_use_React_js">3 - ما تحتاجه لاستخدام React </h3>
+        <h3 className="title-h3" id="What_you_need_to_get_started">3 - ما تحتاجه لاستخدام React </h3>
         <p className="style_divv">
          <ul>
           <li><span className="text-success">فهم جيد لل HTML و ES6 :</span> من المفيد أن يكون لديك فهم جيد لل HTML لبناء صفحات الويب ولـ <bdi>ES6 (ECMAScript 2015)</bdi> لكتابة رمز JavaScript الحديث.</li>
@@ -58,14 +59,47 @@ return(
           <li><span className="text-success">npm و npx :</span> يتم تثبيت npm (مدير حزم Node) و npx (تنفيذ حزمة Node) تلقائيًا عند تثبيت Node.js ، يُستخدم npm لإدارة وتثبيت الحزم ، ويُستخدم npx لتنفيذ الحزم. </li>
          </ul>
         </p>
-        <h3 className="title-h3" id="Verify_required_installations">4 - التحقق من التثبيتات المطلوبة</h3>
+        <h3 className="title-h3" id="multiple_versions_of_Node">4 - استخدم nvm لإدارة إصدارات متعددة من Node.js </h3>
+        <p className="style_divv">
+          في React، يشير nvm إلى Node Version Manager، وهي أداة تُستخدم لإدارة إصدارات Node.js المتعددة على جهازك. ومع ذلك، في سياق تطوير React، قد تشير إلى شيء آخر أو استخدام محدد لـ "nvm".
+        </p>
+        <h5 className="title-h5">1 - تثبيت  nvm</h5>
+        <p className="style_divv">
+            أولا عليك تثبيت nvm. يمكنك اتباع تعليمات التثبيت المتوفرة في مستودع <a href="https://github.com/coreybutler/nvm-windows/releases">GitHub </a>.
+        </p>
+        <img src={images.react5} className="w-100" alt="react5" />
+        <ul><li> تحقق من نجاح التثبيت </li></ul>
+        <CodeCommand>nvm version</CodeCommand>
+        <ul><li>حدد الإصدارات المتوفرة من Node.js التي يمكنك تثبيتها باستخدام nvm</li></ul>
+        <CodeCommand>nvm list available</CodeCommand>
+        
+        <h5 className="title-h5">2 - قم بتثبيت إصدارات Node.js</h5>
+        <p className="style_divv">
+            بمجرد تثبيت nvm، يمكنك استخدامه لتثبيت إصدارات مختلفة من Node.js. على سبيل المثال، لتثبيت الإصدار 12 من Node.js، يمكنك استخدام الأمر التالي:
+            <CodeCommand>nvm install 12</CodeCommand>
+            <CodeCommand>nvm install latest</CodeCommand>
+            يمكنك تثبيت إصدارات متعددة من Node.js باستخدام أوامر مماثلة.
+        </p>
+        <h5 className="title-h5">3 - التبديل بين إصدارات Node.js</h5>
+        <p className="style_divv">
+            يمكنك التبديل بسهولة بين إصدارات Node.js المثبتة باستخدام الأمر التالي:
+            <CodeCommand>nvm use 12</CodeCommand>
+            يؤدي هذا إلى تعيين الإصدار 12 من Node.js باعتباره الإصدار النشط لجلستك الطرفية الحالية.
+        </p>
+        <h5 className="title-h5">4 - قم بتعيين إصدار Node.js الافتراضي</h5>
+        <p className="style_divv">
+            إذا كنت تريد تعيين إصدار Node.js افتراضي لجلسات العمل الطرفية الجديدة، فيمكنك استخدام:
+            <CodeCommand>nvm alias default 15</CodeCommand>
+       </p>
+        
+        <h3 className="title-h3" id="Verify_required_installations">5 - التحقق من التثبيتات المطلوبة</h3>
         <h5 className="title-h5">فحص إصدار Node.js</h5>
         <CodeCommand>node -v</CodeCommand>
         <h5 className="title-h5">فحص إصدار npm</h5>
         <CodeCommand>npm -v</CodeCommand>
         <h5 className="title-h5">فحص إصدار npx</h5>
         <CodeCommand>npx -v</CodeCommand>
-        <h3 className="title-h3" id="ES6">4 - (ES6) </h3>
+        <h3 className="title-h3" id="ES6">6 - (ES6) </h3>
         <p className="style_divv">
           ECMAScript 6 (المعروفة أيضًا بـ ES6) هي إصدار جديد من لغة JavaScript تم نشره في عام 2015. وهي تأتي مع العديد من الميزات الجديدة والتحسينات التي تهدف إلى تحسين القراءة والكتابة للمطورين. إليك تعريف بسيط وأمثلة لبعض ميزات ES6:
         </p>
@@ -85,11 +119,11 @@ return(
         <CodeHighlighter  code={codes[0].ES6.spread_operator[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
         <h5 className="title-h5">التكرار على الكائنات (Object Iteration)</h5>
         <CodeHighlighter  code={codes[0].ES6.object_iteration[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <h3 className="title-h3" id="Create_React_App">5 - إنشاء تطبيق App</h3>
+        <h3 className="title-h3" id="Create_React_App">7 - إنشاء تطبيق App</h3>
         <CodeCommand>npm cache verify</CodeCommand>
         <CodeCommand>npx create-react-app myproject</CodeCommand>
         <p><b>myproject</b> هو اسم المشروع الذي استخدمته</p>
-        <h3 className="title-h3" id="Run_React_App"> 6 - تشغيل تطبيق App</h3>
+        <h3 className="title-h3" id="Run_React_App"> 8 - تشغيل تطبيق App</h3>
         <CodeCommand>cd myproject</CodeCommand>
         <CodeCommand>npm start</CodeCommand>
         <h5 className="title-h5">كنتيجة، تم تنزيل هذا الملف على npm وهو قيد الاستخدام بالفعل</h5> 
@@ -174,12 +208,18 @@ return(
         معالجو الأحداث في React يتم كتابتهم داخل أقواس معوجة:
         onClick={"{"}shoot{"}"} بدلاً من <bdi>onClick="shoot()"</bdi>
       </p>
+      <div className="mital">متال 1 : </div>
       <CodeHighlighter code={codes[2].Events[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
-      <Result title={'React App'} logo={react_logo} route="localhost:3000">
-        <button onClick={()=>{alert("take Shoot function")}}>Shoot!</button>
-      </Result>
+      <EventExemple images={images.html_logo}/>
       <p><ul><li>إذا كتبت <bdi>onClick={"{"}shoot(){"}"}،</bdi> فسيتم تشغيل الوظيفة <bdi>shoot()</bdi> عند بدء التطبيق.</li></ul></p>  
+      <div className="mital">متال 2 : </div>
+      <CodeHighlighter code={codes[2].Events[1]} language="css" number={true} addclassName="mt-3 mb-3" copie={true}/>
+      <CodeHighlighter code={codes[2].Events[2]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+      <Result title={'React App'} logo={react_logo} route="localhost:3000">
+          <EventExemple2 />
+      </Result>
   </article>    
+
 
   <article id="Lists">
       <h2 className="title-h2">4 -  القوائم (Lists) </h2>

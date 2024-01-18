@@ -7,11 +7,22 @@ export default function SetTimeout(){
     //     res.innerHTML = `<b> Hello App </b>`
     // }
     const codeExemple1= { 
-    code: `      
+    code: `      <p> click button to run function one time after 3 seconds </p>
+     <button onclick="sayHello()" class="btn bg-primary"> click  </button>
+     <h2 id="result">Reda Eskouni</h2>
     
      <script src="./index.js"></script>`,
-    script:``
+    script:`function sayHello(){
+    setTimeout(()=>{
+      document.getElementById("result").innerHTML = "Hello Word"
+    },3000)
+}`
     }
+    function sayHello(){
+        setTimeout(()=>{
+          document.getElementById("result").innerHTML = "Hello Word"
+        },3000)
+    }  
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript setTimeout</h1>
@@ -24,12 +35,13 @@ export default function SetTimeout(){
             <CodeHighlighter code={`setTimeout(function_name,milliseconds)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
-        <img src={images.js151_setTimeout} className="img"/>
-        <div className="styleee">
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="setTimeout" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <Result title="setTimeout"  logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <p> click button to run function one time after 3 seconds </p>
-            <button onclick="setTimeout(sayHello,3000)" className="btn bg-primary"> click  </button>
-            <div id="resut" className="mt-5"></div>
-        </div>
+            <button onClick={sayHello} className="btn bg-primary"> click  </button>
+            <h2 id="result">Reda Eskouni</h2>
+        </Result>
     </article>
 </section>
     )

@@ -19,7 +19,7 @@ function App() {
     ["API","Intro","Forms","fetch","History","setInterval","clearInterval","setTimeout"],
   ]
   const react_matrix  = [
-    ["Introduction","What_is_React","How_react_work","What_you_need_to_get_started","Verify_required_installations","ES6","Create_React_App","Run_React_App",],
+    ["Introduction","What_is_React","How_react_work","What_you_need_to_get_started","multiple_versions_of_Node","Verify_required_installations","ES6","Create_React_App","Run_React_App",],
     ["Component","JSX","function_Component","function_Component_props","class_Component","class_Component_this_props","Components_in_Component",],
     "Events",
     "Lists",

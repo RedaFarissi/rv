@@ -1,5 +1,5 @@
-import images from "../../imagesJs"
-import { CodeHighlighter ,  Result} from "../../../path";
+
+import { CodeHighlighter } from "../../../path";
 
 export default function History(){
     const codeExemple1= { 

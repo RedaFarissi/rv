@@ -140,29 +140,6 @@ function drop(event) {
         event.target.appendChild(document.getElementById(data));
     }
     
-    function drag3(event) {
-        event.dataTransfer.setData("child-id", event.target.id);
-    }
-    console.log("Reda Eskouni")
-              
-    function drop3(event) {
-        event.preventDefault();
-        event.stopPropagation()
-        var draggedChildId = event.dataTransfer.getData("child-id");
-        var draggedChild = document.getElementById(draggedChildId);
-        var target = event.target;
-        
-        // check if drop box have element child 
-        if(target.hasAttribute("id")){
-            if ( target !== draggedChild.parentNode) {
-                var cloneElementChild = draggedChild.cloneNode(true);
-                target.parentNode.replaceChild(cloneElementChild, target);
-                draggedChild.parentNode.replaceChild(target, draggedChild);
-            }
-        }else{
-          event.target.appendChild(document.getElementById(draggedChildId));
-        }
-    }
     return(
   <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript ondrag</h1>
@@ -199,7 +176,7 @@ function drop(event) {
             <div class="d-flex justify-content-around flex-wrap">
                 <div onDrop={(event)=>{drop(event)}} onDragOver={(event)=>{allowDrop(event)}} className="js-ondrag-div js-ondrag-center"></div>
                 <div onDrop={(event)=>{drop (event)}} onDragOver={(event)=>{allowDrop(event)}} className="js-ondrag-div js-ondrag-center">
-                    <img draggable="true" onDragStart={(event)=>{drag(event)}} id="drag1" className="js-ondrag-drag1" src={images.hajime} />
+                    <img draggable="true" onDragStart={(event)=>{drag(event)}} id="drag1" className="js-ondrag-drag1" src={images.hajime} alt="exemple" />
                 </div>
             </div>
         </Result> 
@@ -213,7 +190,7 @@ function drop(event) {
                 <div onDrop={(event)=>{drop(event)}} onDragOver={(event)=>{allowDrop(event)}} className="js-ondrag-div js-ondrag-center"></div>
                 <div onDrop={(event)=>{drop(event)}} onDragOver={(event)=>{allowDrop(event)}} className="js-ondrag-div js-ondrag-center"></div>
                 <div onDrop={(event)=>{drop(event)}} onDragOver={(event)=>{allowDrop(event)}} className="js-ondrag-div js-ondrag-center">
-                    <img draggable="true" onDragStart={(event)=>{drag(event)}} id="drag2" className="js-ondrag-drag1" src={images.hajime} />
+                    <img draggable="true" onDragStart={(event)=>{drag(event)}} id="drag2" className="js-ondrag-drag1" src={images.hajime} alt="exemple"/>
                 </div>
             </div>
         </Result>   

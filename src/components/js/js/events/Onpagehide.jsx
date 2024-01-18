@@ -1,5 +1,4 @@
-import images from "../../imagesJs"
-import { CodeHighlighter ,  Result} from "../../../path";
+import { CodeHighlighter } from "../../../path";
 
 export default function Onpagehide(){
     const code1 = `<!-- Code HTML -->
@@ -43,7 +42,6 @@ object.addEventListener("pagehide", function_name )`
         </p>
         <div className="mital"> متال :  </div>
         <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-
     </article>
 </section>
     )

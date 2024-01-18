@@ -18,6 +18,8 @@ export {default as index1Components_in_Component0} from './react-js/index1Compon
 export {default as index1Components_in_Component1} from './react-js/index1Components_in_Component1';
 export {default as index1Components_in_Component2} from './react-js/index1Components_in_Component2';
 export {default as index2Events} from './react-js/index2Events';
+export {default as index2Events1} from './react-js/index2Events1';
+export {default as index2Events2} from './react-js/index2Events2';
 export {default as index3Lists0} from './react-js/index3Lists0';
 export {default as index3Lists1} from './react-js/index3Lists1';
 export {default as index3Lists2} from './react-js/index3Lists2';
@@ -54,4 +56,3 @@ export {default as index8useParams_Router1} from './react-js/index8useParams_Rou
 export {default as index8useParams_Router2} from './react-js/index8useParams_Router2';
 export {default as index8react_syntax_highlighter0} from './react-js/index8react_syntax_highlighter0';
 export {default as index8react_syntax_highlighter1} from './react-js/index8react_syntax_highlighter1';
-//export {default as } from './react-js/';
