@@ -60,6 +60,7 @@ function App() {
     ["github" ,"clone_laravel_project","laravel_docker"],
   ]
   const sql_list = [
+      
   ]
   const python_list = [  
     "HOME","Intro","Get Started","Syntax","Comments","Variables","Data Types",

@@ -14,7 +14,10 @@ export default function Sql(props){
         "Retrieve Maximum Value in Column","Count Rows in Table","Sum of Column Values",
         "Average of Column Values","Aggregate Common Field Values",
         "Conditions on Aggregated Fields","Copy Data to Another Table",
-        "Set Default Value for Column","Store Uniform Values in Column",
+        "Set Default Value for Column","CASE Condition","Relationships between tables",
+        "How are tables linked","Setting aliases for tables",
+        "Linking info within the same table"
+
     ]   
     const arr = sql_list.map(e => <li className="p-0 m-0 list-group-item">
         <a href={`/mysql#${e.toLowerCase().replace(/\s/g, '-')}`} className="p-2">
@@ -1252,16 +1255,148 @@ GROUP BY customer_id HAVING total_spent > 200;`} language="sql" addclassName="mt
     <article>  
         <h2 className="title-h2 mt-4" id="copy-data-to-another-table"> 31 - نسخ البيانات إلى جدول آخر .</h2>
         <p className="style_divv">
-            <CodeHighlighter  code={``} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+            في <b>MySQL</b>، يمكنك نسخ البيانات من جدول واحد إلى آخر باستخدام العبارة <b>INSERT INTO ... SELECT</b>. 
+            <CodeHighlighter  code={`INSERT INTO destination_table (column1, column2, column3, ...)
+SELECT column1, column2, column3, ...
+FROM source_table
+WHERE condition;`} language="sql" addclassName="mt-3 mb-3" copie={true}/> 
+            <ul>
+                <li><b className="text-success">destination_table :</b> الجدول الذي تريد نسخ البيانات إليه.</li>
+                <li><b className="text-success">column1, column2, column3, : </b>  الأعمدة المحددة التي تريد نسخها. إذا كنت ترغب في نسخ جميع الأعمدة، يمكنك استخدام *.</li>
+                <li><b className="text-success">source_table : </b> الجدول الذي تريد نسخ البيانات منه.</li>
+                <li><b className="text-success">WHERE condition :</b>  اختياري. يحدد شرطًا لتصفية الصفوف التي تريد نسخها.</li>
+            </ul>
         </p>
         <div className="mital"> متال : </div>
-        <CodeHighlighter  code={``} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        <ul><li>لنفترض أن لديك جدولين، source_table و destination_table، وتريد نسخ جميع البيانات من source_table إلى destination_table :</li></ul>
+        <CodeHighlighter  code={`INSERT INTO destination_table
+SELECT * FROM source_table;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        <ul><li> إذا أردت نسخ أعمدة محددة فقط : </li></ul>
+        <CodeHighlighter  code={`INSERT INTO destination_table (column1, column2, column3)
+SELECT column1, column2, column3 FROM source_table;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        <ul><li> إذا كنت تريد نسخ صفوف محددة فقط استنادًا إلى شرط: </li></ul>
+        <CodeHighlighter  code={`INSERT INTO destination_table
+SELECT * FROM source_table
+WHERE some_column = 'some_value';`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
     </article>
+    <article>
+        <h2 className="title-h2 mt-4" id="set-default-value-for-column"> 32 - تعيين قيمة افتراضية لعمود في جدول .</h2>
+        <p className="style_divv">
+            لتعيين قيمة افتراضية لعمود في جدول <b>MySQL</b>، يمكنك استخدام كلمة <b>DEFAULT</b> في عبارة <b>ALTER TABLE</b>. إليك الصياغة الأساسية:
+        </p>
+        <div className="mital"> متال : </div>
+        <CodeHighlighter  code={`USE my_database;
+DROP TABLE IF EXISTS employees ;
+
+-- Create the employees table
+CREATE TABLE employees (
+    employee_id INT PRIMARY KEY,
+    employee_name VARCHAR(50),
+    salary INT
+);
+
+-- Insert some test values
+INSERT INTO employees (employee_id, employee_name, salary) VALUES
+(1, 'Reda Eskouni', 60000),
+(2, 'Amal', NULL),
+(3, 'waeil', 55000),
+(4, 'Alice', NULL);
+
+UPDATE employees SET salary = 50000 WHERE salary IS NULL AND employee_id > 1;
+
+SELECT * FROM employees;`} language="sql" addclassName="mt-3 mb-3" copie={true}/> 
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th>employee_id</th>  <th>employee_name</th> <th>salary</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">1</td> <td className="text-start">Reda Eskouni</td> <td className="text-start">60000</td> </tr>
+                <tr> <td className="text-start">2</td> <td className="text-start">Amal</td> <td className="text-start">50000</td> </tr>
+                <tr> <td className="text-start">3</td> <td className="text-start">waeil</td> <td className="text-start">55000</td> </tr>
+                <tr> <td className="text-start">4</td> <td className="text-start">Alice</td> <td className="text-start">50000</td> </tr>
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <h2 className="title-h2 mt-4" id="case-condition"> 32 - تنفيذ منطق شرطي .</h2>
+        <p className="style_divv">
+            في <b>MySQL</b>، يتم استخدام عبارة <b>CASE</b> للمنطق الشرطي داخل الاستعلام. يسمح لك بتنفيذ إجراءات مختلفة بناءً على ظروف مختلفة. بناء الجملة الأساسي لبيان <b>CASE</b> كما يلي :
+            <CodeHighlighter  code={`CASE
+    WHEN condition1 THEN result1
+    WHEN condition2 THEN result2
+    ...
+    ELSE default_result
+END`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+            <ul>
+                <li><b className="text-success">CASE :</b> كلمة رئيسية لبدء جملة CASE.</li>
+                <li><b className="text-success">WHEN condition1 THEN result1 :</b> يحدد شرطًا والنتيجة المقابلة إذا كان هذا الشرط صحيحًا.</li>
+                <li><b className="text-success">WHEN condition2 THEN result2 :</b> يمكن إضافة شروط إضافية والنتائج المقابلة.</li>
+                <li><b className="text-success">ELSE default_result :</b> اختياري. يحدد النتيجة عندما لا يكون أي من الشروط السابقة صحيحًا.</li>
+                <li><b className="text-success">END :</b> كلمة رئيسية لإنهاء جملة CASE.</li>
+            </ul>
+        </p>
+        <div className="mital"> متال : </div>
+        <CodeHighlighter  code={`USE my_database;
+DROP TABLE IF EXISTS products ;
+
+CREATE TABLE products (
+    id INT PRIMARY KEY,
+    product_name VARCHAR(255),
+    quantity_in_stock INT
+);
+
+-- Insert sample data
+INSERT INTO products (id, product_name, quantity_in_stock)
+VALUES (1, 'Product A', 120),
+    (2, 'Product B', 50),
+    (3, 'Product C', 5),
+    (4, 'Product D', 0);
+
+-- Run the query to retrieve stock status
+SELECT
+    product_name,
+    quantity_in_stock,
+    CASE
+        WHEN quantity_in_stock > 100 THEN 'In Stock'
+        WHEN quantity_in_stock > 0 THEN 'Low Stock'
+        ELSE 'Out of Stock'
+    END AS stock_status
+FROM
+    products;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th>product_name</th>  <th>quantity_in_stock</th> <th>stock_status</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">Product A</td>  <td className="text-start"> 120 </td> <td className="text-start">In Stock</td> </tr>
+                <tr> <td className="text-start">Product B</td>  <td className="text-start"> 50 </td> <td className="text-start">Low Stock</td> </tr>
+                <tr> <td className="text-start">Product C</td>  <td className="text-start"> 5 </td> <td className="text-start">Low Stock</td> </tr>
+                <tr> <td className="text-start">Product D</td>  <td className="text-start"> 0 </td> <td className="text-start">Out of Stock</td> </tr>
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <h2 className="title-h2 mt-4" id="relationships-between-tables"> 33 - العلاقات بين الجداول .</h2>
+        <p className="style_divv">        
+            ب <b>MySQL</b>، تتم إقامة العلاقات بين الجداول باستخدام المفاتيح. هناك عدة أنواع من العلاقات، ويتم تصنيفها استنادًا إلى كيفية ترتبط المفاتيح في جدول واحد بالمفاتيح في جدول آخر. المفاتيح الرئيسية والمفاتيح الخارجية تلعب دورًا حاسمًا في تحديد هذه العلاقات. 
+        </p>
+        <h3 className="title-h3">1 - علاقة واحد إلى واحد </h3>
+        <p className="style_divv">
+            في العلاقة واحد إلى واحد، يتوافق كل سجل في الجدول الأول بشكل دقيق مع سجل واحد في الجدول الثاني .<br/>
+            هذه العلاقة تعني أن كل قيمة في الجدول, لا يمكن أن يستخدمها الجدول الآخر أكثر من مرة واحدة.
+            عادةً، يشير مفتاح خارجي في جدول واحد إلى المفتاح الرئيسي في جدول آخر.
+        </p>
+        <h3 className="title-h3">2 - علاقة واحد إلى العديد </h3>
+        <p className="style_divv">        </p>
+        <h3 className="title-h3">3 - علاقة العديد إلى العديد </h3>
+        <p className="style_divv">        </p>
+    </article>    
 </section>
 </main>
     )
 }
 
 /*
+   <div className="mital"> متال : </div>
   <CodeHighlighter  code={``} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
 */
