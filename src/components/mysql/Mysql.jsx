@@ -2,40 +2,18 @@ import images  from "./imagesMysql"
 import { CodeHighlighter  } from "../path";
 
 export default function Sql(props){
-    const sql_list = [
-        "Intro" , "Install Mysql","Create Database","Drop Database",
-        "Comments","Data Types","Select Database","Create Table","Drop Table",
-        "Insert Row","Auto-increment","Retrieving Data from Table",
-        "Merge Columns while Retrieving","IF EXISTS","IF NOT EXISTS",
-        "Retrieve Data with Conditions","Retrieve Data with Sorting",
-        "Retrieve Distinct Data","Merge Tables into One",
-        "Delete Data from Table","Update Table Data",
-        "Limit Rows Returned","Handling Null Fields","Retrieve Minimum Value in Column",
-        "Retrieve Maximum Value in Column","Count Rows in Table","Sum of Column Values",
-        "Average of Column Values","Aggregate Common Field Values",
-        "Conditions on Aggregated Fields","Copy Data to Another Table",
-        "Set Default Value for Column","CASE Condition","Relationships between tables",
-        "How are tables linked","Setting aliases for tables",
-        "Linking info within the same table"
-
-    ]   
-    const arr = sql_list.map(e => <li className="p-0 m-0 list-group-item">
-        <a href={`/mysql#${e.toLowerCase().replace(/\s/g, '-')}`} className="p-2">
-            <i className="fa-solid fa-caret-right me-1"></i> SQL {e}
+    const arrays = props.sql_list.map(e => <li className="p-0 m-0 list-group-item">
+        <a  href={`/mysql/${e.toLowerCase().replace(/\s/g, '-')}`}  className="p-2"> 
+            <i className="fa-solid fa-caret-right me-1"></i>SQL {e}
         </a>
     </li>)
+    
     return(
 <main>
     <aside className="aside">
         <ul className="list-group m-0 p-0">
-            {arr}
-            {
-                // props.sql_list.map(e => <li className="list-group-item">
-                //     <a href={`/sql#${e.toLowerCase().replace(/\s/g, '-')}`}>
-                //         <i className="fa-solid fa-caret-right me-1"></i> SQL {e}
-                //     </a>
-                // </li>)
-            }
+            {arrays}
+            
         </ul>
     </aside>
     <section className="section-conetent">
@@ -1386,10 +1364,169 @@ FROM
             هذه العلاقة تعني أن كل قيمة في الجدول, لا يمكن أن يستخدمها الجدول الآخر أكثر من مرة واحدة.
             عادةً، يشير مفتاح خارجي في جدول واحد إلى المفتاح الرئيسي في جدول آخر.
         </p>
+        <div className="mital"> متال : </div>
+        <CodeHighlighter  code={`USE my_database;
+DROP TABLE IF EXISTS users , user_profile ;
+
+-- Create the user table
+CREATE TABLE users (
+    user_id INT PRIMARY KEY,
+    username VARCHAR(255) UNIQUE
+);
+
+-- Create the user_profile table
+CREATE TABLE user_profile (
+    profile_id INT PRIMARY KEY,
+    user_id INT UNIQUE,   -- FOREIGN KEY 
+    full_name VARCHAR(255),
+    email VARCHAR(255),
+    -- Other profile columns
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+-- Insert data into the user table
+INSERT INTO users (user_id, username) VALUES
+    (1, 'reda-eskouni'),
+    (2, 'kamal-el');
+
+-- Insert data into the user_profile table
+INSERT INTO user_profile (profile_id, user_id, full_name, email) VALUES
+    (101, 1, 'Reda Eskouni', 'john.doe@example.com'),
+    (102, 2, 'Kamal EL', 'jane.smith@example.com');
+    
+    
+SELECT u.user_id, u.username, up.full_name, up.email
+FROM users u JOIN user_profile up 
+ON u.user_id = up.user_id;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th> user_id </th>  <th>username</th> <th>full_name</th> <th>email</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">1</td> <td className="text-start">reda-eskouni</td> <td className="text-start">Reda Eskouni</td>  <td className="text-start">john.doe@example.com</td> </tr>
+                <tr> <td className="text-start">2</td> <td className="text-start">kamal-el</td> <td className="text-start">Kamal EL</td> <td className="text-start">jane.smith@example.com</td> </tr>
+            </tbody>
+        </table>
         <h3 className="title-h3">2 - علاقة واحد إلى العديد </h3>
-        <p className="style_divv">        </p>
+        <p className="style_divv">   
+            في العلاقة واحد إلى العديد، يمكن لكل سجل في الجدول الأول أن يحتوي على سجلات متعلقة متعددة في الجدول الثاني، ولكن كل سجل في الجدول الثاني يتعلق بسجل واحد فقط في الجدول الأول.<br/>
+            يتم وضع المفتاح الخارجي عادة في الجدول الذي يمثل الجانب "العديد".
+        </p>
+        <div className="mital"> متال : </div>
+        <CodeHighlighter  code={`USE my_database;
+DROP TABLE IF EXISTS department , employee ;
+
+CREATE TABLE department (
+    department_id INT PRIMARY KEY,
+    department_name VARCHAR(255)
+);
+
+CREATE TABLE employee (
+    employee_id INT PRIMARY KEY,
+    employee_name VARCHAR(255),
+    department_id INT,
+    -- عمود آخر للموظف
+    FOREIGN KEY (department_id) REFERENCES department(department_id)
+);
+
+-- Insert data into the department table
+INSERT INTO department (department_id, department_name) VALUES
+    (1, 'developer'),
+    (2, 'Information Technology');
+
+-- Insert data into the employee table
+INSERT INTO employee (employee_id, employee_name, department_id) VALUES
+    (101, 'Reda Eskouni', 1),   -- John Smith works in Human Resources
+    (102, 'Kamal El', 2),     -- Jane Doe works in Information Technology
+    (103, 'Achraf El', 1); -- Alice Johnson works in Marketing
+    
+    
+-- Retrieve employee information with department
+SELECT e.employee_id, e.employee_name, d.department_name
+FROM employee e JOIN department d 
+ON e.department_id = d.department_id;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th>employee_id</th>  <th>employee_name</th> <th>department_name</th>  </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">101</td> <td className="text-start">Reda Eskouni</td> <td className="text-start">developer</td> </tr>
+                <tr> <td className="text-start">103</td> <td className="text-start">Achraf El</td> <td className="text-start">developer</td> </tr>
+                <tr> <td className="text-start">102</td> <td className="text-start">Kamal El</td> <td className="text-start">Information Technology</td> </tr>
+            </tbody>
+        </table>
         <h3 className="title-h3">3 - علاقة العديد إلى العديد </h3>
-        <p className="style_divv">        </p>
+        <p className="style_divv">     
+            في العلاقة العديد إلى العديد، يمكن أن يتعلق كل سجل في كلي الجدولين بسجلات متعددة في الجدول الآخر.<br/>
+            لتنفيذ ذلك، يتم استخدام جدول "تواصل" ثالث يحتوي على مفاتيح خارجية تشير إلى المفاتيح الرئيسية للجدولين الآخرين.
+        </p>
+        <div className="mital"> متال : </div>
+        <CodeHighlighter  code={`USE my_database;
+DROP TABLE IF EXISTS student , course , enrollment ;
+
+-- Create the student table
+CREATE TABLE student (
+    student_id INT PRIMARY KEY,
+    student_name VARCHAR(255)
+);
+
+-- Create the course table
+CREATE TABLE course (
+    course_id INT PRIMARY KEY,
+    course_name VARCHAR(255)
+);
+
+-- Create the enrollment table
+CREATE TABLE enrollment (
+    enrollment_id INT PRIMARY KEY,
+    student_id INT,
+    course_id INT,
+    enrollment_details VARCHAR(255), -- Additional enrollment details column
+    FOREIGN KEY (student_id) REFERENCES student(student_id),
+    FOREIGN KEY (course_id) REFERENCES course(course_id)
+);
+
+
+-- Insert data into the student table
+INSERT INTO student (student_id, student_name) VALUES
+    (1, 'Reda Eskouni'),
+    (2, 'Kamal El'),
+    (3, 'Amal El');
+
+-- Insert data into the course table
+INSERT INTO course (course_id, course_name) VALUES
+    (101, 'Mathematics'),
+    (102, 'Arabic'),
+    (103, 'Computer Science');
+
+-- Insert data into the enrollment table
+INSERT INTO enrollment (enrollment_id, student_id, course_id, enrollment_details) VALUES
+    (1001, 1, 101, 'Fall 2023'),
+    (1002, 1, 102, 'Fall 2023'),
+    (1003, 2, 103, 'Spring 2024'),
+    (1004, 3, 101, 'Spring 2024');
+
+
+
+-- Retrieve enrollment information with student and course details
+SELECT 
+    e.enrollment_id AS "enrollment ID",
+    s.student_name AS "Student Name",
+    c.course_name AS "Course Name",
+    e.enrollment_details AS "Details"
+FROM  enrollment e JOIN student s 
+ON e.student_id = s.student_id JOIN course c 
+ON e.course_id = c.course_id;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+        <table dir="ltr" className="table"> 
+            <thead className="bg-secondary">
+                <tr> <th>enrollment ID</th>  <th>Student Name</th> <th>Course Name</th> <th>Details</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td className="text-start">1001</td> <td className="text-start">Reda Eskouni</td> <td className="text-start">Mathematics</td> <td className="text-start">Fall 2023</td> </tr>
+                <tr> <td className="text-start">1002</td> <td className="text-start">Reda Eskouni</td> <td className="text-start">Arabic</td> <td className="text-start">Fall 2023</td> </tr>
+                <tr> <td className="text-start">1003</td> <td className="text-start">Kamal El</td> <td className="text-start">Computer Science</td> <td className="text-start">Spring 2024</td> </tr>
+                <tr> <td className="text-start">1004</td> <td className="text-start">Amal El</td> <td className="text-start">Mathematics</td> <td className="text-start">Spring 2024</td> </tr>
+            </tbody>
+        </table>
     </article>    
 </section>
 </main>

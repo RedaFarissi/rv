@@ -29,6 +29,18 @@ function App() {
     ["hooks","useState","this_state"],
     ["packages","npm_list","axios","react_paypal_js","react_sass","Router","useNavigate_Router","useParams_Router","react_syntax_highlighter"],
   ]
+  const sql_list = [
+    "Intro" , "Install Mysql","Create Database","Drop Database","Comments","Data Types","Select Database","Create Table","Drop Table","Insert Row","Auto-increment","Retrieving Data from Table","Merge Columns while Retrieving","IF EXISTS","IF NOT EXISTS","Retrieve Data with Conditions","Retrieve Data with Sorting","Retrieve Distinct Data","Merge Tables into One","Delete Data from Table","Update Table Data","Limit Rows Returned","Handling Null Fields","Retrieve Minimum Value in Column","Retrieve Maximum Value in Column","Count Rows in Table","Sum of Column Values","Average of Column Values","Aggregate Common Field Values","Conditions on Aggregated Fields","Copy Data to Another Table","Set Default Value for Column","CASE Condition","Relationships between tables",
+  ]
+  const python_list = [
+    "Introduction","Install Windows","Execute Python in CMD","Indentation","Comments","Variables","Data Types",
+    "Numbers","Casting","Strings","Booleans","Operators","Lists","Tuples","Sets",
+    "Dictionaries","If...Else","While Loops","For Loops","Functions","Lambda",
+    "Arrays","Classes/Objects","Inheritance","Iterators","Polymorphism","Scope",
+    "Modules","Dates","Math","JSON","RegEx","PIP","Try...Except","User Input",
+    "String Formatting","File Handling","Read Files","Write/Create Files",  
+    "Delete Files",
+  ]
   const django_matrix = [
     ["Introduction", "What_is_Django","What_you_need_to_get_started","Verify_required_installations","Struct_Django",],
     ["virtualenv",  "What_is_virtualenv","Install_virtualenv","Create_virtualenv","Activate_virtualenv","Deactivate_virtualenv","Check_packages_installed","Install_django",       "Creating_Django_project","Get_version_installed_django","requirements","Running_development_server",],
@@ -58,18 +70,6 @@ function App() {
     ["Mail","send-mail"],
     ["Packages" ,"Authentication_UI","Authentication_Breeze","Paypal_Payment","Stripe_Payment_Integration"],
     ["github" ,"clone_laravel_project","laravel_docker"],
-  ]
-  const sql_list = [
-      
-  ]
-  const python_list = [  
-    "HOME","Intro","Get Started","Syntax","Comments","Variables","Data Types",
-    "Numbers","Casting","Strings","Booleans","Operators","Lists","Tuples","Sets",
-    "Dictionaries","If...Else","While Loops","For Loops","Functions","Lambda",
-    "Arrays","Classes/Objects","Inheritance","Iterators","Polymorphism","Scope",
-    "Modules","Dates","Math","JSON","RegEx","PIP","Try...Except","User Input",
-    "String Formatting","File Handling","Read Files","Write/Create Files",  
-    "Delete Files",
   ]
   const php_list = [  
     "HOME","Intro","Install","Syntax","Comments","Variables","Echo / Print",

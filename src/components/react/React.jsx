@@ -90,8 +90,7 @@ return(
         <p className="style_divv">
             إذا كنت تريد تعيين إصدار Node.js افتراضي لجلسات العمل الطرفية الجديدة، فيمكنك استخدام:
             <CodeCommand>nvm alias default 15</CodeCommand>
-       </p>
-        
+        </p>
         <h3 className="title-h3" id="Verify_required_installations">5 - التحقق من التثبيتات المطلوبة</h3>
         <h5 className="title-h5">فحص إصدار Node.js</h5>
         <CodeCommand>node -v</CodeCommand>
@@ -131,6 +130,7 @@ return(
         <img src={images.react2} alt="react"  className="img"/>
         <img src={images.react3} alt="react"  className="img"/>
   </article>
+
   <article id="Component">
     <h2 className="title-h2">2 - المكوّنات (Components) </h2>
       <p className="style_divv">
@@ -219,7 +219,6 @@ return(
           <EventExemple2 />
       </Result>
   </article>    
-
 
   <article id="Lists">
       <h2 className="title-h2">4 -  القوائم (Lists) </h2>

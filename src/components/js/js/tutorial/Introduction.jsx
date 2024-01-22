@@ -120,7 +120,7 @@ function paragragh() {
             المثال أدناه يجد العانصر <b>HTML</b> عبر <b>id</b> ، ويغير محتوى العنصر 
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Reda eskouni" addClass="mt-3 mb-3" copie={true} number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" title="Reda eskouni" addClass="mt-3 mb-3" copie={true} number={true}/>
         <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js" addClass="mt-3 mb-3" copie={true} number={true}/>
         <Result title='Reda Eskouni' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2 id="h2">Heading</h2>
