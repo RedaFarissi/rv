@@ -1533,7 +1533,3 @@ ON e.course_id = c.course_id;`} language="sql" addclassName="mt-3 mb-3" copie={t
     )
 }
 
-/*
-   <div className="mital"> متال : </div>
-  <CodeHighlighter  code={``} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
-*/
