@@ -77,7 +77,6 @@ function App() {
     "Data Types","Strings","Numbers","Casting","Math","Constants",
     "Magic Constants","Operators","If...Else...Elseif","Switch","Loops",
     "Functions","Arrays","Superglobals","RegEx",
-
     "Form Handling","Form Validation","Form Required","Form URL/E-mail","Form Complete",
   ]
 

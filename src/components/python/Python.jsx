@@ -1,134 +1,39 @@
+import { Routes, Route , Link} from "react-router-dom";
 import images from "./imagesPython"
 import { CodeHighlighter , CodeCommand } from "../path";
+import {
+    Introduction,InstallPython,ExecutePythonInCmd,Indentation,PythonInVisualStudioCode,
+    
 
+} from "./pathPython"
 
 export default function Python(props){
     
     const arr = props.python_list.map(e => <li className="p-0 m-0 list-group-item">
-        <a href={`/python#${e.toLowerCase().replace(/\s/g, '-')}`} className="p-2">
+        <Link to={`/python/${e.toLowerCase().replace(/\s/g, '-')}`} className="p-2">
             <i className="fa-solid fa-caret-right me-1"></i> Python {e}
-        </a>
+        </Link>
     </li>)
+
     return(
-        <main>
+<main>
     <aside className="aside">
         <ul className="list-group m-0 p-0">
             {arr}
         </ul>
     </aside>
     <section className="section-conetent">
-        <h1 className="heading-style heading-style-python-color"> Python </h1>
-        <article className="mt-5">
-            <h2 id="intro" className="title-h2"> 1 - مقدمة حول البايثون . </h2>
-            <h3 className="title-h3">1 - ما هو البايثون .</h3> 
-            <p className="style_divv">
-                البايثون هي لغة برمجة عالية المستوى وغير متخصصة معروفة بقراءتها وبساطتها. تم إنشاؤها بواسطة جويدو فان روسوم وتم إصدارها لأول مرة في عام 1991. صممت البايثون لتكون سهلة التعلم والاستخدام، مع بنية نظيفة وبسيطة تؤكد على قراءة الشيفرة. تدعم البايثون عدة نماذج لبرمجة، بما في ذلك البرمجة الإجرائية، والبرمجة الكائنية التوجيهية، والبرمجة الوظيفية.
-            </p>
-            <h3 className="title-h3">2 - ماذا يمكن أن تفعل البايثون .</h3> 
-            <p className="style_divv">
-                البايثون هي لغة متعددة الاستخدامات مع مجموعة واسعة من التطبيقات. فيما يلي بعض الأشياء التي يمكن أن تقوم بها البايثون:
-                <ul>
-                    <li><b className="text-success">تطوير الويب :</b> يمكن استخدام البايثون لتطوير الخوادم في تطبيقات الويب باستخدام إطارات مثل Django و Flask.</li>
-                    <li><b className="text-success">علوم البيانات والتحليل :</b> تستخدم البايثون على نطاق واسع لتلاعب وتحليل البيانات، مع مكتبات مثل NumPy و Pandas و Matplotlib.</li>
-                    <li><b className="text-success">تعلم الآلة والذكاء الاصطناعي :</b> أصبحت البايثون خيارًا شائعًا لتطوير التعلم الآلي والذكاء الاصطناعي، مع مكتبات مثل TensorFlow و PyTorch.</li>
-                    <li><b className="text-success">تطوير الألعاب :</b> يمكن استخدام البايثون لتطوير الألعاب، وهناك مكتبات وأطُر مثل Pygame لهذا الغرض.</li>
-                    <li><b className="text-success">تطبيقات سطح المكتب :</b> يمكن استخدام البايثون لتطوير تطبيقات سطح المكتب باستخدام إطارات مثل Tkinter.</li>
-                    <li><b className="text-success">برمجة الشبكات :</b> يستخدم البايثون في برمجة الشبكات والنصوص الآلية، مما يجعله مفيدًا للمهام المتعلقة بالشبكات وأمان المعلومات.</li>
-                </ul>
-            </p>
-            <h3 className="title-h3">3 - لماذا البايثون .</h3> 
-            <p className="style_divv">
-                هناك العديد من الأسباب التي تجعل البايثون خيارًا شائعًا بين المطورين:
-                <ul>
-                    <li><b className="text-success">القراءة :</b> يجعل البنية النظيفة والسهلة للقراءة في البايثون من الشيفرة سهلة الفهم والكتابة، مما يقلل من تكلفة صيانة البرنامج وتطويره.</li>
-                    <li><b className="text-success">التنوع :</b> يمكن استخدام البايثون في مجموعة واسعة من التطبيقات، من تطوير الويب إلى الحوسبة العلمية وتعلم الآلة وغيرها.</li>
-                    <li><b className="text-success">المجتمع والبيئة البيئية :</b> يحتوي البايثون على مجتمع كبير ونشط من المطورين، مما يسهم في بيئة واسعة من المكتبات والأطُر التي تبسط مهام التطوير.</li>
-                    <li><b className="text-success">سهولة التعلم :</b> يعرف البايثون ببساطته وسهولته للقراءة، مما يجعله خيارًا ممتازًا للمبتدئين، حيث يتميز بتعلم سلس، مما يتيح للمبتدئين فهم المفاهيم البرمجية بسرعة.</li>
-                    <li><b className="text-success">مصدر مفتوح :</b> البايثون هو لغة مفتوحة المصدر، مما يعني أن شيفرتها متاحة بحرية. وهذا يشجع على التعاون والابتكار والتحسين المستمر.</li>
-                </ul> 
-            </p>
-        </article>
-        <article className="mt-5">
-            <h2 id="install-windows" className="title-h2"> 2 - تثبيت بايثون . </h2>
-            <h3 className="title-h3">1 - تحميل بايثون .</h3>
-            <p className="style_divv">             
-                <ul>
-                    <li>قم بزيارة موقع بايثون الرسمي : <a dir="ltr" href="https://www.python.org/downloads/" target="_blank" className="text-success">https://www.python.org/downloads/.</a></li>
-                    <li>انقر على علامة التبويب "Downloads".</li>
-                    <li>اختر أحدث إصدار من بايثون لنظام التشغيل Windows وقم بتنزيل المثبت (عادةً ملف .exe).</li>
-                </ul>
-            </p>
-            <img src={images.python1} className="img" alt="python" />
-            <h3 className="title-h3">2 - تشغيل المثبت .</h3>
-            <p className="style_divv">
-                <ul>
-                    <li>انقر نقرًا مزدوجًا على المثبت الذي تم تنزيله.</li>
-                    <li>تأكد من تحديد خانة "Add Python to PATH" أثناء التثبيت.</li>
-                    <li>انقر على "Install Now" لبدء التثبيت.</li>
-                    <li>سيقوم المثبت بتثبيت بايثون وإعداد المتغيرات البيئية الضرورية.</li>
-                </ul>
-            </p>
-            <img src={images.python2} className="img" alt="python" />
-            <img src={images.python3} className="img" alt="python" />
-            <h3 className="title-h3">3 - التحقق من التثبيت .</h3>
-            <p className="style_divv">
-                افتح نافذة الأوامر واكتب <b>python --version</b> أو <b>python -V</b> للتحقق مما إذا كان بايثون قد تم تثبيته ولرؤية الإصدار المثبت.
-            </p>
-            <CodeCommand>C:\{">"} <span className="text-warning">python --version</span><br/>{`>>>`} Python 3.12.1</CodeCommand>
-        </article>
-        <article>
-            <h2 id="execute-python-in-cmd" className="title-h2"> 3 - تنفيذ بايثون في موجه الأوامر . </h2>
-            <h3 className="title-h3"> افتح موجه الأوامر</h3>
-            <CodeCommand>
-                C:\{">"} <span className="text-warning">python</span><br/>
-                Python 3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)] on win32<br/>
-                Type "help", "copyright", "credits" or "license" for more information.<br/><br/>
-                {`>>>`} print("Hello, Python!")<br/>
-                Hello, Python!
-            </CodeCommand>
-        </article>
-        <article>
-            <h2 id="indentation" className="title-h2"> 4 - المسافة الفارغة في بايثون  .</h2>
-            <p className="style_divv">
-                في لغة البرمجة <b>Python</b>، المسافة الفارغة <b>(Whitespace)</b> تلعب دورًا هامًا في تنظيم الشيفرة وتحديد هيكليتها. إليك بعض الأمور المهمة التي يمكن فعلها باستخدام المسافة الفارغة في <b>Python</b> .
-            </p>
-            <h3 className="title-h3">1 - المسافات والتباعد .</h3>
-            <p className="style_divv">
-                المسافات في بداية السطر <b>(indentation)</b> تُستخدم لتحديد الكتل البرمجية. يتوجب أن تكون جميع الأسطر في نطاق <b>(block)</b> معينة متداخلة بنفس عدد المسافات أو الأقواس التي تبدأ في السطر الذي يسبقها. 
-                <CodeHighlighter code={`if True:
-    print("This is indented.")`} language="python" addclassName="mt-3 mb-3" copie={true}/>
-            </p>
-            <div className="mital">متال : </div>
-            <CodeHighlighter code={`if 5 > 2:
-    print("Five is greater than two!")`} language="python" addclassName="mt-3 mb-3" copie={true}/>
-
-            <div  className="alert alert-danger p-1 py-2">
-                <ul><li>سوف تعطيك بايثون خطأً إذا تخطيت المسافة البادئة</li></ul>
-                <CodeHighlighter code={`if 5 > 2:
-print("Five is greater than two!")`} language="python" addclassName="mt-3 mb-3" copie={true}/>
-            </div>
-            <h3 className="title-h3">2 - تحديد نهاية السطر .</h3>
-            <p className="style_divv">
-                نهاية السطر في <b>Python</b> تُعبر عن نهاية التعليمة، ولا يحتاج السطر إلى فاصل منفصل (مثل في لغات أخرى).
-            </p>
-        </article>
-        <article>
-            <h2 id="python-in-visual-studio-code" className="title-h2"> 5 - بايثون في VS Code .</h2>
-            <p className="style_divv">
-                يعد <b>Visual Studio Code (VS Code)</b> محرر تعليمات برمجية شائعًا وخفيف الوزن تم تطويره بواسطة <b>Microsoft</b>. يتمتع بدعم ممتاز لتطوير <b>Python</b> من خلال الامتدادات والميزات المختلفة.
-            </p>
-            <h3 className="title-h3">1 - تحميل visual Studio Code .</h3>
-            <p className="style_divv">
-                إذا لم تكن قد قمت بذلك بالفعل، فقم بتنزيل <b>Visual Studio Code</b> وتثبيته من الموقع الرسمي: <a href={`/html/editor`}>Visual Studio Code</a> .
-            </p>
-            <h3 className="title-h3">2 - إنشاء ملف بايثون .</h3>
-            <p className="style_divv">
-                قم بإنشاء ملف بايثون جديد بامتداد <kbd>.py</kbd>
-                ، ويمكنك البدء في كتابة كود بايثون.
-            </p>
-            <div className="mital">متال : </div>
-            <img src={images.python4} className="img" alt="python" />
-        </article>
+        <h1 className="heading-style heading-style-python-color"> PYTHON </h1>
+        <Routes>
+              <Route path='/'  element={<Introduction  />} />
+              <Route path='introduction'  element={<Introduction  />} />
+              <Route path='install-windows'  element={<InstallPython  />} />
+              <Route path='execute-python-in-cmd'  element={<ExecutePythonInCmd  />} />
+              <Route path='indentation'  element={<Indentation  />} />
+              <Route path='python-in-visual-studio-code'  element={<PythonInVisualStudioCode  />} />
+        </Routes>
+        
+        
         <article>
             <h2 id="comments" className="title-h2"> 6 - التعليقات في بايثون </h2>
             <p className="style_divv">
@@ -142,8 +47,8 @@ print("Five is greater than two!")`} language="python" addclassName="mt-3 mb-3" 
     It can be used to explain code or write documentation for the program.
 '''
 print("Hello Word")`} language="python" file_name="app.py" addclassName="mt-3 mb-3" copie={true}/>
-        <div className="mital"> النتيجة </div>
-        <CodeCommand>Hello Word</CodeCommand>
+            <div className="mital"> Result </div>
+            <CodeCommand>Hello Word</CodeCommand>
         </article>
         <article>
             <h2 id="variables" className="title-h2"> 7 - المتغيرات . </h2>
@@ -256,17 +161,333 @@ b = -2.5`} language="python" addclassName="mt-3 mb-3" copie={true}/>
                 الأعداد المركبة في <b>Python</b> هي نوع من أنواع البيانات تمثل الأعداد التي تتألف من جزء حقيقي وجزء خيالي. يُمثل الجزء الخيالي بحرف "j" في <b>Python</b>. صيغة العدد المركب تكون على النحو التالي: a + bj، حيث a هو الجزء الحقيقي و b هو الجزء الخيالي.
                 <CodeHighlighter  code={`complex_number = complex(5)
 print(complex_number)   # Output: (5+0j)`} language="python" addclassName="mt-3 mb-3" copie={true}/>   
-                والهندسة، خاصةً في حالات تتعامل مع مفهوم الأعداد الخيالية. إليك بعض السياقات التي قد تكون فيها الأعداد المركبة مفيدة:<br/>
-                الرياضيات التطبيقية: تستخدم الأعداد المركبة في العديد من التطبيقات في الفيزياء والهندسة، حيث يظهر الجزء الخيالي في تمثيل ظواهر مثل الموجات الكهرومغناطيسية والتحولات الرياضية المعقدة.<br/>
-                تحليل الدوال: في بعض الدوال الرياضية، يتطلب الحساب استخدام الأعداد المركبة. على سبيل المثال، تحليل الدوال ذات التكاملات المعقدة يشمل استخدام الأعداد المركبة.<br/>
-                التحليل الهندسي: في هندسة المستويات العليا والتحليل الهندسي، يمكن استخدام الأعداد المركبة لتمثيل النقاط في الفضاء.<br/>
-                علوم الحاسوب: في بعض الحالات، يمكن استخدام الأعداد المركبة في مجالات مثل معالجة الإشارات ورسوم الكمبيوتر.<br/>
-                التشفير وعلم الحوسبة الكمومية: في مجالات متقدمة، يلعب الأعداد المركبة دورًا هامًا في بعض تقنيات التشفير وفي مجال الحوسبة الكمومية.<br/>
+                والهندسة، خاصةً في حالات تتعامل مع مفهوم الأعداد الخيالية. إليك بعض السياقات التي قد تكون فيها الأعداد المركبة مفيدة:<br/><br/>
+                <ul>
+                    <li> <b className="text-success">الرياضيات التطبيقية :</b> تستخدم الأعداد المركبة في العديد من التطبيقات في الفيزياء والهندسة، حيث يظهر الجزء الخيالي في تمثيل ظواهر مثل الموجات الكهرومغناطيسية والتحولات الرياضية المعقدة.</li>
+                    <li> <b className="text-success">تحليل الدوال :</b> في بعض الدوال الرياضية، يتطلب الحساب استخدام الأعداد المركبة. على سبيل المثال، تحليل الدوال ذات التكاملات المعقدة يشمل استخدام الأعداد المركبة.</li>
+                    <li> <b className="text-success">التحليل الهندسي:</b> في هندسة المستويات العليا والتحليل الهندسي، يمكن استخدام الأعداد المركبة لتمثيل النقاط في الفضاء.</li>
+                    <li> <b className="text-success">علوم الحاسوب :</b>  في بعض الحالات، يمكن استخدام الأعداد المركبة في مجالات مثل معالجة الإشارات ورسوم الكمبيوتر.</li>
+                    <li> <b className="text-success">التشفير وعلم الحوسبة الكمومية:</b> في مجالات متقدمة، يلعب الأعداد المركبة دورًا هامًا في بعض تقنيات التشفير وفي مجال الحوسبة الكمومية.</li>
+                </ul>
             </p>
         </article>
         <article>
-            <h2 id="strings" className="title-h2"> 10 -  . </h2>
+            <h2 id="strings" className="title-h2"> 10 - النصوص في البايثون . </h2>
+            <p className="style_divv">
+                في <b>Python</b>، السلاسل <b>(Strings)</b> هي تسلسلات من الأحرف وتُستخدم لتمثيل النصوص. يمكنك إنشاء سلسلة بواسطة وضع النص بين علامات الاقتباس .
+            </p>
+            <div className="mital"> متال 1 : </div>
+            <CodeHighlighter  code={`# Using single quotes
+string_single_quotes = 'Welcome to Python!'
 
+# Using double quotes
+string_double_quotes = "Python is fun and easy to use."
+
+# Using triple quotes for multiline strings
+multiline_string = '''This
+is
+a
+multiline
+string
+in
+Python.'''
+
+print(string_single_quotes)
+print(string_double_quotes)
+print(multiline_string)`} language="python" file_name="desktop / app.py"  addclassName="mt-3 mb-3" copie={true}/>   
+            <CodeCommand copy={false}>PS C:\Users\SURFACE BOOK\desktop{">"} <span className="text-success">py app.py</span><br/>
+                Welcome to Python!<br/>
+                Python is fun and easy to use.<br/>
+                This<br/>
+                is<br/>
+                a<br/>
+                multiline<br/>
+                string<br/>
+                in<br/>
+                Python.
+            </CodeCommand>
+            <div className="mital"> متال 2 : </div>
+            <CodeHighlighter  code={`my_string = "Reda Eskouni"
+
+# Accessing the first character
+first_char = my_string[0] 
+print(first_char)
+
+# Accessing the third character
+third_char = my_string[2]  
+print(third_char)
+
+# Accessing a range of characters 
+substring = my_string[3:9] 
+print(substring)
+
+
+substring = my_string[5:] 
+print(substring)`} language="python" file_name="desktop / app.py" addclassName="mt-3 mb-3" copie={true}/>   
+            <CodeCommand copy={false}>PS C:\Users\SURFACE BOOK\desktop{">"} <span className="text-success">py app.py</span><br/>
+                R<br/>
+                d      <br/>
+                a Esko <br/>
+                Eskouni<br/>
+            </CodeCommand>
+            <div className="mital"> متال 3 : </div>
+            <CodeHighlighter  code={`string_single_quotes = 'Welcome to Python!'
+string_double_quotes = "Python is fun and easy to use."
+
+# Concatenating two strings
+concatenated_string = string_single_quotes + " " + string_double_quotes
+print(f"{concatenated_string} \n")
+
+# Repeating a string
+repeated_string = string_single_quotes * 3
+print(f"{repeated_string} \n")
+
+# Converting to lowercase
+lowercase_string = string_double_quotes.lower()
+print(f"{lowercase_string} \n")
+
+# Converting to uppercase
+uppercase_string = string_double_quotes.upper()
+print(f"{uppercase_string} \n")
+
+# Finding the position of a specific character in the string
+index_of_char = string_double_quotes.index("a")
+print(f"{index_of_char} \n")`} language="python" file_name="desktop / app.py" addclassName="mt-3 mb-3" copie={true}/>   
+            <CodeCommand copy={false}>PS C:\Users\SURFACE BOOK\desktop{">"} <span className="text-success">py app.py</span><br/>
+                Welcome to Python! Python is fun and easy to use. <br/><br/>
+                Welcome to Python!Welcome to Python!Welcome to Python! <br/><br/>
+                python is fun and easy to use.<br/><br/>
+                PYTHON IS FUN AND EASY TO USE.<br/><br/>
+                14<br/>
+            </CodeCommand>
+        </article>
+        <article>
+            <h2 id="booleans" className="title-h2"> 11 - القيمة المنطقية (Boolean) . </h2>
+            <p className="style_divv">
+                في <b>Python</b>، يُمثل نوع البيانات البوليان <b>(Boolean)</b> القيم الصحيحة، ولديه قيمتين ممكنتين: <b>True</b> و <b>False</b>.<br/>
+                يعتبر البيان البوليان أساسيًا لاتخاذ القرارات والتحكم في تدفق البرنامج من خلال التعبيرات الشرطية. فيما يلي بعض النقاط الرئيسية حول البيانات البوليانية في <b>Python</b>
+            </p>
+            <h3 className="title-h3">1 - قيم البيانات البوليانية .</h3>   
+            <p className="style_divv">
+                <ul>
+                    <li><b className="text-success">True :</b> يُمثل حالة صحيحة أو إيجابية .</li>
+                    <li><b className="text-success">False :</b> يُمثل حالة خاطئة أو سلبية .</li>
+                </ul>    
+            </p>    
+            <h3 className="title-h3">2 - العمليات البوليانية .</h3>       
+            <p className="style_divv">
+                توفر <b>Python</b> العديد من العمليات البوليانية لدمج أو تلاعب قيم البيانات البوليانية، بما في ذلك:
+                <ul>
+                    <li><b className="text-success">and :</b> تُرجع <b>True</b> إذا كانت كلتا العمليتين صحيحتين.</li>
+                    <li><b className="text-success">or :</b> تُرجع <b>True</b> إذا كانت واحدة على الأقل من العمليتين صحيحة.</li>
+                    <li><b className="text-success">not :</b> تُرجع <b>True</b> إذا كانت العملية غير صحيحة، والعكس صحيح أيضًا.</li>
+                </ul>
+            </p>
+            <div className="mital"> متال : </div>
+            <CodeHighlighter  code={`x = True
+y = False
+
+# Logical AND
+result_and = x and y  # Result: False
+
+# Logical OR
+result_or = x or y    # Result: True
+
+# Logical NOT
+result_not = not x    # Result: False
+`} language="python" addclassName="mt-3 mb-3" copie={true}/>   
+            <h3 className="title-h3">3 - عمليات المقارنة .</h3>       
+            <p className="style_divv">
+                تُستخدم عمليات المقارنة لمقارنة القيم وإرجاع نتائج بيانية. تشمل عمليات المقارنة الشائعة ما يلي:
+                <ul>
+                    <li><b className="text-success">{'=='} :</b>  يساوي</li>
+                    <li><b className="text-success">{'!='} :</b>  لا يساوي</li>
+                    <li><b className="text-success">{'<'} :</b>  أقل من</li>
+                    <li><b className="text-success">{'>'} :</b>  أكبر من</li>
+                    <li><b className="text-success">{'<='} :</b>  أقل من أو يساوي</li>
+                    <li><b className="text-success">{'>='} :</b>  أكبر من أو يساوي</li>
+                </ul>
+            </p>
+            <div className="mital"> متال : </div>
+            <CodeHighlighter  code={`a = 5
+b = 10
+
+# a equal b 
+result_equal = a == b  # Result: False
+
+# a not equal b
+result_not_equal = a != b  # Result: True
+
+# a less than b
+result_less_than = a < b  # Result: True`} language="python" addclassName="mt-3 mb-3" copie={true}/>   
+            <h3 className="title-h3">4 - القيم الصحيحة والقيم الكاذبة .</h3>       
+            <p className="style_divv">
+                بالإضافة إلى <b>True</b> و <b>False</b>، هناك العديد من القيم الأخرى في <b>Python</b> تعتبر حقيقية أو كاذبة عند استخدامها في سياقات بيانية. على سبيل المثال، 0، والتسلسلات الفارغة (مثل السلاسل الفارغة أو القوائم الفارغة)، و <b>None</b> تعتبر كاذبة.
+            </p>
+            <div className="mital"> متال : </div>
+            <CodeHighlighter  code={`falsy_value = 0
+truthy_value = "Hello"
+none_value = None
+
+if falsy_value:
+    print("This won't be executed.")
+
+if none_value:
+    print("This won't be executed.")
+
+if truthy_value:
+    print("This will be executed.")`} language="python" file_name="desktop / app.py" addclassName="mt-3 mb-3" copie={true}/>   
+            <CodeCommand copy={false}>PS C:\Users\SURFACE BOOK\desktop{">"} <span className="text-success">py app.py</span><br/>
+                This will be executed.<br/>
+            </CodeCommand>
+        </article>
+        <article>
+            <h2 id="operators" className="title-h2"> 12 - العوامل (operators) . </h2>
+            <p className="style_divv">
+                <b>Python</b> تدعم مجموعة متنوعة من العوامل التي تتيح لك أداء عمليات مختلفة على المتغيرات والقيم. فيما يلي نظرة عامة على بعض العوامل الرئيسية في <b>Python</b>           
+            </p>
+            <h3 className="title-h3">1 - العوامل الحسابية (Arithmetic Operators).</h3>
+            <p className="style_divv">
+                <ul>
+                    <li><b className="text-success">الجمع (+) :</b> يستخدم لجمع قيمتين.</li>
+                    <li><b className="text-success">الطرح (-) :</b> يستخدم لطرح قيمة من أخرى . </li>
+                    <li><b className="text-success">الضرب (*) :</b> يستخدم لضرب قيمتين .</li>
+                    <li><b className="text-success">القسمة (/) :</b> يستخدم لقسمة قيمة على أخرى. يعيد نتيجة عدد عشري .</li>
+                    <li><b className="text-success">قسمة الكل (//) :</b> ستخدم لقسمة قيمة على أخرى، ولكن يعيد النتيجة كعدد صحيح (بدون جزء عشري) .</li>
+                    <li><b className="text-success">الباقي (%) :</b> يستخدم للحصول على باقي القسمة .</li>
+                    <li><b className="text-success">التربيع (**) :</b> يستخدم لرفع رقم إلى قوة أخرى .</li>
+                </ul>                
+            </p>
+            <div className="mital"> متال : </div>
+            <CodeHighlighter  code={`a = 5
+b = 2
+
+addition_result = a + b            # Result: 7
+subtraction_result = a - b        # Result: 3
+multiplication_result = a * b     # Result: 10
+division_result = a / b              # Result: 2.5
+floor_division_result = a // b    # Result: 2
+modulus_result = a % b           # Result: 1
+exponentiation_result = a ** b  # Result: 25`} language="python" addclassName="mt-3 mb-3" copie={true}/>   
+            <h3 className="title-h3">2 - العوامل المقارنة (Comparison Operators).</h3>
+            <p className="style_divv">
+                <ul>
+                    <li><b className="text-success">يساوي (==) :</b>يُستخدم للتحقق مما إذا كانت قيمتين متساويتين. إذا كانت متساويتين، فإن النتيجة هي <b>True</b>، وإلا فإنها <b>False</b>.</li>
+                    <li><b className="text-success">لا يساوي (!=) :</b> يُستخدم للتحقق مما إذا كانت قيمتين غير متساويتين. إذا كانت غير متساويتين، فإن النتيجة هي True، وإلا فإنها False.</li>
+                    <li><b className="text-success">أقل من ({"<"}) :</b> يُستخدم للتحقق مما إذا كانت القيمة على اليسار أقل من القيمة على اليمين. إذا كانت القيمة على اليسار أقل، فإن النتيجة هي True، وإلا فإنها False. </li>
+                    <li><b className="text-success">أكبر من ({">"}) :</b> يُستخدم للتحقق مما إذا كانت القيمة على اليسار أكبر من القيمة على اليمين. إذا كانت القيمة على اليسار أكبر، فإن النتيجة هي True، وإلا فإنها False. </li>
+                    <li><b className="text-success">أكبر من أو يساوي ({">="}) :</b> يُستخدم للتحقق مما إذا كانت القيمة على اليسار أقل من أو تساوي القيمة على اليمين. إذا كانت القيمة على اليسار أقل أو تساوي، فإن النتيجة هي True، وإلا فإنها False.</li>
+                    <li><b className="text-success">أكبر من أو يساوي ({">="}) :</b> يُستخدم للتحقق مما إذا كانت القيمة على اليسار أكبر من أو تساوي القيمة على اليمين. إذا كانت القيمة على اليسار أكبر أو تساوي، فإن النتيجة هي True، وإلا فإنها False.</li>
+                </ul>
+            </p>
+            <div className="mital"> متال : </div>
+            <CodeHighlighter  code={`x = 5
+y = 10
+
+equal_result = x == y       # Result: False
+not_equal_result = x != y   # Result: True
+less_than_result = x < y    # Result: True
+greater_than_result = x > y # Result: False`} language="python" addclassName="mt-3 mb-3" copie={true}/>   
+            <h3 className="title-h3">3 - العوامل المنطقية  (Logical Operators).</h3>
+            <p className="style_divv">
+                تعتبر العوامل المنطقية في Python وسائل لدمج أو تلاعب بقيم البيانات البوليانية (True/False). <br/>
+                فيما يلي تفاصيل حول العوامل المنطقية الرئيسية :
+                <ul>
+                    <li><b className="text-success">(and) :</b> يُستخدم للتحقق مما إذا كانت كلتا العبارتين صحيحتين. إذا كانت العبارتين صحيحتين، فإن النتيجة هي <b>True</b>، وإلا فإنها <b>False</b></li>
+                    <li><b className="text-success">(or) :</b> يُستخدم للتحقق مما إذا كانت إحدى العبارتين أو كلتاهما صحيحة. إذا كانت إحدى العبارتين (أو كلتاهما) صحيحة، فإن النتيجة هي True، وإلا فإنها False.</li>
+                    <li><b className="text-success">(not) :</b> يُستخدم لعكس قيمة العبارة. إذا كانت العبارة صحيحة، فإن not سيجعلها غير صحيحة، والعكس صحيح أيضًا.</li>
+                </ul>
+            </p>
+            <div className="mital"> متال 1: </div>
+            <CodeHighlighter  code={`p = True
+q = False
+
+logical_and_result = p and q  # Result: False
+logical_or_result = p or q    # Result: True
+logical_not_result = not p    # Result: False`} language="python" file_name="desktop / app.py" addclassName="mt-3 mb-3" copie={true}/>   
+            <CodeCommand copy={false}>PS C:\Users\SURFACE BOOK\desktop{">"} <span className="text-success">py app.py</span><br/>
+                False<br/>
+                True <br/>
+                False<br/>
+            </CodeCommand>
+            <div className="mital"> متال 2: </div>
+            <CodeHighlighter  code={`a = True
+b = False
+c = True
+
+# (a and b) => False 
+# (not c) => False
+# False or False => False
+
+result = (a and b) or (not c)
+print(result)  # Result: False`} language="python" file_name="desktop / app.py" addclassName="mt-3 mb-3" copie={true}/>   
+            <CodeCommand copy={false}>PS C:\Users\SURFACE BOOK\desktop{">"} <span className="text-success">py app.py</span><br/>
+                False<br/>
+            </CodeCommand>
+            <h3 className="title-h3">4 - عوامل الإسناد (Assignment Operators).</h3>
+            <p className="style_divv">
+                عوامل الإسناد في <b>Python</b> تستخدم لتعيين قيمة لمتغير. فيما يلي تفاصيل حول العوامل الرئيسية للإسناد
+                <ul>
+                    <li><b className="text-success">الإسناد (=) :</b> يُستخدم لتعيين قيمة لمتغير. القيمة الموجودة على الجهة اليمنى تُسند إلى المتغير المحدد على الجهة اليسرى.</li>
+                    <li><b className="text-success">جمع وإسناد (+=) :</b> يُستخدم لجمع قيمة إلى قيمة متغير وتخزين النتيجة في المتغير نفسه.</li>
+                    <li><b className="text-success">طرح وإسناد (-=) :</b> يُستخدم لطرح قيمة من قيمة متغير وتخزين النتيجة في المتغير نفسه.</li>
+                    <li><b className="text-success">ضرب وإسناد (*=) :</b> يُستخدم لضرب قيمة في قيمة متغير وتخزين النتيجة في المتغير نفسه.</li>
+                    <li><b className="text-success">قسمة وإسناد (/=) :</b> يُستخدم لقسمة قيمة على قيمة متغير وتخزين النتيجة في المتغير نفسه.</li>
+                    <li><b className="text-success">قسمة الكل وإسناد (//=) :</b> يُستخدم لقسمة قيمة على قيمة متغير باستخدام قسمة الكل وتخزين النتيجة في المتغير نفسه.</li>
+                    <li><b className="text-success">الباقي وإسناد (%=) :</b> يُستخدم للحصول على باقي القسمة وتخزين النتيجة في المتغير نفسه.</li>
+                    <li><b className="text-success">تربيع وإسناد (**=) :</b> يُستخدم لرفع قيمة متغير إلى قوة أخرى وتخزين النتيجة في المتغير نفسه.</li>
+                </ul>
+            </p>
+            <div className="mital"> متال : </div>
+            <CodeHighlighter  code={`x = 5
+print(f"x = {x}") 
+
+x += 3  # Equivalent to x = x + 3
+print(f"x += 3 = {x}") 
+
+x -= 3  # Equivalent to x = x - 3
+print(f"x -= 3 = {x}") 
+
+x //= 2 # Equivalent to x = x // 2
+print(f"x //= 2 = {x}") `} language="python" file_name="desktop / app.py" addclassName="mt-3 mb-3" copie={true}/>   
+            <CodeCommand copy={false}>
+                PS C:\Users\SURFACE BOOK\desktop{">"} <span className="text-success">py app.py</span><br/>
+                x = 5 <br/>
+                x += 3 = 8 <br/>
+                x -= 3 = 5 <br/>
+                x //= 2 = 2<br/>
+            </CodeCommand>
+            <h3 className="title-h3">5 - عوامل الهوية  (Identity Operators).</h3>
+            <p className="style_divv">
+                <ul>
+                    <li><b className="text-success"> is :</b> ترجع <b>True</b> إذا كانت كلتا المتغيرات هي نفس الكائن.</li>
+                    <li><b className="text-success"> is not :</b> ترجع <b>True</b> إذا كانت كلتا المتغيرات ليستا نفس الكائن.</li>
+                </ul>
+            </p>
+            <div className="mital"> متال : </div>
+            <CodeHighlighter  code={`a = [1, 2, 3]
+b = [1, 2, 3]
+
+identity_result = a is b      # Result: False
+identity_not_result = a is not b  # Result: True`} language="python" addclassName="mt-3 mb-3" copie={true}/>   
+            <h3 className="title-h3">6 - عوامل الانتماء (Membership Operators).</h3>
+            <p className="style_divv">
+                <ul>
+                    <li><b  className="text-success">in :</b> ترجع <b>True</b> إذا كانت القيمة موجودة في تسلسل.</li>
+                    <li><b  className="text-success">not in :</b>  ترجع <b>True</b> إذا كانت القيمة غير موجودة في تسلسل.</li>
+                </ul>
+            </p>
+            <div className="mital"> متال : </div>
+            <CodeHighlighter  code={`my_list = [1, 2, 3, 4]
+
+in_result = 3 in my_list        # Result: True
+not_in_result = 5 not in my_list  # Result: True`} language="python" file_name="desktop / app.py" addclassName="mt-3 mb-3" copie={true}/>   
+        </article>
+        <article>
+            <h2 id="lists" className="title-h2"> 13 - المصفوفة (list) . </h2>
+            <p className="style_div">
+
+            </p>
         </article>
     </section>
 </main>
@@ -274,5 +495,5 @@ print(complex_number)   # Output: (5+0j)`} language="python" addclassName="mt-3 
 }
 /*
             <div className="mital"> متال : </div>
-            <CodeHighlighter  code={``} language="python" addclassName="mt-3 mb-3" copie={true}/>   
+            <CodeHighlighter  code={``} language="python" file_name="desktop / app.py" addclassName="mt-3 mb-3" copie={true}/>   
 */

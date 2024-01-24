@@ -34,7 +34,10 @@ export default function CodeCommand(props){
             <pre style={{overflow:"hidden"}} className={`positon-relative ${props.preClass}}`}>
                 {props.children}
             </pre>
-            <button onClick={handleCopyClick} className={`btn bg-dark position-absolute text-light btn-CodeCommand`}>  
+            <button 
+              onClick={handleCopyClick} 
+              className={`${(props.copy === true || props.copy === null)?"d-block":"d-none"} btn bg-dark position-absolute text-light btn-CodeCommand`}
+            >  
                     {copySuccess ? 'Copied' : 'Copy'} 
             </button>
         </div>
