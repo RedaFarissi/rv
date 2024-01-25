@@ -2,8 +2,8 @@ import { CodeHighlighter } from "../../path";
 
 export default function Indentation(){
     return(
-    <article>
-        <h2 id="indentation" className="title-h2"> 4 - المسافة الفارغة في بايثون  .</h2>
+    <article className="mt-5">
+        <h2 id="indentation" className="title-h2"> المسافة الفارغة في بايثون  .</h2>
         <p className="style_divv">
             في لغة البرمجة <b>Python</b>، المسافة الفارغة <b>(Whitespace)</b> تلعب دورًا هامًا في تنظيم الشيفرة وتحديد هيكليتها. إليك بعض الأمور المهمة التي يمكن فعلها باستخدام المسافة الفارغة في <b>Python</b> .
         </p>

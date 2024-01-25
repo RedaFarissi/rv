@@ -4,7 +4,7 @@ import { CodeCommand } from "../../path";
 export default function InstallPython(){
     return(
         <article className="mt-5">
-            <h2 id="install-windows" className="title-h2"> 2 - تثبيت بايثون . </h2>
+            <h2 id="install-windows" className="title-h2"> تثبيت بايثون . </h2>
             <h3 className="title-h3">1 - تحميل بايثون .</h3>
             <p className="style_divv">             
                 <ul>

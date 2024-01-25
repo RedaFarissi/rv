@@ -6,9 +6,7 @@ import "./App.sass"
 
 function App() {
   const html_list = [ "Introduction","Editor","Attributes","Heading (h1)","Paragraph (p)" ,"Break (br)","Horizontal (hr)","Superscript (sup)","Subscript (sub)","Underline (u)","Italic (i)","Abbreviation (abbr)","Blockquote","Quotation (q)","Mark","Deleted (del)","Preformatted (pre)","Small","Anchor (a)","Image (img)","Division (div)","Span","Audio","Video","Details","Bi-Directional Isolation (bdi)","Bi-Directional Override (bdo)","Lists Ordered (ol)","Lists Unordered (ul)","Lists Definitionul (dl)","Table","Input","Select","Textarea","Form","Button", "Header","Fieldset","Dialog","Iframe","Meter","Style","Link","Meta" ]
-  const git_list  = [ "Introduction","Install_git","Diagram_git","Repository","Branch","Local_Repository","Remote_Repository","Pull_Request","Clone_Repository","Initialize_Repository","git_status","git_add","git_commit","git_branch","git_remote","git_push","Work_as_a_team","git_pull","Existing_Project_powerShell","Existing_Project_App","gitignore_file","submodules","Create_new_branch","Remove_connectio"]
   const css_list  = [ "Introduction","width","height","background","color","border","border-radius","padding","margin","font-size","font-style","font-weight","font-variant","white-space","word-wrap","word-break","text-decoration","letter-spacing","word-spacing","text-align","text-transform","text-indent","line-height","float","clear","opacity","hover","display","block","inline","inline-block","visibility","border-collapse","overflow","text-shadow","transform","transform-3D","perspective","resize","focus","transition","position","list-style-type","box-sizing","object-fit","animation","clip-path","cursor","scroll-behavior","z-index","outline","invalid & valid","after & before","writing-mode","filter","quotes","transform-style","-webkit-text-stroke", "flex-direction","flex-wrap","align-items","align-self","justify-content","order","grid","accent-color","Selectors","Functions","media","scss","sass"]
-  const cmd_list  = [ "Introduction","Create_Folder","Change_Directory","Remove_Directory","Create_File","Rename_File","Remove_File","Remove_all_Files","Get_all_Directory","Get_Content_File","Clear_Screen","curl_Html","POST_Requests_curl","Copy_Files_to_another_Folder","Change_extension","Print_all_Files_in_folder","View_System_Information","Turn_off_the_Computer","search_for_File_by_Extensions","Display_Text","Date_and_Time",]
   const js_matrix = [
     ["Tutorial","Introduction","Statements","Output","Variables","Arithmetic","Assignment","Types","String","String Search","Strings Templates","Numbers","Booleans","Date","Random","Conditions","Switch","Arrays part 1","Arrays part 2","Objects","Loop for","Loop while","Break","Conversion","Modules","Errors","JSON",],
     ["Functions","Functions", "bind", "call","apply",  "Map","Filter", ],
@@ -61,6 +59,9 @@ function App() {
     "Context_Processors",
     "ngrok"
   ]
+  const php_list = [  
+    "HOME","Intro","Install","Syntax","Comments","Variables","Echo / Print","Data Types","Strings","Numbers","Casting","Math","Constants","Magic Constants","Operators","If...Else...Elseif","Switch","Loops","Functions","Arrays","Superglobals","RegEx","Form Handling","Form Validation","Form Required","Form URL/E-mail","Form Complete",
+  ]
   const laravel_matrix = [
     ["MVC" , "what_is_laravel","what_we_need_to_use_laravel","First_Laravel_Project","run_project","artisan","views","route","route_to_views_without_puch_data","route_to_views_and_puch_data","request","Controller","group_duplicate_items_on_one_page","ussing_css_and_javaScript","route_and_name","handle_data_in_views","create_controller_to_use_data","method_in_controller","recource","list_all_route_in_project",],
     ["database" , "Connect_with_database","Create_models","create_table_in_db_from_laravel","AddColumnInTable","Foreign_Keys","droppingColumnsFromTable","truncate_models_table","dropTheLastMigrateInDB","Clearalltableindbandcreatehimagain","soft_delete","eloquent_scopes","Seeder_class",  ],
@@ -72,13 +73,9 @@ function App() {
     ["Packages" ,"Authentication_UI","Authentication_Breeze","Paypal_Payment","Stripe_Payment_Integration"],
     ["github" ,"clone_laravel_project","laravel_docker"],
   ]
-  const php_list = [  
-    "HOME","Intro","Install","Syntax","Comments","Variables","Echo / Print",
-    "Data Types","Strings","Numbers","Casting","Math","Constants",
-    "Magic Constants","Operators","If...Else...Elseif","Switch","Loops",
-    "Functions","Arrays","Superglobals","RegEx",
-    "Form Handling","Form Validation","Form Required","Form URL/E-mail","Form Complete",
-  ]
+  const git_list  = [ "Introduction","Install_git","Diagram_git","Repository","Branch","Local_Repository","Remote_Repository","Pull_Request","Clone_Repository","Initialize_Repository","git_status","git_add","git_commit","git_branch","git_remote","git_push","Work_as_a_team","git_pull","Existing_Project_powerShell","Existing_Project_App","gitignore_file","submodules","Create_new_branch","Remove_connectio"]
+  const cmd_list  = [ "Introduction","Create_Folder","Change_Directory","Remove_Directory","Create_File","Rename_File","Remove_File","Remove_all_Files","Get_all_Directory","Get_Content_File","Clear_Screen","curl_Html","POST_Requests_curl","Copy_Files_to_another_Folder","Change_extension","Print_all_Files_in_folder","View_System_Information","Turn_off_the_Computer","search_for_File_by_Extensions","Display_Text","Date_and_Time",]
+  
 
   return (
     <Router>
