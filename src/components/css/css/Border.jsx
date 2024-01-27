@@ -90,11 +90,11 @@ export default function Border(props){
             1. قيمة محددة بال <b>px</b> أو  <b>ch</b> أو  <b>em</b> أو <b>cm</b>  أو <b>in</b> أو <b>mm</b> أو <b>pc</b> ..إلخ . غالبا ما نستخدم px .<br/>
             2. نوع الخط يكون عبارة عن واحد من الأشكال التالية <b>dashed</b> , <b>solid</b> , <b>dotted</b> , <b>wavy</b> :<br/>
                 <ul>
-                    <li> <b>solid</b> : تستعمل من أجل الخط المتصل </li>
-                    <li> <b>dashed</b> : تستعمل من أجل الخط المتقطع </li>
-                    <li> <b>dotted</b>  : تستعمل من أجل إنشاء خط  من النقط </li>
-                    <li> <b>wavy</b>  : تستعمل من أجل إنشاء خط  مموج  </li>
-                    <li> <b>double</b> :  تستعمل من أجل الخط المزدوج    </li>
+                    <li><b className="text-success">solid</b> : تستعمل من أجل الخط المتصل </li>
+                    <li><b className="text-success">dashed</b> : تستعمل من أجل الخط المتقطع </li>
+                    <li><b className="text-success">dotted</b>  : تستعمل من أجل إنشاء خط  من النقط </li>
+                    <li><b className="text-success">wavy</b>  : تستعمل من أجل إنشاء خط  مموج  </li>
+                    <li><b className="text-success">double</b> :  تستعمل من أجل الخط المزدوج    </li>
                 </ul>
             3. لون الخط يمكنك تحديد أي لون تريد بصيغة أحرف متل black , aqua , .. أو بضيغة rgb() أو بصغة <b>HEX</b> .
             <ul><li><small>ستتعلم كل شيئ عن الألوان في فقرة <b>color</b> من هاذا البرنامج التعليمي الخاص بلغة <b>CSS</b> .</small></li></ul>
@@ -144,10 +144,10 @@ export default function Border(props){
         <p class="style_divv">
          الخط التلاتي الأبعاد و يكون عبارة عن واحد من الأشكال التالية <b>groove</b> , <b>ridge</b> , <b>inset</b> , <b>outset</b> :<br/>
             <ul>
-                <li><b>groove</b> : يحدد حدًا محززًا ثلاثي الأبعاد. التأثير يعتمد على قيمة لون الحدود </li>
-                <li><b>ridge</b> : يحدد حدًا مموجًا ثلاثي الأبعاد. التأثير يعتمد على قيمة لون الحدود</li>
-                <li><b>inset</b> : يحدد حد داخلي ثلاثي الأبعاد. التأثير يعتمد على قيمة لون الحدود</li>
-                <li><b>outset</b> : يحدد حد خارجي ثلاثي الأبعاد. التأثير يعتمد على قيمة لون الحدود</li>
+                <li><b className="text-success">groove</b> : يحدد حدًا محززًا ثلاثي الأبعاد. التأثير يعتمد على قيمة لون الحدود </li>
+                <li><b className="text-success">ridge</b> : يحدد حدًا مموجًا ثلاثي الأبعاد. التأثير يعتمد على قيمة لون الحدود</li>
+                <li><b className="text-success">inset</b> : يحدد حد داخلي ثلاثي الأبعاد. التأثير يعتمد على قيمة لون الحدود</li>
+                <li><b className="text-success">outset</b> : يحدد حد خارجي ثلاثي الأبعاد. التأثير يعتمد على قيمة لون الحدود</li>
             </ul>
         </p>
         <div class="mital"> متال : </div>

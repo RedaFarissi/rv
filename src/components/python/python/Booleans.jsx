@@ -2,6 +2,8 @@ import { CodeHighlighter , CodeCommand} from "../../path";
 
 export default function Booleans(){
     return(
+        <>
+        <h1 className="heading-style heading-style-python-color"> Python Boolean</h1>
         <article className="mt-5">
             <h2 id="booleans" className="title-h2"> القيمة المنطقية (Boolean) . </h2>
             <p className="style_divv">
@@ -82,5 +84,6 @@ if truthy_value:
                 This will be executed.<br/>
             </CodeCommand>
         </article>
+        </>
     )
 }

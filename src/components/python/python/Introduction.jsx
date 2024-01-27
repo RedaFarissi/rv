@@ -1,12 +1,13 @@
 export default function Introduction(){
     return(
+    <>
+        <h1 className="heading-style heading-style-python-color"> Python Introduction</h1>
         <article className="mt-5">
-            <h2 id="intro" className="title-h2">  مقدمة حول البايثون . </h2>
-            <h3 className="title-h3">1 - ما هو البايثون .</h3> 
+            <h2 className="title-h2">1 - ما هو البايثون .</h2> 
             <p className="style_divv">
                 البايثون هي لغة برمجة عالية المستوى وغير متخصصة معروفة بقراءتها وبساطتها. تم إنشاؤها بواسطة جويدو فان روسوم وتم إصدارها لأول مرة في عام 1991. صممت البايثون لتكون سهلة التعلم والاستخدام، مع بنية نظيفة وبسيطة تؤكد على قراءة الشيفرة. تدعم البايثون عدة نماذج لبرمجة، بما في ذلك البرمجة الإجرائية، والبرمجة الكائنية التوجيهية، والبرمجة الوظيفية.
             </p>
-            <h3 className="title-h3">2 - ماذا يمكن أن تفعل البايثون .</h3> 
+            <h2 className="title-h2">2 - ماذا يمكن أن تفعل البايثون .</h2> 
             <p className="style_divv">
                 البايثون هي لغة متعددة الاستخدامات مع مجموعة واسعة من التطبيقات. فيما يلي بعض الأشياء التي يمكن أن تقوم بها البايثون:
                 <ul>
@@ -18,7 +19,7 @@ export default function Introduction(){
                     <li><b className="text-success">برمجة الشبكات :</b> يستخدم البايثون في برمجة الشبكات والنصوص الآلية، مما يجعله مفيدًا للمهام المتعلقة بالشبكات وأمان المعلومات.</li>
                 </ul>
             </p>
-            <h3 className="title-h3">3 - لماذا البايثون .</h3> 
+            <h2 className="title-h2">3 - لماذا البايثون .</h2> 
             <p className="style_divv">
                 هناك العديد من الأسباب التي تجعل البايثون خيارًا شائعًا بين المطورين:
                 <ul>
@@ -30,5 +31,6 @@ export default function Introduction(){
                 </ul> 
             </p>
         </article>
+    </>
     )
 }

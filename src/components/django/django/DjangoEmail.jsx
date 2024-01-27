@@ -9,14 +9,14 @@ export default function DjangoEmail(){
       <article id="Django_Email" >
             <h2 className="title-h2" id="send_email"> 1 - Send Email</h2>
             <p className="style_divv">
-               في Django، يمكنك استخدام وظيفة send_mail من الوحدة النمطية django.core.mail لإرسال رسائل البريد الإلكتروني
+               في <b>Django</b>، يمكنك استخدام وظيفة <b>send_mail</b> من الوحدة النمطية <b>django.core.mail</b> لإرسال رسائل البريد الإلكتروني
             </p>
             <h3 className="title-h3"> 1 -  التحقق بخطوتين من بريدك الإلكتروني <bdi>2 -Step Verification </bdi> </h3>
-            <ul><li> انتقل أولاً إلى بريدك الإلكتروني وانقر على إدارة حساب Google الخاص بك (Manage your Google Account) </li> </ul> 
+            <ul><li> انتقل أولاً إلى بريدك الإلكتروني وانقر على إدارة حساب <b>Google</b> الخاص بك <b>(Manage your Google Account)</b> </li> </ul> 
             <img src={images.django214} className="w-100 mt-2 mb-3"/> 
             <ul> 
-               <li>  انقر فوق Security في اليسار   </li> 
-               <li> انقر <bdi>2-Step Verification </bdi></li>
+               <li>  انقر فوق <b>Security</b> في اليسار   </li> 
+               <li> انقر <bdi><b>2-Step Verification</b></bdi></li>
             </ul>
             <img src={images.django215} className="img"/> 
             <img src={images.django216} className="img"/> 
@@ -26,7 +26,7 @@ export default function DjangoEmail(){
             <img src={images.django220} className="img"/> 
             <img src={images.django221} className="img"/> 
             <ul>
-               <li>هذا الرمز هو كلمة المرور للبريد الإلكتروني لحسابي و الذي أحتاج إلى نسخه لاستخدامه في settings.py </li>
+               <li>هذا الرمز هو كلمة المرور للبريد الإلكتروني لحسابي و الذي أحتاج إلى نسخه لاستخدامه في <b>settings.py</b> </li>
             </ul>
             <img src={images.django222} className="w-100 mt-2 mb-3"/> 
             <h3 className="title-h3">  2 - django  Email </h3>
@@ -45,8 +45,8 @@ export default function DjangoEmail(){
             
             <h2 className="title-h2" id="list_emails"> 2 - List Emails</h2>
             <p className="style_divv"> 
-               في مقتطف الشفرة المقدم، يتم استخدام imap_server.select('INBOX') لتحديد صندوق البريد (المجلد) الذي تريد جلب رسائل البريد الإلكتروني منه. صندوق البريد "INBOX" هو صندوق بريد قياسي يمثل صندوق البريد الأساسي أو المجلد الرئيسي في حساب البريد الإلكتروني.<br/><br/>
-               من خلال تحديد صندوق البريد "INBOX"، فإنك تحدد أنك تريد جلب رسائل البريد الإلكتروني من صندوق البريد/المجلد الأساسي لحساب البريد الإلكتروني. هذا هو عادةً المكان الذي يتم فيه تخزين رسائل البريد الإلكتروني الواردة افتراضيًا.
+               في مقتطف الشفرة المقدم، يتم استخدام <b>imap_server.select('INBOX')</b> لتحديد صندوق البريد (المجلد) الذي تريد جلب رسائل البريد الإلكتروني منه. صندوق البريد <b>"INBOX"</b> هو صندوق بريد قياسي يمثل صندوق البريد الأساسي أو المجلد الرئيسي في حساب البريد الإلكتروني.<br/><br/>
+               من خلال تحديد صندوق البريد <b>"INBOX"</b>، فإنك تحدد أنك تريد جلب رسائل البريد الإلكتروني من صندوق البريد/المجلد الأساسي لحساب البريد الإلكتروني. هذا هو عادةً المكان الذي يتم فيه تخزين رسائل البريد الإلكتروني الواردة افتراضيًا.
             </p>
             <CodeHighlighter code={codes[9].list_emails[0]} file_name="project /  sendEmail / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[9].list_emails[1]} file_name="project / sendEmail / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>

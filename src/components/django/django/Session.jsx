@@ -8,13 +8,13 @@ export default function Session(){
         <article id="Session">
             <h1 className="heading-style heading-style-django-color"> Django SESSION</h1> 
             <p className="style_divv mt-5">
-                لاستخدام "request.session" في إصدارات Django ، تحتاج أولاً إلى تمكين دعم session عن طريق إضافة البرنامج الوسيط "django.contrib.sessions.middleware.SessionMiddleware" إلى إعداد "MIDDLEWARE" في ملف settings.py الخاص بك.<br/>
-                بمجرد تمكين دعم session، يمكنك الوصول إلى كائن session من خلال السمة "request.session" في جهازك.<br/><br/>
-                لتخزين قيمة في كائن session، يمكنك استخدام بناء الجملة التالي :
+                لاستخدام <b>"request.session"</b> في إصدارات <b>Django</b> ، تحتاج أولاً إلى تمكين دعم <b>session</b> عن طريق إضافة البرنامج الوسيط <b>"django.contrib.sessions.middleware.SessionMiddleware"</b> إلى إعداد <b>"MIDDLEWARE"</b> في ملف <b>settings.py</b> الخاص بك.<br/>
+                بمجرد تمكين دعم <b>session</b>، يمكنك الوصول إلى كائن <b>session</b> من خلال السمة <b>"request.session"</b> في جهازك.<br/><br/>
+                لتخزين قيمة في كائن <b>session</b>، يمكنك استخدام بناء الجملة التالي :
                 <CodeHighlighter code={`request.session['key'] = value`} language="php" addClass="mt-3 mb-3" copie={true}/>
-                للحصول على قيمة من كائن session، يمكنك استخدام بناء الجملة التالي :
+                للحصول على قيمة من كائن <b>session</b>، يمكنك استخدام بناء الجملة التالي :
                 <CodeHighlighter code={`value = request.session.get('key' , 'default_value')`} language="php" addClass="mt-3 mb-3" copie={true}/>
-                يمكنك أيضًا حذف قيمة من كائن s_ession باستخدام بناء الجملة التالي:
+                يمكنك أيضًا حذف قيمة من كائن <b>session</b> باستخدام بناء الجملة التالي:
                 <CodeHighlighter code={`del request.session['key']`} language="php" addClass="mt-3 mb-3" copie={true}/>
             </p>
             <CodeHighlighter file_name="project / settings.py"  code={codes[14].Session[0]} language="python" number={true} addClass="mt-3 mb-3" copie={true}/>

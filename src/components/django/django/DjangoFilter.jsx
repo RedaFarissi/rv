@@ -7,8 +7,8 @@ export default function DjangoFilter(){
         <article id="Django_Filter">
             <h1 className="heading-style heading-style-django-color"> Django Filter</h1> 
             <p className="style_divv mt-5">
-               في Django، يتم استخدام filters لتضييق نطاق نتائج الاستعلام عند استرداد البيانات من قاعدة البيانات. يتم تطبيق عوامل التصفية على مجموعات الاستعلام، وهي تمثيلات لاستعلامات قاعدة البيانات. تُستخدم المرشحات عادةً مع النماذج وطرق العرض.<br/><br/>
-               يوفر Django مجموعة متنوعة من الطرق لتصفية مجموعات الاستعلامات، مما يسمح لك بالتعبير عن الاستعلامات المعقدة لاسترداد البيانات من قاعدة البيانات. 
+               في <b>Django</b>، يتم استخدام <b>filters</b> لتضييق نطاق نتائج الاستعلام عند استرداد البيانات من قاعدة البيانات. يتم تطبيق عوامل التصفية على مجموعات الاستعلام، وهي تمثيلات لاستعلامات قاعدة البيانات. تُستخدم المرشحات عادةً مع النماذج وطرق العرض.<br/><br/>
+               يوفر <b>Django</b> مجموعة متنوعة من الطرق لتصفية مجموعات الاستعلامات، مما يسمح لك بالتعبير عن الاستعلامات المعقدة لاسترداد البيانات من قاعدة البيانات. 
             </p>
             <h2 className="title-h2" id="models_Objecjs_filter"> 1 - <bdi>objects.filter()</bdi> </h2>
             <CodeHighlighter code={codes[13].models_Objecjs_filter[0]} file_name="project / setting.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
@@ -86,7 +86,7 @@ export default function DjangoFilter(){
             <h2 className="title-h2" id="lookup_expr">3 - lookup_expr </h2>
             <h3 className="title-h3">1 - iexact</h3>
             <p className="style_divv">
-               في Django، يتم استخدام تعبير البحث <bdi>__iexact</bdi> للمطابقة التامة غير الحساسة لحالة الأحرف في الاستعلام. غالبًا ما يتم استخدامه مع طريقة <bdi>filter()</bdi> في مجموعة استعلام لاسترداد الكائنات حيث يكون حقل معين مساويًا تمامًا لقيمة محددة، مع تجاهل حالة الأحرف.
+               في <b>Django</b>، يتم استخدام تعبير البحث <bdi><b>__iexact</b></bdi> للمطابقة التامة غير الحساسة لحالة الأحرف في الاستعلام. غالبًا ما يتم استخدامه مع طريقة <bdi><b>filter()</b></bdi> في مجموعة استعلام لاسترداد الكائنات حيث يكون حقل معين مساويًا تمامًا لقيمة محددة، مع تجاهل حالة الأحرف.
             </p>
             <CodeCommand>python manage.py shell</CodeCommand>
             <CodeCommand>
@@ -112,7 +112,7 @@ export default function DjangoFilter(){
             </CodeCommand>
             <h3 className="title-h3">3 - gte <small>(greater than or equal to)</small></h3>
             <p className="style_divv">
-               يتم استخدام تعبير البحث <bdi>__gte</bdi> في Django لتصفية الكائنات حيث يكون حقل معين أكبر من أو يساوي قيمة محددة. 
+               يتم استخدام تعبير البحث <bdi><b>__gte</b></bdi> في <b>Django</b> لتصفية الكائنات حيث يكون حقل معين أكبر من أو يساوي قيمة محددة. 
             </p>
             <CodeCommand>python manage.py shell</CodeCommand>
             <CodeCommand>
@@ -127,7 +127,7 @@ export default function DjangoFilter(){
             </CodeCommand>
             <h3 className="title-h3">4 - filter date </h3>
             <p className="style_divv">
-               يمكن استخدام تعبير البحث __gte مع حقول التاريخ لتصفية الكائنات بناءً على تاريخ أكبر من أو يساوي قيمة محددة.
+               يمكن استخدام تعبير البحث <b>__gte</b> مع حقول التاريخ لتصفية الكائنات بناءً على تاريخ أكبر من أو يساوي قيمة محددة.
             </p>
             <CodeCommand>python manage.py shell</CodeCommand>
             <CodeCommand>
@@ -148,7 +148,7 @@ export default function DjangoFilter(){
             </CodeCommand>
             <h3 className="title-h3">5 - id__in </h3>
             <p className="style_divv">
-               معرف البحث <bdi>__in</bdi> هو بحث ميداني يسمح لك بتصفية مجموعة استعلام من خلال قائمة قيم المفتاح الأساسي
+               معرف البحث <bdi><b>__in</b></bdi> هو بحث ميداني يسمح لك بتصفية مجموعة استعلام من خلال قائمة قيم المفتاح الأساسي
             </p>
             <CodeCommand>python manage.py shell</CodeCommand>
             <CodeCommand>
@@ -166,9 +166,7 @@ export default function DjangoFilter(){
                id : 2  name : T-Shirt<br/>
             </CodeCommand>
           
-            
-
-
+          
             <h2 className="title-h2" id="Q_filter"> 4 - filter_using_Q </h2>
             <CodeCommand>python manage.py shell</CodeCommand>
             <CodeCommand>

@@ -1,12 +1,13 @@
 import { CodeHighlighter , CodeCommand} from "../../path";
 export default function Operators(){
     return(
+        <>
+        <h1 className="heading-style heading-style-python-color"> Python Operators</h1>  
         <article className="mt-5">
-            <h2 id="operators" className="title-h2"> العوامل (operators) . </h2>
             <p className="style_divv">
                 <b>Python</b> تدعم مجموعة متنوعة من العوامل التي تتيح لك أداء عمليات مختلفة على المتغيرات والقيم. فيما يلي نظرة عامة على بعض العوامل الرئيسية في <b>Python</b>           
             </p>
-            <h3 className="title-h3">1 - العوامل الحسابية (Arithmetic Operators).</h3>
+            <h2 className="title-h2">1 - العوامل الحسابية (Arithmetic Operators).</h2>
             <p className="style_divv">
                 <ul>
                     <li><b className="text-success">الجمع (+) :</b> يستخدم لجمع قيمتين.</li>
@@ -29,7 +30,7 @@ division_result = a / b              # Result: 2.5
 floor_division_result = a // b    # Result: 2
 modulus_result = a % b           # Result: 1
 exponentiation_result = a ** b  # Result: 25`} language="python" addclassName="mt-3 mb-3" copie={true}/>   
-            <h3 className="title-h3">2 - العوامل المقارنة (Comparison Operators).</h3>
+            <h2 className="title-h2">2 - العوامل المقارنة (Comparison Operators).</h2>
             <p className="style_divv">
                 <ul>
                     <li><b className="text-success">يساوي (==) :</b>يُستخدم للتحقق مما إذا كانت قيمتين متساويتين. إذا كانت متساويتين، فإن النتيجة هي <b>True</b>، وإلا فإنها <b>False</b>.</li>
@@ -48,7 +49,7 @@ equal_result = x == y       # Result: False
 not_equal_result = x != y   # Result: True
 less_than_result = x < y    # Result: True
 greater_than_result = x > y # Result: False`} language="python" addclassName="mt-3 mb-3" copie={true}/>   
-            <h3 className="title-h3">3 - العوامل المنطقية  (Logical Operators).</h3>
+            <h2 className="title-h2">3 - العوامل المنطقية  (Logical Operators).</h2>
             <p className="style_divv">
                 تعتبر العوامل المنطقية في Python وسائل لدمج أو تلاعب بقيم البيانات البوليانية (True/False). <br/>
                 فيما يلي تفاصيل حول العوامل المنطقية الرئيسية :
@@ -84,7 +85,7 @@ print(result)  # Result: False`} language="python" file_name="desktop / app.py" 
             <CodeCommand copy={false}>PS C:\Users\SURFACE BOOK\desktop{">"} <span className="text-success">py app.py</span><br/>
                 False<br/>
             </CodeCommand>
-            <h3 className="title-h3">4 - عوامل الإسناد (Assignment Operators).</h3>
+            <h2 className="title-h2">4 - عوامل الإسناد (Assignment Operators).</h2>
             <p className="style_divv">
                 عوامل الإسناد في <b>Python</b> تستخدم لتعيين قيمة لمتغير. فيما يلي تفاصيل حول العوامل الرئيسية للإسناد
                 <ul>
@@ -117,7 +118,7 @@ print(f"x //= 2 = {x}") `} language="python" file_name="desktop / app.py" addcla
                 x -= 3 = 5 <br/>
                 x //= 2 = 2<br/>
             </CodeCommand>
-            <h3 className="title-h3">5 - عوامل الهوية  (Identity Operators).</h3>
+            <h2 className="title-h2">5 - عوامل الهوية  (Identity Operators).</h2>
             <p className="style_divv">
                 <ul>
                     <li><b className="text-success"> is :</b> ترجع <b>True</b> إذا كانت كلتا المتغيرات هي نفس الكائن.</li>
@@ -130,7 +131,7 @@ b = [1, 2, 3]
 
 identity_result = a is b      # Result: False
 identity_not_result = a is not b  # Result: True`} language="python" addclassName="mt-3 mb-3" copie={true}/>   
-            <h3 className="title-h3">6 - عوامل الانتماء (Membership Operators).</h3>
+            <h2 className="title-h2">6 - عوامل الانتماء (Membership Operators).</h2>
             <p className="style_divv">
                 <ul>
                     <li><b  className="text-success">in :</b> ترجع <b>True</b> إذا كانت القيمة موجودة في تسلسل.</li>
@@ -143,6 +144,6 @@ identity_not_result = a is not b  # Result: True`} language="python" addclassNam
 in_result = 3 in my_list        # Result: True
 not_in_result = 5 not in my_list  # Result: True`} language="python" file_name="desktop / app.py" addclassName="mt-3 mb-3" copie={true}/>   
         </article>
-
+    </>
     )
 }

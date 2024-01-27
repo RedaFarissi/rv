@@ -10,43 +10,43 @@ export default function UserAuthentication(){
         <h4><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication" target="_blank"> Toturial </a></h4>
         <h2 className="title-h2" id="User_and_authontication"> 1 -  العلاقة بين فئة المستخدم (class User) والمصادقة (Authentication)  </h2>
         <p className="style_divv">
-           في Django، تلعب فئة المستخدم (User class) دورًا مركزيًا في نظام المصادقة (Authentication) . إنه يمثل حساب مستخدم ويوفر طرقًا وسمات مختلفة تتعلق بالمصادقة. يتم تعريف فئة المستخدم في الوحدة النمطية "django.contrib.auth.models".<br/><br/>
+           في <b>Django</b>، تلعب فئة المستخدم <b>(User class)</b> دورًا مركزيًا في نظام المصادقة <b>(Authentication)</b> . إنه يمثل حساب مستخدم ويوفر طرقًا وسمات مختلفة تتعلق بالمصادقة. يتم تعريف فئة المستخدم في الوحدة النمطية <bdi><b>"django.contrib.auth.models"</b></bdi>.<br/><br/>
           <ul>
            
-              <li className="mb-2"><span className="text-success">User Authentication :</span> توفر فئة المستخدم وظائف مدمجة لمصادقة المستخدم، بما في ذلك أساليب مثل المصادقة <bdi>authenticate()</bdi> و <bdi>login()</bdi> و <bdi>logout()</bdi>. تسمح لك هذه الطرق بمصادقة المستخدمين وتسجيل دخولهم وتسجيل خروجهم من التطبيق الخاص بك. تم تعريف هذه الوظيفة في "Django.contrib.auth"</li>
+              <li className="mb-2"><span className="text-success">User Authentication :</span> توفر فئة المستخدم وظائف مدمجة لمصادقة المستخدم، بما في ذلك أساليب مثل المصادقة <bdi><b>authenticate()</b></bdi> و <bdi><b>login()</b></bdi> و <bdi><b>logout()</b></bdi>. تسمح لك هذه الطرق بمصادقة المستخدمين وتسجيل دخولهم وتسجيل خروجهم من التطبيق الخاص بك. تم تعريف هذه الوظيفة في "Django.contrib.auth"</li>
               <li className="mb-2">
                  <span className="text-success">User Model :</span> تعمل فئة المستخدم <bdi>User class</bdi> كنموذج المستخدم الافتراضي لنظام مصادقة Django. ويشمل الحقول 
                  <ul>
-                    <li><span className="text-warning">username :</span> لا توجد قيمة افتراضية + اسم مستخدم فريد .</li>
-                    <li><span className="text-warning">password :</span> لا توجد قيمة افتراضية + كلمة مرور المستخدم . يتم تخزينه كتجزئة للأمن.</li>
-                    <li><span className="text-warning">email :</span> سلسلة فارغة ('') بشكل افتراضي. + يجب أن يحتوي على عنوان البريد الإلكتروني للمستخدم.</li>
-                    <li><span className="text-warning">first_name : </span> سلسلة فارغة ('') بشكل افتراضي.</li>
-                    <li><span className="text-warning">last_name :</span> سلسلة فارغة ('') بشكل افتراضي.</li>
-                    <li><span className="text-warning">is_staff :</span> False افتراضيا + قيمة منطقية تشير إلى ما إذا كان المستخدم موظفًا يتمتع بحق الوصول الإداري.</li>
-                    <li><span className="text-warning">is_active :</span> True افتراضيا + يشير إلى ما إذا كان حساب المستخدم نشطًا أم لا. يتم استخدامه لتحديد حالة حساب المستخدم. عند ضبط is_active على True، فهذا يعني أن حساب المستخدم نشط ويمكن استخدامه للمصادقة والعمليات الأخرى. من ناحية أخرى، عند ضبط is_active على False، فهذا يشير إلى أن حساب المستخدم غير نشط أو معطل.</li>
-                    <li><span className="text-warning">is_superuser :</span> False افتراضيا + يشير إلى ما إذا كان المستخدم لديه كافة ال Permissions.</li>
-                    <li><span className="text-warning">date_joined :</span> التاريخ والوقت الحاليين عند إنشاء حساب المستخدم.</li>
+                    <li><b className="text-warning">username :</b> لا توجد قيمة افتراضية + اسم مستخدم فريد .</li>
+                    <li><b className="text-warning">password :</b> لا توجد قيمة افتراضية + كلمة مرور المستخدم . يتم تخزينه كتجزئة للأمن.</li>
+                    <li><b className="text-warning">email :</b> سلسلة فارغة ('') بشكل افتراضي. + يجب أن يحتوي على عنوان البريد الإلكتروني للمستخدم.</li>
+                    <li><b className="text-warning">first_name : </b> سلسلة فارغة ('') بشكل افتراضي.</li>
+                    <li><b className="text-warning">last_name :</b> سلسلة فارغة ('') بشكل افتراضي.</li>
+                    <li><b className="text-warning">is_staff :</b> False افتراضيا + قيمة منطقية تشير إلى ما إذا كان المستخدم موظفًا يتمتع بحق الوصول الإداري.</li>
+                    <li><b className="text-warning">is_active :</b> True افتراضيا + يشير إلى ما إذا كان حساب المستخدم نشطًا أم لا. يتم استخدامه لتحديد حالة حساب المستخدم. عند ضبط is_active على True، فهذا يعني أن حساب المستخدم نشط ويمكن استخدامه للمصادقة والعمليات الأخرى. من ناحية أخرى، عند ضبط is_active على False، فهذا يشير إلى أن حساب المستخدم غير نشط أو معطل.</li>
+                    <li><b className="text-warning">is_superuser :</b> False افتراضيا + يشير إلى ما إذا كان المستخدم لديه كافة ال Permissions.</li>
+                    <li><b className="text-warning">date_joined :</b> التاريخ والوقت الحاليين عند إنشاء حساب المستخدم.</li>
                  </ul>
               </li>
-              <li className="mb-2"><span className="text-success">User Manager :</span> في Django، يكون مدير المستخدم (User Manager) مسؤولاً عن إدارة إنشاء كائنات المستخدم ومعالجتها. يوفر Django نموذج مستخدم افتراضيًا إلى جانب فئة UserManager، والتي تُستخدم لأداء المهام المتعلقة بإدارة المستخدم. يوفر User Manager طرقًا لإنشاء المستخدمين وتعيين كلمات المرور وإدارة سمات المستخدم. كما رأينا في <a href="#createsuperuser">createsuperuser</a></li>
+              <li className="mb-2"><b className="text-success">User Manager :</b> في Django، يكون مدير المستخدم (User Manager) مسؤولاً عن إدارة إنشاء كائنات المستخدم ومعالجتها. يوفر Django نموذج مستخدم افتراضيًا إلى جانب فئة UserManager، والتي تُستخدم لأداء المهام المتعلقة بإدارة المستخدم. يوفر User Manager طرقًا لإنشاء المستخدمين وتعيين كلمات المرور وإدارة سمات المستخدم. كما رأينا في <a href="#createsuperuser">createsuperuser</a></li>
               <li className="mb-2">
-                 <span className="text-success">User Permissions :</span> يتضمن نظام مصادقة Django نظام permissions  مرنًا. بشكل افتراضي، يأتي نموذج المستخدم مع permissions : التالية
+                 <b className="text-success">User Permissions :</b> يتضمن نظام مصادقة Django نظام permissions  مرنًا. بشكل افتراضي، يأتي نموذج المستخدم مع permissions : التالية
                  <ul>
                     <li>add_user</li>
                     <li>change_user</li>
                     <li>delete_user</li>
                  </ul>
               </li>
-              <li className="mb-2"><span className="text-success">User Relationships :</span> يوفر Django طريقة لإقامة علاقات بين كائنات المستخدم والنماذج الأخرى. العلاقة الأكثر شيوعًا هي علاقة ForeignKey , حيث يمكن أن يحتوي النموذج على مفتاح خارجي لنموذج المستخدم. كما رأينا في <a href="#Relations">Relations</a></li>
+              <li className="mb-2"><b className="text-success">User Relationships :</b> يوفر Django طريقة لإقامة علاقات بين كائنات المستخدم والنماذج الأخرى. العلاقة الأكثر شيوعًا هي علاقة ForeignKey , حيث يمكن أن يحتوي النموذج على مفتاح خارجي لنموذج المستخدم. كما رأينا في <a href="#Relations">Relations</a></li>
            </ul> 
         </p>
 
         <h2 className="title-h2" id="include_urls_and_files_html"> 2 - تضمين عناوين URL وملفات HTML </h2>
         <h3 className="title-h3"> 1 - project/urls.py </h3>
         <p className="style_divv">
-           تُعتبر URL (الروابط) الخاصة بالمصادقة المدمجة في Django مجموعة من أنماط الروابط والواجهات المُعرفة مُسبقًا تم توفيرها من قِبل Django للتعامل مع مهام المصادقة الشائعة للمستخدمين. عندما تقوم بتضمين django.contrib.auth.urls في تكوين الروابط الخاص بمشروعك، يتم إعداد تلك الروابط تلقائيًا لتنفيذ عمليات المصادقة مثل تسجيل الدخول، وتسجيل الخروج، وإعادة تعيين كلمة المرور، وغيرها.<br/><br/>
-           تُبسط هذه الميزة عملية تنفيذ مصادقة المستخدم في مشروع Django عن طريق القضاء على الحاجة إلى تحديد كل رابط وواجهة عرض تتعلق بالمصادقة يدويًا. من خلال الاستفادة من هذه الروابط المدمجة، يستطيع المطورون إعداد نظام مصادقة آمن بسرعة دون الحاجة إلى كود مخصص طويل.<br/><br/>
-           على النحو الأساسي، إنها وسيلة ملائمة لدمج وظائف مصادقة المستخدمين في مشروع Django بسهولة، متبعين في ذلك أفضل الممارسات ومعايير الأمان التي حددها إطار العمل Django.
+           تُعتبر <b>URL</b> (الروابط) الخاصة بالمصادقة المدمجة في <b>Django</b> مجموعة من أنماط الروابط والواجهات المُعرفة مُسبقًا تم توفيرها من قِبل <b>Django</b> للتعامل مع مهام المصادقة الشائعة للمستخدمين. عندما تقوم بتضمين <b>django.contrib.auth.urls</b> في تكوين الروابط الخاص بمشروعك، يتم إعداد تلك الروابط تلقائيًا لتنفيذ عمليات المصادقة مثل تسجيل الدخول، وتسجيل الخروج، وإعادة تعيين كلمة المرور، وغيرها.<br/><br/>
+           تُبسط هذه الميزة عملية تنفيذ مصادقة المستخدم في مشروع <b>Django</b> عن طريق القضاء على الحاجة إلى تحديد كل رابط وواجهة عرض تتعلق بالمصادقة يدويًا. من خلال الاستفادة من هذه الروابط المدمجة، يستطيع المطورون إعداد نظام مصادقة آمن بسرعة دون الحاجة إلى كود مخصص طويل.<br/><br/>
+           على النحو الأساسي، إنها وسيلة ملائمة لدمج وظائف مصادقة المستخدمين في مشروع <b>Django</b> بسهولة، متبعين في ذلك أفضل الممارسات ومعايير الأمان التي حددها إطار العمل <b>Django</b>.
         </p>
         <CodeHighlighter code={codes[8].include_urls_and_files_html[0]} file_name="project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
         <ul> <li>يحتوي هذا المسار (localhost:8000/accounts/) على العديد من المسارات حول المصادقة </li></ul>
@@ -76,11 +76,11 @@ export default function UserAuthentication(){
               <p className="ms-2 fs-14">You’re seeing this error because you have DEBUG = True in your Django settings file. Change that to False, and Django will display a standard 404 page.</p>
         </Result>
 
-        <ul><li>كل هذا المسار في الحسابات جاهز لاستخدام كل ما تحتاجه هو templates/ </li></ul>
+        <ul><li>كل هذا المسار في الحسابات جاهز لاستخدام كل ما تحتاجه هو <bdi><b>templates/</b></bdi> </li></ul>
         <h3 className="title-h3">2 - Create templates  </h3>
         <ul>
-           <li> يمكنك إنشاء تطبيق باسم accounts وإنشاء templates بداخله وإنشاء مجلد آخر بالاسم <bdi>registration/</bdi> في مجلد <bdi>templates/</bdi> ثم إنشاء كافة الملفات التي تحتاجها بداخله</li>
-           <li>أو يمكنك إنشاء مجلد templates/ ويجب أن يكون في الدليل الجذر لمشروعكه</li>
+           <li> يمكنك إنشاء تطبيق باسم <b>accounts</b> وإنشاء <b>templates</b> بداخله وإنشاء مجلد آخر بالاسم <bdi><b>registration/</b></bdi> في مجلد <bdi><b>templates/</b></bdi> ثم إنشاء كافة الملفات التي تحتاجها بداخله</li>
+           <li>أو يمكنك إنشاء مجلد <bdi><b>templates/</b></bdi> ويجب أن يكون في الدليل الجذر لمشروعكه</li>
         </ul>
         <CodeHighlighter code={codes[8].include_urls_and_files_html[1]} file_name="project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
         <CodeHighlighter code={codes[8].include_urls_and_files_html[2]} file_name="project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
@@ -106,8 +106,8 @@ export default function UserAuthentication(){
          
         <h2 className="title-h2" id="Sign_Up">3 - Sign Up </h2>
         <p className="style_divv"> 
-            في <bdi>Django</bdi> ، UserCreationForm عبارة عن فئة نموذج مضمنة توفرها الوحدة النمطية django.contrib.auth.forms.<br/>
-            تم تصميم هذا النموذج لتبسيط عملية إنشاء مستخدم جديد في تطبيق الويب Django. غالبًا ما يتم استخدامه مع نموذج المستخدم الذي توفره الوحدة النمطية django.contrib.auth.models.
+            في <b>Django</b> ، <b>UserCreationForm</b> عبارة عن فئة نموذج مضمنة توفرها الوحدة النمطية <b>django.contrib.auth.forms</b>.<br/>
+            تم تصميم هذا النموذج لتبسيط عملية إنشاء مستخدم جديد في تطبيق الويب <b>Django</b>. غالبًا ما يتم استخدامه مع نموذج المستخدم الذي توفره الوحدة النمطية <b>django.contrib.auth.models</b> .
          </p>
         <h3 className="title-h3">1 - تحتوي صفحة إدارة Django بشكل افتراضي على خيار إضافة مستخدم</h3>
         <img src={images.django204} alt="django"  className="img"/> 
@@ -122,7 +122,7 @@ export default function UserAuthentication(){
         <img src={images.django207} alt="django" className="img"/> 
         <img src={images.django208} alt="django" className="w-100 mt-2 mb-3"/> 
         <h2 className="title-h2" id="Add_fields_to_User_SignUp">4 - أضف الحقول إلى تسجيل المستخدم </h2>
-        <p className="style_divv"> إنشاء ملف forms.py لإضافة حقول إلى المستخدم (User) </p>
+        <p className="style_divv"> إنشاء ملف <b>forms.py</b> لإضافة حقول إلى المستخدم <b>(User)</b> </p>
         <CodeHighlighter code={codes[8].Add_fields_to_User_SignUp[0]} file_name="project / handleAccount / forms.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
         <CodeHighlighter code={codes[8].Add_fields_to_User_SignUp[1]} file_name="project / handleAccount / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
         <CodeHighlighter code={codes[8].Add_fields_to_User_SignUp[2]} file_name="project / handleAccount / templates / signup.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>

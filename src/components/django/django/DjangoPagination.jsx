@@ -7,9 +7,9 @@ export default function DjangoPagination(){
     <article id="Django_Pagination">
         <h1 className="heading-style heading-style-django-color"> Django Pagination</h1> 
         <p className="style_divv mt-5">
-            يشير ترقيم الصفحات في Django إلى عملية تقسيم مجموعة بيانات كبيرة إلى أجزاء أصغر وأكثر قابلية للإدارة يتم عرضها عبر صفحات ويب متعددة. تعتبر هذه التقنية ضرورية لتجربة المستخدم، خاصة عند التعامل مع مجموعات البيانات الكبيرة مثل قوائم المنتجات أو المقالات أو حسابات المستخدمين.
+            يشير ترقيم الصفحات في <b>Django</b> إلى عملية تقسيم مجموعة بيانات كبيرة إلى أجزاء أصغر وأكثر قابلية للإدارة يتم عرضها عبر صفحات ويب متعددة. تعتبر هذه التقنية ضرورية لتجربة المستخدم، خاصة عند التعامل مع مجموعات البيانات الكبيرة مثل قوائم المنتجات أو المقالات أو حسابات المستخدمين.
         </p>
-        <ul><li>إنشاء تطبيق آخر بالاسم app </li></ul>
+        <ul><li>إنشاء تطبيق آخر بالاسم <b>app</b> </li></ul>
         <CodeCommand>python manage.py startapp userProfile</CodeCommand>
         <CodeHighlighter code={codes[10].Django_Pagination[0]} file_name="project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
         <CodeHighlighter code={codes[10].Django_Pagination[1]} file_name="project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>

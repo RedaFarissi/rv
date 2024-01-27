@@ -2,24 +2,25 @@ import { CodeCommand} from "../../path";
 
 export default function ExecutePythonInCmd(){
     return(
+        <>
+        <h1 className="heading-style heading-style-python-color"> Execute Python In Cmd</h1>
         <article className="mt-5">
-            <h2 id="execute-python-in-cmd" className="title-h2">  تنفيذ بايثون في موجه الأوامر . </h2>
             <p className="style_divv">
                 يمكنك تنفيذ برامج <b>Python</b> عبر واجهة سطر الأوامر <b>(Command Prompt)</b> على نظام <b>Windows</b>. للقيام بذلك، يجب أن يكون <b>Python</b> مثبتًا على جهاز الكمبيوتر الخاص بك ويجب أن يتم تكوين المتغيرات البيئية بحيث يمكن لنظام التشغيل العثور على <b>Python</b>.
             </p>
-            <h3 className="title-h3">1 - التحقق من تثبيت بايثون </h3>
+            <h2 className="title-h2">1 - التحقق من تثبيت بايثون </h2>
             <p className="style_divv">
                 تأكد من أن <b>Python</b> مثبت على جهاز الكمبيوتر الخاص بك. يمكنك فحص ذلك بكتابة الأمر التالي في سطر الأوامر<br/><br/>
                 إذا كان <b>Python</b> مثبتًا، ستظهر لك إصدار النسخة .
                 <CodeCommand>C:{">"} python --version  </CodeCommand>
             </p>
-            <h3 className="title-h3">2 - التحقق من المتغيرات البيئية </h3>
+            <h2 className="title-h2">2 - التحقق من المتغيرات البيئية </h2>
             <p className="style_divv">
                 تأكد من أن مجلد الـ <b>"Scripts"</b> في مجلد التثبيت الخاص بـ <b>Python</b> مضاف إلى المتغيرات البيئية <b>PATH</b>. يمكنك فحص ذلك بكتابة الأمر التالي : 
                 <CodeCommand>C:{">"} echo %PATH%  </CodeCommand>
                 إذا كنت ترى المسار إلى مجلد <b>"Scripts"</b> في مسارات المتغيرات البيئية، فإن <b>Python</b> يجب أن يكون قابل للاستدعاء من أي مكان في سطر الأوامر.
             </p>
-            <h3 className="title-h3">3 - تنفيذ البرنامج:</h3>
+            <h2 className="title-h2">3 - تنفيذ البرنامج:</h2>
             <p className="style_divv">
                 بعد التأكد من تثبيت <b>Python</b> وتكوين المتغيرات البيئية، يمكنك تنفيذ برامج <b>Python</b> من سطر الأوامر. قم بكتابة <b>"python"</b> واضغط <b>Enter</b> :
                 <CodeCommand>C:{">"} python </CodeCommand>
@@ -49,5 +50,6 @@ export default function ExecutePythonInCmd(){
                 {`>>>`} exit()<br/>
             </CodeCommand>
         </article>
+        </>
     )
 }

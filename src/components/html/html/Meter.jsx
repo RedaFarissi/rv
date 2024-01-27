@@ -15,9 +15,11 @@ export default function Meter(props){
         <p className="style_divv">
             يعرف الوسم <kbd>&lt;meter&gt;</kbd> قياسا مقياسيا داخل نطاق معروف، أو قيمة كسرية. وهذا ما يعرف أيضا باسم مقياس .<br/>
             يجب إضافة السمات التالية إلى  الوسم <kbd>&lt;meter&gt;</kbd> :<br/>
-             max : لتحديد القيمة القصوى .<br/>
-             min : لتحديد القيمة الدنيا  .<br/>
-             value : لتحديد القيمة  .<br/>
+            <ul>
+                <li><b className="text-success">max :</b> لتحديد القيمة القصوى .</li>
+                <li><b className="text-success">min :</b> لتحديد القيمة الدنيا  .</li>
+                <li><b className="text-success">value :</b> لتحديد القيمة  .</li>
+            </ul>
         </p>
         <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
@@ -31,12 +33,14 @@ export default function Meter(props){
     <article>
         <h2 className="title-h2">2.  السمات المستعملة  </h2>
         <div className="style_divv">
-            في المتال السابق إستعملنا السمات   max و min و value ولاكن تعتبر سمات أساسية ليضهر العنصر بشكل صحيح .<br/>
+            في المتال السابق إستعملنا السمات   <b>max</b> و <b>min</b> و <b>value</b> ولاكن تعتبر سمات أساسية ليضهر العنصر بشكل صحيح .<br/>
             توجد سمات تستعمل مع الوسم <kbd>&lt;meter&gt;</kbd> وذالك لتبيين الفرق بين القيم .  هذه السمات هي :<br/>
-            low : تحدد أن كل العناصر الذي تأخد قيمة value أصغر من قيمة low تكون بالون الأحمر  .<br/>
-            high: تحدد أن كل العناصر الذي تأخد قيمة value أصغر من قيمة high تكون بالون الأصفر  <br/>
-            optimum : تحدد أن كل العناصر الذي تأخد قيمة value أصغر من قيمة optimum تكون بالون الأخضر (قيمة فتراضية) . <br/>
-        </div>
+            <ul>
+                <li><b className="text-success">low :</b> تحدد أن كل العناصر الذي تأخد قيمة <b>value</b> أصغر من قيمة <b>low</b> تكون بالون الأحمر  .<br/></li>
+                <li><b className="text-success">high:</b> تحدد أن كل العناصر الذي تأخد قيمة <b>value</b> أصغر من قيمة <b>high</b> تكون بالون الأصفر  <br/></li>
+                <li><b className="text-success">optimum :</b> تحدد أن كل العناصر الذي تأخد قيمة <b>value</b> أصغر من قيمة <b>optimum</b> تكون بالون الأخضر (قيمة فتراضية) . <br/></li>
+            </ul>
+                     </div>
         <div className="sum_exemple_style">
             <div className="mital">متال : </div>
             <CodeHighlighter file_name="index.html" code={codeExemple2} language="html" is_html={true} title="Meter" addClass="mt-3 mb-3" copie={true}/>

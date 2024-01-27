@@ -15,7 +15,7 @@ export default function Textarea(props){
         <p className="style_divv">
             يعرف الوسم  <kbd>&lt;textarea&gt;</kbd> عنصر تحكم إدخال نص متعدد الأسطر و هو وسم زوجي  . <br/>
             غالبا ما يستخدم <kbd>&lt;textarea&gt;</kbd> في نموذج ، لجمع مدخلات المستخدم مثل التعليقات  .<br/>
-            يمكن أن تحتفظ منطقة النص بعدد غير محدود من الأحرف، ويتم عرض النص بخط ثابت العرض (عادة Courier).
+            يمكن أن تحتفظ منطقة النص بعدد غير محدود من الأحرف، ويتم عرض النص بخط ثابت العرض عادة <b>Courier</b>.
         </p>
         <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">
@@ -31,29 +31,29 @@ export default function Textarea(props){
     <article>
         <h2 className="title-h2">2. السمات المستعملة   </h2>
         <h5>1. السمة  placeholder</h5>
-        <div className="style_divv">
+        <p className="style_divv">
             تستعمل هذه السمة لتلميح (يضهر نص توضيحي تقوم بتحديده بنفسك داخل السمة placeholder ) و يختفي بعد كتابة أول حرف .
-        </div>
+        </p>
         <h5>2. السمة  autofocus</h5>
-        <div className="style_divv">
+        <p className="style_divv">
             تستعمل هذه السمة لتركيز التلقائي على الوسم <kbd>&lt;textarea&gt;</kbd>  .
-        </div>
+        </p>
         <h5>3. السمة  cols</h5>
-        <div className="style_divv">
+        <p className="style_divv">
             تستعمل هذه السمة لتحديد عدد الأحرف التي لا تريد تجاوزها في كل سطر (إذا تجاوز المستخدم الحد الأقصى الدي حددته يقوم المتصفح بالعودة إلى سطر تلقائيا)   .
-        </div>
+        </p>
         <h5>4. السمة  rows</h5>
-        <div className="style_divv">
+        <p className="style_divv">
             تستعمل هذه السمة لتحديد عدد الأسطر التي لا تريد تجاوزها كحد أقصى .
-        </div>
+        </p>
         <h5>5. السمة  maxlength</h5>
-        <div className="style_divv">
+        <p className="style_divv">
             تستعمل هذه السمة لتحديد عدد الأحرف التي لا تريد تجاوزها كحد أقصى  .
-        </div>
+        </p>
         <h5>5. السمة  required </h5>
-        <div className="style_divv">
+        <p className="style_divv">
             تستعمل هذه السمة لتحديد أن الحقل يجب ملأه بشكل إجباري   .
-        </div>
+        </p>
     </article>
 </section>
 )

@@ -1,8 +1,9 @@
 import { CodeHighlighter , CodeCommand} from "../../path";
 export default function Strings(){
     return(
+        <>
+        <h1 className="heading-style heading-style-python-color"> Python Strings</h1>         
         <article className="mt-5">
-            <h2 id="strings" className="title-h2">  النصوص في البايثون . </h2>
             <p className="style_divv">
                 في <b>Python</b>، السلاسل <b>(Strings)</b> هي تسلسلات من الأحرف وتُستخدم لتمثيل النصوص. يمكنك إنشاء سلسلة بواسطة وضع النص بين علامات الاقتباس .
             </p>
@@ -91,6 +92,6 @@ print(f"{index_of_char} \n")`} language="python" file_name="desktop / app.py" ad
                 14<br/>
             </CodeCommand>
         </article>
-
+    </>
     )
 }

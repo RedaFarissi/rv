@@ -11,7 +11,7 @@ export default function AboutTemplates(){
                قم بإنشاء قوالب عامة يمكنك استخدامها في جميع التطبيقات الموجودة في مشروعك   .<br/><br/>
                لإنشاء قوالب عامة في جميع التطبيقات، يجب عليك أولاً القيام بكل ما هو شائع في الملفات الثابتة وملفات الوسائط
             </p>
-            <ul><li> أنشئ ملفًا بأي اسم تريده في templates/ في هذا المثال، الاسم هو base.html</li></ul>
+            <ul><li> أنشئ ملفًا بأي اسم تريده في <bdi><b>templates/</b></bdi> في هذا المثال، الاسم هو <b>base.html</b></li></ul>
             <img src={images.django12} className="img"/>
             <CodeHighlighter code={codes[5].Create_Public_templates[0]} file_name="project / tempaltes / base.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[5].Create_Public_templates[1]} file_name="project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>

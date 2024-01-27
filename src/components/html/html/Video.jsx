@@ -15,25 +15,23 @@ export default function Audio(){
         <p className="style_divv">
             وسم ال <kbd>&lt;video&gt;</kbd> يُستخدم عندما نريد وضع مقطع فيديو في الموقع ونضيف دائما له اثنان <b>attribute</b>  إجبارية خاص به:
             <ul>
-                <li style={{marginBottom:"9px"}}><b>controls</b> : لعرض عناصر التحكم في الفيديو وبدونه لا يظهر مقطع الفيديو  في الصفحة.</li>
-                <li style={{marginBottom:"9px"}}><b>src</b> : وتكون قيمته عبارة عن مسار وإسم ملف الفيديو .</li>
-                <li style={{marginBottom:"9px"}}>دائما استخدم امتداد <b>mp4</b> لأن جميع المتصفحات تدعمه.</li>
+                <li><b className="text-success">controls</b> : لعرض عناصر التحكم في الفيديو وبدونه لا يظهر مقطع الفيديو  في الصفحة.</li>
+                <li><b className="text-success">src</b> : وتكون قيمته عبارة عن مسار وإسم ملف الفيديو .</li>
             </ul>
+            دائما استخدم امتداد <b>mp4</b> لأن جميع المتصفحات تدعمه.
         </p>
         <CodeHighlighter  code={code1} language="html"  addclassName="mt-3 mb-3" copie={true}/>
-        <div className="sum_exemple_style">
-            <div className="mital">مثال : </div>
-            <h4 className="green"> الكود </h4>
-            <img src={images.html24_video} alt={images.html24_video} className="img"/>
-            <h4 className="green"> بعد تشغيل الكود </h4>
-            <img src={images.html24_video_2} alt={images.html24_video_2} className="img"/>
-        </div>
+        <div className="mital">مثال : </div>
+        <h4 className="green"> الكود </h4>
+        <img src={images.html24_video} alt={images.html24_video} className="img"/>
+        <h4 className="green"> بعد تشغيل الكود </h4>
+        <img src={images.html24_video_2} alt={images.html24_video_2} className="img"/>
     </article>
     <article>
         <h2 className="title-h2">2. الوسم source</h2>
         <p className="style_divv">
             يُحدِّد العنصر <kbd>&lt;source&gt;</kbd> عدِّة مصادر لملفات الوسائط المتعددة ضمن العنصر <kbd>&lt;picture&gt;</kbd> أو <kbd>&lt;audio&gt;</kbd> أو <kbd>&lt;video&gt;</kbd>. وهذا العنصر فارغ، وأكثر استخدام شائع له هو توفير محتوى الوسائط المتعددة نفسه لكن بصيغ مختلفة لكي يستطيع المتصفح تشغيل أنسبها .
-            <ul><li>يحتوي على <b>attribute</b> أساسي هو src وتكون قيمته عبارة عن مسار وإسم ملف الفيديو. وهو من العناصر التي ليس لها نهاية وسم (closing tag).</li></ul>
+            <ul><li>يحتوي على <b>attribute</b> أساسي هو <b>src</b> وتكون قيمته عبارة عن مسار وإسم ملف الفيديو. وهو من العناصر التي ليس لها نهاية وسم <b>(closing tag)</b>.</li></ul>
         </p>
         <CodeHighlighter  code={code2} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">

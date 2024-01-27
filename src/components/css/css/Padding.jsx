@@ -133,11 +133,12 @@ export default function Padding(props){
     <article>
         <div className="mital">3. متال تفاعلي توضيحي  </div> 
         <InteractivCss 
-          property="padding" 
-          value={selectedValue}
-          classChild="css-padding-ex4"  
-          resultRef={resultRef}
-          textInResult="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere dolor exercitationem repellat dolore ."
+            property="padding" 
+            value={selectedValue}
+            classParent="css-border-radius-ex1-parent"
+            classChild="css-padding-ex4"  
+            resultRef={resultRef}
+            textInResult="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere dolor exercitationem repellat dolore ."
         >
               <ul className="p-0">
                   <li><input type="checkbox" name="bo-sh6" ref={inputRef} onChange={handlePadding} checked={selectedValue === '30px'} value="30px" /> &nbsp; 30px</li>

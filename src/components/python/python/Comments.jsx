@@ -2,6 +2,8 @@ import { CodeHighlighter , CodeCommand} from "../../path";
 import images from "../imagesPython"
 export default function Comments(){
     return(
+        <>
+        <h1 className="heading-style heading-style-python-color"> Python Comments</h1>
         <article className="mt-5">
             <h2 id="comments" className="title-h2"> التعليقات في بايثون </h2>
             <p className="style_divv">
@@ -15,8 +17,8 @@ export default function Comments(){
     It can be used to explain code or write documentation for the program.
 '''
 print("Hello Word")`} language="python" file_name="app.py" addclassName="mt-3 mb-3" copie={true}/>
-            <div className="mital"> Result </div>
             <CodeCommand>Hello Word</CodeCommand>
         </article>
+        </>
     )
 }

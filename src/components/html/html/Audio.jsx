@@ -32,10 +32,10 @@ const codeExemple6 = `      <audio src="./music.mp3" controls preload="metadata"
         <p className="style_divv">
             الوسم  <kbd>&lt;audio&gt;</kbd> يُستخدم عندما نريد وضع ملف صوتي في الموقع ونضيف دائما له اثنان <b>attribute</b> خاص به:
             <ul>
-                <li><b>controls</b> : لعرض عناصر التحكم في الصوت وبدونه لا يظهر الملف الصوتي في الصفحة.</li>
-                <li><b>src</b> : وتكون قيمته عبارة عن مسار وإسم الملف الصوتي.</li>
-                <li>دائما استخدم امتداد <b>mp3</b> لأن جميع المتصفحات تدعمه.</li>
+                <li><b  className="text-success">controls</b> : لعرض عناصر التحكم في الصوت وبدونه لا يظهر الملف الصوتي في الصفحة.</li>
+                <li><b  className="text-success">src</b> : وتكون قيمته عبارة عن مسار وإسم الملف الصوتي.</li>
             </ul>
+            دائما استخدم امتداد <b>mp3</b> لأن جميع المتصفحات تدعمه.
         </p>
         <CodeHighlighter  code={code1} language="html"  addclassName="mt-3 mb-3" copie={true}/>
         <div className="sum_exemple_style">

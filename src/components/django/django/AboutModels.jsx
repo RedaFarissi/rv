@@ -26,8 +26,8 @@ export default function AboutModels(){
             <h1 className="heading-style heading-style-django-color"> Django models</h1> 
             <h2 className="title-h2" id="get_absolute_url">1 - <bdi>get_absolute_url()</bdi> </h2>
             <p className="style_divv">
-               get_absolute_url هي طريقة في نماذج Django تقوم بإرجاع عنوان URL للوصول إلى كائن معين، مما يسمح بربط هذا الكائن بسهولة في القوالب وطرق العرض. من خلال تحديد get_absolute_url فيmodels.py، يمكنك إنشاء عنوان URL للوصول إلى هذا الكائن دون بذل جهد كبير.<br/><br/>
-               تُستخدم هذه الطريقة عادةً مع نظام توجيه URL الخاص بـ Django لتحديد أنماط URL التي تطابق عناوين URL التي يتم إرجاعها بواسطة get_absolute_url.
+               <b>get_absolute_url</b> هي طريقة في نماذج <b>Django</b> تقوم بإرجاع عنوان <b>URL</b> للوصول إلى كائن معين، مما يسمح بربط هذا الكائن بسهولة في القوالب وطرق العرض. من خلال تحديد <b>get_absolute_url</b> في <b>models.py</b>، يمكنك إنشاء عنوان <b>URL</b> للوصول إلى هذا الكائن دون بذل جهد كبير.<br/><br/>
+               تُستخدم هذه الطريقة عادةً مع نظام توجيه <b>URL</b> الخاص بـ <b>Django</b> لتحديد أنماط <b>URL</b> التي تطابق عناوين <b>URL</b> التي يتم إرجاعها بواسطة <b>get_absolute_url</b>.
             </p>
             <div className="mital">مثال 1 : </div>
             <h3 className="title-h3">إنشاء app بالاسم testing</h3>
@@ -159,7 +159,7 @@ export default function AboutModels(){
             </p>
             <CodeCommand>python manage.py dumpdata {">"} backup.json</CodeCommand>
             <ul>
-               <li>تشغيل الأمر في دليل مشروع Django الخاص بك سيقوم بإنشاء نسخة احتياطية لقاعدة البيانات الخاصة بك بأكملها، بما في ذلك جميع البيانات من جميع التطبيقات داخل مشروعك.</li>
+               <li>تشغيل الأمر في دليل مشروع <b>Django</b> الخاص بك سيقوم بإنشاء نسخة احتياطية لقاعدة البيانات الخاصة بك بأكملها، بما في ذلك جميع البيانات من جميع التطبيقات داخل مشروعك.</li>
             </ul>
             <h2 className="title-h2" id="restore_the_data_from_the_backup"> 3 -استعادة البيانات من النسخة الاحتياطية </h2>
             <CodeCommand>python manage.py loaddata backup.json</CodeCommand>
@@ -174,9 +174,9 @@ export default function AboutModels(){
             
             <h2 className="title-h2" id="annotate">5 - annotate</h2>
             <p className="style_divv">
-               في Django، يقوم نظام الربط الكائني (ORM) تلقائيًا بتستخلص العلاقة بين النماذج استنادًا إلى تعاريف الحقول والعلاقات الرئيسية الخارجية التي قمت بتعريفها في ملف models.py <br/><br/>
-               في نموذج Like الخاص بك، قمت بتعريف حقل مفتاح خارجي يسمى product والذي يشير إلى نموذج Product. يستخدم Django هذه العلاقة لفهم الاتصال بين نموذج Like ونموذج Product.<br/><br/>
-               في حالتي، يحتوي نموذج Like على حقل ForeignKey يسمى product والذي يشير إلى نموذج Product. عند تحديد 'like' داخل Count()، يفهم Django أنه يحتاج إلى حساب حالات Like المتعلقة بكل Product استنادًا إلى العلاقة بمفتاح الخارجي product. لذا، يحل Django تلقائيًا العلاقة بين نموذج Product ونموذج Like من خلال تعريف حقل مفتاح خارجي ويستخدمها لحساب الإعجابات المتعلقة بكل منتج.
+               في <b>Django</b>، يقوم نظام الربط الكائني <b>(ORM)</b> تلقائيًا بتستخلص العلاقة بين النماذج استنادًا إلى تعاريف الحقول والعلاقات الرئيسية الخارجية التي قمت بتعريفها في ملف <b>models.py</b> <br/><br/>
+               في نموذج <b>Like</b> الخاص بك، قمت بتعريف حقل مفتاح خارجي يسمى <b>product</b> والذي يشير إلى نموذج <b>Product</b>. يستخدم <b>Django</b> هذه العلاقة لفهم الاتصال بين نموذج <b>Like</b> ونموذج <b>Product</b>.<br/><br/>
+               في حالتي، يحتوي نموذج <b>Like</b> على حقل <b>ForeignKey</b> يسمى <b>product</b> والذي يشير إلى نموذج <b>Product</b>. عند تحديد <b>'like'</b> داخل <bdi><b>Count()</b></bdi> ، يفهم <b>Django</b> أنه يحتاج إلى حساب حالات <b>Like</b> المتعلقة بكل <b>Product</b> استنادًا إلى العلاقة بمفتاح الخارجي <b>product</b>. لذا، يحل <b>Django</b> تلقائيًا العلاقة بين نموذج <b>Product</b> ونموذج <b>Like</b> من خلال تعريف حقل مفتاح خارجي ويستخدمها لحساب الإعجابات المتعلقة بكل منتج.
             </p>         
             <div className="mital">مثال 1 : </div>
             <CodeHighlighter code={codes[7].annotate[0]} file_name="models.py" language="py" addclassName="mt-3 mb-3" copie={true}/>
@@ -186,9 +186,9 @@ export default function AboutModels(){
             <div className="mital">مثال 2 : </div>
             <ul>
                <li> أنشئ مشروعًا جديدًا  (لقد أطلقت عليه اسم project)</li>
-               <li>وأضف إعدادات <bdi>media/</bdi> و <bdi>static/</bdi> واستخدم templates العام</li>
-               <li>إنشاء app بالاسم book</li>
-               <li> وأضف التطبيق الخاص بك في INSTALLED_APPS </li>
+               <li>وأضف إعدادات <bdi>media/</bdi> و <bdi>static/</bdi> واستخدم <b>templates</b> العام</li>
+               <li>إنشاء <b>app</b> بالاسم <b>book</b></li>
+               <li> وأضف التطبيق الخاص بك في <b>INSTALLED_APPS</b> </li>
             </ul>
             <CodeHighlighter code={codes[7].annotate[3]} file_name="" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[7].annotate[4]} file_name="" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
