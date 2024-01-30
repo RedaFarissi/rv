@@ -23,7 +23,6 @@ export default function Python(props){
             </ul>
         </aside>
         <section className="section-conetent">
-            
             <Routes>
                   <Route path='/'  element={<Introduction  />} />
                   <Route path='introduction' element={<Introduction  />} />
@@ -42,14 +41,13 @@ export default function Python(props){
                   <Route path='tuples' element={<Tuples  />} />
                   <Route path='sets' element={<Sets  />} />
                   <Route path='dictionaries' element={<Dictionaries  />} />
-                  <Route path='condition' element={<Condition  />} />
-                  <Route path='whileLoops' element={<WhileLoops  />} />
-                  <Route path='forLoops' element={<ForLoops  />} />
+                  <Route path='if...else' element={<Condition  />} />
+                  <Route path='while-loops' element={<WhileLoops  />} />
+                  <Route path='for-loops' element={<ForLoops  />} />
                   <Route path='functions' element={<Functions  />} />
                   <Route path='lambda' element={<Lambda  />} />
-
                   <Route path='arrays' element={<Arrays  />} />
-                  <Route path='classes-objects' element={<ClassesObjects  />} />
+                  <Route path='classes/objects' element={<ClassesObjects  />} />
                   <Route path='inheritance' element={<Inheritance  />} />
                   <Route path='iterators' element={<Iterators  />} />
                   <Route path='polymorphism' element={<Polymorphism  />} />
@@ -60,12 +58,12 @@ export default function Python(props){
                   <Route path='jSON' element={<JSON  />} />
                   <Route path='regEx' element={<RegEx  />} />
                   <Route path='pip' element={<PIP  />} />
-                  <Route path='try-except' element={<TryExcept  />} />
+                  <Route path='try...except' element={<TryExcept  />} />
                   <Route path='user-input' element={<UserInput  />} />
                   <Route path='string-formatting' element={<StringFormatting  />} />
                   <Route path='file-handling' element={<FileHandling  />} />
                   <Route path='read-files' element={<ReadFiles  />} />
-                  <Route path='write-create-files' element={<WriteCreateFiles  />} />
+                  <Route path='write/create-files' element={<WriteCreateFiles  />} />
                   <Route path='delete-files' element={<DeleteFiles  />} />
             </Routes>            
         </section>

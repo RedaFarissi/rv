@@ -5,19 +5,19 @@ export default function Booleans(){
         <>
         <h1 className="heading-style heading-style-python-color"> Python Boolean</h1>
         <article className="mt-5">
-            <h2 id="booleans" className="title-h2"> القيمة المنطقية (Boolean) . </h2>
+            <h2 id="booleans" className="title-h2"> 1 - القيمة المنطقية (Boolean) . </h2>
             <p className="style_divv">
                 في <b>Python</b>، يُمثل نوع البيانات البوليان <b>(Boolean)</b> القيم الصحيحة، ولديه قيمتين ممكنتين: <b>True</b> و <b>False</b>.<br/>
                 يعتبر البيان البوليان أساسيًا لاتخاذ القرارات والتحكم في تدفق البرنامج من خلال التعبيرات الشرطية. فيما يلي بعض النقاط الرئيسية حول البيانات البوليانية في <b>Python</b>
             </p>
-            <h3 className="title-h3">1 - قيم البيانات البوليانية .</h3>   
+            <h2 className="title-h2">2 - قيم البيانات البوليانية .</h2>   
             <p className="style_divv">
                 <ul>
                     <li><b className="text-success">True :</b> يُمثل حالة صحيحة أو إيجابية .</li>
                     <li><b className="text-success">False :</b> يُمثل حالة خاطئة أو سلبية .</li>
                 </ul>    
             </p>    
-            <h3 className="title-h3">2 - العمليات البوليانية .</h3>       
+            <h2 className="title-h2">3 - العمليات البوليانية .</h2>       
             <p className="style_divv">
                 توفر <b>Python</b> العديد من العمليات البوليانية لدمج أو تلاعب قيم البيانات البوليانية، بما في ذلك:
                 <ul>
@@ -39,7 +39,7 @@ result_or = x or y    # Result: True
 # Logical NOT
 result_not = not x    # Result: False
 `} language="python" addclassName="mt-3 mb-3" copie={true}/>   
-            <h3 className="title-h3">3 - عمليات المقارنة .</h3>       
+            <h2 className="title-h2">4 - عمليات المقارنة .</h2>       
             <p className="style_divv">
                 تُستخدم عمليات المقارنة لمقارنة القيم وإرجاع نتائج بيانية. تشمل عمليات المقارنة الشائعة ما يلي:
                 <ul>
@@ -63,7 +63,7 @@ result_not_equal = a != b  # Result: True
 
 # a less than b
 result_less_than = a < b  # Result: True`} language="python" addclassName="mt-3 mb-3" copie={true}/>   
-            <h3 className="title-h3">4 - القيم الصحيحة والقيم الكاذبة .</h3>       
+            <h2 className="title-h2">5 - القيم الصحيحة والقيم الكاذبة .</h2>       
             <p className="style_divv">
                 بالإضافة إلى <b>True</b> و <b>False</b>، هناك العديد من القيم الأخرى في <b>Python</b> تعتبر حقيقية أو كاذبة عند استخدامها في سياقات بيانية. على سبيل المثال، 0، والتسلسلات الفارغة (مثل السلاسل الفارغة أو القوائم الفارغة)، و <b>None</b> تعتبر كاذبة.
             </p>

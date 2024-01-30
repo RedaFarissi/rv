@@ -3,11 +3,14 @@ import images from "../imagesPython"
 
 export default function PIP(){
     return(
+    <>
+        <h1 className="heading-style heading-style-python-color"> Python PIP</h1>        
+
         <article className="mt-5">
-            <h2 className="title-h2"> PIP </h2>
             <p className="style_divv">
                 
             </p>
         </article>
+    </>
     )
 }

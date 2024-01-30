@@ -3,11 +3,14 @@ import images from "../imagesPython"
 
 export default function JSON(){
     return(
+    <>
+        <h1 className="heading-style heading-style-python-color"> Python JSON</h1>        
+
         <article className="mt-5">
-            <h2 className="title-h2"> JSON </h2>
             <p className="style_divv">
                 
             </p>
         </article>
+    </>
     )
 }

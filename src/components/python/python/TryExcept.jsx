@@ -3,11 +3,14 @@ import images from "../imagesPython"
 
 export default function TryExcept(){
     return(
+    <>
+        <h1 className="heading-style heading-style-python-color"> Python Try Except </h1>
+       
         <article className="mt-5">
-            <h2 className="title-h2"> TryExcept </h2>
             <p className="style_divv">
                 
             </p>
         </article>
+    </>
     )
 }
