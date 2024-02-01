@@ -84,56 +84,56 @@ export default function Button(props){
         <table  className="table table-bordered text-light">
             <thead className="bg-secondary">
                 <tr className="text-center fs-5">
-                    <th className="td"> الوصف  </th>
-                    <th className="td"> القيمة </th>
-                    <th className="td"> السمات </th>
+                    <th className="button-td"> الوصف  </th>
+                    <th className="button-td"> القيمة </th>
+                    <th className="button-td"> السمات </th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td className="td" style={{textAlign:"right"}}> تحديد أن الزر يجب أن يحصل على التركيز تلقائيا عند تحميل الصفحة </td>
-                    <td className="td" dir="ltr"> autofocus </td>
-                    <td className="td" dir="ltr"> autofocus </td>
+                    <td className="button-td" style={{textAlign:"right"}}> تحديد أن الزر يجب أن يحصل على التركيز تلقائيا عند تحميل الصفحة </td>
+                    <td className="button-td" dir="ltr"> autofocus </td>
+                    <td className="button-td" dir="ltr"> autofocus </td>
                 </tr>
                 <tr>
-                    <td className="td" style={{textAlign:"right"}}> تحديد أنه يجب تعطيل زر </td>
-                    <td className="td" dir="ltr"> disabled </td>
-                    <td className="td" dir="ltr"> disabled </td>
+                    <td className="button-td" style={{textAlign:"right"}}> تحديد أنه يجب تعطيل زر </td>
+                    <td className="button-td" dir="ltr"> disabled </td>
+                    <td className="button-td" dir="ltr"> disabled </td>
                 </tr>
                 <tr>
-                    <td className="td" style={{textAlign:"right"}}> تحديد النموذج الذي ينتمي إليه الزر </td>
-                    <td className="td" dir="ltr"> form_id </td>
-                    <td className="td" dir="ltr"> form</td>
+                    <td className="button-td" style={{textAlign:"right"}}> تحديد النموذج الذي ينتمي إليه الزر </td>
+                    <td className="button-td" dir="ltr"> form_id </td>
+                    <td className="button-td" dir="ltr"> form</td>
                 </tr>
                 <tr>
-                    <td className="td" style={{textAlign:"right"}}> تحديد مكان إرسال بيانات النموذج عند إرسال نموذج. فقط للنوع "type="submit </td>
-                    <td className="td" dir="ltr"> URL </td>
-                    <td className="td" dir="ltr">  formaction</td>
+                    <td className="button-td" style={{textAlign:"right"}}> تحديد مكان إرسال بيانات النموذج عند إرسال نموذج. فقط للنوع "type="submit </td>
+                    <td className="button-td" dir="ltr"> URL </td>
+                    <td className="button-td" dir="ltr">  formaction</td>
                 </tr>
                 <tr>
-                    <td className="td" style={{textAlign:"right"}}> تحديد كيفية إرسال بيانات النموذج (أي أسلوب HTTP لاستخدامه). فقط للنوع "type="submit</td>
-                    <td className="td" dir="ltr"> GET <br/> POST</td>
-                    <td className="td" dir="ltr"> formmethod </td>
+                    <td className="button-td" style={{textAlign:"right"}}> تحديد كيفية إرسال بيانات النموذج (أي أسلوب HTTP لاستخدامه). فقط للنوع "type="submit</td>
+                    <td className="button-td" dir="ltr"> GET <br/> POST</td>
+                    <td className="button-td" dir="ltr"> formmethod </td>
                 </tr>
                 <tr>
-                    <td className="td" style={{textAlign:"right"}}> تعين أنه لا يجب التحقق من صحة (نموذج-بيانات) في الإرسال. فقط للنوع type="submit"</td>
-                    <td className="td" dir="ltr"> formnovalidate</td>
-                    <td className="td" dir="ltr"> formnovalidate </td>
+                    <td className="button-td" style={{textAlign:"right"}}> تعين أنه لا يجب التحقق من صحة (نموذج-بيانات) في الإرسال. فقط للنوع type="submit"</td>
+                    <td className="button-td" dir="ltr"> formnovalidate</td>
+                    <td className="button-td" dir="ltr"> formnovalidate </td>
                 </tr>
                 <tr>
-                    <td className="td" style={{textAlign:"right"}}>	تحديد اسم للزر</td>
-                    <td className="td" dir="ltr"> name </td>
-                    <td className="td" dir="ltr"> name </td>
+                    <td className="button-td" style={{textAlign:"right"}}>	تحديد اسم للزر</td>
+                    <td className="button-td" dir="ltr"> name </td>
+                    <td className="button-td" dir="ltr"> name </td>
                 </tr>
                 <tr>
-                    <td className="td" style={{textAlign:"right"}}>  تحديد نوع الزر </td>
-                    <td className="td" dir="ltr">button<br/>reset<br/>submit</td>
-                    <td className="td" dir="ltr">type</td>
+                    <td className="button-td" style={{textAlign:"right"}}>  تحديد نوع الزر </td>
+                    <td className="button-td" dir="ltr">button<br/>reset<br/>submit</td>
+                    <td className="button-td" dir="ltr">type</td>
                 </tr>
                 <tr>
-                    <td className="td" style={{textAlign:"right"}}>  تحديد قيمة أولية للزر يمكن تغييره  </td>
-                    <td className="td" dir="ltr"> نص <br/>reset<br/>submit</td>
-                    <td className="td" dir="ltr">value</td>
+                    <td className="button-td" style={{textAlign:"right"}}>  تحديد قيمة أولية للزر يمكن تغييره  </td>
+                    <td className="button-td" dir="ltr"> نص <br/>reset<br/>submit</td>
+                    <td className="button-td" dir="ltr">value</td>
                 </tr>
             </tbody>
         </table>
