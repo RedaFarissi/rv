@@ -1,5 +1,5 @@
 import { CodeHighlighter , CodeCommand} from "../../path";
-import images from "../imagesPython"
+
 export default function Functions(){
     return(
         <>
@@ -88,7 +88,7 @@ print(result)`} language="python" file_name="desktop / app.py" addclassName="mt-
 
 print_info(name="Reda Eskouni", age=25 , year=2024)`} language="python" file_name="desktop / app.py" addclassName="mt-3 mb-3" copie={true}/>   
             <CodeCommand copy={false}>
-                PS C:\Users\SURFACE BOOK\desktop{">"} <span className="text-success">py app.py</span><br/>
+                PS C:\Users\SURFACE BOOK\desktop{">"} <span className="text-success">python app.py</span><br/>
                 name: Reda Eskouni<br/>
                 age: 25<br/>
                 year: 2024<br/>

@@ -17,7 +17,10 @@ export default function Comments(){
     It can be used to explain code or write documentation for the program.
 '''
 print("Hello Word")`} language="python" file_name="app.py" addclassName="mt-3 mb-3" copie={true}/>
-            <CodeCommand>Hello Word</CodeCommand>
+            <CodeCommand copy={false}>
+                PS C:\Users\SURFACE BOOK\desktop{">"} <span className="text-success">py app.py</span><br/>
+                Hello Word
+            </CodeCommand>
         </article>
         </>
     )

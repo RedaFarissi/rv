@@ -12,7 +12,11 @@ export {default as React} from './react/React';
 
 export {default as Mysql} from './mysql/Mysql';
 
+export {default as Python} from './python/Python';
+
 export {default as Django} from './django/Django';
+
+export {default as DjangoRestFramework} from './django_rest_framework/DjangoRestFramework';
 
 export {default as Php} from './php/Php';
 
@@ -22,7 +26,6 @@ export {default as Cmd} from './cmd/Cmd';
 
 export {default as Git} from './git/Git';
 
-export {default as Python} from './python/Python';
 
 export {default as CodeHighlighter} from './codeHighlighter/CodeHighlighter';
 

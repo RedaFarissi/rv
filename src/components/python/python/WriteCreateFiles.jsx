@@ -1,5 +1,4 @@
 import { CodeHighlighter , CodeCommand} from "../../path";
-import images from "../imagesPython"
 
 export default function WriteCreateFiles(){
     return(

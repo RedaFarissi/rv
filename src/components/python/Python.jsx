@@ -2,8 +2,8 @@ import { Routes, Route , Link} from "react-router-dom";
 import {
     Introduction,InstallPython,ExecutePythonInCmd,Indentation,PythonInVisualStudioCode,
     Comments,Variables,Casting,Numbers,Strings,Booleans,Operators,Lists,Tuples,Sets,
-    Dictionaries,Condition,WhileLoops,ForLoops,Functions,Lambda,Arrays,ClassesObjects,
-    Inheritance,Iterators,Polymorphism,Scope,Modules,Dates,Math,JSON,RegEx,PIP,TryExcept,
+    Dictionaries,Condition,WhileLoops,ForLoops,Functions,Lambda,ClassesObjects,
+    Inheritance,Iterators,Scope,Modules,Dates,Math,JSON,RegEx,PIP,TryExcept,
     UserInput,StringFormatting,FileHandling,ReadFiles,WriteCreateFiles,DeleteFiles,
 } from "./pathPython"
 
@@ -46,11 +46,9 @@ export default function Python(props){
                   <Route path='for-loops' element={<ForLoops  />} />
                   <Route path='functions' element={<Functions  />} />
                   <Route path='lambda' element={<Lambda  />} />
-                  <Route path='arrays' element={<Arrays  />} />
                   <Route path='classes/objects' element={<ClassesObjects  />} />
                   <Route path='inheritance' element={<Inheritance  />} />
                   <Route path='iterators' element={<Iterators  />} />
-                  <Route path='polymorphism' element={<Polymorphism  />} />
                   <Route path='scope' element={<Scope  />} />
                   <Route path='modules' element={<Modules  />} />
                   <Route path='dates' element={<Dates  />} />

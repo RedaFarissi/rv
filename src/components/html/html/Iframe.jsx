@@ -70,7 +70,6 @@ export default function Iframe(props){
                     <td dir="ltr">width</td>
                 </tr>
             </tbody>
-
         </table>
     </article>
 </section>

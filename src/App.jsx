@@ -1,6 +1,7 @@
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
 import { 
-  Header,Home,Html,Css,Js,React,Mysql,Python,Django,Laravel,Cmd,Git,Php,
+  Header,Home,Html,Css,Js,React,Mysql,Python,Django,DjangoRestFramework,
+  Laravel,Cmd,Git,Php,
 } from './components/path';
 import "./App.sass"
 
@@ -19,11 +20,7 @@ function App() {
   const react_matrix  = [
     ["Introduction","What_is_React","How_react_work","What_you_need_to_get_started","multiple_versions_of_Node","Verify_required_installations","ES6","Create_React_App","Run_React_App",],
     ["Component","JSX","function_Component","function_Component_props","class_Component","class_Component_this_props","Components_in_Component",],
-    "Events",
-    "Lists",
-    "Handle_images_react",
-    "Handle_import",
-    "props_children",
+    "Events", "Lists", "Handle_images_react", "Handle_import", "props_children",
     ["hooks","useState","this_state"],
     ["packages","npm_list","axios","react_paypal_js","react_sass","Router","useNavigate_Router","useParams_Router","react_syntax_highlighter"],
   ]
@@ -31,14 +28,9 @@ function App() {
     "Intro" , "Install Mysql","Create Database","Drop Database","Comments","Data Types","Select Database","Create Table","Drop Table","Insert Row","Auto-increment","Retrieving Data from Table","Merge Columns while Retrieving","IF EXISTS","IF NOT EXISTS","Retrieve Data with Conditions","Retrieve Data with Sorting","Retrieve Distinct Data","Merge Tables into One","Delete Data from Table","Update Table Data","Limit Rows Returned","Handling Null Fields","Retrieve Minimum Value in Column","Retrieve Maximum Value in Column","Count Rows in Table","Sum of Column Values","Average of Column Values","Aggregate Common Field Values","Conditions on Aggregated Fields","Copy Data to Another Table","Set Default Value for Column","CASE Condition","Relationships between tables",
   ]
   const python_list = [
-    "Introduction","Install Windows","Execute Python in CMD","Indentation",
-    "Python in Visual Studio Code","Comments","Variables","Casting","Numbers",
-    "Strings","Booleans","Operators","Lists","Tuples","Sets","Dictionaries",
-    "If...Else","While Loops","For Loops","Functions","Lambda","Arrays",
-    "Classes/Objects","Inheritance","Iterators","Polymorphism","Scope",
-    "Modules","Dates","Math","JSON","RegEx","PIP","Try...Except","User Input",
-    "String Formatting","File Handling","Read Files","Write/Create Files",  
-    "Delete Files",
+    "Introduction","Install Windows","Execute Python in CMD","Indentation","Python in Visual Studio Code","Comments","Variables","Casting","Numbers","Strings","Booleans","Operators","Lists","Tuples","Sets","Dictionaries","If...Else","While Loops","For Loops","Functions","Lambda","Classes/Objects","Inheritance","Iterators","Scope","Modules","Dates",
+    "Math","JSON","RegEx","PIP","Try...Except","User Input","String Formatting",
+    "File Handling","Read Files","Write/Create Files", "Delete Files",
   ]
   const django_matrix = [
     ["Introduction", "What_is_Django","What_you_need_to_get_started","Verify_required_installations","Struct_Django",],
@@ -51,13 +43,23 @@ function App() {
     ["about_models","get_absolute_url","create_a_database_backup","restore_the_data_from_the_backup","remove_all_from_db_models","annotate"],
     ["User_Authentication","User_and_authontication","include_urls_and_files_html","Sign_Up","Add_fields_to_User_SignUp" ,],
     ["Django_Email","send_email","list_emails"],
-    "Django_Pagination",
-    "Form",
-    "ModelForm",
+    "Django_Pagination","Form","ModelForm",
     ["Django_Filter","models_Objecjs_filter","raw_filter","lookup_expr","Q_filter","select_related",],
-    "Session",
-    "Context_Processors",
-    "ngrok"
+    "Session","Context_Processors","ngrok"
+  ]
+  const django_rest_framework_matrix = [
+      ["serializers","Serializers_are_not_specific_for_models","Serializers_and_model_validation_from_Serializers","Serializers_and_model_validation_from_models","Serializers-and-related_name"],
+      ["self-kwargs","Why_we_use_self-kwargs","using_self-kwargs_in_models_witout_relationships"],
+      ["api-views","get_and_post","get_put_delete",],
+      "django_rest_framework",
+      "django_rest_framework_filter",
+      "Connect_django_with_react",
+      "Get_Data_From_Django_To_React_js",
+      "BOOK_DJANGO",
+      "class_generic_views",
+      "Django_Rest_Framework_Permissions",
+      "user_authentication_Rest_framework",
+      "JWT_tokens"
   ]
   const php_list = [  
     "HOME","Intro","Install","Syntax","Comments","Variables","Echo / Print","Data Types","Strings","Numbers","Casting","Math","Constants","Magic Constants","Operators","If...Else...Elseif","Switch","Loops","Functions","Arrays","Superglobals","RegEx","Form Handling","Form Validation","Form Required","Form URL/E-mail","Form Complete",
@@ -89,6 +91,8 @@ function App() {
             <Route path='/mysql/*' element={<Mysql sql_list={sql_list} />} />
             <Route path='/python/*' element={<Python python_list={python_list} />} />
             <Route path='/django/*' element={<Django django_matrix={django_matrix} />} />
+            <Route path='/django-rest-framework/*' element={<DjangoRestFramework django_rest_framework_matrix={django_rest_framework_matrix} />} />
+            
             <Route path='/php/*' element={<Php php_list={php_list}  />} />
             <Route path='/laravel/*' element={<Laravel laravel_matrix={laravel_matrix}  />} />
             <Route path='/power-shell' element={<Cmd cmd_list={cmd_list}  />} />
@@ -99,3 +103,5 @@ function App() {
 }
 
 export default App;
+
+//cai0011
