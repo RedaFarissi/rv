@@ -1,0 +1,9 @@
+p.writing-mode-test1 { 
+    writing-mode: horizontal-tb;
+}
+p.writing-mode-test2 { 
+    writing-mode: vertical-rl; 
+}
+span.writing-mode-test2 {   
+    writing-mode: vertical-rl; 
+}

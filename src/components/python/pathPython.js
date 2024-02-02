@@ -30,7 +30,7 @@ export {default as JSON} from './python/JSON';
 export {default as RegEx} from './python/RegEx';
 export {default as PIP} from './python/PIP';
 export {default as TryExcept} from './python/TryExcept';
-export {default as UserInput} from './python/UserInput';
+export {default as Input} from './python/Input';
 export {default as StringFormatting} from './python/StringFormatting';
 export {default as FileHandling} from './python/FileHandling';
 export {default as ReadFiles} from './python/ReadFiles';

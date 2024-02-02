@@ -1,11 +1,5 @@
-.para{ 
-    font-size:42px; 
-    -webkit-text-stroke:2px black; 
-    color:red; 
-}
-.para2{ 
-    font-size:42px;  
-    color:red; 
-    -webkit-text-stroke-width:2px; 
-    -webkit-text-stroke-color:green; 
-}
+.Webkit-text-stroke-para {
+    font-size: 52px;
+    -webkit-text-stroke: 2px green;
+    color: red;
+}  

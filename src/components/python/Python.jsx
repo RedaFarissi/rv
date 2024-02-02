@@ -4,7 +4,7 @@ import {
     Comments,Variables,Casting,Numbers,Strings,Booleans,Operators,Lists,Tuples,Sets,
     Dictionaries,Condition,WhileLoops,ForLoops,Functions,Lambda,ClassesObjects,
     Inheritance,Iterators,Scope,Modules,Dates,Math,JSON,RegEx,PIP,TryExcept,
-    UserInput,StringFormatting,FileHandling,ReadFiles,WriteCreateFiles,DeleteFiles,
+    Input,StringFormatting,FileHandling,ReadFiles,WriteCreateFiles,DeleteFiles,
 } from "./pathPython"
 
 
@@ -57,7 +57,7 @@ export default function Python(props){
                   <Route path='regEx' element={<RegEx  />} />
                   <Route path='pip' element={<PIP  />} />
                   <Route path='try...except' element={<TryExcept  />} />
-                  <Route path='user-input' element={<UserInput  />} />
+                  <Route path='input' element={<Input  />} />
                   <Route path='string-formatting' element={<StringFormatting  />} />
                   <Route path='file-handling' element={<FileHandling  />} />
                   <Route path='read-files' element={<ReadFiles  />} />
