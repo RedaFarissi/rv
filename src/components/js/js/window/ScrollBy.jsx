@@ -23,8 +23,8 @@ export default function ScrollBy(){
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript scrollBy</h1>
-    <article>
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             تقوم طريقة <bdi><b>scrollBy()</b></bdi> بتمرير المستند بعدد وحدات البكسل المحدد. <br/>
             لكي تعمل طريقة <bdi><b>scrollBy()</b></bdi> ، يجب أن يكون المستند أكبر من الشاشة ، ويجب أن يكون شريط التمرير مرئيًا.<br/>
             <CodeHighlighter code={`window.scrollBy(x , y)`} language="js" addClass="mt-3 mb-3" copie={true} />

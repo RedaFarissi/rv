@@ -28,7 +28,7 @@ document.getElementById("test").innerHTML = \`Hello Mr \${firstName} \${lastName
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color"> JavaScript Strings Templates </h1>
-    <article>
+    <article className="mt-5">
         <h2 className="title-h2">1.Back-Tics Syntax</h2>
         <p className="style_divv">
             تستخدم القوالب الحرفية (<small>Template Literals</small>) علامات التجزئة(<small>back-ticks</small>) <kbd>`</kbd> بدلاً من علامات الاقتباس (<small>quotes</small>) <kbd>"</kbd> لتحديد سلسلة

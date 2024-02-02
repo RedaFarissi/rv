@@ -14,8 +14,8 @@ export default function Print(){
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript print</h1>
-    <article>
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             تقوم طريقة <b><bdi>print()</bdi></b> بطباعة محتويات النافذة الحالية.<br/>
             تفتح طريقة <b><bdi>print()</bdi></b> مربع حوار الطباعة ، مما يتيح للمستخدم تحديد خيارات الطباعة المفضلة.
             <CodeHighlighter code={`window.print()`} language="js" addClass="mt-3 mb-3" copie={true} />

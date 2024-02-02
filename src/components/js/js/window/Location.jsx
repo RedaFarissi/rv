@@ -57,8 +57,8 @@ result.innerHTML = location.protocol`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript location</h1>
-    <article>
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             يحتوي كائن <b>location</b> على معلومات حول عنوان <b>URL</b> الحالي.<br/>
             كائن <b> location</b> هو خاصية لكائن النافذة.<br/>
             <CodeHighlighter code={`window.open(URL, name, specs, replace)`} language="js" addClass="mt-3 mb-3" copie={true} />

@@ -30,8 +30,8 @@ document.getElementById("result").innerHTML += \`clientHeight : \${c_height}px\`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript clientWidth</h1>
-    <article>
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             <b>clientWidth</b> هو عدد صحيح يتوافق مع <b>clientWidth</b> للعنصر بالبكسل. الخاصية <b>clientWidth</b> للقراءة فقط.<br/>
             <CodeHighlighter code={`element.clientWidth`} language="js" addClass="mt-3 mb-3" copie={true} />
             <CodeHighlighter code={`element.clienHeight`} language="js" addClass="mt-3 mb-3" copie={true} />

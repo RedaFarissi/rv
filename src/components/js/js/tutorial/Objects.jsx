@@ -100,7 +100,7 @@ document.getElementById("h2").innerHTML = person.fullName;`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Objects</h1>
-    <article>
+    <article className="mt-5">
         <h2 className="title-h2">1.  Objects</h2>
         <p className="style_divv">
             تمثل فئة <b>Object</b> أحد أنواع بيانات <b>JavaScript</b>. يتم استخدامه لتخزين العديد من المجموعات ذات المفاتيح والكيانات الأكثر تعقيدًا.<br/>

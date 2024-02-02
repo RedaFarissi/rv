@@ -84,7 +84,7 @@ document.getElementById("String").innerHTML = str;`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Variables</h1>
-    <article>
+    <article className="mt-5">
         <h2 className="title-h2">1. ما هي Variables </h2>
         <p className="style_divv">
             المتغيرات عبارة عن حاويات لتخزين البيانات (تخزين قيم البيانات).<br/>

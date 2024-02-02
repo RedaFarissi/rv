@@ -38,8 +38,8 @@ function name_function3() {
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript scrollIntoView</h1>
-    <article>
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             تقوم طريقة <bdi><b>scrollIntoView()</b></bdi> بتمرير محدد إلى المنطقة المرئية من نافذة المتصفح.<br/>
             يتم الوصول إلى  <b>pageYOffset</b> باستخدام :<br/>
             <CodeHighlighter code={`element.scrollIntoView()`} language="js" addClass="mt-3 mb-3" copie={true} />

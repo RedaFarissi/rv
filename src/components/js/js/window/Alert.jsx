@@ -30,8 +30,8 @@ function add_alert() {
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript alert</h1>
-    <article>
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             تعرض طريقة <b><bdi>alert()</bdi></b> مربع تنبيه برسالة وزر موافق.<br/>
             يتم استخدام طريقة <b><bdi>alert()</bdi></b> عندما تريد وصول المعلومات إلى المستخدم .<br/>
             يأخذ مربع التنبيه التركيز بعيدًا عن النافذة الحالية ، ويجبر المستخدم على قراءة الرسالة . يمنع المستخدم من الوصول إلى أجزاء أخرى من الصفحة حتى يتم إغلاق مربع التنبيه

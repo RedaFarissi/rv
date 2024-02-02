@@ -6,7 +6,7 @@ export default function FirstExemple(){
     return(
          <article id="First_Exemple">
             <h1 className="heading-style heading-style-django-color"> Django First Exemple</h1> 
-            <ol>
+            <ol className="my-5">
                <li> أنشاء <b>virtualenv</b> </li>
                <li> تثبيت <b>django</b>  </li>
                <li> إنشاء مشروع <b>django</b> بالاسم <b>project</b></li>

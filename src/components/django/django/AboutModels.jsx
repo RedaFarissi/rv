@@ -24,7 +24,7 @@ export default function AboutModels(){
     return(
         <article className="mt-5" id='about_models'>
             <h1 className="heading-style heading-style-django-color"> Django models</h1> 
-            <h2 className="title-h2" id="get_absolute_url">1 - <bdi>get_absolute_url()</bdi> </h2>
+            <h2 className="title-h2 mt-5" id="get_absolute_url">1 - <bdi>get_absolute_url()</bdi> </h2>
             <p className="style_divv">
                <b>get_absolute_url</b> هي طريقة في نماذج <b>Django</b> تقوم بإرجاع عنوان <b>URL</b> للوصول إلى كائن معين، مما يسمح بربط هذا الكائن بسهولة في القوالب وطرق العرض. من خلال تحديد <b>get_absolute_url</b> في <b>models.py</b>، يمكنك إنشاء عنوان <b>URL</b> للوصول إلى هذا الكائن دون بذل جهد كبير.<br/><br/>
                تُستخدم هذه الطريقة عادةً مع نظام توجيه <b>URL</b> الخاص بـ <b>Django</b> لتحديد أنماط <b>URL</b> التي تطابق عناوين <b>URL</b> التي يتم إرجاعها بواسطة <b>get_absolute_url</b>.

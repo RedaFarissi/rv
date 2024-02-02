@@ -30,8 +30,8 @@ export default function PageX(){
   return(
 <section className="section-conetent">
   <h1 className="heading-style heading-style-js-color">JavaScript pageX</h1>
-  <article>
-    <div className="style_divv mt-5">
+  <article className="mt-5">
+    <div className="style_divv">
         ترجع الخاصية <b>pageX</b> الإحداثيات الأفقية (وفقا للوثيقة) لمؤشر الماوس عند تشغيل حدث ماوس.<br/>
         المستند هو صفحة الويب.<br/>
         للحصول على الإحداثيات الرأسية (وفقا للوثيقة) لمؤشر الماوس، استخدم الخاصية <b>pageY</b>.<br/>

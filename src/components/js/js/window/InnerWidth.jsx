@@ -13,11 +13,10 @@ export default function InnerWidth(){
 document.getElementById("outerWidth").innerHTML = window.outerWidth + "px"`
     }
 
-    
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript innerWidth</h1>
-    <article>
+    <article className="mt-5">
         <p className="style_divv">
             تُرجع الخاصية <b>innerWidth</b> عرض منطقة محتوى النافذة.<br/>
             تعتبر الخاصية <b>innerWidth</b> للقراءة فقط.<br/>

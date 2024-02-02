@@ -33,8 +33,8 @@ import default class_name from \`./path.js\` `
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Modules</h1>
-    <article>
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             تسمح لك وحدات <b>JavaScript</b> النمطية بتقسيم التعليمات البرمجية الخاصة بك إلى ملفات منفصلة.
             هذا يجعل من السهل الحفاظ على قاعدة التعليمات البرمجية.<br/>
             تعتمد وحدات <b>JavaScript</b> النمطية على عبارات <b>import</b> <small><small>(إستورد)</small></small> و <b>export</b> <small><small>(تصدر)</small></small>.<br/>

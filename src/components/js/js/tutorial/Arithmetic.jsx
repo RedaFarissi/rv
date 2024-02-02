@@ -76,7 +76,7 @@ document.getElementById("power").innerHTML = number1-- `
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Arithmetic</h1>
-    <article>
+    <article className="mt-5">
         <p className="style_divv mt-5">
             تؤدي العوامل الحسابية العمليات الحسابية على الأرقام (المتغيرات أو الحرفية).<br/>
         </p>

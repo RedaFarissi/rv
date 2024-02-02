@@ -43,8 +43,8 @@ export default function Navigator(){
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript navigator</h1>
-    <article>
-        <div className="style_divv mt-5">
+    <article className="mt-5">
+        <div className="style_divv">
             يحتوي كائن <b>navigator</b> على معلومات حول المتصفح.<br/>
             يتم الوصول إلى الكائن <b>navigator</b> من خلال:<br/>
             <CodeHighlighter code={`navigator`} language="js" addClass="mt-3 mb-3" copie={true} />

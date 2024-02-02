@@ -36,8 +36,8 @@ switch(num){
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Switch</h1>
-    <article>
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             يتم استخدام بيان التبديل لأداء إجراءات مختلفة بناءً على ظروف مختلفة.
             <CodeHighlighter code={code1} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>

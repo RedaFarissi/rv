@@ -29,8 +29,8 @@ document.getElementById("Number").innerHTML = sum2;`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Statements</h1>
-    <article>
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             برنامج الكمبيوتر هو قائمة "تعليمات" ليتم "تنفيذها" بواسطة جهاز كمبيوتر .<br/>
             في لغة البرمجة ، تسمى تعليمات البرمجة هذه العبارات .<br/>
             برنامج <b>JavaScript</b> هو قائمة ببيانات البرمجة .<br/><br/>

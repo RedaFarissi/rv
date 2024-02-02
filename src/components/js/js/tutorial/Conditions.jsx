@@ -68,8 +68,8 @@ if (age >= 18){
   return(
 <section className="section-conetent">
   <h1 className="heading-style heading-style-js-color">JavaScript Conditions</h1>
-  <article>
-        <p className="style_divv mt-5">
+  <article className="mt-5">
+        <p className="style_divv">
             تستخدم العبارات الشرطية لأداء إجراءات مختلفة بناءً على شروط مختلفة.<br/>
             في كثير من الأحيان عندما تكتب رمزًا ، فأنت تريد تنفيذ إجراءات مختلفة لقرارات مختلفة.<br/>
             يمكنك استخدام العبارات الشرطية في التعليمات البرمجية الخاصة بك للقيام بذلك.<br/>

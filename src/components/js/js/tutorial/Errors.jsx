@@ -55,8 +55,8 @@ division("demo2",8,0)`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Errors</h1>
-    <article>
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             لتفادي اللأخطء في لغة البرمجة <b>JavaScriptn</b> نستعمل <b>try</b> و <b>catch</b> و <b>finally</b> تم <b>throw</b>.<br/>
             تحدد عبارة <b>try</b> مجموعة تعليمات برمجية ليتم تشغيلها (لتجربتها).<br/>
             تحدد تعليمة <b>catch</b> كتلة رمز للتعامل مع أي خطأ.<br/>

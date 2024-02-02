@@ -43,8 +43,8 @@ export default function Confirm(){
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript confirm</h1>
-    <article>
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             تعرض طريقة <bdi><b>confirm()</b></bdi> مربع حوار به رسالة وزر موافق وزر إلغاء.<br/>
             تُرجع طريقة <bdi><b>confirm()</b></bdi> إلى القيمة <b>true</b> إذا نقر المستخدم على "موافق" ، وإلا فسيكون ذلك خطأ .<br/>
             <CodeHighlighter code={`confirm("message")`} language="js" addClass="mt-3 mb-3" copie={true} />

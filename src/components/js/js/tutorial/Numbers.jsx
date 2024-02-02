@@ -89,7 +89,7 @@ document.getElementById("num").innerHTML = num.toFixed(2);
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Numbers</h1>
-    <article>
+    <article className="mt-5">
         <h2 className="title-h2">1. Numbers</h2>
         <p className="style_divv">
             يحتوي <b>JavaScript</b> على نوع واحد فقط من الأرقام. يمكن كتابة الأرقام مع الكسور العشرية أو بدونها.<br/>

@@ -90,8 +90,8 @@ d.innerHTML += "false = " + Number(false);`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Conversion</h1>
-    <article>
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             يمكن تحويل متغيرات <b>JavaScript</b> إلى متغير جديد ونوع بيانات آخر عن طريق استخدام وظائف <b>JavaScript</b><br/>
         </p>
     </article>

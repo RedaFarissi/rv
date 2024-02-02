@@ -53,8 +53,8 @@ document.getElementById("de").innerHTML = x %= 5 ;`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Assignment</h1>
-    <article>
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             تقوم عوامل التعيين بتعيين قيم لمتغيرات <b>JavaScript</b>. <br/>
         </p>
         <table className="table" dir="ltr">

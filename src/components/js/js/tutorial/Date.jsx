@@ -37,7 +37,7 @@ document.getElementById("Date").innerHTML = currentDate;`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Date</h1>
-    <article>
+    <article className="mt-5">
         <h2 className="title-h2">1. date</h2>
         <p className="style_divv">
             بشكل افتراضي ، ستستخدم <b>JavaScript</b> المنطقة الزمنية للمتصفح وتعرض التاريخ كسلسلة نصية كاملة

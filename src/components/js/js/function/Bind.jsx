@@ -89,7 +89,7 @@ var result = document.getElementById("result").innerHTML += obj.bind(person2,33)
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Bind</h1>
-    <article>
+    <article className="mt-5">
         <p className="style_divv">
             باستخدام طريقة <bdi><b>bind()</b></bdi> ، يمكن للكائن استعارة طريقة من كائن آخر.<br/>
             ينشئ المثال أدناه كائنين (شخص وعضو).<br/>

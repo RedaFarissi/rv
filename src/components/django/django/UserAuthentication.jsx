@@ -7,8 +7,7 @@ export default function UserAuthentication(){
     return(
    <article id="User_Authentication">
       <h1 className="heading-style heading-style-django-color"> Django User Authentication</h1>   
-        <h4><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication" target="_blank"> Toturial </a></h4>
-        <h2 className="title-h2" id="User_and_authontication"> 1 -  العلاقة بين فئة المستخدم (class User) والمصادقة (Authentication)  </h2>
+        <h2 className="title-h2 mt-5" id="User_and_authontication"> 1 -  العلاقة بين فئة المستخدم (class User) والمصادقة (Authentication)  </h2>
         <p className="style_divv">
            في <b>Django</b>، تلعب فئة المستخدم <b>(User class)</b> دورًا مركزيًا في نظام المصادقة <b>(Authentication)</b> . إنه يمثل حساب مستخدم ويوفر طرقًا وسمات مختلفة تتعلق بالمصادقة. يتم تعريف فئة المستخدم في الوحدة النمطية <bdi><b>"django.contrib.auth.models"</b></bdi>.<br/><br/>
           <ul>

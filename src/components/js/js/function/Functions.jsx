@@ -109,7 +109,7 @@ document.getElementById("h2").innerHTML = d;`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Function</h1>
-    <article>
+    <article className="mt-5">
         <h2 className="title-h2"> 1. Function</h2>
         <p class="style_divv">
             الدالة <b>function</b> هي كتلة من التعليمات البرمجية مصممة لأداء مهمة معينة.<br/>

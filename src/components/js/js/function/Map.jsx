@@ -49,8 +49,8 @@ for (let i = 0; i<powerArr.length; i++) {
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Map</h1>
-    <article>
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             تُنشئ <bdi><b>map()</b></bdi> مصفوفة جديدة من استدعاء دالة لكل عنصر مصفوفة.<br/>
             تعتبر الدالة <bdi><b>map()</b></bdi> من 
             <button className="text-danger border-0" data-bs-toggle="collapse" data-bs-target="#id_name"> Higher Order Functions </button><br/>

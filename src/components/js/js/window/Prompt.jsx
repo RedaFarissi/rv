@@ -60,8 +60,8 @@ export default function Prompt(){
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript prompt</h1>
-    <article>
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             تعرض طريقة <bdi><b>prompt()</b></bdi> مربع حوار يطالب المستخدم بالإدخال.<br/>
             تقوم طريقة <bdi><b>prompt()</b></bdi> بإرجاع قيمة الإدخال إذا نقر المستخدم على "موافق" ، وإلا فإنها ترجع قيمة فارغة.<br/>
             يتم استخدام مربع موجه إذا كنت تريد أن يقوم المستخدم بإدخال قيمة . <br/>

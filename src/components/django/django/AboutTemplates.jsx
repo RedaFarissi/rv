@@ -6,7 +6,7 @@ export default function AboutTemplates(){
     return(
         <article id="about_templates" className="t-5">
             <h1 className="heading-style heading-style-django-color"> Django templates</h1> 
-            <h2 className="title-h2" id="Create_Public_templates"> 1 - إنشاء public templates  </h2>    
+            <h2 className="title-h2 mt-5" id="Create_Public_templates"> 1 - إنشاء public templates  </h2>    
             <p className="style_divv">
                قم بإنشاء قوالب عامة يمكنك استخدامها في جميع التطبيقات الموجودة في مشروعك   .<br/><br/>
                لإنشاء قوالب عامة في جميع التطبيقات، يجب عليك أولاً القيام بكل ما هو شائع في الملفات الثابتة وملفات الوسائط

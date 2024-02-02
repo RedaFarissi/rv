@@ -41,7 +41,7 @@ for(i=0; i<9 ;i++){
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Break</h1>
-    <article>
+    <article className="mt-5">
         <h2 className="title-h2">1. break</h2>
         <p className="style_divv">
             العبارة break تقفز خارج من الحلقة .

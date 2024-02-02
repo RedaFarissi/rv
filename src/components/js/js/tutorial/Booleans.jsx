@@ -23,7 +23,7 @@ document.getElementById("id").innerHTML = Boolean(x > y);`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Booleans</h1>
-    <article>
+    <article className="mt-5">
         <h2 className="title-h2">1. <bdi> true - false</bdi></h2>
         <div className="style_divv">
             تمثل <b>JavaScript Boolean</b> إحدى قيمتين: <b>true</b> أو <b>false</b>.<br/>

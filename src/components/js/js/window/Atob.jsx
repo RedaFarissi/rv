@@ -24,8 +24,8 @@ result.innerHTML += "<br/><br/> decodes : " + decodes`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript atob</h1>
-    <article>
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             تقوم طريقة <bdi><b>atob()</b></bdi> بفك تشفير سلسلة تم تشفيرها بواسطة طريقة <bdi><b>btoa()</b></bdi>.
             <CodeHighlighter code={`window.atob(encoded)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>

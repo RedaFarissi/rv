@@ -36,9 +36,8 @@ result.innerHTML = text`
 return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript btoa</h1>
-    <article>
-
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             تقوم طريقة <bdi><b>btoa</b></bdi> بتشفير سلسلة بنضام <bdi>64-bit</bdi>.<br/>
             وظيفة <bdi>btoa()</bdi> تعمل فقط مع سلاسل النصوص التي تمثل بيانات ثنائية (مثل ASCII أو UTF-8). قد تواجه مشاكل إذا حاولت ترميز سلسلة تحتوي على أحرف خارجة عن نطاق ASCII.<br/>
             ويوجد أيضًا وظيفة ذات صلة تسمى <bdi>atob()</bdi>، التي تقوم بفك تشفير سلسلة تم ترميزها في base64 إلى شكلها الأصلي.

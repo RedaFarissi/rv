@@ -63,8 +63,8 @@ result.innerHTML += "font-size : " + element.getPropertyValue("font-size") + "<b
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript getComputedStyle</h1>
-    <article>
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             تقوم  <bdi><b>Window.getComputedStyle()</b></bdi> بإرجاع كائن يحتوي على قيم جميع خصائص <b>CSS</b> لعنصر ، بعد تطبيق أوراق الأنماط النشطة وحل أي حساب أساسي قد تحتويه هذه القيم.<br/>
             يتم الوصول إلى قيم خصائص <b>CSS</b> الفردية من خلال واجهات برمجة التطبيقات التي يوفرها الكائن ، أو عن طريق الفهرسة باستخدام أسماء خصائص <b>CSS</b>.<br/>
             تستخدم <b>getPropertyValue</b>  لتحديد إسم الخاصية .<br/>

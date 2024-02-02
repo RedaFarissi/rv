@@ -6,8 +6,8 @@ export default function ContextProcessors(){
     const code1 =``
     return(
     <article  id="Context_Processors">
-     <h1 className="heading-style heading-style-django-color"> Django Context Processors</h1>
-        <p className="style_divv"> 
+        <h1 className="heading-style heading-style-django-color"> Django Context Processors</h1>
+        <p className="style_divv mt-5"> 
             تعد معالجات السياق أداة قوية في <b>Django</b> تسمح لك بمشاركة البيانات المشتركة عبر جميع قوالب <b>(templates)</b> الخاصة بك دون تكرار التعليمات البرمجية في طرق العرض الفردية. يمكن أن يساعد هذا في الحفاظ على الكود الخاص بك جافًا (لا تكرر نفسك) ويسهل صيانته.
         </p>
         <CodeCommand>python manage.py startapp requests_app_test</CodeCommand>

@@ -31,8 +31,8 @@ if (localStorage.getItem("test") != null) {
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript localStorage</h1>
-    <article>
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             يسمح لك كائن <b>localStorage</b> بحفظ أزواج المفتاح / القيمة في المتصفح.<br/>
             يخزن كائن التخزين المحلي البيانات بدون تاريخ انتهاء الصلاحية.<br/>
             لا يتم حذف البيانات عند إغلاق المتصفح ، وتكون متاحة للجلسات المستقبلية.<br/>

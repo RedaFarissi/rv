@@ -40,8 +40,8 @@ document.getElementById("h2").innerHTML = obj.fullName.call(obj3,"moroccain","Si
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Call</h1>
-    <article>
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             باستخدام الدالة  <bdi><b>call()</b></bdi>  يمكن استخدام <b>method</b> على كائنات مختلفة.<br/>
             يمكن استخدام الدالة  <bdi><b>call()</b></bdi> لاستدعاء method مع كائن مالك كوسيطة
             <CodeHighlighter code={code1} language="js" addClass="mt-3 mb-3" copie={true} />

@@ -65,7 +65,7 @@ random_integer(10,21)`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Random</h1>
-    <article>
+    <article className="mt-5">
         <h2 className="title-h2">1. <bdi>Math.random()</bdi></h2>
         <p className="style_divv">
             تُرجع <b><bdi>Math.random()</bdi></b> رقمًا عشوائيًا بين 0 (ضمنيًا) و 1 (حصريًا) .<br/>

@@ -115,8 +115,8 @@ console.log(s);`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Data Types</h1>
-    <article>
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             يمكن أن تحتوي متغيرات جافا سكريبت على أنواع مختلفة من البيانات :
             <ul dir="ltr">
                 <li><b>numbers</b></li>

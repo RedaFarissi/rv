@@ -14,7 +14,7 @@ export default function Introduction(props){
    return(
       <article id="Introduction">
         <h1 className="heading-style heading-style-django-color"> Django Introduction</h1> 
-        <h2 className="title-h2" id="What_is_Django">1 - ما هو Djnago . </h2>
+        <h2 className="title-h2 mt-5" id="What_is_Django">1 - ما هو Djnago . </h2>
         <p className="style_divv">
            ديجانغو هو إطار عالي المستوى ومفتوح المصدر لبناء تطبيقات الويب الديناميكية باستخدام لغة البرمجة <b>python</b> .يتبع إطار العمل نمط البرمجة المعماري <bdi><b>Model-View-Controller (MVC)</b></bdi> ويشجع على التطوير السريع والتصميم النظيف والعملي.<br/>
            تم تطوير <b>Django</b> أصلاً من قبل <b>Django Software Foundation</b> ، وهدفه الرئيسي هو تسهيل عمل المطورين في بناء تطبيقات الويب من خلال توفير أساس قوي وقابل لإعادة الاستخدام.<br/><br/>

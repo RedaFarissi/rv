@@ -12,8 +12,8 @@ console.assert ( x > y + 1 , "Expression returned 'False'");`
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript console</h1>
-    <article>
-        <p className="style_divv mt-5">
+    <article className="mt-5">
+        <p className="style_divv">
             يوفر كائن <b>console</b> الوصول إلى وحدة تحكم التصحيح الخاصة بالمستعرض.<br/>
             كائن <b>console</b> هو خاصية لكائن النافذة.<br/>
             يتم الوصول إلى كائن <b>console</b> باستخدام:<br/>

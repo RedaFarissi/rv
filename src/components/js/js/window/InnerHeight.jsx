@@ -13,12 +13,10 @@ export default function InnerHeight(){
 document.getElementById("outerHeight").innerHTML = window.outerHeight + "px"`
     }
 
-
-
     return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript innerHeight</h1>
-    <article>
+    <article className="mt-5">
         <p className="style_divv">
             ترجع الخاصية <b>innerHeigth</b> ارتفاع منطقة محتوى النافذة.<br/>
             تتم قراءة خاصية <b>innerHeight</b> فقط.<br/>

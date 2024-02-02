@@ -200,7 +200,7 @@ document.getElementById("h2").innerHTML = names.lastIndexOf("Rayan");`
 return(
 <section className="section-conetent">
     <h1 className="heading-style heading-style-js-color">JavaScript Arrays</h1>
-    <article>
+    <article className="mt-5">
         <details>
             <summary className='text-danger'> جميع العناوين  </summary>
                 <div  dir="ltr">
