@@ -1,15 +1,7 @@
 import images from "../imagesDjango";
 import { CodeCommand } from "../../path";
-import { useNavigate } from 'react-router-dom';
-import { useEffect , useRef} from "react";
 
 export default function Introduction(props){
-   const refintro = useRef();
-   useEffect(()=>{
-      
-      
-   },[])
-
 
    return(
       <article id="Introduction">

@@ -1,7 +1,7 @@
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
 import { 
-  Header,Home,Html,Css,Js,React,Mysql,Python,Django,DjangoRestFramework,
-  Laravel,Cmd,Git,Php,
+  Header,Home,Html,Css,Js,React,Mysql,Python,Django,
+  DjangoRestFramework, Laravel,Cmd,Git,Php,
 } from './components/path';
 import "./App.sass"
 
@@ -48,21 +48,19 @@ function App() {
     "Session","Context_Processors","ngrok"
   ]
   const django_rest_framework_matrix = [
-      ["serializers","Serializers_are_not_specific_for_models","Serializers_and_model_validation_from_Serializers","Serializers_and_model_validation_from_models","Serializers-and-related_name"],
+      ["Introduction","What_is_django_rest_framework","What_is_API","Install_Django_Rest_Framework","File_Needed","Change_Content_From_database_to_Json"],
+      ["serializers","What_is_Serializer","Serializers_are_not_specific_for_models","Serializers_and_model_validation_from_Serializers","Serializers_and_model_validation_from_models","Serializers-and-related_name"],
       ["self-kwargs","Why_we_use_self-kwargs","using_self-kwargs_in_models_witout_relationships"],
       ["api-views","get_and_post","get_put_delete",],
-      "django_rest_framework",
-      "django_rest_framework_filter",
       "Connect_django_with_react",
       "Get_Data_From_Django_To_React_js",
-      "BOOK_DJANGO",
       "class_generic_views",
       "Django_Rest_Framework_Permissions",
       "user_authentication_Rest_framework",
       "JWT_tokens"
   ]
   const php_list = [  
-    "HOME","Intro","Install","Syntax","Comments","Variables","Echo / Print","Data Types","Strings","Numbers","Casting","Math","Constants","Magic Constants","Operators","If...Else...Elseif","Switch","Loops","Functions","Arrays","Superglobals","RegEx","Form Handling","Form Validation","Form Required","Form URL/E-mail","Form Complete",
+    "Introduction","Install","Syntax","Comments","Variables","Echo / Print","Data Types","Strings","Numbers","Casting","Math","Constants","Magic Constants","Operators","If...Else...Elseif","Switch","Loops","Functions","Arrays","Superglobals","RegEx","Form Handling","Form Validation","Form Required","Form URL/E-mail","Form Complete",
   ]
   const laravel_matrix = [
     ["MVC" , "what_is_laravel","what_we_need_to_use_laravel","First_Laravel_Project","run_project","artisan","views","route","route_to_views_without_puch_data","route_to_views_and_puch_data","request","Controller","group_duplicate_items_on_one_page","ussing_css_and_javaScript","route_and_name","handle_data_in_views","create_controller_to_use_data","method_in_controller","recource","list_all_route_in_project",],

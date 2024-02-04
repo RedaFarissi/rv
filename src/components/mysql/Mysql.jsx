@@ -3,7 +3,7 @@ import { CodeHighlighter  } from "../path";
 
 export default function Sql(props){
     const arrays = props.sql_list.map(e => <li className="p-0 m-0 list-group-item">
-        <a  href={`/mysql/${e.toLowerCase().replace(/\s/g, '-')}`}  className="p-2"> 
+        <a  href={`/mysql#${e.toLowerCase().replace(/\s/g, '-')}`}  className="p-2"> 
             <i className="fa-solid fa-caret-right me-1"></i>SQL {e}
         </a>
     </li>)
