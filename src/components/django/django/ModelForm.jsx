@@ -10,8 +10,8 @@ export default function ModelForm(){
                 في <b>Django</b>، <b>Forms.ModelForm</b> عبارة عن فئة مقدمة من إطار عمل <b>Django</b> لإنشاء <b>forms</b> استنادًا إلى <b>models</b>. تعد هذه الفئة جزءًا من نظام التعامل مع <b>form</b> الخاص بـ <b>Django</b>، والذي يسمح لك بإنشاء <b>HTML forms</b> بسهولة لجمع مدخلات المستخدم والتحقق من صحتها . <br/>
             </p>
             <CodeCommand>python manage.py startapp app</CodeCommand>
-            <CodeHighlighter code={codes[12].ModelForm[0]} file_name="project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[12].ModelForm[1]} file_name="project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[12].ModelForm[0]} file_name="project / project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[12].ModelForm[1]} file_name="project / project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[12].ModelForm[2]} file_name="project / app / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[12].ModelForm[3]} file_name="project / app / models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[12].ModelForm[4]} file_name="project / app / forms.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>

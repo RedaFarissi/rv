@@ -11,8 +11,8 @@ export default function DjangoFilter(){
                يوفر <b>Django</b> مجموعة متنوعة من الطرق لتصفية مجموعات الاستعلامات، مما يسمح لك بالتعبير عن الاستعلامات المعقدة لاسترداد البيانات من قاعدة البيانات. 
             </p>
             <h2 className="title-h2" id="models_Objecjs_filter"> 1 - <bdi>objects.filter()</bdi> </h2>
-            <CodeHighlighter code={codes[13].models_Objecjs_filter[0]} file_name="project / setting.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[13].models_Objecjs_filter[1]} file_name="project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[13].models_Objecjs_filter[0]} file_name="project / project / setting.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[13].models_Objecjs_filter[1]} file_name="project / project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[13].models_Objecjs_filter[2]} file_name="project / product / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[13].models_Objecjs_filter[3]} file_name="project / product / models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[13].models_Objecjs_filter[4]} file_name="project / product / admin.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>

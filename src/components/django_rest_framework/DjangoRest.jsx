@@ -3,8 +3,8 @@ import React, { useEffect, useRef} from 'react';
 import {
     Introduction,Serializers,SelfKwargs,ApiViews,ConnectDjangoWithReact,
     GetDataFromDjangoToReact,ClassGenericViews,Permissions,UserAuthentication,
-    JWT_Tokens
-} from "./pathDjangoRestFramework";
+    JWT_Tokens,
+} from "./pathDjangoRest";
 
 
 export default function DjangoRestFramework(props){
@@ -21,6 +21,7 @@ export default function DjangoRestFramework(props){
                 if(index === 0){
                 dt_title = key.toLowerCase().replace(/_/g, '-');
                     return(<dt className="aside-dl-dt" key={key}>
+                        
                                 <Link to={`/django-rest-framework/${dt_title}/`}>
                                     <i className="fa-solid fa-caret-right"></i> {key.replace(/_/g, ' ')}
                                 </Link>

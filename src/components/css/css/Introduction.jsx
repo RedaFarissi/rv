@@ -76,15 +76,15 @@ const codeExemple1 = {
         </p>
     </article>
     <article>
-        <h2 className="title-h2">2. طريقة إنشاء ملف CSS </h2>
-        <h5>1. طريقة إنشاء الملف</h5>
+        <h2 className="title-h2">2. طريقة إنشاء ملف CSS و ربط الملف ب html  </h2>
+        <h3  className="title-h3">1. طريقة إنشاء الملف</h3>
         <p className="style_divv">
             لإنشاء ملف <b>CSS</b> كل ما عليك فعله إنشاء ملف وأن تقوم بئعطائه إسم و صيغة <b>CSS</b> تم التأكد أن ملف داخل نفس المجلد الذي يحتوي ملف <b>html</b> .
         </p>
         <div className="mital">متال : </div>
         <ul><li>في هاذا المتال قمنا بتسمية الملفين <b>reda</b> ولاكن يختلف الإمتداد فالملف الأول يحمل إمتداد <b>css</b> والملف التاني يحمل إمتداد <b>html</b> .</li></ul>
         <img src={images.css0_Introduction} alt="intro" className="img"/>
-        <h5>2. طريقة ربط الملف html ب css</h5>
+        <h3  className="title-h3">2. طريقة ربط الملف html ب css</h3>
         <p className="style_divv">
             لربط ملف <b>html</b> بملف <b>css</b> يجب إستخدام الوسم <kbd>&lt;link&gt;</kbd> مع السمة <b>rel</b> وقيمة <b>stylesheet</b> .<br/> 
         </p>

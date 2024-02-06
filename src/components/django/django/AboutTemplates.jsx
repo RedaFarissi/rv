@@ -14,7 +14,7 @@ export default function AboutTemplates(){
             <ul><li> أنشئ ملفًا بأي اسم تريده في <bdi><b>templates/</b></bdi> في هذا المثال، الاسم هو <b>base.html</b></li></ul>
             <img src={images.django12} className="img"/>
             <CodeHighlighter code={codes[5].Create_Public_templates[0]} file_name="project / tempaltes / base.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[5].Create_Public_templates[1]} file_name="project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[5].Create_Public_templates[1]} file_name="project / project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[5].Create_Public_templates[2]} file_name="project / app / tempaltes / list_products.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <h2 className="title-h2" id="templates_tags">2 -  templates tags </h2>
             <table className="table table-bordered text-light">

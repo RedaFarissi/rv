@@ -12,10 +12,10 @@ export default function StaticAndMediaFiles(){
             </p>
             <h3 className="title-h3"> 1 - أضف في ملف settings.py </h3>
             <CodeHighlighter code={codes[4].Manage_static_files[0]} language="python" addclassName="mt-3 mb-3" copie={true}/> 
-            <CodeHighlighter code={codes[4].Manage_static_files[1]} file_name="project / settings.py" language="python" addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[4].Manage_static_files[1]} file_name="project / project / settings.py" language="python" addclassName="mt-3 mb-3" copie={true}/> 
             <h3 className="title-h3"> 2 -  أضف في ملف urls.py </h3>
             <CodeHighlighter code={codes[4].Manage_static_files[2]} language="python" addclassName="mt-3 mb-3" copie={true}/> 
-            <CodeHighlighter code={codes[4].Manage_static_files[3]} file_name="project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[4].Manage_static_files[3]} file_name="project / project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             <ul><li>قم بإنشاء مجلد باسم <b>static/</b> في نفس مسار ملف <b>manage.py</b> مما يعنب بجانب تطبيقات المنشأت في مشروعك </li></ul>
             <img src={images.django9} className="img"/>
             <ul><li>يمكنك الآن إضافة جميع الملفات الثابتة أو المجلدات التي تحتوي على ملفات ثابت في <b>static/</b></li></ul>
@@ -30,10 +30,10 @@ export default function StaticAndMediaFiles(){
             <h2 className="title-h2" id="Media_files"> 2 - إدارة ملفات الوسائط (media/)</h2>
             <h3 className="title-h3"> 1 - أضف في ملف settings.py </h3>
             <CodeHighlighter code={codes[4].Media_files[0]}  language="python" addclassName="mt-3 mb-3" copie={true}/> 
-            <CodeHighlighter code={codes[4].Media_files[1]} file_name="project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[4].Media_files[1]} file_name="project / project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             <h3 className="title-h3"> 2 -  أضف في ملف urls.py </h3>
             <CodeHighlighter code={codes[4].Media_files[2]}  language="python" addclassName="mt-3 mb-3" copie={true}/> 
-            <CodeHighlighter code={codes[4].Media_files[3]} file_name="project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[4].Media_files[3]} file_name="project / project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             <h3 className="title-h3" id="Media_files"> 3 - تثبيت الحزمة Pillow</h3>
             <p className="style_divv">
                للسماح للمستخدم بتحميل الملفات في <b>Django</b>، يجب عليك تثبيت <b>Pillow</b> 
@@ -43,8 +43,8 @@ export default function StaticAndMediaFiles(){
             <div className="mital">مثال : </div>
             <h6 className="title-h6"> إنشاء تطبيق آخر (app)</h6>
             <CodeCommand>python manage.py startapp app</CodeCommand>
-            <CodeHighlighter code={codes[4].Media_files[4]} file_name="project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-            <CodeHighlighter code={codes[4].Media_files[5]} file_name="project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[4].Media_files[4]} file_name="project / project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[4].Media_files[5]} file_name="project / project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             <CodeHighlighter code={codes[4].Media_files[7]} file_name="project / app / models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             <CodeHighlighter code={codes[4].Media_files[6]} file_name="project / app / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             <CodeHighlighter code={codes[4].Media_files[8]} file_name="project / app / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 

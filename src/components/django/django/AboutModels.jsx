@@ -32,8 +32,8 @@ export default function AboutModels(){
             <div className="mital">مثال 1 : </div>
             <h3 className="title-h3">إنشاء app بالاسم testing</h3>
             <CodeCommand>python manage.py startapp testing</CodeCommand>
-            <CodeHighlighter code={codes[7].get_absolute_url[0]} file_name="projet / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[7].get_absolute_url[1]} file_name="projet / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[0]} file_name="projet / project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[1]} file_name="projet / project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[7].get_absolute_url[2]} file_name="projet / testing / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[7].get_absolute_url[3]} file_name="projet / testing / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[7].get_absolute_url[4]} file_name="projet / testing / models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
@@ -96,8 +96,8 @@ export default function AboutModels(){
             <div className="mital"> مثال 2 : </div>
             <h3 className="title-h3">إنشاء app بالاسم shop</h3>
             <CodeCommand>python manage.py startapp shop</CodeCommand>
-            <CodeHighlighter code={codes[7].get_absolute_url[7]}  file_name="projet / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[7].get_absolute_url[8]}  file_name="projet / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[7]}  file_name="projet / project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[8]}  file_name="projet / project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[7].get_absolute_url[9]}  file_name="projet / shop / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[7].get_absolute_url[10]} file_name="projet / shop / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[7].get_absolute_url[11]} file_name="projet / shop / models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
@@ -214,32 +214,32 @@ export default function AboutModels(){
             <Result title='annotate' route="http://localhost:8000/">
                <h2> All Books </h2>
                <table className="css-border-collapse-ex1 css-border-collapse-ex1-table2">
-                  <tr><th className="css-border-collapse-ex1 p-3">Title</th><th className="css-border-collapse-ex1 p-3">Author</th><th className="css-border-collapse-ex1 p-3">Number Page</th></tr>
-                  <tr> <td className="css-border-collapse-ex1 px-3 py-2">A</td> <td className="css-border-collapse-ex1 px-3 py-2">author1</td><td className="css-border-collapse-ex1 p-2">90</td></tr>
-                  <tr> <td className="css-border-collapse-ex1 px-3 py-2">B</td> <td className="css-border-collapse-ex1 px-3 py-2">author2</td><td className="css-border-collapse-ex1 p-2">29</td></tr>
-                  <tr> <td className="css-border-collapse-ex1 px-3 py-2">C</td> <td className="css-border-collapse-ex1 px-3 py-2">author3</td><td className="css-border-collapse-ex1 p-2">239</td></tr>
-                  <tr> <td className="css-border-collapse-ex1 px-3 py-2">AA</td><td className="css-border-collapse-ex1 px-3 py-2">author1</td><td className="css-border-collapse-ex1 p-2">39</td></tr>
-                  <tr> <td className="css-border-collapse-ex1 px-3 py-2">BB</td><td className="css-border-collapse-ex1 px-3 py-2">author2</td><td className="css-border-collapse-ex1 p-2">39</td></tr>
-                  <tr> <td className="css-border-collapse-ex1 px-3 py-2">CC</td><td className="css-border-collapse-ex1 px-3 py-2">author3</td><td className="css-border-collapse-ex1 p-2">239</td></tr>
+                  <tr><th className="text-dark css-border-collapse-ex1 p-3">Title</th><th className="text-dark css-border-collapse-ex1 p-3">Author</th><th className="text-dark css-border-collapse-ex1 p-3">Number Page</th></tr>
+                  <tr> <td className="text-dark css-border-collapse-ex1 px-3 py-2">A</td> <td className="text-dark css-border-collapse-ex1 px-3 py-2">author1</td><td className="text-dark css-border-collapse-ex1 p-2">90</td></tr>
+                  <tr> <td className="text-dark css-border-collapse-ex1 px-3 py-2">B</td> <td className="text-dark css-border-collapse-ex1 px-3 py-2">author2</td><td className="text-dark css-border-collapse-ex1 p-2">29</td></tr>
+                  <tr> <td className="text-dark css-border-collapse-ex1 px-3 py-2">C</td> <td className="text-dark css-border-collapse-ex1 px-3 py-2">author3</td><td className="text-dark css-border-collapse-ex1 p-2">239</td></tr>
+                  <tr> <td className="text-dark css-border-collapse-ex1 px-3 py-2">AA</td><td className="text-dark css-border-collapse-ex1 px-3 py-2">author1</td><td className="text-dark css-border-collapse-ex1 p-2">39</td></tr>
+                  <tr> <td className="text-dark css-border-collapse-ex1 px-3 py-2">BB</td><td className="text-dark css-border-collapse-ex1 px-3 py-2">author2</td><td className="text-dark css-border-collapse-ex1 p-2">39</td></tr>
+                  <tr> <td className="text-dark css-border-collapse-ex1 px-3 py-2">CC</td><td className="text-dark css-border-collapse-ex1 px-3 py-2">author3</td><td className="text-dark css-border-collapse-ex1 p-2">239</td></tr>
                </table>
                <h2> annotate </h2>
                <table className="css-border-collapse-ex1 css-border-collapse-ex1-table2 mb-3">
-                  <tr><th className="css-border-collapse-ex1 p-3">Authors</th> <th className="css-border-collapse-ex1 p-3">Number of books</th></tr>
-                  <tr><td className="css-border-collapse-ex1 px-3 py-2">author1</td> <td className="css-border-collapse-ex1 px-3 py-2">2</td></tr>
-                  <tr><td className="css-border-collapse-ex1 px-3 py-2">author2</td> <td className="css-border-collapse-ex1 px-3 py-2">2</td></tr>
-                  <tr><td className="css-border-collapse-ex1 px-3 py-2">author3</td> <td className="css-border-collapse-ex1 px-3 py-2">2</td></tr>
+                  <tr><th className="text-dark css-border-collapse-ex1 p-3">Authors</th> <th className="text-dark css-border-collapse-ex1 p-3">Number of books</th></tr>
+                  <tr><td className="text-dark css-border-collapse-ex1 px-3 py-2">author1</td> <td className="text-dark css-border-collapse-ex1 px-3 py-2">2</td></tr>
+                  <tr><td className="text-dark css-border-collapse-ex1 px-3 py-2">author2</td> <td className="text-dark css-border-collapse-ex1 px-3 py-2">2</td></tr>
+                  <tr><td className="text-dark css-border-collapse-ex1 px-3 py-2">author3</td> <td className="text-dark css-border-collapse-ex1 px-3 py-2">2</td></tr>
                </table>
                <table className="css-border-collapse-ex1 css-border-collapse-ex1-table2 mb-3">
-                  <tr><th className="css-border-collapse-ex1 p-3">Authors</th> <th className="css-border-collapse-ex1 p-3">Sum pages in all books for each author</th></tr>
-                  <tr><td className="css-border-collapse-ex1 px-3 py-2">author1</td> <td className="css-border-collapse-ex1 px-3 py-2">129</td></tr>
-                  <tr><td className="css-border-collapse-ex1 px-3 py-2">author2</td> <td className="css-border-collapse-ex1 px-3 py-2" >68</td></tr>
-                  <tr><td className="css-border-collapse-ex1 px-3 py-2">author3</td> <td className="css-border-collapse-ex1 px-3 py-2">478</td></tr>
+                  <tr><th className="text-dark css-border-collapse-ex1 p-3">Authors</th> <th className="text-dark css-border-collapse-ex1 p-3">Sum pages in all books for each author</th></tr>
+                  <tr><td className="text-dark css-border-collapse-ex1 px-3 py-2">author1</td> <td className="text-dark css-border-collapse-ex1 px-3 py-2">129</td></tr>
+                  <tr><td className="text-dark css-border-collapse-ex1 px-3 py-2">author2</td> <td className="text-dark css-border-collapse-ex1 px-3 py-2" >68</td></tr>
+                  <tr><td className="text-dark css-border-collapse-ex1 px-3 py-2">author3</td> <td className="text-dark css-border-collapse-ex1 px-3 py-2">478</td></tr>
                </table>
                <table className="css-border-collapse-ex1 css-border-collapse-ex1-table2">
-                  <tr><th className="css-border-collapse-ex1 p-3">Authors</th> <th className="css-border-collapse-ex1 p-3">Avg pages in all books for each author</th></tr>
-                  <tr><td className="css-border-collapse-ex1 px-3 py-2">author1</td> <td className="css-border-collapse-ex1 px-3 py-2">64.5</td></tr>
-                  <tr><td className="css-border-collapse-ex1 px-3 py-2">author2</td> <td className="css-border-collapse-ex1 px-3 py-2">34.0</td></tr>
-                  <tr><td className="css-border-collapse-ex1 px-3 py-2">author3</td> <td className="css-border-collapse-ex1 px-3 py-2">239.0</td></tr>
+                  <tr><th className="text-dark css-border-collapse-ex1 p-3">Authors</th> <th className="text-dark css-border-collapse-ex1 p-3">Avg pages in all books for each author</th></tr>
+                  <tr><td className="text-dark css-border-collapse-ex1 px-3 py-2">author1</td> <td className="text-dark css-border-collapse-ex1 px-3 py-2">64.5</td></tr>
+                  <tr><td className="text-dark css-border-collapse-ex1 px-3 py-2">author2</td> <td className="text-dark css-border-collapse-ex1 px-3 py-2">34.0</td></tr>
+                  <tr><td className="text-dark css-border-collapse-ex1 px-3 py-2">author3</td> <td className="text-dark css-border-collapse-ex1 px-3 py-2">239.0</td></tr>
                </table>
             </Result>  
       </article>

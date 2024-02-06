@@ -48,8 +48,8 @@ function App() {
     "Session","Context_Processors","ngrok"
   ]
   const django_rest_framework_matrix = [
-      ["Introduction","What_is_django_rest_framework","What_is_API","Install_Django_Rest_Framework","File_Needed","Change_Content_From_database_to_Json"],
-      ["serializers","What_is_Serializer","Serializers_are_not_specific_for_models","Serializers_and_model_validation_from_Serializers","Serializers_and_model_validation_from_models","Serializers-and-related_name"],
+      ["Introduction","What_is_django_rest_framework","What_is_API","Install_Django_Rest_Framework"/*,"File_Needed","Change_Content_From_database_to_Json" */],
+      ["serializers","What_is_Serializer","Serializers_not_specific_for_models","Serializers_and_model","Serializers_validation_from_models","Serializers-and-related_name"],
       ["self-kwargs","Why_we_use_self-kwargs","using_self-kwargs_in_models_witout_relationships"],
       ["api-views","get_and_post","get_put_delete",],
       "Connect_django_with_react",

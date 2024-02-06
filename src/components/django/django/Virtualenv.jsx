@@ -1,5 +1,5 @@
 import images from "../imagesDjango";
-import { CodeCommand , CodeHighlighter , Result } from "../../path";
+import { CodeCommand } from "../../path";
 
 export default function Virtualenv(){
     return(

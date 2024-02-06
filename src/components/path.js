@@ -16,7 +16,7 @@ export {default as Python} from './python/Python';
 
 export {default as Django} from './django/Django';
 
-export {default as DjangoRestFramework} from './django_rest_framework/DjangoRestFramework';
+export {default as DjangoRestFramework} from './django_rest_framework/DjangoRest';
 
 export {default as Php} from './php/Php';
 

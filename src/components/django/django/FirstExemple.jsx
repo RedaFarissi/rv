@@ -18,17 +18,17 @@ export default function FirstExemple(){
             <CodeCommand>python manage.py startapp helloapp</CodeCommand>
             <h2 className="title-h2" id="settings"> 2- Setting .</h2> 
             <ul><li>تحتاج إلى إضافة اسم التطبيق إلى <b>INSTALLED_APPS</b> في <b>settings.py</b> :</li></ul>
-            <CodeHighlighter code={codes[2].settings[0]} file_name="project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].settings[0]} file_name="project / project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             
             <h2 className="title-h2" id="includes_app_to_urlpatterns">3 - تضمين helloapp على urlpatterns .</h2> 
             <h3 className="title-h3">متال 1 : </h3>
-            <CodeHighlighter code={codes[2].includes_app_to_urlpatterns[0]} file_name="project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].includes_app_to_urlpatterns[0]} file_name="project / project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             <ul>
                <li>الآن كل المسار الذي تم إنشاؤها في <bdi><b>helloapp/urls.py</b></bdi> موجود في : <bdi><b>localhost:8000/helloapp/</b></bdi></li>
                <li> <b>سنستخدم المتال 1 في بقية المشروع </b> </li>
             </ul>
             <h3 className="title-h3">متال 2 : </h3>
-            <CodeHighlighter code={codes[2].includes_app_to_urlpatterns[1]} file_name="project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].includes_app_to_urlpatterns[1]} file_name="project / project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             <ul><li>الآن كل المسار الذي تم إنشاؤها في <bdi><b>helloapp/urls.py</b></bdi> موجود في : <bdi><b>localhost:8000/</b></bdi></li></ul>
             
             <h2 className="title-h2" id="templates"> 4 - مجلد templates/</h2>
