@@ -177,8 +177,97 @@ def book(request):
             <img src={images.django_rest_5} alt="django rest" className="w-100 mb-2" />
 
             <br id="Serializers_validation" />
-            <h2 className="title-h2"> 4 -  </h2>
-           
+            <h2 className="title-h2"> 4 - التحقق من صحة التسلسل (Serializers validation)</h2>
+            <p className="style_divv">
+                يعد التحقق من الصحة في المُسلسلات <b>(serializers)</b> أمرًا مهمًا للتأكد من أن البيانات التي يتم إدخالها أو إخراجها تلتزم بقيود ومتطلبات معينة. يوفر <b>Django</b> طريقة لإجراء التحقق من صحة حقول المُسلسل باستخدام الدوال على صيغة <bdi><b>validate_{"<"}field_name{">"}</b></bdi>.
+                
+            </p>
+            <div className="mital">متال : </div>
+            <ul><li>إنشاء التطبيق <b>myApp</b> </li></ul>
+            <CodeCommand>python manage.py startapp myApp</CodeCommand>
+            <CodeHighlighter  code={`INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+
+    'rest_framework',           # install django rest framework
+    'app.apps.AppConfig',       
+    'book.apps.BookConfig',     
+    'myApp.apps.MyappConfig',     # new app
+]`} language="python" file_name="project_name / project_name / setting.py" addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter  code={`from django.contrib import admin
+from django.urls import path , include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls')) ,
+    path('app/', include('app.urls')),
+    path('book/', include('book.urls')),    
+    path('my-app/', include('myApp.urls')),    #new path
+]`} language="python" file_name="project_name / project_name / urls.py" addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter  code={`from django.urls import path
+from . import views
+   
+urlpatterns = [
+    path('', views.create_book, name='my_app_test'),
+]`} language="python" file_name="project_name / myApp / urls.py" addclassName="mt-3 mb-3" copie={true}/>
+
+            <CodeHighlighter  code={`from django.db import models
+
+class Book(models.Model):
+    title = models.CharField(max_length=255)
+    author = models.CharField(max_length=255)
+    publication_year = models.PositiveIntegerField()`} language="python" file_name="project_name / myApp / models.py" addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter  code={`from .models import Book
+from rest_framework import serializers
+from datetime import datetime
+
+class BookSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Book
+        fields = '__all__'
+
+    def validate_publication_year(self, value):
+        # Get the current date and time
+        current_datetime = datetime.now()
+        # Extract the year from the datetime object
+        current_year = current_datetime.year
+
+        current_year += 1  # add 1 to current year
+
+        if value > current_year:
+            raise serializers.ValidationError("Publication year cannot be in the future")
+
+        return value`} language="python" file_name="project_name / myApp / serializers.py" addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter  code={`from rest_framework import status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from .models import Book
+from .serializers import BookSerializer
+
+@api_view(['POST'])
+def create_book(request):
+    if request.method == 'POST':
+        serializer = BookSerializer(data=request.data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)`} language="python" file_name="project_name / myApp / views.py" addclassName="mt-3 mb-3" copie={true}/>
+            <CodeCommand>python manage.py makemigrations</CodeCommand>
+            <CodeCommand>python manage.py migrate</CodeCommand>
+            <h3 className="title-h3">نشر بيانات صالحة (POST valid data)</h3>
+            <img src={images.django_rest_6} alt="django rest" className="w-100" />
+            <ul className="my-3"><li> عند النقر فوق زر <b>POST</b> </li></ul>
+            <img src={images.django_rest_7} alt="django rest" className="w-100" />
+            <h3 className="title-h3">حاول نشر بيانات غير صالحة (Try to POST invalid data)</h3>
+            <img src={images.django_rest_8} alt="django rest" className="w-100" />
+            <ul className="my-3"><li> عند النقر فوق زر <b>POST</b> </li></ul>
+            <img src={images.django_rest_9} alt="django rest" className="w-100" />
         </article>
    </>
    )
