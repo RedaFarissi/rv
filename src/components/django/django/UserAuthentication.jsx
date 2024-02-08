@@ -74,7 +74,6 @@ export default function UserAuthentication(){
               <hr />
               <p className="ms-2 fs-14">You’re seeing this error because you have DEBUG = True in your Django settings file. Change that to False, and Django will display a standard 404 page.</p>
         </Result>
-
         <ul><li>كل هذا المسار في الحسابات جاهز لاستخدام كل ما تحتاجه هو <bdi><b>templates/</b></bdi> </li></ul>
         <h3 className="title-h3">2 - Create templates  </h3>
         <ul>

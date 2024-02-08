@@ -267,7 +267,111 @@ def create_book(request):
             <h3 className="title-h3">حاول نشر بيانات غير صالحة (Try to POST invalid data)</h3>
             <img src={images.django_rest_8} alt="django rest" className="w-100" />
             <ul className="my-3"><li> عند النقر فوق زر <b>POST</b> </li></ul>
-            <img src={images.django_rest_9} alt="django rest" className="w-100" />
+            <img src={images.django_rest_9} alt="django rest" className="w-100 mb-2" />
+            <h2 className="title-h2"> 5 - المسلسلات والأسماء ذات الصلة (Serializers and related_name)</h2>
+            <p className="style_divv">
+                عندما تقوم بتعريف <b>ExternalKey</b>، يقوم <b>Django</b> تلقائيًا بإنشاء علاقة عكسية على النموذج ذي الصلة. تتيح لك السمة ذات الصلة تحديد اسم هذه العلاقة العكسية.
+            </p>           
+            <div className="mital">متال : </div>
+            <ul><li>إنشاء التطبيق <b>myApp</b> </li></ul>
+            <CodeCommand>python manage.py startapp new_app</CodeCommand>
+            <CodeHighlighter  code={`INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+
+    'rest_framework',  
+    'app.apps.AppConfig',
+    'book.apps.BookConfig',   
+    'myApp.apps.MyappConfig',     
+    'new_app.apps.NewAppConfig',     # new app
+]
+`} language="python" file_name="project_name / project_name / setting.py" addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter  code={`from django.contrib import admin
+from django.urls import path , include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls')) ,
+    path('app/', include('app.urls')),
+    path('book/', include('book.urls')),
+    path('my-app/', include('myApp.urls')),    
+    path('new_app/', include('new_app.urls')),    #new path   
+]`} language="python" file_name="project_name / project_name / urls.py" addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter  code={`from django.urls import path
+from . import views
+   
+urlpatterns = [
+    path('', views.author_list, name='author_list'),
+]`} language="python" file_name="project_name / new_app / urls.py" addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter  code={`from django.db import models
+
+class Author(models.Model):
+    class Choices(models.TextChoices):
+        ONE = '1'
+        TWO = '2'
+        THREE = '3'
+        
+    name = models.CharField(max_length=100)
+    age = models.PositiveSmallIntegerField(default=2)
+    start_date = models.DateField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+class Book(models.Model):
+    title = models.CharField(max_length=100)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='books')
+
+    def __str__(self):
+        return f"{self.title} by {self.author}"`} language="python" file_name="project_name / new_app / models.py" addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter  code={`from rest_framework import serializers
+from .models import Book, Author
+
+
+class BookSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Book
+    fields = '__all__'
+
+
+class AuthorSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Author
+    fields = ("pk", "name", "books", "start_date")`} language="python" file_name="project_name / new_app / serializers.py" addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter  code={`from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+from .models import Author
+from .serializers import AuthorSerializer
+
+@api_view(['GET'])
+def author_list(request):
+    authors = Author.objects.all()
+    serializer = AuthorSerializer(authors , many=True).data
+    return Response(serializer , status=status.HTTP_200_OK)`} language="python" file_name="project_name / new_app / views.py" addclassName="mt-3 mb-3" copie={true}/>
+            <CodeCommand>python manage.py makemigrations</CodeCommand>
+            <CodeCommand>python manage.py migrate</CodeCommand>
+            <CodeCommand>python manage.py shell</CodeCommand>
+            <CodeCommand> 
+                {">>>"} from new_app.models import Author, Book<br/>
+                {">>>"}<br/>
+                {">>>"} <span style={{color:"green"}}># Create two authors</span><br/>
+                {">>>"} author1 = Author.objects.create(name='Author 1', age=30, start_date='2022-01-01')<br/>
+                {">>>"} author2 = Author.objects.create(name='Author 2', age=25, start_date='2023-09-01')<br/>
+                {">>>"}<br/>
+                {">>>"} <span style={{color:"green"}}># Create two books for each author</span><br/>
+                {">>>"} book1_author1 = Book.objects.create(title='Book 1 by Author 1', author=author1)<br/>
+                {">>>"} book2_author1 = Book.objects.create(title='Book 2 by Author 1', author=author1)<br/>
+                {">>>"}<br/>
+                {">>>"} book1_author2 = Book.objects.create(title='Book 1 by Author 2', author=author2)<br/>
+                {">>>"} book2_author2 = Book.objects.create(title='Book 2 by Author 2', author=author2)<br/>
+            </CodeCommand>
+            <img src={images.django_rest_10} alt="django rest" className="w-100 mb-2" />
+
         </article>
    </>
    )
