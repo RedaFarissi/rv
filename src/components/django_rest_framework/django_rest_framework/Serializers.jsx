@@ -268,7 +268,9 @@ def create_book(request):
             <img src={images.django_rest_8} alt="django rest" className="w-100" />
             <ul className="my-3"><li> عند النقر فوق زر <b>POST</b> </li></ul>
             <img src={images.django_rest_9} alt="django rest" className="w-100 mb-2" />
-            <h2 className="title-h2"> 5 - المسلسلات والأسماء ذات الصلة (Serializers and related_name)</h2>
+
+            <br id="Serializers_and_related_name"/>
+            <h2 className="title-h2" > 5 - المسلسلات والأسماء ذات الصلة (Serializers and related_name)</h2>
             <p className="style_divv">
                 عندما تقوم بتعريف <b>ExternalKey</b>، يقوم <b>Django</b> تلقائيًا بإنشاء علاقة عكسية على النموذج ذي الصلة. تتيح لك السمة ذات الصلة تحديد اسم هذه العلاقة العكسية.
             </p>           

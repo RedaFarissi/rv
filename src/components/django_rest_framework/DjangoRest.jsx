@@ -53,7 +53,7 @@ export default function DjangoRestFramework(props){
                 <Route path='introduction'  element={<Introduction  />} />
                 <Route path='serializers'  element={<Serializers  />} />
                 <Route path='self-kwargs'  element={<SelfKwargs  />} />
-                <Route path='api-views'  element={<ApiViews />} />
+                <Route path='apiview'  element={<ApiViews />} />
                 <Route path='connect-django-with-react'  element={<ConnectDjangoWithReact  />} />
                 <Route path='get-data-from-django-to-react'  element={<GetDataFromDjangoToReact  />} />
                 <Route path='class-generic-views'  element={<ClassGenericViews  />} />

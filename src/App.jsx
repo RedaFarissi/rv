@@ -50,11 +50,12 @@ function App() {
   const django_rest_framework_matrix = [
       ["Introduction","What_is_django_rest_framework","What_is_API","Install_Django_Rest_Framework"/*,"File_Needed","Change_Content_From_database_to_Json" */],
       ["serializers","What_is_Serializer","Serializers_not_specific_for_models","Serializers_and_model","Serializers_validation","Serializers_and_related_name"],
-      ["self-kwargs","Why_we_use_self-kwargs","using_self-kwargs_in_models_witout_relationships"],
-      ["api-views","get_and_post","get_put_delete",],
+      ["self-kwargs","Why_we_use_self-kwargs","get_URL_param_from_function","get_URL_param_from_class"],
+      ["APIView","What_is_APIView","post","get","put","delete",],
+      ["class_generic_views"],
+      "status",
       "Connect_django_with_react",
       "Get_Data_From_Django_To_React_js",
-      "class_generic_views",
       "Django_Rest_Framework_Permissions",
       "user_authentication_Rest_framework",
       "JWT_tokens"
