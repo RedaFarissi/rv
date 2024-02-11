@@ -52,10 +52,9 @@ function App() {
       ["serializers","What_is_Serializer","Serializers_not_specific_for_models","Serializers_and_model","Serializers_validation","Serializers_and_related_name"],
       ["self-kwargs","Why_we_use_self-kwargs","get_URL_param_from_function","get_URL_param_from_class"],
       ["APIView","What_is_APIView","post","get","put","delete",],
-      ["class_generic_views"],
+      ["class_generic_views","ListAPIView","CreateAPIView","RetrieveAPIView","UpdateAPIView","DestroyAPIView","ListCreateAPIView","RetrieveUpdateAPIView","RetrieveDestroyAPIView","RetrieveUpdateDestroyAPIView"],
       "status",
       "Connect_django_with_react",
-      "Get_Data_From_Django_To_React_js",
       "Django_Rest_Framework_Permissions",
       "user_authentication_Rest_framework",
       "JWT_tokens"
@@ -65,13 +64,13 @@ function App() {
   ]
   const laravel_matrix = [
     ["MVC" , "what_is_laravel","what_we_need_to_use_laravel","First_Laravel_Project","run_project","artisan","views","route","route_to_views_without_puch_data","route_to_views_and_puch_data","request","Controller","group_duplicate_items_on_one_page","ussing_css_and_javaScript","route_and_name","handle_data_in_views","create_controller_to_use_data","method_in_controller","recource","list_all_route_in_project",],
-    ["database" , "Connect_with_database","Create_models","create_table_in_db_from_laravel","AddColumnInTable","Foreign_Keys","droppingColumnsFromTable","truncate_models_table","dropTheLastMigrateInDB","Clearalltableindbandcreatehimagain","soft_delete","eloquent_scopes","Seeder_class",  ],
-    ["database Route::resource" , "GetAllDataFromDB","Upload_image","Multiple_Images_Upload","ShowDetail_with_recource","Update_by_id_with_recource","Delete_by_id_with_recource","only_and_except",],
-    ["database Query builder" , "Intro_QueryBuilder","insertInQueryBuilder","GetWithQueryBuilder","full_Exemple_Create_Edit_Delete","Delete_all_Data_with_Query_Builder","truncate_with_Query_Builder",],
-    ["middleware" , "middlewareExemple1", "middlewareExemple2"],
-    ["Tinker" , "useTinker","TinkerExemple1",  ],
-    ["Mail","send-mail"],
-    ["Packages" ,"Authentication_UI","Authentication_Breeze","Paypal_Payment","Stripe_Payment_Integration"],
+    ["database" , "Connect_with_database","Create_models","create_table_in_db_from_laravel","Add_Column_In_Table","Foreign_Keys","drop_ping_Columns_From_Table","truncate_models_table","drop_The_Last_Migrate_In_DB","Clear_all_table_in_db_and_create_him_again","soft_delete","eloquent_scopes","Seeder_class",  ],
+    ["database-route-resource" , "GetAllDataFromDB","Upload_image","Multiple_Images_Upload","ShowDetail_with_recource","Update_by_id_with_recource","Delete_by_id_with_recource","only_and_except",],
+    ["database-query-builder" , "Intro_QueryBuilder","insertInQueryBuilder","GetWithQueryBuilder","full_Exemple_Create_Edit_Delete","Delete_all_Data_with_Query_Builder","truncate_with_Query_Builder",],
+    ["middleware" , "middleware_Exemple1", "middleware_Exemple2"],
+    ["tinker" , "useTinker","TinkerExemple1",  ],
+    ["mail","send-mail"],
+    ["packages" ,"Authentication_UI","Authentication_Breeze","Paypal_Payment","Stripe_Payment_Integration"],
     ["github" ,"clone_laravel_project","laravel_docker"],
   ]
   const git_list  = [ "Introduction","Install_git","Diagram_git","Repository","Branch","Local_Repository","Remote_Repository","Pull_Request","Clone_Repository","Initialize_Repository","git_status","git_add","git_commit","git_branch","git_remote","git_push","Work_as_a_team","git_pull","Existing_Project_powerShell","Existing_Project_App","gitignore_file","submodules","Create_new_branch","Remove_connectio"]
@@ -91,7 +90,6 @@ function App() {
             <Route path='/python/*' element={<Python python_list={python_list} />} />
             <Route path='/django/*' element={<Django django_matrix={django_matrix} />} />
             <Route path='/django-rest-framework/*' element={<DjangoRestFramework django_rest_framework_matrix={django_rest_framework_matrix} />} />
-            
             <Route path='/php/*' element={<Php php_list={php_list}  />} />
             <Route path='/laravel/*' element={<Laravel laravel_matrix={laravel_matrix}  />} />
             <Route path='/power-shell' element={<Cmd cmd_list={cmd_list}  />} />

@@ -180,7 +180,6 @@ def book(request):
             <h2 className="title-h2"> 4 - التحقق من صحة التسلسل (Serializers validation)</h2>
             <p className="style_divv">
                 يعد التحقق من الصحة في المُسلسلات <b>(serializers)</b> أمرًا مهمًا للتأكد من أن البيانات التي يتم إدخالها أو إخراجها تلتزم بقيود ومتطلبات معينة. يوفر <b>Django</b> طريقة لإجراء التحقق من صحة حقول المُسلسل باستخدام الدوال على صيغة <bdi><b>validate_{"<"}field_name{">"}</b></bdi>.
-                
             </p>
             <div className="mital">متال : </div>
             <ul><li>إنشاء التطبيق <b>myApp</b> </li></ul>

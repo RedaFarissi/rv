@@ -266,22 +266,22 @@ export default function Git(props){
                         نقوم بإنشاء ملف <bdi><b>.gitignore</b></bdi> بدون امتداد إذا أردنا تجاهل بعض الملفات أو المجلدات أو الأنماط.<br/><br/>
                         فيما يلي مثال لكيفية إنشاء ملف <bdi><b>.gitignore</b></bdi> لاستبعاد مجلد <b>node_modules</b> من مجلد التفاعل، والذي يمكن أن يكون كبيرًا وليس من الضروري تضمينه في المستودع
                     </p>
-                    <h4>1 - تجاهل مجلد </h4>
+                    <h3 className="title-h3">1 - تجاهل مجلد </h3>
                     <div className="alert-light rounded" dir="ltr">
                         <div className="bg-secondary text-light rounded-top p-2">&nbsp;.gitignore</div>
                         <div className="alert pb-0"><pre>node_modules/</pre></div>
                     </div>
-                    <h4>2 - تجاهل ملف معين</h4>
+                    <h3 className="title-h3">2 - تجاهل ملف معين</h3>
                     <div className="alert-light rounded" dir="ltr">
                         <div className="bg-secondary text-light rounded-top p-2">&nbsp;.gitignore</div>
                         <div className="alert pb-0"><pre>exemple.txt</pre></div>
                     </div>
-                    <h4>3 - لتجاهل كافة الملفات ذات الامتداد ".log"، يمكنك إضافة السطر التالي</h4>
+                    <h3 className="title-h3">3 - لتجاهل كافة الملفات ذات الامتداد ".log"، يمكنك إضافة السطر التالي</h3>
                     <div className="alert-light rounded" dir="ltr">
                         <div className="bg-secondary text-light rounded-top p-2">&nbsp;.gitignore</div>
                         <div className="alert pb-0"><pre>*.log</pre></div>
                     </div>
-                    <h4>4 - لتجاهل كافة الملفات والمجلدات التي تبدأ بـ "temp_"</h4>
+                    <h3 className="title-h3">4 - لتجاهل كافة الملفات والمجلدات التي تبدأ بـ "temp_"</h3>
                     <div className="alert-light rounded" dir="ltr">
                         <div className="bg-secondary text-light rounded-top p-2">&nbsp;.gitignore</div>
                         <div className="alert pb-0"><pre>temp_*</pre></div>

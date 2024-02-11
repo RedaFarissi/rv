@@ -47,6 +47,7 @@ export default function Header(){
                     <div className={`fas fa-user text-light`}></div>
                   </div>
                 </Link> 
+                <button> light mode </button>
             </div>
         </div> 
     </div>
