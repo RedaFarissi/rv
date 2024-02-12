@@ -2,13 +2,13 @@ import { Routes, Route , Link } from "react-router-dom";
 import React, { useEffect, useRef} from 'react';
 import {
     Introduction,Serializers,SelfKwargs,ApiViews,ClassGenericViews,Status,
-    ConnectDjangoWithReact,Permissions,UserAuthentication,JWT_Tokens,
+    ConnectDjangoWithReact,
 } from "./pathDjangoRest";
 
 
 export default function DjangoRestFramework(props){
     const AsideRef = useRef(null);
-    
+
     useEffect(() => {
        AsideRef.current.scrollTop = localStorage.getItem("django_aside") || 0;
     }, []); 
@@ -56,10 +56,7 @@ export default function DjangoRestFramework(props){
                 <Route path='apiview'  element={<ApiViews />} />
                 <Route path='class-generic-views'  element={<ClassGenericViews  />} />
                 <Route path='status'  element={<Status  />} />
-                <Route path='connect-django-with-react'  element={<ConnectDjangoWithReact  />} />
-                <Route path='permissions'  element={<Permissions  />} />
-                <Route path='user-authentication'  element={<UserAuthentication  />} />
-                <Route path='JWT_Tokens'  element={<JWT_Tokens  />} />                
+                <Route path='drf-and-react'  element={<ConnectDjangoWithReact  />} />
             </Routes>
         </section>
     </main>

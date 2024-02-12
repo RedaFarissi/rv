@@ -5,7 +5,7 @@ export default function Serializers(props){
 
    return(
    <>
-      <h1 className="heading-style heading-style-python-color">Django Rest Framework Serializers </h1>
+      <h1 className="heading-style heading-style-python-color">DRF Serializers </h1>
       <article className="mt-5">
             <h2 className="title-h2" id="What_is_Serializer"> 1 -  ما هو serializer </h2>
             <p className="style_divv">

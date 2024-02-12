@@ -54,10 +54,7 @@ function App() {
       ["APIView","What_is_APIView","post","get","put","delete",],
       ["class_generic_views","ListAPIView","CreateAPIView","RetrieveAPIView","UpdateAPIView","DestroyAPIView","ListCreateAPIView","RetrieveUpdateAPIView","RetrieveDestroyAPIView","RetrieveUpdateDestroyAPIView"],
       "status",
-      "Connect_django_with_react",
-      "Django_Rest_Framework_Permissions",
-      "user_authentication_Rest_framework",
-      "JWT_tokens"
+      [ "DRF_and_React","Connect_Django_with_React","Get_data_in_React","Permissions","Authentication"],
   ]
   const php_list = [  
     "Introduction","Install","Syntax","Comments","Variables","Echo / Print","Data Types","Strings","Numbers","Casting","Math","Constants","Magic Constants","Operators","If...Else...Elseif","Switch","Loops","Functions","Arrays","Superglobals","RegEx","Form Handling","Form Validation","Form Required","Form URL/E-mail","Form Complete",
@@ -68,7 +65,7 @@ function App() {
     ["database-route-resource" , "GetAllDataFromDB","Upload_image","Multiple_Images_Upload","ShowDetail_with_recource","Update_by_id_with_recource","Delete_by_id_with_recource","only_and_except",],
     ["database-query-builder" , "Intro_QueryBuilder","insertInQueryBuilder","GetWithQueryBuilder","full_Exemple_Create_Edit_Delete","Delete_all_Data_with_Query_Builder","truncate_with_Query_Builder",],
     ["middleware" , "middleware_Exemple1", "middleware_Exemple2"],
-    ["tinker" , "useTinker","TinkerExemple1",  ],
+    ["tinker" , "useTinker","TinkerExemple1"],
     ["mail","send-mail"],
     ["packages" ,"Authentication_UI","Authentication_Breeze","Paypal_Payment","Stripe_Payment_Integration"],
     ["github" ,"clone_laravel_project","laravel_docker"],

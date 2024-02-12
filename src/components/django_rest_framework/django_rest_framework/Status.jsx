@@ -3,7 +3,7 @@ import { CodeHighlighter } from "../../path";
 export default function Status(props){
    return(
 <>
-   <h1 className="heading-style heading-style-python-color">Django Rest Framework Status </h1>
+   <h1 className="heading-style heading-style-python-color">DRF Status </h1>
    <article className="mt-5">
       <p className="style_divv">
          في إطار التطوير باستخدام <b>Django Rest Framework (DRF)</b>، يوفر وحدة <b>status</b> مجموعة من أكواد حالة <b>HTTP</b> القياسية التي يمكنك استخدامها عند التعامل مع استجابات الواجهة البرمجية <b>(API)</b>. هذه الرموز مفيدة للإشارة إلى نجاح أو فشل طلب <b>HTTP</b> وتوفير معلومات إضافية حول النتيجة.<br/>

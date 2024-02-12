@@ -6,9 +6,9 @@ export default function ConnectDjangoWithReact(props){
 
    return(
    <>
-      <h1 className="heading-style heading-style-python-color">Connect Django Rest Framework With React</h1>
+      <h1 className="heading-style heading-style-python-color"> DRF and React </h1>
       <article className="mt-5">
-         <h2 className="title-h2"> 1 - قم بتوصيل إطار عمل Django Rest مع React </h2>
+         <h2 className="title-h2" id="Connect_Django_with_React"> 1 - قم بتوصيل إطار عمل Django Rest مع React </h2>
          <h3 className="title-h3">1 - إنشاء virtualenv </h3>
          <CodeCommand>python -m virtualenv env-project</CodeCommand>
          <h3 className="title-h3">2 - تفعيل Virtualenv </h3>
@@ -63,12 +63,13 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'front', 'build', 'static')]   #new`}
 def front(request):
    return render(request, "index.html")`} file_name="project_name / app / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
          <CodeHighlighter code={`from django.contrib import admin
-from django.urls import path
-from app.views import front
+from django.urls import path , include # add include
+from app.views import front   # new
 
 urlpatterns = [
    path('admin/', admin.site.urls),
-   path("", front , name="front"),
+   path('api-auth/', include('rest_framework.urls')) ,  # authenticate
+   path("", front , name="front"),   # new
 ]`} file_name="project_name / project_name / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
          <CodeCommand>python manage.py runserver</CodeCommand>
          <h3 className="title-h3">10 - تغيير React </h3>
@@ -119,6 +120,7 @@ from app.views import front
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls')) ,  # authenticate
     path("", front , name="front"),
     path('api/', include('api.urls')),    # new
 ]`} file_name="project_name / project_name / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
@@ -148,11 +150,11 @@ from rest_framework.generics import ListAPIView
 
 class AuthorView(ListAPIView): 
     queryset = Author.objects.all() 
-    serializer_class = AuthorSerializer`} file_name="project_name / api / views.py.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-         <CodeCommand>python manage.py makemigrations</CodeCommand>
-         <CodeCommand>python manage.py migrate</CodeCommand>
-         <CodeCommand>python manage.py shell</CodeCommand>
-         <CodeCommand>
+    serializer_class = AuthorSerializer`} file_name="project_name / api / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeCommand>python manage.py makemigrations</CodeCommand>
+        <CodeCommand>python manage.py migrate</CodeCommand>
+        <CodeCommand>python manage.py shell</CodeCommand>
+        <CodeCommand>
             {">>>"} from api.models import Author <br/>
             {">>>"} <br/>
             {">>>"} Author.objects.create(name="Reda Eskouni" , age="28") <br/>
@@ -163,50 +165,225 @@ class AuthorView(ListAPIView):
             {"<"}Author: author 3{">"}<br/>
             {">>>"} Author.objects.create(name="author 4" , age="14") <br/>
             {"<"}Author: author 4{">"}<br/>
-         </CodeCommand>
-         <img src={images.django_rest_29} alt="django rest result" className="w-100 mb-2"/>
-         <h2 className="title-h2"> 2 - احصل على البيانات من نقاط النهاية إلى React </h2>
-         <CodeHighlighter code={`import axios from 'axios';
+        </CodeCommand>
+        <img src={images.django_rest_29} alt="django rest result" className="w-100 mb-2"/>
+         
+        <h3 className="title-h3"> 14 - إزالة path('api-auth/', include('rest_framework.urls')) </h3>
+        <CodeHighlighter code={`from django.contrib import admin
+from django.urls import path , include
+from app.views import front
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path("", front , name="front"),
+    path('api/', include('api.urls')),    # new
+]`} file_name="project_name / project_name / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <img src={images.django_rest_30} alt="django rest result" className="w-100 mb-2"/>     
+        
+        <h2 className="title-h2" id="Get_data_in_React"> 2 - احصل على البيانات من نقاط النهاية إلى React </h2>
+        <CodeHighlighter code={`import axios from 'axios';
 import { useState , useEffect} from 'react';
 
 function App() {
     const [data,setData] = useState([]);
     useEffect(() => {
-      const fetchData = async () => {
-          try {
-              const response = await axios.get('http://localhost:8000/api/author-list/');
-              setData(response.data);
-          }catch (error) {
-              console.error('Error fetching data:', error);
-          }
-      };
-      fetchData();
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('http://localhost:8000/api/author-list/');
+                setData(response.data);
+            }catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+        fetchData();
     },[]);
 
 
     return (
-      <div className="App">
-          { 
-            data.map(item => 
-              <ul key={item.id}>
-                <li>ID: {item.id}</li>
-                <li>Name: {item.name}</li>
-                <li>Age: {item.age}</li>
-              </ul>
-            )
-          }
-      </div>
+        <div className="App">
+            { 
+              data.map(item => 
+                <ul key={item.id}>
+                  <li>ID: {item.id}</li>
+                  <li>Name: {item.name}</li>
+                  <li>Age: {item.age}</li>
+                </ul>
+              )
+            }
+        </div>
     );
 }
 
 export default App;`} file_name="project_name / front / src / App.js" language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
-         <Result title={'React App'} logo={react_logo} route="localhost:3000">
+        <Result title={'React App'} logo={react_logo} route="localhost:3000">
             <ul><li>ID: 1</li><li>Name: Reda Eskouni</li><li>Age: 28</li></ul><br/>
             <ul><li>ID: 2</li><li>Name: author 2</li><li>Age: 27</li></ul><br/>
             <ul><li>ID: 3</li><li>Name: author 3</li><li>Age: 22</li></ul><br/>
             <ul><li>ID: 4</li><li>Name: author 4</li><li>Age: 14</li></ul><br/>
         </Result>
-      </article>
-   </>
+        <div className="alert alert-danger">
+            يمكن لأي شخص الحصول على البيانات وهذا ليس عمليا .<br/>
+        </div>
+
+
+        <h2 className="title-h2 mt-3" id="Permissions">3 - الصلاحيات (Permissions) </h2>
+        <p className="style_divv"> 
+           <b>Django Rest Framework (DRF)</b> يوفر طريقة مرنة وقوية لمعالجة الأذونات لعروض <b>API</b> الخاصة بك. تحدد الأذونات في <b>DRF</b> ما إذا كان لدى المستخدم الحقوق اللازمة لأداء إجراء معين على مورد. هناك العديد من الأذونات المدمجة، ويمكنك أيضًا إنشاء أذونات مخصصة لتناسب احتياجاتك الخاصة. 
+        </p>
+        <h3 className="title-h3">1 - إضافة إلى ملف الإعدادات (settings.py)</h3>
+        <CodeHighlighter code={`REST_FRAMEWORK = { #new
+    'DEFAULT_PERMISSION_CLASSES': [
+       'rest_framework.permissions.IsAuthenticated', 
+    ]
+}`} file_name="project_name / project_name / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <img src={images.django_rest_31} alt="django rest result" className="w-100 mb-2"/>     
+        <h3 className="title-h3">2 - إضافة إلى ملف عناوين (urls.py) </h3>
+        <CodeHighlighter code={`from django.contrib import admin
+from django.urls import path , include
+from app.views import front
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls')) , #new authenticate
+    path("", front , name="front"),
+    path('api/', include('api.urls')),
+]`} file_name="project_name / project_name / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <img src={images.django_rest_32} alt="django rest result" className="w-100 mb-2"/>     
+        <CodeCommand>python manage.py createsuperuser</CodeCommand>
+        <img src={images.django_rest_33} alt="django rest result" className="w-100 mb-2"/>     
+        <ul className="fs-4"><li>أي شخص يمتلك حساب يمكنه رؤية البيانات</li></ul>
+        <h3 className="title-h3">3 - تحديد الصلاحيات </h3>
+        <CodeHighlighter code={`from .serializers import AuthorSerializer 
+from .models import Author 
+from rest_framework.generics import ListAPIView
+from rest_framework.permissions import AllowAny  #new
+
+class AuthorView(ListAPIView):
+    permission_classes = (AllowAny ,)   #new
+    queryset = Author.objects.all() 
+    serializer_class = AuthorSerializer`} file_name="project_name / api / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <img src={images.django_rest_29} alt="django rest result" className="w-100 mb-2"/>     
+        <h3 className="title-h3">4 - فئات الصلاحيات المضمنة </h3>
+        <p className="style_divv">
+            يوفر <b>Django</b> العديد من فئات الصلاحيات المضمنة التي يمكن استخدامها للتحكم في الوصول إلى طرق العرض ونقاط النهاية في <b>DRF</b>
+            <ul>
+                <li><b className="text-success">AllowAny :</b> السماح لأي شخص</li>
+                <li><b className="text-success">IsAuthenticated :</b> المصادقة المطلوبة</li>
+                <li><b className="text-success">IsAdminUser :</b> مستخدم المسؤول فقط</li>
+                <li><b className="text-success">IsAuthenticatedOrReadOnly :</b> المصادقة المطلوبة أو القراءة فقط</li>
+                <li><b className="text-success">IsOwnerOrReadOnly :</b> مالك العنصر فقط أو القراءة فقط</li>
+                <li><b className="text-success">DjangoModelPermissions :</b> صلاحيات نموذج دجانجو</li>
+                <li><b className="text-success">DjangoModelPermissionsOrAnonReadOnly :</b> صلاحيات نموذج دجانجو أو القراءة فقط للمستخدم المجهول</li>
+                <li><b className="text-success">DjangoObjectPermissions :</b> صلاحيات الكائن دجانجو</li>
+                <li><b className="text-success">DjangoObjectPermissionsBackend :</b> صلاحيات الكائن دجانجو من الخلفية</li>
+                <li><b className="text-success">IsAdminUserOrReadOnly :</b> مستخدم المسؤول فقط أو القراءة فقط</li>
+                <li><b className="text-success">IsAuthenticatedAndOwnerOrReadOnly :</b> المصادقة المطلوبة ومالك العنصر فقط أو القراءة فقط</li>
+                <li><b className="text-success">TokenHasReadWriteScope :</b> الرمز المميز مطلوب للقراءة والكتابة</li>
+                <li><b className="text-success">TokenHasScope :</b> الرمز المميز مطلوب للوصول</li>
+                <li><b className="text-success">IsAuthenticatedOrTokenHasScope :</b> المصادقة المطلوبة أو الرمز المميز مطلوب للوصول</li>
+            </ul>
+        </p>
+        <h2 className="title-h2" id="Authentication">4 - المصادقة (Authentication)</h2>
+        <p className="style_divv">
+           في واجهة برمجة تطبيقات <b>Django</b>. المصادقة هي عملية التحقق من هوية المستخدم ، وهو أمر مهم لتقييد الوصول إلى موارد أو وظائف معينة.<br/><br/>
+           يتمثل أحد التحديات في مصادقة واجهة برمجة التطبيقات في أن <b>HTTP</b> بروتوكول عديم الحالة ، مما يعني أنه لا توجد طريقة مضمنة لتذكر ما إذا كان المستخدم قد تمت مصادقته من طلب إلى آخر. للتغلب على هذا التحدي ، يتم تمرير معرفات فريدة مع كل طلب <b>HTTP</b> للتحقق من هوية المستخدم.<br/><br/>
+           يوفر إطار عمل <b>Django REST</b> العديد من خيارات المصادقة المضمنة ، مثل المصادقة الأساسية والمصادقة الرمزية ، وهناك أيضًا العديد من حزم الجهات الخارجية المتاحة ، مثل <b>JSON Web Tokens (JWTs)</b>.
+           <ul>
+              <li><b className="text-success">SessionAuthentication :</b> تستخدم لمصادقة الجلسة باستخدام الجلسة الافتراضية في <b>Django</b>.</li>
+              <li><b className="text-success">TokenAuthentication :</b> تستخدم لمصادقة باستخدام الرموز.</li>
+              <li><b className="text-success">BasicAuthentication :</b> تستخدم لمصادقة <b>HTTP</b> الأساسية.</li>
+              <li><b className="text-success">JWTAuthentication :</b> تستخدم لمصادقة باستخدام رموز الويب <b>JSON</b>.</li>
+           </ul>
+           <br/><br/>
+           المصادقة الأساسية هي طريقة مصادقة شائعة الاستخدام حيث يرسل العميل بيانات اعتماده في رأس التخويل لطلب <b>HTTP</b>. يتحقق الخادم من صحة بيانات الاعتماد ويستجيب وفقًا لذلك.<br/><br/>
+           ومع ذلك ، تجدر الإشارة إلى أن المصادقة الأساسية ترسل بيانات الاعتماد بنص عادي ، وهو ما يمثل مخاطرة أمنية كبيرة. لذلك ، يجب استخدامه فقط عبر اتصال <b>HTTPS</b> آمن لمنع التنصت وهجمات الرجل في الوسط.<br/><br/>
+           في هذا الفصل ، يستكشف المؤلف العديد من خيارات المصادقة وإيجابياتها وسلبياتها وكيفية تنفيذها في واجهة برمجة تطبيقات <b>Django</b>. يوفر المؤلف أيضًا نموذج التعليمات البرمجية لإنشاء نقاط نهاية <b>API</b> للتسجيل وتسجيل الدخول وتسجيل الخروج.<br/><br/>
+        </p>
+        <h3 className="title-h3">1 - مصادقة الجلسة (Session authentication)</h3>
+        <p className="style_divv">
+              هو نظام مصادقة شائع يستخدم في مواقع الويب المتجانسة مثل <b>Django</b> التقليدية. تتمثل الميزة الرئيسية لهذا الأسلوب في أنه أكثر أمانًا حيث يتم إرسال بيانات اعتماد المستخدم مرة واحدة فقط ، وليس في كل دورة طلب / استجابة كما هو الحال في المصادقة الأساسية. كما أنه أكثر كفاءة نظرًا لأن الخادم لا يتعين عليه التحقق من بيانات اعتماد المستخدم في كل مرة ، فهو يطابق فقط <b>session ID</b> مع <b>session object</b> الذي يعد بحثًا سريعًا.<br/><br/>
+              ومع ذلك ، هناك أيضًا بعض الجوانب السلبية لمصادقة الجلسة. أولاً ، <u>يكون <b>Session authentication</b> صالحًا فقط داخل المتصفح</u> حيث تم إجراء تسجيل الدخول ولن يعمل عبر نطاقات متعددة. قد يكون هذا مشكلة عندما تحتاج واجهة برمجة التطبيقات إلى دعم واجهات أمامية متعددة مثل موقع ويب وتطبيق جوال. ثانيًا ، يجب أن يظل <b>session object</b> محدثًا مما قد يمثل تحديًا في المواقع الكبيرة ذات الخوادم المتعددة. وثالثًا ، يتم إرسال ملف تعريف الارتباط لكل طلب ، حتى تلك التي لا تتطلب مصادقة ، وهو أمر غير فعال.
+        </p>
+        <h3 className="title-h3">2 - مصادقة الرمز (Token Authentication) </h3>
+        <p className="style_divv">
+           بمجرد أن يرسل العميل بيانات اعتماد المستخدم الأولية إلى الخادم ، يتم إنشاء رمز مميز فريد ثم تخزينه بواسطة العميل إما <b>Cookie</b> أو في <b>local storage</b>. ثم يتم تمرير هذا الرمز المميز في رأس كل وارد طلب <b>HTTP</b> والخادم يستخدمه للتحقق من مصادقة المستخدم. الخادم نفسها لا تحتفظ بسجل للمستخدم ، فقط ما إذا كان الرمز المميز صالحًا أم لا.<br/><br/>
+           مصادقة الرمز المميز هي نوع من المصادقة المستخدمة في تطبيقات الويب ، بما في ذلك واجهات برمجة التطبيقات ، حيث يتم إصدار رمز مميز للعميل بعد المصادقة الناجحة. ثم يتم استخدام هذا الرمز المميز لمصادقة الطلبات اللاحقة من العميل.<br/><br/>
+           في <b>Token Authentication</b> ، يتم عادةً تخزين الرمز المميز في جانب العميل ، إما كملف تعريف ارتباط أو في وحدة تخزين محلية في المتصفح. وذلك لأن العميل يحتاج إلى تضمين الرمز المميز في رأس كل طلب <b>HTTP</b> لاحق إلى الخادم ، بحيث يمكن للخادم التحقق من مصادقة العميل
+        </p>
+        <h3 className="title-h3">3 - مقارنة مصادقة الجلسة و مصادقة الرمز المميز </h3>
+        <p className="style_divv">
+           تعتبر <b className="text-success">Token Authentication</b> أفضل من <b className="text-danger">Session authentication</b> لتطبيقات الويب الحديثة وواجهات برمجة التطبيقات لأنها عديمة الحالة وأكثر قابلية للتوسع. باستخدام مصادقة الرمز المميز ، لا يحتاج الخادم إلى الحفاظ على حالة الجلسة ، مما يعني أنه يمكنه التعامل مع المزيد من الطلبات في وقت واحد دون زيادة التحميل على النظام. كما أنه يسمح بمرونة أفضل من حيث الطلبات عبر النطاقات والواجهات الأمامية المتعددة. عادةً ما تكون الرموز المميزة قصيرة العمر ويمكن إبطالها بسهولة إذا لزم الأمر ، مما يضيف طبقة أمان إضافية.
+        </p>
+        <h3 className="title-h3">4 - إدراج Token Authentication </h3>
+      <CodeHighlighter code={`INSTALLED_APPS = [
+   #...
+
+   'rest_framework',
+   'rest_framework.authtoken',      #new
+]
+
+REST_FRAMEWORK = {            
+    # ...
+   'DEFAULT_AUTHENTICATION_CLASSES' : [   #new
+      'rest_framework.authentication.SessionAuthentication' ,
+      'rest_framework.authentication.TokenAuthentication' , 
+   ],
+}`} file_name="project_name / project_name / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <ul><li>نحتفظ بمصادقة <b>SessionAuthentication</b> لأننا ما زلنا بحاجة إليها لواجهة برمجة التطبيقات القابلة للتصفح الخاصة بنا ، ولكن الآن استخدام الرموز لتمرير بيانات اعتماد المصادقة ذهابًا وإيابًا في رؤوس <b>HTTP</b> الخاصة بنا</li></ul>
+        <h3 className="title-h3">5 - تثبيت dj-rest-auth</h3>
+        <p className="style_divv">
+            <ul>
+                <li><b className="text-success">يوفر وقت التطوير :</b>  يوفر <b>Django-rest-auth</b> نقاط نهاية <b>REST API</b> مسبقة الصنع للمصادقة والتسجيل، لذلك لا يتعين عليك قضاء الوقت في إنشاء نقاط النهاية هذه واختبارها من البداية.</li>
+                <li><b className="text-success">قابل للتخصيص : </b>  يتيح لك <b>django-rest-auth</b> تخصيص سلوك نقاط نهاية المصادقة والتسجيل لتناسب المتطلبات المحددة لمشروعك.</li>
+                <li><b className="text-success">التكامل مع الحزم الأخرى : </b>  يتكامل django-rest-auth مع الحزم الشائعة الأخرى لـ <b>Django</b>، مثل <b>Django Allauth</b> و <b>Django Rest Framework</b>، لتوفير حل شامل لإدارة المستخدم في مشروعك.</li>
+            </ul>
+        </p>
+        <CodeCommand>pip install dj-rest-auth</CodeCommand>
+        <CodeHighlighter code={`INSTALLED_APPS = [
+    #...
+    'rest_framework',
+    'rest_framework.authtoken', 
+    'dj_rest_auth', #new
+    #...
+]`} file_name="project_name / project_name / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={`from django.contrib import admin
+from django.urls import path , include
+from app.views import front
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path("", front , name="front"),
+    path('api/', include('api.urls')),
+    path('api-auth/', include('rest_framework.urls')) , 
+    path('rest-auth/', include('dj_rest_auth.urls')),   #new
+]`} file_name="project_name / project_name / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeCommand>python manage.py migrate</CodeCommand>
+        <div className="alert alert-light" dir="ltr">
+            /rest-auth/ password/reset/ [name='rest_password_reset']<br/>
+            /rest-auth/ password/reset/confirm/ [name='rest_password_reset_confirm']<br/>
+            /rest-auth/ login/ [name='rest_login']<br/>
+            /rest-auth/ logout/ [name='rest_logout']<br/>
+            /rest-auth/ user/ [name='rest_user_details']<br/>
+            /rest-auth/ password/change/ [name='rest_password_change']
+        </div>
+        <img src={images.django_rest_34} alt="django rest result" className="w-100 mb-2"/>
+        <ul><li>بعد النقر على الزر <b>POST</b></li></ul>    
+        <img src={images.django_rest_35} alt="django rest result" className="w-100 mb-2"/>
+
+        <h3 className="title-h3">6 - User Registration </h3>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <CodeHighlighter code={``} file_name="project_name / project_name / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+
+    </article>
+</>
    )
 }

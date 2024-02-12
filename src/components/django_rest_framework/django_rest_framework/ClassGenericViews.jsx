@@ -4,7 +4,7 @@ import images from "../imagesDjangoRest"
 export default function ClassGenericViews(props){
    return(
    <>
-      <h1 className="heading-style heading-style-python-color">Django Rest Framework Generic Views  </h1>
+      <h1 className="heading-style heading-style-python-color">DRF Generic Views  </h1>
       <article className="mt-5">
          <p className="style_divv">
             يوفر <b>Django Rest Framework</b> مجموعة من طرق العرض العامة القائمة على الفئة <b>(class)</b> والتي تعمل على تبسيط تطوير واجهات برمجة تطبيقات <b>RESTful</b> من خلال التعامل مع الأنماط والمهام الشائعة.<br/>
