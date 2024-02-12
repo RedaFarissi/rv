@@ -207,7 +207,6 @@ export default App;`} file_name="project_name / front / src / App.js" language="
             <ul><li>ID: 4</li><li>Name: author 4</li><li>Age: 14</li></ul><br/>
         </Result>
       </article>
-   {/* <CodeHighlighter code={``} file_name="project_name / app / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> */}
    </>
    )
 }
