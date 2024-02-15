@@ -16,7 +16,6 @@ export default function Header(){
     // Handle color mode 
     const themeLight = ["#8080801a","black","#f2f2f2","rgba(0 0 0/5%)","red","rgba(0 0 0/7%)"];
     const themeDark = ["rgb(5 5 5)","#f0fff0","rgb(10 10 10)","rgba(255 255 255/5%)","aqua","rgba(255 255 255/7%)"];
-
     const handleModeColor = (themeColor)=>{
         const [bgBody,textColor,bgAside,styleDivv,titleH2,asideHover] = themeColor;
         document.documentElement.style.setProperty('--bg-body', bgBody);
@@ -25,8 +24,7 @@ export default function Header(){
         document.documentElement.style.setProperty('--aside-hover', bgAside);
         document.documentElement.style.setProperty('--style-divv', styleDivv);
         document.documentElement.style.setProperty('--title-h2', titleH2);
-        document.documentElement.style.setProperty('--aside-hover', asideHover);
-        
+        document.documentElement.style.setProperty('--aside-hover', asideHover);   
         if(bgBody === "rgb(5 5 5)"){
             localStorage.setItem("mode_color","black")
             setModeColor("black");
@@ -35,7 +33,6 @@ export default function Header(){
             setModeColor("white");
         }
     }
-
     useEffect(()=>{
         if(modeColor === "black" && modeColor !== null){
             handleModeColor(themeDark)
