@@ -29,8 +29,8 @@ export default function Button(props){
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color">HTML Button</h1>
-    <article>
+    <h1 className="heading-style">HTML Button</h1>
+    <article className="mt-5">
         <h2 className="title-h2"> 1. الوسم button</h2>
         <p className="style_divv">
             يستخدم الوسم <kbd>&lt;button&gt;</kbd>  في لغة <b>HTML</b> لإنشاء زر قابل للنقر وهو وسم زوجي اي يحتوي على علامة فتح وعلامة إغلاق.<br/>

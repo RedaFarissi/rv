@@ -69,8 +69,8 @@ export default function Input(props){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color">HTML Input</h1>
-    <article>
+    <h1 className="heading-style">HTML Input</h1>
+    <article className="mt-5">
         <h2 className="title-h2">1. الوسم input</h2>
         <p className="style_divv">
             يحدد الوسم <bdi><strong>&lt;input&gt;</strong></bdi> حقل إدخال حيث يمكن للمستخدم إدخال البيانات وهو وسم فردي . <br/>

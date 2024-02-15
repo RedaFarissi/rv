@@ -9,8 +9,8 @@ export default function Textarea(props){
       </form>`
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color"> HTML Textarea </h1>
-    <article>
+    <h1 className="heading-style"> HTML Textarea </h1>
+    <article className="mt-5">
         <h2 className="title-h2">1. الوسم textarea </h2>
         <p className="style_divv">
             يعرف الوسم  <kbd>&lt;textarea&gt;</kbd> عنصر تحكم إدخال نص متعدد الأسطر و هو وسم زوجي  . <br/>

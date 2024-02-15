@@ -2,7 +2,7 @@ import images  from "./imagesMysql"
 import { CodeHighlighter  } from "../path";
 
 export default function Sql(props){
-    const arrays = props.sql_list.map(e => <li className="p-0 m-0 list-group-item">
+    const arrays = props.sql_list.map(e => <li className="list-group-item">
         <a  href={`/mysql#${e.toLowerCase().replace(/\s/g, '-')}`}  className="p-2"> 
             <i className="fa-solid fa-caret-right me-1"></i>SQL {e}
         </a>
@@ -11,9 +11,8 @@ export default function Sql(props){
     return(
 <main>
     <aside className="aside">
-        <ul className="list-group m-0 p-0">
+        <ul className="list-group m-0">
             {arrays}
-            
         </ul>
     </aside>
     <section className="section-conetent">

@@ -10,7 +10,7 @@ const codeExemple = `1. HTML
 
     return(
     <section className="section-conetent">
-        <h1 className="heading-style heading-style-html-color"> HTML Break (br)</h1>
+        <h1 className="heading-style"> HTML Break (br)</h1>
         <article className="mt-5">
             <p className="style_divv">
              الوسم <kbd>&lt;br&gt;</kbd> لا يحتاج إلى وسم إغلاق <bdi><kbd>&lt;br/&gt;</kbd></bdi> مثل الوسوم الأخرى.<br/>

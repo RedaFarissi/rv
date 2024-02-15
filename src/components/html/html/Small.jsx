@@ -14,8 +14,8 @@ export default function Small(props){
     <big><big><big><big> Reda Eskouni  </big></big></big></big><br/>`
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color">HTML Small and Big</h1>
-    <article>
+    <h1 className="heading-style">HTML Small and Big</h1>
+    <article className="mt-5">
         <h2 className="title-h2">1. تصغير الخط </h2>
         <p className="style_divv">
             نستخدم الوسم <kbd>&lt;small&gt;</kbd>   لعرض الكلام الثانوية أو الذي يعتبر أقل أهمية بحجم خط أصغر . <br/>

@@ -4,8 +4,8 @@ export default function Editor() {
 
 return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color mt-2">HTML Editor</h1>
-    <article>
+    <h1 className="heading-style">HTML Editor</h1>
+    <article className="mt-5">
         <h2 className="title-h2">1. ما هو محرر الأكواد</h2>
         <p className="style_divv">
             محرر النصوص البرمجية ومحرر الكود هو محرر نصوص مصمم خصيصا لتحرير الأكواد المصدرية في برنامج حاسوب بواسطة مبرمج. وقد يكون تطبيقا مستقلا أو مدمجا في بيئة تطوير متكاملة.

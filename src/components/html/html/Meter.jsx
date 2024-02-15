@@ -9,8 +9,8 @@ export default function Meter(props){
     <meter id="disk_c" value="99" min="0" max="100" low="50" high="70" optimum="90"></meter><br/>`     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color"> HTML Meter </h1>
-    <article>
+    <h1 className="heading-style"> HTML Meter </h1>
+    <article className="mt-5">
         <h2 className="title-h2">1. الوسم meter</h2>
         <p className="style_divv">
             يعرف الوسم <kbd>&lt;meter&gt;</kbd> قياسا مقياسيا داخل نطاق معروف، أو قيمة كسرية. وهذا ما يعرف أيضا باسم مقياس .<br/>

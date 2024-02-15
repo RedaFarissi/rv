@@ -6,8 +6,8 @@ export default function Image(props){
     const codeExemple2 = `      <img src="./logo/logo.png" width="50%" alt="description"/>`
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color">HTML img</h1>
-    <article>
+    <h1 className="heading-style">HTML img</h1>
+    <article className="mt-5">
         <p className="style_divv mt-5">
             الوسم  <kbd>&lt;img&gt;</kbd> هو وسم  فردي اي ليس له وسم إغلاق . ويستعمل لإضافة الصور لموقعك .  <br/>
             <ul>

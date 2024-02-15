@@ -47,8 +47,8 @@ export default function Style(props){
   ]
     return(
 <section className="section-conetent">
-  <h1 className="heading-style heading-style-html-color">HTML Style </h1>
-  <article>
+  <h1 className="heading-style">HTML Style </h1>
+  <article className="mt-5">
     <p className="style_divv mt-5">
         يتم استخدام الوسم <kbd>&lt;style&gt;</kbd>  في <b>HTML</b>  داخل الوسم <kbd>&lt;head&gt;</kbd> لإضافة أنماط إلى عنصر، مثل اللون والخط والحجم والمزيد .<br/>
         يمكن إستعمال  <b>style</b>  كسمة ويمكن لجميع عناصر <b>HTML</b> تقريبا أن تأخد هذه السمة وكل ذالك ستتعلمه خلال البرنامج التعليمي الخاص بلغة التصميم <b>CSS</b> .<br/>

@@ -47,6 +47,7 @@ export default function DjangoRestFramework(props){
                {matrix}
             </ul>
         </aside>
+        
         <section className="section-conetent">
             <Routes>
                 <Route path='/'  element={<Introduction  />} />

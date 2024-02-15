@@ -9,8 +9,8 @@ export default function Audio(){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color">HTML video</h1>
-    <article>
+    <h1 className="heading-style">HTML video</h1>
+    <article className="mt-5">
         <h2 className="title-h2">1. الوسم video</h2>
         <p className="style_divv">
             وسم ال <kbd>&lt;video&gt;</kbd> يُستخدم عندما نريد وضع مقطع فيديو في الموقع ونضيف دائما له اثنان <b>attribute</b>  إجبارية خاص به:

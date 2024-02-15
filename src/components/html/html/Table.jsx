@@ -213,8 +213,8 @@ export default function Table(props){
     </style>`]
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color">HTML table</h1>
-    <article>
+    <h1 className="heading-style">HTML table</h1>
+    <article className="mt-5">
         <h2 className="title-h2">1. الوسم table </h2>
         <p className="style_divv">
             يستخدم الوسم <kbd>&lt;table&gt;</kbd> في <b>HTML</b> لإنشاء جدول  <br/>

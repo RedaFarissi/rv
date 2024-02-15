@@ -18,8 +18,8 @@ export default function Division(props){
     ]
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color">HTML Division (div)</h1>
-    <article>
+    <h1 className="heading-style">HTML Division (div)</h1>
+    <article className="mt-5">
         <p className="style_divv mt-5">
             الوسم <b>div</b> هو وسم زوجي يكتب على الشكل التالي :  <kbd>&lt;div&gt; content &lt;/div&gt;</kbd>
             <ul>

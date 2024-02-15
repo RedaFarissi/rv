@@ -6,8 +6,8 @@ export default function Paragraph(props){
   <p>This is another paragraph.</p>`
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color">HTML Paragraph (p) </h1>
-    <article>
+    <h1 className="heading-style">HTML Paragraph (p) </h1>
+    <article className="mt-5">
         <p className="style_divv mt-5">
             <ul>
                 <li>يحدد عنصر <kbd>&lt;p&gt;</kbd> فقرة.</li>

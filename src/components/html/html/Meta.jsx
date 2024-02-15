@@ -67,8 +67,8 @@ const codeExemple5  =`<!DOCTYPE html>
 
     return(
 <section className="section-conetent">
-<h1 className="heading-style heading-style-html-color">HTML meta</h1>
-<article>
+<h1 className="heading-style">HTML meta</h1>
+<article className="mt-5">
     <h2 className="title-h2">1. تعريف الوسم meta </h2>
     <p className="style_divv">
         يعرف الوسم <kbd>&lt;meta&gt;</kbd> بيانات التعريف حول مستند <b>HTML</b>. بيانات التعريف هي بيانات (معلومات) حول البيانات .<br/>

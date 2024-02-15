@@ -12,8 +12,8 @@ export default function Dialog(props){
     </dialog>`
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color">HTML Dialog</h1>
-    <article>
+    <h1 className="heading-style">HTML Dialog</h1>
+    <article className="mt-5">
         <p className="style_divv mt-5">
             تحدد الوسم <b>dialog</b> مربع صندوق أو نافذة فرعية.<br/>
             يسهّل عنصر <b>dialog</b> إنشاء مربعات حوار وشروط منبثقة على صفحة ويب. <br/>

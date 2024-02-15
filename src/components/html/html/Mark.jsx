@@ -7,8 +7,8 @@ export default function Mark(props){
 </p>`
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color">HTML mark</h1>
-    <article>
+    <h1 className="heading-style">HTML mark</h1>
+    <article  className="mt-5">
         <p className="style_divv">
         يستخدم الوسم <b>mark</b>   في <b>HTML</b> لتمييز النص ذي الأهمية الخاصة أو الملاءمة في مستند <b>HTML</b>.<br/>
             تعرض المتصفحات تقليديًا النص الموجود داخل الوسم <kbd>&lt;mark&gt;</kbd> كنص بلون خلفية أصفر. <br/>

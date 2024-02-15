@@ -9,8 +9,8 @@ export default function BiDirectionalIsolation(props){
     </bdi>`    
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color"> HTML Bi-Directional Isolation (bdi)</h1>
-    <article>
+    <h1 className="heading-style"> HTML Bi-Directional Isolation (bdi)</h1>
+    <article  className="mt-5">
         <p className="style_divv mt-5">
             <b>BDI</b> تعني العزلة ثنائية الاتجاه.<br/>
             تعزل العلامة <kbd>&lt;bdi&gt;</kbd> جزءًا من النص يمكن تنسيقه في اتجاه مختلف عن النص الآخر خارجه.

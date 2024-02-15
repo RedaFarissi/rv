@@ -46,8 +46,8 @@ export default function ListsUnordered(props){
   </ul>`
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color"> HTML Lists Unordered ul </h1>
-    <article>
+    <h1 className="heading-style"> HTML Lists Unordered ul </h1>
+    <article  className="mt-5">
         <h2 className="title-h2">1. شرح الوسم ul </h2>
         <p className="style_divv">
             نستخدم الوسم <kbd>&lt;ul&gt;</kbd>  لإنشاء  قائمة (نقطية) غير مرتبة.<br/>

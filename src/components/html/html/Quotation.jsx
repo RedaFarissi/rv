@@ -5,8 +5,8 @@ export default function Quotation(props){
     const codeExemple = `    <p>The <q>quick brown fox</q> jumps over the lazy dog.</p>`
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color">  HTML Quotation (q) </h1>
-    <article>
+    <h1 className="heading-style">  HTML Quotation (q) </h1>
+    <article className="mt-5">
         <p className="style_divv mt-5">
             يشير عنصر <kbd>&lt;q&gt;</kbd> في لغة HTML إلى أن النص المتضمن عبارة عن اقتباس قصير مضمّن. تنفذ معظم المتصفحات الحديثة ذلك من خلال إحاطة النص بعلامات اقتباس. هذا العنصر مخصص للاقتباسات القصيرة التي لا تتطلب فواصل فقرات ؛ لعروض الأسعار الطويلة ، استخدم الوسم  <kbd>&lt;blockquote&gt;</kbd>
         </p>

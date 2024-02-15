@@ -8,7 +8,7 @@ import {
 
 
 export default function Php(props){    
-    const arr = props.php_list.map(e => <li className="p-0 m-0 list-group-item">
+    const arr = props.php_list.map(e => <li className="list-group-item">
         <Link to={`/php/${e.toLowerCase().replace(/\s/g, '-')}`} className="p-2">
             <i className="fa-solid fa-caret-right me-1"></i> PHP {e}
         </Link>
@@ -16,7 +16,7 @@ export default function Php(props){
     return(
         <main>
     <aside className="aside">
-        <ul className="list-group m-0 p-0">
+        <ul className="list-group m-0">
             {arr}
         </ul>
     </aside>

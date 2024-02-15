@@ -5,8 +5,8 @@ export default function Iframe(props){
     const codeExemple = `       <iframe width="560" height="315" src="https://www.youtube.com/embed/f0oy-NicIgE?si=ncRrKUBT7RHHFbTt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color">HTML Iframe</h1>
-    <article>
+    <h1 className="heading-style">HTML Iframe</h1>
+    <article  className="mt-5">
         <h2 className="title-h2"> 1. الوسم ifarme </h2>
         <p className="style_divv">
             يحدد الوسم <kbd>&lt;iframe&gt;</kbd> إطار مضمن . يتم استخدام إطار مضمن لتضمين مستند آخر ضمن مستند HTML الحالي.<br/>

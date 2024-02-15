@@ -67,7 +67,7 @@ const codeExemple4 = `<!DOCTYPE html>
 </html>`
 return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color"> HTML Attributes </h1>
+    <h1 className="heading-style"> HTML Attributes </h1>
     <article className="mt-5">
         <h2 className="title-h2">1. ما هو attribute </h2>
         <p className="style_divv">

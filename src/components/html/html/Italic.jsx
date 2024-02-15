@@ -5,7 +5,7 @@ export default function Italic(props){
     const codeExemple = `    italique <br/> <i>italique</i> <hr/> <i>italique</i>`
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color">HTML Italic (i)</h1>
+    <h1 className="heading-style">HTML Italic (i)</h1>
     <article className="mt-5">
         <p className="style_divv">
             الوسم  <kbd>&lt;i&gt;</kbd>  في <b>HTML</b> يستخدم لعرض المحتوى بأسلوب مائل. يستخدم هذا الوسم عمومًا لعرض المصطلح التقني والعبارة والكلمة المهمة بلغة مختلفة .<br/>

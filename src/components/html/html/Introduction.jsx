@@ -12,8 +12,8 @@ export default function Introduction(props){
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color"> HTML Introduction </h1>
-    <article>
+    <h1 className="heading-style"> HTML Introduction </h1>
+    <article className="mt-5">
         <h2 className="title-h2">1. ما هي HTML ؟</h2>
         <p className="style_divv">
          ترمز <b>HTML</b> إلى <b>Hyper Text Markup Language</b> و هي لغة الترميز القياسية لإنشاء صفحات الويب .<br/>

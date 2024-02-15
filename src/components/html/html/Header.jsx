@@ -20,8 +20,8 @@ export default function Header(){
     
     return(
 <section className="section-conetent">
-    <h1 class="heading-style heading-style-html-color">HTML Header</h1>
-    <article>
+    <h1 class="heading-style">HTML Header</h1>
+    <article className="mt-5">
         <p class="style_divv mt-5">
             يمثل العنصر <span className="yellow"><strong>&lt;header&gt;</strong></span> حاوية لمحتوى تمهيدي أو مجموعة من روابط التنقل. 
             يحتوي عنصر <span className="yellow"><strong>&lt;header&gt;</strong></span> عادةً على:<br/>

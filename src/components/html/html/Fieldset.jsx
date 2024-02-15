@@ -16,8 +16,8 @@ export default function Fieldset(props){
     </fieldset>`
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color"> HTML fieldset </h1>
-    <article>
+    <h1 className="heading-style"> HTML fieldset </h1>
+    <article className="mt-5">
         <p className="style_divv mt-5">
             يتم استخدام العلامة <kbd>&lt;fieldset&gt;</kbd> لتجميع العناصر ذات الصلة في نموذج.<br/>
             ترسم العلامة <kbd>&lt;fieldset&gt;</kbd> مربع حول العناصر ذات الصلة.<br/>

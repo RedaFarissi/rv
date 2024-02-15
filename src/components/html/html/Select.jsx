@@ -29,8 +29,8 @@ export default function Select(props){
     </select> `
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style heading-style-html-color">HTML Select</h1>
-    <article>
+    <h1 className="heading-style">HTML Select</h1>
+    <article className="mt-5">
         <h2 className="title-h2">1 . العنصر select </h2>
         <p className="style_divv">
             الوسم  <kbd>&lt;select&gt;</kbd> في لغة  <b>HTML</b> يتم استخدامها لتعريف قائمة منسدلة تظهر عندما ينقر المستخدم فوق عنصر النموذج ويسمح للمستخدم بتحديد أحد الخيارات. لتحديد الخيارات المتوفرة، استخدم الوسم <kbd>&lt;option&gt;</kbd> داخل الوسم <kbd>&lt;select&gt;</kbd>.<br/>

@@ -1,25 +1,24 @@
 @import "../../assests/sass/var"
+@import "../../assests/sass/color"
 
 .header
     position: fixed
     top:0
     z-index: 999
+    background-color: $bgAside   
     width: 100%
-    background-color: rgba( 6 6 6)
     .header-logo 
         font-family: 'Arial', sans-serif
         font-size: 24px
         font-weight: bold
-        color: #f0fff0
+        color:  $textColor
         text-decoration: none
-        text-shadow: 3px 3px 2px black
         text-transform: uppercase
         letter-spacing: 5px
         @media (max-width: 500px)
             display: none        
 
 .header-main
-    
     border-bottom: 0.5px solid rgba(255 255 255/40%) 
     .container
         display: flex
@@ -40,7 +39,15 @@
             border-radius: 10px
             background-color: rgb(35 35 35)
             width: 100%
-
+    .header-icons
+        width: 70px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        i
+            font-size: 20px
+            cursor: pointer
+            color: $textColor
     .desktop-menu-category-list
         margin: 0 35px
 
@@ -62,6 +69,8 @@
         align-items: center
         padding: 0
         margin: 0
+        font-family: 'Arvo', serif
+        font-family: 'Roboto', sans-serif
         .menu-category
             font-size: 15px
             font-weight: 600
@@ -79,6 +88,7 @@
                 padding: 0px 9px
                 text-decoration: none
                 width: max-content
+                color:  $textColor
 
    
 .color-link-nav-light
@@ -88,8 +98,8 @@
         width: 0
         height: 3px
         -webkit-background-clip: text
-        background: linear-gradient(to right, #f0fff0 , #f0fff0, #f0fff0 )
-        color: #f0fff0
+        background: linear-gradient(to right, $textColor , $textColor, $textColor)
+        color:  $textColor
         position: absolute
         bottom: 11px
         left: 8px

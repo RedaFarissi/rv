@@ -18,8 +18,8 @@ p{
     <p>My Paragraph.</p>`]
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color">HTML Link </h1>
-    <article>
+    <h1 className="heading-style">HTML Link </h1>
+    <article className="mt-5">
         <p className="style_divv mt-5">
             يحدد الوسم <kbd>&lt;link&gt;</kbd> العلاقة بين المستند الحالي ومورد خارجي  .<br/>
             غالبا ما يستخدم الوسم <kbd>&lt;link&gt;</kbd> للارتباط بأوراق الأنماط الخارجية أو لإضافة رمز <b>favicon</b> إلى موقعك على الويب.<br/>

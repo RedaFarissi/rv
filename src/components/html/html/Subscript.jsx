@@ -6,8 +6,8 @@ export default function Subscript(props){
     <p>H<sub>2</sub>O<sup>+</sup></p>`
     return(
     <section className="section-conetent">
-        <h1 className="heading-style heading-style-html-color"> HTML Subscript (sub) </h1>
-        <article>
+        <h1 className="heading-style"> HTML Subscript (sub) </h1>
+        <article className="mt-5">
             <p className="style_divv mt-5">
                 يُمثِّل العنصر <kbd>&lt;sub&gt;</kbd>  جزءًا من النص الذي يجب أن يُعرَض في مستوى أدنى (وغالبًا ما يكون أصغر) من المستوى الرئيسي للنص.
                 مثال عن استخدام العنصر <kbd>&lt;sub&gt;</kbd> لكتابة الصيغة الكيميائية للماء H<sub>2</sub>O     

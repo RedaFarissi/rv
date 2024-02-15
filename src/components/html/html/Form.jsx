@@ -51,8 +51,8 @@ export default function Form(props){
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color">HTML Form</h1>
-    <article>
+    <h1 className="heading-style">HTML Form</h1>
+    <article className="mt-5">
         <h2 className="title-h2">1. الوسم form</h2>
         <p className="style_divv">
             يستخدم الوسم  <kbd>&lt;form&gt;</kbd> لإرسال المعلومات إلى الخادم وهو مهم جدا للأشخاص المهتمة بلغة <b>php</b> ولغات أخرى .<br/>

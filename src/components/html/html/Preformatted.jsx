@@ -9,8 +9,8 @@ export default function Preformatted(props){
     </pre>`
     return(
     <section className="section-conetent">
-        <h1 className="heading-style heading-style-html-color"> HTML Preformatted (pre)</h1>
-        <article>
+        <h1 className="heading-style"> HTML Preformatted (pre)</h1>
+        <article className="mt-5">
             <p className="style_divv mt-5">
                 تحدد العلامة <kbd>&lt;pre&gt;</kbd> النص المنسق مسبقًا.  <br/>
                 يتم عرض النص الموجود في عنصر <kbd> &lt;pre&gt;</kbd> بخط ذو عرض ثابت ، ويحافظ النص على كل من المسافات وفواصل الأسطر. سيتم عرض النص تمامًا كما هو مكتوب في شفرة مصدر <b>HTML</b><br/>

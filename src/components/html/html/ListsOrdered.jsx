@@ -40,8 +40,8 @@ export default function ListsOrdered(props){
     </ol>`
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color">HTML ListsOrdered (ol)</h1>
-    <article>
+    <h1 className="heading-style">HTML ListsOrdered (ol)</h1>
+    <article className="mt-5">
         <h2 className="title-h2">1. شرح الوسم ol </h2>
         <p className="style_divv">
             نستخدم الوسم <kbd>&lt;ol&gt;</kbd> لعرض قائمة مرتبة <b>Ordered List</b> في الصفحة و نقصد بذلك عرض مجموعة عناصر مع إظهار رقم كل عنصر تم إدخاله فيها. من أهم ما يميز هذه القوائم أنه يمكنك عرض الترقيم بالشكل الذي تريده, فمثلاً يمكنك عرض أرقام عادية, أحرف أبجدية, أرقام رومانية <br/>

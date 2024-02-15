@@ -42,8 +42,8 @@ const codeExemple5RouteHandle =()=>{
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color">HTML Anchor (a)</h1>
-    <article>
+    <h1 className="heading-style">HTML Anchor (a)</h1>
+    <article className="mt-5">
         <h2 className="title-h2">1. مفهوم الروابط</h2>
         <p className="style_divv">
         الروابط هي جزء أساسي في صفحات الويب، حيث ان الويب تم إنشاؤه أصلاً ليكون بمثابة شبكة معلوماتية من الوثائق المرتبطة ببعضها البعض.<br/><br/>

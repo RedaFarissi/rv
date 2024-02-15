@@ -15,7 +15,7 @@ export default function Heading(props){
     <h6> Reda Eskouni </h6>`
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color">HTML Heading</h1>
+    <h1 className="heading-style">HTML Heading</h1>
     <p className="style_divv mt-5">
         العناوين في لغة <b>HTML</b> من أهم الوسوم التي تسخدم في <b>HTML</b> فالعناوين معرّفة بوسوم من :<br/>
         <kbd>&lt;h1&gt;</kbd> الى ... <kbd>&lt;h1&gt;</kbd> . <kbd>&lt;h6&gt;</kbd> هو أكبر مقاس للعنوان بينما نجد أن الوسم <kbd>&lt;h6&gt;</kbd> هو أصغر مقاس للعناوين.

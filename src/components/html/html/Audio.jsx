@@ -26,8 +26,8 @@ const codeExemple6 = `      <audio src="./music.mp3" controls preload="metadata"
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color">HTML Audio</h1>
-    <article>
+    <h1 className="heading-style">HTML Audio</h1>
+    <article  className="mt-5">
         <h2 className="title-h2">1. الوسم audio</h2>
         <p className="style_divv">
             الوسم  <kbd>&lt;audio&gt;</kbd> يُستخدم عندما نريد وضع ملف صوتي في الموقع ونضيف دائما له اثنان <b>attribute</b> خاص به:

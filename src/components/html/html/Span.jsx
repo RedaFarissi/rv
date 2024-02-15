@@ -6,8 +6,8 @@ export default function Span(props){
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color">HTML Span</h1>
-    <article>
+    <h1 className="heading-style">HTML Span</h1>
+    <article className="mt-5">
         <p className="style_divv mt-5">
             الوسم <b>span</b> هو وسم زوجي يكتب على الشكل التالي :<kbd>&lt;span&gt; content &lt;/span&gt;</kbd><br/>
             <ul>

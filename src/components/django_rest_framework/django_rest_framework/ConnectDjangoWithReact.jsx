@@ -335,7 +335,7 @@ REST_FRAMEWORK = {
             <ul>
                 <li><b className="text-success">يوفر وقت التطوير :</b>  يوفر <b>Django-rest-auth</b> نقاط نهاية <b>REST API</b> مسبقة الصنع للمصادقة والتسجيل، لذلك لا يتعين عليك قضاء الوقت في إنشاء نقاط النهاية هذه واختبارها من البداية.</li>
                 <li><b className="text-success">قابل للتخصيص : </b>  يتيح لك <b>django-rest-auth</b> تخصيص سلوك نقاط نهاية المصادقة والتسجيل لتناسب المتطلبات المحددة لمشروعك.</li>
-                <li><b className="text-success">التكامل مع الحزم الأخرى : </b>  يتكامل django-rest-auth مع الحزم الشائعة الأخرى لـ <b>Django</b>، مثل <b>Django Allauth</b> و <b>Django Rest Framework</b>، لتوفير حل شامل لإدارة المستخدم في مشروعك.</li>
+                <li><b className="text-success">التكامل مع الحزم الأخرى : </b>  يتكامل <b>django-rest-auth</b> مع الحزم الشائعة الأخرى لـ <b>Django</b>، مثل <b>Django Allauth</b> و <b>Django Rest Framework</b>، لتوفير حل شامل لإدارة المستخدم في مشروعك.</li>
             </ul>
         </p>
         <CodeCommand>pip install dj-rest-auth</CodeCommand>
@@ -367,22 +367,254 @@ urlpatterns = [
             /rest-auth/ password/change/ [name='rest_password_change']
         </div>
         <img src={images.django_rest_34} alt="django rest result" className="w-100 mb-2"/>
-        <ul><li>بعد النقر على الزر <b>POST</b></li></ul>    
+        <ul className="mb-2"><li>بعد النقر على الزر <b>POST</b></li></ul>    
         <img src={images.django_rest_35} alt="django rest result" className="w-100 mb-2"/>
+        <h3 className="title-h3">6 - تثبيت  django-allauth (المصادقة) </h3>
+        <p className="style_divv">
+            <b>django-allauth</b> هو نظام مصادقة يستند إلى Django ويوفر مجموعة من طرق العرض والنماذج والقوالب للتعامل مع مصادقة المستخدم والتسجيل وإدارة الحساب.
+        </p>
+        <CodeCommand>pip install django-allauth</CodeCommand>
+        <CodeHighlighter code={`INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'django.contrib.sites',   #new
+    
+    # 3rd-party apps
+    'rest_framework',
+    'corsheaders',
+    'rest_framework.authtoken',   
+    'allauth', #new
+    'allauth.account', #new
+    'allauth.socialaccount', #new
+    'dj_rest_auth',
+    'dj_rest_auth.registration',  #new
+        
+    # app created
+    'app.apps.AppConfig',  
+    'api.apps.ApiConfig', 
+]
+#...
+#...
+MIDDLEWARE = [
+    #...
+    'corsheaders.middleware.CorsMiddleware', 
+    'allauth.account.middleware.AccountMiddleware', #new
+    #...
+]
+#...
+#...
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'    #new
+SITE_ID = 1    #new `} file_name="project_name / project_name / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeCommand>python manage.py migrate</CodeCommand>
+        <CodeHighlighter code={`from django.contrib import admin
+from django.urls import path , include
+from app.views import front
 
-        <h3 className="title-h3">6 - User Registration </h3>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <CodeHighlighter code={``} file_name="project_name / project_name / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls')) , 
+    path("", front , name="front"),
+    path('api/', include('api.urls')),
+    path('rest-auth/', include('dj_rest_auth.urls')), 
+    path('rest-auth/registration/', include('dj_rest_auth.registration.urls')), #new
+]`} file_name="project_name / project_name / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeCommand>python manage.py runserver</CodeCommand>
+        <img src={images.django_rest_36} alt="django rest result" className="w-100 mb-2"/>
+        <ul><li>تحديث ملف <b>views.py</b></li></ul>
+        <CodeHighlighter code={`from .serializers import AuthorSerializer 
+from .models import Author 
+from rest_framework.generics import ListAPIView
+from rest_framework.authentication import TokenAuthentication  #new
 
+class AuthorView(ListAPIView):
+    authentication_classes = (TokenAuthentication ,)   #new
+    queryset = Author.objects.all() 
+    serializer_class = AuthorSerializer`} file_name="project_name / api / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        
+        <h3 className="title-h3"> 7 - التعامل مع التسجيل في React </h3>
+        <CodeHighlighter code={`import { BrowserRouter as Router, Routes, Route , Link} from "react-router-dom";
+import Home from "./home/Home"
+import Login from "./login/Login"
+import CreateCompte from "./create-compte/CreateCompte"
+
+function App() {
+    const url =  "http://localhost:8000";
+
+    const logout =()=>{
+        if(localStorage.getItem('auth_token') !== null){
+            localStorage.removeItem('auth_token')
+            window.location.reload()
+        }
+    }
+
+    return (
+    <Router>
+        <ul>
+            <li> <Link to="/">Home</Link> </li>
+            <li> <Link to="/login">login</Link> </li>
+            <li> <Link to="/create-compte">register</Link> </li>
+            <li onClick={logout}> <u>logout</u> </li>
+        </ul>
+        <Routes>
+            <Route path="/" element={<Home url={url}/>} />
+            <Route path="/login" element={<Login url={url}/>} />
+            <Route path="/create-compte" element={<CreateCompte url={url}/>} />
+        </Routes>
+    </Router>
+    );
+}
+
+export default App;`} file_name="project_name / front / src / App.js" language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={`import { Link , useNavigate} from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
+
+export default function Login(props){
+  const [login , setLogin] = useState({ username:"" , password:"" });
+  const navigate = useNavigate();
+  
+  const handleLogin =(e)=>{
+    setLogin({...login , [e.target.name]: e.target.value});
+  }
+
+  const handleSubmit = async (event) => {
+      event.preventDefault();
+      try{
+          const response = await axios.post(\`\${props.url}/rest-auth/login/\`, login);
+          console.log(response.data.key)
+          localStorage.setItem('auth_token', response.data.key );
+          setLogin({ username:"" , password:"" });
+          navigate('/');
+      }catch(err){
+          alert(err);
+      }
+  }
+
+  return (
+  <>
+    <form method="POST" onSubmit={handleSubmit}>  
+         <div className="form-group">
+             <label htmlFor="username">username</label>
+             <input type="text" name="username" onChange={handleLogin} 
+               className="form-control mt-3" id="username"
+             />
+         </div>
+         <div className="form-group last mb-4">
+             <label htmlFor="password">password</label>
+             <input type="password" name="password" onChange={handleLogin} 
+               className="form-control mt-3" id="password"
+             />
+         </div>
+
+         <input type="submit" name="submit" value="Submit" className="btn text-white btn-block btn-primary"/>
+    </form>        
+
+    <ul>
+        <li><Link to="/forgot_password">forgot password</Link></li>
+        <li><Link to="/create-compte"> Register </Link></li>
+    </ul>
+  </>
+  )
+}`} file_name="project_name / front / src / login / Login.jsx" language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={`import { useState } from "react"
+import axios from 'axios';
+
+export default function CreateAccount(props){
+    const [formData, setFormData] = useState({
+        username:"",
+        email:"", 
+        password1:"" ,
+        password2:""
+    })
+    
+    const hundleSubmit = async (event)=> {
+        event.preventDefault()
+        try{
+          const request = await axios.post(\`\${props.url}/rest-auth/registration/\`, formData);
+          alert(request.data);
+        }catch(err){
+          alert(err);
+        }
+    }
+
+    const changeValue = (event) => {
+        setFormData({...formData , [event.target.name]: event.target.value})
+    }
+    
+    return(
+        <div className="container">
+            <form  method="POST" onSubmit={hundleSubmit}>
+                <div>
+                    <label htmlFor="username">Username</label>
+                    <input type="text" name="username" value={formData.username} 
+                        onChange={changeValue} id="user_name" className="form-control mt-2"
+                    />
+                </div>
+                <div className="mt-2">
+                    <label htmlFor="email">Email</label>
+                    <input type="email" name="email" value={formData.email} 
+                        onChange={changeValue} id="email" className="form-control mt-2"
+                    />
+                </div>
+                <div className="mt-2">
+                    <label htmlFor="password1">Password</label>
+                    <input type="password" name="password1" value={formData.password1} 
+                        onChange={changeValue}  id="password1" className="form-control mt-2"
+                    />
+                </div>
+                <div className="mt-2">
+                    <label htmlFor="password2">Confirm Password</label>
+                    <input type="password" name="password2" value={formData.password2} 
+                        onChange={changeValue}  id="password2" className="form-control mt-2"
+                    />
+                </div>
+                <input type="submit" value="Sign up" className="btn mt-4 text-white btn-block btn-primary"/>
+            </form>
+        </div>
+    )
+}`} file_name="project_name / front / src / create-compte / CreateCompte.jsx" language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={`import axios from 'axios';
+import { useState , useEffect} from 'react';
+
+function Home() {
+    const [data,setData] = useState([]);
+    useEffect(() => {
+      const fetchData = async () => {
+            const authToken = localStorage.getItem('auth_token');
+            try {
+                const response = await axios.get('http://localhost:8000/api/author-list/', {
+                    headers: { Authorization: \`Token \${authToken}\` },
+                });
+                setData(response.data);
+            }catch (error) {
+                console.error('Error fetching data:', error);
+            }
+      };
+      fetchData();
+    },[]);
+
+
+    return (
+      <div className="App">
+          { 
+            data.map(item => 
+              <ul key={item.id}>
+                <li>ID: {item.id}</li>
+                <li>Name: {item.name}</li>
+                <li>Age: {item.age}</li>
+              </ul>
+            )
+          }
+      </div>
+    );
+}
+
+export default Home;`} file_name="project_name / front / src / home / Home.jsx" language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <img src={images.django_rest_37} alt="django rest result" className="w-100 mb-2"/>
     </article>
 </>
    )

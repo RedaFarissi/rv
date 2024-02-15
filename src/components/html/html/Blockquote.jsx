@@ -5,7 +5,7 @@ export default function Blockquote(props){
     const codeExemple = `    <blockquote cite="https://www.google.com/"> google</blockquote>`
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-html-color">HTML Blockquote</h1>
+    <h1 className="heading-style">HTML Blockquote</h1>
     <article className="mt-5">
         <p className="style_divv">
             عند كتابتك لمقالة أو خبر ما أحيانا تحتاج اضافة اقتباس أو نص مأخود من مكان أخر ، ومن أجل ذلك يستخدم <b>blockquote</b>  في هذا الدرس سنشرح كيفيه استخدامهم.
