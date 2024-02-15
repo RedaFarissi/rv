@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "./Header.sass"
 
 export default function Header(){    
-    const [modeColor,setModeColor] = useState(localStorage.getItem("bg_body") || null)
+    const [modeColor,setModeColor] = useState(localStorage.getItem("mode_color") || null)
     // Course links 
     const programing = [{name:"HTML" , link:"html"},{name:"CSS" , link:"css"},{name:"JAVASCRIPT" , link:"js"},{name:"REACT.js" , link:"react"},{name:"MYSQL" , link:"mysql"},{name:"PYTHON" , link:"python"},{name:"DJANGO" , link:"django"},{name:"DJANGO REST FRAMEWORK" , link:"django-rest-framework"},{name:"PHP" , link:"php"},{name:"LARAVEL" , link:"laravel"} ,{name:"Git" , link:"git"},{name:"CMD" , link:"power-shell"},]
     const links = programing.map(e=> 
@@ -14,26 +14,34 @@ export default function Header(){
     </li>);
 
     // Handle color mode 
-    const themeLight = ["#8080801a","black","#00000000","rgba(0 0 0/5%)","red"];
-    const themeDark = ["rgb(5 5 5)","#f0fff0","rgb(10 10 10)","rgba(255 255 255/5%)","aqua"];
+    const themeLight = ["#8080801a","black","#f2f2f2","rgba(0 0 0/5%)","red","rgba(0 0 0/7%)"];
+    const themeDark = ["rgb(5 5 5)","#f0fff0","rgb(10 10 10)","rgba(255 255 255/5%)","aqua","rgba(255 255 255/7%)"];
 
     const handleModeColor = (themeColor)=>{
-        const [bgBody, textColor, bgAside, styleDivv,titleH2] = themeColor;
+        const [bgBody,textColor,bgAside,styleDivv,titleH2,asideHover] = themeColor;
         document.documentElement.style.setProperty('--bg-body', bgBody);
         document.documentElement.style.setProperty('--text-color', textColor);
         document.documentElement.style.setProperty('--bg-aside', bgAside);
+        document.documentElement.style.setProperty('--aside-hover', bgAside);
         document.documentElement.style.setProperty('--style-divv', styleDivv);
         document.documentElement.style.setProperty('--title-h2', titleH2);
+        document.documentElement.style.setProperty('--aside-hover', asideHover);
         
-        localStorage.setItem("bg_body" , bgBody);
-        localStorage.setItem("text_color" , textColor);
-        localStorage.setItem("bg_aside" , bgAside);
-        localStorage.setItem("style_divv" , styleDivv); 
-        localStorage.setItem("title_h2" , titleH2); 
+        if(bgBody === "rgb(5 5 5)"){
+            localStorage.setItem("mode_color","black")
+            setModeColor("black");
+        }else{
+            localStorage.setItem("mode_color","white");
+            setModeColor("white");
+        }
     }
 
     useEffect(()=>{
-       (modeColor === 'rgb(5 5 5)') ? setModeColor("white"):setModeColor("black")
+        if(modeColor === "black" && modeColor !== null){
+            handleModeColor(themeDark)
+        }else{
+            handleModeColor(themeLight)
+        }
     },[]);
 
     return(
@@ -60,7 +68,7 @@ export default function Header(){
                     <i className={`fas fa-user`}></i>
                 </Link> 
                 {
-                    ( modeColor === 'black' )?
+                    (modeColor === "black" && modeColor !== null)?
                     <i class="fa-solid fa-sun text-warning" onClick={()=>{handleModeColor(themeLight)}}></i>:
                     <i class="fa-solid fa-moon" onClick={()=>{handleModeColor(themeDark)}}></i>   
                 }
