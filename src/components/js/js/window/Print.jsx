@@ -13,7 +13,7 @@ export default function Print(){
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript print</h1>
+    <h1 className="heading-style">JavaScript print</h1>
     <article className="mt-5">
         <p className="style_divv">
             تقوم طريقة <b><bdi>print()</bdi></b> بطباعة محتويات النافذة الحالية.<br/>

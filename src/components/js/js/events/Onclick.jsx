@@ -79,7 +79,7 @@ function function_name3() {
 
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onclick</h1>
+    <h1 className="heading-style">JavaScript onclick</h1>
     <article>
         <p className="style_divv mt-5">
             يقع حدث <b>onclick</b> عندما ينقر المستخدم على عنصر.

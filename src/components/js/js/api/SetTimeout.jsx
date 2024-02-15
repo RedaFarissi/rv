@@ -2,10 +2,7 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function SetTimeout(){
-    // function sayHello(){
-    //     let res = document.getElementById("resut")
-    //     res.innerHTML = `<b> Hello App </b>`
-    // }
+
     const codeExemple1= { 
     code: `      <p> click button to run function one time after 3 seconds </p>
      <button onclick="sayHello()" class="btn bg-primary"> click  </button>
@@ -25,7 +22,7 @@ export default function SetTimeout(){
     }  
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript setTimeout</h1>
+    <h1 className="heading-style">JavaScript setTimeout</h1>
     <article>
         <p className="style_divv mt-5">
             تستدعي طريقة <bdi><b>setTimeout()</b></bdi> دالة بعد عدد من المللي ثانية.<br/>

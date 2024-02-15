@@ -56,7 +56,7 @@ result.innerHTML = parent.contains(b);`
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript contains</h1>
+    <h1 className="heading-style">JavaScript contains</h1>
     <article>
         <div className="style_divv mt-5">
             يعيد <b><bdi>contains()</bdi></b> <b>true</b> إذا كانت العقدة سليلة العقدة.<br/>

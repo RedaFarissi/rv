@@ -50,9 +50,9 @@ export default function Clear(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Clear </h1>
-    <article>
-        <p className="style_divv mt-5">
+    <h1 className="heading-style"> CSS Clear </h1>
+    <article className="mt-5">
+        <p className="style_divv">
             تشير الخاصية <b>clear</b> إلى ما إذا كان يمكن وضع عنصر بجوار العناصر تاتي تحتوي على الخاصية <b>float</b>  التي تسبقه أو ما إذا كان يجب نقله لأسفل ليكون أسفل تلك العناصر. تنطبق الخاصية <b>clear</b> على كل من العناصر العائمة وغير العائمة .<br/>
             بصفة عامة من خلال الخاصية <b>clear</b> يمكنك إيقاف تأتير الخاصية <b>float</b> لأن الخاصية <b>float</b> تقوم بتعويم ل العناصر التي تتبعها . 
             تستقبل الخاصية <b>clear</b> القيم التالية :

@@ -50,7 +50,7 @@ function mouseLeave() {
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onmouseleave</h1>
+    <h1 className="heading-style">JavaScript onmouseleave</h1>
     <article>
         <p className="style_divv mt-5">
             يقع حدث <b>onmouseleave</b> عندما يتم تحريك مؤشر الماوس خارج عنصر ما.<br/>

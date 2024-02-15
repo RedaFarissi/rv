@@ -87,7 +87,7 @@ document.getElementById('result').innerHTML = name_Function.apply(obj,obj_arr);`
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript Apply</h1>
+    <h1 className="heading-style">JavaScript Apply</h1>
     <article className="mt-5">
         <p className="style_divv pb-0">
             باستخدام الدالة <bdi><b>apply()</b></bdi>  يمكن استخدام <b>method</b> على كائنات مختلفة. <br/>

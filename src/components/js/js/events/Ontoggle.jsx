@@ -47,7 +47,7 @@ object.addEventListener("toggle", function_name )`
     }
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript ontoggle</h1>
+    <h1 className="heading-style">JavaScript ontoggle</h1>
     <article>
         <p className="style_divv mt-5">
             يقع حدث <b>ontoggle</b> عندما يفتح المستخدم أو يغلق عنصر <kbd>&lt;details&gt;</kbd>.<br/>

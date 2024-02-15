@@ -29,7 +29,7 @@ function add_alert() {
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript alert</h1>
+    <h1 className="heading-style">JavaScript alert</h1>
     <article className="mt-5">
         <p className="style_divv">
             تعرض طريقة <b><bdi>alert()</bdi></b> مربع تنبيه برسالة وزر موافق.<br/>

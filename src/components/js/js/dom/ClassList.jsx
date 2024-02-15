@@ -51,8 +51,8 @@ document.getElementById("styling-id").innerHTML = styling_id.classList;`
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript classList</h1>
-    <article>
+    <h1 className="heading-style">JavaScript classList</h1>
+    <article className="mt-5">
         <h2 className="title-h2">1- classList </h2>
         <p className="style_divv">
             <bdi><b>Element.classList</b></bdi> هي خاصية للقراءة فقط تقوم بإرجاع مجموعة <b>DOMTokenList</b> الحية لسمات فئة العنصر. يمكن بعد ذلك استخدام هذا لمعالجة قائمة الفصل.

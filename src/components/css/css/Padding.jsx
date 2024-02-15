@@ -74,8 +74,8 @@ export default function Padding(props){
       }, []);
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Padding </h1>
-    <article>
+    <h1 className="heading-style"> CSS Padding </h1>
+    <article className="mt-5">
         <h2 className="title-h2"> 1 - الجوانب الداخلية -  padding </h2>
         <p className="style_divv mt-5">
             يتم استخدام الخاصية <b>padding</b> في لغة  <b>CSS</b> لإنشاء مساحة حول محتوى عنصر داخل <b>border</b> في عنصر محدد .<br/>

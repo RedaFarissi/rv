@@ -27,7 +27,7 @@ object.addEventListener("progress", function_name )`
     }
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onprogress</h1>
+    <h1 className="heading-style">JavaScript onprogress</h1>
     <article>
         <p className="style_divv mt-5">
             يقع حدث <b>onprogress</b> عندما يقوم المستعرض بتنزيل الصوت / الفيديو المحدد.<br/><br/>

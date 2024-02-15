@@ -35,9 +35,8 @@ export default function WordWrap(props){
 }
   return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Word-Wrap </h1>
+    <h1 className="heading-style"> CSS Word-Wrap </h1>
     <article>
-
       <p className="style_divv mt-5">
           تتيح الخاصية <b>word-wrap</b> إمكانية كسر الكلمات الطويلة والالتفاف على السطر التالي.
       </p>

@@ -28,7 +28,7 @@ document.getElementById("Number").innerHTML = sum2;`
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript Statements</h1>
+    <h1 className="heading-style">JavaScript Statements</h1>
     <article className="mt-5">
         <p className="style_divv">
             برنامج الكمبيوتر هو قائمة "تعليمات" ليتم "تنفيذها" بواسطة جهاز كمبيوتر .<br/>

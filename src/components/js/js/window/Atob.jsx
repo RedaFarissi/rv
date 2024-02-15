@@ -2,13 +2,7 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Atob(){
-    // function buton(){
-    //     let id = document.getElementById("h2")
-    //     let value = document.getElementById("text").value
-    //     let text = btoa(value);
-    //     id.innerHTML =  "encode :  " + btoa(text) + "<br/>"
-    //     id.innerHTML += "decode :  " + atob(text)
-    // }
+    
     const codeExemple1= { 
     code: `     <h2 id="result"></h2>
 
@@ -23,7 +17,7 @@ result.innerHTML += "<br/><br/> decodes : " + decodes`
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript atob</h1>
+    <h1 className="heading-style">JavaScript atob</h1>
     <article className="mt-5">
         <p className="style_divv">
             تقوم طريقة <bdi><b>atob()</b></bdi> بفك تشفير سلسلة تم تشفيرها بواسطة طريقة <bdi><b>btoa()</b></bdi>.

@@ -30,7 +30,7 @@ object.addEventListener("input", function_name )`
 
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript oninput</h1>
+    <h1 className="heading-style">JavaScript oninput</h1>
     <article>
         <p className="style_divv mt-5">
             يحدث حدث <b>oninput</b> عندما يحصل عنصر على مدخلات المستخدم.<br/>

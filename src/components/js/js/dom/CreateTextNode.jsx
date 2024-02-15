@@ -11,7 +11,7 @@ document.body.appendChild(element);`
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript createTextNode</h1>
+    <h1 className="heading-style">JavaScript createTextNode</h1>
     <article>
         <p className="style_divv mt-5">
             يقوم أسلوب <bdi><b>createTextNode()</b></bdi> بإنشاء عقدة نصية.<br/>

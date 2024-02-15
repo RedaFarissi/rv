@@ -159,7 +159,7 @@ var( --name )`
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Functions </h1>
+    <h1 className="heading-style"> CSS Functions </h1>
     <article>
         <p className="style_divv mt-5">
             تُستخدم وظائف <b>{"CSS"}</b> كقيمة لخصائص <b>{"CSS"}</b> المختلفة .

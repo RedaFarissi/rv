@@ -27,7 +27,7 @@ document.getElementById("test").innerHTML = \`Hello Mr \${firstName} \${lastName
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color"> JavaScript Strings Templates </h1>
+    <h1 className="heading-style"> JavaScript Strings Templates </h1>
     <article className="mt-5">
         <h2 className="title-h2">1.Back-Tics Syntax</h2>
         <p className="style_divv">

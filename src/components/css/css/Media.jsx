@@ -40,7 +40,7 @@ export default function Media(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Media </h1>
+    <h1 className="heading-style"> CSS Media </h1>
     <article>
         <p className="style_divv mt-5">
             تُستخدم القاعدة <b>media</b>  لجعل موقعك متجاوب مع جميع الأجهزة .<br/>

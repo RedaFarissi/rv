@@ -16,7 +16,7 @@ document.getElementById("result").innerHTML = \`Numbers div = \${div.length}\``
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript getElementsByTagName</h1>
+    <h1 className="heading-style">JavaScript getElementsByTagName</h1>
     <article>
         <p className="style_divv mt-5">
             ترجع طريقة <bdi><b>getElementsByTagName()</b></bdi> مجموعة من كافة العناصر ذات اسم علامة محدد.<br/>

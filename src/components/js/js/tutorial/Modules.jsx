@@ -32,7 +32,7 @@ import default class_name from \`./path.js\` `
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript Modules</h1>
+    <h1 className="heading-style">JavaScript Modules</h1>
     <article className="mt-5">
         <p className="style_divv">
             تسمح لك وحدات <b>JavaScript</b> النمطية بتقسيم التعليمات البرمجية الخاصة بك إلى ملفات منفصلة.

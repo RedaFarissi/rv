@@ -6,7 +6,7 @@ export default function ConnectDjangoWithReact(props){
 
    return(
    <>
-      <h1 className="heading-style heading-style-python-color"> DRF and React </h1>
+      <h1 className="heading-style"> DRF and React </h1>
       <article className="mt-5">
          <h2 className="title-h2" id="Connect_Django_with_React"> 1 - قم بتوصيل إطار عمل Django Rest مع React </h2>
          <h3 className="title-h3">1 - إنشاء virtualenv </h3>

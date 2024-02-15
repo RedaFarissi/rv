@@ -32,7 +32,7 @@ export default function TextIndent(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Text-Indent </h1>
+    <h1 className="heading-style"> CSS Text-Indent </h1>
     <article>
         <p class="style_divv mt-5">
             تحدد الخاصية <b>text-indent</b> المسافة البادئة للسطر الأول في كتلة نصية.

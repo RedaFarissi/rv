@@ -103,8 +103,8 @@ export default function Outline(props){
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Outline </h1>
-    <article>
+    <h1 className="heading-style"> CSS Outline </h1>
+    <article className="mt-5">
         <h2 className="title-h2">1. الخاصية outline </h2>
         <p className="style_divv">
             تحدد الخاصية <b>outline</b>  خط مرسوم خارج <b>border</b>  العنصر وهي إختصار للخصائص التالية والتي سنتعلم حولها خلال هذا البرنامج تعليمي :

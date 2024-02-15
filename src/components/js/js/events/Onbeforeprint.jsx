@@ -33,7 +33,7 @@ export default function Onbeforeprint(){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onbeforeprint</h1>
+    <h1 className="heading-style">JavaScript onbeforeprint</h1>
     <article>
         <p className="style_divv mt-5">
             يقع الحدث <b>onbeforeprint</b> عندما تكون الصفحة على وشك الطباعة قبل ظهور مربع حوار الطباعة .<br/>

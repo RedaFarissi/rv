@@ -22,7 +22,7 @@ export default function Visibility(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Visibility </h1>
+    <h1 className="heading-style"> CSS Visibility </h1>
     <article>
         <p class="style_divv mt-5">
             تحدد الخاصية <b>visibility</b>  ما إذا كان العنصر مرئيًا أم لا.<br/>

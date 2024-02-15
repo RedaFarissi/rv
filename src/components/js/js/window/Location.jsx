@@ -2,12 +2,6 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Location(){
-    // document.getElementById("h2").innerHTML = location.host ;
-    // document.getElementById("h22").innerHTML = location.hostname ;
-    // document.getElementById("h222").innerHTML = location.href ;
-    // document.getElementById("h2222").innerHTML = location.origin ;
-    // document.getElementById("h22222").innerHTML = location.pathname ;
-    // document.getElementById("h222222").innerHTML = location.protocol ;
     const codeExemple1= { 
     code: `     <h2 id="result"></h2>
 
@@ -56,7 +50,7 @@ result.innerHTML = location.protocol`
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript location</h1>
+    <h1 className="heading-style">JavaScript location</h1>
     <article className="mt-5">
         <p className="style_divv">
             يحتوي كائن <b>location</b> على معلومات حول عنوان <b>URL</b> الحالي.<br/>

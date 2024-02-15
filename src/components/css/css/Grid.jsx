@@ -61,8 +61,8 @@ export default function Grid(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Grid </h1>
-    <article>  
+    <h1 className="heading-style"> CSS Grid </h1>
+    <article className="mt-5">  
         <h2 className="title-h2">1. display grid</h2>
         <p className="style_divv">
             تستعمل الخاصية <b>display</b> مع القيمة <b>grid</b> ويتم إضافة الخاصية للعنصر لأب وذالك من اجل التحكم بالعناصر الأبناء .<br/>

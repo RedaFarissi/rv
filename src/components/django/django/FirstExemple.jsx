@@ -5,7 +5,7 @@ import { CodeCommand , CodeHighlighter , Result } from "../../path";
 export default function FirstExemple(){
     return(
          <article id="First_Exemple">
-            <h1 className="heading-style heading-style-django-color"> Django First Exemple</h1> 
+            <h1 className="heading-style"> Django First Exemple</h1> 
             <ol className="my-5">
                <li> أنشاء <b>virtualenv</b> </li>
                <li> تثبيت <b>django</b>  </li>

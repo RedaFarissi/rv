@@ -26,7 +26,7 @@ span.test2 {
     
     return (
     <section className="section-conetent">
-        <h1 className="heading-style heading-style-css-color"> CSS Writing-Mode </h1>
+        <h1 className="heading-style"> CSS Writing-Mode </h1>
         <article>
             <p className="style_divv mt-5">
                 خاصية <b>writing-mode</b> في <b>CSS</b> تُستخدم لتعريف اتجاه التقدم الأفقي والرأسي، مما يحدد في النهاية تدفق المحتوى في عنصر مستوى الكتلة. وهي مفيدة بشكل خاص لمعالجة تخطيط النصوص في النصوص غير اللاتينية ولإنشاء أوضاع كتابة رأسية.<br/><br/>

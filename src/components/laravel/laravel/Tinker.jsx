@@ -4,7 +4,7 @@ import { CodeCommand } from "../../path";
 export default function Tinker(props){
    return(
    <>
-      <h1 className="heading-style heading-style-python-color">Laravel Tinker </h1>
+      <h1 className="heading-style">Laravel Tinker </h1>
       <article className="mt-5">
          <hr style={{height: "0.9rem",border:"0.3rem solid black"}}/>
          <h1 className="mt-5"> Tinker </h1>

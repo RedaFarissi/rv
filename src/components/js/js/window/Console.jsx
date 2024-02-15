@@ -11,7 +11,7 @@ console.assert ( x > y + 1 , "Expression returned 'False'");`
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript console</h1>
+    <h1 className="heading-style">JavaScript console</h1>
     <article className="mt-5">
         <p className="style_divv">
             يوفر كائن <b>console</b> الوصول إلى وحدة تحكم التصحيح الخاصة بالمستعرض.<br/>

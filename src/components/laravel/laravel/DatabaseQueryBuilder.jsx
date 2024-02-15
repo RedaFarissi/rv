@@ -5,7 +5,7 @@ export default function DatabaseQueryBuilder(props){
 
    return(
    <>
-      <h1 className="heading-style heading-style-python-color">Laravel Database Query Builder </h1>
+      <h1 className="heading-style">Laravel Database Query Builder </h1>
       <article id="mt-5">
             <div className='h1'>Query builder</div>
             <br id='Intro_QueryBuilder'/><br/>

@@ -127,8 +127,8 @@ const codeExemple9= {
 }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Background </h1>
-    <article>
+    <h1 className="heading-style"> CSS Background </h1>
+    <article className="mt-5">
         <p className="style_divv">
             يتم استخدام خاصية <b>Background</b> في <b>CSS</b> لإضافة تأثيرات خلفية للعناصر.<br/>
             في هذا الفصل، سوف تتعلم حول خصائص خلفية <b>CSS</b> التالية:

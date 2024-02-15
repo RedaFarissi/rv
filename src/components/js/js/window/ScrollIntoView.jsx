@@ -37,7 +37,7 @@ function name_function3() {
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript scrollIntoView</h1>
+    <h1 className="heading-style">JavaScript scrollIntoView</h1>
     <article className="mt-5">
         <p className="style_divv">
             تقوم طريقة <bdi><b>scrollIntoView()</b></bdi> بتمرير محدد إلى المنطقة المرئية من نافذة المتصفح.<br/>

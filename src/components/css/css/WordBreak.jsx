@@ -33,7 +33,7 @@ export default function WordBreak(props){
 }
   return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Word-Break  </h1>
+    <h1 className="heading-style"> CSS Word-Break  </h1>
     <article>
         <p className="style_divv mt-5">
             تُستخدم خاصية <b><bdi>word-break</bdi></b> لتحديد كيفية تطبيق الواصلة على الأماكن التي يتجاوز فيها النص مربع المحتوى الخاص به و تقبل القيم التالية :

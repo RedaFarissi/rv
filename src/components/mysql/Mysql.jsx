@@ -16,7 +16,7 @@ export default function Sql(props){
         </ul>
     </aside>
     <section className="section-conetent">
-        <h1 className="heading-style heading-style-css-color"> MYSQL </h1>
+        <h1 className="heading-style"> MYSQL </h1>
         <article className="mt-5">
             <h2 id="intro" className="title-h2"> 1 -مقدمة حول mysql </h2>
             <h3 className="title-h3"> 1 - ما هو mysql</h3>

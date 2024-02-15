@@ -38,7 +38,7 @@ function function_name3() {
     }
   return(
 <section className="section-conetent">
-  <h1 className="heading-style heading-style-js-color">JavaScript onloadedmetadata</h1>
+  <h1 className="heading-style">JavaScript onloadedmetadata</h1>
   <article>
         <p className="style_divv mt-5">
             يقع حدث <b>onloadedmetadata</b> عندما يتم تحميل بيانات التعريف الخاصة ب <bdi><b>audio/video</b></bdi> المحدد.<br/>

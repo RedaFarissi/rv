@@ -98,8 +98,8 @@ export default function ClipPath(props){
     }
     return(
     <section className="section-conetent">
-        <h1 className="heading-style heading-style-css-color"> CSS Clip-Path </h1>
-        <article>
+        <h1 className="heading-style"> CSS Clip-Path </h1>
+        <article className="mt-5">
             <h2 className="title-h2">1- clip-path </h2>
             <div className="style_divv">
                 تسمح الخاصية <b>clip-path</b>  بقص عنصر إلى شكل أساسي أو إلى مصدر SVG.<br/>

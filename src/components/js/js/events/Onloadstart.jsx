@@ -21,7 +21,7 @@ export default function Onloadstart(){
     }
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onloadstart</h1>
+    <h1 className="heading-style">JavaScript onloadstart</h1>
     <article>
         <p className="style_divv mt-5">
             يقع حدث <b>onloadstart</b> عندما يبدأ المتصفح في البحث عن <bdi><b>audio/video</b></bdi>  المحدد. هذا عندما تبدأ عملية التحميل.<br/><br/>

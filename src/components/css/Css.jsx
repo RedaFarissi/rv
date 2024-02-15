@@ -21,7 +21,6 @@ export default function Css(props){
                 {arrays}
             </ul>
         </aside>
-        <section>
             <Routes>
                 <Route path='/' element={<Introduction />} />
                 <Route path='/introduction' element={<Introduction />} /> 
@@ -96,7 +95,6 @@ export default function Css(props){
                 <Route path='/scss' element={<ScssComponent />} /> 
                 <Route path='/sass' element={<SassComponent />} /> 
             </Routes>
-        </section>
     </main>
     </>
     )

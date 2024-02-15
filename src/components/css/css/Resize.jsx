@@ -69,7 +69,7 @@ export default function Resize(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Resize </h1>
+    <h1 className="heading-style"> CSS Resize </h1>
     <article>
         <p className="style_divv mt-5">
             تُستخدم الخاصية <b>resize</b> في لغة  <b>CSS</b> لتغيير حجم العنصر وفقًا لمتطلبات المستخدم .  <br/>

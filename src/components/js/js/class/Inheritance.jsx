@@ -2,12 +2,6 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Inheritance(){
-    // function super_function(){
-    //     alert("first name : Reda last name : Eskouni") ;
-    //     alert("Hello Reda");
-    //     document.getElementById("btn_test").removeEventListener("click" ,super_function )
-    // }
-    // document.getElementById("btn_test").addEventListener("click" ,super_function )
 
     const codeExemple1= { 
     code: `      <h2 id="result"></h2>
@@ -89,7 +83,7 @@ result.innerHTML = myCar.cnam;`
     };
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript Inheritance</h1>
+    <h1 className="heading-style">JavaScript Inheritance</h1>
     <article>
         <h2 className="title-h2">1 - Inheritance</h2>
         <p className="style_divv">

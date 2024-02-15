@@ -48,7 +48,7 @@ for (let i = 0; i<powerArr.length; i++) {
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript Map</h1>
+    <h1 className="heading-style">JavaScript Map</h1>
     <article className="mt-5">
         <p className="style_divv">
             تُنشئ <bdi><b>map()</b></bdi> مصفوفة جديدة من استدعاء دالة لكل عنصر مصفوفة.<br/>

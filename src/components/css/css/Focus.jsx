@@ -50,9 +50,9 @@ export default function Focus(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Focus </h1>
-    <article>
-        <p className="style_divv mt-5">
+    <h1 className="heading-style"> CSS Focus </h1>
+    <article className="mt-5">
+        <p className="style_divv">
             تستخدم الخاصية <b>focus</b>  في لغة <b>CSS</b> لإستهداف عنصر عندما يتلقى التركيز ( يتم تنشيطه عند النقر ).<br/>
             غالبا ما يتم إستعمال الخاصية <b>focus</b> مع وسوم الإدخال  .  
         </p>

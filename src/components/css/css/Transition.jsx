@@ -109,8 +109,8 @@ export default function Transition(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Transition </h1>
-    <article>
+    <h1 className="heading-style"> CSS Transition </h1>
+    <article className="mt-5">
         <h2 className="title-h2">1. الخاصية transition </h2>
         <p className="style_divv">
             تسمح لك الخاصية <b>transition</b> في لغة <b>CSS</b> بتغيير قيم الخصائص بسلاسة ، خلال مدة معينة .<br/>

@@ -23,7 +23,7 @@ object.addEventListener("load", function_name )`
     }
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onload</h1>
+    <h1 className="heading-style">JavaScript onload</h1>
     <article>
         <p className="style_divv mt-5">
             يقع حدث <b>onload</b> عندما يتم تحميل كائن.<br/>

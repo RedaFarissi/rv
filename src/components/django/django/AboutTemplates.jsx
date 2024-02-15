@@ -5,7 +5,7 @@ import { CodeCommand , CodeHighlighter , Result } from "../../path";
 export default function AboutTemplates(){
     return(
         <article id="about_templates" className="t-5">
-            <h1 className="heading-style heading-style-django-color"> Django templates</h1> 
+            <h1 className="heading-style"> Django templates</h1> 
             <h2 className="title-h2 mt-5" id="Create_Public_templates"> 1 - إنشاء public templates  </h2>    
             <p className="style_divv">
                قم بإنشاء قوالب عامة يمكنك استخدامها في جميع التطبيقات الموجودة في مشروعك   .<br/><br/>

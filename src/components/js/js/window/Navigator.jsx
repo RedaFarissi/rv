@@ -2,11 +2,7 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Navigator(){
-    // document.getElementById("h22").innerHTML = navigator.appName + "<br/>"
-    // document.getElementById("h222").innerHTML = navigator.appVersion + "<br/>"
-    // document.getElementById("h2222").innerHTML = navigator.language + "<br/>"
-    // document.getElementById("h22222").innerHTML = navigator.platform + "<br/>"
-        const codeExemple1= { 
+    const codeExemple1= { 
     code: `     <h2 id="result"></h2>
 
      <script src="./index.js"></script>`,
@@ -42,7 +38,7 @@ export default function Navigator(){
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript navigator</h1>
+    <h1 className="heading-style">JavaScript navigator</h1>
     <article className="mt-5">
         <div className="style_divv">
             يحتوي كائن <b>navigator</b> على معلومات حول المتصفح.<br/>

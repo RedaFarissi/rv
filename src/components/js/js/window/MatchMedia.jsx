@@ -24,7 +24,7 @@ if (matchMedia("(max-width: 500px)").matches) {
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript matchMedia</h1>
+    <h1 className="heading-style">JavaScript matchMedia</h1>
     <article className="mt-5">
         <p className="style_divv">
             تقوم طريقة <bdi><b>matchMedia()</b></bdi> بإرجاع <b>MediaQueryList</b> بالنتائج من الاستعلام .<br/>

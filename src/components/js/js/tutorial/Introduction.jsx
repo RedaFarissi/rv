@@ -59,7 +59,7 @@ function paragragh() {
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript Introduction</h1>
+    <h1 className="heading-style">JavaScript Introduction</h1>
     <article className="mt-5">        
         <h2 className="title-h2">1. ما هي JavaScript ؟</h2>
         <p className="style_divv">

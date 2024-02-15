@@ -186,8 +186,8 @@ export default function Transform(props){
     }, []);
   return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Transform </h1>
-    <article>
+    <h1 className="heading-style"> CSS Transform </h1>
+    <article className="mt-5">
         <h2 className="title-h2"> 1. transform </h2>
         <p className="style_divv">
             تطبق خاصية <b>transform</b>  تحويلًا ثنائي الأبعاد أو ثلاثي الأبعاد على عنصر .<br/>

@@ -34,7 +34,7 @@ export default function Onmousemove(){
     }
   return(
 <section className="section-conetent">
-  <h1 className="heading-style heading-style-js-color">JavaScript onmousemove</h1>
+  <h1 className="heading-style">JavaScript onmousemove</h1>
     <p className="style_divv mt-5">
         يقع حدث <b>onmousemove</b> عندما يتحرك المؤشر أثناء وجوده فوق عنصر.<br/>
         <CodeHighlighter code={code1} language="html" addClass="mt-3 mb-3" copie={true} />

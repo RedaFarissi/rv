@@ -30,9 +30,9 @@ export default function BorderRadius(props){
   }
   return(
     <section className="section-conetent">
-  <h1 className="heading-style heading-style-css-color"> CSS Border-Radius </h1>
-    <article>
-        <p className="style_divv mt-5">
+  <h1 className="heading-style"> CSS Border-Radius </h1>
+    <article className="mt-5">
+        <p className="style_divv">
             تتيح لك خاصية <b>border-radius</b> تحديد الزوايا الدائرية لحدود العنصر. يتم تحديد الانحناء في كل زاوية بنصف قطر واحد أو اثنين من الانحناء مما يجعل من الممكن تحديد قوس لدائرة أو قوس من القطع الناقص.
            <br/> يمكنك إعطاء كل جانب من جوانب العنصر قيمة إنحناء . 
         </p>

@@ -30,7 +30,7 @@ export default function ValidationAPI(){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript Validation API</h1>
+    <h1 className="heading-style">JavaScript Validation API</h1>
     <article className="mt-5">
         <h2 className="title-h2">1- طرق التحقق من صحة القيد </h2>
         <table className="table text-light" dir="ltr">

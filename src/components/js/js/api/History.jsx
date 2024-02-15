@@ -19,8 +19,8 @@ export default function History(){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript history</h1>
-    <article>
+    <h1 className="heading-style">JavaScript history</h1>
+    <article className="mt-5">
         <h2 className="title-h2">1. history</h2>
         <p className="style_divv">
             يوفر <b>Web History API</b> طرقًا سهلة للوصول إلى كائن <bdi><b>windows.history</b></bdi> .<br/>

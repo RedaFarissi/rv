@@ -3,9 +3,7 @@ import { CodeHighlighter ,  Result} from "../../../path";
 import "./RemoveAttribute.css"
 
 export default function RemoveAttribute(){
-  // function removeAttributE(){
-  //   document.getElementById("id_name").removeAttribute("class")
-  // }
+
   const codeExemple1= { 
     head:`
     <style>
@@ -32,8 +30,8 @@ export default function RemoveAttribute(){
     }
   return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript removeAttribute</h1>
-    <article>
+    <h1 className="heading-style">JavaScript removeAttribute</h1>
+    <article className="mt-5">
         <h2 className="title-h2">1- removeAttribute</h2>
         <p className="style_divv">
             تزيل طريقة <bdi>removeAttribute()</bdi> سمة من عنصر. 

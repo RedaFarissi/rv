@@ -24,7 +24,7 @@ object.addEventListener("select", function_name )`
     }
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onselect</h1>
+    <h1 className="heading-style">JavaScript onselect</h1>
     <article>
         <p className="style_divv mt-5">
             يقع حدث <b>onselect</b> بعد تحديد جزء من النص في عنصر ما.<br/>

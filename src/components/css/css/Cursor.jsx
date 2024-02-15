@@ -96,9 +96,9 @@ export default function Cursor(props){
     const [copiedClassName, setCopiedClassName] = useState('');
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Cursor </h1>
-    <article>
-        <p className="style_divv mt-5">
+    <h1 className="heading-style"> CSS Cursor </h1>
+    <article className="mt-5">
+        <p className="style_divv">
             تحدد الخاصية <b>cursor</b> طريقة عرض  مؤشر الماوس عند تحريكه فوق عنصر .<br/>
         </p>
         <div className="mital"> متال : </div>

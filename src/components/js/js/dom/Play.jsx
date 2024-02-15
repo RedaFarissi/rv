@@ -29,7 +29,7 @@ function pauseAudio() {
 
   return(
 <section className="section-conetent">
-  <h1 className="heading-style heading-style-js-color">JavaScript play</h1>
+  <h1 className="heading-style">JavaScript play</h1>
   <article>
     <div className="style_divv mt-5">
         تبدأ طريقة <bdi><b>play()</b></bdi> في تشغيل <b>audio</b> أو <b>video</b> الحالي.<br/>

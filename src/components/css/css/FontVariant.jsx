@@ -20,9 +20,9 @@ export default function FontVariant(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Font-Variant </h1>
-    <article>
-        <div className="style_divv mt-5">
+    <h1 className="heading-style"> CSS Font-Variant </h1>
+    <article className="mt-5">
+        <div className="style_divv">
             تحدد الخاصية <b>font-variant</b> ما إذا كان يجب عرض النص بخط أحرف صغيرة أم لا. <br/>
             في <b>small-caps</b> ، يتم تحويل جميع الأحرف الصغيرة إلى أحرف كبيرة. ومع ذلك ، تظهر الأحرف الكبيرة المحولة بحجم خط أصغر من الأحرف الكبيرة الأصلية في النص.
         </div>

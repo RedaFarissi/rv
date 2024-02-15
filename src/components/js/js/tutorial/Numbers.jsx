@@ -88,7 +88,7 @@ document.getElementById("num").innerHTML = num.toFixed(2);
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript Numbers</h1>
+    <h1 className="heading-style">JavaScript Numbers</h1>
     <article className="mt-5">
         <h2 className="title-h2">1. Numbers</h2>
         <p className="style_divv">

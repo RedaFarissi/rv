@@ -29,7 +29,7 @@ export default function FontWeight(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Font-Weight </h1>
+    <h1 className="heading-style"> CSS Font-Weight </h1>
     <article>
         <p className="style_divv mt-5">
         الخاصية <b>font-weight</b> في <b>CSS</b> تُحدِّد «وزن» (weight، أو السمك) الخط؛ والأوزان المتاحة للاستخدام في خطٍ ما تعتمد على نوع الخط المستخدم <b>font-family</b>، إذ إنَّ بعض الخطوط لا توفِّر إلا نسختين هما <b>normal</b> و <b>bold</b>.

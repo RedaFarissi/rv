@@ -3,14 +3,6 @@ import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Onfocus(){
 
-    //   document.getElementById("InPuT2").onfocus = function(){
-    //     const id = document.getElementById("InPuT2")
-    //     id.style.border = "5px solid red"
-    //     id.style.width = "50%"
-    //     id.style.backgroundColor = "green"
-    //     id.style.color = "white"
-    //     id.style.fontSize = "23px"
-    //   }
     const code1 = `<!-- Code HTML -->
 <input onfocus="function_name()">`
     const code2 = `// Code JavaScript 
@@ -41,7 +33,7 @@ object.addEventListener("focus", function_name )`
     }
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onfocus</h1>
+    <h1 className="heading-style">JavaScript onfocus</h1>
     <article>
         <p className="style_divv mt-5">
             يحدث حدث <bdi><b>onfocus</b></bdi> عندما يتم التركيز على عنصر.<br/>

@@ -142,7 +142,7 @@ function drop(event) {
     
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript ondrag</h1>
+    <h1 className="heading-style">JavaScript ondrag</h1>
     <article>
         <p className="style_divv mt-5">
             يقع حدث <b>ondrag</b> عندما يتم سحب عنصر أو تحديد نص.<br/>

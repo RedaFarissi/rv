@@ -31,7 +31,7 @@ export default function TextTransform(props){
        
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Text-Transform </h1>
+    <h1 className="heading-style"> CSS Text-Transform </h1>
     <article>    
         <p className="style_divv mt-5">
             تتحكم خاصية <b><bdi>text-transform</bdi></b> في الكتابة بالأحرف الكبيرة للنص.

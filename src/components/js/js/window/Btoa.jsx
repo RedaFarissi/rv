@@ -35,7 +35,7 @@ result.innerHTML = text`
 
 return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript btoa</h1>
+    <h1 className="heading-style">JavaScript btoa</h1>
     <article className="mt-5">
         <p className="style_divv">
             تقوم طريقة <bdi><b>btoa</b></bdi> بتشفير سلسلة بنضام <bdi>64-bit</bdi>.<br/>

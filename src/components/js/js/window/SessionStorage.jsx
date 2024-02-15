@@ -22,7 +22,7 @@ result.innerHTML += 'User Role: ' + userRole;`
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript sessionStorage</h1>
+    <h1 className="heading-style">JavaScript sessionStorage</h1>
     <article className="mt-5">
         <p className="style_divv">
             يتيح لك كائن <b>sessionStorage</b> تخزين أزواج المفتاح / القيمة في التصفح .<br/>

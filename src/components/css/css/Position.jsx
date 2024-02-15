@@ -83,7 +83,7 @@ export default function Position(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Position </h1>
+    <h1 className="heading-style"> CSS Position </h1>
     <article>
         <p class="style_divv mt-5">
             تحدد خاصية <b>position</b> طريقة تحديد الموضع المستخدمة للعنصر.

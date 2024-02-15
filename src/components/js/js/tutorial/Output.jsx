@@ -45,7 +45,7 @@ console.log(f_name + " " + l_name)`
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript Output</h1>
+    <h1 className="heading-style">JavaScript Output</h1>
     <article className="mt-5">
         <p className="style_divv">
             يمكن لجافا سكريبت عرض البيانات بطرق مختلفة وهي كتالي :<br/>

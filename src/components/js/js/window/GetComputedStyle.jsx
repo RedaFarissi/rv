@@ -62,7 +62,7 @@ result.innerHTML += "font-size : " + element.getPropertyValue("font-size") + "<b
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript getComputedStyle</h1>
+    <h1 className="heading-style">JavaScript getComputedStyle</h1>
     <article className="mt-5">
         <p className="style_divv">
             تقوم  <bdi><b>Window.getComputedStyle()</b></bdi> بإرجاع كائن يحتوي على قيم جميع خصائص <b>CSS</b> لعنصر ، بعد تطبيق أوراق الأنماط النشطة وحل أي حساب أساسي قد تحتويه هذه القيم.<br/>

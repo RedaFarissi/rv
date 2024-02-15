@@ -5,7 +5,7 @@ import { CodeCommand , CodeHighlighter , Result } from "../../path";
 export default function StaticAndMediaFiles(){
     return( 
         <article id="Static_and_Media_files">
-            <h1 className="heading-style heading-style-django-color"> Django Static files && Media files</h1> 
+            <h1 className="heading-style"> Django Static files && Media files</h1> 
             <h2 className="title-h2 mt-5" id="Manage_static_files"> 1 - إدارة الملفات الثابتة (static/)</h2>
             <p className="style_divv">
                في <b>Django،</b> يعتبر مجلد <b>"static"</b> مجلدًا حيث يمكنك تنظيم وتخزين الملفات الثابتة الخاصة بتطبيق الويب الخاص بك. تتضمن هذه الملفات الثابتة موارد مثل الصور وملفات <b>JavaScript</b> وورق الأنماط <b>CSS</b> وموارد أخرى يستخدمها صفحات الويب الخاصة بك. إليك تفصيل للغرض واستخدام مجلد <b>"static"</b> في <b>Django</b>:

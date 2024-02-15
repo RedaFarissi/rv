@@ -35,7 +35,7 @@ function function_name2(){
     }
   return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript ondurationchange</h1>
+    <h1 className="heading-style">JavaScript ondurationchange</h1>
     <article>
       <p className="style_divv mt-5">
         يقع حدث <b>ondurationchange</b> عندما يتم تغيير مدة <bdi><b>audio/video</b></bdi> .<br/><br/>

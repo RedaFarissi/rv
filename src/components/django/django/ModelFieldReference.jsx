@@ -5,7 +5,7 @@ import { CodeCommand , CodeHighlighter , Result } from "../../path";
 export default function ModelFieldReference(){
     return(
          <article id="Model_Field_Reference"> 
-            <h1 className="heading-style heading-style-django-color"> Django Model Field Reference</h1> 
+            <h1 className="heading-style"> Django Model Field Reference</h1> 
             <h2 className="title-h2 mt-5" id="Definition">1 - تعريف </h2>
             <p className="style_divv">
                في <b>Django</b> يشير <b>(Model Field Reference)</b> إلى مجموعة من الأنواع المدمجة للحقول التي يمكنك استخدامها لتعريف البيانات في نموذج <b>Django</b>. تُستخدم حقول النموذج لتحديد نوع البيانات التي يمكن أن يحتوي عليها كل حقل في نموذج <b>Django</b>، وبالتالي، يساعد في تحديد هيكل ومظهر قاعدة البيانات.<br/><br/>

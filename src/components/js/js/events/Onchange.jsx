@@ -45,7 +45,7 @@ selectElement.addEventListener("change", ()=>{
     },[])
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onchange</h1>
+    <h1 className="heading-style">JavaScript onchange</h1>
     <article>
         <p className="style_divv mt-5">
             يقع حدث <b>onchange</b> عندما يتم تغيير قيمة العنصر.<br/>

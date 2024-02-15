@@ -45,9 +45,9 @@ export default function BoxSizing(props){
         }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Box-Sizing </h1>
-    <article>
-        <p className="style_divv mt-5">
+    <h1 className="heading-style"> CSS Box-Sizing </h1>
+    <article className="mt-5">
+        <p className="style_divv">
             تحدد خاصية <b>Box-sizing</b> كيفية حساب العرض والارتفاع الكليين لعنصر ما . <br/>
             تقبل الخاصية  <b>Box-sizing</b> القيم :
             <ul>

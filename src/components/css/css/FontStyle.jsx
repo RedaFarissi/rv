@@ -18,9 +18,9 @@ p-4 {  font-style: inherit;  }`,
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Font-Style </h1>
-    <article>
-        <p className="style_divv mt-5">
+    <h1 className="heading-style"> CSS Font-Style </h1>
+    <article className="mt-5">
+        <p className="style_divv">
             الخاصية <b>font-style</b> في <b>CSS</b> تُحدِّد إن كان يجب أن يكون شكل الخط عاديًا (normal) أو مائلًا (italic) أو منحرفًا (oblique). وسيختار المتصفح النسخة الأنسب من نوع الخط <b>font-family</b>.<br/>
             يكون للخط المائل بعض سمات الكتابة اليدوية، ويستهلك عادةً مسافة أفقية أقل من الخط العادي، بينما الخط المنحرف (oblique) يُمثِّل نسخةً منحرفة بزاوية معيّنة من الخط العادي؛ وعند عدم توافر نسخة مائلة مخصصة من الخط، فسيكون شكل الخط المائل والمنحرف سواءً.
             <ul>

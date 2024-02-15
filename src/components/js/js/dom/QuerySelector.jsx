@@ -29,8 +29,8 @@ First_child.style.backgroundColor = "red";`
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript querySelector</h1>
-    <article>
+    <h1 className="heading-style">JavaScript querySelector</h1>
+    <article className="mt-5">
         <h2 className="title-h2">1- querySelector</h2>
         <p className="style_divv">
             تُرجع طريقة <bdi><b>querySelector()</b></bdi> العنصر الأول الذي يطابق محدد <b>CSS</b>.<br/>

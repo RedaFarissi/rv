@@ -30,7 +30,7 @@ object.addEventListener("keyup", function_name )`
     }
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onkeyup</h1>
+    <h1 className="heading-style">JavaScript onkeyup</h1>
     <article>
         <p className="style_divv mt-5">
             يحدث حدث <b>onkeyup</b> : لتنقيد الأوامر عند النقر على أحد أزرار الكيبورد و رفع الإصبع عنها .<br/>

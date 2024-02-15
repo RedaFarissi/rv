@@ -29,7 +29,7 @@ export default function Pause(){
     }
   return(
 <section className="section-conetent">
-  <h1 className="heading-style heading-style-js-color">JavaScript pause</h1>
+  <h1 className="heading-style">JavaScript pause</h1>
   <article>
     <p className="style_divv mt-5">
         توقف طريقة <bdi><b>pause()</b></bdi> المؤقت (توقف مؤقتًا) الصوت أو الفيديو قيد التشغيل حاليًا.<br/>

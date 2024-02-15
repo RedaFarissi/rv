@@ -30,7 +30,7 @@ if (localStorage.getItem("test") != null) {
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript localStorage</h1>
+    <h1 className="heading-style">JavaScript localStorage</h1>
     <article className="mt-5">
         <p className="style_divv">
             يسمح لك كائن <b>localStorage</b> بحفظ أزواج المفتاح / القيمة في المتصفح.<br/>

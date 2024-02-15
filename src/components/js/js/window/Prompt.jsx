@@ -59,7 +59,7 @@ export default function Prompt(){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript prompt</h1>
+    <h1 className="heading-style">JavaScript prompt</h1>
     <article className="mt-5">
         <p className="style_divv">
             تعرض طريقة <bdi><b>prompt()</b></bdi> مربع حوار يطالب المستخدم بالإدخال.<br/>

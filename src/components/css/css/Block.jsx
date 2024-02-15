@@ -21,9 +21,9 @@ export default function Block(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Block </h1>
-    <article>  
-        <p className="style_divv mt-5">
+    <h1 className="heading-style"> CSS Block </h1>
+    <article className="mt-5">  
+        <p className="style_divv">
             تستخدم القيمة <b>block</b> مع الخاصية <b>display</b><br/> 
             عند إستخدام القيمة <b>block</b> مع الخاصية <b>display</b> يأخد العنصر  <kbd>width:100%</kbd> . <br/>
             يكون العرض <small><bdi>(width)</bdi></small> و الإرتفاع <small><bdi>(height)</bdi></small>  قابل لتعديل بستخدام الخاصية <b>width</b> و <b>height</b>.<br/>

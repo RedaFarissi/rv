@@ -35,8 +35,8 @@ export default function AccentColor(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Accent-Color </h1>
-    <article>
+    <h1 className="heading-style"> CSS Accent-Color </h1>
+    <article className="mt-5">
         <p className="style_divv mt-5">
             تعيّن خاصية <b>accent-color</b>  تمييز لون عناصر واجهة المستخدم التي تم إنشاؤها بواسطة بعض العناصر متل :
             <ul dir="ltr">

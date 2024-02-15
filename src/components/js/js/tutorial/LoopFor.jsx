@@ -121,13 +121,11 @@ name_nums.forEach(MyFunction);`
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript Loop</h1>
+    <h1 className="heading-style">JavaScript Loop</h1>
     <article>
         <p className="style_divv mt-5">
             يمكن أن تنفذ الحلقات(<small>Loop</small>) كتلة من التعليمات البرمجية عدة مرات.
         </p>
-    </article>
-    <article>
         <h2 className="title-h2">1. الحلقات - Loop </h2>
         <p className="style_divv">
             الحلقات سهلة الاستخدام ، إذا كنت تريد تشغيل نفس الرمز مرارًا وتكرارًا ، في كل مرة بقيمة مختلفة.<br/>

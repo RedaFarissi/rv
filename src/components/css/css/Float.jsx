@@ -136,9 +136,9 @@ export default function Float(props){
         }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Float </h1>
-    <article>
-        <p className="style_divv mt-5">
+    <h1 className="heading-style"> CSS Float </h1>
+    <article className="mt-5">
+        <p className="style_divv">
             تُستخدم الخاصية <b>float</b> لتحديد موضع المحتوى وتنسيقه .<br/>
             يمكن أن تحتوي الخاصية <b>float</b> على إحدى القيم التالية:<br/>
             <ul>

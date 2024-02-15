@@ -4,7 +4,7 @@ import { CodeCommand } from "../../path";
 export default function Mvc(props){
    return(
 <>
-    <h1 className="heading-style heading-style-python-color">Laravel MVC </h1>
+    <h1 className="heading-style">Laravel MVC </h1>
     <article id="mt-5">
          <h2 className='title-h2' id="what_is_laravel"> 1 - ما هو laravel  </h2>
          <p className="style_divv">

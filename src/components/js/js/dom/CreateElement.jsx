@@ -49,7 +49,7 @@ document.getElementById("DIV").appendChild(img);`
       }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript createElement</h1>
+    <h1 className="heading-style">JavaScript createElement</h1>
     <article>
         <p className="style_divv mt-5">
             طريقة <bdi><b>createElement()</b></bdi> تنشئ عقدة عنصر <small><small><bdi>(element node)</bdi></small></small>.<br/>

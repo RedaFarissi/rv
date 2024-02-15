@@ -86,8 +86,8 @@ export default function AlignItems(props){
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Align-Items </h1>
-    <article>
+    <h1 className="heading-style"> CSS Align-Items </h1>
+    <article className="mt-5">
         <p className="style_divv">
             تستخدم الخاصية <b>align-items</b> مع الخصية <b>display</b> والقيمة <b>flex</b> وتحدد مكان وضع العناصر بنسبة للإرتفاع .<br/>
             تستقبل الخاصية <b>align-items</b>  القيم التالية :<br/>

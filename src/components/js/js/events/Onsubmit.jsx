@@ -39,7 +39,7 @@ object.addEventListener("submit", function_name )`
     }
   return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onsubmit</h1>
+    <h1 className="heading-style">JavaScript onsubmit</h1>
     <article>
         <p className="style_divv mt-5">
             يقع حدث <b>onsubmit</b> عند إرسال نموذج إلى الخادم . 

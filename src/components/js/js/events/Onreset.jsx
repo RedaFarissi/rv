@@ -36,7 +36,7 @@ object.addEventListener("reset", function_name )`
     }
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onreset</h1>
+    <h1 className="heading-style">JavaScript onreset</h1>
     <article>
         <p className="style_divv mt-5">
             طريقة <bdi><b>reset()</b></bdi> تعيد تعيين قيم جميع العناصر في نموذج (مثل النقر فوق زر إعادة التعيين).<br/><br/>

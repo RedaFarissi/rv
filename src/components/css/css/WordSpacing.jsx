@@ -33,7 +33,7 @@ export default function WordSpacing(props){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Word-Spacing </h1>
+    <h1 className="heading-style"> CSS Word-Spacing </h1>
     <article>
       <p className="style_divv mt-5">
           تعيّن الخاصية <b>word-spacing</b> في لغة <b>CSS</b>  سلوك التباعد الأفقي بين كلمات النص. تُضاف هذه القيمة إلى التباعد الطبيعي بين الكلمات أثناء عرض النص. تؤدي القيم الموجبة لتباعد الكلمات  ، بينما تعمل القيم السالبة لتباعد الأحرف على تقريب الكلمات من بعضها.

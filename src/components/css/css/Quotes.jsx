@@ -23,9 +23,9 @@ export default function Quotes(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Quotes </h1>
-    <article>
-        <p class="style_divv mt-5">
+    <h1 className="heading-style"> CSS Quotes </h1>
+    <article className="mt-5">
+        <p class="style_divv">
             تحدد الخاصية <b>quotes</b> نوع علامات الاقتباس الخاصة بالاقتباس .
         </p>
         <div class="mital">متال : </div>

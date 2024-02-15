@@ -22,7 +22,7 @@ div.ex5:hover, div.ex5:active {text-decoration: overline;}`,
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Hover </h1>
+    <h1 className="heading-style"> CSS Hover </h1>
     <article>
         <p className="style_divv mt-5">
             يتم استخدام الخاصية <b>hover</b>  لتحديد العناصر عند تحريك الماوس فوقها. <br/>

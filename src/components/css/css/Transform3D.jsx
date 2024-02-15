@@ -68,7 +68,7 @@ export default function Transform3D(props){
   }, []);
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Transform-3D </h1>
+    <h1 className="heading-style"> CSS Transform-3D </h1>
     <article>
       <p className="style_divv mt-5">
           يدعم <b>{"CSS"}</b> أيضًا عمليات التحويل ثلاثية الأبعاد.<br/>

@@ -21,7 +21,7 @@ result.innerHTML = window.pageXOffset`
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript pageXOffset</h1>
+    <h1 className="heading-style">JavaScript pageXOffset</h1>
     <article className="mt-5">
         <p className="style_divv">
             تقوم خاصية <b>pageXOffset</b> بإرجاع وحدات البكسل التي تم تمرير مستند إليها من الزاوية اليسرى العليا من النافذة.<br/>

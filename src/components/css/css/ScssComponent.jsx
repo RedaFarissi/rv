@@ -6,7 +6,7 @@ import "./ScssComponent.css"
 export default function ScssComponent(props){
     return(
 <section className="section-conetent position-relative">
-    <h1 className="heading-style heading-style-css-color"> SCSS </h1>
+    <h1 className="heading-style"> SCSS </h1>
     <nav className="p-0 mt-4" dir="ltr">
         <ul className='p-0 m-0 css-scss-nav-ul mb-5 w-100'>
             <li><i className="fa-solid fa-caret-right me-2"></i> <a href="#scss-first-code"> scss first code </a></li>

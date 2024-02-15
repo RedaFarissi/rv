@@ -43,7 +43,7 @@ result.innerHTML = Class_name.hello()`
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript Static</h1>
+    <h1 className="heading-style">JavaScript Static</h1>
     <article>
         <p className="style_divv mt-5">
             يتم تعريف <b>static class</b> في الفئة نفسها.<br/>

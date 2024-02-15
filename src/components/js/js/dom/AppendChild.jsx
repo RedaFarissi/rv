@@ -16,7 +16,7 @@ document.getElementById("ul").appendChild(node);`
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript appendChild</h1>
+    <h1 className="heading-style">JavaScript appendChild</h1>
     <article>
         <p className="style_divv mt-5">
             تلحق طريقة <bdi><b>appendChild()</b></bdi> عقدة (عنصر) باعتبارها آخر عنصر تابع للعنصر.

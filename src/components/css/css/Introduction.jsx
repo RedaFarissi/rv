@@ -66,8 +66,8 @@ const codeExemple1 = {
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Introduction </h1>
-    <article>
+    <h1 className="heading-style"> CSS Introduction </h1>
+    <article  className="mt-5">
         <h2 className="title-h2">1. ما هي CSS ؟</h2>
         <p className="style_divv">
             ترمز <b>CSS</b> إلى <b>Cascading Style Sheets</b> و يصف <b>CSS</b> كيفية عرض عناصر <b>HTML</b> على الشاشة أو الورق أو في وسائط أخرى

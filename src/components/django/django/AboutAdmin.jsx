@@ -5,7 +5,7 @@ import { CodeCommand , CodeHighlighter , Result } from "../../path";
 export default function AboutAdmin(){
     return(
         <article className="mt-5"  id="about_admin">
-            <h1 className="heading-style heading-style-django-color"> Django admin</h1> 
+            <h1 className="heading-style"> Django admin</h1> 
             <h3 className="title-h2 mt-5" id="list_display">1 - list_display </h3>
             <p className="style_divv">
                يمكنك استخدام <b>list_editable</b> لرؤية الأعمدة التي تريدها في صفحة المسؤول. 

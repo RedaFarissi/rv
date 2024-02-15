@@ -37,7 +37,7 @@ function playFunction() {
     }
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onpause</h1>
+    <h1 className="heading-style">JavaScript onpause</h1>
     <article>
         <p className="style_divv mt-5">
             يحدث حدث <b>onpause</b> عندما يتم إيقاف <b>audio</b>/<b>video</b> مؤقتًا إما من قبل المستخدم أو برمجيًا.<br/>

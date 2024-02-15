@@ -45,7 +45,7 @@ object.addEventListener("resize", function_name )`
     }
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onresize</h1>
+    <h1 className="heading-style">JavaScript onresize</h1>
     <article>
         <p className="style_divv mt-5">
             يقع حدث <b>onresize</b> عندما يتم تغيير حجم نافذة المتصفح.<br/>

@@ -64,7 +64,7 @@ random_integer(10,21)`
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript Random</h1>
+    <h1 className="heading-style">JavaScript Random</h1>
     <article className="mt-5">
         <h2 className="title-h2">1. <bdi>Math.random()</bdi></h2>
         <p className="style_divv">

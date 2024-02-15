@@ -4,7 +4,7 @@ import images from "../imagesDjangoRest"
 export default function Introduction(props){
    return(
    <>
-      <h1 className="heading-style heading-style-python-color"> DRF Introduction </h1>
+      <h1 className="heading-style"> DRF Introduction </h1>
       <article className="mt-5">
          <h2 className="title-h2" id="What_is_django_rest_framework">1 - ما هو Django Rest Framework (DRF) </h2>
          <p className="style_divv" >

@@ -13,7 +13,7 @@ result.innerHTML = \`images length = \${document.images.length}\``
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript images</h1>
+    <h1 className="heading-style">JavaScript images</h1>
     <article>
         <p className="style_divv mt-5">
             تقوم خاصية <b>images</b> بإرجاع مجموعة من جميع عناصر <kbd>&lt;img&gt;</kbd> في المستند.<br/>

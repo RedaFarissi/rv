@@ -65,7 +65,7 @@ document.body.addEventListener('keypress', function Reload(event){
     }
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onended</h1>
+    <h1 className="heading-style">JavaScript onended</h1>
     <article>
         <div className="style_divv mt-5">
             يقع الحدث <b>onended</b> عندما يصل <b>audio</b>/<b>video</b> إلى نهايته.<br/>

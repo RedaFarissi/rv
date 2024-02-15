@@ -8,7 +8,7 @@ export default function Doctype(){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript doctype</h1>
+    <h1 className="heading-style">JavaScript doctype</h1>
     <article>
         <p className="style_divv mt-5">
             تُرجع خاصية  <b>DOCTYPE</b> للمستند ككائن <bdi><small>(DocumentType)</small></bdi>.<br/>

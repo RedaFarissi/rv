@@ -170,9 +170,9 @@ export default function Filter(props){
 
     return(
     <section className="section-conetent">
-        <h1 className="heading-style heading-style-css-color"> CSS Filter </h1>
-        <article>
-            <p class="style_divv mt-5">
+        <h1 className="heading-style"> CSS Filter </h1>
+        <article className="mt-5">
+            <p class="style_divv">
                  تحدد الخاصية <b>filter</b> طريقة عرض الصور داخل موقعك يمكن . تقبل الخاصية <b>filter</b> عدة قيم وهي كتالي :
                 <ul dir="ltr">
                     <li><b>filter: none </b></li>

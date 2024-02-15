@@ -5,7 +5,7 @@ import { CodeCommand , CodeHighlighter , Result } from "../../path";
 export default function DjangoPagination(){
     return(
     <article id="Django_Pagination">
-        <h1 className="heading-style heading-style-django-color"> Django Pagination</h1> 
+        <h1 className="heading-style"> Django Pagination</h1> 
         <p className="style_divv mt-5">
             يشير ترقيم الصفحات في <b>Django</b> إلى عملية تقسيم مجموعة بيانات كبيرة إلى أجزاء أصغر وأكثر قابلية للإدارة يتم عرضها عبر صفحات ويب متعددة. تعتبر هذه التقنية ضرورية لتجربة المستخدم، خاصة عند التعامل مع مجموعات البيانات الكبيرة مثل قوائم المنتجات أو المقالات أو حسابات المستخدمين.
         </p>

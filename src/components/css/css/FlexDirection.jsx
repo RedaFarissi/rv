@@ -42,9 +42,9 @@ export default function FlexDirection(props){
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Flex-Direction </h1>
-    <article>
-        <p className="style_divv mt-5">
+    <h1 className="heading-style"> CSS Flex-Direction </h1>
+    <article className="mt-5">
+        <p className="style_divv">
             تحدد الخاصية <b>flex-direction</b> اتجاه العناصر المرنة. <br/>
             <b>ملاحظة : </b> إذا لم يكن العنصر يحتوي على  <b>display:flex</b>  ، فلن يكون للخاصية   <b>flex-direction</b> أي تأثير .
         </p>

@@ -61,7 +61,7 @@ document.getElementById("test").innerHTML = str.endsWith("Eskouni");`
     }
     return(
     <section className="section-conetent">
-        <h1 className="heading-style heading-style-js-color">JavaScript String Search</h1>
+        <h1 className="heading-style">JavaScript String Search</h1>
         <details className="mt-5">
             <summary className='text-danger'> جميع العناوين  </summary>
             <ul dir="ltr" >

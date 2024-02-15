@@ -18,7 +18,7 @@ head:`
 }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Letter-Spacing </h1>
+    <h1 className="heading-style"> CSS Letter-Spacing </h1>
     <article>
       <p className="style_divv mt-5">
           تعيّن الخاصية <b>letter-spacing</b> في لغة <b>CSS</b>  سلوك التباعد الأفقي بين أحرف النص. تُضاف هذه القيمة إلى التباعد الطبيعي بين الأحرف أثناء عرض النص. تؤدي القيم الموجبة لتباعد الأحرف إلى انتشار الأحرف بعيدًا عن بعضها البعض ، بينما تعمل القيم السالبة لتباعد الأحرف على تقريب الأحرف من بعضها.

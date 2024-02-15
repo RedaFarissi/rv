@@ -2,11 +2,7 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Head(){
-    // document.getElementById("reSulta").innerText = `<head>
-    // <title> head JavaScript </title>
-    // <meta charset="utf-8">
-    // <meta name="viewport" content="width=device-width, initial-scale=1">
-    // </head>`
+    
     const codeExemple1= { 
     code: `      <div id="result"></div>
       
@@ -28,7 +24,7 @@ result.innerHTML += document.head.lastElementChild.tagName;`
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript head</h1>
+    <h1 className="heading-style">JavaScript head</h1>
     <article>
         <p className="style_divv mt-5">
             تقوم خاصية <b>head</b> بإرجاع عنصر <kbd>&lt;head&gt;</kbd> للمستند.

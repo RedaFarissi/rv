@@ -2,37 +2,6 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Fetch(){
-    // //exemple 1
-    // var lien_json = "https://ipapi.co/8.8.8.8/json/";
-
-    // fetch(lien_json).then( variable =>{ return  variable.json() }).then(data =>{    
-    //     document.getElementById("result").innerHTML =  typeof data ;
-    // }) 
-    // //exemple 3
-    // var data = {
-    //   "ip": "8.8.8.8", "version": "IPv4", "city": "Mountain View", "region": "California", "region_code": "CA", "country": "US", "country_name": "United States", "country_code": "US", "country_code_iso3": "USA", "country_capital": "Washington", "country_tld": ".us", "continent_code": "NA", "in_eu": false, "postal": "94043", "latitude": 37.42301, "longitude": -122.083352, "timezone": "America/Los_Angeles", "utc_offset": "-0700", "country_calling_code": "+1", "currency": "USD", "currency_name": "Dollar", "languages": "en-US,es-US,haw,fr", "country_area": 9629091.0, "country_population": 327167434, "asn": "AS15169", "org": "GOOGLE"
-    // }
-    // var resulta = document.getElementById("resulta")
-    // for(let item in data ){
-    //     resulta.innerHTML += `<span id='C' style="color: green"> ${item} </span> : ${data[item]} <br/>`
-    // }
-    // //exemple 4 (real exemple)
-    // async function api(){
-    //   const reponse = await fetch("https://breakingbadapi.com/api/characters");
-    //   const data = await reponse.json();
-    //   getData(data)
-    // }
-    // api()
-    // function getData(data){
-    //   for (let i in data){
-    //     document.getElementById("reSulTa_real_exemple").innerHTML +=  `
-    //     <div className="box">
-    //       <h2 className="H2"> ${data[i].char_id}. ${data[i].name} </h2>
-    //       <img className="img_person" src="${data[i].img}"/>
-    //     </div>`
-    //   } 
-    // }
-
     const code1 = `fetch(lien_api).then( variable => { return variable.json() }).then(data =>{
     console.log(data)
 })`
@@ -83,7 +52,7 @@ function getData(data) {
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript fetch</h1>
+    <h1 className="heading-style">JavaScript fetch</h1>
     <article>
         <p className="style_divv mt-5">
             تسمح واجهة <bdi><b>Fetch API</b></bdi> لمتصفح الويب بإجراء طلبات <b>HTTP</b> لخوادم الويب.<br/>

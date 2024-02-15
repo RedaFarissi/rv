@@ -189,9 +189,9 @@ export default function Animation(props){
     }, []);
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Animation </h1>
-    <article>
-        <p class="style_divv mt-5">
+    <h1 className="heading-style"> CSS Animation </h1>
+    <article className="mt-5">
+        <p class="style_divv">
             يسمح <b>CSS</b> بالرسوم المتحركة لعناصر <b>HTML</b> دون استخدام <b>JavaScript</b> أو <b>Flash</b> وذالك بستعمال الخاصية <b>animation</b> . <br/>
             تتيح الخاصية <b>animation</b> تغيير العنصر تدريجيًا من نمط إلى آخر.<br/>
             يمكنك تغيير أي عدد تريده من خصائص <b>CSS</b> ، بقدر ما تريد.<br/>

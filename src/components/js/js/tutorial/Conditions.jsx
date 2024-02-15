@@ -67,7 +67,7 @@ if (age >= 18){
   }
   return(
 <section className="section-conetent">
-  <h1 className="heading-style heading-style-js-color">JavaScript Conditions</h1>
+  <h1 className="heading-style">JavaScript Conditions</h1>
   <article className="mt-5">
         <p className="style_divv">
             تستخدم العبارات الشرطية لأداء إجراءات مختلفة بناءً على شروط مختلفة.<br/>

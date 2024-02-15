@@ -29,7 +29,7 @@ document.body.style = "background-color: yellow;border: 4px solid black; margin:
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript body</h1>
+    <h1 className="heading-style">JavaScript body</h1>
     <article>
         <p className="style_divv mt-5">
          تقوم خاصية <b>body</b> بتعيين أو إرجاع عنصر المستند   <kbd>&lt;body&gt;</kbd> 

@@ -33,7 +33,7 @@ export default function Data(){
 
   return(
 <section className="section-conetent">
-  <h1 className="heading-style heading-style-js-color">JavaScript data</h1>
+  <h1 className="heading-style">JavaScript data</h1>
   <article>
       <p className="style_divv mt-5">
           تقوم خاصية <b>event.data</b> بإرجاع الحرف الذي تم إدراجه مع الحدث.<br/>

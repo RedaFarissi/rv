@@ -41,9 +41,9 @@ export default function BorderCollapse(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Border-Collapse </h1>
-    <article>
-        <div class="style_divv mt-5">
+    <h1 className="heading-style"> CSS Border-Collapse </h1>
+    <article className="mt-5">
+        <div class="style_divv">
             تستعمل الخاصية <b>border-collapse</b> مع الجداول و تحدد الخاصية تصغير الحدود ما إذا كان يجب طي حدود الجدول إلى حد واحد أو فصلها كما هو الحال في <b>HTML</b> القياسي.<br/>
             تستقبل الخاصية <b>border-collapse</b> القيم التالية :
             <ul dir="ltr">

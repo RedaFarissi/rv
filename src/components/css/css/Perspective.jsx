@@ -122,8 +122,8 @@ export default function Perspective(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Perspective </h1>
-    <article>
+    <h1 className="heading-style"> CSS Perspective </h1>
+    <article className="mt-5">
         <h2 className="title-h2">1- perspective </h2>
         <p className="style_divv">
             <br/>تُستخدم خاصية <b>perspective</b> لمنح عنصر ثلاثي الأبعاد . وتكون قيمتها الفتراضية <b>none</b> .<br/>

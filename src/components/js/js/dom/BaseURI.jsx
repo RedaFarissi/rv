@@ -14,7 +14,7 @@ export default function BaseURI(){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript baseURI</h1>
+    <h1 className="heading-style">JavaScript baseURI</h1>
     <article>
         <p className="style_divv mt-5">
             تقوم الخاصية <b>baseURI</b> بإرجاع <b>URI</b> الأساسي للمستند.

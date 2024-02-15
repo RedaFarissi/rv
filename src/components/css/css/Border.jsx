@@ -81,8 +81,8 @@ export default function Border(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Border </h1>
-    <article>
+    <h1 className="heading-style"> CSS Border </h1>
+    <article className="mt-5">
         <h2 className="title-h2">1- إنشاء حدود </h2>
         <p class="style_divv">
             تسمح لك الخاصية <b>border</b> في لغة  <b>CSS</b> بتحديد خط يمتل حد العنصر يمكن تحديد عرض الخط و نوعه و لونه أيضا  .<br/>

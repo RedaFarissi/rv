@@ -5,7 +5,7 @@ export default function SelfKwargs(){
 
    return(
 <>
-   <h1 className="heading-style heading-style-python-color">DRF self-kwargs </h1>
+   <h1 className="heading-style">DRF self-kwargs </h1>
    <article className="mt-5">
          <h2 className="title-h2" id="Why_we_use_self-kwargs">1 - لماذا نستخدم self.kwargs </h2>
          <p className="style_divv">

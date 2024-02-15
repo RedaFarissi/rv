@@ -35,7 +35,7 @@ switch(num){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript Switch</h1>
+    <h1 className="heading-style">JavaScript Switch</h1>
     <article className="mt-5">
         <p className="style_divv">
             يتم استخدام بيان التبديل لأداء إجراءات مختلفة بناءً على ظروف مختلفة.

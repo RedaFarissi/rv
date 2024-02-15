@@ -29,7 +29,7 @@ export default function PageX(){
 
   return(
 <section className="section-conetent">
-  <h1 className="heading-style heading-style-js-color">JavaScript pageX</h1>
+  <h1 className="heading-style">JavaScript pageX</h1>
   <article className="mt-5">
     <div className="style_divv">
         ترجع الخاصية <b>pageX</b> الإحداثيات الأفقية (وفقا للوثيقة) لمؤشر الماوس عند تشغيل حدث ماوس.<br/>

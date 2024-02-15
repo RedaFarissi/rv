@@ -41,7 +41,7 @@ function small(x) {
     }
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onmouseenter</h1>
+    <h1 className="heading-style">JavaScript onmouseenter</h1>
     <article>
         <p className="style_divv mt-5">
             يحدث الحدث <b>onmouseenter</b> عند نقل مؤشر الماوس إلى عنصر.<br/>

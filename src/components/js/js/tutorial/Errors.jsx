@@ -54,7 +54,7 @@ division("demo2",8,0)`
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript Errors</h1>
+    <h1 className="heading-style">JavaScript Errors</h1>
     <article className="mt-5">
         <p className="style_divv">
             لتفادي اللأخطء في لغة البرمجة <b>JavaScriptn</b> نستعمل <b>try</b> و <b>catch</b> و <b>finally</b> تم <b>throw</b>.<br/>

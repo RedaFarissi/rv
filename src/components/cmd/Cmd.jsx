@@ -16,7 +16,7 @@ export default function Cmd(props){
             </ul>
         </aside>
         <section className="section-conetent">
-            <h1 className="heading-style heading-style-html-color"> Command Pormpt (Windows) </h1>  
+            <h1 className="heading-style"> Command Pormpt (Windows) </h1>  
             <article>
                 <h2 id="Introduction" className="title-h2 mt-5"> 1 - ما هو Command Prompt ولماذا نستخدمه</h2>
                 <p className="style_divv">

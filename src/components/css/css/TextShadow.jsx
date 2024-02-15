@@ -37,7 +37,7 @@ export default function TextShadow(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Text-Shadow </h1>
+    <h1 className="heading-style"> CSS Text-Shadow </h1>
     <article>
         <p className="style_divv mt-5">
             تضيف خاصية <b>text-shadow</b> الظل إلى النص.

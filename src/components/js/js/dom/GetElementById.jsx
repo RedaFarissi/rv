@@ -22,7 +22,7 @@ document.getElementById("result").innerHTML += d + "<br>";`
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript getElementById</h1>
+    <h1 className="heading-style">JavaScript getElementById</h1>
     <article>
         <p className="style_divv mt-5">
             ترجع طريقة <bdi><b>getElementById()</b></bdi> عنصرًا بقيمة محددة.<br/>

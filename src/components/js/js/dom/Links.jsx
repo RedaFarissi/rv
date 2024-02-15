@@ -2,8 +2,6 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Links(){
-    // id_result = document.getElementById("resulta")
-    // id_result.innerText = document.links[0].outerHTML
     const codeExemple1= { 
     head:`
     <style>
@@ -19,7 +17,7 @@ result.innerText = document.links[0].outerHTML`
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript links</h1>
+    <h1 className="heading-style">JavaScript links</h1>
     <article>
         <p className="style_divv mt-5">
             تقوم خاصية الروابط بإرجاع مجموعة من كل الروابط الموجودة في المستند.<br/>

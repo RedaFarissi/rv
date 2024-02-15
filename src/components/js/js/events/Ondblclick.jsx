@@ -24,7 +24,7 @@ object.addEventListener("dblclick", function_name )`
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript ondblclick</h1>
+    <h1 className="heading-style">JavaScript ondblclick</h1>
     <article>
         <p className="style_divv mt-5">
             يقع حدث <b>ondblclick</b> عندما ينقر المستخدم نقرًا مزدوجًا فوق أحد العناصر.

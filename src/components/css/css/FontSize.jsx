@@ -56,9 +56,9 @@ export default function FontSize(props){
     }, []);
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Font-Size </h1>
-    <article>
-        <p className="style_divv mt-5">
+    <h1 className="heading-style"> CSS Font-Size </h1>
+    <article className="mt-5">
+        <p className="style_divv">
             <b>font-size</b> هو الخاصية <b>CSS</b> التي تتحكم في حجم الخط على صفحة ويب. هناك العديد من القيم المختلفة التي يمكنك استخدامها لتعريف الخاصية <b>font-size</b> . نلقي نظرة على المثال أدناه، والذي يتضمن قيم ووحدات مختلفة يمكنك استخدامها في <b>CSS</b>.<br/>تقدم هذه القيم أساليب مختلفة لتحديد حجم الخط على صفحة الويب الخاصة بك .
         </p>
         <div className="sum_exemple_style">

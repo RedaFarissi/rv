@@ -139,7 +139,7 @@ document.getElementById("DIV").addEventListener("animationend",animationEnd2)`
   },[])
 return(
 <section className="section-conetent">
-  <h1 className="heading-style heading-style-js-color">JavaScript Animation</h1>
+  <h1 className="heading-style">JavaScript Animation</h1>
   <article>
     <p className="style_divv mt-5">
         عند تشغيل رسم متحرك CSS ، هناك ثلاثة أحداث يمكن أن تحدث:

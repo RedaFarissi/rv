@@ -28,7 +28,7 @@ return(
       </dl>
   </aside>
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-react-color"> REACT JS </h1>
+    <h1 className="heading-style"> REACT JS </h1>
     <article id="Introduction">
         <h2 className="title-h2 mt-5"> 1 -مقدمة حول React.js  </h2>
         <h3 id="What_is_React" className="title-h3">1 - ما هو React  </h3>

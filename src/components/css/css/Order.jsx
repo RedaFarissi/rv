@@ -44,7 +44,7 @@ export default function Order(props){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Order </h1>
+    <h1 className="heading-style"> CSS Order </h1>
     <article>
         <p className="style_divv mt-5">
             تحدد خاصية الأمر ترتيب العنصر المرن بالنسبة لبقية العناصر المرنة داخل نفس الحاوية.<br/>

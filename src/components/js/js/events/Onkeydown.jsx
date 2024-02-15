@@ -29,7 +29,7 @@ object.addEventListener("keydown", function_name)`
     }
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onkeydown</h1>
+    <h1 className="heading-style">JavaScript onkeydown</h1>
     <article>
         <p className="style_divv mt-5">
             يستعمل حدث <b>onkeydown</b> لتنقيد الأوامر بمجرد النقر على أحد أزرار الكيبورد . يعمل فقط على أزرار الحروف و الأرقام .<br/>

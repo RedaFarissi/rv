@@ -113,7 +113,7 @@ export default function JustifyContent(props){
     }, []);
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Justify-Content </h1>
+    <h1 className="heading-style"> CSS Justify-Content </h1>
     <article>
         <p className="style_divv mt-5">
             تقوم الخاصية <b>justify-content</b> بمحاذاة عناصر الحاوية المرنة عندما لا تستخدم العناصر كل المساحة المتوفرة على المحور الرئيسي (أفقيًا) .<br/>

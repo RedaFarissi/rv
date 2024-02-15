@@ -39,7 +39,7 @@ p.main {text-align: justify;}`,
     }, []);
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Text-Align </h1>
+    <h1 className="heading-style"> CSS Text-Align </h1>
     <article>
         <p className="style_divv mt-5">
             تحدد خاصية <b>text-align</b>   المحاذاة الأفقية للنص في العنصر . بحيت يمكنك التحكم في العناصر فالخاصية <b>text-align</b> تمكنك من تحديد أين تريد عرض العنصر يمين أو اليسار أو وسط الصفحة

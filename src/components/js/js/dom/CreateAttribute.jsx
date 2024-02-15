@@ -47,8 +47,8 @@ export default function CreateAttribute(){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript createAttribute</h1>
-    <article>
+    <h1 className="heading-style">JavaScript createAttribute</h1>
+    <article className="mt-5">
         <p className="style_divv">
             تقوم طريقة <b><bdi>createAttribute()</bdi></b> بإنشاء سمة وإرجاع السمة ككائن Attr.<br/>
             <CodeHighlighter code={`const variable = document.createAttribute(attribute_name); 

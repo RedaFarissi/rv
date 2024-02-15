@@ -1,12 +1,12 @@
 import codes from "../../../assests/codes/django/django"
 import images from "../imagesDjango";
-import { CodeCommand , CodeHighlighter , Result } from "../../path";
+import { CodeHighlighter  } from "../../path";
 
 export default function Session(){
    
     return(
         <article id="Session">
-            <h1 className="heading-style heading-style-django-color"> Django SESSION</h1> 
+            <h1 className="heading-style"> Django SESSION</h1> 
             <p className="style_divv mt-5">
                 لاستخدام <b>"request.session"</b> في إصدارات <b>Django</b> ، تحتاج أولاً إلى تمكين دعم <b>session</b> عن طريق إضافة البرنامج الوسيط <b>"django.contrib.sessions.middleware.SessionMiddleware"</b> إلى إعداد <b>"MIDDLEWARE"</b> في ملف <b>settings.py</b> الخاص بك.<br/>
                 بمجرد تمكين دعم <b>session</b>، يمكنك الوصول إلى كائن <b>session</b> من خلال السمة <b>"request.session"</b> في جهازك.<br/><br/>

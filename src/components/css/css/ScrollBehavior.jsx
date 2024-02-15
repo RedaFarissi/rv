@@ -35,7 +35,7 @@ export default function ScrollBehavior(props){
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Scroll-Behavior </h1>
+    <h1 className="heading-style"> CSS Scroll-Behavior </h1>
     <article>
         <p class="style_divv mt-5">
             تحدد الخاصية <b>scroll-behavior</b> ما إذا كان سيتم تحريك موضع التمرير بسلاسة ، بدلاً من الانتقال المستقيم ، عندما ينقر المستخدم على ارتباط داخل مربع قابل للتمرير.

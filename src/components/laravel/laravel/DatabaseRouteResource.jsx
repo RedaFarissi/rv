@@ -5,7 +5,7 @@ export default function DatabaseRouteResource(props){
 
    return(
    <>
-      <h1 className="heading-style heading-style-python-color"> Laravel Database Route::Resource </h1>
+      <h1 className="heading-style"> Laravel Database Route::Resource </h1>
       <article id="mt-5">
             <h1  id='GetAllDataFromDB' className='h1'>resource</h1>
             <h2>1 - Get All Data From DB with resource</h2>

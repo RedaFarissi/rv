@@ -48,7 +48,7 @@ let obj = new ClassName(2000, 22);`
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript Private</h1>
+    <h1 className="heading-style">JavaScript Private</h1>
     <article>
         <p className="style_divv mt-5">
             كقيمة إفتراضية  جميع متغيرات ال <b>class</b> تكون <b>public</b> .<br/>

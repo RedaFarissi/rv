@@ -25,9 +25,9 @@ export default function Height(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Height </h1>
-    <article>
-        <p className="style_divv mt-5">
+    <h1 className="heading-style"> CSS Height </h1>
+    <article className="mt-5">
+        <p className="style_divv">
             تحدد خاصية <b>height</b> ارتفاع العنصر.<br/>
             لا يتضمن ارتفاع العنصر المساحة المتروكة أو الحدود أو الهوامش .<br/>
             إذا كان الارتفاع: تلقائي ؛ سيقوم العنصر تلقائيًا بضبط ارتفاعه للسماح بعرض محتواه بشكل صحيح.<br/>

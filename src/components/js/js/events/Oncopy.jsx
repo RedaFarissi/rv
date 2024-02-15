@@ -30,7 +30,7 @@ object.addEventListener("copy", function_name )`
     
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript oncopy</h1>
+    <h1 className="heading-style">JavaScript oncopy</h1>
     <article>
         <p className="style_divv mt-5">
             يحدث حدث <b>oncopy</b> عندما ينسخ المستخدم محتوى عنصر ما.<br/>

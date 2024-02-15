@@ -44,7 +44,7 @@ export default function ObjectFit(props){
     }, []);
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Object-Fit </h1>
+    <h1 className="heading-style"> CSS Object-Fit </h1>
     <article>
         <p class="style_divv mt-5">
             تحدد خاصية <b>Object-fit</b> كيفية تغيير حجم محتوى العنصر المستبدل ، مثل <kbd>&lt;img&gt;</kbd> أو <kbd>&lt;video&gt;</kbd> ، ليلائم حاويته . <br/>

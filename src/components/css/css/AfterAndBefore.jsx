@@ -37,8 +37,8 @@ export default function AfterAndBefore(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS After And Before </h1>
-    <article>
+    <h1 className="heading-style"> CSS After And Before </h1>
+    <article className="mt-5">
         <h2 className="title-h2">1. المحدد after </h2>
         <p className="style_divv">
             يُدرج المُحدِّد <b>after</b> شيئًا ما بعد محتوى كل عنصر (عناصر) محدد.

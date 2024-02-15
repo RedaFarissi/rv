@@ -27,7 +27,7 @@ export default function LineHeight(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Line-Height </h1>
+    <h1 className="heading-style"> CSS Line-Height </h1>
     <article>
         <p class="style_divv mt-5">
             تحدد خاصية <b>line-height</b> ارتفاع الخط.<br/>

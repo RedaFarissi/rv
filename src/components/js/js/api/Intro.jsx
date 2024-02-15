@@ -38,7 +38,7 @@ function showPosition(position) {
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript API introduction</h1>
+    <h1 className="heading-style">JavaScript API introduction</h1>
     <article>
         <p className="style_divv mt-5"> 
             واجهة برمجة تطبيقات الويب هي حلم المطور.<br/>

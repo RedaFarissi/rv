@@ -38,7 +38,7 @@ export default function ListStyleType(props){
     }
     return(
     <section className="section-conetent">
-        <h1 className="heading-style heading-style-css-color"> CSS List-Style-Type </h1>
+        <h1 className="heading-style"> CSS List-Style-Type </h1>
         <article>
             <p className="style_divv mt-5">
                 تستعمل الخاصية <b>list-style-type</b>  لتحديد نوع نمط القائمة في القائمة  . وتستقبل قيم كتيرة من بينها  التالية :<br/>

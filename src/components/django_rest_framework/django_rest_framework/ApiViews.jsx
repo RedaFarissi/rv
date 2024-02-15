@@ -5,7 +5,7 @@ export default function ApiViews(props){
 
    return(
    <>
-      <h1 className="heading-style heading-style-python-color">DRF APIView </h1>
+      <h1 className="heading-style">DRF APIView </h1>
       <article className="mt-5">   
          <h2 className="title-h2" id="What_is_APIView">1 -  ما هو APIView </h2>
          <p className="style_divv">

@@ -70,7 +70,7 @@ function myOverFunction() {
    
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onmouseover</h1>
+    <h1 className="heading-style">JavaScript onmouseover</h1>
     <article>
         <p className="style_divv mt-5">
             يقع حدث onmouseover عندما يتحرك مؤشر الماوس فوق عنصر أو على أحد العناصر الفرعية له.<br/><br/>

@@ -34,7 +34,7 @@ object.addEventListener("error", function_name )`
     
   return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onerror</h1>
+    <h1 className="heading-style">JavaScript onerror</h1>
     <article>
         <p className="style_divv mt-5">
             يتم تشغيل حدث <b>onerror</b> في حالة حدوث خطأ أثناء تحميل ملف خارجي (مثل مستند أو صورة).   

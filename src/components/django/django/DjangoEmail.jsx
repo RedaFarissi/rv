@@ -5,7 +5,7 @@ import { CodeCommand , CodeHighlighter , Result } from "../../path";
 export default function DjangoEmail(){
    return(
    <>
-     <h1 className="heading-style heading-style-django-color"> Django Email</h1>   
+     <h1 className="heading-style"> Django Email</h1>   
       <article id="Django_Email" >
             <p className="style_divv mt-5">
                في <b>Django</b>، يمكنك استخدام وظيفة <b>send_mail</b> من الوحدة النمطية <b>django.core.mail</b> لإرسال رسائل البريد الإلكتروني

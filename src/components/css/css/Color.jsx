@@ -60,9 +60,9 @@ export default function Color(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Color </h1>
-    <article>
-        <p className="style_divv mt-5">
+    <h1 className="heading-style"> CSS Color </h1>
+    <article className="mt-5">
+        <p className="style_divv">
         تحدد الخاصية <b>color</b> لون النص . استخدم لون خلفية مقترن بلون نص يسهل قراءة النص.<br/>
         يتم تحديد اللون بواسطة :<br/>
         <ul>

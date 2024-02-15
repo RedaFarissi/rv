@@ -11,7 +11,7 @@ document.getElementById("id").appendChild(com);`
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript createComment</h1>
+    <h1 className="heading-style">JavaScript createComment</h1>
     <article>
         <div className="style_divv mt-5">
             تقوم طريقة <bdi><b>createComment()</b></bdi> بإنشاء تعليق وإرجاع عقدة التعليق <small><bdi>(comment node)</bdi></small>.

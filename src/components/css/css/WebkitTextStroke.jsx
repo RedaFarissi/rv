@@ -16,7 +16,7 @@ export default function WebkitTextStroke(props){
 
     return (
         <section className="section-conetent">
-            <h1 className="heading-style heading-style-css-color"> CSS -Webkit-Text-Stroke </h1>
+            <h1 className="heading-style"> CSS -Webkit-Text-Stroke </h1>
             <article>
                 <p class="style_divv mt-5">
                     تحدد الخاصية  <bdi><b>-webkit-text-Stroke</b></bdi> عرض ولون حدود الحروف لأحرف النص. هذه خاصية اختصار للخصائص الطويلة <br/><bdi><b>-webkit-text-stroke-width</b></bdi> و <bdi><b>-webkit-text-stroke-color</b></bdi>.

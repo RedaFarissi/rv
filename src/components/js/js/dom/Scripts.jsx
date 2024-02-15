@@ -29,7 +29,7 @@ export default function Scripts(){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript scripts</h1>
+    <h1 className="heading-style">JavaScript scripts</h1>
     <article>
         <p className="style_divv mt-5">
             تقوم خاصية البرامج النصية بإرجاع مجموعة من جميع عناصر <kbd>&lt;script&gt;</kbd> في المستند.<br/>

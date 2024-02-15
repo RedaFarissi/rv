@@ -108,7 +108,7 @@ export default function Margin(props){
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Margin </h1>
+    <h1 className="heading-style"> CSS Margin </h1>
     <article>
         <p className="style_divv mt-5">
             يتم استخدام الخاصية <b>margin</b> في لغة  <b>CSS</b> لإنشاء مساحة حول محتوى عنصر خارج ال <b>border</b> في عنصر محدد .<br/>

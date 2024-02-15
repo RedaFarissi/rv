@@ -42,7 +42,7 @@ export default function Confirm(){
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript confirm</h1>
+    <h1 className="heading-style">JavaScript confirm</h1>
     <article className="mt-5">
         <p className="style_divv">
             تعرض طريقة <bdi><b>confirm()</b></bdi> مربع حوار به رسالة وزر موافق وزر إلغاء.<br/>

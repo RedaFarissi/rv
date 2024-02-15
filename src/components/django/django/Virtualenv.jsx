@@ -4,7 +4,7 @@ import { CodeCommand } from "../../path";
 export default function Virtualenv(){
     return(
     <>
-        <h1 className="heading-style heading-style-django-color"> Django virtualenv</h1> 
+        <h1 className="heading-style"> Django virtualenv</h1> 
         <article className="mt-5" id="virtualenv">
             <h2 className="title-h2" id="What_is_virtualenv">1 - ما هو virtualenv</h2>
             <p className="style_divv"> 

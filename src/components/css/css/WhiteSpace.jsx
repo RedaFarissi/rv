@@ -40,7 +40,7 @@ export default function WhiteSpace(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS  White-Space </h1>
+    <h1 className="heading-style"> CSS  White-Space </h1>
     <article>
         <p className="style_divv mt-5">
             تحدد خاصية <b>white-space</b> كيفية معالجة المسافة البيضاء داخل عنصر.<br/>

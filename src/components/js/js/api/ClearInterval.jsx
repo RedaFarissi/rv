@@ -22,7 +22,7 @@ function stopClock(){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript clearInterval</h1>
+    <h1 className="heading-style">JavaScript clearInterval</h1>
     <article>
         <p className="style_divv mt-5">
             لمسح فاصل زمني ، قم إدخال قيمة  <bdi><b>setInterval()</b></bdi> داخل متغير تم قم بإسناد قيمة المتغير داخل <bdi><b>clearInterval()</b></bdi> .<br/>

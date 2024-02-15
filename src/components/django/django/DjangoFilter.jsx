@@ -5,7 +5,7 @@ import { CodeCommand , CodeHighlighter } from "../../path";
 export default function DjangoFilter(){
     return(
         <article id="Django_Filter">
-            <h1 className="heading-style heading-style-django-color"> Django Filter</h1> 
+            <h1 className="heading-style"> Django Filter</h1> 
             <p className="style_divv mt-5">
                في <b>Django</b>، يتم استخدام <b>filters</b> لتضييق نطاق نتائج الاستعلام عند استرداد البيانات من قاعدة البيانات. يتم تطبيق عوامل التصفية على مجموعات الاستعلام، وهي تمثيلات لاستعلامات قاعدة البيانات. تُستخدم المرشحات عادةً مع النماذج وطرق العرض.<br/><br/>
                يوفر <b>Django</b> مجموعة متنوعة من الطرق لتصفية مجموعات الاستعلامات، مما يسمح لك بالتعبير عن الاستعلامات المعقدة لاسترداد البيانات من قاعدة البيانات. 

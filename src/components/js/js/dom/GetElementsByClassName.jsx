@@ -2,14 +2,7 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function GetElementsByClassName(){
-    // const h2 = document.getElementsByClassName("h2")
-    // for(let i=0 ; i<h2.length ; i++){
-    //   if(i < 2)
-    //     h2[i].style = "background-color:brown;font-size:23px"
-    //   else
-    //     h2[i].style = "background-color:yellow;font-size:23px"
-    //   h2[i].innerHTML = i
-    // }
+    
     const codeExemple1= { 
     code: `     <div class="class_name"> </div>
      <div class="class_name"> </div>
@@ -43,7 +36,7 @@ for (let i = 0; i < h2.length; i++) {
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript getElementsByClassName</h1>
+    <h1 className="heading-style">JavaScript getElementsByClassName</h1>
     <article>
         <p className="style_divv mt-5">
             ترجع طريقة <bdi><b>getElementsByClassName()</b></bdi> مجموعة من العناصر باسم (أسماء) فئة محددة.<br/>

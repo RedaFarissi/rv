@@ -52,7 +52,7 @@ function moveOut(){
     }
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onmouseout</h1>
+    <h1 className="heading-style">JavaScript onmouseout</h1>
     <article>
         <p className="style_divv mt-5">
             قع حدث <b>onmouseout</b> عندما يتحرك مؤشر الماوس خارج عنصر ما أو خارج أحد العناصر الفرعية له.<br/><br/>

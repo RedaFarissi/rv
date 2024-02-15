@@ -36,7 +36,7 @@ function playFunction() {
   }
   return(
 <section className="section-conetent">
-  <h1 className="heading-style heading-style-js-color">JavaScript onplay</h1>
+  <h1 className="heading-style">JavaScript onplay</h1>
   <article>
     <p className="style_divv mt-5">
         يحدث حدث <b>onplay</b> عند بدء تشغيل <b>audio</b>/<b>video</b> أو لم يعد متوقفًا مؤقتًا.<br/>

@@ -78,8 +78,8 @@ export default function FlexWrap(props){
     }, []);
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Flex-Wrap </h1>
-    <article>
+    <h1 className="heading-style"> CSS Flex-Wrap </h1>
+    <article className="mt-5">
         <p class="style_divv">
             تستعمل الخاصية <b>flex-wrap</b> مع العناصر التي تحمل الخاصية <b>display : flex</b> وذالك من أجل جعل العناصر الأبناء يعدون تلقائيا إلى السطر .<br/>
             تستقبل الخاصية <b>flex-wrap</b> القيم التالية :

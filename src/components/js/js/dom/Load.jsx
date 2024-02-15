@@ -2,17 +2,7 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Load(){
-  // var vid = document.getElementById("myVideo"); 
-  // function playVid() { 
-  //   vid.play(); 
-  // } 
-  // function pauseVid() { 
-  //   vid.pause(); 
-  // } 
-  // function loadVid(){
-  //   vid.load(); 
-  //   vid.play(); 
-  // }
+ 
     const codeExemple1= { 
     code: `      <button onclick="playVid()" type="button" class="btn btn-outline-primary">
         Play Video
@@ -52,7 +42,7 @@ function loadVid(){
     }
   return(
 <section className="section-conetent">
-  <h1 className="heading-style heading-style-js-color">JavaScript load</h1>
+  <h1 className="heading-style">JavaScript load</h1>
   <article>
     <p className="style_divv mt-5">
         طريقة <bdi><b>load()</b></bdi> تعيد تحميل عنصر الصوت / الفيديو.<br/>

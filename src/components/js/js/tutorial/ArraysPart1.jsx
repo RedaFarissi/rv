@@ -208,9 +208,9 @@ document.getElementById("h2").innerHTML = fruits`
     }       
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript Arrays</h1>
+    <h1 className="heading-style">JavaScript Arrays</h1>
     <article className="mt-5">
-        <details className="mt-5">
+        <details>
             <summary className='text-danger'> جميع العناوين  </summary>
                 <ul dir="ltr">
                    <li><a className="text-light text-decoration-none" href="#length">length</a></li>

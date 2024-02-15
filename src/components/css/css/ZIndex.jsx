@@ -33,7 +33,7 @@ export default function ZIndex(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Z-Index </h1>
+    <h1 className="heading-style"> CSS Z-Index </h1>
     <article>
         <p className="style_divv mt-5">
             عندما يتم وضع العناصر ، يمكن أن تتداخل مع عناصر أخرى.<br/>

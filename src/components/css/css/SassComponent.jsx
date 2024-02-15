@@ -121,8 +121,8 @@ container-box
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> SASS ('front/css/sass.css')</h1>
-    <article>
+    <h1 className="heading-style"> SASS ('front/css/sass.css')</h1>
+    <article className="mt-5">
         <h2 className="title-h2"> 1 - تثبيت sass من npm </h2>
         <CodeCommand>npm install -g sass</CodeCommand>
         

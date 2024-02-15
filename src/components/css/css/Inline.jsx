@@ -25,7 +25,7 @@ export default function Inline(props){
         }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Inline </h1>
+    <h1 className="heading-style"> CSS Inline </h1>
     <article>
         <p className="style_divv mt-5">
             تستخدم القيمة <b>inline</b> مع الخاصية <b>display</b><br/> 

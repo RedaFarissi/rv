@@ -43,7 +43,7 @@ function function_scroll(){
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript scrollTop</h1>
+    <h1 className="heading-style">JavaScript scrollTop</h1>
     <article>
         <p className="style_divv mt-5">
             تحصل الخاصية <b>scrollTop</b> على عدد وحدات البكسل التي يتم تمرير محتوى العنصر فيها عموديًا أو تعينها.<br/>

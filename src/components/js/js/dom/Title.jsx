@@ -27,7 +27,7 @@ result.innerHTML = document.title`
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript title</h1>
+    <h1 className="heading-style">JavaScript title</h1>
     <article>
         <div className="style_divv mt-5">
             تقوم خاصية <b>title</b> بتعيين أو إرجاع عنوان المستند.

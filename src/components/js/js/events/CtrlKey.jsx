@@ -35,7 +35,7 @@ export default function OnctrlKey(){
   document.body.addEventListener("keypress", function_KeyPressed);
   return(
 <section className="section-conetent">
-  <h1 className="heading-style heading-style-js-color">JavaScript onctrlKey</h1>
+  <h1 className="heading-style">JavaScript onctrlKey</h1>
   <article>
     <p className="style_divv mt-5">
         تقوم الخاصية <b>onctrlKey</b> بإرجاع قيمة منطقية تشير إلى ما إذا كان قد تم الضغط على مفتاح <kbd>CTRL</kbd> عند تشغيل حدث الماوس أم لا.<br/>

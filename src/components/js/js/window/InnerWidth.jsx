@@ -2,8 +2,6 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function InnerWidth(){
-    //  document.getElementById("h2").innerHTML =  "innerWidth : " + innerWidth + "<br/>"
-    //  document.getElementById("h2").innerHTML += "outerWidth : "+ window.outerWidth 
     const codeExemple1= { 
     code: `     <h2> innerWidth : <span id="innerWidth"></span></h2>
      <h2> outerWidth : <span id="outerWidth"></span></h2>
@@ -15,7 +13,7 @@ document.getElementById("outerWidth").innerHTML = window.outerWidth + "px"`
 
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript innerWidth</h1>
+    <h1 className="heading-style">JavaScript innerWidth</h1>
     <article className="mt-5">
         <p className="style_divv">
             تُرجع الخاصية <b>innerWidth</b> عرض منطقة محتوى النافذة.<br/>

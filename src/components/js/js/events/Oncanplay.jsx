@@ -21,7 +21,7 @@ export default function Canplay(){
     
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript canplay</h1>
+    <h1 className="heading-style">JavaScript canplay</h1>
     <article>
         <p className="style_divv mt-5">
             يحدث حدث <b>oncanplay</b> عندما يمكن للمتصفح بدء تشغيل <bdi><b>audio/video</b></bdi> المحدد (عندما يكون مخزنًا مؤقتًا بما يكفي لبدء التشغيل).<br/><br/>

@@ -26,8 +26,8 @@ export default function AlignSelf(props){
         }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Align-Self </h1>
-    <article>
+    <h1 className="heading-style"> CSS Align-Self </h1>
+    <article className="mt-5">
         <p className="style_divv">
             تحدد الخاصية <b>align-self</b> المحاذاة للعنصر المحدد داخل الحاوية المرنة.  <br/>
             <b>ملاحظة</b> : تتجاوز الخاصية <b>align-self</b> خاصية <b>align-items</b> للحاوية المرنة.     

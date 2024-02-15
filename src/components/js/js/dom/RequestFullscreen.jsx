@@ -48,7 +48,7 @@ function closeFullscreen() {
     }
   return(
 <section className="section-conetent">
-  <h1 className="heading-style heading-style-js-color">JavaScript requestFullscreen</h1>
+  <h1 className="heading-style">JavaScript requestFullscreen</h1>
   <article>
       <p className="style_divv mt-5">
           فتح طريقة <bdi><b>requestFullscreen()</b></bdi> عنصرًا في وضع ملء الشاشة.<br/>

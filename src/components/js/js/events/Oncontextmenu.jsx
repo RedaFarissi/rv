@@ -2,18 +2,7 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Oncontextmenu(){
-  // #div_element{
-  //   padding:9px 5px; 
-  //   font-size: 20px;
-  // }
 
-
-  // const div_element = document.getElementById("div_element")
-  // div_element.oncontextmenu =()=>{
-  //   div_element.style.backgroundColor = "red"
-  //   div_element.style.color = "white"
-  //   alert("oncontextmenu Event")
-  // }
   const code1 = `<!-- Code HTML -->
 <element oncontextmenu="//script">`
   const code2 = `// Code JavaScript 
@@ -45,7 +34,7 @@ div_element.oncontextmenu = () => {
     }
   return(
 <section className="section-conetent">
-  <h1 className="heading-style heading-style-js-color">JavaScript oncontextmenu</h1>
+  <h1 className="heading-style">JavaScript oncontextmenu</h1>
   <article>
       <p className="style_divv mt-5">
           يقع حدث <b>oncontextmenu</b> عندما ينقر المستخدم بزر الماوس الأيمن فوق عنصر لفتح قائمة السياق.<br/>

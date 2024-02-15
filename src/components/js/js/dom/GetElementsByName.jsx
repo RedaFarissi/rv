@@ -43,7 +43,7 @@ result.innerHTML = name.length`
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript getElementsByName</h1>
+    <h1 className="heading-style">JavaScript getElementsByName</h1>
     <article>
         <p className="style_divv mt-5">
             ترجع طريقة <bdi><b>getElementsByName()</b></bdi> مجموعة من العناصر باسم محدد.<br/>

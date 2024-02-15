@@ -32,9 +32,9 @@ export default function Overflow(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Overflow </h1>
+    <h1 className="heading-style"> CSS Overflow </h1>
     <article>
-        <div className="style_divv mt-5">    
+        <p className="style_divv mt-5">    
             تحدد خاصية overflow ما يجب أن يحدث إذا تجاوز المحتوى مربع عنصر .<br/>
             تحدد هذه الخاصية ما إذا كان سيتم قص المحتوى أو إضافة أشرطة التمرير عندما يكون محتوى العنصر كبيرًا جدًا بحيث لا يتناسب مع منطقة معينة.<br/>
             ملاحظة: تعمل خاصية overflow فقط مع عناصر الكتلة ذات الارتفاع المحدد وتستقبل القيم التالية :
@@ -44,7 +44,7 @@ export default function Overflow(props){
                 <li>auto   :  من خلال هذه القيمة يمكن إضافة شريط تمرير من ناحية height  </li>
                 <li>visible : عرض المحتوى كاملا بدون شريط تمرير . </li>
             </ul>
-        </div>
+        </p>
         <div className="mital">متال :  </div>
         <CodeHighlighter file_name="index.html"code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="CSS Overflow" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Overflow' logo={images.html_logo} styleAdd="css-overflow-styleAdd" route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">

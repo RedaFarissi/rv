@@ -97,8 +97,8 @@ obJ.name("reda")`
 
   return(
 <section className="section-conetent">
-  <h1 className="heading-style heading-style-js-color">JavaScript Class </h1>
-  <article>
+  <h1 className="heading-style">JavaScript Class </h1>
+  <article className="mt-5">
         <h2 className="title-h2">1 - JavaScript Class Syntax</h2>
         <p className="style_divv">
             استخدم  الكلمات <b>class</b> الرئيسية لإنشاء فصل دراسي.<br/>

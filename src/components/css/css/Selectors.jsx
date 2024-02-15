@@ -243,8 +243,8 @@ export default function Selectors(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Selectors </h1>
-    <article>
+    <h1 className="heading-style"> CSS Selectors </h1>
+    <article className="mt-5">
         <h2 className="title-h2">1- CSS <bdi>.class</bdi>  Selectors</h2>
         <p className="style_divv">
             تحدد <b><bdi>.class</bdi></b>  العناصر ذات سمة فئة معينة. <br/>

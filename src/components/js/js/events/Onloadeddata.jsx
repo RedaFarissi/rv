@@ -43,7 +43,7 @@ function function_name4() {
     }
   return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onloadeddata</h1>
+    <h1 className="heading-style">JavaScript onloadeddata</h1>
     <article>
       
         <p className="style_divv mt-5">

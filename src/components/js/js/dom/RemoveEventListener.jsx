@@ -37,7 +37,7 @@ document.getElementById("anuler").addEventListener("click", function() {
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript removeEventListener</h1>
+    <h1 className="heading-style">JavaScript removeEventListener</h1>
     <article>
         <p className="style_divv mt-5">
             تزيل طريقة <bdi>removeEventListener()</bdi> ال <b>event</b> من عنصر .<br/>

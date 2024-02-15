@@ -5,7 +5,7 @@ import { CodeCommand , CodeHighlighter , Result } from "../../path";
 export default function ModelForm(){
     return(
         <article id="ModelForm">
-            <h1 className="heading-style heading-style-django-color"> Django forms.ModelForm</h1> 
+            <h1 className="heading-style"> Django forms.ModelForm</h1> 
             <p className="style_divv mt-5">
                 في <b>Django</b>، <b>Forms.ModelForm</b> عبارة عن فئة مقدمة من إطار عمل <b>Django</b> لإنشاء <b>forms</b> استنادًا إلى <b>models</b>. تعد هذه الفئة جزءًا من نظام التعامل مع <b>form</b> الخاص بـ <b>Django</b>، والذي يسمح لك بإنشاء <b>HTML forms</b> بسهولة لجمع مدخلات المستخدم والتحقق من صحتها . <br/>
             </p>

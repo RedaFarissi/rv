@@ -69,7 +69,7 @@ function setFullVolume() {
   },[])
   return(
 <section className="section-conetent">
-  <h1 className="heading-style heading-style-js-color">JavaScript onvolumechange</h1>
+  <h1 className="heading-style">JavaScript onvolumechange</h1>
   <article>
       <p className="style_divv mt-5">
           يقع حدث <b>onvolumechange</b> في كل مرة يتم فيها تغيير مستوى صوت  <b>video</b>/<b>audio</b>.

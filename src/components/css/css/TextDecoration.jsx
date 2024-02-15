@@ -62,7 +62,7 @@ h2{ text-decoration-color: red;}`,
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Text-Decoration </h1>
+    <h1 className="heading-style"> CSS Text-Decoration </h1>
     <article>
         <p className="style_divv mt-5">
             تحدد خاصية <b>text-decoration</b> الزخرفة المضافة إلى النص ، وهي خاصية اختصار لـ:

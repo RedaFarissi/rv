@@ -226,7 +226,7 @@ document.getElementById("myButton").addEventListener("click",variable)`
   
   return(
 <section className="section-conetent">
-  <h1 className="heading-style heading-style-js-color">JavaScript addEventListener</h1>
+  <h1 className="heading-style">JavaScript addEventListener</h1>
   <article>
         <h2 className="title-h2">1- addEventListener </h2>
         <p className="style_divv">

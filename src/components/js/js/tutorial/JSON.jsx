@@ -98,7 +98,7 @@ id.innerHTML = \`Full name is \${arr[0]} \${arr[1]} and age is \${arr[2]} years\
     
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript JSON</h1>
+    <h1 className="heading-style">JavaScript JSON</h1>
     <article className="mt-5">
         <h2 className="title-h2">1. ما هو JSON</h2>
         <p className="style_divv">

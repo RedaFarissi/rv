@@ -40,7 +40,7 @@ function mouseUp() {
     }
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onmousedown</h1>
+    <h1 className="heading-style">JavaScript onmousedown</h1>
     <article>
         <p className="style_divv mt-5">
             يحدث حدث <b>onmousedown</b> عندما يضغط المستخدم على زر الماوس فوق عنصر.<br/>

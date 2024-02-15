@@ -36,8 +36,8 @@ export default function InvalidAndValid(props){
     }
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-css-color"> CSS Invalid And Valid </h1>
-    <article>
+    <h1 className="heading-style"> CSS Invalid And Valid </h1>
+    <article className="mt-5">
         <h2 className="title-h2">1. الخاصية  invalid </h2>
         <p className="style_divv">
             تستعمل  <b>invalid</b>  مع عناصر ال <b>input</b>  وتسمح بإعطاء خصائص <b>CSS</b> إلى عناصر الإدخال عند إدخال نوع خاطئ أو إدخال عدد أحرف أقل مما تحديده داخل السمة <b>min</b> أو إدخال عدد أكتر مما تم تحديده داخل السمة <b>max</b> . <br/>

@@ -42,7 +42,7 @@ export default function TransformStyle(props){
     }
     return (
     <section className="section-conetent">
-        <h1 className="heading-style heading-style-css-color"> CSS Transform-Style </h1>
+        <h1 className="heading-style"> CSS Transform-Style </h1>
         <article className="mt-5">
             <p className="style_divv">
                 تحدد خاصية نمط التحويل كيفية عرض العناصر المتداخلة في مساحة ثلاثية الأبعاد.<br/>

@@ -2,15 +2,7 @@ import images from "../../imagesJs"
 import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Onpaste(){
-    // #input_test{ width: 50%;}
-
-    // var input = document.getElementById("input_test") 
-    // input.value = "Try to paste something in here"
     
-    // function passer() {
-    //   var result =   document.getElementById("result")
-    //   result.innerHTML += "You pasted text<br/>"
-    // }
     const code1 = `<!-- Code HTML -->
 <element onpaste="//script">`
     const code2 = `// Code JavaScript 
@@ -42,7 +34,7 @@ function passer() {
     }
     return(
   <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript onpaste</h1>
+    <h1 className="heading-style">JavaScript onpaste</h1>
     <article>
         <p className="style_divv mt-5">
             يحدث حدث <b>onpaste</b> عندما يلصق المستخدم بعض المحتوى في عنصر.<br/>

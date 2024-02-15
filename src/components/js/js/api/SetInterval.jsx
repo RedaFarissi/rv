@@ -50,7 +50,7 @@ function Clock(){
     },[]);
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript setInterval</h1>
+    <h1 className="heading-style">JavaScript setInterval</h1>
     <article>
         <p className="style_divv mt-5">
             تستدعي طريقة <bdi><b>setInterval()</b></bdi> دالة في فترات زمنية محددة (بالمللي ثانية).<br/>

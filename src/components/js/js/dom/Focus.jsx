@@ -21,7 +21,7 @@ email.focus()`
     },[]);
     return(
 <section className="section-conetent">
-    <h1 className="heading-style heading-style-js-color">JavaScript focus</h1>
+    <h1 className="heading-style">JavaScript focus</h1>
     <article>
         <p className="style_divv mt-5">
             تعطي طريقة <bdi><b>focus()</b></bdi> التركيز على عنصر (إذا كان من الممكن التركيز عليه).
