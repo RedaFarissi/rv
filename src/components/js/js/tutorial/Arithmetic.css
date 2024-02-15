@@ -1,6 +1,5 @@
-table { width: 80%;margin:20px auto; }
-table td,th{
-    width:50%;
-    border: 2px solid whitesmoke;
+table td,th,td{
+    border: 2px solid gray;
     border-collapse:collapse;
+    text-align: center;
 }

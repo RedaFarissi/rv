@@ -61,7 +61,7 @@ function paragragh() {
 <section className="section-conetent">
     <h1 className="heading-style">JavaScript Introduction</h1>
     <article className="mt-5">        
-        <h2 className="title-h2">1. ما هي JavaScript ؟</h2>
+        <h2 className="title-h2">1 - ما هي JavaScript ؟</h2>
         <p className="style_divv">
             <b>JavaScript</b> هي لغة البرمجة الأكثر شيوعًا في العالم و هي لغة لبرمجة الويب. كما تعتبر لغة سهلة التعلم. <br/>
             من خلال لغة <b>JavaScript</b> يمكنك جعل موقعك متجاوب <br/>
@@ -72,8 +72,8 @@ function paragragh() {
         </p>
     </article>
     <article>
-        <h2 className="title-h2">2. طريقة إنشاء ملف JavaScript </h2>
-        <h3 className="title-h3">1. طريقة إنشاء الملف</h3>
+        <h2 className="title-h2">2 - طريقة إنشاء ملف JavaScript </h2>
+        <h3 className="title-h3">1 - طريقة إنشاء الملف</h3>
         <p className="style_divv">
             لإنشاء ملف <b>JavaScript</b> كل ما عليك فعله إنشاء ملف وأن تقوم بئعطائه إسم و صيغة <b>js</b> تم التأكد أن ملف داخل نفس المجلد الذي يحتوي ملف <b>html</b>.
         </p>
@@ -82,7 +82,7 @@ function paragragh() {
         <img src={images.js_Introduction3} className="img"/>
     </article>
     <article>
-        <h2 className="title-h2">2. طريقة ربط الملف html ب js</h2>
+        <h2 className="title-h3">2 - طريقة ربط الملف html ب js</h2>
         <p className="style_divv">
             لربط ملف <b>html</b> بملف <b>js</b> يجب إستخدام الوسم <kbd>&lt;script&gt;</kbd> مع السمة <b>src</b> و مسار الملف .
         </p>

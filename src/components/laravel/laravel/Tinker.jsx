@@ -8,7 +8,7 @@ export default function Tinker(props){
       <article className="mt-5">
          <hr style={{height: "0.9rem",border:"0.3rem solid black"}}/>
          <h1 className="mt-5"> Tinker </h1>
-         <a href="https://laravel.com/docs/10.x/artisan#usage" target="_blank"> https://laravel.com/docs/10.x/artisan#usage </a>
+         <a href="https://laravel.com/docs/10.x/artisan#usage" rel="noreferrer" target="_blank"> https://laravel.com/docs/10.x/artisan#usage </a>
          <h2 id="useTinker">1 - Use Tinker </h2>
          <div className="alert bg-dark text-light pb-0"><pre>php artisan tinker</pre></div>
          <h2 id="TinkerExemple1">2 - Tinker Exemple 1 </h2>

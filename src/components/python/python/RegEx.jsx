@@ -66,9 +66,9 @@ print(y)`} language="python" file_name="desktop / app.py" addclassName="mt-3 mb-
             <CodeHighlighter  code={`import re
 
 txt = "The rain in Moroc"
-x = re.split(r"\s", txt)
-y = re.split(r"\s", txt,1)
-z = re.split(r"\s", txt,2)
+x = re.split(r"\\s", txt)
+y = re.split(r"\\s", txt,1)
+z = re.split(r"\\s", txt,2)
 
 print(x)
 print(y)
@@ -85,8 +85,8 @@ print(z)`} language="python" file_name="desktop / app.py" addclassName="mt-3 mb-
 
 txt = "The rain in Moroc"
 
-x = re.sub(r"\s", "0", txt)
-y = re.sub(r"\s", "0", txt, 2)
+x = re.sub(r"\\s", "0", txt)
+y = re.sub(r"\\s", "0", txt, 2)
 
 print(x)
 print(y)`} language="python" file_name="desktop / app.py" addclassName="mt-3 mb-3" copie={true}/>

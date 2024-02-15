@@ -1,4 +1,4 @@
-import { CodeHighlighter , CodeCommand} from "../../path";
+import { CodeCommand } from "../../path";
 
 export default function PIP(){
     return(

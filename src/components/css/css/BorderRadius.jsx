@@ -39,8 +39,8 @@ export default function BorderRadius(props){
         <div className="mital">متال 1 :</div>
         <CodeHighlighter file_name="index.html"code={codeExemple.code} head={codeExemple.head} language="html" is_html={true} title="CSS Border-Radius" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Border-Radius' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
-            <img src={images.orange} width="40%"  />
-            <img src={images.orange} width="40%" className="css-border-radius-ex2"/>
+            <img src={images.orange} width="40%" alt="orange" />
+            <img src={images.orange} width="40%" className="css-border-radius-ex2" alt="orange"/>
         </Result>
       </article>
       <article>

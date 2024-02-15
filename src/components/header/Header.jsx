@@ -3,28 +3,38 @@ import { useEffect, useState } from "react";
 import "./Header.sass"
 
 export default function Header(){    
+    
     const [modeColor,setModeColor] = useState(localStorage.getItem("mode_color") || null)
+    
     // Course links 
     const programing = [{name:"HTML" , link:"html"},{name:"CSS" , link:"css"},{name:"JAVASCRIPT" , link:"js"},{name:"REACT.js" , link:"react"},{name:"MYSQL" , link:"mysql"},{name:"PYTHON" , link:"python"},{name:"DJANGO" , link:"django"},{name:"DJANGO REST FRAMEWORK" , link:"django-rest-framework"},{name:"PHP" , link:"php"},{name:"LARAVEL" , link:"laravel"} ,{name:"Git" , link:"git"},{name:"CMD" , link:"power-shell"},]
     const links = programing.map(e=> 
     <li className="menu-category">
         <Link to={e.link} className={`menu-title color-link-nav-light`}>
-          {e.name}
+            {e.name}
         </Link>
     </li>);
 
     // Handle color mode 
-    const themeLight = ["#8080801a","black","#f2f2f2","rgba(0 0 0/5%)","red","rgba(0 0 0/7%)"];
-    const themeDark = ["rgb(5 5 5)","#f0fff0","rgb(10 10 10)","rgba(255 255 255/5%)","aqua","rgba(255 255 255/7%)"];
+    const themeDark = ["rgb(5 5 5)","#f0fff0","rgb(10 10 10)","rgba(255 255 255/5%)","aqua","rgba(255 255 255/7%)","yellow","#1e1e1e","#fdf6e3"];
+    const themeLight = ["#8080801a","black","#f2f2f2","rgba(0 0 0/5%)","red","rgba(0 0 0/7%)","green","white","black"];
     const handleModeColor = (themeColor)=>{
-        const [bgBody,textColor,bgAside,styleDivv,titleH2,asideHover] = themeColor;
+        const [
+            bgBody,textColor,bgAside,
+            styleDivv,titleH2,asideHover,
+            titleH5,buttonBgCopie,buttonCopie
+        ] = themeColor;
         document.documentElement.style.setProperty('--bg-body', bgBody);
         document.documentElement.style.setProperty('--text-color', textColor);
         document.documentElement.style.setProperty('--bg-aside', bgAside);
-        document.documentElement.style.setProperty('--aside-hover', bgAside);
+        //document.documentElement.style.setProperty('--aside-hover', bgAside);
         document.documentElement.style.setProperty('--style-divv', styleDivv);
         document.documentElement.style.setProperty('--title-h2', titleH2);
         document.documentElement.style.setProperty('--aside-hover', asideHover);   
+        document.documentElement.style.setProperty('--title-h5', titleH5);
+        document.documentElement.style.setProperty('--button-bg-copie', buttonBgCopie);
+        document.documentElement.style.setProperty('--button-copie', buttonCopie);
+
         if(bgBody === "rgb(5 5 5)"){
             localStorage.setItem("mode_color","black")
             setModeColor("black");
@@ -66,8 +76,8 @@ export default function Header(){
                 </Link> 
                 {
                     (modeColor === "black" && modeColor !== null)?
-                    <i class="fa-solid fa-sun text-warning" onClick={()=>{handleModeColor(themeLight)}}></i>:
-                    <i class="fa-solid fa-moon" onClick={()=>{handleModeColor(themeDark)}}></i>   
+                    <i class="fa-solid fa-sun text-warning" onClick={()=>{handleModeColor(themeLight);window.location.reload()}}></i>:
+                    <i class="fa-solid fa-moon" onClick={()=>{handleModeColor(themeDark);window.location.reload()}}></i>   
                 }
             </div>
         </div> 
@@ -82,8 +92,3 @@ export default function Header(){
 </header>
     )
 }
-
-/* 
-
-*/
-  

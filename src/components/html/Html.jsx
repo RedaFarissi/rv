@@ -23,8 +23,8 @@ export default function Html(props){
             </ul>
         </aside>
             <Routes>
-                <Route path='/' element={<Introduction html_logo={html_logo} />} />
-                <Route path='introduction' element={<Introduction html_logo={html_logo} />} /> 
+                <Route path='/' element={<Introduction html_logo={html_logo} modeColorCode={props.modeColorCode}/>} />
+                <Route path='introduction' element={<Introduction html_logo={html_logo} modeColorCode={props.modeColorCode} />} /> 
                 <Route path='editor' element={<Editor html_logo={html_logo} />} /> 
                 <Route path='attributes' element={<Attributes html_logo={html_logo} />} /> 
                 <Route path='heading-(h1)' element={<Heading html_logo={html_logo} />} /> 

@@ -72,6 +72,7 @@ export default function Introduction(props){
             addClass="addClass m-auto mt-3 mb-3"
             copie={true}
             number={true}
+            modeColorCode={props.modeColorCode}
         /> 
     </article>
     <article>

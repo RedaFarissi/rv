@@ -9,7 +9,7 @@ export default function InstallPython(){
             <h2 className="title-h2">1 - تحميل بايثون .</h2>
             <p className="style_divv">             
                 <ul>
-                    <li>قم بزيارة موقع بايثون الرسمي : <a dir="ltr" href="https://www.python.org/downloads/" target="_blank" className="text-success">https://www.python.org/downloads/.</a></li>
+                    <li>قم بزيارة موقع بايثون الرسمي : <a dir="ltr" href="https://www.python.org/downloads/" target="_blank" rel="noreferrer" className="text-success">https://www.python.org/downloads/.</a></li>
                     <li>انقر على علامة التبويب "Downloads".</li>
                     <li>اختر أحدث إصدار من بايثون لنظام التشغيل Windows وقم بتنزيل المثبت (عادةً ملف .exe).</li>
                 </ul>

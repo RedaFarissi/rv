@@ -1,4 +1,4 @@
-import { CodeHighlighter , CodeCommand} from "../../path";
+import { CodeHighlighter } from "../../path";
 
 export default function StringFormatting(){
     return(

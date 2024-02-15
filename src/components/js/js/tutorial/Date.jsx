@@ -38,7 +38,7 @@ document.getElementById("Date").innerHTML = currentDate;`
 <section className="section-conetent">
     <h1 className="heading-style">JavaScript Date</h1>
     <article className="mt-5">
-        <h2 className="title-h2">1. date</h2>
+        <h2 className="title-h2">1. التاريخ </h2>
         <p className="style_divv">
             بشكل افتراضي ، ستستخدم <b>JavaScript</b> المنطقة الزمنية للمتصفح وتعرض التاريخ كسلسلة نصية كاملة
             <CodeHighlighter code={`let variable = new Date()`} language="js" addClass="mt-3 mb-3" copie={true}  />  
@@ -64,7 +64,7 @@ document.getElementById("Date").innerHTML = currentDate;`
         </Result>
     </article>
     <article>
-        <h2 className="title-h2">2. Date with string</h2>
+        <h2 className="title-h2">2. سلسلة التاريخ</h2>
         <p className="style_divv">
             يقوم  التاريخ <b><bdi>Date()</bdi></b> بإنشاء كائن تاريخ جديد من سلسلة التاريخ
             <CodeHighlighter code={`let variable = new Date("October 17, 2021 11:14:00")`} language="js" addClass="mt-3 mb-3" copie={true} />

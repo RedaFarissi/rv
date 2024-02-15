@@ -1,11 +1,35 @@
 export default function Introduction(){
     return(
     <>
-        <h1 className="heading-style heading-style-python-color"> PHP Introduction</h1>
+        <h1 className="heading-style"> PHP Introduction</h1>
         <article className="mt-5">
-        <h2 id="intro" className="title-h2"> 1 -مقدمة حول php </h2>
+            <h2 className="title-h2"> 1 - ما هو PHP ؟ </h2>
             <p className="style_divv">
-                
+                <b>PHP</b> هو اختصار لـ <b>"Hypertext Preprocessor"</b>، وهي لغة برمجة مفتوحة المصدر وتُستخدم بشكل رئيسي لتطوير تطبيقات الويب. يعتبر <b>PHP</b> لغة برمجة جانب الخادم، مما يعني أن الأوامر والسكربتات المكتوبة بلغة <b>PHP</b> تُنفذ على الخادم الذي يستضيف موقع الويب، وبعد التنفيذ، يُرسل المحتوى الناتج إلى متصفح الزائر.<br/><br/>
+                تم تصميم <b>PHP</b> خصيصًا لإنشاء صفحات الويب الديناميكية، حيث يمكن استخدامها لجمع البيانات من مصادر متنوعة، مثل قواعد البيانات، وإظهارها بشكل ديناميكي للمستخدمين. يتم تضمين رموز <b>PHP</b> داخل صفحات <b>HTML</b> للتحكم في التنفيذ وإدارة الديناميات.<br/><br/>
+                من خلال إمكانياتها القوية في التعامل مع البيانات والتفاعل مع قواعد البيانات، وسهولة تكاملها مع <b>HTML</b>، أصبحت <b>PHP</b> إحدى الخيارات الشائعة لتطوير تطبيقات الويب.<br/>
+            </p>
+            <h2 className="title-h2"> 2 -  ماذا يمكن أن تفعل PHP ؟ </h2>
+            <p className="style_divv">
+                <ul>
+                    <li>يمكن لـ <b>PHP</b> إنشاء محتوى صفحة ديناميكي</li>
+                    <li>يمكن لـ <b>PHP</b> إنشاء الملفات وفتحها وقراءتها وكتابتها وحذفها وإغلاقها على الخادم</li>
+                    <li>يمكن لـ <b>PHP</b> جمع بيانات النموذج</li>
+                    <li>يمكن لـ <b>PHP</b> إرسال واستقبال ملفات تعريف الارتباط</li>
+                    <li>يمكن لـ <b>PHP</b> إضافة أو حذف أو تعديل البيانات في قاعدة البيانات الخاصة بك</li>
+                    <li>يمكن استخدام <b>PHP</b> للتحكم في وصول المستخدم</li>
+                    <li>يمكن لـ <b>PHP</b> تشفير البيانات</li>
+                </ul>
+            </p>
+            <h2 className="title-h2"> 3 - لماذا PHP ؟ </h2>
+            <p className="style_divv">
+                <ul>
+                    <li>تعمل <b>PHP</b> على أجهزة مختلفة (Windows، Linux، Unix، Mac OS X، إلخ.)</li>
+                    <li><b>PHP</b> متوافق مع جميع المواقع المستخدمة اليوم تقريبًا (Apache، IIS، وما إلى ذلك)</li>
+                    <li><b>PHP</b> يدعم مجموعة واسعة من متطلبات البيانات</li>
+                    <li><b>PHP</b> مجاني. قم بتنزيله من مصدر <b>PHP</b> الرسمي: <a href="https://www.php.net/" target="_blanck" rel="noopener">www.php.net</a></li>
+                    <li><b>PHP</b> سهلة التعلم ليس على جزء من العمال</li>
+                </ul>
             </p>
         </article>
     </>

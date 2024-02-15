@@ -59,7 +59,7 @@ document.getElementById("id").setAttributeNode(variable)`} language="js" addClas
         <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="createAttribute" addClass="mt-3 mb-3" copie={true}  number={true}/>  
         <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
         <Result title="createAttribute" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
-            <div id="id-createAttribute-exemple1">Hello Word</div>
+            <div id="id-createAttribute-exemple1" className="mb-1">Hello Word</div>
             <button id="Button" class="btn btn-primary" onClick={exemple1}>Click Ici</button>
         </Result>
         <div className="mital">متال 2 :  </div>

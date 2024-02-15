@@ -69,15 +69,17 @@ body
                 font-family: 'Tajawal', sans-serif
                 &:hover
                     background-color: $asideHover
-                &:focus
-                    background-color: $textColor
-                    color: $bgAside
+                // &:focus
+                //     background-color: $textColor
+                //     color: $bgAside
     .aside-dl-dt
         padding: 7px 20px
         font-size: 13px 
         a
             text-decoration: none
             color: $textColor
+            &:hover
+                background-color: $asideHover 
     .aside-dl-dd
         font-size: 11.5px 
         padding: 0px 26px 
@@ -93,9 +95,6 @@ body
             border-radius: 3px 
             &:hover
                 background-color: $asideHover
-            &:focus
-                background-color: $textColor
-                color: $bgAside
             i
                 font-size: 5px 
                 margin-right: 3px  
@@ -116,7 +115,7 @@ body
         direction: ltr
         font-style: italic
         font-size: 40px
-        text-shadow: 0.9px 0.9px 9px $title_h2
+        color: $title_h2
         font-family: "Readex Pro",sans-serif
     .img
         width: 100%
@@ -135,17 +134,18 @@ body
     .title-h2
         font-size: 31px
         color: $title_h2
-        margin-bottom: 14px 
+        margin-top: 15px 
+        margin-bottom: 15px 
         font-family: "Readex Pro",sans-serif
     .title-h3
         font-size: 27px
         margin-top:17px 
-        color:  rgba(99, 123 , 200 , )
+        color:  #004481
         font-family: "Readex Pro",sans-serif
     .title-h5
         font-size: 20px
         margin-top:15px 
-        color: yellow
+        color: $title_h5
         font-family: "Readex Pro",sans-serif
     .title-h6
         margin-top:13px 
@@ -160,7 +160,7 @@ body
     .addClass
         width: 75%
     .mital
-        color: yellow
+        color: $title_h5
         font-size: 23px
         font-family: "Readex Pro",sans-serif
 .rounded-top
@@ -219,3 +219,4 @@ body
 
 td,th 
     width: max-content
+    color: $textColor
