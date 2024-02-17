@@ -1,7 +1,9 @@
-export default function IfElseElseif(){
+import { CodeHighlighter , CodeCommand , Result} from "../../path";
+
+export default function IfElseElseif(props){
     return(
     <>
-        <h1 className="heading-style heading-style-python-color"> PHP If...Else...Elseif </h1>
+        <h1 className="heading-style"> PHP If...Else...Elseif </h1>
         <article className="mt-5">
             <p className="style_divv">
                 

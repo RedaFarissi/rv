@@ -1,7 +1,9 @@
-export default function Superglobals(){
+import { CodeHighlighter , CodeCommand , Result} from "../../path";
+
+export default function Superglobals(props){
     return(
     <>
-        <h1 className="heading-style heading-style-python-color"> PHP Super globals </h1>
+        <h1 className="heading-style"> PHP Super globals </h1>
         <article className="mt-5">
             <p className="style_divv">
                 

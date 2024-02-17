@@ -1,7 +1,9 @@
-export default function Syntax(){
+import { CodeHighlighter , CodeCommand , Result} from "../../path";
+
+export default function Syntax(props){
     return(
     <>
-        <h1 className="heading-style heading-style-python-color"> PHP Syntax </h1>
+        <h1 className="heading-style"> PHP Syntax </h1>
         <article className="mt-5">
             <p className="style_divv">
                 
