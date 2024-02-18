@@ -1,5 +1,5 @@
 import images from "../../imagesJs"
-import { CodeHighlighter ,  Result} from "../../../path";
+import { CodeHighlighter } from "../../../path";
 
 export default function CreateComment(){
         const codeExemple1= { 
@@ -20,9 +20,9 @@ document.getElementById("id").appendChild(comment)`} language="js" addClass="mt-
         </div>
         <div className="mital">متال :  </div>
         <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="createAttribute" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js" addClass="mt-3 mb-3" copie={true}  number={true}/>
         <ul className="mb-0"><li> بعد النقر على <kbd>F12</kbd> </li></ul>
-        <img src={images.js64_createComment_2} className="img"/>
+        <img src={images.js64_createComment_2} alt="createComment" className="img"/>
     </article>
 </section>
     )

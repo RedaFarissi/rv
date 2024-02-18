@@ -1,6 +1,5 @@
 export {default as Introduction} from './php/Introduction';
 export {default as Install} from './php/Install';
-export {default as Syntax} from './php/Syntax';
 export {default as Comments} from './php/Comments';
 export {default as Variables} from './php/Variables';
 export {default as EchoPrint} from './php/EchoPrint';

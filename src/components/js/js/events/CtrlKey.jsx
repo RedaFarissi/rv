@@ -23,7 +23,7 @@ export default function OnctrlKey(){
     }
   
   function function_KeyPressed(event) {
-      if (event.ctrlKey && event.code == "KeyI") {
+      if (event.ctrlKey && event.code === "KeyI") {
         setExemple("you press Ctrl + I ")
       } else if (event.ctrlKey) {
         setExemple("you press Ctrl + "+ event.code)

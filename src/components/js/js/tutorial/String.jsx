@@ -157,18 +157,18 @@ document.getElementById("demo").innerHTML += myArray[6]  ;`
     <details  className="mt-5">
         <summary className='text-danger'> جميع العناوين  </summary>
         <ul dir="ltr">
-            <li><a className="text-light text-decoration-none" href="#length"> Length</a></li>
-            <li><a className="text-light text-decoration-none" href="#character"> Character</a></li>
-            <li><a className="text-light text-decoration-none" href="#objects"> objects</a></li>
-            <li><a className="text-light text-decoration-none" href="#extracting"> Extracting </a></li>
-            <li><a className="text-light text-decoration-none" href="#replace"> Replace </a></li>
-            <li><a className="text-light text-decoration-none" href="#Upper"> Upper Case </a></li>
-            <li><a className="text-light text-decoration-none" href="#Upper"> Lower Case </a></li>
-            <li><a className="text-light text-decoration-none" href="#concat"> concat </a></li>
-            <li><a className="text-light text-decoration-none" href="#trim"> trim </a></li>
-            <li><a className="text-light text-decoration-none" href="#Padding"> Padding </a></li>
-            <li><a className="text-light text-decoration-none" href="#charAt"> charAt </a></li>
-            <li><a className="text-light text-decoration-none" href="#split"> split </a></li>
+            <li><a className="text-decoration-none" href="#length"> Length</a></li>
+            <li><a className="text-decoration-none" href="#character"> Character</a></li>
+            <li><a className="text-decoration-none" href="#objects"> objects</a></li>
+            <li><a className="text-decoration-none" href="#extracting"> Extracting </a></li>
+            <li><a className="text-decoration-none" href="#replace"> Replace </a></li>
+            <li><a className="text-decoration-none" href="#Upper"> Upper Case </a></li>
+            <li><a className="text-decoration-none" href="#Upper"> Lower Case </a></li>
+            <li><a className="text-decoration-none" href="#concat"> concat </a></li>
+            <li><a className="text-decoration-none" href="#trim"> trim </a></li>
+            <li><a className="text-decoration-none" href="#Padding"> Padding </a></li>
+            <li><a className="text-decoration-none" href="#charAt"> charAt </a></li>
+            <li><a className="text-decoration-none" href="#split"> split </a></li>
         </ul>
     </details>
     <article>

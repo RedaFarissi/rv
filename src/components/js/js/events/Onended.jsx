@@ -1,5 +1,5 @@
 import images from "../../imagesJs"
-import { CodeHighlighter ,  Result , ResultAlert} from "../../../path";
+import { CodeHighlighter ,  Result } from "../../../path";
 import { useRef, useState } from "react";
 
 export default function Onended(){
@@ -14,15 +14,20 @@ export default function Onended(){
     }        
     
     document.body.addEventListener('keypress', function Reload(event){
-        if(event.key == "l"){
-            exempleVideo.current.load();
+        switch(event.key){
+            case "l": exempleVideo.current.load() ; break;
+            case "s": exempleVideo.current.play() ; break;
+            case "p": exempleVideo.current.pause() ; break;
         }
-        if(event.key == "s"){
-            exempleVideo.current.play();
-        }
-        if(event.key == "p"){
-            exempleVideo.current.pause();
-        }
+        // if(event.key === "l"){
+        //     exempleVideo.current.load();
+        // }
+        // if(event.key === "s"){
+        //     exempleVideo.current.play();
+        // }
+        // if(event.key === "p"){
+        //     exempleVideo.current.pause();
+        // }
     })
 
 

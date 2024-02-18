@@ -1,5 +1,5 @@
 import images from "../imagesHtml";
-import { CodeHighlighter ,  Result} from "../../path";
+import { CodeHighlighter } from "../../path";
 
 export default function Audio(){
     const code1 = `<video src="video_name.type" controls></video>`

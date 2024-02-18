@@ -1,4 +1,3 @@
-import images from "../imagesHtml";
 import { CodeHighlighter ,  Result} from "../../path";
 import { useState , useRef} from "react";
 

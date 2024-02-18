@@ -1,5 +1,4 @@
-import images from "../../imagesJs"
-import { CodeHighlighter ,  Result ,ResultConsole} from "../../../path";
+import { CodeHighlighter } from "../../../path";
 
 export default function DocumentElement(){
         const codeExemple1= { 

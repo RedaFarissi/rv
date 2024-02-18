@@ -27,10 +27,10 @@ export default function Onafterprint(){
             <li>في المتال التالي قمنا بستعمال <b>onbeforeprint</b> لتغيير التصميم قبل الطباعة .</li>
             <li>تم <b>onafterprint</b> لإعدة التصميم إلى شكله الأصلي بعد الطباعة . </li>
         </ul>
-        <img src={images.js54_afterprint} className="img"/>
-        <img src={images.js54_afterprint_2} className="img"/>
-        <img src={images.js54_afterprint_3} className="img"/>
-        <img src={images.js54_afterprint_2} className="img"/>
+        <img src={images.js54_afterprint} alt="onafterprint" className="img"/>
+        <img src={images.js54_afterprint_2} alt="onafterprint" className="img"/>
+        <img src={images.js54_afterprint_3} alt="onafterprint" className="img"/>
+        <img src={images.js54_afterprint_2} alt="onafterprint" className="img"/>
     </article>
 </section>
     )

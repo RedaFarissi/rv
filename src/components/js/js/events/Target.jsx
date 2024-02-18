@@ -61,7 +61,7 @@ export default function EventTarget(){
     function myfunction(event) {
         event.target.style.backgroundColor = "red";
         event.target.style.color = "white";
-        if (event.target.tagName == "BUTTON") {
+        if (event.target.tagName === "BUTTON") {
             event.target.classList.add("styling");
         }
     }

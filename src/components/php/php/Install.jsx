@@ -78,8 +78,7 @@ export default function Install(props){
         ?>
     </h2>  
 </body>
-</html>`} language="php" file_name="C:\Users\username\Desktop\php-test\index.php" addclassName="mt-3 mb-3" copie={true}/>   
-           
+</html>`} language="php" file_name="C:\Users\username\Desktop\php-test\index.php" addclassName="mt-3 mb-3" copie={true}/>
             <Result title='PHP TEST' file_name="index.html" route="http://localhost:8000/">     
                 <h2>Reda Eskouni</h2>                
             </Result>

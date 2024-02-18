@@ -44,14 +44,12 @@ export default function Onbeforeprint(){
         <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" title="onbeforeprint" addClass="mt-3 mb-3" copie={true}  number={true}/>  
         <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
         <Result title="onbeforeprint" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
-            <h2 id="h2">this is heading</h2>
-            <p id="p">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            </p>
-            <img src={images.hajime} style={{width:"500px", height:"500px",objectFit:"cover", border: "8px solid black", margin:"auto"}}/>   
+            <h2 id="h2">  this is heading  </h2>
+            <p id="p">  Lorem ipsum, dolor sit amet consectetur adipisicing elit.  </p>
+            <img src={images.hajime} alt="hajime" style={{width:"500px", height:"500px",objectFit:"cover", border: "8px solid black", margin:"auto"}}/>   
         </Result>
         <p dir='ltr'><kbd>Ctrl</kbd> + <kbd>p</kbd></p>
-        <img src={images.js53_beforeprint_3} className="img"/>
+        <img src={images.js53_beforeprint_3} alt='beforeprint' className="img"/>
     </article>
 </section>
     )

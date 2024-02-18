@@ -1,4 +1,3 @@
-import images from "../imagesHtml";
 import { CodeHighlighter ,  Result} from "../../path";
 
 export default function Meter(props){

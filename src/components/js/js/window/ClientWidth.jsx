@@ -42,7 +42,7 @@ document.getElementById("result").innerHTML += \`clientHeight : \${c_height}px\`
         <Result title='location' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>clientWidth : 320px</h2>
             <h2>clientHeight : 90px</h2>
-            <div style={{width:"20rem",height:"90px",backgroundColor:"red",color:"white",fontSize:"25px",padding:"2px",border:"0px",padding:"0px", }}>
+            <div style={{width:"20rem",height:"90px",backgroundColor:"red",color:"white",fontSize:"25px",border:"0px",padding:"0px", }}>
                 Reda Eskouni 
             </div>
         </Result>

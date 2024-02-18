@@ -1,5 +1,4 @@
-import images from "../imagesHtml";
-import { CodeHighlighter ,  Result} from "../../path";
+import { CodeHighlighter } from "../../path";
 
 export default function Header(){
     const code = `  <header>
