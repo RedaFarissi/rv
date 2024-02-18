@@ -12,3 +12,9 @@ export default function Casting(props){
     </>
     )
 }
+/*
+    <div className="mital"> متال : </div>
+    <CodeHighlighter  code={``} language="php" file_name="C:\xampp\htdocs\php-test\index.php" addclassName="mt-3 mb-3" copie={true}/>   
+    <Result title="" file_name="index.html" logo={props.xampp_logo}  route="http://localhost/php-test/index.php">
+    </Result>
+*/

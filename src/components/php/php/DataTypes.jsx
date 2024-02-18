@@ -1,4 +1,4 @@
-import { CodeHighlighter , CodeCommand , Result} from "../../path";
+import { CodeHighlighter } from "../../path";
 
 export default function DataTypes(props){
     return(

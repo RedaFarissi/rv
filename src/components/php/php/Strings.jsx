@@ -20,7 +20,6 @@ export default function Strings(props){
                     <li><a className="text-decoration-none" href="#concatenate_strings"> Concatenate Strings </a></li>
                     <li><a className="text-decoration-none" href="#slicing"> Slicing </a></li>
                     <li><a className="text-decoration-none" href="#escape_characters">  Escape Characters </a></li>
-                    <li><a className="text-decoration-none" href="#">  </a></li>
                 </ul>
             </details>
             <p className="style_divv">
@@ -437,10 +436,3 @@ echo $x;
     </>
     )
 }
-/*
-    <div className="mital"> متال : </div>
-    <CodeHighlighter  code={``} language="php" file_name="C:\xampp\htdocs\php-test\index.php" addclassName="mt-3 mb-3" copie={true}/>   
-    <Result title="" file_name="index.html" logo={props.xampp_logo}  route="http://localhost/php-test/index.php">     
-              
-    </Result>
-*/
