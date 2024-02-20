@@ -1,6 +1,7 @@
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
 import { 
-  Header,Home,Html,Css,Js,React,Mysql,Python,Django,DjangoRestFramework,Cmd,Git,Php,Laravel
+  Header,Home,Html,Css,Js,React,Mysql,Python,Django,
+  DjangoRestFramework,Cmd,Git,Php,Laravel
 } from './components/path';
 import "./App.sass"
 
@@ -8,46 +9,46 @@ function App() {
   const html_list = [ "Introduction","Editor","Attributes","Heading (h1)","Paragraph (p)" ,"Break (br)","Horizontal (hr)","Superscript (sup)","Subscript (sub)","Underline (u)","Italic (i)","Abbreviation (abbr)","Blockquote","Quotation (q)","Mark","Deleted (del)","Preformatted (pre)","Small","Anchor (a)","Image (img)","Division (div)","Span","Audio","Video","Details","Bi-Directional Isolation (bdi)","Bi-Directional Override (bdo)","Lists Ordered (ol)","Lists Unordered (ul)","Lists Definitionul (dl)","Table","Input","Select","Textarea","Form","Button", "Header","Fieldset","Dialog","Iframe","Meter","Style","Link","Meta" ]
   const css_list  = [ "Introduction","width","height","background","color","border","border-radius","padding","margin","font-size","font-style","font-weight","font-variant","white-space","word-wrap","word-break","text-decoration","letter-spacing","word-spacing","text-align","text-transform","text-indent","line-height","float","clear","opacity","hover","display","block","inline","inline-block","visibility","border-collapse","overflow","text-shadow","transform","transform-3D","perspective","resize","focus","transition","position","list-style-type","box-sizing","object-fit","animation","clip-path","cursor","scroll-behavior","z-index","outline","invalid & valid","after & before","writing-mode","filter","quotes","transform-style","-webkit-text-stroke", "flex-direction","flex-wrap","align-items","align-self","justify-content","order","grid","accent-color","Selectors","Functions","media","scss","sass"]
   const js_matrix = [
-    ["Tutorial","Introduction","Statements","Output","Variables","Arithmetic","Assignment","Types","String","String Search","Strings Templates","Numbers","Booleans","Date","Random","Conditions","Switch","Arrays part 1","Arrays part 2","Objects","Loop for","Loop while","Break","Conversion","Modules","Errors","JSON",],
-    ["Functions","Functions", "bind", "call","apply",  "Map","Filter", ],
-    ["Class","Class-Introduction","Static","private","Inheritance" ],
-    ["Window","alert","confirm","prompt","btoa","atob","location","innerWidth","innerHeight","clientWidth","scrollBy","pageXOffset","pageX","scrollIntoView","scrollTop","console","getComputedStyle","localStorage","sessionStorage","matchMedia","navigator","print",],
-    ["DOM","addEventListener","removeEventListener","doctype","getElementById","getElementsByClassName","getElementsByName","getElementsByTagName","activeElement","children","body","documentElement","cookie","classList","createElement","appendChild","setAttribute","createAttribute","removeAttribute","createComment","createTextNode","remove","head","images","links","querySelector","querySelectorAll","requestFullscreen","contains","focus","blur","scripts","title","play","pause","load",],
-    ["Events","currentTarget","target","ctrlKey","data","onclick","ondblclick","onbeforeprint","animation","onfocus","onblur","onloadstart","ondurationchange","onloadedmetadata","onloadeddata","onprogress","onended","onchange","oninput","oncontextmenu","oncopy","oninvalid","onkeydown","onkeypress","onkeyup","onload","onmousedown","onmouseup","onmouseenter","onmouseleave","onmouseover","onmouseout","ondrag","onsubmit","onfocusin","onfocusout","onerror","onpagehide","onpaste","onpause","onplay","onresize","onreset","onscroll","onselect","ontoggle","onunload","onvolumechange",],
-    ["API","Intro","Forms","fetch","History","setInterval","clearInterval","setTimeout"],
+      ["JS Tutorial","Introduction","Statements","Output","Variables","Arithmetic","Assignment","Types","String","String Search","Strings Templates","Numbers","Booleans","Date","Random","Conditions","Switch","Arrays part 1","Arrays part 2","Objects","Loop for","Loop while","Break","Conversion","Modules","Errors","JSON",],
+      ["JS Functions","Functions", "bind", "call","apply",  "Map","Filter", ],
+      ["JS Class","Class-Introduction","Static","private","Inheritance" ],
+      ["JS Window","alert","confirm","prompt","btoa","atob","location","innerWidth","innerHeight","clientWidth","scrollBy","pageXOffset","pageX","scrollIntoView","scrollTop","console","getComputedStyle","localStorage","sessionStorage","matchMedia","navigator","print",],
+      ["JS DOM","addEventListener","removeEventListener","doctype","getElementById","getElementsByClassName","getElementsByName","getElementsByTagName","activeElement","children","body","documentElement","cookie","classList","createElement","appendChild","setAttribute","createAttribute","removeAttribute","createComment","createTextNode","remove","head","images","links","querySelector","querySelectorAll","requestFullscreen","contains","focus","blur","scripts","title","play","pause","load",],
+      ["JS Events","currentTarget","target","ctrlKey","data","onclick","ondblclick","onbeforeprint","animation","onfocus","onblur","onloadstart","ondurationchange","onloadedmetadata","onloadeddata","onprogress","onended","onchange","oninput","oncontextmenu","oncopy","oninvalid","onkeydown","onkeypress","onkeyup","onload","onmousedown","onmouseup","onmouseenter","onmouseleave","onmouseover","onmouseout","ondrag","onsubmit","onfocusin","onfocusout","onerror","onpagehide","onpaste","onpause","onplay","onresize","onreset","onscroll","onselect","ontoggle","onunload","onvolumechange",],
+      ["JS API","Intro","Forms","fetch","History","setInterval","clearInterval","setTimeout"],
   ]
   const react_matrix  = [
-    ["Introduction","What_is_React","How_react_work","What_you_need_to_get_started","multiple_versions_of_Node","Verify_required_installations","ES6","Create_React_App","Run_React_App",],
-    ["Component","JSX","function_Component","function_Component_props","class_Component","class_Component_this_props","Components_in_Component",],
-    "Events", "Lists", "Handle_images_react", "Handle_import", "props_children",
-    ["hooks","useState","this_state"],
-    ["packages","npm_list","axios","react_paypal_js","react_sass","Router","useNavigate_Router","useParams_Router","react_syntax_highlighter"],
+      ["Introduction","What_is_React","How_react_work","What_you_need_to_get_started","multiple_versions_of_Node","Verify_required_installations","ES6","Create_React_App","Run_React_App",],
+      ["Component","JSX","function_Component","function_Component_props","class_Component","class_Component_this_props","Components_in_Component",],
+      "Events", "Lists", "Handle_images_react", "Handle_import", "props_children",
+      ["hooks","useState","this_state"],
+      ["packages","npm_list","axios","react_paypal_js","react_sass","Router","useNavigate_Router","useParams_Router","react_syntax_highlighter"],
   ]
   const sql_list = [
-    "Intro" , "Install Mysql","Create Database","Drop Database","Comments","Data Types","Select Database","Create Table","Drop Table","Insert Row","Auto-increment","Retrieving Data from Table","Merge Columns while Retrieving","IF EXISTS","IF NOT EXISTS","Retrieve Data with Conditions","Retrieve Data with Sorting","Retrieve Distinct Data","Merge Tables into One","Delete Data from Table","Update Table Data","Limit Rows Returned","Handling Null Fields","Retrieve Minimum Value in Column","Retrieve Maximum Value in Column","Count Rows in Table","Sum of Column Values","Average of Column Values","Aggregate Common Field Values","Conditions on Aggregated Fields","Copy Data to Another Table","Set Default Value for Column","CASE Condition","Relationships between tables",
+      "Intro" , "Install Mysql","Create Database","Drop Database","Comments","Data Types","Select Database","Create Table","Drop Table","Insert Row","Auto-increment","Retrieving Data from Table","Merge Columns while Retrieving","IF EXISTS","IF NOT EXISTS","Retrieve Data with Conditions","Retrieve Data with Sorting","Retrieve Distinct Data","Merge Tables into One","Delete Data from Table","Update Table Data","Limit Rows Returned","Handling Null Fields","Retrieve Minimum Value in Column","Retrieve Maximum Value in Column","Count Rows in Table","Sum of Column Values","Average of Column Values","Aggregate Common Field Values","Conditions on Aggregated Fields","Copy Data to Another Table","Set Default Value for Column","CASE Condition","Relationships between tables",
   ]
   const python_list = [
-    "Introduction","Install Windows","Execute Python in CMD","Indentation","Python in Visual Studio Code","Comments","Variables","Casting","Numbers","Strings","Booleans","Operators","Lists","Tuples","Sets","Dictionaries","If...Else","While Loops","For Loops","Functions","Lambda","Classes/Objects","Inheritance","Iterators","Scope","Modules","Dates","Math","JSON","RegEx","PIP","Try...Except",
-    "Input","String Formatting",
-    "File Handling","Read Files","Write/Create Files", "Delete Files",
+      "Introduction","Install Windows","Execute Python in CMD","Indentation","Python in Visual Studio Code","Comments","Variables","Casting","Numbers","Strings","Booleans","Operators","Lists","Tuples","Sets","Dictionaries","If...Else","While Loops","For Loops","Functions","Lambda","Classes/Objects","Inheritance","Iterators","Scope","Modules","Dates","Math","JSON","RegEx","PIP","Try...Except",
+      "Input","String Formatting",
+      "File Handling","Read Files","Write/Create Files", "Delete Files",
   ]
   const django_matrix = [
-    ["Introduction", "What_is_Django","What_you_need_to_get_started","Verify_required_installations","Struct_Django",],
-    ["virtualenv",  "What_is_virtualenv","Install_virtualenv","Create_virtualenv","Activate_virtualenv","Deactivate_virtualenv","Check_packages_installed","Install_django",       "Creating_Django_project","Get_version_installed_django","requirements","Running_development_server",],
-    ["First_Exemple", "Creation_app_in_project","settings","includes_app_to_urlpatterns","templates","urls","views","models","admin","createsuperuser","layout_file_to_avoid_repeat"],
-    ["Model_Field_Reference","Definition","Fields","Relations","Parameter" ],
-    ["Static_and_Media_files","Manage_static_files"  ,"Media_files"],
-    ["about_templates","Create_Public_templates","templates_tags","csrf_token","template_filters"  ],
-    ["about_admin","list_display", "prepopulated_fields", "list_editable", "inlines",],
-    ["about_models","get_absolute_url","create_a_database_backup","restore_the_data_from_the_backup","remove_all_from_db_models","annotate"],
-    ["User_Authentication","User_and_authontication","include_urls_and_files_html","Sign_Up","Add_fields_to_User_SignUp" ,],
-    ["Django_Email","send_email","list_emails"],
-    "Django_Pagination","Form","ModelForm",
-    ["Django_Filter","models_Objecjs_filter","raw_filter","lookup_expr","Q_filter","select_related",],
-    "Session","Context_Processors","ngrok"
+      ["Introduction", "What_is_Django","What_you_need_to_get_started","Verify_required_installations","Struct_Django",],
+      ["virtualenv",  "What_is_virtualenv","Install_virtualenv","Create_virtualenv","Activate_virtualenv","Deactivate_virtualenv","Check_packages_installed","Install_django",       "Creating_Django_project","Get_version_installed_django","requirements","Running_development_server",],
+      ["First_Exemple", "Creation_app_in_project","settings","includes_app_to_urlpatterns","templates","urls","views","models","admin","createsuperuser","layout_file_to_avoid_repeat"],
+      ["Model_Field_Reference","Definition","Fields","Relations","Parameter" ],
+      ["Static_and_Media_files","Manage_static_files"  ,"Media_files"],
+      ["about_templates","Create_Public_templates","templates_tags","csrf_token","template_filters"  ],
+      ["about_admin","list_display", "prepopulated_fields", "list_editable", "inlines",],
+      ["about_models","get_absolute_url","create_a_database_backup","restore_the_data_from_the_backup","remove_all_from_db_models","annotate"],
+      ["User_Authentication","User_and_authontication","include_urls_and_files_html","Sign_Up","Add_fields_to_User_SignUp" ,],
+      ["Django_Email","send_email","list_emails"],
+      "Django_Pagination","Form","ModelForm",
+      ["Django_Filter","models_Objecjs_filter","raw_filter","lookup_expr","Q_filter","select_related",],
+      "Session","Context_Processors","ngrok"
   ]
   const django_rest_framework_matrix = [
-      ["Introduction","What_is_django_rest_framework","What_is_API","Install_Django_Rest_Framework"/*,"File_Needed","Change_Content_From_database_to_Json" */],
+      ["Introduction","What_is_django_rest_framework","What_is_API","Install_Django_Rest_Framework"],
       ["serializers","What_is_Serializer","Serializers_not_specific_for_models","Serializers_and_model","Serializers_validation","Serializers_and_related_name"],
       ["self-kwargs","Why_we_use_self-kwargs","get_URL_param_from_function","get_URL_param_from_class"],
       ["APIView","What_is_APIView","post","get","put","delete",],
@@ -56,7 +57,10 @@ function App() {
       [ "DRF_and_React","Connect_Django_with_React","Get_data_in_React","Permissions","Authentication"],
   ]
   const php_list = [  
-    "Introduction","Install","Comments","Variables","echo print","Data Types","Strings","Numbers","Casting","Math","Constants","Magic Constants","Operators","If...Else...Elseif","Switch","Loops","Functions","Arrays","Superglobals","RegEx","Form Handling","Form Validation","Form Required","Form URL/E-mail","Form Complete",
+    ["PHP Tutorial","Introduction","Install","Comments","Variables","echo print","Data Types","Strings","Numbers","Casting","Math","Constants","Operators","Conditions","Switch","Loops","Break","Functions","Arrays","Superglobals","RegEx"],
+    ["PHP Forms","Form Handling","Form Validation","Form Required","Form URL/E-mail","Form Complete"],
+    ["PHP OOP","What is OOP","Classes/Objects","Constructor","Destructor","Access Modifiers","Inheritance","Constants","Abstract Classes","Interfaces","Traits","Static Methods","Static Properties","Namespaces","Iterables"],
+    ["PHP MySQL","Database","Database","Connect","Create DB","Create Table","Insert Data","Get Last ID","Insert Multiple","Prepared","Select Data","Where","Order By","Delete Data","Update Data","Limit Data"]
   ]
   const laravel_matrix = [
     ["MVC" , "what_is_laravel","what_we_need_to_use_laravel","First_Laravel_Project","run_project","artisan","views","route","route_to_views_without_puch_data","route_to_views_and_puch_data","request","Controller","group_duplicate_items_on_one_page","ussing_css_and_javaScript","route_and_name","handle_data_in_views","create_controller_to_use_data","method_in_controller","recource","list_all_route_in_project",],

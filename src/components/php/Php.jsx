@@ -1,23 +1,29 @@
 import { Routes, Route , Link} from "react-router-dom";
 import {
     Introduction,Install,Comments,Variables,EchoPrint,DataTypes,Strings,
-    Numbers,Casting,Math,Constants,MagicConstants,Operators,IfElseElseif,Switch,
-    Loops,Functions,Arrays,Superglobals,RegEx,FormHandling,FormValidation,
-    FormRequired,FormURLAndEmail,FormComplete
+    Numbers,Casting,Math,Constants,Operators,IfElseElseif,Switch,Loops,
+    Break,Functions,Arrays,Superglobals,RegEx,FormHandling,FormValidation,
+    FormRequired,FormURLAndEmail,FormComplete,
 } from "./pathPhp"
 import xampp_logo from "../../assests/images/logo/xampp.jpg";
 
 export default function Php(props){    
-    const arr = props.php_list.map(e => <li className="list-group-item">
-        <Link to={`/php/${e.toLowerCase().replace(/\s/g, '-')}`} className="p-2">
-            <i className="fa-solid fa-caret-right me-1"></i> PHP {e}
-        </Link>
-    </li>)
+    const matrix = props.php_list.map( e =>(
+        <dl>
+            { 
+                e.map((value, index) => (
+                    (index === 0) ? 
+                    <dt className="aside-dl-dt"><Link> <i className="fa-solid fa-caret-right"></i> {value}</Link></dt> : 
+                    <dd className="aside-dl-dd"><Link to={`/php/${value.toLowerCase().replace(/\s/g, '-')}`}> <i className="fa-solid fa-circle"></i> {value}</Link></dd>
+                ))
+            }
+        </dl>
+    ));
     return(
         <main>
     <aside className="aside">
         <ul className="list-group m-0">
-            {arr}
+            {matrix}
         </ul>
     </aside>
     <section className="section-conetent">
@@ -34,11 +40,11 @@ export default function Php(props){
               <Route path='casting' element={<Casting xampp_logo={xampp_logo} />} />
               <Route path='math' element={<Math xampp_logo={xampp_logo} />} />
               <Route path='constants' element={<Constants xampp_logo={xampp_logo} />} />
-              <Route path='magic-constants' element={<MagicConstants xampp_logo={xampp_logo} />} />
               <Route path='operators' element={<Operators xampp_logo={xampp_logo} />} />
-              <Route path='if-else-elseif' element={<IfElseElseif xampp_logo={xampp_logo} />} />
+              <Route path='conditions' element={<IfElseElseif xampp_logo={xampp_logo} />} />
               <Route path='switch' element={<Switch xampp_logo={xampp_logo} />} />
               <Route path='loops' element={<Loops xampp_logo={xampp_logo} />} />
+              <Route path='break' element={<Break xampp_logo={xampp_logo} />} />
               <Route path='functions' element={<Functions xampp_logo={xampp_logo} />} />
               <Route path='arrays' element={<Arrays xampp_logo={xampp_logo} />} />
               <Route path='superglobals' element={<Superglobals xampp_logo={xampp_logo} />} />

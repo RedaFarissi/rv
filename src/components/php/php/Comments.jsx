@@ -1,6 +1,6 @@
 import { CodeHighlighter } from "../../path";
 
-export default function Comments(props){
+export default function Comments(){
     return(
     <>
         <h1 className="heading-style"> PHP Comments </h1>

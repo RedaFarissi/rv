@@ -1,6 +1,6 @@
 import { CodeHighlighter } from "../../path";
 
-export default function DataTypes(props){
+export default function DataTypes(){
     return(
     <>
         <h1 className="heading-style"> PHP Data Types </h1>

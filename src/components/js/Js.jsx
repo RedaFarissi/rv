@@ -45,7 +45,7 @@ export default function Js(props){
                 ))
             }
         </dl>
-    ))
+    ));
 return(
 <>
  <main>

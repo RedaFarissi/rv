@@ -1,6 +1,6 @@
 import { CodeHighlighter } from "../../path";
 
-export default function EchoPrint(props){
+export default function EchoPrint(){
     return(
     <>
         <h1 className="heading-style"> PHP Echo and Print </h1>
