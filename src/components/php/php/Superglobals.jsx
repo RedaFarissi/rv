@@ -314,29 +314,115 @@ export default function Superglobals(props){
             </Result>
                                                                                                                                                                                                                                                                                                                                        
             <h2 className="title-h2" id="FILES">6 - <bdi>$_FILES</bdi></h2>
-            <p className="style_divv"></p>
+            <p className="style_divv">
+                يلعب المتغير <bdi><b>$_FILES</b></bdi> في <b>PHP</b> دورًا حاسمًا في التعامل مع تحميلات الملفات المرسلة من خلال نماذج <b>HTML</b>. وهو يوفر مصفوفة ترابطية تحتوي على معلومات حول كل ملف تم تحميله، ويمكن الوصول إليها من خلال سمة اسم عنصر إدخال الملف.
+            </p>
             <div className="mital"> متال : </div>
-            <CodeHighlighter code={``} language="php" file_name="C:\xampp\htdocs\php-test\index.php" addclassName="mt-3 mb-3" copie={true}/>
-            <Result title="localhost/php-test/index.php" file_name="index.html" logo={props.xampp_logo}  route="http://localhost/php-test/index.php">
-            </Result>
-            <h2 className="title-h2" id="ENV">7 - <bdi>$_ENV</bdi></h2>
-            <p className="style_divv"></p>
-            <div className="mital"> متال : </div>
-            <CodeHighlighter code={``} language="php" file_name="C:\xampp\htdocs\php-test\index.php" addclassName="mt-3 mb-3" copie={true}/>
-            <Result title="localhost/php-test/index.php" file_name="index.html" logo={props.xampp_logo}  route="http://localhost/php-test/index.php">
-            </Result>
-            <h2 className="title-h2" id="COOKIE">8 - <bdi>$_COOKIE</bdi></h2>
-            <p className="style_divv"></p>
-            <div className="mital"> متال : </div>
-            <CodeHighlighter code={``} language="php" file_name="C:\xampp\htdocs\php-test\index.php" addclassName="mt-3 mb-3" copie={true}/>
-            <Result title="localhost/php-test/index.php" file_name="index.html" logo={props.xampp_logo}  route="http://localhost/php-test/index.php">
-            </Result>
-            <h2 className="title-h2" id="SESSION">9 - <bdi>$_SESSION</bdi></h2>
-            <p className="style_divv"></p>
-            <div className="mital"> متال : </div>
-            <CodeHighlighter code={``} language="php" file_name="C:\xampp\htdocs\php-test\index.php" addclassName="mt-3 mb-3" copie={true}/>
-            <Result title="localhost/php-test/index.php" file_name="index.html" logo={props.xampp_logo}  route="http://localhost/php-test/index.php">
-            </Result>
+            <ul><li>قم بإنشاء مجلد في المسار <kbd>C:\xampp\htdocs\php-test\</kbd> بالاسم <bdi><b>uploads/</b></bdi></li></ul>
+            <CodeHighlighter code={`<!DOCTYPE html>
+<html>
+<head>
+    <title>File Upload</title>
+</head>
+<body>
+    <form action="upload.php" method="POST" enctype="multipart/form-data">
+        <label for="file">Select a file:</label>
+        <input type="file" id="file" name="file" />
+        <br/>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>`} language="php" file_name="C:\xampp\htdocs\php-test\index.php" addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={`<?php
+    // Check if the file was uploaded successfully
+    if ($_FILES['file']['error'] === UPLOAD_ERR_OK) {
+
+        // Get file information
+        $target_dir = "uploads/"; // Replace with your desired upload directory
+        $target_file = $target_dir . basename($_FILES["file"]["name"]);
+
+        // Validate file type (optional)
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        if(isset($_POST["submit"])) {
+            $check = getimagesize($_FILES["file"]["tmp_name"]);
+            if($check !== false) {
+                echo "File is an image - " . $check["mime"] . ".";
+                $uploadOk = 1;
+            } else {
+                echo "File is not an image.";
+                $uploadOk = 0;
+            }
+        }
+
+        // Move the uploaded file to the target directory
+        if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
+            echo "The file ". basename( $_FILES["file"]["name"]). " has been uploaded.";
+        } else {
+            echo "Sorry, there was an error uploading your file.";
+        }
+
+    } else {
+        // Handle upload errors
+        switch ($_FILES['file']['error']) {
+            case UPLOAD_ERR_INI_SIZE:
+                echo "The uploaded file exceeds the upload_max_filesize directive in php.ini.";
+                break;
+            case UPLOAD_ERR_FORM_SIZE:
+                echo "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form.";
+                break;
+            case UPLOAD_ERR_PARTIAL:
+                echo "The uploaded file was only partially uploaded.";
+                break;
+            case UPLOAD_ERR_NO_FILE:
+                echo "No file was uploaded.";
+                break;
+            case UPLOAD_ERR_NO_TMP_DIR:
+                echo "Missing a temporary folder.";
+                break;
+            case UPLOAD_ERR_CANT_WRITE:
+                echo "Failed to write file to disk.";
+                break;
+            case UPLOAD_ERR_EXTENSION:
+                echo "A PHP extension stopped the file upload.";
+                break;
+            default:
+                echo "An unknown error occurred.";
+        }
+    }
+?>`} language="php" file_name="C:\xampp\htdocs\php-test\upload.php" addclassName="mt-3 mb-3" copie={true}/>
+            <ul><li className="fs-5">سيتم تحميل الملف الذي اختاره المستخدم وحفظه في <bdi><b>uploads/</b></bdi></li></ul>
+            <h2 className="title-h2" id="COOKIE">7 - <bdi>$_COOKIE</bdi></h2>
+            <p className="style_divv">
+                متغير <bdi><b>$_COOKIE</b></bdi> العالمي الفائق في لغة البرمجة <b>PHP</b> يوفر مصفوفة تجميعية تحتوي على معلومات حول ملفات تعريف الارتباط المرسلة من المتصفح إلى الخادم. ملفات تعريف الارتباط هذه عبارة عن قطع صغيرة من البيانات يخزنها موقع الويب على جهاز الكمبيوتر الخاص بالمستخدم لتذكر التفضيلات أو تتبع الجلسات أو الحفاظ على حالة المستخدم عبر صفحات مختلفة.<br/><br/>
+                <b className="text-success"> إنشاء COOKIE </b>
+                <CodeHighlighter code={`# setcookie(name, value, expire, path, domain, secure, httponly);
+
+setcookie('username', 'Reda Eskouni', time() + 3600); // Expires in 1 hour
+setcookie('language', 'en', time() + 86400 * 7); // Expires in 7 days`} language="php" addclassName="mt-3 mb-3" copie={true}/>
+                <b className="text-success"> الوصول إلى COOKIE </b>
+                <CodeHighlighter code={`$username = $_COOKIE['username'];
+$language = $_COOKIE['language'];`} language="php" addclassName="mt-3 mb-3" copie={true}/>
+                <b className="text-success"> حدف COOKIE </b>
+                <CodeHighlighter code={`setcookie("username", "", time() - 3600);
+setcookie("language", "", time() - 3600);`} language="php" addclassName="mt-3 mb-3" copie={true}/>
+            
+            </p>
+            <h2 className="title-h2" id="SESSION">8 - <bdi>$_SESSION</bdi></h2>
+            <p className="style_divv">
+                يوفر المتغير الفائق <bdi><b>$_SESSION</b></bdi> في لغة البرمجة <b>PHP</b> مصفوفة تجميعية تخزن المعلومات عبر طلبات صفحات متعددة ضمن جلسة المستخدم. يتيح لك هذا الحفاظ على حالة المستخدم والبيانات دون الاعتماد فقط على ملفات تعريف الارتباط، والتي لها قيود في الحجم والأمان.<br/><br/>
+                <b className="text-success"> بدء SESSION </b>
+                <CodeHighlighter code={`session_start();`} language="php" addclassName="mt-3 mb-3" copie={true}/>
+                <b className="text-success"> تخزين بيانات SESSION </b>
+                <CodeHighlighter code={`$_SESSION['username'] = 'Reda Eskouni';
+$_SESSION['cart'] = array('Product 1', 'Product 2');`} language="php" addclassName="mt-3 mb-3" copie={true}/>
+                <b className="text-success"> الوصول إلى بيانات SESSION </b>
+                <CodeHighlighter code={`$username = $_SESSION['username'];
+$cart = $_SESSION['cart'];`} language="php" addclassName="mt-3 mb-3" copie={true}/>
+                <b className="text-success"> انتهاء صلاحية SESSION </b>
+                <CodeHighlighter code={`session_cache_expire(60 * 30); // Expires in 30 minutes`} language="php" addclassName="mt-3 mb-3" copie={true}/>
+                <b className="text-success"> إلغاء SESSION </b>
+                <CodeHighlighter code={`session_destroy();`} language="php" addclassName="mt-3 mb-3" copie={true}/>
+            </p>
         </article>
     </>
     )
