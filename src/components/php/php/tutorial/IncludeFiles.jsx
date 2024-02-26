@@ -40,7 +40,7 @@ export default function IncludeFiles(props){
             <CodeHighlighter  code={`<?php $name = "Reda Eskouni"; ?>
 <footer>
     <h2> Footer </h2>
-</footer>`} language="php" file_name="C:\xampp\htdocs\php-test\index.php" addclassName="mt-3 mb-3" copie={true}/>   
+</footer>`} language="php" file_name="C:\xampp\htdocs\php-test\footer.php" addclassName="mt-3 mb-3" copie={true}/>   
             <Result title="localhost/php-test/index.php" file_name="index.html" logo={props.xampp_logo}  route="http://localhost/php-test/index.php">
                 <h2>Header</h2>
                 <h2>Main</h2>
