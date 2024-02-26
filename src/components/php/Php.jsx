@@ -1,9 +1,12 @@
 import { Routes, Route , Link} from "react-router-dom";
 import {
-    Introduction,Install,Comments,Variables,EchoPrint,DataTypes,Strings,
-    Numbers,Casting,Math,Constants,Operators,IfElseElseif,Switch,Loops,
-    Break,Functions,Arrays,Superglobals,RegEx,FormHandling,FormValidation,
-    FormRequired,FormURLAndEmail,FormComplete,
+    Introduction,Install,Comments,Variables,EchoPrint,DataTypes,Strings,Numbers,Casting,
+    Math,Constants,Operators,IfElseElseif,Switch,Loops,Break,Functions,Arrays,Superglobals,
+    RegEx,DateAndTime,IncludeFiles,Filters,FiltersAdvanced,CallbackFunctions,Exceptions,
+    FormHandling,FormValidation,FormRequired,FormURLAndEmail,FormComplete,
+    WhatIsOop,ClassesObjects,Constructor,Destructor,AccessModifiers,Inheritance,ClassConstants,
+    AbstractClasses,Interfaces,Traits,StaticMethods,StaticProperties,Namespaces,Iterables,
+    Database,Connect,CreateDatabase,CreateTable,InsertData,GetLastId,InsertMultiple,Prepared,SelectData
 } from "./pathPhp"
 import xampp_logo from "../../assests/images/logo/xampp.jpg";
 
@@ -28,39 +31,67 @@ export default function Php(props){
     </aside>
     <section className="section-conetent">
         <Routes>
-              <Route path='/'  element={<Introduction />} />
-              <Route path='introduction' element={<Introduction />} />
-              <Route path='install' element={<Install xampp_logo={xampp_logo} />} />
-              <Route path='comments' element={<Comments xampp_logo={xampp_logo} />} />
-              <Route path='variables' element={<Variables xampp_logo={xampp_logo} />} />
-              <Route path='echo-print' element={<EchoPrint xampp_logo={xampp_logo} />} />
-              <Route path='data-types' element={<DataTypes xampp_logo={xampp_logo} />} />
-              <Route path='strings' element={<Strings xampp_logo={xampp_logo} />} />
-              <Route path='numbers' element={<Numbers xampp_logo={xampp_logo} />} />
-              <Route path='casting' element={<Casting xampp_logo={xampp_logo} />} />
-              <Route path='math' element={<Math xampp_logo={xampp_logo} />} />
-              <Route path='constants' element={<Constants xampp_logo={xampp_logo} />} />
-              <Route path='operators' element={<Operators xampp_logo={xampp_logo} />} />
-              <Route path='conditions' element={<IfElseElseif xampp_logo={xampp_logo} />} />
-              <Route path='switch' element={<Switch xampp_logo={xampp_logo} />} />
-              <Route path='loops' element={<Loops xampp_logo={xampp_logo} />} />
-              <Route path='break' element={<Break xampp_logo={xampp_logo} />} />
-              <Route path='functions' element={<Functions xampp_logo={xampp_logo} />} />
-              <Route path='arrays' element={<Arrays xampp_logo={xampp_logo} />} />
-              <Route path='superglobals' element={<Superglobals xampp_logo={xampp_logo} />} />
-              <Route path='regEx' element={<RegEx xampp_logo={xampp_logo} />} />
-              <Route path='form-handling' element={<FormHandling xampp_logo={xampp_logo} />} />
-              <Route path='form-validation' element={<FormValidation xampp_logo={xampp_logo} />} />
-              <Route path='form-required' element={<FormRequired xampp_logo={xampp_logo} />} />
-              <Route path='form-url-and-email' element={<FormURLAndEmail xampp_logo={xampp_logo} />} />
-              <Route path='form-complete' element={<FormComplete xampp_logo={xampp_logo} />} />
+            <Route path='/'  element={<Introduction />} />
+            <Route path='introduction' element={<Introduction />} />
+            <Route path='install' element={<Install xampp_logo={xampp_logo} />} />
+            <Route path='comments' element={<Comments xampp_logo={xampp_logo} />} />
+            <Route path='variables' element={<Variables xampp_logo={xampp_logo} />} />
+            <Route path='echo-print' element={<EchoPrint xampp_logo={xampp_logo} />} />
+            <Route path='data-types' element={<DataTypes xampp_logo={xampp_logo} />} />
+            <Route path='strings' element={<Strings xampp_logo={xampp_logo} />} />
+            <Route path='numbers' element={<Numbers xampp_logo={xampp_logo} />} />
+            <Route path='casting' element={<Casting xampp_logo={xampp_logo} />} />
+            <Route path='math' element={<Math xampp_logo={xampp_logo} />} />
+            <Route path='constants' element={<Constants xampp_logo={xampp_logo} />} />
+            <Route path='operators' element={<Operators xampp_logo={xampp_logo} />} />
+            <Route path='conditions' element={<IfElseElseif xampp_logo={xampp_logo} />} />
+            <Route path='switch' element={<Switch xampp_logo={xampp_logo} />} />
+            <Route path='loops' element={<Loops xampp_logo={xampp_logo} />} />
+            <Route path='break' element={<Break xampp_logo={xampp_logo} />} />
+            <Route path='functions' element={<Functions xampp_logo={xampp_logo} />} />
+            <Route path='arrays' element={<Arrays xampp_logo={xampp_logo} />} />
+            <Route path='superglobals' element={<Superglobals xampp_logo={xampp_logo} />} />
+            <Route path='regEx' element={<RegEx xampp_logo={xampp_logo} />} />
+            <Route path='date-and-time' element={<DateAndTime xampp_logo={xampp_logo} />} />
+            <Route path='include-files' element={<IncludeFiles xampp_logo={xampp_logo} />} />
+            <Route path='filters' element={<Filters xampp_logo={xampp_logo} />} />
+            <Route path='filters-advanced' element={<FiltersAdvanced xampp_logo={xampp_logo} />} />
+            <Route path='callback-functions' element={<CallbackFunctions xampp_logo={xampp_logo} />} />
+            <Route path='exceptions' element={<Exceptions xampp_logo={xampp_logo} />} />
+            
+            <Route path='form-handling' element={<FormHandling xampp_logo={xampp_logo} />} />
+            <Route path='form-validation' element={<FormValidation xampp_logo={xampp_logo} />} />
+            <Route path='form-required' element={<FormRequired xampp_logo={xampp_logo} />} />
+            <Route path='form-url-and-email' element={<FormURLAndEmail xampp_logo={xampp_logo} />} />
+            <Route path='form-complete' element={<FormComplete xampp_logo={xampp_logo} />} />
+
+            <Route path='what-is-oop' element={<WhatIsOop xampp_logo={xampp_logo} />} />
+            <Route path='classes-objects' element={<ClassesObjects xampp_logo={xampp_logo} />} />
+            <Route path='constructor' element={<Constructor xampp_logo={xampp_logo} />} />
+            <Route path='destructor' element={<Destructor xampp_logo={xampp_logo} />} />
+            <Route path='access-modifiers' element={<AccessModifiers xampp_logo={xampp_logo} />} />
+            <Route path='inheritance' element={<Inheritance xampp_logo={xampp_logo} />} />
+            <Route path='class-constants' element={<ClassConstants xampp_logo={xampp_logo} />} />
+            <Route path='abstract-classes' element={<AbstractClasses xampp_logo={xampp_logo} />} />
+            <Route path='interfaces' element={<Interfaces xampp_logo={xampp_logo} />} />
+            <Route path='traits' element={<Traits xampp_logo={xampp_logo} />} />
+            <Route path='static-methods' element={<StaticMethods xampp_logo={xampp_logo} />} />
+            <Route path='static-properties' element={<StaticProperties xampp_logo={xampp_logo} />} />
+            <Route path='namespaces' element={<Namespaces xampp_logo={xampp_logo} />} />
+            <Route path='iterables' element={<Iterables xampp_logo={xampp_logo} />} />
+
+            <Route path='database' element={<Database xampp_logo={xampp_logo} />} />
+            <Route path='connect' element={<Connect xampp_logo={xampp_logo} />} />
+            <Route path='create-database' element={<CreateDatabase xampp_logo={xampp_logo} />} />
+            <Route path='create-table' element={<CreateTable xampp_logo={xampp_logo} />} />
+            <Route path='insert-data' element={<InsertData xampp_logo={xampp_logo} />} />
+            <Route path='get-last-id' element={<GetLastId xampp_logo={xampp_logo} />} />
+            <Route path='insert-multiple' element={<InsertMultiple xampp_logo={xampp_logo} />} />
+            <Route path='prepared' element={<Prepared xampp_logo={xampp_logo} />} />
+            <Route path='select-data' element={<SelectData xampp_logo={xampp_logo} />} />
+
         </Routes>
     </section>
 </main>
     )
 }
-
-/*
-    <div className="mital"> متال : </div>
-    <CodeHighlighter  code={``} language="php" file_name="" addclassName="mt-3 mb-3" copie={true}/>   
-*/
