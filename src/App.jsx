@@ -54,7 +54,7 @@ function App() {
         [ "DRF_and_React","Connect_Django_with_React","Get_data_in_React","Permissions","Authentication"],
     ];
     const php_list = [
-      ["PHP Tutorial","Introduction","Install","Comments","Variables","echo print","Data Types","Strings","Numbers","Casting","Math","Constants","Operators","Conditions","Switch","Loops","Break","Functions","Arrays","Superglobals","RegEx","Date and Time","Include Files","Filters","Filters Advanced","Callback Functions","Exceptions"],
+      ["PHP Tutorial","Introduction","Install","Comments","Variables","echo print","Data Types","Strings","Numbers","Casting","Math","Constants","Operators","Conditions","Switch","Loops","Break","Functions","Arrays","Superglobals","RegEx","Date and Time","Include Files","Filters","Callback Functions","Exceptions","JSON"],
       ["PHP Forms","Form Handling","Form Validation","Form Required","Form URL/E-mail","Form Complete"],
       ["PHP OOP","What is OOP","Classes Objects","Constructor","Destructor","Access Modifiers","Inheritance","Class Constants","Abstract Classes","Interfaces","Traits","Static Methods","Static Properties","Namespaces","Iterables"],
       ["PHP MySQL","Database","Connect","Create Database","Create Table","Insert Data","Get Last ID","Insert Multiple","Prepared","Select Data"]

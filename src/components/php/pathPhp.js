@@ -21,9 +21,9 @@ export {default as RegEx} from './php/tutorial/RegEx';
 export {default as DateAndTime} from './php/tutorial/DateAndTime';
 export {default as IncludeFiles} from './php/tutorial/IncludeFiles';
 export {default as Filters} from './php/tutorial/Filters';
-export {default as FiltersAdvanced} from './php/tutorial/FiltersAdvanced';
 export {default as CallbackFunctions} from './php/tutorial/CallbackFunctions';
 export {default as Exceptions} from './php/tutorial/Exceptions';
+export {default as Json} from './php/tutorial/Json';
 
 export {default as FormHandling} from './php/forms/FormHandling';
 export {default as FormValidation} from './php/forms/FormValidation';

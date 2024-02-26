@@ -2,7 +2,7 @@ import { Routes, Route , Link} from "react-router-dom";
 import {
     Introduction,Install,Comments,Variables,EchoPrint,DataTypes,Strings,Numbers,Casting,
     Math,Constants,Operators,IfElseElseif,Switch,Loops,Break,Functions,Arrays,Superglobals,
-    RegEx,DateAndTime,IncludeFiles,Filters,FiltersAdvanced,CallbackFunctions,Exceptions,
+    RegEx,DateAndTime,IncludeFiles,Filters,CallbackFunctions,Exceptions,Json,
     FormHandling,FormValidation,FormRequired,FormURLAndEmail,FormComplete,
     WhatIsOop,ClassesObjects,Constructor,Destructor,AccessModifiers,Inheritance,ClassConstants,
     AbstractClasses,Interfaces,Traits,StaticMethods,StaticProperties,Namespaces,Iterables,
@@ -55,9 +55,9 @@ export default function Php(props){
             <Route path='date-and-time' element={<DateAndTime xampp_logo={xampp_logo} />} />
             <Route path='include-files' element={<IncludeFiles xampp_logo={xampp_logo} />} />
             <Route path='filters' element={<Filters xampp_logo={xampp_logo} />} />
-            <Route path='filters-advanced' element={<FiltersAdvanced xampp_logo={xampp_logo} />} />
             <Route path='callback-functions' element={<CallbackFunctions xampp_logo={xampp_logo} />} />
             <Route path='exceptions' element={<Exceptions xampp_logo={xampp_logo} />} />
+            <Route path='json' element={<Json xampp_logo={xampp_logo} />} />
             
             <Route path='form-handling' element={<FormHandling xampp_logo={xampp_logo} />} />
             <Route path='form-validation' element={<FormValidation xampp_logo={xampp_logo} />} />

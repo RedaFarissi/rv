@@ -17,13 +17,13 @@ export default function IncludeFiles(props){
                 <CodeHighlighter  code={`include 'filename';`} language="php" addclassName="mt-3 mb-3" copie={true}/>
                 <CodeHighlighter  code={`require 'filename';`} language="php" addclassName="mt-3 mb-3" copie={true}/>
             </p>
-            <div className="mital"> متال : </div>
+            <div className="mital"> متال 1 : </div>
             <CodeHighlighter  code={`<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Document </title>
+    <title> include </title>
 </head>
 <body>
     <header>
@@ -41,7 +41,79 @@ export default function IncludeFiles(props){
 <footer>
     <h2> Footer </h2>
 </footer>`} language="php" file_name="C:\xampp\htdocs\php-test\footer.php" addclassName="mt-3 mb-3" copie={true}/>   
-            <Result title="localhost/php-test/index.php" file_name="index.html" logo={props.xampp_logo}  route="http://localhost/php-test/index.php">
+            <Result title="include" file_name="index.html" logo={props.xampp_logo}  route="http://localhost/php-test/index.php">
+                <h2>Header</h2>
+                <h2>Main</h2>
+                <h2>Footer</h2>
+                <hr />
+                <h3> Variable from footer file : Reda Eskouni</h3>
+            </Result>
+            <div className="mital"> متال 2 : </div>
+            <CodeHighlighter  code={`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> include </title>
+</head>
+<body>
+    <header>
+        <h2>Header</h2>
+    </header>
+    <main>
+        <h2>Main</h2>
+    </main>
+    <?php include 'footer.php'; ?>
+    <?php include 'footer.php'; ?>
+    <?php include 'footer.php'; ?>
+    <hr />
+    <h3> Variable from footer file : <?php echo $name; ?> </h3>
+</body>
+</html>`} language="php" file_name="C:\xampp\htdocs\php-test\index.php" addclassName="mt-3 mb-3" copie={true}/>   
+            <CodeHighlighter  code={`<?php $name = "Reda Eskouni"; ?>
+<footer>
+    <h2> Footer </h2>
+</footer>`} language="php" file_name="C:\xampp\htdocs\php-test\footer.php" addclassName="mt-3 mb-3" copie={true}/>   
+            <Result title="include" file_name="index.html" logo={props.xampp_logo}  route="http://localhost/php-test/index.php">
+                <h2>Header</h2>
+                <h2>Main</h2>
+                <h2>Footer</h2>
+                <h2>Footer</h2>
+                <h2>Footer</h2>
+                <hr />
+                <h3> Variable from footer file : Reda Eskouni</h3>
+            </Result>
+            <h2 className="title-h2">include_once</h2>
+            <p className="style_divv">
+                يشمل هذا البيان ويقوم بتقييم الملف المحدد فقط إذا لم يتم تضمينه من قبل في النص البرمجي الحالي. إذا تم بالفعل تضمين الملف، سيتجاوز <b>PHP</b> عملية الإضمان.
+            </p>
+            <div className="mital"> متال : </div>
+            <CodeHighlighter  code={`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> include_once </title>
+</head>
+<body>
+    <header>
+        <h2>Header</h2>
+    </header>
+    <main>
+        <h2>Main</h2>
+    </main>
+    <?php include_once 'footer.php'; ?>
+    <?php include_once 'footer.php'; ?>
+    <?php include_once 'footer.php'; ?>
+    <hr />
+    <h3> Variable from footer file : <?php echo $name; ?> </h3>
+</body>
+</html>`} language="php" file_name="C:\xampp\htdocs\php-test\index.php" addclassName="mt-3 mb-3" copie={true}/>   
+            <CodeHighlighter  code={`<?php $name = "Reda Eskouni"; ?>
+<footer>
+    <h2> Footer </h2>
+</footer>`} language="php" file_name="C:\xampp\htdocs\php-test\footer.php" addclassName="mt-3 mb-3" copie={true}/>   
+            <Result title="include_once" file_name="index.html" logo={props.xampp_logo}  route="http://localhost/php-test/index.php">
                 <h2>Header</h2>
                 <h2>Main</h2>
                 <h2>Footer</h2>
