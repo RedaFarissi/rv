@@ -18,6 +18,7 @@ export default function Header(){
     // Handle color mode 
     const themeDark = ["rgb(5 5 5)","#f0fff0","rgb(10 10 10)","rgba(255 255 255/5%)","aqua","rgba(255 255 255/7%)","yellow","#1e1e1e","#fdf6e3"];
     const themeLight = ["#8080801a","black","#f2f2f2","rgba(0 0 0/5%)","#c80f42","rgba(0 0 0/7%)","green","white","black"];
+    
     const handleModeColor = (themeColor)=>{
         const [
             bgBody,textColor,bgAside,
@@ -56,7 +57,7 @@ export default function Header(){
         <div className="container">
             <div className="d-flex justify-content-around">
                <Link to='/' className="header-logo">  
-                  <div class="logo">Logo</div>
+                  <div className="logo">R</div>
                </Link> &nbsp;&nbsp;
             </div>
 
@@ -75,8 +76,8 @@ export default function Header(){
                 </Link> 
                 {
                     (modeColor === "black" && modeColor !== null)?
-                    <i class="fa-solid fa-sun text-warning" onClick={()=>{handleModeColor(themeLight);window.location.reload()}}></i>:
-                    <i class="fa-solid fa-moon" onClick={()=>{handleModeColor(themeDark);window.location.reload()}}></i>   
+                    <i className="fa-solid fa-sun text-warning" onClick={()=>{handleModeColor(themeLight);window.location.reload();}}></i>:
+                    <i className="fa-solid fa-moon" onClick={()=>{handleModeColor(themeDark);window.location.reload();}}></i>   
                 }
             </div>
         </div> 

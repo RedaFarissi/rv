@@ -1,30 +1,15 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { useState } from 'react';
+import { useState , useEffect} from 'react';
 import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-
 import "./CodeHighlighter.sass"
 import "./CodeHighlighter.css"
-import { useEffect } from 'react';
 
-function CadreHtml(props,){
-  return `<!DOCTYPE html>
-<html>
-<head>
-   <title> ${props.title}  </title>
-   <link rel="icon" href="./html_logo.png" type="image/png">
-   <meta name="viewport" content="width=device-width, initial-scale=1"> ${props.head}
-</head>
-<body>
-${props.children}
-</body>
-</html>`
-}
 
-const CodeHighlighter = ({ code="", is_html , language , addClass , copie , number=false , title="Html Title",head="" , file_name=false}) => {
+const CodeHighlighter = ({ code="", is_html , language , addClass , copie , number=false , title="Html Title",head="" , file_name=false , theme}) => {
       
-      const [modeColor,setModeColor] = useState(localStorage.getItem("mode_color") || null)
-  
+      const [modeColor,setModeColor] = useState(localStorage.getItem("mode_color") || null);
+
       const [copySuccess, setCopySuccess] = useState(false);
       const processedCode = (is_html)?CadreHtml({children:code,title:title,head:head}):code;
 
@@ -69,4 +54,20 @@ const CodeHighlighter = ({ code="", is_html , language , addClass , copie , numb
   );
 };
 
-export default CodeHighlighter
+
+
+function CadreHtml(props,){
+  return `<!DOCTYPE html>
+<html>
+<head>
+   <title> ${props.title}  </title>
+   <link rel="icon" href="./html_logo.png" type="image/png">
+   <meta name="viewport" content="width=device-width, initial-scale=1"> ${props.head}
+</head>
+<body>
+${props.children}
+</body>
+</html>`
+}
+
+export default CodeHighlighter;
