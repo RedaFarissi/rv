@@ -54,10 +54,9 @@ function App() {
         [ "DRF_and_React","Connect_Django_with_React","Get_data_in_React","Permissions","Authentication"],
     ];
     const php_list = [
-      ["PHP Tutorial","Introduction","Install","Comments","Variables","echo print","Data Types","Strings","Numbers","Casting","Math","Constants","Operators","Conditions","Switch","Loops","Break","Functions","Arrays","Superglobals","RegEx","Date and Time","Include Files","Filters","Callback Functions","Exceptions","JSON"],
-      ["PHP Forms","Form Handling","Form Validation","Form Required","Form URL/E-mail","Form Complete"],
+      ["PHP Tutorial","Introduction","Install","Comments","Variables","echo print","Data Types","Strings","Numbers","Casting","Math","Constants","Operators","Conditions","Switch","Loops","Break","Functions","Arrays","Superglobals","Form Handling","RegEx","Date and Time","Include Files","Filters","Callback Functions","Exceptions","JSON"],
       ["PHP OOP","What is OOP","Classes Objects","Constructor","Destructor","Access Modifiers","Inheritance","Class Constants","Abstract Classes","Interfaces","Traits","Static Methods","Static Properties","Namespaces","Iterables"],
-      ["PHP MySQL","Database","Connect","Create Database","Create Table","Insert Data","Get Last ID","Insert Multiple","Prepared","Select Data"]
+      ["PHP MySQL","Connect","Create Database","Create Table","Insert Data","Get Last ID","Insert Multiple","Prepared","Select Data"]
     ];
     const laravel_matrix = [
       ["MVC","what_is_laravel","what_we_need_to_use_laravel","First_Laravel_Project","run_project","artisan","views","route","route_to_views_without_puch_data","route_to_views_and_puch_data","request","Controller","group_duplicate_items_on_one_page","ussing_css_and_javaScript","route_and_name","handle_data_in_views","create_controller_to_use_data","method_in_controller","recource","list_all_route_in_project"],

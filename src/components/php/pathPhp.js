@@ -23,13 +23,8 @@ export {default as IncludeFiles} from './php/tutorial/IncludeFiles';
 export {default as Filters} from './php/tutorial/Filters';
 export {default as CallbackFunctions} from './php/tutorial/CallbackFunctions';
 export {default as Exceptions} from './php/tutorial/Exceptions';
+export {default as FormHandling} from './php/tutorial/FormHandling';
 export {default as Json} from './php/tutorial/Json';
-
-export {default as FormHandling} from './php/forms/FormHandling';
-export {default as FormValidation} from './php/forms/FormValidation';
-export {default as FormRequired} from './php/forms/FormRequired';
-export {default as FormURLAndEmail} from './php/forms/FormURLAndEmail';
-export {default as FormComplete} from './php/forms/FormComplete';
 
 export {default as WhatIsOop} from './php/oop/WhatIsOop';
 export {default as ClassesObjects} from './php/oop/ClassesObjects';

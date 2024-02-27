@@ -2,12 +2,11 @@ import { Routes, Route , Link} from "react-router-dom";
 import {
     Introduction,Install,Comments,Variables,EchoPrint,DataTypes,Strings,Numbers,Casting,
     Math,Constants,Operators,IfElseElseif,Switch,Loops,Break,Functions,Arrays,Superglobals,
-    RegEx,DateAndTime,IncludeFiles,Filters,CallbackFunctions,Exceptions,Json,
-    FormHandling,FormValidation,FormRequired,FormURLAndEmail,FormComplete,
+    RegEx,DateAndTime,IncludeFiles,Filters,CallbackFunctions,Exceptions,FormHandling,Json,
     WhatIsOop,ClassesObjects,Constructor,Destructor,AccessModifiers,Inheritance,ClassConstants,
     AbstractClasses,Interfaces,Traits,StaticMethods,StaticProperties,Namespaces,Iterables,
-    Database,Connect,CreateDatabase,CreateTable,InsertData,GetLastId,InsertMultiple,Prepared,SelectData
-} from "./pathPhp"
+    Database,Connect,CreateDatabase,CreateTable,InsertData,GetLastId,InsertMultiple,Prepared,SelectData,
+} from "./pathPhp";
 import xampp_logo from "../../assests/images/logo/xampp.jpg";
 
 export default function Php(props){    
@@ -57,14 +56,9 @@ export default function Php(props){
             <Route path='filters' element={<Filters xampp_logo={xampp_logo} />} />
             <Route path='callback-functions' element={<CallbackFunctions xampp_logo={xampp_logo} />} />
             <Route path='exceptions' element={<Exceptions xampp_logo={xampp_logo} />} />
+            <Route path='form-handling' element={<FormHandling xampp_logo={xampp_logo} />} />
             <Route path='json' element={<Json xampp_logo={xampp_logo} />} />
             
-            <Route path='form-handling' element={<FormHandling xampp_logo={xampp_logo} />} />
-            <Route path='form-validation' element={<FormValidation xampp_logo={xampp_logo} />} />
-            <Route path='form-required' element={<FormRequired xampp_logo={xampp_logo} />} />
-            <Route path='form-url-and-email' element={<FormURLAndEmail xampp_logo={xampp_logo} />} />
-            <Route path='form-complete' element={<FormComplete xampp_logo={xampp_logo} />} />
-
             <Route path='what-is-oop' element={<WhatIsOop xampp_logo={xampp_logo} />} />
             <Route path='classes-objects' element={<ClassesObjects xampp_logo={xampp_logo} />} />
             <Route path='constructor' element={<Constructor xampp_logo={xampp_logo} />} />

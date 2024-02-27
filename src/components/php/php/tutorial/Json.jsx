@@ -34,7 +34,6 @@ export default function Json(props){
     echo $jsonString;
 ?>`} language="php" file_name="C:\xampp\htdocs\php-test\index.php" addclassName="mt-3 mb-3" copie={true}/>
             <Result title="localhost/php-test/index.php" file_name="index.html" logo={props.xampp_logo}  route="http://localhost/php-test/index.php">
-                <span className="text-secondary">// 20240227031741 </span><br/>
                 <span className="text-secondary">// http://localhost/php-test/index.php</span><br/>
                 <br/>
                 <span className="text-secondary">{"{"}</span><br/>
