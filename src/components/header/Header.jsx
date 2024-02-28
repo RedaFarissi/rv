@@ -30,7 +30,7 @@ export default function Header(){
         document.documentElement.style.setProperty('--aside-hover', asideHover);   
         document.documentElement.style.setProperty('--title-h5', titleH5);
         document.documentElement.style.setProperty('--bg-header-search', bgHeaderSearch);
-        document.documentElement.style.setProperty('--text-color-header-search', textColorHeaderSearch);        
+        document.documentElement.style.setProperty('--text-color-header-search', textColorHeaderSearch);
 
         if(bgBody === "rgb(5 5 5)"){
             localStorage.setItem("mode_color","black")

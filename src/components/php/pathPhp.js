@@ -34,7 +34,6 @@ export {default as AccessModifiers} from './php/oop/AccessModifiers';
 export {default as Inheritance} from './php/oop/Inheritance';
 export {default as ClassConstants} from './php/oop/ClassConstants';
 export {default as AbstractClasses} from './php/oop/AbstractClasses';
-export {default as Interfaces} from './php/oop/Interfaces';
 export {default as Traits} from './php/oop/Traits';
 export {default as StaticMethods} from './php/oop/StaticMethods';
 export {default as StaticProperties} from './php/oop/StaticProperties';

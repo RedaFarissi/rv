@@ -3,8 +3,8 @@ import {
     Introduction,Install,Comments,Variables,EchoPrint,DataTypes,Strings,Numbers,Casting,
     Math,Constants,Operators,IfElseElseif,Switch,Loops,Break,Functions,Arrays,Superglobals,
     RegEx,DateAndTime,IncludeFiles,Filters,CallbackFunctions,Exceptions,FormHandling,Json,
-    WhatIsOop,ClassesObjects,Constructor,Destructor,AccessModifiers,Inheritance,ClassConstants,
-    AbstractClasses,Interfaces,Traits,StaticMethods,StaticProperties,Namespaces,Iterables,
+    WhatIsOop,ClassesObjects,Constructor,Destructor,AccessModifiers,Inheritance,
+    ClassConstants,AbstractClasses,Traits,StaticMethods,StaticProperties,Namespaces,Iterables,
     Database,Connect,CreateDatabase,CreateTable,InsertData,GetLastId,InsertMultiple,Prepared,SelectData,
 } from "./pathPhp";
 import xampp_logo from "../../assests/images/logo/xampp.jpg";
@@ -67,7 +67,6 @@ export default function Php(props){
             <Route path='inheritance' element={<Inheritance xampp_logo={xampp_logo} />} />
             <Route path='class-constants' element={<ClassConstants xampp_logo={xampp_logo} />} />
             <Route path='abstract-classes' element={<AbstractClasses xampp_logo={xampp_logo} />} />
-            <Route path='interfaces' element={<Interfaces xampp_logo={xampp_logo} />} />
             <Route path='traits' element={<Traits xampp_logo={xampp_logo} />} />
             <Route path='static-methods' element={<StaticMethods xampp_logo={xampp_logo} />} />
             <Route path='static-properties' element={<StaticProperties xampp_logo={xampp_logo} />} />
