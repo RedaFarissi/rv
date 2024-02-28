@@ -11,7 +11,7 @@ const CodeHighlighter = ({ code="", is_html , language , addClass , copie , numb
     const handleCopyClick = () => {
         const textArea = document.createElement('textarea');
         textArea.value = processedCode;
-        textArea.style = `position:fixed;top:0;left:0;width:2em;height:2em;padding:0;border:none;outline:none;box-shadow:none;background:transparent;`
+        textArea.style = `position:fixed;top:0;left:0;width:3px;height:3px;padding:0;border:none;outline:none;box-shadow:none;background:transparent;`
         document.body.appendChild(textArea);
         textArea.select();
         try {

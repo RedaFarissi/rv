@@ -61,6 +61,7 @@ export default function Header(){
                     <input type="text" name="search" className="search-field" />
                     <button className="search-btn" type="submit">
                         <ion-icon name={`search-outlin`}></ion-icon>
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>
             </div>
