@@ -1,4 +1,5 @@
 @import "./assests/sass/var"
+@import "./assests/sass/class"
 @import "./assests/sass/color"
     
 * 
@@ -101,16 +102,16 @@ body
                 display: inline-block
         
 
-
-
-
-
 .section-conetent
     width: calc( 85% - 366px )
     margin: 0 calc(10% - 35px)
     padding: 40px 0
     font-size: 17px
     margin-top: 140px    
+    @media (max-width: 1250px) 
+        width: calc( 95% - 286px )
+        margin: 0 calc(9px + 2.5%)
+        margin-top: 140px
     .heading-style 
         direction: ltr
         font-style: italic
@@ -163,6 +164,7 @@ body
         color: $title_h5
         font-size: 23px
         font-family: "Readex Pro",sans-serif
+
 .rounded-top
     border-radius: 3px 3px 0px 0px   
 

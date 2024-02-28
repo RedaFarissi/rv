@@ -19,7 +19,7 @@ export default function Html(props){
     <main>
         <aside className="aside">
             <ul className="list-group m-0">
-                 {arrays}
+                {arrays}
             </ul>
         </aside>
             <Routes>

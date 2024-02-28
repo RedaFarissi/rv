@@ -1,4 +1,5 @@
-import { CodeHighlighter ,  Result} from "../../path";
+import { CodeHighlighter ,  Result } from "../../path";
+
 
 export default function Abbreviation(props){
     const code = `<abbr> content </abbr>`

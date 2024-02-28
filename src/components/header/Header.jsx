@@ -77,6 +77,7 @@ export default function Header(){
                     <i className="fa-solid fa-sun text-warning" onClick={()=>{handleModeColor(themeLight);}}></i>
                     :<i className="fa-solid fa-moon" onClick={()=>{handleModeColor(themeDark);}}></i>   
                 }
+                <i class="fa-solid fa-bars"></i>
             </div>
         </div> 
     </div>
