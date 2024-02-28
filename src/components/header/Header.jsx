@@ -16,11 +16,11 @@ export default function Header(){
     </li>);
 
     // Handle color mode 
-    const themeDark = ["rgb(5 5 5)","#f0fff0","rgb(10 10 10)","rgba(255 255 255/5%)","aqua","rgba(255 255 255/7%)","yellow"];
-    const themeLight = ["#8080801a","black","#f2f2f2","rgba(0 0 0/5%)","#c80f42","rgba(0 0 0/7%)","green"];
+    const themeDark = ["rgb(5 5 5)","#f0fff0","rgb(10 10 10)","rgba(255 255 255/5%)","aqua","rgba(255 255 255/7%)","yellow","rgb(35 35 35)","rgba(255 255 255/90%)"];
+    const themeLight = ["#8080801a","black","#f2f2f2","rgba(0 0 0/5%)","#c80f42","rgba(0 0 0/7%)","green","white","black"];
     
     const handleModeColor = (themeColor)=>{
-        const [bgBody,textColor,bgAside,styleDivv,titleH2,asideHover,titleH5] = themeColor;
+        const [bgBody,textColor,bgAside,styleDivv,titleH2,asideHover,titleH5,bgHeaderSearch,textColorHeaderSearch] = themeColor;
         
         document.documentElement.style.setProperty('--bg-body', bgBody);
         document.documentElement.style.setProperty('--text-color', textColor);
@@ -29,6 +29,8 @@ export default function Header(){
         document.documentElement.style.setProperty('--title-h2', titleH2);
         document.documentElement.style.setProperty('--aside-hover', asideHover);   
         document.documentElement.style.setProperty('--title-h5', titleH5);
+        document.documentElement.style.setProperty('--bg-header-search', bgHeaderSearch);
+        document.documentElement.style.setProperty('--text-color-header-search', textColorHeaderSearch);        
 
         if(bgBody === "rgb(5 5 5)"){
             localStorage.setItem("mode_color","black")
