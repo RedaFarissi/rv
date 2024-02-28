@@ -16,15 +16,12 @@ export default function Header(){
     </li>);
 
     // Handle color mode 
-    const themeDark = ["rgb(5 5 5)","#f0fff0","rgb(10 10 10)","rgba(255 255 255/5%)","aqua","rgba(255 255 255/7%)","yellow","#1e1e1e","#fdf6e3"];
-    const themeLight = ["#8080801a","black","#f2f2f2","rgba(0 0 0/5%)","#c80f42","rgba(0 0 0/7%)","green","white","black"];
+    const themeDark = ["rgb(5 5 5)","#f0fff0","rgb(10 10 10)","rgba(255 255 255/5%)","aqua","rgba(255 255 255/7%)","yellow"];
+    const themeLight = ["#8080801a","black","#f2f2f2","rgba(0 0 0/5%)","#c80f42","rgba(0 0 0/7%)","green"];
     
     const handleModeColor = (themeColor)=>{
-        const [
-            bgBody,textColor,bgAside,
-            styleDivv,titleH2,asideHover,
-            titleH5,buttonBgCopie,buttonCopie
-        ] = themeColor;
+        const [bgBody,textColor,bgAside,styleDivv,titleH2,asideHover,titleH5] = themeColor;
+        
         document.documentElement.style.setProperty('--bg-body', bgBody);
         document.documentElement.style.setProperty('--text-color', textColor);
         document.documentElement.style.setProperty('--bg-aside', bgAside);
@@ -32,8 +29,6 @@ export default function Header(){
         document.documentElement.style.setProperty('--title-h2', titleH2);
         document.documentElement.style.setProperty('--aside-hover', asideHover);   
         document.documentElement.style.setProperty('--title-h5', titleH5);
-        document.documentElement.style.setProperty('--button-bg-copie', buttonBgCopie);
-        document.documentElement.style.setProperty('--button-copie', buttonCopie);
 
         if(bgBody === "rgb(5 5 5)"){
             localStorage.setItem("mode_color","black")
@@ -76,8 +71,8 @@ export default function Header(){
                 </Link> 
                 {
                     (modeColor === "black" && modeColor !== null)?
-                    <i className="fa-solid fa-sun text-warning" onClick={()=>{handleModeColor(themeLight);window.location.reload();}}></i>:
-                    <i className="fa-solid fa-moon" onClick={()=>{handleModeColor(themeDark);window.location.reload();}}></i>   
+                    <i className="fa-solid fa-sun text-warning" onClick={()=>{handleModeColor(themeLight);}}></i>
+                    :<i className="fa-solid fa-moon" onClick={()=>{handleModeColor(themeDark);}}></i>   
                 }
             </div>
         </div> 

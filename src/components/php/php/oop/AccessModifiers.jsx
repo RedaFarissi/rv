@@ -99,7 +99,7 @@ export default function AccessModifiers(props){
 
     # $obj->num1 = 3;    // Error
     # $obj->sum();     // Error
-?>`} language="php" file_name="C:\xampp\htdocs\php-test\index.php" addclassName="mt-3 mb-3" copie={true}/>
+?>`} language="php" addclassName="mt-3 mb-3" copie={true}/>
         </article>
     </>
     )

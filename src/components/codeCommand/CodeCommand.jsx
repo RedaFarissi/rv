@@ -23,6 +23,9 @@ export default function CodeCommand(props){
       try {
         const success = document.execCommand('copy');
         setCopySuccess(success);
+        setTimeout(()=>{
+          setCopySuccess(false)
+        },2500)
       }catch (err) {
         console.error('Unable to copy to clipboard.', err);
       }
@@ -36,7 +39,7 @@ export default function CodeCommand(props){
             </pre>
             <button 
               onClick={handleCopyClick} 
-              className={`${(props.copy === true || props.copy === null)?"d-block":"d-none"} btn bg-dark position-absolute text-light btn-CodeCommand`}
+              className={`btn bg-dark position-absolute text-light btn-CodeCommand`}
             >  
                     {copySuccess ? 'Copied' : 'Copy'} 
             </button>
