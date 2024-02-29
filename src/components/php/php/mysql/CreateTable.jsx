@@ -8,6 +8,7 @@ export default function CreateTable(props){
             <p className="style_divv">
                 
             </p>
+            
         </article>
     </>
     )
