@@ -5,7 +5,7 @@ export default function Traits(props){
     <>
         <h1 className="heading-style"> PHP Traits </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 تدعم لغة <b>PHP</b> الوراثة الفردية فقط: يمكن للفئة الفرعية أن ترث من والد واحد فقط.<br/><br/>
                 تُستخدم السمات للإعلان عن الأساليب التي يمكن استخدامها في فئات متعددة. يمكن أن تحتوي السمات على طرق وأساليب مجردة يمكن استخدامها في فئات متعددة، ويمكن أن تحتوي الأساليب على أي معدّل وصول <b>(public, private, protected)</b>.<br/><br/>
                 يتم الإعلان عن السمات باستخدام الكلمة الأساسية <b>trait</b>.

@@ -5,7 +5,7 @@ export default function Json(props){
     <>
         <h1 className="heading-style"> PHP JSON </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 يرمز <b>JSON</b> إلى <b>JavaScript Object Notation</b>، وهو عبارة عن صيغة لتخزين البيانات وتبادلها.<br/><br/>
                 نظرًا لأن تنسيق <b>JSON</b> هو تنسيق قائم على النص، فيمكن إرساله بسهولة من وإلى الخادم واستخدامه كتنسيق بيانات بواسطة أي لغة برمجة.
             </p>

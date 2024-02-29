@@ -5,7 +5,7 @@ export default function WhatIsOop(props){
     <>
         <h1 className="heading-style"> PHP What is OOP </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 <b>OOP</b> تعني البرمجة الشيئية.<br/><br/>
                 البرمجة الإجرائية تدور حول كتابة الإجراءات أو الوظائف التي تنفذ العمليات على البيانات، في حين أن البرمجة الموجهة للكائنات تدور حول إنشاء كائنات تحتوي على كل من البيانات والوظائف.<br/><br/>
                 تتميز البرمجة الموجهة للكائنات بالعديد من المزايا مقارنة بالبرمجة الإجرائية:<br/>

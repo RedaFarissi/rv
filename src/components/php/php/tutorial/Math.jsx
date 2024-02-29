@@ -5,7 +5,7 @@ export default function Math(props){
     <>
         <h1 className="heading-style"> PHP Math </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 في <b>PHP</b>، هناك مجموعة من الدوال الرياضية المتوفرة للقيام بالعديد من العمليات الرياضية والحسابات .
             </p>
             <h2 className="title-h2">1 - <bdi>abs()</bdi> - قيمة مطلقة</h2>

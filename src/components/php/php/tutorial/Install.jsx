@@ -6,7 +6,7 @@ export default function Install(props){
     <>
         <h1 className="heading-style"> PHP Install </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 لتثبيت <b>PHP</b>، يمكنك اتباع هذه الخطوات العامة. قد تختلف الخطوات المحددة وفقًا لنظام التشغيل الخاص بك. سأقدم لمحة موجزة عن نظام التشغيل ويندوز .
             </p>
             <h2 className="title-h2">1 - مع XAMPP </h2>

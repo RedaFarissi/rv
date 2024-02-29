@@ -5,7 +5,7 @@ export default function DateAndTime(props){
     <>
         <h1 className="heading-style"> PHP Date and Time </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 في <b>PHP</b>، يمكنك التعامل مع التواريخ والأوقات باستخدام وظيفة <bdi><b>date()</b></bdi> لتنسيق التواريخ ووظيفة <bdi><b>strtotime()</b></bdi> لتحليل سلاسل التواريخ. بالإضافة إلى ذلك، توفر <b>PHP</b> فئة <b>DateTime</b> لإجراء عمليات تلاعب متقدمة على التواريخ والأوقات.
             </p>
             <h2 className="title-h2">1 - التاريخ والوقت الحالي </h2>

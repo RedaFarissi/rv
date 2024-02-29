@@ -5,7 +5,7 @@ export default function Operators(props){
     <>
         <h1 className="heading-style"> PHP Operators </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 <b>PHP</b> تدعم مجموعة من العوامل التي تُستخدم لتنفيذ عمليات على المتغيرات والقيم. 
             </p>
             <h2 className="title-h2">1 - العوامل الحسابية </h2>

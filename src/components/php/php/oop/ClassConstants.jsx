@@ -5,7 +5,7 @@ export default function ClassConstants(props){
     <>
         <h1 className="heading-style"> PHP Class Constants </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 في <b>PHP</b> ، تمثل الثوابت في الفئة قيمًا ترتبط بفئة معينة وتظل ثابتة طوال تنفيذ البرنامج النصي. على عكس خصائص الفئة، لا يمكن تغيير الثوابت في الفئة بمجرد تعريفها. يتم تعريفها باستخدام كلمة <b>const</b> داخل فئة.
             </p>
             <div className="mital"> متال : </div>

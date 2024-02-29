@@ -37,7 +37,6 @@ export {default as AbstractClasses} from './php/oop/AbstractClasses';
 export {default as Traits} from './php/oop/Traits';
 export {default as StaticMethods} from './php/oop/StaticMethods';
 export {default as StaticProperties} from './php/oop/StaticProperties';
-export {default as Namespaces} from './php/oop/Namespaces';
 export {default as Iterables} from './php/oop/Iterables';
 
 export {default as Database} from './php/mysql/Database';

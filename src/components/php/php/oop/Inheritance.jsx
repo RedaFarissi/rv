@@ -5,7 +5,7 @@ export default function Inheritance(props){
     <>
         <h1 className="heading-style"> PHP Inheritance </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 <b>Inheritance</b> التوريث هو مفهوم أساسي في برمجة الكائنات الموجهة <b>(OOP)</b> الذي يتيح للفئة أن ترث الخصائص والأساليب من فئة أخرى. في <b>PHP</b>، يمكنك تحقيق التوريث باستخدام كلمة <b>extends</b> .<br/>
                 سوف يرث الفصل الفرعي جميع الخصائص والأساليب العامة والمحمية من الفصل الأصلي. وبالإضافة إلى ذلك، يمكن أن يكون لها خصائصها وأساليبها الخاصة.
             </p>

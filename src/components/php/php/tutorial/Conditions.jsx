@@ -5,7 +5,7 @@ export default function Conditions(props){
     <>
         <h1 className="heading-style"> PHP Conditions </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 في <b>PHP</b>، تُستخدم الشروط لاتخاذ قرارات في الشيفرة البرمجية الخاصة بك استنادًا إلى ما إذا كانت شرط معين صحيحًا أم خاطئًا. وسيلة الأكثر شيوعًا لتنفيذ الشروط هي باستخدام تعليمات الـ if. فيما يلي نظرة عامة أساسية عن شروط <b>PHP</b>
             </p>
             <h2 className="title-h2">1 - if </h2>

@@ -5,7 +5,7 @@ export default function Constructor(props){
     <>
         <h1 className="heading-style"> PHP Constructor </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 يتيح لك المُنشئ تهيئة <b>construct</b> خصائص الكائن عند إنشاء الكائن.<br/><br/>
                 إذا قمت بإنشاء دالة <bdi><b>__construct()</b></bdi>، فستستدعي <b>PHP</b> هذه الوظيفة تلقائيًا عندما تقوم بإنشاء كائن من فئة.<br/><br/>
                 لاحظ أن دالة البناء تبدأ بشرطتين سفليتين <kbd>__</kbd>

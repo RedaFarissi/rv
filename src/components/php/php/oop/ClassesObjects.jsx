@@ -5,7 +5,7 @@ export default function ClassesObjects(props){
     <>
         <h1 className="heading-style"> PHP Classes Objects </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 الفئة <b>(class)</b> عبارة عن قالب للكائنات <b>(objects)</b> ، والكائن هو مثيل للفئة.
             </p>
             <h2 className="title-h2">1 - تحديد فئة </h2>

@@ -5,7 +5,7 @@ export default function AbstractClasses(props){
     <>
         <h1 className="heading-style"> PHP Abstract Classes </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 في <b>PHP</b>، تعتبر الفئة المجردة <b>(abstract class)</b> هي فئة لا يمكن إنشاء مثيل منها مباشرة. تعتبر كنموذجًا لغيرها من الفئات وقد تحتوي على أساليب مجردة يجب تنفيذها من قبل أي فئة فعلية (غير مجردة) تمتد منها. يتم تعريف الفئات المجردة باستخدام الكلمة المفتاحية <b>abstract</b>.
             </p>
             <div className="mital"> متال 1 : </div>

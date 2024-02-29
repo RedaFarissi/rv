@@ -5,7 +5,7 @@ export default function AccessModifiers(props){
     <>
         <h1 className="heading-style"> PHP Access Modifiers </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 في <b>PHP</b> ، تعتبر الوسوم أو الكلمات الرئيسية لتحديد الوصول هي الكلمات المستخدمة للتحكم في رؤية خصائص وطرق الفصل. هناك ثلاثة <b>access modifiers</b> رئيسية في <b>PHP</b>:  
                 <ul dir="ltr">
                     <li><b>public</b></li>

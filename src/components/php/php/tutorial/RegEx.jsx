@@ -5,7 +5,7 @@ export default function RegEx(props){
     <>
         <h1 className="heading-style"> PHP RegEx </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 التعبير العادي عبارة عن سلسلة من الأحرف التي تشكل نمط بحث. عندما تبحث عن بيانات في نص ما، يمكنك استخدام نمط البحث هذا لوصف ما تبحث عنه.<br/><br/>
                 يمكن أن يكون التعبير العادي حرفًا واحدًا أو نمطًا أكثر تعقيدًا.<br/><br/>
                 يمكن استخدام التعبيرات العادية لإجراء جميع أنواع عمليات البحث عن النص واستبدال النص.

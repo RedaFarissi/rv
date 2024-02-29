@@ -5,7 +5,7 @@ export default function Exceptions(props){
     <>
         <h1 className="heading-style"> PHP Exceptions </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 الاستثناءات في <b>PHP</b> توفر وسيلة للتعامل مع الأخطاء أو المواقف الاستثنائية في الشيفرة البرمجية. عند حدوث موقف استثنائي، يتم إلقاء كائن استثناء، وتتمكن من التعامل مع هذه الاستثناءات والتعامل مع الأخطاء بشكل أنيق
             </p>
             <h2 className="title-h2">1 - إلقاء استثناء </h2>

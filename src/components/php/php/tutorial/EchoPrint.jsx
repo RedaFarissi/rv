@@ -5,7 +5,7 @@ export default function EchoPrint(){
     <>
         <h1 className="heading-style"> PHP Echo and Print </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 في <b>PHP</b> ، يتم استخدام كل من <b>echo</b> و <b>print</b> كبنى اللغة لإخراج البيانات إلى المتصفح أو العميل. غالباً ما يتم استخدامهما لعرض المعلومات أو المتغيرات أو محتوى <b>HTML</b> داخل صفحة الويب. بينما يقدمون أغراضًا مماثلة ، هناك بعض الفروق بينهما
             </p>
             <h2 className="title-h2">1 - الاستخدام </h2>

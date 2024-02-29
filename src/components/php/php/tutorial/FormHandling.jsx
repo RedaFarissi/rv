@@ -20,7 +20,7 @@ export default function FormHandling(props){
     <>
         <h1 className="heading-style"> PHP Form Handling </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 يعتبر <b>form</b> في <b>PHP</b> جانبًا أساسيًا لإنشاء تطبيقات ويب تفاعلية. حيث يسمح لك بجمع إدخال المستخدم من خلال الاستمارات ومعالجته على جانب الخادم باستخدام نصوص <b>PHP</b>. إليك تفصيل للمفاهيم الأساسية:<br/><br/>
                 <b className="text-danger">إنشاء الاستمارة:</b>
                 <ol>

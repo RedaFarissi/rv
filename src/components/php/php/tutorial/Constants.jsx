@@ -5,7 +5,7 @@ export default function Constants(props){
     <>
         <h1 className="heading-style"> PHP Constants </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 في <b>PHP</b> ، تشبه الثوابت المتغيرات ، ولكن بمجرد تعريفها ، لا يمكن تغييرها أو إعادة تعريفها. تكون الثوابت مفيدة لتخزين القيم التي يجب عدم تغييرها أثناء تنفيذ البرنامج النصي. توفر وسيلة لإعطاء أسماء للقيم وجعل الشيفرة البرمجية أكثر قراءة.<br/>
                 إليك كيفية تعريف الثوابت في <b>PHP</b>:
                 <CodeHighlighter  code={`<?php

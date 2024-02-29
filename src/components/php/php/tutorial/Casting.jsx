@@ -5,7 +5,7 @@ export default function Casting(){
     <>
         <h1 className="heading-style"> PHP Casting </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 في بعض الأحيان تحتاج إلى تغيير متغير من نوع بيانات إلى آخر، وفي بعض الأحيان تريد أن يكون للمتغير نوع بيانات محدد. <br/><br/>
                 يتم إجراء عملية الإرسال في <b>PHP</b> باستخدام هذه العبارات:
                 <ul>

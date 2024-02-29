@@ -6,7 +6,7 @@ export default function Functions(props){
     <>
         <h1 className="heading-style"> PHP Functions </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 الوظائف في <b>PHP</b> هي مجموعات من الشيفرة القابلة لإعادة الاستخدام التي تقوم بأداء مهمة محددة. <b>PHP</b> لديها مجموعة واسعة من الوظائف المدمجة، ويمكنك أيضًا إنشاء وظائف مخصصة خاصة بك
             </p>
             <h2 className="title-h2">1 - إنشاء و إستدعاء وظيفة </h2>

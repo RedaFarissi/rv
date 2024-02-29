@@ -5,7 +5,7 @@ export default function IncludeFiles(props){
     <>
         <h1 className="heading-style"> PHP Include Files </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 تأخذ عبارة التضمين (<b>include</b> أو <b>require</b>) كل النص/الكود/العلامات الموجودة في الملف المحدد وتنسخها إلى الملف الذي يستخدم عبارة التضمين. <br/>
                 يعد تضمين الملفات مفيدًا جدًا عندما تريد تضمين نفس لغة <b>PHP</b> أو <b>HTML</b> أو النص في صفحات متعددة بموقع الويب.<br/><br/>
                 من الممكن إدراج محتوى أحد ملفات <b>PHP</b> في ملف <b>PHP</b> آخر (قبل أن ينفذه الخادم)، مع عبارة <b>include</b> أو <b>require</b> .<br/><br/>

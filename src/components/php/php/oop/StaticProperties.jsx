@@ -5,7 +5,7 @@ export default function StaticProperties(props){
     <>
         <h1 className="heading-style"> PHP Static Properties </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 يمكن استدعاء الخصائص الثابتة مباشرةً دون إنشاء مثيل للفئة.<br/><br/>
                 يتم الإعلان عن الخصائص الثابتة باستخدام الكلمة الأساسية <b>static </b>
             </p>

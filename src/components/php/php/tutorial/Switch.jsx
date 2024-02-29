@@ -5,7 +5,7 @@ export default function Switch(props){
     <>
         <h1 className="heading-style"> PHP Switch </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 في <b>PHP</b>، تستخدم تعليمة <b>switch</b> لتحديد كتلة من الشيفرة التي تريد تنفيذها على أساس قيمة متغير محددة. إليك مثال بسيط على كيفية استخدام تعليمة <b>switch</b>
             </p>
             <div className="mital"> متال : </div>

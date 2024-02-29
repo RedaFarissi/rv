@@ -5,7 +5,7 @@ export default function CallbackFunctions(props){
     <>
         <h1 className="heading-style"> PHP Callback Functions </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 في <b>PHP</b>، يشير مصطلح "دالة الاستدعاء العكسي" إلى دالة يمكن تمريرها كوسيط إلى دالة أخرى. تُستخدم دوال الاستدعاء العكسي في العديد من السيناريوهات حيث ترغب في تخصيص سلوك دالة ما أو عندما ترغب في تنفيذ وظيفة معينة بطريقة أكثر مرونة.
             </p>
             <h2 className="title-h2">1 - الدوال التي تقبل دوال الاستدعاء </h2>

@@ -45,7 +45,7 @@ export default function Superglobals(props){
     <>
         <h1 className="heading-style"> PHP Superglobals </h1>
         <article className="mt-5">
-            <details  className="mt-5 my-4">
+            <details  className="my-4 mt-5">
                 <summary className='text-danger'> جميع العناوين  </summary>
                 <ul dir="ltr">
                     <li><a className="text-decoration-none" href="#GLOBALS"> $GLOBALS </a></li>

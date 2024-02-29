@@ -5,7 +5,7 @@ export default function StaticMethods(props){
     <>
         <h1 className="heading-style"> PHP Static Methods </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 في برمجة <b>PHP</b> كائنية التوجه <b>(OOP)</b>، تعد الطريقة الثابتة نوع خاص من الطرق يتم تعريفها باستخدام الكلمة الأساسية <b>static</b>.  تقدم هذه الطرق وظائف فريدة مقارنة بالطرق العادية :<br/><br/>
                 <b className="text-danger">الخصائص الأساسية :</b>
                 <ul>

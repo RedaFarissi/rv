@@ -5,7 +5,7 @@ export default function Loops(props){
     <>
         <h1 className="heading-style"> PHP Loops </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 في <b>PHP</b>، هناك عدة أنواع من الحلقات <b>(Loops)</b> التي يمكنك استخدامها لتكرار تنفيذ قطعة من الشيفرة. الأنواع الرئيسية للحلقات في <b>PHP</b>
             </p>
             <h2 className="title-h2">1 - حلقة for </h2>

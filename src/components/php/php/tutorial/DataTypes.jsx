@@ -5,7 +5,7 @@ export default function DataTypes(){
     <>
         <h1 className="heading-style"> PHP Data Types </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 <b>PHP</b> تدعم العديد من أنواع البيانات التي تتيح لك تخزين وتلاعب بأنواع مختلفة من المعلومات. فيما يلي أهم أنواع البيانات في <b>PHP</b>
             </p>
             <h2 className="title-h2">1 - الأعداد الصحيحة</h2>

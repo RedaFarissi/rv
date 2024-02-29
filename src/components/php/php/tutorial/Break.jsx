@@ -5,7 +5,7 @@ export default function Break(props){
     <>
         <h1 className="heading-style"> PHP Break </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 يمكن استخدام عبارة <b>break</b> للقفز من أنواع مختلفة من الحلقات.
             </p>
 

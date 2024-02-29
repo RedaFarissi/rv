@@ -5,7 +5,7 @@ export default function Variables(props){
     <>
         <h1 className="heading-style"> PHP Variables </h1>
         <article className="mt-5">
-            <h2 className="title-h2">1 - تعريف المتغير </h2>
+            <h2 className="title-h2 mt-5">1 - تعريف المتغير </h2>
             <p className="style_divv">
                 <ul>
                     <li>تبدأ المتغيرات في <b>PHP</b> برمز الدولار <b>$</b> .</li>

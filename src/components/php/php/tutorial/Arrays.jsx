@@ -5,7 +5,7 @@ export default function Arrays(props){
     <>
         <h1 className="heading-style"> PHP Arrays </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 في <b>PHP</b>، الـ <b>Arrays</b> تُستخدم لتخزين مجموعة من القيم تحت اسم واحد. يمكن أن تحتوي الـ <b>Arrays</b> على أنواع مختلفة من البيانات، مثل الأعداد الصحيحة، والسلاسل النصية، والأصناف الأخرى  
             </p>
             <h2 className="title-h2">1 - إنشاء Array</h2>

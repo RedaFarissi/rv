@@ -5,7 +5,7 @@ export default function Destructor(props){
     <>
         <h1 className="heading-style"> PHP Destructor </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 يتم استدعاء المدمر <b>(destructor)</b> عندما يتم تدمير الكائن أو إيقاف البرنامج النصي أو الخروج منه.<br/><br/>
                 إذا قمت بإنشاء دالة <bdi><b>__destruct()</b></bdi>، فستستدعي <b>PHP</b> هذه الوظيفة تلقائيًا في نهاية البرنامج النصي.<br/><br/>
                 لاحظ أن وظيفة التدمير تبدأ بشرطتين سفليتين <kbd>__</kbd>

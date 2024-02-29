@@ -5,7 +5,7 @@ export default function Numbers(props){
     <>
         <h1 className="heading-style"> PHP Numbers </h1>
         <article className="mt-5">
-            <p className="style_divv">
+            <p className="style_divv mt-5">
                 هناك ثلاثة أنواع رقمية رئيسية في PHP:
                 <ul>
                     <li><b>Integer</b></li>

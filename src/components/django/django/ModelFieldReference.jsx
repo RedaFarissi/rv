@@ -3,10 +3,10 @@ import images from "../imagesDjango";
 import { CodeCommand , CodeHighlighter , Result } from "../../path";
 
 export default function ModelFieldReference(){
-    return(
-      <>
-         <h1 className="heading-style"> Django Model Field Reference</h1> 
-         <article id="Model_Field_Reference" className="mt-5"> 
+   return(
+   <>
+      <h1 className="heading-style"> Django Model Field Reference</h1> 
+      <article id="Model_Field_Reference" className="mt-5"> 
             <h2 className="title-h2 mt-5" id="Definition">1 - تعريف </h2>
             <p className="style_divv">
                في <b>Django</b> يشير <b>(Model Field Reference)</b> إلى مجموعة من الأنواع المدمجة للحقول التي يمكنك استخدامها لتعريف البيانات في نموذج <b>Django</b>. تُستخدم حقول النموذج لتحديد نوع البيانات التي يمكن أن يحتوي عليها كل حقل في نموذج <b>Django</b>، وبالتالي، يساعد في تحديد هيكل ومظهر قاعدة البيانات.<br/><br/>
@@ -36,12 +36,13 @@ export default function ModelFieldReference(){
                         <li><b className="text-success">CharField :</b> قد يستخدم VARCHAR في قاعدة البيانات.</li>
                         <li><b className="text-success">IntegerField :</b> قد يستخدم INTEGER.</li>
                         <li><b className="text-success">DateField :</b> قد يستخدم DATE.</li>
-                     </ul>
-                     
+                     </ul>   
                      اختيار أنواع الحقول المناسبة يمكن أن يؤثر على حجم قاعدة البيانات وأدائها. على سبيل المثال، استخدام CharField(max_length=100) سيخصص مساحة أكبر في قاعدة البيانات من CharField(max_length=20).
                   </li>
                </ol>     
             </p>
+      </article>         
+      <article>         
             <h2 className="title-h2" id="Fields">2 - الحقول Fields </h2>
             <h3 className="title-h3">1 - CharField </h3> 
             <p className="style_divv">
@@ -113,6 +114,8 @@ export default function ModelFieldReference(){
                يُستخدم لتخزين تسمية قصيرة تحتوي فقط على أحرف أو أرقام أو واصلات أو شرطات سفلية.
                <CodeHighlighter code={`column_name = models.SlugField(unique=True)`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
+      </article>         
+      <article>         
             <h2 className="title-h2" id="Relations"> 3 - Relations </h2>
             <p className="style_divv">
                في <b>Django،</b> عند تحديد النماذج، يتم إنشاء العلاقات بينها باستخدام الحقول التي تمثل أنواعًا مختلفة من العلاقات. حقول العلاقة الأساسية الثلاثة التي يوفرها Django هي:
@@ -140,6 +143,8 @@ export default function ModelFieldReference(){
                <CodeHighlighter code={`column_name = models.ManyToManyField(ClassModelsToRelation,related_name='name_to_get_related_data')`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
             <CodeHighlighter code={codes[3].Relations[2]} file_name="models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+      </article>         
+      <article>         
             <h2 className="title-h2" id="Parameter"> 4 - Parameter</h2>
             <h3 className="title-h3">1 - choices</h3>
             <p className="style_divv">
