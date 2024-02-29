@@ -47,24 +47,24 @@ export default function Django(props){
    </aside>
    <section className="section-conetent">
       <Routes>
-          <Route path='/'  element={<Introduction  />} />
-          <Route path='introduction'  element={<Introduction  />} />
-          <Route path='virtualenv' element={<Virtualenv  />} />
-          <Route path='first-exemple' element={<FirstExemple  />} />
-          <Route path='model-field-reference' element={<ModelFieldReference  />} />
-          <Route path='static-and-media-files' element={<StaticAndMediaFiles  />} />
-          <Route path='about-templates' element={<AboutTemplates  />} />
-          <Route path='about-admin' element={<AboutAdmin  />} />
-          <Route path='about-models' element={<AboutModels  />} />
-          <Route path='user-authentication' element={<UserAuthentication  />} />
-          <Route path='django-email' element={<DjangoEmail  />} />
-          <Route path='django-pagination' element={<DjangoPagination  />} />
-          <Route path='form' element={<Form  />} />  {/* ModelForm path */}
-          <Route path='modelform' element={<ModelForm  />} /> {/* ModelForm path */}
-          <Route path='django-filter' element={<DjangoFilter  />} />
-          <Route path='session' element={<Session  />} />
-          <Route path='context-processors' element={<ContextProcessors  />} />
-          <Route path='ngrok' element={<Ngrok  />} />
+         <Route path='/'  element={<Introduction  />} />
+         <Route path='introduction'  element={<Introduction  />} />
+         <Route path='virtualenv' element={<Virtualenv  />} />
+         <Route path='first-exemple' element={<FirstExemple  />} />
+         <Route path='model-field-reference' element={<ModelFieldReference  />} />
+         <Route path='static-and-media-files' element={<StaticAndMediaFiles  />} />
+         <Route path='about-templates' element={<AboutTemplates  />} />
+         <Route path='about-admin' element={<AboutAdmin  />} />
+         <Route path='about-models' element={<AboutModels  />} />
+         <Route path='user-authentication' element={<UserAuthentication  />} />
+         <Route path='django-email' element={<DjangoEmail  />} />
+         <Route path='django-pagination' element={<DjangoPagination  />} />
+         <Route path='form' element={<Form  />} />  {/* ModelForm path */}
+         <Route path='modelform' element={<ModelForm  />} /> {/* ModelForm path */}
+         <Route path='django-filter' element={<DjangoFilter  />} />
+         <Route path='session' element={<Session  />} />
+         <Route path='context-processors' element={<ContextProcessors  />} />
+         <Route path='ngrok' element={<Ngrok  />} />
       </Routes>
    </section>
 </main>

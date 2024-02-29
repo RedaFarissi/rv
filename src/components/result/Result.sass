@@ -5,7 +5,7 @@
     .style-result-header-1
         display: flex
         justify-content: space-between
-        align-items: center
+        align-items: center 
         .style-result-header-1-left
             padding-top: 8px
             padding-left: 9px
@@ -22,6 +22,8 @@
                 border-radius: 9px 9px 0px 0px
                 position: relative
                 overflow: hidden
+                @media (max-width: 700px) 
+                    width: 200px
                 &::before
                     content:""
                     position: absolute
@@ -85,6 +87,7 @@
                 margin-left: 9px
         .style-result-header-1-right    
             display: flex
+            
             i
                 font-size: 15px
 

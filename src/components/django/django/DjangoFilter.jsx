@@ -3,14 +3,17 @@ import images from "../imagesDjango";
 import { CodeCommand , CodeHighlighter } from "../../path";
 
 export default function DjangoFilter(){
-    return(
-        <article id="Django_Filter">
-            <h1 className="heading-style"> Django Filter</h1> 
+   return(
+   <>
+      <h1 className="heading-style"> Django Filter</h1> 
+      <article id="Django_Filter" className="mt-5">
             <p className="style_divv mt-5">
                في <b>Django</b>، يتم استخدام <b>filters</b> لتضييق نطاق نتائج الاستعلام عند استرداد البيانات من قاعدة البيانات. يتم تطبيق عوامل التصفية على مجموعات الاستعلام، وهي تمثيلات لاستعلامات قاعدة البيانات. تُستخدم المرشحات عادةً مع النماذج وطرق العرض.<br/><br/>
                يوفر <b>Django</b> مجموعة متنوعة من الطرق لتصفية مجموعات الاستعلامات، مما يسمح لك بالتعبير عن الاستعلامات المعقدة لاسترداد البيانات من قاعدة البيانات. 
             </p>
-            <h2 className="title-h2" id="models_Objecjs_filter"> 1 - <bdi>objects.filter()</bdi> </h2>
+      </article>
+      <article id="models_Objecjs_filter">
+            <h2 className="title-h2"> 1 - <bdi>objects.filter()</bdi> </h2>
             <CodeHighlighter code={codes[13].models_Objecjs_filter[0]} file_name="project / project / setting.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[13].models_Objecjs_filter[1]} file_name="project / project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[13].models_Objecjs_filter[2]} file_name="project / product / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
@@ -78,12 +81,13 @@ export default function DjangoFilter(){
             </CodeCommand>
             <img src={images.django13} className="img"/>
             <img src={images.django14} className="img"/>
-
-
-            <h2 className="title-h2" id="raw_filter"> 2 - raw filter  </h2>
+      </article>
+      <article id="raw_filter">
+            <h2 className="title-h2"> 2 - raw filter  </h2>
             <CodeHighlighter code={codes[13].raw_filter[0]} file_name="project / product / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            
-            <h2 className="title-h2" id="lookup_expr">3 - lookup_expr </h2>
+      </article>
+      <article id="lookup_expr">
+            <h2 className="title-h2">3 - lookup_expr </h2>
             <h3 className="title-h3">1 - iexact</h3>
             <p className="style_divv">
                في <b>Django</b>، يتم استخدام تعبير البحث <bdi><b>__iexact</b></bdi> للمطابقة التامة غير الحساسة لحالة الأحرف في الاستعلام. غالبًا ما يتم استخدامه مع طريقة <bdi><b>filter()</b></bdi> في مجموعة استعلام لاسترداد الكائنات حيث يكون حقل معين مساويًا تمامًا لقيمة محددة، مع تجاهل حالة الأحرف.
@@ -165,9 +169,9 @@ export default function DjangoFilter(){
                id : 3  name : Python Programming Book<br/>
                id : 2  name : T-Shirt<br/>
             </CodeCommand>
-          
-          
-            <h2 className="title-h2" id="Q_filter"> 4 - filter_using_Q </h2>
+      </article>
+      <article id="Q_filter">
+            <h2 className="title-h2"> 4 - filter_using_Q </h2>
             <CodeCommand>python manage.py shell</CodeCommand>
             <CodeCommand>
                {">>>"} from product.models import *<br/>
@@ -193,6 +197,7 @@ export default function DjangoFilter(){
                {"{"}'id': 4, 'user_id': 2, 'category_id': 1, 'name': 'Smartphone', 'slug': 'smartphone', 'image': '', 'description': 'High-end smartphone with advanced features.', 'price': Decimal('799.99'), 'available': True, 'created': datetime.datetime(2023, 12, 11, 18, 57, 18, 382484, tzinfo=datetime.timezone.utc), 'updated': datetime.datetime(2023, 12, 11, 18, 57, 18, 382484, tzinfo=datetime.timezone.utc){"}"},<br/> 
                {"{"}'id': 2, 'user_id': 2, 'category_id': 2, 'name': 'T-Shirt', 'slug': 't-shirt', 'image': '', 'description': 'Comfortable cotton T-shirt.', 'price': Decimal('19.99'), 'available': True, 'created': datetime.datetime(2023, 12, 11, 18, 55, 50, 144167, tzinfo=datetime.timezone.utc), 'updated': datetime.datetime(2023, 12, 11, 18, 55, 50, 144167, tzinfo=datetime.timezone.utc){"}"}{"]"}{">"}<br/>
             </CodeCommand>
-       </article>
-    )
+      </article>
+   </>
+   )
 }

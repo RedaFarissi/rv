@@ -4,8 +4,9 @@ import { CodeCommand , CodeHighlighter } from "../../path";
 
 export default function Form(){
     return(
-    <article id="Form">
-        <h1 className="heading-style"> Django forms.From</h1> 
+    <>
+    <h1 className="heading-style"> Django forms.From</h1> 
+    <article id="Form" className="mt-5">
         <p className="style_divv mt-5">
             <b>form</b> هي آلية للتعامل مع <b>HTML form</b> على جانب الخادم. يسمح لك بتحديد حقول <b>form</b> وتحديد نوع البيانات المتوقعة والتعامل مع التحقق من الصحة. تعمل <b>Django forms</b> على تبسيط عملية جمع ومعالجة مدخلات المستخدم.
         </p>
@@ -35,5 +36,6 @@ export default function Form(){
             تتوافق المفاتيح الموجودة في القاموس مع أسماء الحقول المحددة في النموذج، والقيم هي البيانات المنظفة لكل حقل.<br/>
         </p>
     </article>
+    </>
     )
 }

@@ -6,8 +6,7 @@ export default function Footer(){
     <footer dir="rtl">
         <div id="footer-div1">
             <div id="img_logo">
-                {/* <img src={images.react_logo} />  */}
-                <div className="w-100 h-100 my-logo">R</div> 
+                <div className="w-100 h-100 my-logo"> R </div> 
             </div>
             <div className="footer_p">
                 <h4 className="h4"> <i class="fa-solid fa-bullseye fs-4 ms-2"></i> هدف الموقع</h4>

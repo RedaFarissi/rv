@@ -4,14 +4,15 @@ import { CodeCommand , CodeHighlighter , Result } from "../../path";
 
 export default function ModelFieldReference(){
     return(
-         <article id="Model_Field_Reference"> 
-            <h1 className="heading-style"> Django Model Field Reference</h1> 
+      <>
+         <h1 className="heading-style"> Django Model Field Reference</h1> 
+         <article id="Model_Field_Reference" className="mt-5"> 
             <h2 className="title-h2 mt-5" id="Definition">1 - تعريف </h2>
             <p className="style_divv">
                في <b>Django</b> يشير <b>(Model Field Reference)</b> إلى مجموعة من الأنواع المدمجة للحقول التي يمكنك استخدامها لتعريف البيانات في نموذج <b>Django</b>. تُستخدم حقول النموذج لتحديد نوع البيانات التي يمكن أن يحتوي عليها كل حقل في نموذج <b>Django</b>، وبالتالي، يساعد في تحديد هيكل ومظهر قاعدة البيانات.<br/><br/>
                ببساطة، حقول النموذج تعتبر "البنية الأساسية" لنموذج <b>Django</b> وتحدد كيف يجب تخزين وتمثيل مختلف أنواع البيانات مثل النصوص، والأرقام، والتواريخ، وغيرها. عند تحديد نموذج <b>Django</b>، يمكنك استخدام حقول النموذج لتحديد ما إذا كان الحقل سيكون نصيًا أو رقميًا أو تاريخيًا، وما إذا كان يجب أن يكون له قيمة افتراضية أو لا.<br/><br/>
                باستخدام هذه الحقول، يمكنك تعريف كيف يجب أن تبدو البيانات في قاعدة البيانات وكيف يمكن لتطبيق <b>Django</b> التفاعل معها. يُسهل مرجع حقول النموذج على المطورين تحديد نموذج بيانات <b>Django</b> الذي يعكس بنية البيانات التي يحتاجونها لتطبيقهم.<br/><br/>
-               <span className="mb-3">Model Field Reference يعطيك :</span>
+               <b className="text-danger">Model Field Reference يعطيك :</b>
                <ol>
                   <li className="mb-2">
                      <b className="text-success">عنصر HTML (HTML Widget):</b> حقول النموذج في <b>Django</b> لا تحدد فقط كيفية تخزين البيانات في قاعدة البيانات ولكنها تؤثر أيضًا على كيفية تقديمها في النماذج. يتم ربط كل حقل نموذج بعنصر <b>HTML</b> افتراضي، وهو عنصر النموذج الذي يُستخدم لجمع الإدخال من المستخدمين. على سبيل المثال:
@@ -229,5 +230,6 @@ export default function ModelFieldReference(){
                <div className="text-light mb-2" style={{backgroundColor:"red",fontSize:"26px"}}>My Book 4</div>
             </Result> 
       </article>
-    )
+      </>
+   )
 }

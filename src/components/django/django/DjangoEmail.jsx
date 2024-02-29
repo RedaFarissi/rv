@@ -5,12 +5,14 @@ import { CodeCommand , CodeHighlighter , Result } from "../../path";
 export default function DjangoEmail(){
    return(
    <>
-     <h1 className="heading-style"> Django Email</h1>   
-      <article id="Django_Email" >
+      <h1 className="heading-style" id="Django_Email"> Django Email</h1>   
+      <article className="mt-5">
             <p className="style_divv mt-5">
                في <b>Django</b>، يمكنك استخدام وظيفة <b>send_mail</b> من الوحدة النمطية <b>django.core.mail</b> لإرسال رسائل البريد الإلكتروني
             </p>
-            <h2 className="title-h2"> 1 -  التحقق بخطوتين من بريدك الإلكتروني <bdi>2 -Step Verification </bdi> </h2>
+      </article>
+      <article id="2_Step_Verification">
+            <h2 className="title-h2"> 1 -  التحقق بخطوتين من بريدك الإلكتروني <bdi>2 Step Verification </bdi> </h2>
             <ul><li> انتقل أولاً إلى بريدك الإلكتروني وانقر على إدارة حساب <b>Google</b> الخاص بك <b>(Manage your Google Account)</b> </li> </ul> 
             <img src={images.django214} className="w-100 mt-2 mb-3"/> 
             <ul> 
@@ -28,7 +30,9 @@ export default function DjangoEmail(){
                <li>هذا الرمز هو كلمة المرور للبريد الإلكتروني لحسابي و الذي أحتاج إلى نسخه لاستخدامه في <b>settings.py</b> </li>
             </ul>
             <img src={images.django222} className="w-100 mt-2 mb-3"/> 
-            <h2 className="title-h2">  2 - django  Email </h2>
+      </article>
+      <article id="send_email">
+            <h2 className="title-h2">  2 - ارسل بريد الكتروني  </h2>
             <ul><li> في هذا المثال أستخدم بريدًا إلكترونيًا آخر redaesskouni@gmail.com</li> </ul>
             <img src={images.django213} className="w-100 mt-2 mb-3"/> 
             <CodeHighlighter code={codes[9].send_email[0]} file_name="project / project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
@@ -40,8 +44,9 @@ export default function DjangoEmail(){
             <CodeHighlighter code={codes[9].send_email[5]} file_name="project / templates / send_email.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <img src={images.django223} className="img"/> 
             <ul><li> تم إرسال البريد الإلكتروني بنجاح </li></ul>
-            <img src={images.django224} className="img"/> 
-            
+            <img src={images.django224} className="img"/>    
+      </article>
+      <article>
             <h2 className="title-h2" id="list_emails"> 3 - List Emails</h2>
             <p className="style_divv"> 
                في مقتطف الشفرة المقدم، يتم استخدام <b>imap_server.select('INBOX')</b> لتحديد صندوق البريد (المجلد) الذي تريد جلب رسائل البريد الإلكتروني منه. صندوق البريد <b>"INBOX"</b> هو صندوق بريد قياسي يمثل صندوق البريد الأساسي أو المجلد الرئيسي في حساب البريد الإلكتروني.<br/><br/>

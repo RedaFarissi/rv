@@ -21,9 +21,10 @@ export default function AboutModels(){
         visibility: false
      });
 
-    return(
-        <article className="mt-5" id='about_models'>
-            <h1 className="heading-style"> Django models</h1> 
+   return(
+   <>
+      <h1 className="heading-style" id='about_models'> Django models</h1> 
+      <article className="mt-5">
             <h2 className="title-h2 mt-5" id="get_absolute_url">1 - <bdi>get_absolute_url()</bdi> </h2>
             <p className="style_divv">
                <b>get_absolute_url</b> هي طريقة في نماذج <b>Django</b> تقوم بإرجاع عنوان <b>URL</b> للوصول إلى كائن معين، مما يسمح بربط هذا الكائن بسهولة في القوالب وطرق العرض. من خلال تحديد <b>get_absolute_url</b> في <b>models.py</b>، يمكنك إنشاء عنوان <b>URL</b> للوصول إلى هذا الكائن دون بذل جهد كبير.<br/><br/>
@@ -150,8 +151,9 @@ export default function AboutModels(){
                   </table>
                )}
             </Result> 
-
-            <h3  className="title-h3" id="create_a_database_backup"> 2 - إنشاء نسخة احتياطية لقاعدة البيانات </h3>
+         </article>
+         <article id="create_a_database_backup">
+            <h2  className="title-h2"> 2 - إنشاء نسخة احتياطية لقاعدة البيانات </h2>
             <p className="style_divv">
                إن إنشاء نسخة احتياطية لقاعدة البيانات يشير إلى إنشاء نسخة من الحالة الحالية لقاعدة البيانات.<br/><br/>
                عندما تقوم بإنشاء نسخة من قاعدة البيانات، ستحتوي القاعدة البيانات الجديدة على نسخة دقيقة من القاعدة البيانات الأصلية، بما في ذلك جميع الجداول، والفهارس، والإجراءات المخزنة، والعروض، والمشغلات، وما إلى ذلك. ستكون البيانات في القاعدة البيانات الجديدة هي نفس البيانات في القاعدة البيانات الأصلية في وقت إنشاء النسخة.<br/><br/>
@@ -161,18 +163,22 @@ export default function AboutModels(){
             <ul>
                <li>تشغيل الأمر في دليل مشروع <b>Django</b> الخاص بك سيقوم بإنشاء نسخة احتياطية لقاعدة البيانات الخاصة بك بأكملها، بما في ذلك جميع البيانات من جميع التطبيقات داخل مشروعك.</li>
             </ul>
-            <h2 className="title-h2" id="restore_the_data_from_the_backup"> 3 -استعادة البيانات من النسخة الاحتياطية </h2>
+         </article>
+         <article id="restore_the_data_from_the_backup">
+            <h2 className="title-h2"> 3 -استعادة البيانات من النسخة الاحتياطية </h2>
             <CodeCommand>python manage.py loaddata backup.json</CodeCommand>
-            
-            <h2 className="title-h2" id="remove_all_from_db_models"> 4 - إزالة جميع الأعمدة والصفوف من تطبيق معين في قاعدة البيانات</h2>
+         </article>
+         <article id="remove_all_from_db_models">
+            <h2 className="title-h2"> 4 - إزالة جميع الأعمدة والصفوف من تطبيق معين في قاعدة البيانات</h2>
             <h3 className="title-h3"> 1 - افتح Django shell </h3>
             <CodeCommand>python manage.py shell</CodeCommand>
             <h3 className="title-h3"> 2 -داخل الصدفة، قم باستيراد نماذج التطبيق الذي تريد مسحه</h3>
             <CodeCommand>{">>>"}from myapp.models import *</CodeCommand>
             <h3 className="title-h3"> 3 - قم بتشغيل الأمر التالي لحذف كافة الصفوف في جداول النماذج</h3>
             <CodeCommand>{">>>"}MyModelCLASS.objects.all().delete()</CodeCommand>
-            
-            <h2 className="title-h2" id="annotate">5 - annotate</h2>
+         </article>
+         <article id="annotate">  
+            <h2 className="title-h2">5 - annotate</h2>
             <p className="style_divv">
                في <b>Django</b>، يقوم نظام الربط الكائني <b>(ORM)</b> تلقائيًا بتستخلص العلاقة بين النماذج استنادًا إلى تعاريف الحقول والعلاقات الرئيسية الخارجية التي قمت بتعريفها في ملف <b>models.py</b> <br/><br/>
                في نموذج <b>Like</b> الخاص بك، قمت بتعريف حقل مفتاح خارجي يسمى <b>product</b> والذي يشير إلى نموذج <b>Product</b>. يستخدم <b>Django</b> هذه العلاقة لفهم الاتصال بين نموذج <b>Like</b> ونموذج <b>Product</b>.<br/><br/>
@@ -243,5 +249,6 @@ export default function AboutModels(){
                </table>
             </Result>  
       </article>
-    )
+   </>
+   )
 }

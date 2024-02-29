@@ -3,10 +3,11 @@ import images from "../imagesDjango";
 import { CodeCommand , CodeHighlighter , Result } from "../../path";
 
 export default function AboutTemplates(){
-    return(
-        <article id="about_templates" className="t-5">
-            <h1 className="heading-style"> Django templates</h1> 
-            <h2 className="title-h2 mt-5" id="Create_Public_templates"> 1 - إنشاء public templates  </h2>    
+   return(
+   <>
+         <h1 className="heading-style" id="about_templates" > Django templates</h1> 
+         <article className="mt-5" id="Create_Public_templates">
+            <h2 className="title-h2 mt-5"> 1 - إنشاء public templates  </h2>    
             <p className="style_divv">
                قم بإنشاء قوالب عامة يمكنك استخدامها في جميع التطبيقات الموجودة في مشروعك   .<br/><br/>
                لإنشاء قوالب عامة في جميع التطبيقات، يجب عليك أولاً القيام بكل ما هو شائع في الملفات الثابتة وملفات الوسائط
@@ -16,7 +17,9 @@ export default function AboutTemplates(){
             <CodeHighlighter code={codes[5].Create_Public_templates[0]} file_name="project / tempaltes / base.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[5].Create_Public_templates[1]} file_name="project / project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[5].Create_Public_templates[2]} file_name="project / app / tempaltes / list_products.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <h2 className="title-h2" id="templates_tags">2 -  templates tags </h2>
+         </article>
+         <article id="templates_tags">
+            <h2 className="title-h2">2 -  templates tags </h2>
             <table className="table table-bordered text-light">
                <tbody>
                <tr className="mb-2"> 
@@ -49,11 +52,15 @@ export default function AboutTemplates(){
                </tr>
                </tbody>
             </table>
-            <h2 className="title-h2" id="csrf_token"> 2 - {"{"}% csrf_token %{"}"} </h2>
+         </article>
+         <article id="csrf_token">
+            <h2 className="title-h2"> 3 - {"{"}% csrf_token %{"}"} </h2>
             <p className="style_divv">
                من خلال تضمين العلامة {"{"}% csrf_token %{"}"} في النموذج الخاص بك، فإنك تضمن حماية عمليات إرسال النماذج ضد هجمات CSRF. إنه إجراء أمني حاسم عند التعامل مع إدخال المستخدم وعمليات إرسال النماذج في تطبيقات Django.
             </p>
-            <h2 className="title-h2" id="template_filters">4 -   template filters </h2>
+         </article>
+         <article id="template_filters">
+            <h2 className="title-h2">4 -   template filters </h2>
             <table className="table table-bordered text-light">
                <tbody>
                   <tr className="mb-2"> 
@@ -100,6 +107,7 @@ export default function AboutTemplates(){
                   </ul>
                </div>
             </Result>            
-       </article>
-    )
+         </article>
+   </>
+   )
 }

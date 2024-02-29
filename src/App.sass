@@ -20,7 +20,11 @@ body
         -webkit-border-radius: 10px  
         border-radius: 8px
     ul , ol
-        margin: 0 35px
+        margin-right: 35px
+        @media (max-width: 450px) 
+            margin-right: 20px
+           
+            
 
 .aside 
     width: 266px
@@ -34,17 +38,17 @@ body
     overflow-y: auto
     overflow-x: hidden
     background-color: $bgAside
+    @media (max-width: 1115px) 
+        display: none
     &::-webkit-scrollbar 
         box-sizing: border-box
         width: 7px
-        visibility: visibil
+        visibility: visibile
     &::-webkit-scrollbar-track 
-        border-radius: 8px
         background: gray
     &::-webkit-scrollbar-thumb 
         background:  rgb(40 40 40) 
         -webkit-border-radius: 10px  
-        border-radius: 8px
         border: 0.1px solid white
     ul , dl
         width: 100%
@@ -108,16 +112,28 @@ body
     padding: 40px 0
     font-size: 17px
     margin-top: 140px    
-    @media (max-width: 1250px) 
-        width: calc( 95% - 286px )
-        margin: 0 calc(9px + 2.5%)
+    @media (max-width: 1248px) 
+        width: calc( 95% - 296px )
+        margin: 0 calc(14px + 2.5%)
         margin-top: 140px
+    @media (max-width: 1115px) 
+        width: calc( 100% - 80px )
+        margin: 0 40px
+        margin-top: 140px
+    @media (max-width: 995px) 
+        width: calc( 100% - 40px )
+        margin: 0 20px
+        margin-top: 140px
+
     .heading-style 
         direction: ltr
         font-style: italic
-        font-size: 55px
+        font-size: 52px
         color: $title_h2
+        margin-bottom: 45px
         font-family: "Readex Pro",sans-serif
+        @media (max-width: 500px) 
+            font-size: 34px
     .img
         width: 100%
         margin: 20px  0
@@ -132,27 +148,37 @@ body
         word-spacing: 3px 
         font-size: 16px
         font-family: "Readex Pro",sans-serif
+        @media (max-width: 500px) 
+            font-size: 14.5px
     .title-h2
         font-size: 31px
         color: $title_h2
         margin-top: 45px 
         margin-bottom: 15px 
         font-family: "Readex Pro",sans-serif
+        @media (max-width: 500px) 
+            font-size: 23px
     .title-h3
         font-size: 27px
         margin-top:17px 
         color:  #004481
         font-family: "Readex Pro",sans-serif
+        @media (max-width: 500px) 
+            font-size: 19px
     .title-h5
         font-size: 20px
         margin-top:15px 
         color: $title_h5
         font-family: "Readex Pro",sans-serif
+        @media (max-width: 500px) 
+            font-size: 17px
     .title-h6
         margin-top:13px 
         font-size: 18px
         color: red
         font-family: "Readex Pro",sans-serif
+        @media (max-width: 500px) 
+            font-size: 15px
     .style-result
         direction: ltr
         background-color: white

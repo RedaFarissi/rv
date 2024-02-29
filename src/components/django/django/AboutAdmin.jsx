@@ -3,30 +3,36 @@ import images from "../imagesDjango";
 import { CodeCommand , CodeHighlighter , Result } from "../../path";
 
 export default function AboutAdmin(){
-    return(
-        <article className="mt-5"  id="about_admin">
-            <h1 className="heading-style"> Django admin</h1> 
-            <h3 className="title-h2 mt-5" id="list_display">1 - list_display </h3>
+   return(
+   <>
+      <h1 className="heading-style" id="about_admin"> Django admin </h1> 
+      <article className="mt-5" id="list_display">
+            <h2 className="title-h2 mt-5">1 - list_display </h2>
             <p className="style_divv">
                يمكنك استخدام <b>list_editable</b> لرؤية الأعمدة التي تريدها في صفحة المسؤول. 
             </p>
             <CodeHighlighter code={codes[6].list_display[0]} file_name="admin.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <img src={images.django174} className="img"/>
-            <h3 className="title-h2" id="prepopulated_fields"> 2 - prepopulated_fields </h3>
+            <img src={images.django174} className="img" />
+      </article>
+      <article id="prepopulated_fields">
+            <h2 className="title-h2"> 2 - prepopulated_fields </h2>
             <p className="style_divv"> 
                يمكنك استخدام السمة <b>prepopulated_fields</b> في ملف المسؤول لتحديد الحقول حيث يتم تعيين القيمة تلقائيًا باستخدام قيمة الحقول الأخرى.
             </p> 
             <CodeHighlighter code={codes[6].prepopulated_fields[0]} file_name="admin.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <img src={images.django172} className="img"/>
-            <h3 className="title-h2" id="list_editable"> 3 - list_editable  </h3>
+            <img src={images.django172} className="img" />
+      </article>
+      <article id="list_editable">
+            <h2 className="title-h2"> 3 - list_editable  </h2>
             <p className="style_divv"> 
                نستخدم <b>list_editable</b> مع الأعمدة التي نريد تحديثها من صفحة المسؤول.<br/><br/>
                يجب أيضًا إدراج أي حقل في <b>list_editable</b> في سمة <b>list_display</b>، حيث يمكن تحرير الحقول المعروضة فقط.
             </p>
             <CodeHighlighter code={codes[6].list_editable[0]} file_name="admin.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <img src={images.django176} className="img"/>
-
-            <h3 className="title-h2" id="inlines"> 4 - inlines  </h3>
+      </article>
+      <article id="inlines">
+            <h2 className="title-h2"> 4 - inlines  </h2>
             <p className="style_divv">
                في <b>Django</b>، يتم استخدام <b>Inlines</b> في واجهة الإدارة للتعامل مع النماذج ذات الصلة وتوفير طريقة لإدارتها في سياق النموذج الأصلي. تسمح لك السطور المضمّنة بعرض مثيلات النموذج ذات الصلة وإنشائها وتحديثها وحذفها مباشرةً من واجهة الإدارة الخاصة بالنموذج الأصلي.<br/><br/>
                يعد مفهوم السطور مفيدًا بشكل خاص عند التعامل مع علاقات واحد إلى متعدد أو متعدد إلى متعدد بين النماذج. فهو يساعد على تبسيط إدارة البيانات ذات الصلة من خلال تقديم واجهة ملائمة لتحرير الكائنات ذات الصلة وربطها
@@ -34,8 +40,11 @@ export default function AboutAdmin(){
             <CodeHighlighter code={codes[6].inlines[0]} file_name="models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[6].inlines[1]} file_name="admin.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <img src={images.django188} className="img"/> 
-            <p className="style_divv"> عند النقر فوق حفظ المؤلف الذي تم إنشاؤه باستخدام كتاب ذي صلة</p>
+            <p className="style_divv">
+               عند النقر فوق حفظ المؤلف الذي تم إنشاؤه باستخدام كتاب ذي صلة
+            </p>
             <img src={images.django189} className="img"/> 
-        </article>
-    )
+      </article>
+   </>
+   )
 }

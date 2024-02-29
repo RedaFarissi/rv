@@ -12,7 +12,7 @@ function EventExemple(props){
         }
     }
     return (
-    <ResultAlert title='Output' logo={props.images} clickOk={clickOk} displayAlert={resultAlertDisplayAlert} alertValue={"take Shoot function"} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+    <ResultAlert title='React App' logo={props.images} clickOk={clickOk} displayAlert={resultAlertDisplayAlert} alertValue={"take Shoot function"} route="localhost:3000">
         <button onClick={addAlert}>Shoot!</button>
     </ResultAlert>
     )

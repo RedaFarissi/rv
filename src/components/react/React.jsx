@@ -6,7 +6,6 @@ import {ThisState, EventExemple, EventExemple2} from "./pathExemple"
 
 
 function React(props){
-  
   const arrays = codes.map(e =>{ 
     const keys = Object.keys(e) 
     var keys_map;
@@ -21,7 +20,7 @@ function React(props){
   });
 
 return(
- <main>
+<main>
   <aside  className="aside">
       <dl className="list-group m-0">
         {arrays}
@@ -206,7 +205,7 @@ return(
         </p>
         <div className="mital">متال 1 : </div>
         <CodeHighlighter code={codes[2].Events[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <EventExemple images={images.html_logo}/>
+        <EventExemple images={react_logo}/>
         <p><ul><li>إذا كتبت <bdi>onClick={"{"}shoot(){"}"}،</bdi> فسيتم تشغيل الوظيفة <bdi><b>shoot()</b></bdi> عند بدء التطبيق.</li></ul></p>  
         <div className="mital">متال 2 : </div>
         <CodeHighlighter code={codes[2].Events[1]} language="css" number={true} addclassName="mt-3 mb-3" copie={true}/>

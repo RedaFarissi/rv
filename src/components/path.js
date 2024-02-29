@@ -28,7 +28,6 @@ export {default as Git} from './git/Git';
 
 export {default as Footer} from './footer/Footer';
 
-
 export {default as CodeHighlighter} from './codeHighlighter/CodeHighlighter';
 
 export {default as CodeCommand} from './codeCommand/CodeCommand';
