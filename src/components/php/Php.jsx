@@ -5,7 +5,7 @@ import {
     RegEx,DateAndTime,IncludeFiles,Filters,CallbackFunctions,Exceptions,FormHandling,Json,
     WhatIsOop,ClassesObjects,Constructor,Destructor,AccessModifiers,Inheritance,
     ClassConstants,AbstractClasses,Traits,StaticMethods,StaticProperties,Iterables,
-    Database,Connect,CreateDatabase,CreateTable,InsertData,GetLastId,InsertMultiple,Prepared,SelectData,
+    Database,Connect,CreateDatabase,CreateTable,
 } from "./pathPhp";
 import xampp_logo from "../../assests/images/logo/xampp.jpg";
 
@@ -59,6 +59,7 @@ export default function Php(props){
             <Route path='form-handling' element={<FormHandling xampp_logo={xampp_logo} />} />
             <Route path='json' element={<Json xampp_logo={xampp_logo} />} />
             
+
             <Route path='what-is-oop' element={<WhatIsOop xampp_logo={xampp_logo} />} />
             <Route path='classes-objects' element={<ClassesObjects xampp_logo={xampp_logo} />} />
             <Route path='constructor' element={<Constructor xampp_logo={xampp_logo} />} />
@@ -72,16 +73,11 @@ export default function Php(props){
             <Route path='static-properties' element={<StaticProperties xampp_logo={xampp_logo} />} />
             <Route path='iterables' element={<Iterables xampp_logo={xampp_logo} />} />
 
+
             <Route path='database' element={<Database xampp_logo={xampp_logo} />} />
             <Route path='connect' element={<Connect xampp_logo={xampp_logo} />} />
             <Route path='create-database' element={<CreateDatabase xampp_logo={xampp_logo} />} />
             <Route path='create-table' element={<CreateTable xampp_logo={xampp_logo} />} />
-            <Route path='insert-data' element={<InsertData xampp_logo={xampp_logo} />} />
-            <Route path='get-last-id' element={<GetLastId xampp_logo={xampp_logo} />} />
-            <Route path='insert-multiple' element={<InsertMultiple xampp_logo={xampp_logo} />} />
-            <Route path='prepared' element={<Prepared xampp_logo={xampp_logo} />} />
-            <Route path='select-data' element={<SelectData xampp_logo={xampp_logo} />} />
-
         </Routes>
     </section>
 </main>

@@ -81,18 +81,22 @@ export default function Cmd(props){
                 <p className="style_divv">نسخ جميع الملفات ذاخل مجلد إلى مجلد آخر .<br/> قم بذهاب إلى المسار الذي يحتوي الملفات تم إستخدم</p>
                 <CodeCommand>xcopy /s /i * "C:\Path\To\Target\Folder"</CodeCommand>
                 
-                <h3 className="title-h3" id="Change_extension"> 14 - تغيير امتداد الملفات من php إلى html </h3>
+                <h3 className="title-h3" id="Change_extension"> 14 - تغيير امتداد الملف من php إلى html </h3>
+                <CodeCommand>ren filename.php filename.html</CodeCommand>
+                
+                <h3 className="title-h3" id="Change_extensions"> 15 - تغيير امتداد الملفات من php إلى html </h3>
                 <p className="style_divv">  انتقل أولاً إلى مسار المجلد الذي يحتوى الملفات.<br/>قم بتغيير كل الملفات ذات الامتداد <kbd>.php</kbd> بالامتداد <kbd>.html</kbd> </p>
                 <CodeCommand>for %i in (*.php) do ren "%i" "*.html"</CodeCommand>
-                <h3 className="title-h3" id="Print_all_Files_in_folder"> 15 - طباعة جميع أسماء الملفات في مجلد معين </h3>
+                
+                <h3 className="title-h3" id="Print_all_Files_in_folder"> 16 - طباعة جميع أسماء الملفات في مجلد معين </h3>
                 <CodeCommand>dir /A-D /B</CodeCommand>
                 <CodeCommand>C:\Users\SURFACE BOOK\Desktop\folder_name{">"} <span className="text-warning">dir /A-D /B</span></CodeCommand>
-                <h3 className="title-h3" id="View_System_Information"> 16 - عرض معلومات النظام</h3>
+                <h3 className="title-h3" id="View_System_Information"> 17 - عرض معلومات النظام</h3>
                 <p className="style_divv">يعرض معلومات حول النظام مثل اسم الكمبيوتر وإصدار النظام.</p>
                 <CodeCommand>systeminfo</CodeCommand>
-                <h3 className="title-h3" id="Turn_off_the_Computer"> 17 - إيقاف تشغيل الكمبيوتر </h3>
+                <h3 className="title-h3" id="Turn_off_the_Computer"> 18 - إيقاف تشغيل الكمبيوتر </h3>
                 <CodeCommand>shutdown</CodeCommand>
-                <h3 className="title-h3" id="search_for_File_by_Extensions"> 18 - البحث عن امتدادات ملفات محددة في مجلد </h3>
+                <h3 className="title-h3" id="search_for_File_by_Extensions"> 19 - البحث عن امتدادات ملفات محددة في مجلد </h3>
                 <img src={images.cmd1} alt="cmd1" className="w-50 m-auto d-block border my-4" />
                 <h4><ul><li> تنسيق الناتج <bdi>/B</bdi></li></ul></h4>
                 <p className="style_divv"> 
@@ -113,9 +117,9 @@ export default function Cmd(props){
                     C:\Users\SURFACE BOOK\Desktop\test_powerShell\header\header.html<br/>
                     C:\Users\SURFACE BOOK\Desktop\test_powerShell\header\headerComponent\Nav.html<br/>
                 </div>
-                <h3 className="title-h3" id="Display_Text"> 19 - عرض النص </h3>
+                <h3 className="title-h3" id="Display_Text"> 20 - عرض النص </h3>
                 <CodeCommand>echo Hello, World!</CodeCommand>
-                <h3 className="title-h3" id=""> 20 - عرض أو ضبط التاريخ والوقت </h3>
+                <h3 className="title-h3" id=""> 21 - عرض أو ضبط التاريخ والوقت </h3>
                 <CodeCommand>date</CodeCommand>
                 <CodeCommand>time</CodeCommand>
             </article>

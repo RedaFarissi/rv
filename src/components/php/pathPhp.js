@@ -43,8 +43,3 @@ export {default as Database} from './php/mysql/Database';
 export {default as Connect} from './php/mysql/Connect';
 export {default as CreateDatabase} from './php/mysql/CreateDatabase';
 export {default as CreateTable} from './php/mysql/CreateTable';
-export {default as InsertData} from './php/mysql/InsertData';
-export {default as GetLastId} from './php/mysql/GetLastId';
-export {default as InsertMultiple} from './php/mysql/InsertMultiple';
-export {default as Prepared} from './php/mysql/Prepared';
-export {default as SelectData} from './php/mysql/SelectData';
