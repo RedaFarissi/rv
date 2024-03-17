@@ -2,7 +2,6 @@ import images from "../imagesDjango";
 import { CodeCommand } from "../../path";
 
 export default function Introduction(props){
-
    return(
    <>
          <h1 className="heading-style" id="Introduction"> Django Introduction</h1> 
@@ -43,8 +42,8 @@ export default function Introduction(props){
          </article>
          <article id="Struct_Django">
            <h2 className="title-h2"> 4 - هيكل djnago . </h2>
-           <img src={images.django67} className="img"/>
-           <img src={images.django25} className="img"/>
+           <img src={images.django67} alt="django" className="img"/>
+           <img src={images.django25} alt="django" className="img"/>
          </article>
    </>   
    ) 

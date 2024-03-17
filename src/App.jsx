@@ -1,5 +1,5 @@
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
-import { Header,Home,Html,Css,Js,React,Mysql,Python,Django,DjangoRestFramework,Cmd,Git,Php,Laravel,Footer} from './components/path';
+import { Header,Home,Html,Css,Js,React,Mysql,Python,Django,DjangoRestFramework,Cmd,Git,Php,Laravel} from './components/path';
 import "./App.sass";
 
 function App() {
