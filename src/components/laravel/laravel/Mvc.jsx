@@ -33,16 +33,16 @@ export default function Mvc(props){
                   <b>Composer:</b>
                   <ul>
                      <li>تحقق من توافر <b>Composer</b> على نظامك عبر الأمر  في واجهة الأوامر. إذا لم يكن مثبتًا، يمكنك تنزيله وتثبيته من الموقع الرسمي للمكتبة.</li>
-                     <li><CodeCommand>composer</CodeCommand></li>
                   </ul>
                </li>
+               <CodeCommand>composer</CodeCommand>
                <li>
                   <b>Node.js:</b>
                   <ul>
                      <li>لتجميع ملفات <b>CSS</b> و <b>JavaScript</b>، ستحتاج إلى تثبيت <b>Node.js</b>. يمكنك تحقق من توافره باستخدام الأمر .</li>
-                     <li><CodeCommand>node -v</CodeCommand></li>
                   </ul>
                </li>
+               <CodeCommand>node -v</CodeCommand>
             </ul>
          </p>
          <div className='row mt-2'>
@@ -54,12 +54,12 @@ export default function Mvc(props){
          <h2 className='title-h2' id="First_Laravel_Project">3 - مشروع Laravel الأول</h2>
          <p className='style_divv'>
             <ul>
-               <li> Open the <kbd>php.ini</kbd> file used by your <b>XAMPP</b> installation. You mentioned that it's located at <kbd>C:\xampp\php\php.ini</kbd></li>
-               <li>Search for the line that contains <kbd>;extension=zip</kbd></li>
-               <li>Remove the <b>semicolon</b> at the beginning of the line to uncomment it.</li>
-               <li>save change </li>
+               <li> افتح ملف <b>php.ini</b> المستخدم بواسطة تثبيت <b>XAMPP</b> الخاص بك. لقد ذكرت أنه موجود في <kbd>C:\xampp\php\php.ini</kbd></li>
+               <li>ابحث عن السطر الذي يحتوي على <kbd>;extension=zip</kbd></li>
+               <li>قم بإزالة الفاصلة المنقوطة في بداية السطر لإلغاء التعليق عليها.</li>
+               <li> حفظ التغيير </li>
             </ul>
-            first to create laravel Project you need to go in path
+            <b>أولاً لإنشاء مشروع Laravel، عليك اتباع المسار :</b>
             <div className="bg-dark text-light fs-5 p-4 pb-2 rounded"><pre>cd C:\xampp\htdocs</pre></div>
          </p>
 
