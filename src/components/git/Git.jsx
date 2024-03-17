@@ -323,9 +323,48 @@ export default function Git(props){
                     <CodeCommand>git commit -m  "message"</CodeCommand>
                     <CodeCommand>git push</CodeCommand>
                 </article>
+
+                <article id="Generating_SSH">
+                    <h2 className="title-h2"> 24 - توليد SSH </h2>
+                    <p className="style_divv">
+                        مفتاح <b>SSH</b> في <b>GitHub</b> هو زوج من المفاتيح التشفيرية (العامة والخاصة) المستخدمة للمصادقة الآمنة عند التفاعل مع خوادم <b>GitHub</b> عبر بروتوكول <b>SSH</b>.<br/>
+                        <ul>
+                            <li><b>التوليد:</b> تقوم بإنشاء زوج من المفاتيح - العامة والخاصة.</li>
+                            <li><b>المصادقة:</b> يرسل جهاز الكمبيوتر الخاص بك المفتاح العام إلى <b>GitHub</b> عند الحاجة.</li>
+                            <li><b>التحقق:</b> يتحقق <b>GitHub</b> مما إذا كان المفتاح العام يتطابق مع أي من المفاتيح المرتبطة بحسابك، مما يسمح بالعملية إذا تم العثور على تطابق.</li>
+                        </ul>
+                        <b>المزايا:</b>
+                        <ul>
+                            <li> <b>الأمان:</b> ذات أمان عالي، مقاوم للهجمات التي تحاول تخمين كلمات المرور والهجمات الخداعية.</li>
+                            <li> <b>الراحة:</b> يقضي على الحاجة لإدخال كلمات المرور مرارًا وتكرارًا.</li>
+                            <li> <b>التلقائية:</b> مفيدة لتوجيه المهام بدون تدخل المستخدم.</li>
+                            <li> <b>التحكم في الوصول:</b> يتيح التحكم الدقيق في الوصول إلى مستودعات الأكواد والعمليات.</li>
+                        </ul>
+                        باختصار، تقدم مفاتيح <b>SSH</b> وسيلة آمنة ومريحة وفعالة للتفاعل مع مستودعات وخدمات <b>GitHub</b>.
+                    </p>
+                    <h3  className="title-h3">1 - إفتح Git Bash </h3>
+                    <ul><li>الصق النص أدناه، مع استبدال البريد الإلكتروني المستخدم في المثال بعنوان بريدك الإلكتروني على <b>GitHub</b>.</li></ul>
+                    <CodeCommand> ssh-keygen -t ed25519 -C "your_email@example.com" </CodeCommand>
+                    <h3  className="title-h3">2 - إضافة SSH جديد </h3>
+                    <ul><li>إذا كان لملف مفتاح SSH العام الخاص بك اسم مختلف عن رمز المثال، فقم بتعديل اسم الملف ليتوافق مع الإعداد الحالي. عند نسخ مفتاحك، لا تضف أي أسطر جديدة أو مسافات بيضاء.</li></ul>
+                    <CodeCommand>clip &lt; ~/.ssh/id_ed25519.pub </CodeCommand>
+                    <img src={images.git31} alt="git" className="img" />
+                    <ul>
+                        <li>انقر فوق <b>SSH and GPG keys</b></li>
+                        <li>انقر فوق <b>new SSH Key</b> </li>
+                    </ul>
+                    <img src={images.git33} alt="git" className="img" />
+                    <ul>
+                        <li>في حقل "العنوان"، أضف تسمية وصفية للمفتاح الجديد. على سبيل المثال، إذا كنت تستخدم كمبيوتر محمولًا شخصيًا، فيمكنك تسمية هذا المفتاح "كمبيوتر محمول شخصي".</li>
+                        <li>في حقل "key"، الصق مفتاحك العام <kbd>Ctrl + v</kbd>.</li>
+                    </ul>
+                    <img src={images.git32} alt="git" className="img" />
+                    <h3  className="title-h3">3 - استنساخ الريبو باستخدام SSH </h3>
+                    <CodeCommand>git clone git@github.com:RedaFarissi/shopping.git</CodeCommand>
+                </article>
                 
                 <article id="Remove_connection">
-                    <h2 className="title-h2"> 24 - قم بإزالة الاتصال بين مجلد في جهاز الكمبيوتر الخاص بك و GitHub</h2>
+                    <h2 className="title-h2"> 25 - قم بإزالة الاتصال بين مجلد في جهاز الكمبيوتر الخاص بك و GitHub</h2>
                     <CodeCommand>rd /s /q .git</CodeCommand>
                 </article>
 
