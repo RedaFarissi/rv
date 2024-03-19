@@ -37,7 +37,7 @@ export default function Result(props){
                     </div>
                     <div className="style-result-header-2-center">
                         <i className="fa-solid fa-globe"></i>
-                        <p style={{overflow:"hidden"}}> {props.route}<span className="text-primary">{props.url_change}</span></p>
+                        <p style={{overflow:"hidden"}}> {props.route}<b className="text-primary">{props.url_change}</b></p>
                     </div>
                     <div className="style-result-header-2-right">
                         <i className="fa-solid fa-ellipsis-vertical"></i>

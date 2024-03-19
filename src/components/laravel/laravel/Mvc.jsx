@@ -1,12 +1,12 @@
 import images from "../imagesLaravel";
-import { CodeCommand } from "../../path";
+import { CodeCommand , CodeHighlighter ,  Result } from "../../path";
 
 export default function Mvc(props){
    return(
 <>
-    <h1 className="heading-style">Laravel MVC </h1>
-    <article id="mt-5">
-         <h2 className='title-h2' id="what_is_laravel"> 1 - ما هو laravel  </h2>
+    <h1 className="heading-style mb-5">Laravel MVC </h1>
+    <article className="mt-5" id="what_is_laravel">
+         <h2 className='title-h2' > 1 - ما هو laravel  </h2>
          <p className="style_divv">
             لارافيل هو إطار عمل <b>PHP</b> مفتوح المصدر لتطوير تطبيقات الويب. تأتي مع <b>ORM</b> يُسمى <b>Eloquent</b> ومحرك <b>Blade</b> لتصميم الواجهات. يوفر أداة <b>Artisan</b> لإدارة المهام والتكوين. يتبع نمط <b>MVC</b> ويشمل <b>Middleware</b> لمرشحات <b>HTTP</b>. يوفر توجيهًا بسيطًا وحقن إعتماد لإدارة التبعيات. يشمل نظام ترتيب قواعد البيانات وزرع البيانات. لديه بيئة نشطة ومجتمع وثائق جيدة. اشتهر ببنية أنيقة وميزات مطور ودية، مما يجعله خيارًا شائعًا لبناء تطبيقات الويب الحديثة.<br/><br/>
             <b>MVC</b> ، أو <b>Model-View-Controller</b>، هو نمط هندسة برمجيات يستخدم عادة في تطوير الويب. يقسم التطبيق إلى ثلاث مكونات مترابطة:<br/>
@@ -17,8 +17,9 @@ export default function Mvc(props){
                </ul>
             يعزز نمط <b>MVC</b> فصل الاهتمامات، مما يجعل قاعدة الشيفرة أكثر تنظيمًا وسهولة في الصيانة. ويسمح بالتعاون بشكل أسهل بين المطورين العاملين على جوانب مختلفة من التطبيق.
          </p>
-
-         <h2 className='title-h2' id="what_we_need_to_use_laravel"> 2 - ما نحتاجه لاستخدام laravel  </h2>
+   </article>
+   <article id="what_we_need_to_use_laravel">
+         <h2 className='title-h2'> 2 - ما نحتاجه لاستخدام laravel  </h2>
          <p className='style_divv'>
             نحتاج إلى بيئة تشغيل محلية لتطوير تطبيقات <b>Laravel</b> باستخدام <b>PHP</b>. هناك اثنان من أشهر البيئات هما <b>XAMPP</b> و <b>MAMP</b>، ويمكنك اختيار أي منهما حسب نظام التشغيل الخاص بك.<br/>
             <ul>
@@ -50,8 +51,10 @@ export default function Mvc(props){
             <img src={images.laravel0_env2} alt="laravel path" className="col-md-4"/>
             <img src={images.laravel0_env3} alt="laravel path" className="col-md-4"/>
          </div>
-
-         <h2 className='title-h2' id="First_Laravel_Project">3 - مشروع Laravel الأول</h2>
+   </article>
+   <article  id="First_Laravel_Project">
+         <h2 className='title-h2'>3 - مشروع Laravel الأول</h2>
+         <h3 className='title-h3'>1 -  إلغاء التعليق على ;extension=zip </h3>
          <p className='style_divv'>
             <ul>
                <li> افتح ملف <b>php.ini</b> المستخدم بواسطة تثبيت <b>XAMPP</b> الخاص بك. لقد ذكرت أنه موجود في <kbd>C:\xampp\php\php.ini</kbd></li>
@@ -59,88 +62,88 @@ export default function Mvc(props){
                <li>قم بإزالة الفاصلة المنقوطة في بداية السطر لإلغاء التعليق عليها.</li>
                <li> حفظ التغيير </li>
             </ul>
-            <b>أولاً لإنشاء مشروع Laravel، عليك اتباع المسار :</b>
-            <div className="bg-dark text-light fs-5 p-4 pb-2 rounded"><pre>cd C:\xampp\htdocs</pre></div>
          </p>
+         <h3 className='title-h3'>2 - انتقل إلى الدليل htdocs </h3>
+         <p className='style_divv'>
+            <ul><li>أولاً لإنشاء مشروع <b>Laravel</b>، عليك اتباع المسار :</li></ul>
+            <CodeCommand>cd C:\xampp\htdocs</CodeCommand>
+         </p>
+         <h3 className='title-h3'>3 - تثبيت مجلد لارافيل  </h3>
+         <p className='style_divv'>
+            <ul><li>في المسار  <b>htdocs</b> استخدم :</li></ul>
+            <CodeCommand> composer create-project laravel/laravel:^9.0 example-app </CodeCommand>
+            <b className="text-success"> أو يمكنك إستخدام </b>
+            <CodeCommand>composer global require laravel/installer</CodeCommand>
+            <CodeCommand>laravel new example-app</CodeCommand>
+         </p>
+         <h3 className='title-h3'>4 - تحقق من إصدار مشروعك laravel </h3>
+         <p className='style_divv'>
+            <ul><li>انتقل أولاً إلى المجلد الذي تم إنشاؤه</li></ul>
+            <CodeCommand>cd example-app</CodeCommand>
+            <CodeCommand>php artisan --version</CodeCommand>
+         </p>
+   </article>
+   <article id="run_project">
+         <h2 className='title-h2'>4 - تشغيل المشروع </h2>
+         <p className='style_divv'>
+            <CodeCommand>php artisan serve</CodeCommand>
+            <ul><li>تشغيل المشروع في <b>port</b> معين</li></ul>
+            <CodeCommand>php artisan serve --port=7000</CodeCommand>
+            <ul><li> قم بتغيير <b>Host</b> أو عنوان <b>IP</b>. بشكل افتراضي يرتبط بـ <b>127.0.0.1</b></li></ul>
+            <CodeCommand>php artisan serve --host=0.0.0.0</CodeCommand>
+         </p>
+   </article>
+   <article id="artisan">
+         <h2 className='title-h2'>5 - artisan </h2>
+         <p className='style_divv'>
+            <ul><li>استخدم هذا الأمر لمعرفة كل شيء عن الأوامر في <b>Laravel</b></li></ul>
+            <CodeCommand>php artisan</CodeCommand>
+         </p>
+   </article>
+   <article id="views">
+         <h2 className='title-h2'>6 - views</h2>
+         <p className='style_divv'>
+            <ul>
+               <li>عندما نقوم بتشغيل <b>example-app</b>، فإن الصفحة التي تظهر افتراضيًا هي <b>Welcome.blade.php</b> في المسار : <br/><kbd>example-app/resources/views/welcome.blade.php</kbd></li>
+               <li className="mt-2"> يمكنك كتابة <b>html</b> و <b>php</b> </li>
+            </ul>
+         </p>
+   </article>
+   <article id="route">
+         <h2 className='title-h2'> 7 - route </h2>
+         <ul> <li>عندما نقوم بتشغيل <b>example-app</b>، فإن الصفحة التي تظهر افتراضيًا هي <kbd>welcome.blade.php</kbd></li> </ul>
+         <CodeHighlighter  code={`Route::get('/',function(){
+   return view('welcome') ;         # "welcome" : is file in => resources / views
+});
 
-         <div className="alert alert-warning text-black fs-5">
-            <p> in path htdocs use :</p>
-            <div className="bg-dark text-light fs-5 p-4 pb-2 rounded"><pre> composer create-project laravel/laravel:^9.0 example-app </pre></div>
-            <b>or</b>
-         <div className="bg-dark text-light fs-5 p-4 pb-2 rounded"><pre>
-         composer global require laravel/installer<br/>
-         laravel new example-app</pre>
-         </div>
-            <h3>check for version of your project laravel</h3>
-            <div className="bg-dark text-light fs-5 p-4 pb-2 rounded"><pre><span className='text-secondary'>example-app{">"}</span> php artisan --version</pre></div>
-         </div>
-
-
-         <h2 className='title-h2' id="run_project">4 - run project </h2>
-         <div className="alert alert-warning text-black fs-5">
-            <div className="bg-dark text-light fs-5 p-4 pb-2 mb-2 rounded"><pre> cd example-app </pre></div>
-            <div className="bg-dark text-light fs-5 p-4 pb-2 rounded"><pre> php artisan serve </pre></div>
-            <b> Run project in specific port   </b> 
-            <div className="bg-dark text-light fs-5 p-4 pb-2 rounded"><pre>  php artisan serve --port=7000 </pre></div>
-            <b>  Change the Host or IP Address . By default it binds to 127.0.0.1</b> 
-            <div className="bg-dark text-light fs-5 p-4 pb-2 rounded"><pre>  php artisan serve --host=0.0.0.0 </pre></div>
-         </div>
-
-         <h2 className='title-h2' id="artisan">5 - artisan </h2>
-         <div className="alert alert-warning text-black fs-5">
-            use this command to new evrything about command in laravel
-            <div className="bg-dark text-light fs-5 p-4 pb-2 rounded"><pre> php artisan </pre></div>
-         </div>
-
-         <h2 className='title-h2' id="views">6 - views</h2>
-         <div className="alert alert-warning text-black fs-5">
-            <strong>path : example-app/resources/views/welcome.blade.php</strong><br/><br/>
-           <p>
-               When we run example-app , the page that appears by default is <kbd>welcome.blade.php</kbd> <br/>
-           </p>
-           <p>
-               you can write <b>html</b> and <b>php</b> and ..
-           </p>
-         </div>
-
-         <h2 className='title-h2' id="route"> 7 - route </h2>
-         <h3 className='title-h3' id="route_to_views_without_puch_data"> 1 - route to views without puch data </h3>
-         <div className="alert alert-warning text-black fs-5">
-         <strong>path : example-app/routes/web.php</strong> <br/><br/>
-           <p> When we run example-app , the page that appears by default is <kbd>welcome.blade.php</kbd> <br/> </p>
-           <p> you can write hrml and php </p>
-         <div className="alert alert-primary text-black fs-5">
-            <h3 className="fs-5 text-primary ms-0 ps-0"> Route </h3>
-         {/* <pre>
-            <b className="text-success">Route</b><span className="bc">::get(</span><span className="o">'/'</span>,function(){
-               <span className="v">return</span> <span className="b">view(</span><span className="o">'welcome'</span><span className="b">)</span> ;
-            }<span className="bc">)</span> ;
-         
-            /////////////////
-         
-            <b className="text-success">Route</b><span className="bc">::get(</span><span className="o">'/route_name'</span>,function(){
-               <span className="v">return</span> <span className="b">view(</span><span className="o">'file_in_resources_views'</span><span className="b">)</span>;
-            }<span className="bc">)</span> ;
-         </pre> */}
-         </div>
-         </div>
-
-         <h3 className='title-h3' id="route_to_views_and_puch_data"> 2 - route to views and puch data </h3>
-         <div className="alert alert-warning text-black fs-5">
-         <div className="alert alert-primary text-black fs-5">
-               {/* <pre>
-            <b className="text-success">Route</b><span className="bc">::get(</span><span className="o">'/{somthinhg}'</span>,function($somthinhg){
-               <span className="v">return</span> <span className="b">view(</span><span className="o">'welcome'</span>,<span className="b">[</span>"key"=> $somthinhg<span className="b">]</span>)</span> ;
-            }<span className="bc">)</span> ;  </pre>       */}
-            </div>
-            <p>
-               when user go to path doesn't exist in wath the views eppear is welcome <small><small><small>(welcome.blade.php)</small></small></small> .<br/>
-               you can use data with key in page welcome
-               <div className="alert bg-light"><pre> &#123;&#123;$name&#125;&#125;</pre></div>
-            </p>
-         </div>
-         
-         <h2 className='title-h2' id="request">8 - request</h2>
+Route::get('/route-name/{somthinhg}' , function( $somthinhg ){
+   return view('welcome',["key"=> $somthinhg]) ;
+});`} file_name="example-app / routes / web.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+   </article>
+   <article id="resources">
+         <h2 className='title-h2'> 8 - resources </h2>
+         <CodeHighlighter  code={`<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+</head>
+<body>
+    @if( isset($key) )
+            <p>Key: {{ $key }}</p>
+    @else
+            <p>No data available for key.</p>
+    @endif
+</body>
+</html>`} file_name="example-app / resources / views / welcome.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         <Result title='Welcome' route="http://localhost:8000" url_change="/route-name/reda">
+             Key: reda
+         </Result>
+         <Result title='Welcome' route="http://localhost:8000">
+             No data available for key.
+         </Result>
+   </article>
+   <article  id="request">     
+         <h2 className='title-h2'>9 - request</h2>
          <div className="alert alert-warning text-black fs-5">
          use <b className="b">request('')</b> like variable 
          <div className="alert alert-primary text-black fs-5 mt-3">
@@ -196,8 +199,9 @@ export default function Mvc(props){
             </div>
             <span className="text-success">={">"} you can return views</span>
          </div>
-            
-         <h2 className='title-h2' id="Controller">9 - Controller</h2>
+   </article>
+   <article id="Controller"> 
+         <h2 className='title-h2'>10 - Controller</h2>
          <p className="alert alert-warning text-black fs-5">
             if you want to know everything about Controller use command :
             <div className="bg-dark text-light fs-5 p-4 pb-2 mb-2 rounded"><pre> php artisan make:controller -h </pre></div>
@@ -246,8 +250,9 @@ export default function Mvc(props){
                <li>about.blade.php</li>
             </ul>
          </p>
-          
-         <h2 className='title-h2' id="group_duplicate_items_on_one_page">10 - layoute page </h2>
+   </article>
+   <article id="group_duplicate_items_on_one_page"> 
+         <h2 className='title-h2'>11 - layoute page </h2>
          <div className="alert alert-warning text-black fs-5">
          <strong> in <kbd>example-app/resources/views/</kbd> create file <u>layoute.blade.php</u> </strong><br/><br/>
          {/* <div className="alert bg-light"><pre>
@@ -303,8 +308,9 @@ export default function Mvc(props){
             @endsection</pre>
          </div> */}
          </div>
-
-         <h2 className='title-h2' id="ussing_css_and_javaScript">11 - ussing Css and javaScript </h2>
+   </article>
+   <article id="ussing_css_and_javaScript">
+         <h2 className='title-h2'>12 - ussing Css and javaScript </h2>
          <div className="alert alert-warning text-black fs-5">
             <p> to use css or js write him in example-app/public/ folder </p>
             <p> create style.css in public  </p>
@@ -316,8 +322,9 @@ export default function Mvc(props){
             to use style.css in file with extension <kbd>.blade.php</kbd>  without <span className="text-danger">error</span> use :
             <div className="alert bg-light mt-2 mb-0 pb-0"><pre>&lt;link rel="stylesheet" href="<span className="o">&#123;&#123; url('css/style.css') &#125;&#125;</span>"{">"}</pre></div>
          </div>
-
-         <h2 className='title-h2' id="route_and_name">12 - route and name </h2>
+   </article>
+   <article id="route_and_name">
+         <h2 className='title-h2'>13 - route and name </h2>
          <div className="alert alert-warning text-black fs-5 pb-0 mb-0">
             in file with extension <kbd>.blade.php</kbd> we have we need to scroll between page so to avoid <span className="text-danger">error</span> use <b className="g">route()</b>.<br/>
             create file any file with extension .blade.php
@@ -341,8 +348,9 @@ export default function Mvc(props){
            </div>
          
          </div>
-         
-         <h2 className='title-h2' id="handle_data_in_views">13 - handle data in views</h2>
+   </article>
+   <article id="handle_data_in_views">     
+         <h2 className='title-h2'>14 - handle data in views</h2>
          <h3  className='title-h3' id="create_controller_to_use_data">1 - create controller to use data</h3>
          <div className="alert alert-warning text-black fs-5">
             to use database start with command : 

@@ -23,10 +23,10 @@ export default function Laravel(props){
                      </Link>
                   </dt>)  
          }else{
-             return(<dd className="aside-dl-dd" key={key}>
-                        <Link to={`/laravel/${dt_title}#${key}`}>
-                          <i className="fa-solid fa-circle"></i> {key.replace(/_/g, ' ')}
-                        </Link>
+             return( <dd className="aside-dl-dd" key={key}>
+                        <a href={`/laravel/${dt_title}#${key}`}>
+                             <i className="fa-solid fa-circle"></i> {key.replace(/_/g, ' ')}
+                        </a>
                      </dd>)
          } 
       });
