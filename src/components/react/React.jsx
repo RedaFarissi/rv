@@ -356,8 +356,6 @@ return(
   </article>
 
 
-
-
   <article id="packages">
     <h2 className="title-h2">9 - Packages React</h2>
     <h3 className="title-h3" id='npm_list'>1 - npm list  </h3>
@@ -379,20 +377,18 @@ return(
     <h5 className="title-h5"> 1 - تثبيت المكتبة </h5>
     <CodeCommand>npm install axios</CodeCommand>
     <h5 className="title-h5"> 2 - إستيراد المكتبة </h5>
-    <CodeHighlighter code={codes[8].axios[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
+    <CodeHighlighter code={codes[8].axios[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
     <h5 className="title-h5"> 3 - إرسال بيانات axios (post) </h5>
     <div className="mital">متال 1 : </div>
-    <CodeHighlighter code={codes[8].axios[1]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
+    <CodeHighlighter code={codes[8].axios[1]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
     <div className="mital">متال 2 : </div>
-    <CodeHighlighter code={codes[8].axios[2]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
+    <CodeHighlighter code={codes[8].axios[2]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
     <h5 className="title-h5"> 4 - axios.get </h5>
     <div className="mital">متال 1 : </div>
-    <CodeHighlighter code={codes[8].axios[3]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
+    <CodeHighlighter code={codes[8].axios[3]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
     <div className="mital">متال 2 : </div>
-    <CodeHighlighter code={codes[8].axios[4]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
-    <ul>
-      <li>إستخدام <b className="text-success">{"{"}withCredentials: true{"}"}</b> في طلب <b>Axios</b> يرتبط بمعالجة مشكلة مشاركة الموارد عبر أصل الموارد <b>(CORS)</b> وإدراج الاعتمادات مثل <b>(cookies)</b> أو <b>(session)</b>  في الطلب.</li>
-    </ul>
+    <CodeHighlighter code={codes[8].axios[4]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
+    <ul><li>إستخدام <b className="text-success">{"{"}withCredentials: true{"}"}</b> في طلب <b>Axios</b> يرتبط بمعالجة مشكلة مشاركة الموارد عبر أصل الموارد <b>(CORS)</b> وإدراج الاعتمادات مثل <b>(cookies)</b> أو <b>(session)</b>  في الطلب.</li></ul>
     
 
 

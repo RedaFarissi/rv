@@ -12,10 +12,14 @@ export default function ResultAlert(props){
                             <div>
                                 <div className="style-handle"></div>
                                 <div className="div-img-box">
-                                    {(props.logo)?(<img src={props.logo} alt="logo" />):(<i className="fa-solid fa-earth-americas text-light"></i>)}      
+                                    {
+                                        (props.logo)?
+                                        (<img src={props.logo} alt="logo" />):
+                                        (<i className="fa-solid fa-earth-americas text-light"></i>)
+                                    }      
                                 </div>
                                 <p>
-                                    {props.title}
+                                    { props.title }
                                 </p>
                             </div>
                             <i className="fa-solid fa-xmark"></i>
@@ -37,7 +41,7 @@ export default function ResultAlert(props){
                     </div>
                     <div className="style-result-header-2-center">
                         <i className="fa-solid fa-globe"></i>
-                        <p>{props.route}<span className="text-primary">{props.url_change}</span></p>
+                        <p>{props.route}<b className="text-primary">{props.url_change}</b></p>
                     </div>
                     <div className="style-result-header-2-right">
                         <i className="fa-solid fa-ellipsis-vertical"></i>

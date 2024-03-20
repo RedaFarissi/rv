@@ -1,11 +1,18 @@
 import images from "../imagesLaravel";
-import { CodeCommand , CodeHighlighter ,  Result } from "../../path";
+import { CodeCommand , CodeHighlighter ,  Result , ResultAlert } from "../../path";
+import { useState } from "react";
 
 export default function Mvc(props){
+   const [resultAlertDisplayAlert ,setResultAlertDisplayAlert] = useState(true);   
+
+   function clickOk(){
+       setResultAlertDisplayAlert(false);
+   }
+
    return(
 <>
-    <h1 className="heading-style mb-5">Laravel MVC </h1>
-    <article className="mt-5" id="what_is_laravel">
+   <h1 className="heading-style mb-5">Laravel MVC </h1>
+   <article className="mt-5" id="what_is_laravel">
          <h2 className='title-h2' > 1 - ما هو laravel  </h2>
          <p className="style_divv">
             لارافيل هو إطار عمل <b>PHP</b> مفتوح المصدر لتطوير تطبيقات الويب. تأتي مع <b>ORM</b> يُسمى <b>Eloquent</b> ومحرك <b>Blade</b> لتصميم الواجهات. يوفر أداة <b>Artisan</b> لإدارة المهام والتكوين. يتبع نمط <b>MVC</b> ويشمل <b>Middleware</b> لمرشحات <b>HTTP</b>. يوفر توجيهًا بسيطًا وحقن إعتماد لإدارة التبعيات. يشمل نظام ترتيب قواعد البيانات وزرع البيانات. لديه بيئة نشطة ومجتمع وثائق جيدة. اشتهر ببنية أنيقة وميزات مطور ودية، مما يجعله خيارًا شائعًا لبناء تطبيقات الويب الحديثة.<br/><br/>
@@ -142,67 +149,32 @@ Route::get('/route-name/{somthinhg}' , function( $somthinhg ){
              No data available for key.
          </Result>
    </article>
-   <article  id="request">     
+   <article id="request">     
          <h2 className='title-h2'>9 - request</h2>
-         <div className="alert alert-warning text-black fs-5">
-         use <b className="b">request('')</b> like variable 
-         <div className="alert alert-primary text-black fs-5 mt-3">
-            {/* <pre>
-            <b className="text-success">Route</b><span className="bc">::get(</span><span className="o"><span className="o">'/store'</span></span>,function(){
-               $variable = <b className="b">request(</b><span className="o">'style'</span><b className="b">)</b> ;
-               <span className="v">return</span> '&lt;h2>'.$variable.'&lt;/h2>' ;
-            }<span className="bc">)</span>;</pre> */}
-         </div>
-         <div className="alert alert-info">
-            go to link : <kbd>localhost:8000/store?style=textSS/</kbd> 
-            <h5 className="mt-5"> Result </h5>
-            <div className="alert alert-light mt-2">
-               <div className="h2">textSS</div>
-            </div>
-
-         </div>
-         {/* <div className="alert alert-danger">
-            <kbd>localhost:8000/store?style=&lt;script>window.alert("I'am Haker")&lt;/script>/</kbd> <br/>JavaScript can be used so for protection you must use function <em><b>strip_tags()</b></em>
-            <br/><b>Note :</b> strip_tags is php function remove all tags
-         </div> */}
-
-         <div className="alert alert-primary text-black fs-5 mt-3">
-               {/* <pre>
-               <b className="text-success">Route</b><span className="bc">::get(</span><span className="o">'/store'</span>,function(){
-                  $variable = <span className="b">request(</span><span className="o">'style'</span><span className="b">)</span>;
-                  <span className="v">return</span>'&lt;h2>'.<b className="g">strip_tags(</b>$variable<b className="g">)</b>.'&lt;/h2>'
-               }<span className="bc">)</span></pre> */}
-            </div>
-            well appear window.alert("I'am Haker") lik heading
-            
-            <div className="alert alert-primary text-black fs-5 mt-3">
-               {/* <pre>
-               <b className="text-success">Route</b><span className="bc">::get(</span><span className="o">'/store'</span>,function(){
-                  $variable = <span className="b">request(</span><span className="o">'style'</span><span className="b">)</span>;
-                  <span className="v">return</span> '&lt;h2>'.<b className="g">strip_tags(</b>$variable<b className="g">)</b>.'&lt;/h2>';
-               }<span className="bc">)</span>;</pre> */}
-         </div>
-            
-         <span className="fs-3 text-danger">={">"} create auto route </span>
-            
-         <div className="alert alert-primary text-black fs-5 mt-3">
-               {/* <pre>
-               <b className="text-success">Route</b><span className="bc">::get(</span><span className="o">'/store/{catego?}/{item?}'</span>,function($catego = <span className="o">null</span> ,$item = <span className="o">null</span>){
-                  if( <b className="g">isset(</b>$catego<b className="g">)</b> ) {
-                     if (<b className="g">isset(</b>$item<b className="g">)</b>){
-                        <span className="v">return</span> "&lt;h1>{ <b className="g">strip_tags(</b>$item<b className="g">)</b> }&lt;/h1>";
-                     }
-                     <span className="v">return</span> "&lt;h1>{ <b className="g">strip_tags(</b>$catego<b className="g">)</b> }&lt;/h1>";
-                  }
-                  <span className="v">return</span> '&lt;h2> store &lt;/h2>';
-               }<span className="bc">)</span>;</pre> */}
-            </div>
-            <span className="text-success">={">"} you can return views</span>
-         </div>
+         <p className="style_divv">
+            استخدم الطلب <bdi>request('')</bdi> مثل المتغير
+         </p>
+         <CodeHighlighter code={`Route::get('/store',function(){
+    $variable = request('style') ;
+    return '<h2>' . $variable . '</h2>' ;
+});`} file_name="example-app / routes / web.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         <div className="mital"> متال 1 : </div>
+         <Result title='Welcome' route="http://localhost:8000/store" url_change="?style=Reda%20Eskouni">
+             Reda Eskouni
+         </Result>
+         <div className="mital"> متال 2 : </div>
+         <ResultAlert title='Welcome' logo={images.html_logo} clickOk={clickOk} displayAlert={resultAlertDisplayAlert} alertValue={`I'am Haker`}  route="http://localhost:8000/store"  url_change={`?style=<script>window.alert("I%27am%20Haker")</script>`}>
+         </ResultAlert>
+         <ul><li>يمكن استخدام <b>JavaScript</b> لإلغاء هذا إستخدام <b>strip_tags</b></li></ul>
+         <CodeHighlighter code={`Route::get('/store',function(){
+    $variable = request('style');
+    return'<h2>' . strip_tags($variable) . '</h2>'
+})`} file_name="example-app / routes / web.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
    </article>
    <article id="Controller"> 
          <h2 className='title-h2'>10 - Controller</h2>
          <p className="alert alert-warning text-black fs-5">
+            
             if you want to know everything about Controller use command :
             <div className="bg-dark text-light fs-5 p-4 pb-2 mb-2 rounded"><pre> php artisan make:controller -h </pre></div>
             if you want create normal controller use  :
