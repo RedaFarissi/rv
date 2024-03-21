@@ -59,8 +59,21 @@ export default function Mvc(props){
             <img src={images.laravel0_env3} alt="laravel path" className="col-md-4"/>
          </div>
    </article>
+   <article id="what_is_MVC">
+         <h2 className="title-h2">1 - ما هو MVC </h2>
+         <p className="style_divv">
+            تعتبر MVC في Laravel نمطًا معماريًا يتبعه Laravel.<br/><br/>
+            إليك نظرة عامة على كل مكون:
+            <ul>
+               <li><b className="text-success">النموذج (Model):</b> يُمثل النموذج البيانات والمنطق التجاري للتطبيق. في Laravel، تُمثل النماذج عادة جداول قواعد البيانات، وهي مسؤولة عن التفاعل مع قاعدة البيانات لأداء عمليات CRUD (الإنشاء، القراءة، التحديث، الحذف).</li>
+               <li><b className="text-success">العرض (View):</b> يُمثل العرض طبقة العرض للتطبيق. العروض مسؤولة عن عرض البيانات للمستخدم ومعالجة تفاعلات واجهة المستخدم. في Laravel، تكتب العروض عادة بناءً على بنية Blade templating engine وتُستخدم لتوليد الإخراج HTML.</li>
+               <li><b className="text-success">التحكم (Controller):</b> يعمل المتحكم كوسيط بين النموذج والعرض. يتولى المتحكم معالجة الطلبات الواردة عبر HTTP، واسترجاع البيانات من النموذج، وتمرير تلك البيانات إلى العرض للعرض. كما يتولى المتحكم معالجة أي إدخال من المستخدم وتحديث النموذج بناءً عليه. في Laravel، يتولى المتحكم تعريف منطق معالجة الطريق للتطبيق.</li>
+            </ul>
+            في الهندسة المعمارية MVC في Laravel، يوجه نظام التوجيه الطلبات الواردة إلى المتحكم المناسب، الذي يتفاعل بعد ذلك مع النموذج لاسترداد أو تلاعب البيانات. وأخيرًا، يقوم المتحكم بتمرير البيانات إلى العرض، الذي يقوم بتقديم الاستجابة HTML المناسبة للمستخدم. تساعد هذه الفصل في المخاوف على الحفاظ على تنظيم القاعدة البرمجية وصيانتها وتوسيعها.<br/>
+         </p>
+   </article>
    <article  id="First_Laravel_Project">
-         <h2 className='title-h2'>3 - مشروع Laravel الأول</h2>
+         <h2 className='title-h2'>2 - مشروع Laravel الأول</h2>
          <h3 className='title-h3'>1 -  إلغاء التعليق على ;extension=zip </h3>
          <p className='style_divv'>
             <ul>
@@ -91,7 +104,7 @@ export default function Mvc(props){
          </p>
    </article>
    <article id="run_project">
-         <h2 className='title-h2'>4 - تشغيل المشروع </h2>
+         <h2 className='title-h2'>3 - تشغيل المشروع </h2>
          <p className='style_divv'>
             <CodeCommand>php artisan serve</CodeCommand>
             <ul><li>تشغيل المشروع في <b>port</b> معين</li></ul>
@@ -101,14 +114,14 @@ export default function Mvc(props){
          </p>
    </article>
    <article id="artisan">
-         <h2 className='title-h2'>5 - artisan </h2>
+         <h2 className='title-h2'>4 - artisan </h2>
          <p className='style_divv'>
             <ul><li>استخدم هذا الأمر لمعرفة كل شيء عن الأوامر في <b>Laravel</b></li></ul>
             <CodeCommand>php artisan</CodeCommand>
          </p>
    </article>
    <article id="views">
-         <h2 className='title-h2'>6 - views</h2>
+         <h2 className='title-h2'>5 - views</h2>
          <p className='style_divv'>
             <ul>
                <li>عندما نقوم بتشغيل <b>example-app</b>، فإن الصفحة التي تظهر افتراضيًا هي <b>Welcome.blade.php</b> في المسار : <br/><kbd>example-app/resources/views/welcome.blade.php</kbd></li>
@@ -117,7 +130,7 @@ export default function Mvc(props){
          </p>
    </article>
    <article id="route">
-         <h2 className='title-h2'> 7 - route </h2>
+         <h2 className='title-h2'> 6 - route </h2>
          <p className="style_divv">
              في <b>Laravel</b>، تعمل المسارات كآلية لتحديد كيفية يجب التعامل مع الطلبات الواردة <b>HTTP</b> من قبل التطبيق. تقوم بإنشاء الاتصال بين عناوين <b>URL</b> محددة <b>(URIs)</b> وإجراءات التحكم أو الإغلاقات المقابلة. تعمل المسارات كنقاط دخول إلى التطبيق، حيث تحدد كيفية استجابته لطلبات <b>HTTP</b> المختلفة. من خلال تحديد المسارات، يمكن للمطورين تنظيم وهيكلة وظائف التطبيق، مما يسهل إدارته وصيانته.
          </p>
@@ -152,7 +165,7 @@ Route::get('/route-name/{somthinhg}' , function( $somthinhg ){
          </Result>
    </article>
    <article id="request">     
-         <h2 className='title-h2'>8 - request</h2>
+         <h2 className='title-h2'>7 - request</h2>
          <p className="style_divv">
               استخدم الطلب <bdi><b>request('')</b></bdi> مثل المتغير .<br/><br/>
               دالة <bdi><b>request()</b></bdi> في <b>Laravel</b> تُستخدم للوصول إلى قيم المتغيرات المرسلة في الطلب <b>HTTP</b>. يمكن استخدامها لاسترداد قيمة معينة مرسلة في الجسم <b>(body)</b> أو في الرأس <b>(header)</b> أو في الوسم <b>(tag)</b> الذي تم إرساله في الطلب.<br/>
@@ -176,7 +189,7 @@ Route::get('/route-name/{somthinhg}' , function( $somthinhg ){
 })`} file_name="example-app / routes / web.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
    </article>
    <article id="Controller"> 
-         <h2 className='title-h2'>9 - Controller</h2>
+         <h2 className='title-h2'>8 - Controller</h2>
          <p className="style_divv">
                في <b>Laravel</b> ، يُعد المُتحكم <b>(Controller)</b> فئة تتعامل مع طلبات <b>HTTP</b> و <b>HTTPS</b>  وتنفذ المنطق المناسب لتلك الطلبات. المُتحكمات هي جزء أساسي من نمط العمارة <b>MVC (Model-View-Controller)</b> الذي يتبعه <b>Laravel</b>.<br/><br/>
                هنا تفصيل لما يقوم به المُتحكم ومكوناته:
@@ -270,7 +283,7 @@ Route::get("/about",[ControllerName::class , "about" ]) -> name('about');`} file
          </Result>
    </article>
    <article id="layoute_page"> 
-         <h2 className='title-h2'>10 - صفحة القالب layoute </h2>
+         <h2 className='title-h2'>9 - صفحة القالب layoute </h2>
          <p className="style_divv">
                صفحة القالب في <b>Laravel</b> تمثل الهيكل الأساسي لصفحات التطبيق، وتُستخدم لتعريف العناصر المشتركة مثل الهيدر والفوتر وشريط القائمة وغيرها التي تظهر على جميع صفحات التطبيق. تُستخدم صفحة القالب لتوحيد تصميم الصفحات وتسهيل عملية الصيانة، حيث يمكن إضافة محتوى الصفحة الفرعية داخلها باستخدام تعليمات <b>Blade</b> مثل <bdi><b>@yield</b></bdi> أو <bdi><b>@include</b></bdi> .
          </p>
@@ -317,7 +330,7 @@ Route::get("/about",[ControllerName::class , "about" ]) -> name('about');`} file
 @endsection`} file_name="example-app / resources / views / about.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
    </article>
    <article id="css_and_javaScript">
-         <h2 className='title-h2'>11 - استخدم CSS و javaScript </h2>
+         <h2 className='title-h2'>10 - استخدم CSS و javaScript </h2>
          <p className="style_divv">
             لاستخدام <b>CSS</b> أو <b>JS</b>، اكتبه في المجلد <kbd>example-app/public/</kbd><br/><br/>
             <ul>
@@ -329,7 +342,7 @@ Route::get("/about",[ControllerName::class , "about" ]) -> name('about');`} file
          </p>
    </article>
    <article id="route_name">
-         <h2 className='title-h2'>12 - route name </h2>
+         <h2 className='title-h2'>11 - route name </h2>
          <p className="style_divv">
             تعد تسمية المسارات مفيدة لإنشاء عناوين <b>URL</b> وعمليات إعادة التوجيه. يمكنك تسمية طريق مثل هذا
          </p>
@@ -341,7 +354,7 @@ Route::get("/about",[ControllerName::class , "about" ]) -> name('home.about');`}
 <a href="{{ route('home.about') }}"> about </a>`} file_name="example-app / resources / views / file_name.blade.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
    </article>
    <article id="controller_resource">
-         <h2  className='title-h2'>13 - controller resource</h2>
+         <h2  className='title-h2'>12 - controller resource</h2>
          <p className="style_divv">
                
          </p>
@@ -489,7 +502,7 @@ Route::get("/about",[ControllerName::class , "about" ]) -> name('home.about');`}
          </div>
     </article>
     <article id="list_all_route_in_project">
-            <h2 className="title-h2"> 14 - قائمة كافة الطرق (route) في المشروع</h2>
+            <h2 className="title-h2"> 13 - قائمة كافة الطرق (route) في المشروع</h2>
             <CodeCommand>php artisan route:list</CodeCommand>
     </article>
 </>
