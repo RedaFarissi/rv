@@ -130,9 +130,7 @@ export default function Mvc(props){
 Route::get('/route-name/{somthinhg}' , function( $somthinhg ){
    return view('welcome',["key"=> $somthinhg]) ;
 });`} file_name="example-app / routes / web.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
-   </article>
-   <article id="resources">
-         <h2 className='title-h2'> 8 - resources </h2>
+  
          <CodeHighlighter  code={`<!DOCTYPE html>
 <html>
 <head>
@@ -154,7 +152,7 @@ Route::get('/route-name/{somthinhg}' , function( $somthinhg ){
          </Result>
    </article>
    <article id="request">     
-         <h2 className='title-h2'>9 - request</h2>
+         <h2 className='title-h2'>8 - request</h2>
          <p className="style_divv">
               استخدم الطلب <bdi><b>request('')</b></bdi> مثل المتغير .<br/><br/>
               دالة <bdi><b>request()</b></bdi> في <b>Laravel</b> تُستخدم للوصول إلى قيم المتغيرات المرسلة في الطلب <b>HTTP</b>. يمكن استخدامها لاسترداد قيمة معينة مرسلة في الجسم <b>(body)</b> أو في الرأس <b>(header)</b> أو في الوسم <b>(tag)</b> الذي تم إرساله في الطلب.<br/>
@@ -178,7 +176,7 @@ Route::get('/route-name/{somthinhg}' , function( $somthinhg ){
 })`} file_name="example-app / routes / web.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
    </article>
    <article id="Controller"> 
-         <h2 className='title-h2'>10 - Controller</h2>
+         <h2 className='title-h2'>9 - Controller</h2>
          <p className="style_divv">
                في <b>Laravel</b> ، يُعد المُتحكم <b>(Controller)</b> فئة تتعامل مع طلبات <b>HTTP</b> و <b>HTTPS</b>  وتنفذ المنطق المناسب لتلك الطلبات. المُتحكمات هي جزء أساسي من نمط العمارة <b>MVC (Model-View-Controller)</b> الذي يتبعه <b>Laravel</b>.<br/><br/>
                هنا تفصيل لما يقوم به المُتحكم ومكوناته:
@@ -272,7 +270,7 @@ Route::get("/about",[ControllerName::class , "about" ]) -> name('about');`} file
          </Result>
    </article>
    <article id="layoute_page"> 
-         <h2 className='title-h2'>11 - layoute page </h2>
+         <h2 className='title-h2'>10 - صفحة القالب layoute </h2>
          <p className="style_divv">
                صفحة القالب في <b>Laravel</b> تمثل الهيكل الأساسي لصفحات التطبيق، وتُستخدم لتعريف العناصر المشتركة مثل الهيدر والفوتر وشريط القائمة وغيرها التي تظهر على جميع صفحات التطبيق. تُستخدم صفحة القالب لتوحيد تصميم الصفحات وتسهيل عملية الصيانة، حيث يمكن إضافة محتوى الصفحة الفرعية داخلها باستخدام تعليمات <b>Blade</b> مثل <bdi><b>@yield</b></bdi> أو <bdi><b>@include</b></bdi> .
          </p>
@@ -319,7 +317,7 @@ Route::get("/about",[ControllerName::class , "about" ]) -> name('about');`} file
 @endsection`} file_name="example-app / resources / views / about.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
    </article>
    <article id="css_and_javaScript">
-         <h2 className='title-h2'>12 - استخدم CSS و javaScript </h2>
+         <h2 className='title-h2'>11 - استخدم CSS و javaScript </h2>
          <p className="style_divv">
             لاستخدام <b>CSS</b> أو <b>JS</b>، اكتبه في المجلد <kbd>example-app/public/</kbd><br/><br/>
             <ul>
@@ -330,8 +328,8 @@ Route::get("/about",[ControllerName::class , "about" ]) -> name('about');`} file
             <CodeHighlighter code={`<link rel="stylesheet" href="{{ url('css/style.css') }}" />`} language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
          </p>
    </article>
-   <article id="route_and_name">
-         <h2 className='title-h2'>13 - route and name </h2>
+   <article id="route_name">
+         <h2 className='title-h2'>12 - route name </h2>
          <p className="style_divv">
             تعد تسمية المسارات مفيدة لإنشاء عناوين <b>URL</b> وعمليات إعادة التوجيه. يمكنك تسمية طريق مثل هذا
          </p>
@@ -342,9 +340,11 @@ Route::get("/about",[ControllerName::class , "about" ]) -> name('home.about');`}
 <a href="{{ route('home.contact') }}"> contact </a>
 <a href="{{ route('home.about') }}"> about </a>`} file_name="example-app / resources / views / file_name.blade.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
    </article>
-   <article id="handle_data_in_views">     
-         <h2 className='title-h2'>14 - handle data in views</h2>
-         <h3  className='title-h3' id="create_controller_to_use_data">1 - create controller to use data</h3>
+   <article id="controller_resource">
+         <h2  className='title-h2'>13 - controller resource</h2>
+         <p className="style_divv">
+               
+         </p>
          <div className="alert alert-warning text-black fs-5">
             to use database start with command : 
             <div className="bg-dark text-light fs-5 p-4 pb-2 mb-2 rounded"><pre> php artisan make:controller ControllerData -r  </pre></div>
@@ -486,10 +486,11 @@ Route::get("/about",[ControllerName::class , "about" ]) -> name('home.about');`}
             <div className="alert alert-danger">
                <b>note</b> : you can't change name <em><u>show.blade.php</u></em> or <em><u>index.blade.php</u></em> because we use <b>Route::resource(...)</b> .
             </div>
-            <br id='list_all_route_in_project'/><br/>
-            <h2>List all route in project</h2>
-            <div className="alert bg-dark text-light pb-0"><pre>php artisan route:list</pre></div>
          </div>
+    </article>
+    <article id="list_all_route_in_project">
+            <h2 className="title-h2"> 14 - قائمة كافة الطرق (route) في المشروع</h2>
+            <CodeCommand>php artisan route:list</CodeCommand>
     </article>
 </>
    )
