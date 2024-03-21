@@ -390,8 +390,6 @@ return(
     <CodeHighlighter code={codes[8].axios[4]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
     <ul><li>إستخدام <b className="text-success">{"{"}withCredentials: true{"}"}</b> في طلب <b>Axios</b> يرتبط بمعالجة مشكلة مشاركة الموارد عبر أصل الموارد <b>(CORS)</b> وإدراج الاعتمادات مثل <b>(cookies)</b> أو <b>(session)</b>  في الطلب.</li></ul>
     
-
-
     <h3 className="title-h3" id="react_paypal_js"> 3 - مكتبة react-paypal-js </h3>
     <a href="https://paypal.github.io/react-paypal-js/?path=/story/getting-started--page"> react-paypal-js </a>
     <h3 className="title-h3" id="react_sass"> 4 - مكتبة sass</h3>
@@ -413,7 +411,6 @@ return(
     <CodeCommand>npm uninstall react-router-dom</CodeCommand>
     <h5 className="title-h5">3 - إستخدام المكتبة </h5>
     <CodeHighlighter code={codes[8].Router[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
-    
     
     <h3 className="title-h3" id="useNavigate_Router">6 - useNavigate </h3>
     <div>

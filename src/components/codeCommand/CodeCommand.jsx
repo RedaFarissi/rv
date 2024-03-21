@@ -7,6 +7,7 @@ export default function CodeCommand(props){
     const handleCopyClick = () => {
       const textArea = document.createElement('textarea');
       textArea.value = props.children;
+
       // Style the textarea to make it invisible
       textArea.style.position = 'fixed';
       textArea.style.top = '0';
@@ -40,8 +41,8 @@ export default function CodeCommand(props){
             <button 
               onClick={handleCopyClick} 
               className={`btn bg-dark position-absolute text-light btn-CodeCommand`}
-            >  
-                    {copySuccess ? 'Copied' : 'Copy'} 
+            >
+                  { copySuccess ? 'Copied' : 'Copy'}
             </button>
         </div>
     )

@@ -118,11 +118,15 @@ export default function Mvc(props){
    </article>
    <article id="route">
          <h2 className='title-h2'> 7 - route </h2>
+         <p className="style_divv">
+             في <b>Laravel</b>، تعمل المسارات كآلية لتحديد كيفية يجب التعامل مع الطلبات الواردة <b>HTTP</b> من قبل التطبيق. تقوم بإنشاء الاتصال بين عناوين <b>URL</b> محددة <b>(URIs)</b> وإجراءات التحكم أو الإغلاقات المقابلة. تعمل المسارات كنقاط دخول إلى التطبيق، حيث تحدد كيفية استجابته لطلبات <b>HTTP</b> المختلفة. من خلال تحديد المسارات، يمكن للمطورين تنظيم وهيكلة وظائف التطبيق، مما يسهل إدارته وصيانته.
+         </p>
          <ul> <li>عندما نقوم بتشغيل <b>example-app</b>، فإن الصفحة التي تظهر افتراضيًا هي <kbd>welcome.blade.php</kbd></li> </ul>
          <CodeHighlighter  code={`Route::get('/',function(){
-   return view('welcome') ;         # "welcome" : is file in => resources / views
+   return view('welcome') ;         # "welcome" : is file in => resources / views / welcome.blade.php
 });
 
+# New Route
 Route::get('/route-name/{somthinhg}' , function( $somthinhg ){
    return view('welcome',["key"=> $somthinhg]) ;
 });`} file_name="example-app / routes / web.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
@@ -152,7 +156,9 @@ Route::get('/route-name/{somthinhg}' , function( $somthinhg ){
    <article id="request">     
          <h2 className='title-h2'>9 - request</h2>
          <p className="style_divv">
-            استخدم الطلب <bdi>request('')</bdi> مثل المتغير
+              استخدم الطلب <bdi><b>request('')</b></bdi> مثل المتغير .<br/><br/>
+              دالة <bdi><b>request()</b></bdi> في <b>Laravel</b> تُستخدم للوصول إلى قيم المتغيرات المرسلة في الطلب <b>HTTP</b>. يمكن استخدامها لاسترداد قيمة معينة مرسلة في الجسم <b>(body)</b> أو في الرأس <b>(header)</b> أو في الوسم <b>(tag)</b> الذي تم إرساله في الطلب.<br/>
+              على سبيل المثال، إذا كان لديك طلب <b>POST</b> يحتوي على حقل يُسمى <b>"username"</b>، يمكنك استخدام <bdi><b>request('username')</b></bdi> لاسترداد قيمة هذا الحقل من الطلب.
          </p>
          <CodeHighlighter code={`Route::get('/store',function(){
     $variable = request('style') ;
@@ -168,158 +174,173 @@ Route::get('/route-name/{somthinhg}' , function( $somthinhg ){
          <ul><li>يمكن استخدام <b>JavaScript</b> لإلغاء هذا إستخدام <b>strip_tags</b></li></ul>
          <CodeHighlighter code={`Route::get('/store',function(){
     $variable = request('style');
-    return'<h2>' . strip_tags($variable) . '</h2>'
+    return '<h2>' . strip_tags($variable) . '</h2>'
 })`} file_name="example-app / routes / web.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
    </article>
    <article id="Controller"> 
          <h2 className='title-h2'>10 - Controller</h2>
-         <p className="alert alert-warning text-black fs-5">
-            
-            if you want to know everything about Controller use command :
-            <div className="bg-dark text-light fs-5 p-4 pb-2 mb-2 rounded"><pre> php artisan make:controller -h </pre></div>
-            if you want create normal controller use  :
-            <div className="bg-dark text-light fs-5 p-4 pb-2 mb-2 rounded"><pre> php artisan make:controller <i>ControllerName</i> </pre></div>
-            You will find a file ControllerName in app/Http/Controllers/<br/>
-            
-            <strong>path : example-app/app/Http/Controllers/ControllerName.php</strong>  
-            {/* <div className="alert mt-4 bg-light"><pre>
-            <span style="color:blue">&lt;?php</span> 
+         <p className="style_divv">
+               في <b>Laravel</b> ، يُعد المُتحكم <b>(Controller)</b> فئة تتعامل مع طلبات <b>HTTP</b> و <b>HTTPS</b>  وتنفذ المنطق المناسب لتلك الطلبات. المُتحكمات هي جزء أساسي من نمط العمارة <b>MVC (Model-View-Controller)</b> الذي يتبعه <b>Laravel</b>.<br/><br/>
+               هنا تفصيل لما يقوم به المُتحكم ومكوناته:
+               <ul>
+                  <li><b className="text-success">استقبال طلبات HTTP:</b> عندما يتفاعل المستخدم مع تطبيق الويب المبني باستخدام <b>Laravel</b> ، فإن أفعالهم عادة ما تُشغّل طلبات <b>HTTP</b>. يتم توجيه هذه الطلبات إلى مُتحكم بناءً على المسارات المعرفة في التطبيق.</li>
+                  <li><b className="text-success">تنفيذ المنطق:</b> يحتوي المُتحكم على أساليب (أو أفعال) تتوافق مع مسارات أو نقاط نهاية مختلفة. تقوم كل طريقة عادة بأداء مهام محددة مثل استعلام قاعدة البيانات أو معالجة البيانات أو التفاعل مع الخدمات.</li>
+                  <li><b className="text-success">إرجاع الردود:</b> بعد تنفيذ المنطق اللازم، يُرجع المُتحكم استجابة <b>HTTP</b> إلى العميل. يمكن أن تكون هذه الاستجابة بتنسيقات مختلفة مثل <b>HTML</b> أو <b>JSON</b> أو <b>XML</b>، وفقًا لمتطلبات التطبيق.</li>
+                  <li><b className="text-success">التفاعل مع النماذج والعروض (المشاهد):</b> في عمارة <b>MVC</b> لـ <b>Laravel</b> ، تعمل المُتحكمات كوسيط بين النماذج (التي تمثل بيانات التطبيق) والعروض (التي تعرض البيانات للمستخدمين). يمكن للمُتحكمات استرداد البيانات من النماذج وتلاعب بها وتمريرها إلى العروض للتقديم.</li>
+                  <li><b className="text-success">الوسيط (Middleware):</b> يمكن للمُتحكمات أيضًا استخدام الوسيط، وهو آلية لتصفية طلبات <b>HTTP</b> التي تدخل تطبيقك. يمكن أن يقوم الوسيط بمهام مثل المصادقة، والتفويض، ومعالجة الطلبات قبل وصول الطلب إلى طريقة العمل في المُتحكم.</li>
+               </ul>
+         </p>   
+         <h3 className="title-h3">1 - لمعرفة كل شيء عن Controller  استخدام الأمر :</h3>
+         <CodeCommand>php artisan make:controller -h</CodeCommand>
+         <h3 className="title-h3">2 - إذا كنت تريد إنشاء Controller استخدام :</h3>
+         <CodeCommand>php artisan make:controller ControllerName</CodeCommand>
+         <ul><li>ستجد اسم وحدة التحكم للملف في التطبيق <bdi><b>example-app / Http / Controllers /</b></bdi></li></ul>
+         <div className="mital"> متال : </div>
+         <div dir="ltr" className="alert bg-dark text-light">
+            C:\xampp\htdocs\example-app{">"} php artisan make:controller ControllerName <br/><br/>
+            <span className="alert-primary p-1 rounded-1">INFO</span>  Controller [C:\xampp\htdocs\example-app\app/Http/Controllers/ControllerName.php] created successfully.
+         </div>
+         <CodeHighlighter code={`<?php
 
-               <span className="b">namespace</span> <span className="text-success">App</span>\<span className="text-success">Http</span>\<span className="text-success">Controllers</span>;
-               <span className="b">use</span> <span className="text-success">Illuminate</span>\<span className="text-success">Http</span>\<span className="text-success">Request</span>;
+namespace App\\Http\\Controllers;
+use Illuminate\\Http\\Request;
 
-               <b className="text-success">class</b> ControllerName <span className="text-success">extends</span> Controller
-               {
-                  <span className="b">public function</span> welcome(){
-                      <span className="v">return</span> view("welcome");
-                   }
-                   <span className="b">public function</span> home(){
-                       <span className="v">return</span> view("home");
-                   }
-                   <span className="b">public function</span> about(){
-                       <span className="v">return</span> view("about");
-                   }
-               }
-            <span style="color:blue">?></span></pre></div> */}
+class ControllerName extends Controller
+{
+     public function welcome(){
+         return view("welcome");
+     }
+     public function home(){
+         return view("home");
+     }
+     public function about(){
+         return view("about");
+     }
+}`} file_name="example-app / app / Http / Controllers / ControllerName.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={`<?php
 
-         
-            <strong>path : example-app/routes/web.php</strong>
-            {/* <div className="alert alert-primary text-black fs-5"><pre>
-         <span style="color:blue">&lt;?php</span>         
-            <span className="b">use</span> <span className="text-success">Illuminate</span>\<span className="text-success">Support</span>\<span className="text-success">Facades</span>\<span className="text-success">Route</span>;
-            <span className="b">use</span> <span className="text-success">App</span>\<span className="text-success">Http</span>\<span className="text-success">Controllers</span>\<span className="text-success">ControllerName</span>;
-         
-            <b className="text-success">Route</b><span className="bc">::get(</span><span className="o">"/"</span>,     [<span className="text-success">ControllerName</span>::<span className="b">class</span> , <span className="o">"welcome"</span> ]<span className="bc">)</span> {"->"} <span className="b">name(</span><span className="o">'index'</span><span className="b">)</span>;
-            <b className="text-success">Route</b><span className="bc">::get(</span><span className="o">"/home"</span>, [<span className="text-success">ControllerName</span>::<span className="b">class</span> , <span className="o">"home"</span> ]<span className="bc">)</span> {"->"} <span className="b">name(</span><span className="o">'home'</span><span className="b">)</span>;
-            <b className="text-success">Route</b><span className="bc">::get(</span><span className="o">"/about"</span>,[<span className="text-success">ControllerName</span>::<span className="b">class</span> , <span className="o">"about"</span> ]<span className="bc">)</span> {"->"} <span className="b">name(</span><span className="o">'about'</span><span className="b">)</span>;
-         <span style="color:blue">?{">"}</span></pre>
-               </div> */}
-            {/* <div className="alert mt-4 bg-light">
-             <pre><strong> in path <kbd>example-app/resources/views/</kbd> create page with extension <kbd>.blade.php</kbd></strong></pre></div> */}
-            <ul>
-               <li>welcome.blade.php <span style={{color:'green'}}>#index page by default</span> .</li>
-               <li>home.blade.php</li>
-               <li>about.blade.php</li>
-            </ul>
-         </p>
+use Illuminate\\Support\\Facades\\Route;
+use App\\Http\\Controllers\\ControllerName;
+
+Route::get("/",     [ControllerName::class , "welcome" ]) -> name('index');
+Route::get("/home", [ControllerName::class , "home" ]) -> name('home');
+Route::get("/about",[ControllerName::class , "about" ]) -> name('about');`} file_name="example-app / routes / web.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome</title>
+</head>
+<body>
+    <h2>Welcome</h2>
+</body>
+</html>`} file_name="example-app / resources / views / welcome.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+</head>
+<body>
+    <h2>Home</h2>
+</body>
+</html>`} file_name="example-app / resources / views / home.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About</title>
+</head>
+<body>
+    <h2>About</h2>
+</body>
+</html>`} file_name="example-app / resources / views / about.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         <Result title='Welcome' route="http://localhost:8000">
+               <h2>Welcome</h2>
+         </Result>
+         <Result title='Home' route="http://localhost:8000/home">
+               <h2>Home</h2>
+         </Result>
+         <Result title='About' route="http://localhost:8000/about">
+               <h2>About</h2>
+         </Result>
    </article>
-   <article id="group_duplicate_items_on_one_page"> 
+   <article id="layoute_page"> 
          <h2 className='title-h2'>11 - layoute page </h2>
-         <div className="alert alert-warning text-black fs-5">
-         <strong> in <kbd>example-app/resources/views/</kbd> create file <u>layoute.blade.php</u> </strong><br/><br/>
-         {/* <div className="alert bg-light"><pre>
-            <span style={{color:'green'}}>&lt;!-- example-app/resources/views/layoute.blade.php -{"->"}</span><br/>
-            &lt;!DOCTYPE html>
-            &lt;html lang="&#123;&#123; str_replace('_', '-', app(){"->"}getLocale()) &#125;&#125;">
-               &lt;head>
-                    &lt;meta charset="utf-8">
-                    &lt;meta name="viewport" content="width=device-width, initial-scale=1">
-                    &lt;title> example-app <b className="text-danger">@yield(<span className="o">'title'</span>)</b> &lt;/title>
-                    &lt;link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" 
-                                    rel="stylesheet">
-                    &lt;link rel="stylesheet" href="<span className="o">&#123;&#123; url('style.css') &#125;&#125;</span>">
-               &lt;/head>
-          
-               &lt;body className="antialiased">
-                  &lt;nav>
-                     &lt;a href="<span className="o">&#123;&#123; route('index') &#125;&#125;</span>"> welcome </a>
-                     &lt;a href="<span className="o">&#123;&#123; route('home') &#125;&#125;</span>"> home </a>
-                     &lt;a href="<span className="o">&#123;&#123; route('about') &#125;&#125;</span>"> about </a>
-                  &lt;/nav>
-                    <b className="text-danger">@yield(<span className="o">'content'</span>)</b>
-               &lt;/body>
-            &lt;/html></pre>
-         </div> */}
+         <p className="style_divv">
+               صفحة القالب في <b>Laravel</b> تمثل الهيكل الأساسي لصفحات التطبيق، وتُستخدم لتعريف العناصر المشتركة مثل الهيدر والفوتر وشريط القائمة وغيرها التي تظهر على جميع صفحات التطبيق. تُستخدم صفحة القالب لتوحيد تصميم الصفحات وتسهيل عملية الصيانة، حيث يمكن إضافة محتوى الصفحة الفرعية داخلها باستخدام تعليمات <b>Blade</b> مثل <bdi><b>@yield</b></bdi> أو <bdi><b>@include</b></bdi> .
+         </p>
+         <div className="mital"> متال : </div>
+         <ul><li>في <kbd>example-app/resources/views/</kbd> قم بإنشاء ملف <b>layoute.blade.php</b></li></ul>
+         <CodeHighlighter code={`<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+   <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> @yield('title') </title>
+        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" 
+                        rel="stylesheet">
+        <link rel="stylesheet" href="{{ url('style.css') }}">
+   </head>
 
-         {/* <div className="alert bg-light"><pre>
-         <span style={{color:'green'}}>&lt;!-- example-app/resources/views/welcome.blade.php -{"->"}</span><br/>
+   <body class="antialiased">
+      <nav>
+         <a href="{{ route('index') }}"> welcome </a>
+         <a href="{{ route('home') }}"> home </a>
+         <a href="{{ route('about') }}"> about </a>
+      </nav>
+        @yield('content')
+   </body>
+</html>`} file_name="example-app / resources / views / layoute.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+   
+   <CodeHighlighter code={`@extends('layoute')
+@section('title','Welcome')
 
-         @extends('layoute')
+@section('content')
+    <h2> Welcome </h2>
+@endsection`} file_name="example-app / resources / views / welcome.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+   <CodeHighlighter code={`@extends('layoute')
+@section('title','Home')
 
-         @section('title','welcome')
+@section('content')
+    <h2> Home </h2>
+@endsection`} file_name="example-app / resources / views / home.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+   <CodeHighlighter code={`@extends('layoute')
+@section('title','About')
 
-         @section('content')
-         &lt;div style="position:absolute; top:calc(50% - 90px); left:50%;width:180px;">
-            &lt;h2> welcome &lt;/h2>
-         &lt;/div>
-         @endsection</pre>
-         </div>
-
-
-         <div className="alert bg-light"><pre>
-            <span style={{color:'green'}}>&lt;!-- example-app/resources/views/about.blade.php -{"->"}</span><br/>
-
-            @extends('layoute')
-
-            @section('title','welcome')
-
-            @section('content')
-            &lt;div style="position:absolute; top:calc(50% - 90px); left:50%;width:180px;">
-               &lt;h2> about &lt;/h2>
-            &lt;/div>
-            @endsection</pre>
-         </div> */}
-         </div>
+@section('content')
+    <h2> About </h2>
+@endsection`} file_name="example-app / resources / views / about.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
    </article>
-   <article id="ussing_css_and_javaScript">
-         <h2 className='title-h2'>12 - ussing Css and javaScript </h2>
-         <div className="alert alert-warning text-black fs-5">
-            <p> to use css or js write him in example-app/public/ folder </p>
-            <p> create style.css in public  </p>
-            to use him in file with extension <small><kbd>.blade.php</kbd></small> use :
-            {/* <div className="alert bg-light mt-2 mb-0 pb-0"><pre>&lt;link rel="stylesheet" href="<span className="o">&#123;&#123; url('style.css') &#125;&#125;</span>"></pre></div> */}
-            <kbd className="text-light bg-danger d-inline-block  my-3">{"=>"} example :</kbd>
-            <p>in <kbd>public/</kbd> folder create another folder with any name in this example a will name it <kbd>css/</kbd>  .</p>
-            <p>in <kbd>public/css/</kbd> folder create file css with any name in this example a will name it <kbd>style.css</kbd>  .</p>
-            to use style.css in file with extension <kbd>.blade.php</kbd>  without <span className="text-danger">error</span> use :
-            <div className="alert bg-light mt-2 mb-0 pb-0"><pre>&lt;link rel="stylesheet" href="<span className="o">&#123;&#123; url('css/style.css') &#125;&#125;</span>"{">"}</pre></div>
-         </div>
+   <article id="css_and_javaScript">
+         <h2 className='title-h2'>12 - استخدم CSS و javaScript </h2>
+         <p className="style_divv">
+            لاستخدام <b>CSS</b> أو <b>JS</b>، اكتبه في المجلد <kbd>example-app/public/</kbd><br/><br/>
+            <ul>
+               <li>يمكنك إنشاء مجلد باسم <bdi><b>css/</b></bdi> وكتابة ملفات <b>css</b> فيه . في حالتي قمت بإنشاء ملف بالاسم <b>style.css</b></li>
+               <li>يمكنك إنشاء مجلد باسم <bdi><b>js/</b></bdi> وكتابة ملفات <b>js</b> فيه . </li>
+            </ul>
+            لاستخدام <b>style.css</b> في ملف ذو ملحق <bdi><b>.blade.php</b></bdi> بدون أخطاء استخدم <b>url</b>:
+            <CodeHighlighter code={`<link rel="stylesheet" href="{{ url('css/style.css') }}" />`} language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         </p>
    </article>
    <article id="route_and_name">
          <h2 className='title-h2'>13 - route and name </h2>
-         <div className="alert alert-warning text-black fs-5 pb-0 mb-0">
-            in file with extension <kbd>.blade.php</kbd> we have we need to scroll between page so to avoid <span className="text-danger">error</span> use <b className="g">route()</b>.<br/>
-            create file any file with extension .blade.php
-            {/* <div className="alert bg-light"><pre>
-         <span style={{color:'green'}}>&lt;!-- .blade.php --{">"}</span>
-           <span className="b">&lt;a</span> <span className="bc">href</span>=<span className="o">"&#123;&#123; route('home.index') &#125;&#125;"</span><span className="b">> <span className="text-dark">index</span> &lt;/a></span> <span style={{color:'green'}}>&lt;!-- when you click you go to name route <b>in path : /routes/web.php -{"->"}</b></span>
-           <span className="b">&lt;a</span> <span className="bc">href</span>=<span className="o">"&#123;&#123; route('home.contact') &#125;&#125;"</span><span className="b">> <span className="text-dark">contact</span> &lt;/a></span>
-           <span className="b">&lt;a</span> <span className="bc">href</span>=<span className="o">"&#123;&#123; route('home.about') &#125;&#125;"</span><span className="b">> <span className="text-dark">about</span> &lt;/a></span></pre></div> */}
-
-           <div className="alert alert-primary">
-            {/* <pre>
-            <b className="text-success">Route</b><span className="bc">::get(</span><span className="o">"/"</span>,     [<span className="text-success">ControllerName</span>::<span className="b">class</span> , <span className="o">"welcome"</span> ]<span className="bc">)</span> {"->"} <span className="b">name(</span><span className="o">'home.index'</span><span className="b">)</span>;
-            <b className="text-success">Route</b><span className="bc">::get(</span><span className="o">"/contact"</span>, [<span className="text-success">ControllerName</span>::<span className="b">class</span> , <span className="o">"home"</span> ]<span className="bc">)</span> {"->"} <span className="b">name(</span><span className="o">'home.contact'</span><span className="b">)</span>;
-            <b className="text-success">Route</b><span className="bc">::get(</span><span className="o">"/about"</span>,[<span className="text-success">ControllerName</span>::<span className="b">class</span> , <span className="o">"about"</span> ]<span className="bc">)</span> {"->"} <span className="b">name(</span><span className="o">'home.about'</span><span className="b">)</span>;
-            </pre> */}
-           </div>
-         
-           <div className="alert alert-danger">
-            <b>note:</b> &nbsp; &nbsp; &nbsp; in laravel <kbd className="fs-3 bg">.</kbd> equal <kbd className="fs-3">/</kbd>  .<br/>
-            <b>so </b> : <small>(home.contact {"<==>"} home/contact)</small>
-           </div>
-         
-         </div>
+         <p className="style_divv">
+            تعد تسمية المسارات مفيدة لإنشاء عناوين <b>URL</b> وعمليات إعادة التوجيه. يمكنك تسمية طريق مثل هذا
+         </p>
+         <CodeHighlighter code={`Route::get("/",     [ControllerName::class , "welcome" ]) -> name('home.index');
+Route::get("/contact", [ControllerName::class , "home" ]) -> name('home.contact');
+Route::get("/about",[ControllerName::class , "about" ]) -> name('home.about');`} file_name="example-app / routes / web.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={`<a href="{{ route('home.index') }}"> index </a>
+<a href="{{ route('home.contact') }}"> contact </a>
+<a href="{{ route('home.about') }}"> about </a>`} file_name="example-app / resources / views / file_name.blade.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
    </article>
    <article id="handle_data_in_views">     
          <h2 className='title-h2'>14 - handle data in views</h2>
