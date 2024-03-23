@@ -1,65 +1,25 @@
 import images from "../imagesLaravel";
+import "./Mvc.css";
 import { CodeCommand , CodeHighlighter ,  Result , ResultAlert } from "../../path";
 import { useState } from "react";
 
 export default function Mvc(props){
    const [resultAlertDisplayAlert ,setResultAlertDisplayAlert] = useState(true);   
+   function clickOk(){ setResultAlertDisplayAlert(false); }
 
-   function clickOk(){
-       setResultAlertDisplayAlert(false);
-   }
+   const [getAbsoluteUrl, setgetAbsoluteUrl] = useState({
+      route: "",
+      title_route: "Exemple",
+      id: "",
+      country: "",
+      nationality: "",
+      visibility: false
+   });
 
    return(
 <>
    <h1 className="heading-style mb-5">Laravel MVC </h1>
-   <article className="mt-5" id="what_is_laravel">
-         <h2 className='title-h2' > 1 - ما هو laravel  </h2>
-         <p className="style_divv">
-            لارافيل هو إطار عمل <b>PHP</b> مفتوح المصدر لتطوير تطبيقات الويب. تأتي مع <b>ORM</b> يُسمى <b>Eloquent</b> ومحرك <b>Blade</b> لتصميم الواجهات. يوفر أداة <b>Artisan</b> لإدارة المهام والتكوين. يتبع نمط <b>MVC</b> ويشمل <b>Middleware</b> لمرشحات <b>HTTP</b>. يوفر توجيهًا بسيطًا وحقن إعتماد لإدارة التبعيات. يشمل نظام ترتيب قواعد البيانات وزرع البيانات. لديه بيئة نشطة ومجتمع وثائق جيدة. اشتهر ببنية أنيقة وميزات مطور ودية، مما يجعله خيارًا شائعًا لبناء تطبيقات الويب الحديثة.<br/><br/>
-            <b>MVC</b> ، أو <b>Model-View-Controller</b>، هو نمط هندسة برمجيات يستخدم عادة في تطوير الويب. يقسم التطبيق إلى ثلاث مكونات مترابطة:<br/>
-               <ul>
-                  <li><b className='text-success'> النموذج (Model) :</b> يُمثل البيانات والمنطق التجاري للتطبيق. يدير البيانات، ويستجيب للاستعلامات، ويعالج التعليمات من المُتحكم.</li>
-                  <li><b className='text-success'> العرض (View) :</b> يقدم البيانات للمستخدم ويتعامل مع تفاعلات واجهة المستخدم. يستقبل الإدخالات، ويعرض النتائج، ويُرسل تفاعلات المستخدم إلى المتحكم.</li>
-                  <li><b className='text-success'> المتحكم (Controller) :</b> يدير تدفق البيانات بين النموذج والعرض. يفسر إدخالات المستخدم من العرض، ويُحدث النموذج وفقًا لذلك، ويضمن أن العرض يعكس التغييرات.</li>
-               </ul>
-            يعزز نمط <b>MVC</b> فصل الاهتمامات، مما يجعل قاعدة الشيفرة أكثر تنظيمًا وسهولة في الصيانة. ويسمح بالتعاون بشكل أسهل بين المطورين العاملين على جوانب مختلفة من التطبيق.
-         </p>
-   </article>
-   <article id="what_we_need_to_use_laravel">
-         <h2 className='title-h2'> 2 - ما نحتاجه لاستخدام laravel  </h2>
-         <p className='style_divv'>
-            نحتاج إلى بيئة تشغيل محلية لتطوير تطبيقات <b>Laravel</b> باستخدام <b>PHP</b>. هناك اثنان من أشهر البيئات هما <b>XAMPP</b> و <b>MAMP</b>، ويمكنك اختيار أي منهما حسب نظام التشغيل الخاص بك.<br/>
-            <ul>
-               <li>
-                  <b>XAMPP أو MAMP:</b>
-                  <ul>
-                     <li>قم بتثبيت <b>XAMPP</b> أو <b>MAMP</b> على جهاز الكمبيوتر الخاص بك. هذا سيوفر لك خوادم <b>Apache</b> و <b>MySQL</b> و <b>PHP</b> جاهزة للاستخدام.</li>
-                     <li>قم بتشغيل الخوادم لبدء تشغيل بيئتك المحلية.</li>
-                  </ul>
-               </li>
-               <li>
-                  <b>Composer:</b>
-                  <ul>
-                     <li>تحقق من توافر <b>Composer</b> على نظامك عبر الأمر  في واجهة الأوامر. إذا لم يكن مثبتًا، يمكنك تنزيله وتثبيته من الموقع الرسمي للمكتبة.</li>
-                  </ul>
-               </li>
-               <CodeCommand>composer</CodeCommand>
-               <li>
-                  <b>Node.js:</b>
-                  <ul>
-                     <li>لتجميع ملفات <b>CSS</b> و <b>JavaScript</b>، ستحتاج إلى تثبيت <b>Node.js</b>. يمكنك تحقق من توافره باستخدام الأمر .</li>
-                  </ul>
-               </li>
-               <CodeCommand>node -v</CodeCommand>
-            </ul>
-         </p>
-         <div className='row mt-2'>
-            <img src={images.laravel0_env} alt="laravel path"  className="col-md-4"/>
-            <img src={images.laravel0_env2} alt="laravel path" className="col-md-4"/>
-            <img src={images.laravel0_env3} alt="laravel path" className="col-md-4"/>
-         </div>
-   </article>
-   <article id="what_is_MVC">
+      <article id="what_is_MVC">
          <h2 className="title-h2">1 - ما هو MVC </h2>
          <p className="style_divv">
             تعتبر MVC في Laravel نمطًا معماريًا يتبعه Laravel.<br/><br/>
@@ -354,157 +314,207 @@ Route::get("/about",[ControllerName::class , "about" ]) -> name('home.about');`}
 <a href="{{ route('home.about') }}"> about </a>`} file_name="example-app / resources / views / file_name.blade.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
    </article>
    <article id="controller_resource">
-         <h2  className='title-h2'>12 - controller resource</h2>
+         <h2 className='title-h2'>12 - controller resource</h2>
+         <h3 className='title-h3'>1 - resource</h3>
          <p className="style_divv">
-               
+            في <b>Laravel</b> ، المتحكم <b>(Controller)</b> هو فصيلة تتعامل مع طلبات <b>HTTP</b> وتدير منطق التطبيق لمورد معين. المورد <b>(Resource)</b> في هذا السياق يشير عادة إلى نموذج أو مجموعة من الكيانات البيانات التي يتفاعل التطبيق معها.<br/><br/>
+            عند تعريف مورد <b>(resource)</b> في <b>Laravel</b> ، فإنك تقوم في الأساس بإنشاء مجموعة من المسارات وطرق المتحكم التي تتوافق مع العمليات الأساسية <b>CRUD</b> (إنشاء، قراءة، تحديث، حذف) على هذا المورد. يتبع هذا النمط التصميمي <b>RESTful</b> ، حيث تُستخدم الأفعال <b>HTTP</b> مثل <b>GET</b> و <b>POST</b> و <b>PUT</b> و <b>DELETE</b> لأداء الإجراءات على الموارد.<br/><br/>
+            لتعريف مورد في <b>Laravel</b> ، عادةً ما تستخدم الطريقة <bdi><b>Route::resource()</b></bdi> في ملف <kbd>routes/web.php</kbd> الخاص بك. تقوم هذه الطريقة بتوليد مسارات للمورد المحدد تلقائيًا ، وتعين الأفعال <b>HTTP</b> لطرق المتحكم.<br/><br/>
+            <b>على سبيل المثال سيؤدي هذا إلى توليد المسارات التالية:</b>
+            <CodeHighlighter code={`use App\\Http\\Controllers\\YourController;
+Route::resource('your-resource', YourController::class);`} file_name="example-app / routes / web.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+               <ul>
+                   <li><b className="text-success">GET /your-resource</b>  - الطريقة <bdi><b>index()</b></bdi> في <b>YourController</b></li>
+                   <li><b className="text-success">GET /your-resource/create</b>  - الطريقة <bdi><b>create()</b></bdi> في <b>YourController</b></li>
+                   <li><b className="text-success">POST /your-resource</b>  - الطريقة <bdi><b>store()</b></bdi> في <b>YourController</b></li>
+                   <li><b className="text-success">GET /your-resource/{"{"}id{"}"}</b>  - الطريقة <bdi><b>show()</b></bdi> في <b>YourController</b></li>
+                   <li><b className="text-success">GET /your-resource/{"{"}id{"}"}/edit</b>  - الطريقة <bdi><b>edit()</b></bdi> في <b>YourController</b></li>
+                   <li><b className="text-success">PUT/PATCH /your -resource/{"{"}id{"}"}</b> - الطريقة <bdi><b>update()</b></bdi> في <b>YourController</b></li>
+                   <li><b className="text-success">DELETE /your-resource/{"{"}id{"}"}</b>  - الطريقة <bdi><b>destroy()</b></bdi> في <b>YourController</b></li>
+               </ul>
+               فصيلة <b>YourController</b> ستعرف ثمود تطابق لهذه الإجراءات (<bdi><b>index()</b></bdi>، <bdi><b>create()</b></bdi>، <bdi><b>store()</b></bdi>، <bdi><b>show()</b></bdi>، <bdi><b>edit()</b></bdi>، <bdi><b>update()</b></bdi>، <bdi><b>destroy()</b></bdi>) للتعامل مع الطلبات <b>HTTP</b> المقابلة وأداء الإجراءات اللازمة على المورد (مثل الاستعلام عن قاعدة البيانات، وتلاعب البيانات، وإرجاع الردود، وما إلى ذلك).
          </p>
-         <div className="alert alert-warning text-black fs-5">
-            to use database start with command : 
-            <div className="bg-dark text-light fs-5 p-4 pb-2 mb-2 rounded"><pre> php artisan make:controller ControllerData -r  </pre></div>
-            or
-            <div className="bg-dark text-light fs-5 p-4 pb-2 mb-2 rounded"><pre> php artisan make:controller ControllerData --resource  </pre></div>
-            You will find a file ControllerData in app/Http/Controllers/<br/>
-            <strong>path : example-app/app/Http/Controllers/ControllerData.php</strong><br/><br/>
-            {/* <div className="alert bg-light"><pre>
-         <span style="color:blue">&lt;?php</span>
-            <span className="b">namespace</span> <span className="text-success">App</span>\<span className="text-success">Http</span>\<span className="text-success">Controllers</span>;
-            <span className="b">use</span> <span className="text-success">Illuminate</span>\<span className="text-success">Http</span>\<span className="text-success">Request</span>;
+         <h3 className='title-h3'>2 - إنشاء controller resource </h3>
+         <p className="style_divv">
+            لإنشاء <b>controller resource</b> إستخدام :
+            <CodeCommand>php artisan make:controller YourController --resource</CodeCommand>   
+            <b>أو</b> 
+            <CodeCommand>php artisan make:controller YourController -r</CodeCommand>    
+            ستجد ملف <b>YourController.php</b> في  <kbd>/app/Http/Controllers/</kbd>
+         </p>
+         <CodeHighlighter code={`<?php
 
-            <span className="text-success">class</span> ControllerData <span className="text-success">extends</span> Controller{
-               private static function data(){     <span style={{color:'green'}}>#private function for save data from haker</span>
-                   <span className="v">return</span> [
-                       ['id' => 1 , 'first_name' => 'Reda'   , 'last_name' => 'Eskouni' , 'age' => 26],
-                       ['id' => 2 , 'first_name' => 'Adil'   , 'last_name' => 'Chardoud' , 'age' => 20],
-                       ['id' => 3 , 'first_name' => 'Jaloul' , 'last_name' => 'Kharboucha' , 'age' => 70]
-                   ];   
-               }
-               <span className="b">public function</span> index(){
-                   <span className="v">return</span> view('data', ['data' => self::data()]);
-               }
-               <span className="b">public function</span> create(){}
-               <span className="b">public function</span> store(Request $request){}
-               <span className="b">public function</span> show($id){}
-               <span className="b">public function</span> edit($id){}
-               <span className="b">public function</span> update(Request $request, $id){}
-               <span className="b">public function</span> destroy($id){}
-            }
-            </pre>
-            </div> */}
-            add route with name data in<br/>
-            <strong>path : example-app/routes/web.php</strong><br/><br/>
-            {/* <div className="alert bg-light"><pre>
-            <span style={{color:'green'}}>#use ...</span>
-            use App\Http\Controllers\ControllerData;
-            <span style={{color:'green'}}>#route ...</span>
-            Route::resource("/data", ControllerData::class);</pre>
-            </div> */}
-            <p> add link in nav in file layoute.blade.php </p>
-            {/* <div className="alert bg-light"><pre>
-            <span style={{color:'green'}}>&lt;!-- ... code -{"->"}</span>
-               &lt;nav>
-               <span style={{color:'green'}}>&lt;!-- ... another link -{"->"}</span>
-                  &lt;a href="/data"> data &lt;/a>
-               &lt;/nav>
-            <span style={{color:'green'}}>&lt;!-- ... code -{"->"}</span></pre></div>    */}
-            add data.blade.php with name data in<br/>
-            <b>path: example-app/resources/views/ </b><br/>
-            {/* <div className="alert bg-light"><pre>
-         <span style={{color:'green'}}>&lt;!-- example-app/resources/views/data.blade.php -{"->"}</span>
-            @extends('layout')
-            @section('title','data')
-            @section('content')
-               @if( count($data) > 0 )
-                  &lt;table>
-                     &lt;thead>
-                        &lt;tr>
-                           &lt;th>Id&lt;/th>               
-                           &lt;th>First name&lt;/th>
-                           &lt;th>Last name&lt;/th>     
-                           &lt;th>Age&lt;/th>
-                           &lt;th>More&lt;/th>
-                          </tr>
-                     &lt;/thead>
-                     &lt;tbody>
-                          @foreach ($data as $d)
-                              &lt;tr>
-                                  &lt;td>&#123;&#123; $d['id'] &#125;&#125;&lt;/td> 
-                                  &lt;td>&#123;&#123; $d['first_name'] &#125;&#125;&lt;/td> 
-                                  &lt;td>&#123;&#123; $d['last_name'] &#125;&#125;&lt;/td> 
-                                  &lt;td>&#123;&#123; $d['age'] &#125;&#125;&lt;/td> 
-                                  &lt;td> .... &lt;/td> 
-                              &lt;/tr>
-                          @endforeach
-                     &lt;/tbody>
-                  &lt;/table>
-               @endif
-            @endsection</pre>
-            </div> */}
-         </div>
-         
-         <h3  className='title-h3' id="method_in_controller">2 - method in controller created by <kbd className="bg-black"><em>php artisan make:controller ControllerName -r</em></kbd> </h3>
-         <div className="alert alert-warning text-black fs-5">
-            php artisan make:controller ControllerName -r
-            in path: <b>app/Http/Controllers/</b> class ControllerName will created by defalut .<br/> 
-            This class have method :
-            <ul>
-               <li>index</li> <li>create</li> <li>store</li> <li>show</li><li>edit</li> <li>update</li> <li>destroy</li>
-            </ul>
-         </div>
-         
-         <h3 className='title-h3' id="recource">3 - recource</h3>
-         <div className="alert alert-warning text-black fs-5">
-         
-            <img src={images.laravel11} className="w-100" alt="web.php"/>
-         
-            when we use <kbd>php artisan make:controller ControllerName -r</kbd> to create class .<br/> class content metheds by deafult :
-            {/* <div className="alert alert-primary text-black fs-5 pb-0">
-               <pre> <span className="text-success">Route</span><span className="bc">::resource(</span><span className="o">"./path"<span className="bc"></span>, <span className="text-success">ControllerData</span>::<span className="b">class</span><span className="bc">)</span>; </pre>
-            </div> */}
-            by default you can get all this method when we use <span className="bg-success p-2 rounded text-light">recource</span> instead of <span className="bg-danger p-2 rounded text-light">get</span>
-            <br/><br/><b className="text-danger">example :</b><br/>
-            create another controller with name <b>CountryController</b> use :<br/>
-            <div className="bg-dark text-light"><pre>php artisan make:controller CountryController -r</pre></div>
-            <b>Path: example-app/app/Http/Controllers/CountryController.php</b>
-            <div className="alert bg-light mt-2">
-               <img src={images.controller_r} className="w-100" alt="controller -r"/>
-            </div>
-            <b>Path: example-app/routes/web.php</b>
-            <div className="alert bg-light mt-2">
-               <img src={images.Laravel0} className="w-100" alt="web.php"/>
-            </div>
-            <b>create page layoute.php in views</b><br/>
-            <b>Path: example-app/resources/wiews/layoute.php</b>
-            <div className="alert bg-light mt-2">
-               <img src={images.laravel0_layoute} className="w-100" alt="web.php"/>
-            </div>
-            <b className="text-success">create new folder countrys in views .</b><br/>
-            <b>in countrys/ folder create file index.blade.php</b><br/>
-            <b>Path: example-app/resources/wiews/countrys/index.blade.php</b>
-            <div className="alert bg-light mt-2">
-               <img src={images.index} className="w-100" alt="web.php"/>
-            </div>
-            <b>in countrys/ folder create file show.blade.php</b><br/>
-            <b>Path: example-app/resources/wiews/countrys/show.blade.php</b>
-            <div className="alert bg-light mt-2">
-               <img src={images.laravel0_show} className="w-100" alt="web.php"/>
-            </div>
-            <div className="alert bg-danger text-light"><b>Result</b> </div>
-            <div className="alert bg-light mt-2">
-               <img src={images.laravel0_result} className="w-100" alt="web.php"/>
-            </div>
-            <b>new click on id : 3 </b>
-            <div className="alert bg-light mt-2">
-               <img src={images.laravel0_result2} className="w-100" alt="web.php"/>
-            </div>
-            <div className="alert alert-danger">
-               <b>note</b> : you can't change name <em><u>show.blade.php</u></em> or <em><u>index.blade.php</u></em> because we use <b>Route::resource(...)</b> .
-            </div>
-         </div>
-    </article>
-    <article id="list_all_route_in_project">
-            <h2 className="title-h2"> 13 - قائمة كافة الطرق (route) في المشروع</h2>
-            <CodeCommand>php artisan route:list</CodeCommand>
-    </article>
+namespace App\\Http\\Controllers;
+use Illuminate\\Http\\Request;
+
+class YourController extends Controller {
+     public function index(){    }
+     public function create(){    }
+     public function store(Request $request){    }
+   public function show($id){    }
+   public function edit($id){    }
+   public function update(Request $request, $id){    }
+   public function destroy($id){    }
+}`} file_name="example-app / app / Http / Controllers / YourController.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+   </article>
+   <article id="list_all_route_in_project">
+         <h2 className="title-h2"> 13 - قائمة كافة الطرق (route) في المشروع</h2>
+         <CodeCommand>php artisan route:list</CodeCommand>
+   </article>
+   <article id="Exemple">
+         <h2 className="title-h2"> 14 - متال </h2>
+         <CodeCommand>php artisan make:controller CountryController -r</CodeCommand>
+         <CodeHighlighter code={`<?php
+
+namespace App\\Http\\Controllers;
+
+use Illuminate\\Http\\Request;
+
+class CountryController extends Controller {
+    private function somedata(){
+        return [
+            ["id" => 1, "country" => "Maroc",  "nationality" => "Moroccan"],
+            ["id" => 2, "country" => "Maroc",  "nationality" => "Moroccan"],
+            ["id" => 3, "country" => "Maroc",  "nationality" => "Moroccan"],
+            ["id" => 4, "country" => "Espain", "nationality" => "Moroccan"],
+            ["id" => 5, "country" => "Egypt",  "nationality" => "Egyptian"]
+        ];
+    }
+      
+    public function index(){
+        return view('countries.index', ['countries' => self::somedata()]);
+    }
+    
+    public function create(){  }
+    public function store(Request $request){  }
+
+    public function show($country){
+         $data = self::somedata();
+         $index = array_search($country, array_column($data, 'id'));
+
+         if ($index === false) {
+           abort(404);
+         }
+         return view('countries.show', ['country' => $data[$index]]);
+    }
+    
+    public function edit($id){  }
+    public function update(Request $request, $id){  }
+    public function destroy($id){  }
+}`} file_name="example-app / app / Http / Controllers / CountryController.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={`<?php
+
+use Illuminate\\Support\\Facades\\Route;
+use App\\Http\\Controllers\\CountryController;
+
+Route::resource('countries', CountryController::class);
+?>`} file_name="example-app / routes / web.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={`<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="stylesheet" href="{{ url('css/style.css') }}">
+     <title> Exemple </title>
+</head>
+<body>
+     @yield('content')
+</body>
+</html>`} file_name="example-app / resources / wiews / layoute.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         <ul>
+             <li> قم بإنشاء مجلد جديد <bdi><b>countries/</b></bdi> في طرق العرض <b>views</b> </li>
+             <li> في مجلد <bdi><b>countries/</b></bdi> قم بإنشاء ملف <b>index.blade.php</b> </li>
+         </ul>
+         <CodeHighlighter code={`@extends('layoute')
+
+@section('content')
+   <h1 class="r">localhost:8000/country/index</h1>
+
+   <section id='section'>
+      @foreach ($countries as $country)
+            <a class="box" href="{{ route('countries.show', ['country' => $country['id'] ]) }}" >
+                id: <b>{{ $country['id'] }}</b> <br/>
+                contry: <b>{{ $country['country'] }}</b> <br/>
+                nationality: <b>{{ $country ['nationality'] }}</b>
+            </a>
+      @endforeach
+   </section>
+@endsection`} file_name="example-app / resources / wiews / countries / index.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         <ul> <li> في مجلد <bdi><b>countries/</b></bdi> قم بإنشاء ملف <b>show.blade.php</b> </li> </ul>
+         <CodeHighlighter code={`@extends('layoute')
+
+@section('content')    
+    <h2>
+       <ul>
+           <li> id : {{ $country['id'] }} </li>
+           <li> country : {{ $country['country'] }} </li>
+           <li> nationality : {{ $country['nationality'] }} </li>
+       </ul>
+    </h2>  
+@endsection`} file_name="example-app / resources / wiews / countries / show.blade.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={`#section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    background-color: red;
+    border: 4px solid green;
+    margin: 8px;
+    padding: 8px;
+    box-sizing: border-box;
+    color: white;
+    font-size: 18px;
+}`} file_name="example-app / public / css / style.css" language="css" number={true} addclassName="mt-3 mb-3" copie={true}/>
+      <ul><li> انتقل إلى المسار <bdi><b>http://localhost:8000/countries/</b></bdi> </li></ul>
+      <Result title={getAbsoluteUrl.title_route} route={`http://localhost:8000/countries/${getAbsoluteUrl.route}`}>
+               {(getAbsoluteUrl.visibility)?(
+                  <>
+                     <h2>
+                        <ul>
+                            <li>id : {getAbsoluteUrl.id} </li>
+                            <li>country : {getAbsoluteUrl.country}</li>
+                            <li>nationality : {getAbsoluteUrl.nationality}</li>
+                        </ul>
+                     </h2>
+                  </>
+               ):(
+                  <>
+                  <h1>localhost:8000/country/index</h1>
+                  <section id='section-mvc'>
+                        <div className="box-mvc" onClick={()=>{ setgetAbsoluteUrl({title_route:"Exemple",route:"1/",id:"1",country:"Maroc",nationality:"Moroccan",visibility:true}) }}>
+                            id: <b>1</b> <br/>
+                            contry: <b>Maroc</b><br/>
+                            nationality: <b>Moroccan</b>
+                        </div>
+                        <div className="box-mvc" onClick={()=>{ setgetAbsoluteUrl({title_route:"Exemple",route:"2/",id:"2",country:"Maroc",nationality:"Moroccan",visibility:true}) }}>
+                            id: <b>2</b> <br/>
+                            contry: <b>Maroc</b><br/>
+                            nationality: <b>Moroccan</b>
+                        </div>
+                        <div className="box-mvc" onClick={()=>{ setgetAbsoluteUrl({title_route:"Exemple",route:"3/",id:"3",country:"Maroc",nationality:"Moroccan",visibility:true}) }}>
+                            id: <b>3</b> <br/>
+                            contry: <b>Maroc</b><br/>
+                            nationality: <b>Moroccan</b>
+                        </div>
+                        <div className="box-mvc" onClick={()=>{ setgetAbsoluteUrl({title_route:"Exemple",route:"4/",id:"4",country:"Espain",nationality:"Moroccan",visibility:true}) }}>
+                            id: <b>4</b> <br/>
+                            contry: <b>Espain</b><br/>
+                            nationality: <b>Moroccan</b>
+                        </div>
+                        <div className="box-mvc" onClick={()=>{ setgetAbsoluteUrl({title_route:"Exemple",route:"5/",id:"5",country:"Egypt",nationality:"Egyptian",visibility:true}) }}>
+                            id: <b>5</b> <br/>
+                            contry: <b>Egypt</b><br/>
+                            nationality: <b>Egyptian</b>
+                        </div>
+                  </section>
+                  </>
+               )}
+            </Result>  
+            
+
+   </article>
 </>
    )
 }

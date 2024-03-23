@@ -1,8 +1,8 @@
 import { useEffect, useRef} from 'react';
 import { Routes, Route , Link } from "react-router-dom";
 import{ 
-   Mvc , Database , DatabaseQueryBuilder , DatabaseRouteResource , 
-   Git , Mail , Middleware , Packages , Tinker 
+   Introduction , Mvc , Database , DatabaseQueryBuilder , 
+   DatabaseRouteResource , Git , Mail , Middleware , Packages , Tinker 
 } from "./pathLaravel.js" 
 
 export default function Laravel(props){
@@ -43,7 +43,8 @@ export default function Laravel(props){
    </aside>
    <section className="section-conetent"> 
       <Routes>
-          <Route path='/'  element={<Mvc  />} />
+          <Route path='/'  element={<Introduction  />} />
+          <Route path='/introduction'  element={<Introduction  />} />
           <Route path='/mvc'  element={<Mvc  />} />
           <Route path='/database'  element={<Database  />} />
           <Route path='/database-route-resource'  element={<DatabaseRouteResource   />} />                

@@ -5,13 +5,13 @@ import { useState } from "react";
 
 export default function AboutModels(){
 
-    const [getAbsoluteUrl1, setGetAbsoluteUrl1] = useState({
+      const [getAbsoluteUrl1, setGetAbsoluteUrl1] = useState({
         route: "",
         title_route:"index",
         title: "",
         author:"",
         visibility: false
-     });
+      });
      const [getAbsoluteUrl2, setGetAbsoluteUrl2] = useState({
         id: "",
         route: "categories/",

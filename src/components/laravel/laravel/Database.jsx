@@ -1,5 +1,5 @@
-import { CodeCommand } from "../../path";
 import images from "../imagesLaravel";
+import { CodeCommand , CodeHighlighter } from "../../path";
 
 export default function Database(props){
 
@@ -10,23 +10,23 @@ export default function Database(props){
          <br/><hr style={{height: "0.9rem", border:"0.3rem solid black"}}/>
          <h1 className="mt-5"> Database </h1>
          <h2 id="Connect_with_database">1 - Connect with database </h2>
-         <div className="alert alert-warning text-black fs-5">
+         <p className="alert alert-warning text-black fs-5">
+         <CodeHighlighter code={`...
+
+DB_CONNECTION=mysql            #mysql because we use MYSQL database
+DB_HOST=127.0.0.1       
+DB_PORT=3306                
+DB_DATABASE=example-app        #name database ussed
+DB_USERNAME=root              
+DB_PASSWORD=                  
+
+...`} file_name="example-app / .env" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            
             <p>To connect your project example-app go to path <kbd>.env</kbd></p>
             <b>Path : example-app/.env</b>
-            <div className="alert bg-black text-white"><pre>
-         ...
-
-         DB_CONNECTION=mysql           <span style={{color:'green'}}> #mysql because we use MYSQL database</span>
-         DB_HOST=127.0.0.1       
-         DB_PORT=3306                
-         DB_DATABASE=example-app       <span style={{color:'green'}}> #name database ussed</span>
-         DB_USERNAME=root              
-         DB_PASSWORD=                  
-
-         ...
-         </pre></div>
-         Laravel supports different database like <b>MYSQL</b> and another .
-         </div>
+           
+            Laravel supports different database like <b>MYSQL</b> and another .
+         </p>
 
          <h2 id="Create_models">2 - model </h2>
 
