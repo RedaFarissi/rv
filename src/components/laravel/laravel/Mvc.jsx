@@ -512,8 +512,6 @@ Route::resource('countries', CountryController::class);
                   </>
                )}
             </Result>  
-            
-
    </article>
 </>
    )

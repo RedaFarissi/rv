@@ -2,16 +2,26 @@ import images from "../imagesLaravel";
 import { CodeCommand , CodeHighlighter } from "../../path";
 
 export default function Database(props){
+   function getCurrentDate() {
+      const currentDate = new Date();
+      const year = currentDate.getFullYear();
+      const month = String(currentDate.getMonth() + 1).padStart(2, '0'); 
+      const day = String(currentDate.getDate()).padStart(2, '0');
+    
+      return `${year}_${month}_${day}`;
+   }
 
    return(
    <>
       <h1 className="heading-style">Laravel Database </h1>
-      <article id="mt-5">
-         <br/><hr style={{height: "0.9rem", border:"0.3rem solid black"}}/>
-         <h1 className="mt-5"> Database </h1>
-         <h2 id="Connect_with_database">1 - Connect with database </h2>
-         <p className="alert alert-warning text-black fs-5">
-         <CodeHighlighter code={`...
+      <article id="Connect_with_database">
+         <h2 className="title-h2">1 - تواصل مع قاعدة البيانات </h2>
+         <p className="style_divv"> 
+               لتوصيل التطبيق المثالى لمشروعك، انتقل إلى المسار <kbd>.env</kbd> <br/><br/>
+               يدعم <b>Laravel</b> قواعد بيانات مختلفة مثل <b>MYSQL</b> وأخرى .
+
+         </p>
+<CodeHighlighter code={`...
 
 DB_CONNECTION=mysql            #mysql because we use MYSQL database
 DB_HOST=127.0.0.1       
@@ -20,73 +30,76 @@ DB_DATABASE=example-app        #name database ussed
 DB_USERNAME=root              
 DB_PASSWORD=                  
 
-...`} file_name="example-app / .env" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            
-            <p>To connect your project example-app go to path <kbd>.env</kbd></p>
-            <b>Path : example-app/.env</b>
-           
-            Laravel supports different database like <b>MYSQL</b> and another .
+...`} file_name="example-app / .env" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+      </article>
+      <article id="Create_models">
+         <h2 className="title-h2">2 - إنشاء  model </h2>
+         <p className="style_divv">
+               لاستخدام قاعدة البيانات تحتاج إلى استخدام النموذج لأنه كما رأينا <b>Laravel</b> يستخدم <b>MVC</b> . <br/><br/>
+               <ul>
+                  <li><b>Modele :</b> أي شيء يتعلق بالبيانات</li>
+                  <li><b>view :</b> أي شيء عن الواجهة الأمامية</li>
+                  <li><b>Controller :</b> التحكم بين <b>Modele</b> و <b>View</b></li>
+               </ul>
+               <b>إنشاء Model  و Table :</b>
+               <CodeCommand>php artisan make:model Country --migration</CodeCommand>
+               <b>إنشاء Model  و Table و Control:</b>
+               <CodeCommand>php artisan make:model Country -mc</CodeCommand>
+               <b>إنشاء Model  و Table و Control recource:</b>
+               <CodeCommand>php artisan make:model Country -mcr</CodeCommand>
+               <ul>
+                  <li>في هذه الحالة <b>Country</b> هو إسم <b>model</b>.</li>
+                  <li>يجب أن يبدأ اسم النموذج بحرف كبير وكلمة مفردة.</li>
+                  <li> <bdi><b>--migration </b></bdi> &nbsp; يتم ذلك من خلال إنشاء جدول في قاعدة البيانات مباشرة أو يمكنك استخدام -m</li>
+               </ul>
+               اذهب الآن إلى : <kbd>example-app\database\migrations\</kbd> سترى ملف <b>php</b> تم إنشاؤه تلقائيًا بهذه الطريقة :<br/>
+               <bdi><b>example-app/databse/migrations/{getCurrentDate()}_235205_create_countries_table.php</b></bdi>
          </p>
+         <CodeHighlighter code={`<?php
+use Illuminate\\Database\\Migrations\\Migration;
+use Illuminate\\Database\\Schema\\Blueprint;
+use Illuminate\\Support\\Facades\\Schema;
 
-         <h2 id="Create_models">2 - model </h2>
+return new class extends Migration {
+    public function up() {
+        Schema::create('countries', function (Blueprint $table) {
+            $table->id();
+            $table->string('country');    #new
+            $table->string('nationality');     #new
+            $table->timestamps();
+        });
+    }
 
-            <p>   to use database you need to use model because as we seen </p>
-            <div className="alert alert-danger mt-3">
-               <ul>
-                  <li><small><small>Modele : anything about data</small></small></li>
-                  <li><small><small>View : anything about front-end</small></small></li>
-                  <li><small><small>Controller : Control between Modele and View</small></small></li>
-               </ul>
-            </div>
-            to create model use :
-            <b>Create Model and Table</b>
-            {/* <div className="alert bg-dark text-light mt-3 pb-0"><pre>php artisan make:model <span style="color:rgba(0 255 0/75%);">Country</span> --migration</pre></div> */}
-            <b>Create Model and Table and Control</b>
-            {/* <div className="alert bg-dark text-light mt-3 pb-0"><pre>php artisan make:model <span style="color:rgba(0 255 0/75%);">Country</span> -mc</pre></div> */}
-            <b>Create Model and Table and Control recource</b>
-            {/* <div className="alert bg-dark text-light mt-3 pb-0"><pre>php artisan make:model <span style="color:rgba(0 255 0/75%);">Country</span> -mcr</pre></div> */}
-
-            <p>
-               in this case Contry is name of model .<br/> 
-               <ul>
-                  <li><b>name of model must start with capital letter and word single.</b></li>
-                  <li><b><u>--migration</u> : this with create table in database directelly or you can use <u>-m</u></b></li>
-               </ul>
+    public function down() {
+        Schema::dropIfExists('countries');
+    }
+};`} file_name={`example-app / databse / migrations / ${getCurrentDate()}_235205_create_countries_table.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <p className="style_divv">
+                ستقوم الدالة <bdi><b>up()</b></bdi> بإنشاء جدول <b>countries</b> في قاعدة البيانات ويكون لها افتراضيًا :  
+                <ul>
+                   <li><bdi>$table-{">"}id()</bdi></li>
+                   <li><bdi>$table-{">"}timestamps()</bdi></li>
+                </ul><br/>
+                <ol>
+                   <li><bdi><b className="text-success">$table{"->"}id()</b></bdi> : إنشاء معرف العمود في الجدول  </li>
+                   <li><bdi><b className="text-success">$table{"->"}string('country')</b></bdi> : إنشاء عمود <b>country</b> من نوع سلسلة <b>(string)</b> </li>
+                   <li><bdi><b className="text-success">$table{"->"}string('nationality')</b></bdi> : إنشاء عمود <b>nationality</b> من نوع سلسلة <b>(string)</b> </li>
+                   <li><bdi><b className="text-success">$table{"->"}timestamps()</b></bdi> : إنشاء عمودين يحصل العمود الأول على وقت للإنشاء <b>(created_at)</b> والثاني يحصل على وقت للتحديث <b>(updated_at)</b> </li>
+                </ol>         
             </p>
-
-            now go to <b>example-app\database\migrations\</b> you will see php file created automatically .<br/>
-            <b>Path : example-app/databse/migrations/2023_01_24_235205_create_countries_table.php</b>
-            <div className="alert bg-light mt-3"><img src={images.laravel0_model1} className="w-100" alt="model"/></div>
-            <ul>
-               <li> the function up() will create database countries and by defalut : $table-{">"}id() and $table-{">"}timestamps()
-                  <ol>
-                     <li><em>$table{"->"}id()</em> : create column id in table  </li>
-                     <li><em>$table{"->"}string('contry')</em> : create column contry type string</li>
-                     <li><em>$table{"->"}string('nationality')</em> : create column nationality type string</li>
-                     <li><em>$table{"->"}timestamps()</em> : create two column in database first column get time to create <small>(create at)</small> and second get time to update <small>(updeted at)</small> </li>
-                  </ol>
-               </li>
-            </ul>
-            <div className='alert alert-info'><b>$table{"->"}timestamps()</b> : this create <u>updated_at</u> and <u>created_at</u>  </div>
-            <b> This entity will be reflected on the database using the command </b>
-            <div className="alert bg-dark text-light mt-3 pb-0"><pre> php artisan migrate </pre></div>
-            now in your database example-app countries table was created .
-            <div className="alert bg-light mt-3"><img src={images.laravel0_model2} className="w-100" alt="model"/></div>
-            <div className="alert alert-success"> 
-               in <b>example-app/resources/views/countrys/</b> create file <b>create.blade.php</b>  <br/>
-               we use page create.blade.php to get data from usser and puch him in store function in CountryController
-            </div>
-            to use data from <b>example-app/app/Http/Controllers/CountryController.php</b> use:
-            <div className="alert bg-light pb-0 mt-3"><pre>use App\Models\Country;</pre></div>
-            and add to function store variable content model Country 
-            {/* <div className="alert bg-light pb-0 mt-3"><pre>
-            <span className="b">public function</span> <span className="g">store(<span className="text-success">Request</span> <span className="bc">$request</span>)</span>{
-               <span className="bc">$country</span> = <span className="b">new</span> <span className="text-success">Country()</span> ;
-            } </pre></div> */}
-            <b>When you create table wityh model in laravel you can use Conttry in your Controller or in Route</b>
-            <img src={images.laravel20} className="w-100 mb-2" alt="model"/>
-         
-            <h2 id='create_table_in_db_from_laravel'>5 - create table in db from laravel</h2>
+      </article>
+      <article id='migrate'>
+            <h2 className="title-h2"> 3 - migrate </h2>
+            <p className="style_divv">
+               سوف ينعكس هذا الكيان على قاعدة البيانات باستخدام الأمر
+               <CodeCommand>php artisan migrate</CodeCommand>
+               <ul><li>الآن في قاعدة البيانات الخاصة بك، تم إنشاء جدول <b>countries</b> </li></ul>
+            </p> 
+            <div className="mital">متال :</div>
+            <CodeHighlighter code={``} file_name={`example-app / app / Http / Controllers / CountryController.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+      </article>
+      <article  id='create_table_in_db_from_laravel'>
+            <h2 className="title-h2">4 - create table in db from laravel</h2>
             <div>
                <div className="alert bg-dark text-light mt-3 pb-0"><pre> php artisan make:migration create_sizes_table </pre></div>
                <div className='alert bg-info text-light'><b>Note</b>: the table will create with name <b>sizes</b></div>
@@ -98,8 +111,9 @@ DB_PASSWORD=
                   <img src={images.laravel21} className="col-md-6 border border-dark border-3 mb-2" alt="model"/>   
                </div>
             </div>
-         
-            <h2 id="AddColumnInTable">6 - Add Column In Table</h2>
+      </article>
+      <article id="AddColumnInTable">
+            <h2 className="title-h2">5 - Add Column In Table</h2>
             <div>
                <div className="alert bg-dark text-light mt-3 pb-0"><pre> php artisan make:migration add_<span className='text-danger'>columnName</span>_to_<span className='text-danger'>tableName</span> </pre></div>      
                <div className="alert bg-dark text-light mt-3 pb-0"><pre> php artisan make:migration add_description_to_sizes</pre></div>
@@ -108,18 +122,19 @@ DB_PASSWORD=
                <div className="alert bg-dark text-light mt-3 pb-0"><pre> php artisan migrate </pre></div>      
                <img src={images.laravel24} className="w-25"/>   
             </div>
-         
-            <h2 id='droppingColumnsFromTable'>7 - dropping Columns From Table</h2>
+      </article>
+      <article id='droppingColumnsFromTable'>  
+            <h2 className="title-h2">6 - dropping Columns From Table</h2>
             <div>
                {/* <div className="alert bg-dark text-light mt-3 pb-0"><pre> php artisan make:migration  remove_<span className='text-danger'>columnName</span>_from_<span className='text-danger'>tableName<span> --table=tableName</pre></div>      
                <div className="alert bg-dark text-light mt-3 pb-0"><pre> php artisan make:migration remove_description_from_sizes --table=sizes</pre></div> */}
                <img src={images.laravel32} className="w-100"/> 
 
-               <div className="alert bg-dark text-light mt-3 pb-0"><pre> php artisan migrate </pre></div>      
-            
+               <div className="alert bg-dark text-light mt-3 pb-0"><pre> php artisan migrate </pre></div>
             </div>
-            
-            <h2 id="Foreign_Keys"> 8 - Foreign Keys</h2>
+      </article>
+      <article id="Foreign_Keys">
+            <h2 className="title-h2"> 7 - Foreign Keys</h2>
             <a href='https://laravel.com/docs/9.x/migrations#foreign-key-constraints' target="_blanck">foreign-key-constraints</a>
             <div>
                <br/><br/>
@@ -161,26 +176,30 @@ DB_PASSWORD=
                <img src={images.laravel50} className="w-100 mb-2" alt="model"/>
             </div>
             
-            
-            <h2 id='truncate_models_table'>9 - truncate models table</h2>
+      </article>
+      <article id='truncate_models_table'>
+            <h2 className="title-h2">8 - truncate models table</h2>
             <div>
                <div className='alert alert-warning'> Product::truncate(); </div>
                <img src={images.laravel6} className="w-100 mb-2" alt="model"/>
             </div>
-            
-            <h2 id='DropTheLastMigrateInDB'>10 - Delete The Last Migrations in DataBase</h2>
+      </article>
+      <article id='DropTheLastMigrateInDB'>
+            <h2 className="title-h2">9 - Delete The Last Migrations in DataBase</h2>
             <div>
                <div className='alert bg-dark text-light pb-0'><pre>php artisan migrate:rollback</pre></div>
                <b>To delete many magration use (you can choose the number of migrations you want to delete)</b>
                {/* <div className='alert bg-dark text-light pb-0'><pre>php artisan migrate:rollback --step=<sapn className='text-danger'>2</span></pre></div> */}
             </div>
-            
-            <h2 id="Clearalltableindbandcreatehimagain">11 - Clear all table in db and create him again</h2>
+      </article>
+      <article id="Clearalltableindbandcreatehimagain">
+            <h2 className="title-h2">10 - Clear all table in db and create him again</h2>
             <div>
                <div className='alert bg-dark text-light pb-0'><pre>php artisan migrate:refresh</pre></div>
             </div>
-            
-            <h2 id="soft_delete">12 - soft delete</h2>
+      </article>
+      <article id="soft_delete">     
+            <h2 className="title-h2">11 - soft delete</h2>
             <a href='https://laravel.com/docs/9.x/eloquent#soft-deleting' target='_blanck'>soft delete documentation</a>
             <a href='https://www.youtube.com/watch?v=TiCvGwxqWlQ&list=PLftLUHfDSiZ4GfPZxaFDsA7ejUzD7SpWa&index=40' target='_blanck'> Youtube </a> 
             <div className='alert fs-5 alert-info mt-3'><b>soft delete</b> : is way to retain data after deleting it </div>
@@ -209,26 +228,27 @@ DB_PASSWORD=
             <h4> 3) Get All instance deleted </h4>
             {/* <div className='alert alert-warning pb-0'><pre>Product::withTrashed()-{">"}get()</pre></div> */}
             <b>See documentation to restore and force Delete</b>
-
-            <h2 id="eloquent_scopes">13 - Eloquent scopes </h2>
+      </article>
+      <article id="eloquent_scopes">
+            <h2 className="title-h2">12 - Eloquent scopes </h2>
             <a href='https://laravel.com/docs/10.x/eloquent#local-scopes' target='_blanck'>eloquent scopes documentation</a>
-
-         
-            <h2 id="Seeder_class">14 - Seeder class  </h2>
+      </article>
+      <article id="Seeder_class">
+            <h2 className="title-h2">13 - Seeder class  </h2>
             <a href='https://laravel.com/docs/10.x/seeding#writing-seeders' target='_blanck'>seeders documentation</a>
             <p className='fs-5'> 
                In Laravel, seeders are used to populate database tables with initial or test data, making it easier to develop and test applications by providing a consistent data structure for testing and development environments.<br/>
                In this course we use seeder to create an admin account that cannot be deleted from the database, you can follow these steps.
             </p>
-            <h3>1 - Create Seeder Class</h3>
+            <h3 className="title-h3">1 - Create Seeder Class</h3>
             <div className="alert bg-dark text-light mt-3 pb-0"><pre>php artisan make:seeder NameSeeder</pre></div>      
             <div className="alert bg-dark text-light mt-3 pb-0"><pre>php artisan make:seeder SuperAdminSeeder</pre></div>  
             <p>the seeder class will create in database/seeders/ folder</p>    
-            <h3>2 - Create super admin account in seeder class</h3>
+            <h3 className="title-h3">2 - Create super admin account in seeder class</h3>
             <img src={images.laravel59} className="w-100 mb-2" alt="model"/>
-            <h3>3 - Run seeder class</h3>
+            <h3 className="title-h3">3 - Run seeder class</h3>
             <div className="alert bg-dark text-light mt-3 pb-0"><pre>php artisan db:seed --className=SuperAdminSeeder</pre></div>  
-         </article>
-      </>
+      </article>
+   </>
    )
 }
