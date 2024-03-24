@@ -95,44 +95,101 @@ return new class extends Migration {
                <CodeCommand>php artisan migrate</CodeCommand>
                <ul><li>الآن في قاعدة البيانات الخاصة بك، تم إنشاء جدول <b>countries</b> </li></ul>
             </p> 
-            <div className="mital">متال :</div>
-            <CodeHighlighter code={``} file_name={`example-app / app / Http / Controllers / CountryController.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <ul><li>لاستخدام <b>Models</b> في وحدة التحكم <b>CountryController.php</b> إستخدم :</li></ul>
+            <CodeHighlighter code={`<?php namespace App\\Http\\Controllers;
+
+use Illuminate\\Http\\Request;
+
+use App\\Models\\Country;    #new
+
+class CountryController extends Controller {
+      # .....
+      public function store(Request $request){
+         $country = new Country() ;   #new
+      }  
+      # .....
+}`} file_name={`example-app / app / Http / Controllers / CountryController.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <div className="alert alert-info">
+            عندما تقوم بإنشاء جدول ب <b>Models</b> في <b>Laravel</b>، يمكنك استخدام <b>Models Country</b> في وحدة التحكم الخاصة بك أو في <b>Route</b> .
+         </div>
       </article>
-      <article  id='create_table_in_db_from_laravel'>
-            <h2 className="title-h2">4 - create table in db from laravel</h2>
-            <div>
-               <div className="alert bg-dark text-light mt-3 pb-0"><pre> php artisan make:migration create_sizes_table </pre></div>
-               <div className='alert bg-info text-light'><b>Note</b>: the table will create with name <b>sizes</b></div>
-               <img src={images.laravel17} className="w-100 mb-2" alt="model"/>
-               <img src={images.laravel19} className="w-100 mb-2" alt="model"/>
-               <div className="alert bg-dark text-light mt-3 pb-0"><pre> php artisan migrate</pre></div>
-               <div className='row'>
-                  <img src={images.laravel18} className="col-md-6 border border-dark border-3 mb-2" alt="model"/>
-                  <img src={images.laravel21} className="col-md-6 border border-dark border-3 mb-2" alt="model"/>   
-               </div>
-            </div>
+      <article id='Create_Table_without_Models'>
+            <h2 className="title-h2">4 - إنشاء جدول بدون استخدام Models </h2>
+            <ul><li>إنشاء جدول بالاسم <b>sizes</b></li></ul>
+            <CodeCommand>php artisan make:migration create_sizes_table</CodeCommand>
+            <CodeHighlighter code={`<?php
+
+use Illuminate\\Database\\Migrations\\Migration;
+use Illuminate\\Database\\Schema\\Blueprint;
+use Illuminate\\Support\\Facades\\Schema;
+
+return new class extends Migration{
+    public function up()  {
+        Schema::create('sizes', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->timestamps();
+        });
+    }
+
+    public function down()  {
+        Schema::dropIfExists('sizes');
+    }
+};`} file_name={`example-app / database / migrations / ${getCurrentDate()}_164059_create_sizes_table.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeCommand>php artisan migrate</CodeCommand>         
       </article>
       <article id="AddColumnInTable">
-            <h2 className="title-h2">5 - Add Column In Table</h2>
-            <div>
-               <div className="alert bg-dark text-light mt-3 pb-0"><pre> php artisan make:migration add_<span className='text-danger'>columnName</span>_to_<span className='text-danger'>tableName</span> </pre></div>      
-               <div className="alert bg-dark text-light mt-3 pb-0"><pre> php artisan make:migration add_description_to_sizes</pre></div>
-               <img src={images.laravel22} className="w-100"/> 
-               <img src={images.laravel23} className="w-100"/>   
-               <div className="alert bg-dark text-light mt-3 pb-0"><pre> php artisan migrate </pre></div>      
-               <img src={images.laravel24} className="w-25"/>   
-            </div>
-      </article>
-      <article id='droppingColumnsFromTable'>  
-            <h2 className="title-h2">6 - dropping Columns From Table</h2>
-            <div>
-               {/* <div className="alert bg-dark text-light mt-3 pb-0"><pre> php artisan make:migration  remove_<span className='text-danger'>columnName</span>_from_<span className='text-danger'>tableName<span> --table=tableName</pre></div>      
-               <div className="alert bg-dark text-light mt-3 pb-0"><pre> php artisan make:migration remove_description_from_sizes --table=sizes</pre></div> */}
-               <img src={images.laravel32} className="w-100"/> 
+            <h2 className="title-h2">5 - إضافة عمود في الجدول</h2>
+            <ul><li>إضافة عمود في الجدول <b>sizes</b> بالاسم  <b>description</b></li></ul>
+            <CodeCommand>php artisan make:migration add_description_to_sizes</CodeCommand>
+            <CodeHighlighter code={`<?php
 
-               <div className="alert bg-dark text-light mt-3 pb-0"><pre> php artisan migrate </pre></div>
-            </div>
+use Illuminate\\Database\\Migrations\\Migration;
+use Illuminate\\Database\\Schema\\Blueprint;
+use Illuminate\\Support\\Facades\\Schema;
+
+return new class extends Migration{
+    public function up()  {
+        Schema::table('sizes', function (Blueprint $table) {
+            $table->text('description')->after('id');      #new
+        });
+    }
+
+    public function down()  {
+        Schema::table('sizes', function (Blueprint $table) {
+
+        });
+    }
+};
+`} file_name={`example-app / database / migrations / ${getCurrentDate()}_170347_add_description_to_sizes.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeCommand>php artisan migrate</CodeCommand>
       </article>
+      <article id='Remove_Column_From_Table'>  
+            <h2 className="title-h2">6 - حذف العمود من الجدول</h2>
+            <CodeCommand>php artisan make:migration remove_description_from_sizes --table=sizes</CodeCommand>
+            <CodeHighlighter code={`<?php
+
+use Illuminate\\Database\\Migrations\\Migration;
+use Illuminate\\Database\\Schema\\Blueprint;
+use Illuminate\\Support\\Facades\\Schema;
+
+return new class extends Migration
+{
+    public function up() {
+        Schema::table('sizes', function (Blueprint $table) {
+        });
+    }
+
+    public function down() {
+        Schema::table('sizes', function (Blueprint $table) {
+            Schema::dropColumn('description');   #new
+        });
+    }
+};
+`} file_name={`example-app / database / migrations / ${getCurrentDate()}_173039_remove_description_from_sizes.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeCommand>php artisan migrate</CodeCommand>
+      </article>
+
       <article id="Foreign_Keys">
             <h2 className="title-h2"> 7 - Foreign Keys</h2>
             <a href='https://laravel.com/docs/9.x/migrations#foreign-key-constraints' target="_blanck">foreign-key-constraints</a>
