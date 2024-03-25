@@ -135,10 +135,10 @@ return new class extends Migration{
     public function down()  {
         Schema::dropIfExists('sizes');
     }
-};`} file_name={`example-app / database / migrations / ${getCurrentDate()}_164059_create_sizes_table.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+};`} file_name={`example-app / database / migrations / ${getCurrentDate()}_164059_create_sizes_table.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeCommand>php artisan migrate</CodeCommand>         
       </article>
-      <article id="AddColumnInTable">
+      <article id="Add_Column_In_Table">
             <h2 className="title-h2">5 - إضافة عمود في الجدول</h2>
             <ul><li>إضافة عمود في الجدول <b>sizes</b> بالاسم  <b>description</b></li></ul>
             <CodeCommand>php artisan make:migration add_description_to_sizes</CodeCommand>
@@ -160,8 +160,7 @@ return new class extends Migration{
 
         });
     }
-};
-`} file_name={`example-app / database / migrations / ${getCurrentDate()}_170347_add_description_to_sizes.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+};`} file_name={`example-app / database / migrations / ${getCurrentDate()}_170347_add_description_to_sizes.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeCommand>php artisan migrate</CodeCommand>
       </article>
       <article id='Remove_Column_From_Table'>  
@@ -185,54 +184,195 @@ return new class extends Migration
             Schema::dropColumn('description');   #new
         });
     }
-};
-`} file_name={`example-app / database / migrations / ${getCurrentDate()}_173039_remove_description_from_sizes.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+};`} file_name={`example-app / database / migrations / ${getCurrentDate()}_173039_remove_description_from_sizes.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
             <CodeCommand>php artisan migrate</CodeCommand>
       </article>
 
       <article id="Foreign_Keys">
             <h2 className="title-h2"> 7 - Foreign Keys</h2>
-            <a href='https://laravel.com/docs/9.x/migrations#foreign-key-constraints' target="_blanck">foreign-key-constraints</a>
-            <div>
-               <br/><br/>
-               <h4 className='fs-2'>Exemple 1</h4>
-               <p><b>By Default laravel create users table</b></p>
-               <img src={images.laravel25} className="w-100 mb-2" alt="model"/>
-               to use foreign key with user from sizes <></>table we can use :
-               <div className="h3 text-success">Old method</div>
-               <div className='alert border pb-0 '>
-         <pre>$table{"->"}unsignedBigInteger(<span className='orange'>'user_id'</span>);
+            <p className="style_divv">
+               في <b>Laravel</b> ، يمكنك تحديد مفاتيح خارجية في ترحيلاتك لإنشاء علاقات بين جداول قاعدة البيانات. يُستخدم الأسلوب <bdi><b>foreign()</b></bdi> المقدم من بنّاء الهيكل لتحديد المفاتيح الخارجية. يأخذ هذا الأسلوب اسم عمود المفتاح الخارجي كوسيطة ويسمح لك بتحديد العمود المشار إليه والجدول المرجعي باستخدام الأسلوب <bdi><b>references()</b></bdi>. بالإضافة إلى ذلك، يمكنك استخدام بناء الاستعلام المتميز لتحديد المفاتيح الخارجية مباشرة. لإسقاط المفاتيح الخارجية، يمكنك استخدام الأسلوب <bdi><b>dropForeign()</b></bdi>. تحديد المفاتيح الخارجية بشكل صحيح يضمن التكامل الإشاري في مخطط قاعدة البيانات الخاص بك، مما يحافظ على الاتساق وسلامة البيانات عبر الجداول ذات الصلة.<br/><br/>
+               من هنا للذهاب إلى الموقع الرسمي <a href='https://laravel.com/docs/9.x/migrations#foreign-key-constraints' target="_blanck">foreign-key-constraints</a>
+            </p>
+            <h3 className="title-h3">متال 1 :</h3>
+            <h5 className="title-h5">بشكل افتراضي، يقوم Laravel بإنشاء جدول المستخدمين users </h5>
+            <CodeHighlighter code={`<?php
+
+use Illuminate\\Database\\Migrations\\Migration;
+use Illuminate\\Database\\Schema\\Blueprint;
+use Illuminate\\Support\\Facades\\Schema;
+
+return new class extends Migration {
+    
+    public function up()
+    {
+        Schema::create('users', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->rememberToken();
+            $table->timestamps();
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('users');
+    }
+};`} file_name={`example-app / database / migrations / 2014_10_12_000000_create_users_table.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <h5 className="title-h5">استخدم المفتاح الخارجي <b>(foreign key)</b> مع المستخدم <b>(user)</b> في الجدول <b>sizes</b> . يمكننا استخدام :</h5>
+            <CodeCommand>php artisan make:migration add_user_id_to_sizes</CodeCommand>
+            <h6 className="title-h6">الطريقة القديمة</h6>
+            <CodeHighlighter code={`$table->unsignedBigInteger('user_id');
+$table->foreign('user_id')->references('id')->on('users');`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={`<?php
+
+use Illuminate\\Database\\Migrations\\Migration;
+use Illuminate\\Database\\Schema\\Blueprint;
+use Illuminate\\Support\\Facades\\Schema;
+
+return new class extends Migration {
+    public function up() {
+        Schema::table('sizes', function (Blueprint $table) {
+            $table->unsignedBigInteger('user_id');    #new
+            $table->foreign('user_id')->references('id')->on('users');    #new
+        });
+    }
+
+    public function down() {
+        Schema::table('sizes', function (Blueprint $table) {
+            Schema::dropColumn('user_id');   #new
+        });
+    }
+};`} file_name={`example-app /  database / migrations / ${getCurrentDate()}_225049_add_user_id_to_sizes.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeCommand>php artisan migrate</CodeCommand>
+            <ul><li>تم إنشاء عمود <b>user_id</b> في جدول <b>sizes</b></li></ul>
+            <h6 className="title-h6">الطريقة الحديثة</h6>
+            <CodeHighlighter code={`$table->foreignId('user_id')->constrained('users');`} language="php" number={false} addclassName="mt-3 mb-3" copie={true} />
+            <ul><li>يمكنك استخدام <b>cascadeOnDelete</b> مع <b>user_id</b></li></ul>
+            <CodeHighlighter code={`$table->foreignId('user_id')->constrained('users')->cascadeOnDelete();`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             
-         $table{"->"}foreign(<span className='orange'>'user_id'</span>){"->"}references(<span className='orange'>'id'</span>){"->"}on(<span className='orange'>'users'</span>);</pre>
-               </div>
-               <img src={images.laravel27} className="w-100 mb-2" alt="model"/>
-               <img src={images.laravel26} className="w-100 mb-2" alt="model"/>
-               <img src={images.laravel28} className="w-25 mb-2" alt="model"/>
-               <div className="h3 text-success">New method</div>
-               {/* <div className='alert border pb-0 '>
-                  <pre>$table{"->"}foreignId(<span className='orange'>'user_id'</span>){"->"}constrained(<span className='orange'>'users'</span>);</pre>
-               </div> */}
-               <b>You can use cascadeOnDelete with user_id</b>
-               {/* <div className='alert border pb-0 '>
-                  <pre>$table{"->"}foreignId(<span className='orange'>'user_id'</span>){"->"}constrained(<span className='orange'>'users'</span>){"->"}cascadeOnDelete();</pre>
-               </div> */}
-               <img src={images.laravel29} className="w-100 mb-2" alt="model"/>
-               <br/><br/><br/><br/>
-               <h4 className='fs-2'>Exemple 2</h4>
-               <b> categories table </b>
-               <img src={images.laravel46} className="w-100 mb-2" alt="model"/>
-               <b> Products table </b>
-               <img src={images.laravel45} className="w-100 mb-2" alt="model"/>
-               <b> App/Models/Category.php </b>
-               <img src={images.laravel47} className="w-100 mb-2" alt="model"/>
-               <b> App/Models/Product.php </b>
-               <img src={images.laravel48} className="w-100 mb-2" alt="model"/>
-               <b> App/Http/Controllers/ControllerName.php </b>
-               <img src={images.laravel49} className="w-100 mb-2" alt="model"/>
-               <b> list.blade.php </b>
-               <img src={images.laravel50} className="w-100 mb-2" alt="model"/>
-            </div>
+            <CodeHighlighter code={`<?php
+
+use Illuminate\\Database\\Migrations\\Migration;
+use Illuminate\\Database\\Schema\\Blueprint;
+use Illuminate\\Support\\Facades\\Schema;
+
+return new class extends Migration {
+    public function up() {
+        Schema::table('sizes', function (Blueprint $table) {
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();   #new
+        });
+    }
+
+    public function down() {
+        Schema::table('sizes', function (Blueprint $table) {
+            Schema::dropColumn('user_id');     #new
+        });
+    }
+};
+`} file_name={`example-app / database / migrations / ${getCurrentDate()}_225049_add_user_id_to_sizes.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         
+            <h3 className="title-h3">متال 2 :</h3>
+            <CodeCommand>php artisan make:model Category --migration</CodeCommand>
+            <CodeCommand>php artisan make:model Product --migration</CodeCommand>
+            <CodeHighlighter code={`<?php
+
+use Illuminate\\Database\\Migrations\\Migration;
+use Illuminate\\Database\\Schema\\Blueprint;
+use Illuminate\\Support\\Facades\\Schema;
+
+return new class extends Migration {
+    public function up() {
+        Schema::create('categories', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->timestamps();
+        });
+    }
+
+    public function down() {
+        Schema::dropIfExists('categories');
+    }
+};`} file_name={`example-app / database / migrations / ${getCurrentDate()}_002334_create_categories_table.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={`<?php
+
+use Illuminate\\Database\\Migrations\\Migration;
+use Illuminate\\Database\\Schema\\Blueprint;
+use Illuminate\\Support\\Facades\\Schema;
+
+return new class extends Migration {
+    public function up() {
+        Schema::create('products', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('image');
+            $table->string('description');
+            $table->float('price');
+            $table->boolean('available');
+            $table->foreignId('category_id')->constrained('categories')->cascadeOnDelete();
+            $table->timestamps();
+        });
+    }
+
+    public function down() {
+        Schema::dropIfExists('products');
+    }
+};`} file_name={`example-app / database / migrations / ${getCurrentDate()}_002404_create_products_table.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeCommand>php artisan migrate</CodeCommand>
+            <CodeHighlighter code={`<?php
+
+namespace App\\Models;
+
+use Illuminate\\Database\\Eloquent\\Factories\\HasFactory;
+use Illuminate\\Database\\Eloquent\\Model;
+
+class Category extends Model
+{
+    use HasFactory;
+    public function products(){      #new
+        return $this->hasMany(Product::class);
+    }
+}`} file_name={`example-app / app / Models / Category.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={`<?php
+
+namespace App\\Models;
+
+use Illuminate\\Database\\Eloquent\\Factories\\HasFactory;
+use Illuminate\\Database\\Eloquent\\Model;
+
+class Product extends Model
+{
+    use HasFactory;
+    public function category()  {
+        return $this->belongsTo(Category::class);
+    }
+}`} file_name={`example-app / app / Models / Product.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/> 
             
+        
+            <CodeHighlighter code={`
+public function admin_products_list(){
+  return view('admin.products.list', ["products"=>Product::all()]);
+}`} file_name={`example-app / app / Http / Controllers / ControllerName.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={`
+@foreach ($products as $product)
+    <tr>
+        <td><a href="{{ route('admin_product_edit_views' , [$product->id]) }}">{{$product->name}} <a></td>
+        <td> {{ $product->price }} </td>
+        <td> {{ $product->category->name }} </td>
+        <td>
+        @if( $product->available === 1 )
+                <input type="checkbox" checked />
+        @endif
+        </td>
+        <td> {{ $product->created_at }} </td>
+        <td> {{ $product->updated_at }} </td>
+    </tr>
+@endforeach`} file_name={`example-app / resources / views / admin / products / list.blade.php`} language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+                
+            {/* <CodeHighlighter code={``} file_name={`example-app / `} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/> */}
       </article>
       <article id='truncate_models_table'>
             <h2 className="title-h2">8 - truncate models table</h2>
@@ -243,11 +383,10 @@ return new class extends Migration
       </article>
       <article id='DropTheLastMigrateInDB'>
             <h2 className="title-h2">9 - Delete The Last Migrations in DataBase</h2>
-            <div>
-               <div className='alert bg-dark text-light pb-0'><pre>php artisan migrate:rollback</pre></div>
-               <b>To delete many magration use (you can choose the number of migrations you want to delete)</b>
-               {/* <div className='alert bg-dark text-light pb-0'><pre>php artisan migrate:rollback --step=<sapn className='text-danger'>2</span></pre></div> */}
-            </div>
+            <div className='alert bg-dark text-light pb-0'><pre>php artisan migrate:rollback</pre></div>
+            <b>To delete many magration use (you can choose the number of migrations you want to delete)</b>
+            {/* <div className='alert bg-dark text-light pb-0'><pre>php artisan migrate:rollback --step=<sapn className='text-danger'>2</span></pre></div> */}
+      
       </article>
       <article id="Clearalltableindbandcreatehimagain">
             <h2 className="title-h2">10 - Clear all table in db and create him again</h2>
