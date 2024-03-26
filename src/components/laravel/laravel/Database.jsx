@@ -329,8 +329,7 @@ namespace App\\Models;
 use Illuminate\\Database\\Eloquent\\Factories\\HasFactory;
 use Illuminate\\Database\\Eloquent\\Model;
 
-class Category extends Model
-{
+class Category extends Model {
     use HasFactory;
     public function products(){      #new
         return $this->hasMany(Product::class);
@@ -343,10 +342,9 @@ namespace App\\Models;
 use Illuminate\\Database\\Eloquent\\Factories\\HasFactory;
 use Illuminate\\Database\\Eloquent\\Model;
 
-class Product extends Model
-{
+class Product extends Model {
     use HasFactory;
-    public function category()  {
+    public function category(){      #new
         return $this->belongsTo(Category::class);
     }
 }`} file_name={`example-app / app / Models / Product.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/> 
@@ -371,63 +369,121 @@ public function admin_products_list(){
         <td> {{ $product->updated_at }} </td>
     </tr>
 @endforeach`} file_name={`example-app / resources / views / admin / products / list.blade.php`} language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
-                
-            {/* <CodeHighlighter code={``} file_name={`example-app / `} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/> */}
       </article>
-      <article id='truncate_models_table'>
+      <article id='Truncate_models_table'>
             <h2 className="title-h2">8 - truncate models table</h2>
-            <div>
-               <div className='alert alert-warning'> Product::truncate(); </div>
-               <img src={images.laravel6} className="w-100 mb-2" alt="model"/>
-            </div>
+            <p className="style_divv">
+                في <b>Laravel</b> ، يمكنك قص جدول باستخدام <b>Eloquent</b> ، <b>ORM (Object-Relational Mapping)</b>  المقدم من <b>Laravel</b>. إليك كيف يمكنك قص جدول <b>"models"</b> باستخدام <b>Eloquent</b> 
+                <CodeHighlighter code={`use App\\Models\\ModelName;
+
+ModelName::truncate();`}  language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+                تأكد من استبدال <b>'ModelName'</b> بالاسم الفعلي للنموذج المرتبط بجدول <b>"models"</b> الخاص بك. سيقوم هذا الكود بحذف جميع الصفوف من جدول <b>"models"</b> ، مما يؤدي إلى قصه بشكل فعال.<br/><br/>
+                تذكر أن تمارس الحذر عند قص الجداول ، حيث سيؤدي ذلك إلى حذف جميع البيانات من الجدول بشكل دائم. تأكد من عمل نسخ احتياطي لبياناتك إذا لزم الأمر قبل القيام بمثل هذه العمليات. كما تأكد من أن لديك الصلاحيات اللازمة لإجراء تعديلات على قاعدة البيانات في تطبيق Laravel الخاص بك.
+            </p>
+            <CodeHighlighter code={`<?php
+
+namespace App\\Http\\Controllers;
+use Illuminate\\Http\\Request;
+
+class ControllerName extends Controller
+{
+     public function welcome(){
+          Product::truncate();       # to remove all rows from table
+          return view("welcome" , ['products' => Product::class] );
+     }
+}`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
       </article>
-      <article id='DropTheLastMigrateInDB'>
-            <h2 className="title-h2">9 - Delete The Last Migrations in DataBase</h2>
-            <div className='alert bg-dark text-light pb-0'><pre>php artisan migrate:rollback</pre></div>
-            <b>To delete many magration use (you can choose the number of migrations you want to delete)</b>
-            {/* <div className='alert bg-dark text-light pb-0'><pre>php artisan migrate:rollback --step=<sapn className='text-danger'>2</span></pre></div> */}
-      
+      <article id='Drop_the_last_migrate'>
+            <h2 className="title-h2">9 - حذف عمليات الترحيل الأخيرة (last Migrations) في قاعدة البيانات </h2>
+            <CodeCommand>php artisan migrate:rollback</CodeCommand>
+            <b> لحذف العديد من عمليات الترحيل (يمكنك اختيار عدد عمليات الترحيل التي تريد حذفها) </b>
+            <CodeCommand>php artisan migrate:rollback --step=2</CodeCommand>           
       </article>
-      <article id="Clearalltableindbandcreatehimagain">
-            <h2 className="title-h2">10 - Clear all table in db and create him again</h2>
-            <div>
-               <div className='alert bg-dark text-light pb-0'><pre>php artisan migrate:refresh</pre></div>
-            </div>
+      <article id="Clear_tables_and_create_it_again">
+            <h2 className="title-h2">10 - مسح الجداول وإنشائها مرة أخرى</h2>
+            <CodeCommand>php artisan migrate:refresh</CodeCommand>           
       </article>
       <article id="soft_delete">     
             <h2 className="title-h2">11 - soft delete</h2>
-            <a href='https://laravel.com/docs/9.x/eloquent#soft-deleting' target='_blanck'>soft delete documentation</a>
-            <a href='https://www.youtube.com/watch?v=TiCvGwxqWlQ&list=PLftLUHfDSiZ4GfPZxaFDsA7ejUzD7SpWa&index=40' target='_blanck'> Youtube </a> 
-            <div className='alert fs-5 alert-info mt-3'><b>soft delete</b> : is way to retain data after deleting it </div>
-            <h4> 1) First Go to Models you want to use soft delete with it </h4>
-            {/* <div className='alert alert-warning pb-0'><pre>
-         use Illuminate\Database\Eloquent\SoftDeletes;
-            
-         class Product extends Model{
-             use SoftDeletes;
-         }</pre>
-            </div> */}
-            <h4> 2) in your database add  </h4>
-            {/* <div className='alert alert-warning pb-0'><pre>   Schema::table('products', function (Blueprint $table) {
-                  .... 
-                  $table{"->"}softDeletes();
-            });</pre>
-            </div> */}
-            <div className='alert bg-dark text-light pb-0'><pre>php artisan migrate</pre></div>
-
-            <p className='fs-5'> 
-               when you use <b>SoftDeletes</b> Laravel add Column <b>deleted_at</b> to your table.<br/>
-               When you Create instance of Product the Column <b>deleted_at take null</b> .<br/>
-               When you Delete the Product instance deleted_at take date and time So you can rerun him if you want .
+            <p className="style_divv">
+                <b>soft delete</b> هي طريقة للاحتفاظ بالبيانات بعد حذفها . <br/><br/>
+                بالإضافة إلى إزالة السجلات فعليًا من قاعدة بياناتك، يستطيع <b>Eloquent</b> أيضًا "الحذف الناعم" <b>(soft delete)</b> للنماذج. عندما يتم حذف النماذج بشكل مبدئي، لا تتم إزالتها فعليًا من قاعدة البيانات الخاصة بك. بدلاً من ذلك، يتم تعيين سمة <b>deleted_at</b> على النموذج للإشارة إلى التاريخ والوقت الذي تم فيه "حذف" النموذج. لتمكين الحذف المبدئي لنموذج، قم بإضافة سمة <kbd>Illuminate\Database\Eloquent\SoftDeletes</kbd> إلى النموذج :<br/><br/>
+                من هنا للذهاب إلى الموقع الرسمي <a href='https://laravel.com/docs/9.x/eloquent#soft-deleting' target='_blanck'>soft delete</a>
             </p>
+            <h3 className="title-h3">1 - انتقل أولاً إلى النماذج (Models) التي تريد استخدام الحذف الناعم معها </h3>
+            <CodeHighlighter code={`<?php
 
-            <h4> 3) Get All instance deleted </h4>
-            {/* <div className='alert alert-warning pb-0'><pre>Product::withTrashed()-{">"}get()</pre></div> */}
-            <b>See documentation to restore and force Delete</b>
+namespace App\\Models;
+
+use Illuminate\\Database\\Eloquent\\Model;
+use Illuminate\\Database\\Eloquent\\SoftDeletes;
+
+class Product extends Model {
+    use SoftDeletes;    
+}
+?>`} file_name={`example-app / app / Models / Product.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <h3 className="title-h3">2 -  في قاعدة البيانات الخاصة بك أضاف </h3>
+            <CodeCommand>php artisan make:migration add_delete_at_to_products</CodeCommand>
+            <CodeHighlighter code={`<?php
+
+use Illuminate\\Database\\Migrations\\Migration;
+use Illuminate\\Database\\Schema\\Blueprint;
+use Illuminate\\Support\\Facades\\Schema;
+
+return new class extends Migration {
+    public function up() {
+        Schema::table('products', function (Blueprint $table) {
+            $table->softDeletes();
+        });
+    }
+
+    public function down() {
+        Schema::table('products', function (Blueprint $table) {
+            $table->dropSoftDeletes();
+        });
+    }
+};`} file_name={`example-app / database / migrations / ${getCurrentDate()}_235202_add_delete_at_to_products.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeCommand>php artisan migrate</CodeCommand>
+            <ul>
+                 <li>عند استخدام <b>SoftDeletes</b> لارافيل تقوم بإضافة عمود <b>deleted_at</b> إلى الجدول الخاص بك.</li>
+                 <li>عندما تقوم بإنشاء مثيل للمنتج، فإن العمود <b>deleted_at</b> يأخذ قيمة <b>null</b> .</li>
+                 <li>عند حذف مثيل المنتج، يتم حذفه في التاريخ والوقت حتى تتمكن من إعادة تشغيله إذا أردت.</li>
+            </ul>
+            <h3 className="title-h3">3 - الحصول على جميع instance المحذوفة </h3>
+            <CodeHighlighter code={`Product::withTrashed()->get()`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
       </article>
       <article id="eloquent_scopes">
-            <h2 className="title-h2">12 - Eloquent scopes </h2>
-            <a href='https://laravel.com/docs/10.x/eloquent#local-scopes' target='_blanck'>eloquent scopes documentation</a>
+            <h2 className="title-h2">12 - النطاقات Eloquent scopes </h2>
+            <p className="style_divv">
+                تسمح نطاقات <b>Eloquent</b> في <b>Laravel</b> لك بتجميع القيود المستخدمة بشكل شائع في الاستعلامات داخل وظيفة قابلة لإعادة الاستخدام ضمن نموذج <b>Eloquent</b> الخاص بك. يساعد ذلك في الحفاظ على نظافة الكود وسهولة الصيانة ويعزز إعادة استخدام الكود.<br/><br/>
+                من هنا للذهاب إلى الموقع الرسمي  <a href='https://laravel.com/docs/10.x/eloquent#local-scopes' target='_blanck'>eloquent scopes</a>
+            </p>
+            <h3 className="title-h3">1 - تحديد النطاق (Scope) واستخدامه </h3>
+            <h5 className="title-h5">1 - تحديد النطاق </h5>
+            <CodeHighlighter code={`<?php
+
+namespace App\\Models;
+
+use Illuminate\\Database\\Eloquent\\Model;
+
+class Product extends Model
+{
+    public function scopeAvailable($query)
+    {
+        return $query->where('available', true);
+    }
+}`} file_name={`example-app / app / Models / Product.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <h5 className="title-h5">2 - إستخدام النطاق </h5>
+            <CodeHighlighter code={`$availableProducts = Product::available()->get();`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+
+            <h3 className="title-h3">2 -  Dynamic Scopes </h3>
+            <ul><li>يمكن للنطاقات أن تقبل المعاملات لجعلها أكثر مرونة. على سبيل المثال، إذا أردت استرجاع المنتجات استنادًا إلى نطاق سعر معين :</li></ul>
+            <CodeHighlighter code={`public function scopePriceRange($query, $min, $max)
+{
+    return $query->whereBetween('price', [$min, $max]);
+}`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={`$productsInPriceRange = Product::priceRange(10, 100)->get();`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+           
       </article>
       <article id="Seeder_class">
             <h2 className="title-h2">13 - Seeder class  </h2>
@@ -436,6 +492,7 @@ public function admin_products_list(){
                In Laravel, seeders are used to populate database tables with initial or test data, making it easier to develop and test applications by providing a consistent data structure for testing and development environments.<br/>
                In this course we use seeder to create an admin account that cannot be deleted from the database, you can follow these steps.
             </p>
+            {/* <CodeHighlighter code={``} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/> */}
             <h3 className="title-h3">1 - Create Seeder Class</h3>
             <div className="alert bg-dark text-light mt-3 pb-0"><pre>php artisan make:seeder NameSeeder</pre></div>      
             <div className="alert bg-dark text-light mt-3 pb-0"><pre>php artisan make:seeder SuperAdminSeeder</pre></div>  
