@@ -1,9 +1,12 @@
-import controller_r from "../../assests/images/laravel/controller-r.png"
-import index from "../../assests/images/laravel/index.png"
-import Laravel0 from "../../assests/images/laravel/Laravel0.png"
+// images used 
 import laravel0_env from "../../assests/images/laravel/laravel0_env.png"
 import laravel0_env2 from "../../assests/images/laravel/laravel0_env2.png"
 import laravel0_env3 from "../../assests/images/laravel/laravel0_env3.png"
+
+// delete
+import controller_r from "../../assests/images/laravel/controller-r.png"
+import index from "../../assests/images/laravel/index.png"
+import Laravel0 from "../../assests/images/laravel/Laravel0.png"
 import laravel0_layoute from "../../assests/images/laravel/laravel0_layoute.png"
 import laravel0_model1 from "../../assests/images/laravel/laravel0_model1.png"
 import laravel0_model2 from "../../assests/images/laravel/laravel0_model2.png"

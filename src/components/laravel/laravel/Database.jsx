@@ -1,4 +1,3 @@
-import images from "../imagesLaravel";
 import { CodeCommand , CodeHighlighter } from "../../path";
 
 export default function Database(props){
@@ -141,6 +140,7 @@ return new class extends Migration{
       <article id="Add_Column_In_Table">
             <h2 className="title-h2">5 - إضافة عمود في الجدول</h2>
             <ul><li>إضافة عمود في الجدول <b>sizes</b> بالاسم  <b>description</b></li></ul>
+            <div dir='ltr' className="alert bg-dark text-light">php artisan make:migration <span className="text-warning">add_<span className="text-danger">ColumnName</span>_to_<span className="text-danger">tableName</span> </span></div>
             <CodeCommand>php artisan make:migration add_description_to_sizes</CodeCommand>
             <CodeHighlighter code={`<?php
 
@@ -487,20 +487,66 @@ class Product extends Model
       </article>
       <article id="Seeder_class">
             <h2 className="title-h2">13 - Seeder class  </h2>
-            <a href='https://laravel.com/docs/10.x/seeding#writing-seeders' target='_blanck'>seeders documentation</a>
-            <p className='fs-5'> 
-               In Laravel, seeders are used to populate database tables with initial or test data, making it easier to develop and test applications by providing a consistent data structure for testing and development environments.<br/>
-               In this course we use seeder to create an admin account that cannot be deleted from the database, you can follow these steps.
+            <p className='style_divv'> 
+                في <b>Laravel</b>، يتم استخدام <b>seeders</b>  لملء جداول قاعدة البيانات بالبيانات الأولية أو بيانات الاختبار، مما يسهل تطوير التطبيقات واختبارها من خلال توفير بنية بيانات متسقة لبيئات الاختبار والتطوير.<br/><br/>
+                في هذه الدورة نستخدم برنامج الزارعة لإنشاء حساب مسؤول لا يمكن حذفه من قاعدة البيانات، يمكنك اتباع الخطوات التالية.
+               من هنا للذهاب إلى الموقع الرسمي <a href='https://laravel.com/docs/10.x/seeding#writing-seeders' target='_blanck'>seeders</a>
             </p>
-            {/* <CodeHighlighter code={``} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/> */}
-            <h3 className="title-h3">1 - Create Seeder Class</h3>
-            <div className="alert bg-dark text-light mt-3 pb-0"><pre>php artisan make:seeder NameSeeder</pre></div>      
-            <div className="alert bg-dark text-light mt-3 pb-0"><pre>php artisan make:seeder SuperAdminSeeder</pre></div>  
-            <p>the seeder class will create in database/seeders/ folder</p>    
-            <h3 className="title-h3">2 - Create super admin account in seeder class</h3>
-            <img src={images.laravel59} className="w-100 mb-2" alt="model"/>
-            <h3 className="title-h3">3 - Run seeder class</h3>
-            <div className="alert bg-dark text-light mt-3 pb-0"><pre>php artisan db:seed --className=SuperAdminSeeder</pre></div>  
+            <h3 className="title-h3">1 - إنشاء Seeder Class</h3>
+            <div dir='ltr' className="alert bg-dark text-light">php artisan make:seeder <span className="text-warning">NameSeeder</span></div>
+            <CodeCommand>php artisan make:seeder SuperAdminSeeder</CodeCommand>
+            <ul><li>سيتم إنشاء <b>seeder class</b> في المسار <kbd>database/seeders/</kbd> </li></ul>
+            <h3 className="title-h3">2 - إنشاء حساب مستخدم في seeder class</h3>
+            <CodeHighlighter code={`<?php
+
+namespace Database\\Seeders;
+
+use Illuminate\\Database\\Console\\Seeds\\WithoutModelEvents;
+use Illuminate\\Database\\Seeder;
+use App\\Models\\User;      #new
+use Illuminate\\Support\\Facades\\Hash;      #new
+
+class SuperAdminSeeder extends Seeder{
+    public function run(): void{
+        $is_user = $is_email = $is_password = false;
+        do {
+            ($is_user === true)? $this->command->error('user is required.') : $is_user = true ;
+            echo "input your Username : ";
+            $user = trim(fgets(STDIN));
+        }while( strlen($user) === 0 );
+
+        do {
+            ($is_email === true)? 
+            $this->command->error('email invalid .') : $is_email = true ;
+            echo "input your email : ";
+            $email = trim(fgets(STDIN));
+        } while (!(filter_var($email, FILTER_VALIDATE_EMAIL) && strpos($email, "@gmail.com") !== false ));
+       
+        do {
+            echo "Create your Passord : ";
+            $password = trim(fgets(STDIN));
+            echo "Confirm Passord : ";
+            $confirm_password = trim(fgets(STDIN));
+            if($is_password === true){
+                ($password !== $confirm_password)?  
+                $this->command->error("password don't conformatible with confirm password."):
+                $this->command->error("the password must have at least 8 char .");
+            }else {
+                $is_password = true ;
+            }
+        } while ($password !== $confirm_password || strlen($password) < 7 );
+      
+        User::create([
+            'name' => strip_tags($user),
+            'email' => strip_tags($email),
+            'password' => Hash::make($password),
+            'email_verified_at'=> date('Y-m-d H:i:s'),
+        ]);
+        $this->command->info('Super admin create successfully.');
+    }
+}`} file_name="example-app / database / seeders / SuperAdminSeeder.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <h3 className="title-h3">3 - تشغيل seeder class</h3>
+            <CodeCommand>php artisan db:seed --class=SuperAdminSeeder</CodeCommand>
       </article>
    </>
    )
