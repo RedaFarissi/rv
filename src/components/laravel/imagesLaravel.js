@@ -2,6 +2,8 @@
 import laravel0_env from "../../assests/images/laravel/laravel0_env.png"
 import laravel0_env2 from "../../assests/images/laravel/laravel0_env2.png"
 import laravel0_env3 from "../../assests/images/laravel/laravel0_env3.png"
+import laravel5 from "../../assests/images/laravel/laravel5.png"
+
 
 // delete
 import controller_r from "../../assests/images/laravel/controller-r.png"
@@ -57,7 +59,6 @@ import laravel46 from "../../assests/images/laravel/laravel46.png"
 import laravel47 from "../../assests/images/laravel/laravel47.png"
 import laravel48 from "../../assests/images/laravel/laravel48.png"
 import laravel49 from "../../assests/images/laravel/laravel49.png"
-import laravel5 from "../../assests/images/laravel/laravel5.png"
 import laravel50 from "../../assests/images/laravel/laravel50.png"
 import laravel51 from "../../assests/images/laravel/laravel51.png"
 import laravel52 from "../../assests/images/laravel/laravel52.png"
@@ -81,7 +82,11 @@ import laravel8 from "../../assests/images/laravel/laravel8.png"
 import laravel9 from "../../assests/images/laravel/laravel9.png"
 
 const images = {
-    controller_r,index,Laravel0,laravel0_env,laravel0_env2,laravel0_env3,
+    //image laravel
+    laravel0_env,laravel0_env2,laravel0_env3,laravel5,
+
+    //delete
+    controller_r,index,Laravel0,
     laravel0_layoute,laravel0_model1,laravel0_model2,laravel0_result,
     laravel0_result2,laravel0_show,laravel1,laravel10,laravel11,laravel12,
     laravel13,laravel14,laravel15,laravel16,laravel17,laravel18,laravel19,
@@ -89,7 +94,7 @@ const images = {
     laravel26,laravel27,laravel28,laravel29,laravel3,laravel30,laravel31,
     laravel32,laravel33,laravel34,laravel35,laravel36,laravel37,laravel38,
     laravel39,laravel4,laravel40,laravel41,laravel42,laravel43,laravel44,
-    laravel45,laravel46,laravel47,laravel48,laravel49,laravel5,laravel50,
+    laravel45,laravel46,laravel47,laravel48,laravel49,laravel50,
     laravel51,laravel52,laravel53,laravel54,laravel55,laravel57,laravel58,
     laravel59,laravel6,laravel60,laravel61,laravel62,laravel64,laravel65,
     laravel66,laravel67,laravel68,laravel7,laravel8,laravel9

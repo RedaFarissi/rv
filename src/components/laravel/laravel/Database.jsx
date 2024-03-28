@@ -1,16 +1,16 @@
 import { CodeCommand , CodeHighlighter } from "../../path";
 
 export default function Database(props){
-   function getCurrentDate() {
-      const currentDate = new Date();
-      const year = currentDate.getFullYear();
-      const month = String(currentDate.getMonth() + 1).padStart(2, '0'); 
-      const day = String(currentDate.getDate()).padStart(2, '0');
-    
-      return `${year}_${month}_${day}`;
-   }
+    function getCurrentDate() {
+       const currentDate = new Date();
+       const year = currentDate.getFullYear();
+       const month = String(currentDate.getMonth() + 1).padStart(2, '0'); 
+       const day = String(currentDate.getDate()).padStart(2, '0');
 
-   return(
+       return `${year}_${month}_${day}`;
+    }
+
+    return(
    <>
       <h1 className="heading-style">Laravel Database </h1>
       <article id="Connect_with_database">
@@ -40,11 +40,11 @@ DB_PASSWORD=
                   <li><b>view :</b> أي شيء عن الواجهة الأمامية</li>
                   <li><b>Controller :</b> التحكم بين <b>Modele</b> و <b>View</b></li>
                </ul>
-               <b>إنشاء Model  و Table :</b>
+               <b>إنشاء <b>Model</b>  و <b>Table</b> :</b>
                <CodeCommand>php artisan make:model Country --migration</CodeCommand>
-               <b>إنشاء Model  و Table و Control:</b>
+               <b>إنشاء <b>Model</b> و <b>Table</b> و <b>Controller</b> :</b>
                <CodeCommand>php artisan make:model Country -mc</CodeCommand>
-               <b>إنشاء Model  و Table و Control recource:</b>
+               <b>إنشاء <b>Model</b>  و <b>Table</b> و <b>Controller recource</b> :</b>
                <CodeCommand>php artisan make:model Country -mcr</CodeCommand>
                <ul>
                   <li>في هذه الحالة <b>Country</b> هو إسم <b>model</b>.</li>
