@@ -3,6 +3,7 @@ import laravel0_env from "../../assests/images/laravel/laravel0_env.png"
 import laravel0_env2 from "../../assests/images/laravel/laravel0_env2.png"
 import laravel0_env3 from "../../assests/images/laravel/laravel0_env3.png"
 import laravel5 from "../../assests/images/laravel/laravel5.png"
+import laravel_query_builder_result from "../../assests/images/laravel/laravel_query_builder_result.png"
 
 
 // delete
@@ -83,7 +84,7 @@ import laravel9 from "../../assests/images/laravel/laravel9.png"
 
 const images = {
     //image laravel
-    laravel0_env,laravel0_env2,laravel0_env3,laravel5,
+    laravel0_env,laravel0_env2,laravel0_env3,laravel5,laravel_query_builder_result,
 
     //delete
     controller_r,index,Laravel0,

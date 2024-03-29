@@ -177,7 +177,6 @@ class ProductController extends Controller {
       </article>
       <article id='Store_and_Upload_image'>
             <h2 className="title-h2">4 -  Store and Upload image  </h2>
-            <ul><li></li></ul>
             <CodeCommand>php artisan storage:link</CodeCommand>
             <CodeHighlighter code={`#...
       public function store(Request $request){

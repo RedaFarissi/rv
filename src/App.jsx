@@ -64,7 +64,7 @@ function App() {
       ["MVC","what_is_MVC","First_Laravel_Project","run_project","artisan","views","route","request","Controller","layoute_page","css_and_javaScript","route_name","controller_resource","list_all_route_in_project","Exemple"],
       ["database","Connect_with_database","Create_models","migrate","Create_Table_without_Models","Add_Column_In_Table","Remove_Column_From_Table","Foreign_Keys","Truncate_models_table","Drop_the_last_migrate","Clear_tables_and_create_it_again","soft_delete","eloquent_scopes","Seeder_class"],
       ["Database_Route_resource","New_project","index","create","Store_and_Upload_image","Show","Edit","Destroy","only_and_except"],
-      ["Database_Query_Builder","Intro_QueryBuilder","insertInQueryBuilder","GetWithQueryBuilder","full_Exemple_Create_Edit_Delete","Delete_all_Data_with_Query_Builder","truncate_with_Query_Builder"],
+      ["Database_Query_Builder","What_is_Query_Builder","Insert","Get","Full_Exemple","Delete_All","truncate"],
       ["middleware","middleware_Exemple1","middleware_Exemple2"],
       ["tinker","useTinker","TinkerExemple1"],
       ["mail","send-mail"],
