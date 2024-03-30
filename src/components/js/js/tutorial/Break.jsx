@@ -50,8 +50,8 @@ for(i=0; i<9 ;i++){
             يمكن أيضًا استخدام تعليمة <b>break</b> للقفز من الحلقة
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Break" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Break" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Break' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>i = 0<br/>i = 1<br/>i = 2<br/>i = 3</h2>
         </Result>
@@ -63,8 +63,8 @@ for(i=0; i<9 ;i++){
             <CodeHighlighter code={code2} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Break" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Break" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Break' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>i = 0<br/>i = 1<br/>i = 2<br/>i = 3<br/>i = 5<br/>i = 6<br/>i = 7<br/>i = 8</h2>
         </Result>

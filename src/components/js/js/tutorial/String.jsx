@@ -184,8 +184,8 @@ document.getElementById("demo").innerHTML += myArray[6]  ;`
             تعيد الخاصية <b>length</b> قيمة رقمية .
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <ResultConsole title='String' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="d-flex justify-content-between align-items-center">
                 <span>text length = 4</span>
@@ -212,8 +212,8 @@ document.getElementById("demo").innerHTML += myArray[6]  ;`
 
         <div className="mital"> متال 1 :  </div>
         <ul><li>بدون إستخدام شرطة مائلة للخلف</li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <ResultConsole title='String' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="d-flex justify-content-between align-items-center">
                 <span className="text-danger">(Uncaught SyntaxError: missing ) after argument list</span>
@@ -222,8 +222,8 @@ document.getElementById("demo").innerHTML += myArray[6]  ;`
         </ResultConsole>
         <div className="mital">متال 2 :  </div>
         <ul><li>عند إستخدام  شرطة مائلة للخلف </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <ResultConsole title='String' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="d-flex justify-content-between align-items-center">
                 <span>Name : "reda"</span>
@@ -245,8 +245,8 @@ document.getElementById("demo").innerHTML += myArray[6]  ;`
             </tbody>
         </table>
         <div className="mital"> متال 1 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>{"text length \f Adil"}</h2>
         </Result> 
@@ -260,14 +260,14 @@ document.getElementById("demo").innerHTML += myArray[6]  ;`
             <CodeHighlighter code={`let y = new String("Reda");`} language="js" addClass="mt-3 mb-3" copie={true}  />  
         </p>
         <div className="mital"> متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>true</h2>
         </Result>
         <div className="mital"> متال 2 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple6.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple6.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple6.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple6.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Reda</h2>
         </Result>
@@ -292,14 +292,14 @@ document.getElementById("demo").innerHTML += myArray[6]  ;`
             يقطع هذا المثال جزءًا من سلسلة من الموضع 7 إلى الموضع 13
         </p>
         <div className="mital"> متال 1 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple7.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple7.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple7.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple7.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Banana</h2>
         </Result>
         <div className="mital"> متال 2 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple8.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple8.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple8.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple8.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Banana</h2>
         </Result>
@@ -309,8 +309,8 @@ document.getElementById("demo").innerHTML += myArray[6]  ;`
             الفرق هو أن <bdi><b>substring()</b></bdi> لا يمكنها قبول الفهارس السالبة
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple9.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple9.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple9.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple9.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Kiwi</h2>
         </Result>
@@ -320,15 +320,15 @@ document.getElementById("demo").innerHTML += myArray[6]  ;`
             الفرق هو أن المعلمة الثانية تحدد طول الجزء المستخرج.
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple10.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple10.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple10.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple10.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Ba</h2>
         </Result>
         <div className="mital"> متال 2 :  </div>
         <ul><li> تستقبل الدالة القيم السالبة أيضا </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple11.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple11.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple11.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple11.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Kiwi</h2>
         </Result>
@@ -340,8 +340,8 @@ document.getElementById("demo").innerHTML += myArray[6]  ;`
             <CodeHighlighter code={`let newText = text.replace("old string", "new string");`} language="js" addClass="mt-3 mb-3" copie={true}  />  
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple12.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple12.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple12.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple12.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Visit Me on My Web</h2>
         </Result>
@@ -360,8 +360,8 @@ document.getElementById("demo").innerHTML += myArray[6]  ;`
             <CodeHighlighter code={`let newText = text.toLowerCase();`} language="js" addClass="mt-3 mb-3" copie={true}  />  
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple13.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple13.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple13.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple13.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>HELLO WORD</h2>
             <h2>hello word</h2>
@@ -377,8 +377,8 @@ let text2 = "string value 2";
 let text3 = text.concat(" ", text2);`} language="js" addClass="mt-3 mb-3" copie={true}  />  
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple14.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple14.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple14.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple14.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Reda Eskouni</h2>
         </Result>
@@ -389,8 +389,8 @@ let text3 = text.concat(" ", text2);`} language="js" addClass="mt-3 mb-3" copie=
 let text2 = text1.trim();`} language="js" addClass="mt-3 mb-3" copie={true}  />  
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple15.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple15.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple15.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple15.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <ResultConsole title='String' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="d-flex justify-content-between align-items-center">
                 <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reda    </span>
@@ -406,15 +406,15 @@ let text2 = text1.trim();`} language="js" addClass="mt-3 mb-3" copie={true}  />
             تستعمل الدالة <b><bdi>padStart</bdi></b>  و <b><bdi>padEnd</bdi></b> لدعم الحشو في بداية السلسلة ونهايتها .
         </p>
         <h3 className="title-h3">1. <bdi>padStart()</bdi></h3>
-        <CodeHighlighter file_name="index.html"code={codeExemple16.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple16.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple16.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple16.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>padded : 000005</h2>
             <h2>padded : 00Reda</h2>
         </Result>
         <h3 className="title-h3">2. <bdi>padEnd()</bdi></h3>
-        <CodeHighlighter file_name="index.html"code={codeExemple17.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple17.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple17.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple17.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>padded : 500000</h2>
         </Result>
@@ -434,8 +434,8 @@ let newText = text.charAt(0);`} language="js" addClass="mt-3 mb-3" copie={true} 
 let array = text.split("");`} language="js" addClass="mt-3 mb-3" copie={true}  />
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple18.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple18.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple18.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple18.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>HTML <br/> CSS<br/> React<br/> undefined</h2>
         </Result>        

@@ -54,8 +54,8 @@ function function_name2(){
         <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
       </p>
       <div className="mital">متال :  </div>
-      <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="ondurationchange" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-      <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+      <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="ondurationchange" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+      <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
       <ResultAlert title='ondurationchange' logo={images.html_logo} clickOk={clickOk} displayAlert={displayAlertExemple} alertValue={valueAlertExemple} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
           <video controls width="50%" >
               <source src={images.video} type="video/mp4"/>

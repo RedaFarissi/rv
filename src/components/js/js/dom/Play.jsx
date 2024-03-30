@@ -38,8 +38,8 @@ function pauseAudio() {
         <div className="alert alert-warning">نصيحة: استخدم طريقة الإيقاف المؤقت () لإيقاف الصوت / الفيديو الحالي مؤقتًا.</div>
     </div>
     <div className="mital">متال :  </div>
-    <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="play" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-    <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+    <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="play" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+    <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
     <Result title="play" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
       <button onClick={playAudio} type="button"> Play Audio </button>
       <button onClick={pauseAudio} type="button"> Pause Audio </button>

@@ -47,7 +47,7 @@ object.addEventListener("keypress", function_name )`
         </p>
         <div className="mital">متال :  </div>
         <ul><li>عند النقر على أي حرف أو رقم ضمن موقعك</li></ul>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" addClass="mt-3 mb-3" copie={true}  number={false}/>  
     </article>
 </section>
     )

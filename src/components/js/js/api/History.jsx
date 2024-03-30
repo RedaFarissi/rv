@@ -40,7 +40,7 @@ export default function History(){
             <CodeHighlighter code={`window.history.back()`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="history.back()" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="history.back()" addClass="mt-3 mb-3" copie={true}  number={false}/>  
     </article>
     <article>
         <h2 className="title-h2">3. <bdi>history.forward()</bdi></h2>
@@ -51,7 +51,7 @@ export default function History(){
             <CodeHighlighter code={`window.history.forward()`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="history.forward()" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="history.forward()" addClass="mt-3 mb-3" copie={true}  number={false}/>  
     </article>
     <article>
         <h2 className="title-h2">4. <bdi>history.length</bdi></h2>
@@ -62,7 +62,7 @@ export default function History(){
             <CodeHighlighter code={`history.length`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple3.code} language="html" is_html={true} title="history.length" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.html" code={codeExemple3.code} language="html" is_html={true} title="history.length" addClass="mt-3 mb-3" copie={true}  number={false}/>  
     </article>
 </section>
     )

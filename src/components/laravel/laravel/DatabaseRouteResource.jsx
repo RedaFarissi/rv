@@ -23,7 +23,7 @@ DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=laravel-app
 DB_USERNAME=root
-DB_PASSWORD=`} file_name="laravel-app / .env" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+DB_PASSWORD=`} file_name="laravel-app / .env" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeCommand>php artisan migrate</CodeCommand>
             <ul><li>إنشاء <b>Model</b> و <b>Table</b> و <b>Controller recource</b> :</li></ul>
             <CodeCommand>php artisan make:model Product -mcr</CodeCommand>
@@ -49,7 +49,7 @@ return new class extends Migration {
         Schema::dropIfExists('products');
     }
 };
-`} file_name={`laravel-app / databse / migrations / ${getCurrentDate()}_222406_create_products_table.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+`} file_name={`laravel-app / databse / migrations / ${getCurrentDate()}_222406_create_products_table.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeCommand>php artisan migrate</CodeCommand>
             <ul><li> إنشاء مورد بالمسار <b>web.php</b></li></ul>
             <CodeHighlighter code={`<?php
@@ -57,7 +57,7 @@ return new class extends Migration {
 use Illuminate\\Support\\Facades\\Route;
 use App\\Http\\Controllers\\ProductController;   # new
 
-Route::resource("/products", ProductController::class);`} file_name="laravel-app / routes / web.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+Route::resource("/products", ProductController::class);`} file_name="laravel-app / routes / web.php" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <div className="alert alert-danger">لا يمكنك إنشاء مورد بمسار فارغ، سيظهر خطأ في صفحة العرض.</div>   
             <CodeHighlighter code={`<?php
 namespace App\\Http\\Controllers;
@@ -73,7 +73,7 @@ class ProductController extends Controller {
     public function edit($id){    }
     public function update(Request $request, $id){    }
     public function destroy($id){    }
-}`} file_name={`laravel-app / app / Http / Controllers / ProductController.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+}`} file_name={`laravel-app / app / Http / Controllers / ProductController.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <ul><li>في مجلد <bdi><b>views/</b></bdi> أقوم بإنشاء مجلد جديد بالاسم <bdi><b>home/</b></bdi> سيحتوي هذا المجلد على كل الملفات التي أحتاجها لاستخدام الموارد</li></ul>
             <img src={images.laravel5} className="w-100 mb-2" alt="model" />
             <CodeHighlighter code={`<!DOCTYPE html>
@@ -89,7 +89,7 @@ class ProductController extends Controller {
 <body>
      @yield('content')
 </body>
-</html>`} file_name={`laravel-app / resources / views / layout.blade.php`} language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+</html>`} file_name={`laravel-app / resources / views / layout.blade.php`} language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
       </article>
       <article id="index">
             <h2 className="title-h2">2 - index </h2>
@@ -98,7 +98,7 @@ class ProductController extends Controller {
             <CodeHighlighter code={`#...
       public function index(){
         return view('home.index' , ['products'=> Product::all()] );
-      }`} file_name={`laravel-app / app / Http / Controllers / ProductController.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+      }`} file_name={`laravel-app / app / Http / Controllers / ProductController.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={`@extends('layout')
 
 @section('content')
@@ -137,7 +137,7 @@ class ProductController extends Controller {
             @endforeach
         </tbody>
     </table>
-@endsection`} file_name={`laravel-app / resources / views / home / index.blade.php`} language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+@endsection`} file_name={`laravel-app / resources / views / home / index.blade.php`} language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
 
       </article>
       <article id='create'>
@@ -146,7 +146,7 @@ class ProductController extends Controller {
             <CodeHighlighter code={`#...
       public function create(){
         return view('home.create');    # you can use : home/create
-      }`} file_name={`laravel-app / app / Http / Controllers / ProductController.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+      }`} file_name={`laravel-app / app / Http / Controllers / ProductController.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/> 
             <CodeHighlighter code={`@extends('layout')
 
 @section('content')
@@ -172,7 +172,7 @@ class ProductController extends Controller {
             <button type="submit">Create</button>
         </form>
     </div>
-@endsection`} file_name={`laravel-app / resources / views / home / create.blade.php`} language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+@endsection`} file_name={`laravel-app / resources / views / home / create.blade.php`} language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
                   
       </article>
       <article id='Store_and_Upload_image'>
@@ -200,7 +200,7 @@ class ProductController extends Controller {
             $product->image = $imageName; // Save only the image name
             $product->save();
             return redirect()-> route('products.index');
-      }`} file_name={`laravel-app / app / Http / Controllers / ProductController.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+      }`} file_name={`laravel-app / app / Http / Controllers / ProductController.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <ul><li>تحميل صور متعددة <a href='https://www.scratchcode.io/laravel-9-multiple-images-upload-example/' target="_blanck">من هنا</a></li></ul>         
       </article>
       <article id='Show'>
@@ -209,7 +209,7 @@ class ProductController extends Controller {
             <CodeHighlighter code={`#...
       public function show($id){ 
             return view('home.show', ["product" => Product::findOrFail($id)] );
-      }`} file_name="laravel-app / app / Http / Controllers / ProductController.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+      }`} file_name="laravel-app / app / Http / Controllers / ProductController.php" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={`@extends('layout')
 
 @section('content')
@@ -233,7 +233,7 @@ class ProductController extends Controller {
             </button>
         </form>
     </div>
-@endsection`} file_name="laravel-app / resources / views / home / show.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+@endsection`} file_name="laravel-app / resources / views / home / show.blade.php" language="html" number={false} addclassName="mt-3 mb-3" copie={true}/> 
       </article>
       <article id='Edit'>  
             <h2 className="title-h2">6 - Edit </h2>
@@ -262,7 +262,7 @@ class ProductController extends Controller {
             $up_date->image = $imageName; // Save only the image name
             $up_date->save();
             return redirect()-> route('products.show' , $id);
-      }`} file_name="laravel-app / app / Http / Controllers / ProductController.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+      }`} file_name="laravel-app / app / Http / Controllers / ProductController.php" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
              <CodeHighlighter code={`@extends('layout')
 
 @section('content')
@@ -290,7 +290,7 @@ class ProductController extends Controller {
         </form>
     </div>
 @endsection
-`} file_name="laravel-app / resources / views / home / edit.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+`} file_name="laravel-app / resources / views / home / edit.blade.php" language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
       </article>
       <article id='Destroy'>  
             <h2 className="title-h2">7 - Destroy </h2>
@@ -299,7 +299,7 @@ class ProductController extends Controller {
         $to_delete = Product::findOrFail($id);
         $to_delete->delete();
         return redirect()-> route('products.index');
-    }`} file_name="laravel-app / app / Http / Controllers / ProductController.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+    }`} file_name="laravel-app / app / Http / Controllers / ProductController.php" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
       </article>
       <article id='only_and_except'>
             <h2 className="title-h2">8 - only and except</h2>
@@ -317,7 +317,7 @@ Route::resource('products', ProductController::class)->only([
  
 Route::resource('products', ProductController::class)->except([
     'create', 'store', 'update', 'destroy'
-]);`} file_name="laravel-app / routes / web.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+]);`} file_name="laravel-app / routes / web.php" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/> 
      </article>
    </>
    )

@@ -33,8 +33,8 @@ document.getElementById("id").innerHTML = Boolean(x > y);`
             </ul>
         </div>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Numbers" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Numbers" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Numbers' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>false</h2>
             <h2>true</h2>
@@ -46,8 +46,8 @@ document.getElementById("id").innerHTML = Boolean(x > y);`
             يمكنك استخدام الدالة <bdi><b>Boolean()</b></bdi> لمعرفة ما إذا كان التعبير (أو المتغير) صحيحًا
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Numbers" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Numbers" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Numbers' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>true</h2>
         </Result>

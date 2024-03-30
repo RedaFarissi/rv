@@ -56,21 +56,21 @@ document.getElementById("DIV").appendChild(img);`
             <CodeHighlighter code={`let variable = document.createElement('type')`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال 1 :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="createElement" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="createElement" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="createElement" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Heading Element 1<br/>Heading Element 2</h2>
         </Result>
         <div className="mital">متال 2 :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="createElement" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="createElement" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="createElement" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Heading Element</h2>
             <img src={images.hajime}  style={{height: "250px",objectFit:"contain"}}/>
         </Result>
         <div className="mital">متال 3 :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple3.code} language="html" is_html={true} title="createElement" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple3.code} language="html" is_html={true} title="createElement" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="createElement" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <button onClick={myFunction} className="btn btn-primary mb-2">click</button>
             <div id="resulTa">

@@ -243,17 +243,17 @@ document.getElementById("myButton").addEventListener("click",variable)`
             </ul>
         </p>
         <div className="mital">متال 1 :  </div>
-        <CodeHighlighter file_name="index.css"code={codeExemple1.head} language="css" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="addEventListener" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.css"code={codeExemple1.head} language="css" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="addEventListener" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <ResultAlert title='Output' logo={images.html_logo} clickOk={clickOk} displayAlert={displayAlertExemple2} alertValue={"div with id='DIVV'"} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
           <div id="addEventListener-ex1" onClick={()=>{ setDisplayAlertExemple2(true) }}>
             click Here
           </div>
         </ResultAlert>
         <div className="mital">متال 2 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="addEventListener" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="addEventListener" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="addEventListener" logo={images.html_logo} styleAdd={"p-0"} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
           <div className="h-100" onClick={(()=>{ setResultExemple2(Date()) })}>
             <p className="ps-3 mt-2">Click anywhere in the document to display Date . </p>
@@ -261,8 +261,8 @@ document.getElementById("myButton").addEventListener("click",variable)`
           </div>
         </Result>
         <div className="mital">متال 3 :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="addEventListener" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js" code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="addEventListener" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <ResultAlert styleAdd="" title='addEventListener' logo={images.html_logo} clickOk={clickOk3} displayAlert={displayAlertExemple3} alertValue={resultExemple3} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
           <div onClick={grandparent} id="addEventListener-ex3-grandparent" className="d-flex justify-content-center align-items-center m-5">
               <div onClick={parent} id="addEventListener-ex3-parent" className="d-flex justify-content-center align-items-center">
@@ -281,8 +281,8 @@ document.getElementById("myButton").addEventListener("click",variable)`
           <CodeHighlighter code={`event.stopPropagation()`} language="js" addClass="mt-3 mb-3" copie={true} />
         </div>
           <div className="mital">متال : </div>
-          <CodeHighlighter file_name="index.html" code={codeExemple4.code} head={codeExemple4.head} language="html" is_html={true} title="stopPropagation" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-          <CodeHighlighter file_name="index.js" code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+          <CodeHighlighter file_name="index.html" code={codeExemple4.code} head={codeExemple4.head} language="html" is_html={true} title="stopPropagation" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+          <CodeHighlighter file_name="index.js" code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
           <ResultAlert title='stopPropagation' logo={images.html_logo} clickOk={clickOk4} displayAlert={displayAlertExemple4} alertValue={resultExemple4} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="addEventListener-ex4" onClick={Myfunc2}>DIV 2
                 <div className="addEventListener-ex4" onClick={Myfunc1}>DIV 1</div>
@@ -305,8 +305,8 @@ document.getElementById("myButton").addEventListener("click",variable)`
               </div>
           </p>
           <div className="mital">متال : </div>
-          <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="addEventListener" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-          <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+          <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="addEventListener" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+          <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
           <Result title="addEventListener" logo={images.html_logo} styleAdd={"p-0"} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
               <br/>
               Try to check this box: <input onClick={(event)=>{event.preventDefault()}} type="checkbox" id="myCheckbox"/>
@@ -328,8 +328,8 @@ var variable = functio_name('parameter1','parameter2')
 element.addEventListener('event', variable )`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال : </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple6.code} head={codeExemple6.head} language="html" is_html={true} title="addEventlistener " addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js" code={codeExemple6.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple6.code} head={codeExemple6.head} language="html" is_html={true} title="addEventlistener " addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple6.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <ResultAlert title='addEventlistener' logo={images.html_logo} clickOk={clickOk6} displayAlert={displayAlertExemple6} alertValue={`a = Reda Eskouni`} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
           <button id="myButton" className="btn btn-primary" onClick={()=>{ setDisplayAlertExemple6(true) }}>
               click

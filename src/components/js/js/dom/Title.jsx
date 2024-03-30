@@ -36,14 +36,14 @@ result.innerHTML = document.title`
             <CodeHighlighter code={`document.title = "A new title"`} language="js" addClass="mt-3 mb-3" copie={true} />
         </div>
         <div className="mital">متال 1 :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="JavaScript title" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="JavaScript title" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="JavaScript title" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>JavaScript title</h2>
         </Result>   
         <div className="mital">متال 2 :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="title" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="title" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="JAVASCRIPT TITLE" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>JAVASCRIPT TITLE</h2>
         </Result>

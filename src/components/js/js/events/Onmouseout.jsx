@@ -62,8 +62,8 @@ function moveOut(){
             <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال : </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="onmouseout" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="onmouseout" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="onmouseout"  logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h5>onmousemove</h5>
             <div style={{margin: "9px",border: "1px solid black",textAlign: "center",padding: "2rem ",backgroundColor: "lightgray"}} onMouseMove={myMoveFunction} onMouseOut={moveOut}>

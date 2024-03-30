@@ -14,13 +14,13 @@ export default function DjangoFilter(){
       </article>
       <article id="models_Objecjs_filter">
             <h2 className="title-h2"> 1 - <bdi>objects.filter()</bdi> </h2>
-            <CodeHighlighter code={codes[13].models_Objecjs_filter[0]} file_name="project / project / setting.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[13].models_Objecjs_filter[1]} file_name="project / project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[13].models_Objecjs_filter[2]} file_name="project / product / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[13].models_Objecjs_filter[3]} file_name="project / product / models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[13].models_Objecjs_filter[4]} file_name="project / product / admin.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[13].models_Objecjs_filter[5]} file_name="project / product / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[13].models_Objecjs_filter[6]} file_name="project / product / templates / product_list.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[13].models_Objecjs_filter[0]} file_name="project / project / setting.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[13].models_Objecjs_filter[1]} file_name="project / project / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[13].models_Objecjs_filter[2]} file_name="project / product / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[13].models_Objecjs_filter[3]} file_name="project / product / models.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[13].models_Objecjs_filter[4]} file_name="project / product / admin.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[13].models_Objecjs_filter[5]} file_name="project / product / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[13].models_Objecjs_filter[6]} file_name="project / product / templates / product_list.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeCommand>python manage.py makemigrations</CodeCommand>
             <CodeCommand>python manage.py migrate</CodeCommand>
             <CodeCommand>python manage.py shell</CodeCommand>
@@ -84,7 +84,7 @@ export default function DjangoFilter(){
       </article>
       <article id="raw_filter">
             <h2 className="title-h2"> 2 - raw filter  </h2>
-            <CodeHighlighter code={codes[13].raw_filter[0]} file_name="project / product / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[13].raw_filter[0]} file_name="project / product / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
       </article>
       <article id="lookup_expr">
             <h2 className="title-h2">3 - lookup_expr </h2>

@@ -65,20 +65,20 @@ for (let i = 0; i<powerArr.length; i++) {
             <CodeHighlighter code={`array.map(function(element , index , array), thisValue)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> الطريقة 1 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Apply" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Apply" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Apply' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>4<br/>16<br/>36<br/>64<br/>100</h2>
         </Result>
         <div className="mital"> الطريقة 2 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Apply" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Apply" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Apply' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>4<br/>16<br/>36<br/>64<br/>100</h2>
         </Result>
         <div className="mital"> الطريقة 3 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Apply" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Apply" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Apply' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>4<br/>16<br/>36<br/>64<br/>100</h2>
         </Result>

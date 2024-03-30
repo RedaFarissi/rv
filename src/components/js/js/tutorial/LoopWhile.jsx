@@ -70,22 +70,22 @@ do {
           <li>عند عدم تحقق الشرط يتم تجاوز الحلقة <b>while</b></li>
           <li>في كل مرة يتم تنفيد الكود داخل الحلقة يتم إضافة واحد إلى العداد <b>i</b></li>
         </ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Objects" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Objects" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Loop while' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Hello Hello Hello Hello Hello </h2>
         </Result>
         <div className="mital">متال 2 :  </div>
         <ul><li>الفرق بين المتالين  أن الأول يتم إضافة 1 لقيمة العداد i في كل مرة أما المتال الحالي يتم إضافة 3  للعداد في كل مرة</li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Loop while" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Loop while" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Loop while' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> Hello Hello </h2>
         </Result>
         <div className="mital">متال 3 :  </div>
         <ul><li>في المتال التالي يتم عرض قيمة i في كل مرة يتم إضافة 1 إلى i</li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Loop while" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Loop while" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Loop while' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> fb wh ins tel </h2>
         </Result>
@@ -98,8 +98,8 @@ do {
         </p>
         <div className="mital">متال  :  </div>
         <ul><li> مع أن الشرط ليس صحيح يتم تنفيد الكود مرة واحدة </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="Loop while" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="Loop while" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Loop while' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> Reda </h2>
         </Result>

@@ -2,14 +2,6 @@ import images from "../imagesLaravel";
 import { CodeCommand , CodeHighlighter } from "../../path";
 
 export default function Middleware(props){
-   function getCurrentDate() {
-      const currentDate = new Date();
-      const year = currentDate.getFullYear();
-      const month = String(currentDate.getMonth() + 1).padStart(2, '0'); 
-      const day = String(currentDate.getDate()).padStart(2, '0');
-
-      return `${year}_${month}_${day}`;
-   }
    return(
    <>
       <h1 className="heading-style">Laravel middleware </h1>
@@ -24,29 +16,7 @@ export default function Middleware(props){
          <p className="style_divv">
                مثال على البرامج الوسيطة مع ميزات <b>Eloquent</b> المضمنة للتحقق مما إذا كان المستخدم مسؤولاً أم لا مع تعليمات برمجية أقل
          </p>
-         <h3 className="title-h3">1 - إضافة عمود <b>role</b> إلى جدول <b>users</b> </h3>
-         <CodeCommand>php artisan make:migration add_role_to_users</CodeCommand>
-         <CodeHighlighter code={`<?php
-
-use Illuminate\\Database\\Migrations\\Migration;
-use Illuminate\\Database\\Schema\\Blueprint;
-use Illuminate\\Support\\Facades\\Schema;
-
-return new class extends Migration {
-    public function up() {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('role');
-        });
-    }
-
-    public function down() {
-        Schema::table('users', function (Blueprint $table) {
-            Schema::dropColumn('role');   
-        });
-    }
-};`} file_name={`laravel-app / databse / migrations / ${getCurrentDate()}_004250_add_role_to_users.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
-         <CodeCommand>php artisan migrate</CodeCommand>
-         <h3 className="title-h3">2 - ميزات Eloquent المضمنة للتحقق مما إذا كان المستخدم مسؤولاً أم لا </h3>
+         <h3 className="title-h3">1 - ميزات Eloquent المضمنة للتحقق مما إذا كان المستخدم مسؤولاً أم لا </h3>
          <CodeHighlighter code={`<?php
 
 namespace App\\Models;
@@ -73,8 +43,8 @@ class User extends Authenticatable {
     public function isUser(){          #new
         return $this->role === "user";
     }
-}`} file_name={`laravel-app / App / Models / User.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
-         <h3 className="title-h3">3 - إنشاء وسيط (Middleware) باسم محدد </h3>
+}`} file_name={`laravel-app / App / Models / User.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <h3 className="title-h3">2 - إنشاء وسيط (Middleware) باسم محدد </h3>
          <div dir="ltr" className="bg-dark text-light alert">php artisan make:middleware <span className="text-warning">NameMiddleware</span></div>    
          <CodeCommand>php artisan make:middleware AdminMiddleware</CodeCommand>  
          <ul><li> سيؤدي هذا إلى إنشاء ملف <b>AdminMiddleware</b> في <kbd>App\Http\Middleware\AdminMiddleware.php</kbd> </li></ul>  
@@ -90,7 +60,7 @@ use Symfony\\Component\\HttpFoundation\\Response;       #new
 
 class AdminMiddleware {
     public function handle(Request $request, Closure $next) {
-        # Get the user if Auth
+        #  Get the user if Auth
         $userAuth = Auth::user();
         # Find user Auth in User Models to use isSuperAdmin() and isAdmin()
         $user = User::find($userAuth->id);
@@ -100,7 +70,8 @@ class AdminMiddleware {
         }
         return redirect()->route('all-posts');
     }
-}`} file_name={`laravel-app / App / Http / Middleware / AdminMiddleware.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+}`} file_name={`laravel-app / App / Http / Middleware / AdminMiddleware.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        <ul><li>في <b>laravel 10</b> يجب عليك إضافة هذا السطر في <bdi><b>$middlewareAliases</b></bdi> وفي إصدار آخر يمكنك إضافته في <bdi><b>$routeMiddleware</b></bdi> .</li></ul>
          <CodeHighlighter code={` protected $routeMiddleware = [
         'admin'=> \\App\\Http\\Middleware\\AdminMiddleware::class,   #new
         'auth' => \\App\\Http\\Middleware\\Authenticate::class,
@@ -112,12 +83,27 @@ class AdminMiddleware {
         'signed' => \\Illuminate\\Routing\\Middleware\\ValidateSignature::class,
         'throttle' => \\Illuminate\\Routing\\Middleware\\ThrottleRequests::class,
         'verified' => \\Illuminate\\Auth\\Middleware\\EnsureEmailIsVerified::class,
-    ];`} file_name={`laravel-app / App / Http / Kernel.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+    ];`} file_name={`laravel-app / App / Http / Kernel.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <h3 className="title-h3">3 - إنشاء ControllerAdmin</h3>
-         <CodeHighlighter code={``} file_name={`laravel-app / App / Http / Controllers / ControllerAdmin.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
-         
-         <p> You can use it in any Controller or in web.php if condition don't exept will take you to another page .</p>
-         <img src={images.laravel54} className="w-100 border mb-2" alt="ControllerPost"/>
+         <ul>
+            <li><strong>يمكنك استخدامه في أي Controller أو في web.php </strong></li>
+            <li><strong>إذا لم يتحقق الشرط فسينقلك  إلى المسار :  all-posts.</strong></li>
+         </ul>
+         <CodeHighlighter code={`<?php
+
+namespace App\\Http\\Controllers;
+
+use Illuminate\\Http\\Request;
+
+class ControllerAdmin extends Controller
+{
+     public function __construct() {
+        $this->middleware('admin'); 
+    }
+    public function admin_home(){
+        return view('admin.index');
+    }
+}`} file_name={`laravel-app / App / Http / Controllers / ControllerAdmin.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
       </article>
       <article>
          <h2 className="title-h2">  مثال 2 </h2>

@@ -134,7 +134,7 @@ return new class extends Migration{
     public function down()  {
         Schema::dropIfExists('sizes');
     }
-};`} file_name={`example-app / database / migrations / ${getCurrentDate()}_164059_create_sizes_table.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+};`} file_name={`example-app / database / migrations / ${getCurrentDate()}_164059_create_sizes_table.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeCommand>php artisan migrate</CodeCommand>         
       </article>
       <article id="Add_Column_In_Table">
@@ -160,7 +160,7 @@ return new class extends Migration{
 
         });
     }
-};`} file_name={`example-app / database / migrations / ${getCurrentDate()}_170347_add_description_to_sizes.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+};`} file_name={`example-app / database / migrations / ${getCurrentDate()}_170347_add_description_to_sizes.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeCommand>php artisan migrate</CodeCommand>
       </article>
       <article id='Remove_Column_From_Table'>  
@@ -184,7 +184,7 @@ return new class extends Migration
             Schema::dropColumn('description');   #new
         });
     }
-};`} file_name={`example-app / database / migrations / ${getCurrentDate()}_173039_remove_description_from_sizes.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+};`} file_name={`example-app / database / migrations / ${getCurrentDate()}_173039_remove_description_from_sizes.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeCommand>php artisan migrate</CodeCommand>
       </article>
 
@@ -221,7 +221,7 @@ return new class extends Migration {
     {
         Schema::dropIfExists('users');
     }
-};`} file_name={`example-app / database / migrations / 2014_10_12_000000_create_users_table.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+};`} file_name={`example-app / database / migrations / 2014_10_12_000000_create_users_table.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <h5 className="title-h5">استخدم المفتاح الخارجي <b>(foreign key)</b> مع المستخدم <b>(user)</b> في الجدول <b>sizes</b> . يمكننا استخدام :</h5>
             <CodeCommand>php artisan make:migration add_user_id_to_sizes</CodeCommand>
             <h6 className="title-h6">الطريقة القديمة</h6>
@@ -246,7 +246,7 @@ return new class extends Migration {
             Schema::dropColumn('user_id');   #new
         });
     }
-};`} file_name={`example-app /  database / migrations / ${getCurrentDate()}_225049_add_user_id_to_sizes.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+};`} file_name={`example-app /  database / migrations / ${getCurrentDate()}_225049_add_user_id_to_sizes.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/> 
             <CodeCommand>php artisan migrate</CodeCommand>
             <ul><li>تم إنشاء عمود <b>user_id</b> في جدول <b>sizes</b></li></ul>
             <h6 className="title-h6">الطريقة الحديثة</h6>
@@ -273,7 +273,7 @@ return new class extends Migration {
         });
     }
 };
-`} file_name={`example-app / database / migrations / ${getCurrentDate()}_225049_add_user_id_to_sizes.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+`} file_name={`example-app / database / migrations / ${getCurrentDate()}_225049_add_user_id_to_sizes.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
          
             <h3 className="title-h3">متال 2 :</h3>
             <CodeCommand>php artisan make:model Category --migration</CodeCommand>
@@ -296,7 +296,7 @@ return new class extends Migration {
     public function down() {
         Schema::dropIfExists('categories');
     }
-};`} file_name={`example-app / database / migrations / ${getCurrentDate()}_002334_create_categories_table.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+};`} file_name={`example-app / database / migrations / ${getCurrentDate()}_002334_create_categories_table.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={`<?php
 
 use Illuminate\\Database\\Migrations\\Migration;
@@ -320,7 +320,7 @@ return new class extends Migration {
     public function down() {
         Schema::dropIfExists('products');
     }
-};`} file_name={`example-app / database / migrations / ${getCurrentDate()}_002404_create_products_table.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+};`} file_name={`example-app / database / migrations / ${getCurrentDate()}_002404_create_products_table.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/> 
             <CodeCommand>php artisan migrate</CodeCommand>
             <CodeHighlighter code={`<?php
 
@@ -334,7 +334,7 @@ class Category extends Model {
     public function products(){      #new
         return $this->hasMany(Product::class);
     }
-}`} file_name={`example-app / app / Models / Category.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+}`} file_name={`example-app / app / Models / Category.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/> 
             <CodeHighlighter code={`<?php
 
 namespace App\\Models;
@@ -347,7 +347,7 @@ class Product extends Model {
     public function category(){      #new
         return $this->belongsTo(Category::class);
     }
-}`} file_name={`example-app / app / Models / Product.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+}`} file_name={`example-app / app / Models / Product.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/> 
             
         
             <CodeHighlighter code={`
@@ -368,7 +368,7 @@ public function admin_products_list(){
         <td> {{ $product->created_at }} </td>
         <td> {{ $product->updated_at }} </td>
     </tr>
-@endforeach`} file_name={`example-app / resources / views / admin / products / list.blade.php`} language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+@endforeach`} file_name={`example-app / resources / views / admin / products / list.blade.php`} language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
       </article>
       <article id='Truncate_models_table'>
             <h2 className="title-h2">8 - truncate models table</h2>
@@ -391,7 +391,7 @@ class ControllerName extends Controller
           Product::truncate();       # to remove all rows from table
           return view("welcome" , ['products' => Product::class] );
      }
-}`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+}`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
       </article>
       <article id='Drop_the_last_migrate'>
             <h2 className="title-h2">9 - حذف عمليات الترحيل الأخيرة (last Migrations) في قاعدة البيانات </h2>
@@ -421,7 +421,7 @@ use Illuminate\\Database\\Eloquent\\SoftDeletes;
 class Product extends Model {
     use SoftDeletes;    
 }
-?>`} file_name={`example-app / app / Models / Product.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+?>`} file_name={`example-app / app / Models / Product.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <h3 className="title-h3">2 -  في قاعدة البيانات الخاصة بك أضاف </h3>
             <CodeCommand>php artisan make:migration add_delete_at_to_products</CodeCommand>
             <CodeHighlighter code={`<?php
@@ -442,7 +442,7 @@ return new class extends Migration {
             $table->dropSoftDeletes();
         });
     }
-};`} file_name={`example-app / database / migrations / ${getCurrentDate()}_235202_add_delete_at_to_products.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+};`} file_name={`example-app / database / migrations / ${getCurrentDate()}_235202_add_delete_at_to_products.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeCommand>php artisan migrate</CodeCommand>
             <ul>
                  <li>عند استخدام <b>SoftDeletes</b> لارافيل تقوم بإضافة عمود <b>deleted_at</b> إلى الجدول الخاص بك.</li>
@@ -472,7 +472,7 @@ class Product extends Model
     {
         return $query->where('available', true);
     }
-}`} file_name={`example-app / app / Models / Product.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+}`} file_name={`example-app / app / Models / Product.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <h5 className="title-h5">2 - إستخدام النطاق </h5>
             <CodeHighlighter code={`$availableProducts = Product::available()->get();`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
 
@@ -544,7 +544,7 @@ class SuperAdminSeeder extends Seeder{
         ]);
         $this->command->info('Super admin create successfully.');
     }
-}`} file_name="example-app / database / seeders / SuperAdminSeeder.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+}`} file_name="example-app / database / seeders / SuperAdminSeeder.php" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <h3 className="title-h3">3 - تشغيل seeder class</h3>
             <CodeCommand>php artisan db:seed --class=SuperAdminSeeder</CodeCommand>
       </article>

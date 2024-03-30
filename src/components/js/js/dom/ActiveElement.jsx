@@ -77,8 +77,8 @@ document.getElementById('ta-example-two').addEventListener('mouseup', Event_mous
             <CodeHighlighter code={`document.activeElement`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال 1 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="activeElement" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="activeElement" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="activeElement" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <textarea name="ta-example-one" onClick={taExample1One} id="ta-example-one" rows="7" cols="40">
                 This is Text Area One. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -94,8 +94,8 @@ document.getElementById('ta-example-two').addEventListener('mouseup', Event_mous
             <br/>
         </Result>
         <div className="mital"> متال 2 : </div>   
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="activeElement" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="activeElement" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="activeElement" logo={images.html_logo} styleAdd={"p-0"} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
           <main className="m-2 bg-danger text-light" onClick={tag_name}>
                 <h2 className="bg-success">The active Element Property</h2>

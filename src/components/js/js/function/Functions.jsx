@@ -123,27 +123,27 @@ document.getElementById("h2").innerHTML = d;`
         </p>
         <div class="mital"> متال 1 :  </div>
         <ul><li> عند تشغيل الكود لن يحدت أي شيء لأننا لم نقم بستدعاء الدالة <small><small>(function)</small></small> </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             
         </Result>
         <div class="mital"> متال 2 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Reda Eskouni</h2>
         </Result>
         <div class="mital"> متال 3 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Reda Eskouni</h2>
         </Result>
         <div class="mital"> متال 4 :  </div>
         <ul><li>يمكن إنشاء دالة <small><small>(function)</small></small> بدون <b>parameters</b></li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2 style={{color:"red", border:"2px solid black" , padding:"9px", width:"max-content", margin:"auto"}}>
                 First Name: Reda<br/>
@@ -160,8 +160,8 @@ document.getElementById("h2").innerHTML = d;`
             <CodeHighlighter code={code2} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div class="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>2 x 1 = 2<br/>2 x 2 = 4<br/>2 x 3 = 6<br/>2 x 4 = 8<br/>2 x 5 = 10<br/>2 x 6 = 12<br/>2 x 7 = 14<br/>2 x 8 = 16<br/>2 x 9 = 18<br/>2 x 10 = 20<br/></h2>
         </Result>
@@ -174,8 +174,8 @@ document.getElementById("h2").innerHTML = d;`
             <CodeHighlighter code={`let x = name_Function(parameter1);`} language="js" addClass="mt-3 mb-3" copie={true} />  
         </p>
         <div class="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple6.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple6.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple6.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple6.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>520</h2>
         </Result>
@@ -189,8 +189,8 @@ document.getElementById("h2").innerHTML = d;`
         </p>
         <div class="mital"> متال :  </div>
         <ul><li> في المتال أسفله لا يمكن إستخدام المتغير sum خارج الدالة لأنه معرف وسط الدالة </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple7.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple7.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple7.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple7.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>199</h2>
         </Result>

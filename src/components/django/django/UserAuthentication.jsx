@@ -45,7 +45,7 @@ export default function UserAuthentication(){
             تُبسط هذه الميزة عملية تنفيذ مصادقة المستخدم في مشروع <b>Django</b> عن طريق القضاء على الحاجة إلى تحديد كل رابط وواجهة عرض تتعلق بالمصادقة يدويًا. من خلال الاستفادة من هذه الروابط المدمجة، يستطيع المطورون إعداد نظام مصادقة آمن بسرعة دون الحاجة إلى كود مخصص طويل.<br/><br/>
             على النحو الأساسي، إنها وسيلة ملائمة لدمج وظائف مصادقة المستخدمين في مشروع <b>Django</b> بسهولة، متبعين في ذلك أفضل الممارسات ومعايير الأمان التي حددها إطار العمل <b>Django</b>.
          </p>
-         <CodeHighlighter code={codes[8].include_urls_and_files_html[0]} file_name="project / project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={codes[8].include_urls_and_files_html[0]} file_name="project / project / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <ul> <li>يحتوي هذا المسار (localhost:8000/accounts/) على العديد من المسارات حول المصادقة </li></ul>
          <Result styleAdd="p-0 pb-5" title='Page not found at /accounts/' route="http://localhost:8000/accounts/">
                <div className="alert alert-warning">
@@ -78,16 +78,16 @@ export default function UserAuthentication(){
             <li> يمكنك إنشاء تطبيق باسم <b>accounts</b> وإنشاء <b>templates</b> بداخله وإنشاء مجلد آخر بالاسم <bdi><b>registration/</b></bdi> في مجلد <bdi><b>templates/</b></bdi> ثم إنشاء كافة الملفات التي تحتاجها بداخله</li>
             <li>أو يمكنك إنشاء مجلد <bdi><b>templates/</b></bdi> ويجب أن يكون في الدليل الجذر لمشروعكه</li>
          </ul>
-         <CodeHighlighter code={codes[8].include_urls_and_files_html[1]} file_name="project / project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-         <CodeHighlighter code={codes[8].include_urls_and_files_html[2]} file_name="project / project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-         <CodeHighlighter code={codes[8].include_urls_and_files_html[3]} file_name="project / templates / base.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
-         <CodeHighlighter code={codes[8].include_urls_and_files_html[4]} file_name="project / templates / registration / login.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
-         <CodeHighlighter code={codes[8].include_urls_and_files_html[5]} file_name="project / templates / registration / logged_out.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
-         <CodeHighlighter code={codes[8].include_urls_and_files_html[6]} file_name="project / templates / registration / password_reset_form.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
-         <CodeHighlighter code={codes[8].include_urls_and_files_html[7]} file_name="project / templates / registration / password_reset_done.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
-         <CodeHighlighter code={codes[8].include_urls_and_files_html[8]} file_name="project / templates / registration / password_reset_email.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
-         <CodeHighlighter code={codes[8].include_urls_and_files_html[9]} file_name="project / templates / registration / password_reset_confirm.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
-         <CodeHighlighter code={codes[8].include_urls_and_files_html[10]} file_name="project / templates / registration / password_reset_complete.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+         <CodeHighlighter code={codes[8].include_urls_and_files_html[1]} file_name="project / project / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={codes[8].include_urls_and_files_html[2]} file_name="project / project / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={codes[8].include_urls_and_files_html[3]} file_name="project / templates / base.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={codes[8].include_urls_and_files_html[4]} file_name="project / templates / registration / login.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={codes[8].include_urls_and_files_html[5]} file_name="project / templates / registration / logged_out.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={codes[8].include_urls_and_files_html[6]} file_name="project / templates / registration / password_reset_form.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={codes[8].include_urls_and_files_html[7]} file_name="project / templates / registration / password_reset_done.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={codes[8].include_urls_and_files_html[8]} file_name="project / templates / registration / password_reset_email.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={codes[8].include_urls_and_files_html[9]} file_name="project / templates / registration / password_reset_confirm.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={codes[8].include_urls_and_files_html[10]} file_name="project / templates / registration / password_reset_complete.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/> 
          <img src={images.django202} alt="django"  className="img"/>
          <CodeCommand>python manage.py createsuperuser</CodeCommand>
          <CodeCommand>
@@ -109,19 +109,19 @@ export default function UserAuthentication(){
          <img src={images.django204} alt="django"  className="img"/> 
          <h3 className="title-h3"> 2 - لإنشاء حساب مستخدم خارج صفحة المسؤول استخدم  </h3>
          <CodeCommand>python manage.py startapp handleAccount </CodeCommand>
-         <CodeHighlighter code={codes[8].Sign_Up[0]} file_name="project / project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-         <CodeHighlighter code={codes[8].Sign_Up[1]} file_name="project / project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-         <CodeHighlighter code={codes[8].Sign_Up[2]} file_name="project / handleAccount /urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-         <CodeHighlighter code={codes[8].Sign_Up[3]} file_name="project / handleAccount / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-         <CodeHighlighter code={codes[8].Sign_Up[4]} file_name="project / handleAccount / templates / signup.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
-         <CodeHighlighter code={codes[8].Sign_Up[5]} file_name="project / templates / base.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={codes[8].Sign_Up[0]} file_name="project / project / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={codes[8].Sign_Up[1]} file_name="project / project / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={codes[8].Sign_Up[2]} file_name="project / handleAccount /urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={codes[8].Sign_Up[3]} file_name="project / handleAccount / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={codes[8].Sign_Up[4]} file_name="project / handleAccount / templates / signup.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={codes[8].Sign_Up[5]} file_name="project / templates / base.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <img src={images.django207} alt="django" className="img"/> 
          <img src={images.django208} alt="django" className="w-100 mt-2 mb-3"/> 
          <h2 className="title-h2" id="Add_fields_to_User_SignUp">4 - أضف الحقول إلى تسجيل المستخدم </h2>
          <p className="style_divv"> إنشاء ملف <b>forms.py</b> لإضافة حقول إلى المستخدم <b>(User)</b> </p>
-         <CodeHighlighter code={codes[8].Add_fields_to_User_SignUp[0]} file_name="project / handleAccount / forms.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-         <CodeHighlighter code={codes[8].Add_fields_to_User_SignUp[1]} file_name="project / handleAccount / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-         <CodeHighlighter code={codes[8].Add_fields_to_User_SignUp[2]} file_name="project / handleAccount / templates / signup.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={codes[8].Add_fields_to_User_SignUp[0]} file_name="project / handleAccount / forms.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={codes[8].Add_fields_to_User_SignUp[1]} file_name="project / handleAccount / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={codes[8].Add_fields_to_User_SignUp[2]} file_name="project / handleAccount / templates / signup.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <img src={images.django209} className="w-100 mt-2 mb-3"/> 
    </article>
    )

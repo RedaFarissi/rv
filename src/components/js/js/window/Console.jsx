@@ -31,8 +31,8 @@ console.assert ( x > y + 1 , "Expression returned 'False'");`
             إذا تم تقييم <b>expression</b> إلى خطأ ، فستتم كتابة رسالة في وحدة التحكم.
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="console" addClass="mt-3 mb-3" copie={true} number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js" addClass="mt-3 mb-3" copie={true} number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="console" addClass="mt-3 mb-3" copie={true} number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js" addClass="mt-3 mb-3" copie={true} number={false}/>
         <ResultConsole title='console' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="alert alert-danger d-flex justify-content-between align-items-center">
                 <span><b>Assertion failed</b>: Expression returned 'False'</span>

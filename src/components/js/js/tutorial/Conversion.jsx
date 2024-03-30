@@ -109,14 +109,14 @@ d.innerHTML += "false = " + Number(false);`
         </p>
 
         <div className="mital"> متال 1 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Conversion" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Conversion" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Conversion' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> 3.14<br/>0<br/>0<br/>20000<br/>NaN<br/>NaN </h2>
         </Result>
         <div className="mital"> متال 2 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Conversion" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Conversion" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Conversion' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> 3.14<br/>24<br/>9<br/>NaN </h2>
         </Result>
@@ -130,14 +130,14 @@ d.innerHTML += "false = " + Number(false);`
             يمكن استخدام الطريقة <b>toString</b> 
         </p>
         <div className="mital"> متال 1 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Conversion" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Conversion" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Conversion' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> 123<br/>123<br/>123 </h2>
         </Result>
         <div className="mital"> متال 2 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="Conversion" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="Conversion" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Conversion' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> 123<br/>200<br/>203 </h2>
         </Result>
@@ -151,8 +151,8 @@ d.innerHTML += "false = " + Number(false);`
             <CodeHighlighter code={`Date().toString()`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="Conversion" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="Conversion" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Conversion' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> Sat Dec 16 2023 03:20:36 GMT+0100 (GMT+01:00) </h2>
         </Result>
@@ -164,8 +164,8 @@ d.innerHTML += "false = " + Number(false);`
             <CodeHighlighter code={code1} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple6.code} language="html" is_html={true} title="Conversion" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple6.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple6.code} language="html" is_html={true} title="Conversion" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple6.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Conversion' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> {Number(currentDate)} </h2>
         </Result>
@@ -178,8 +178,8 @@ d.innerHTML += "false = " + Number(false);`
             <CodeHighlighter code={`String(false)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple7.code} language="html" is_html={true} title="Conversion" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple7.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple7.code} language="html" is_html={true} title="Conversion" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple7.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Conversion' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>true = 1<br/>false = 0 </h2>
         </Result>

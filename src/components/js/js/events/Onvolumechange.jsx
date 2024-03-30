@@ -84,8 +84,8 @@ function setFullVolume() {
           <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
       </p>
       <div className="mital"> متال 1 :  </div>
-      <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="onvolumechange" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-      <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+      <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="onvolumechange" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+      <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
       <ResultAlert title='onvolumechange' logo={images.html_logo} clickOk={clickOk} displayAlert={displayAlertExemple} alertValue={"The volume has been changed!"} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
           <p>Try to change the volume in the bottom right corner.</p>
           <video controls onVolumeChange={myFunction} width="50%">
@@ -94,8 +94,8 @@ function setFullVolume() {
           </video>
       </ResultAlert>
       <div className="mital"> متال 2 :  </div>
-      <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="onvolumechange" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-      <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+      <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="onvolumechange" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+      <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
       <Result title="onvolumechange"  logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
           <video id="myVideo" width="50%" height="240" controls>
               <source src={images.video} type="video/mp4"/>

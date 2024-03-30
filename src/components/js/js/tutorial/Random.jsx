@@ -76,8 +76,8 @@ random_integer(10,21)`
         <div className="mital">متال :  </div>
         <ul><li> في كل مرة تقوم بتحديت الصفحة يتم تحديد رقم عشوائي بين 0 و 10.</li></ul>
         
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>{randomNum}</h2>
         </Result>
@@ -93,15 +93,15 @@ random_integer(10,21)`
         </p>
         <div className="mital">متال 1 :  </div>
         <ul><li> في كل مرة تقوم بتحديت الصفحة يتم تحديد رقم عشوائي  بين 0 و 9.</li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>{randomNum2}</h2>
         </Result>
         <div className="mital">متال 2:  </div>
         <ul><li> في كل مرة تقوم بتحديت الصفحة يتم تحديد رقم عشوائي  بين 90 و 199.</li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>{randomNum3}</h2>
         </Result>
@@ -115,15 +115,15 @@ random_integer(10,21)`
         </p>
         <div className="mital">متال 1 :  </div>
         <ul><li>   تعرض وظيفة <b>JavaScript</b> هذه دائمًا رقمًا عشوائيًا بين <b>min</b> (مضمن) و <b>max</b> (مستبعد): </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>{randomNum4}</h2>
         </Result>
         <div className="mital">متال 2 :  </div>
         <ul><li>عرض وظيفة <b>JavaScript</b> هذه دائمًا رقمًا عشوائيًا بين <b>min</b> و <b>max</b> (كلاهما مضمن): </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="String" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>{randomNum5}</h2>
         </Result>

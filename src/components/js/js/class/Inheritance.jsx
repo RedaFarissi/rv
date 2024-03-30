@@ -93,8 +93,8 @@ result.innerHTML = myCar.cnam;`
             ترث ال <b>class</b> التي تم إنشاؤها باستخدام ميراث  جميع <b>methods</b> من <b>class</b> لأخرى .<br/>
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Class" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Class" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Class' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>I have a Ford, it is a Mustang</h2>
         </Result>
@@ -106,8 +106,8 @@ result.innerHTML = myCar.cnam;`
             من خلال استدعاء طريقة <bdi><b>super()</b></bdi> في طريقة <b>constructor</b> ، فإننا نطلق على طريقة <b>constructor</b> الخاصة بالوالدين ونحصل على إمكانية الوصول إلى <b>properties</b> و <b>methods</b> الخاصة بالوالدين    
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Class" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Class" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
     </article>
     <article>
         <h2 className="title-h2">3 - Getters and Setters</h2>
@@ -117,8 +117,8 @@ result.innerHTML = myCar.cnam;`
             لإضافة <b>getters</b> و <b>setters</b> في <b>class</b> ، استخدم الكلمات الأساسية <b>get</b> و <b>set</b>.
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Class" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Class" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Class' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Ford</h2>
         </Result>

@@ -40,7 +40,7 @@ export default function Introduction(props){
          <CodeHighlighter code={`INSTALLED_APPS = [
    ...
    'rest_framework',   #new
-]`} file_name="project_name / project_name / setting.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+]`} file_name="project_name / project_name / setting.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <h5 className="title-h5">3 - ملف urls داخل project_name</h5>
          <ul><li>انتقل إلى <b>urlpatterns</b> وأضف</li></ul>
          <CodeHighlighter code={`from django.contrib import admin
@@ -52,7 +52,7 @@ urlpatterns = [
 ]
 
 #localhost:8000/api-auth/login
-#go to this path and input your username and password`} file_name="project_name / project_name / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+#go to this path and input your username and password`} file_name="project_name / project_name / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <h5 className="title-h5">4 - localhost:8000/api-auth/login </h5>
          <img src={images.django_rest_1} alt="django rest" className="w-100" />
       </article>

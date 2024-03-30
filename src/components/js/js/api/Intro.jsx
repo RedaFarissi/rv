@@ -65,8 +65,8 @@ function showPosition(position) {
             على سبيل المثال ، يمكن لواجهة برمجة تطبيقات <bdi>(Geolocation API)</bdi> تحديد الموقع الجغرافي أن ترجع إحداثيات مكان المتصفح.
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="Geolocation" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js" addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="Geolocation" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js" addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="Geolocation" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>JavaScript Geolocation</h2>
             <p>Click the button to get your coordinates.</p>

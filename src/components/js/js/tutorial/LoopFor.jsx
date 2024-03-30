@@ -157,22 +157,22 @@ name_nums.forEach(MyFunction);`
         </p>
         <div className="mital">متال 1 :  </div>
         <ul><li> سيتم تكرار السطر البرمجي 5 مرات .</li></ul> 
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Objects" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Objects" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Loop for' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> 0 1 2 3 4 </h2>
         </Result>
         <div className="mital">متال 2 :  </div>
         <ul><li>في المتال المصفوفة تحتوي على 3 قيم و الحلقة <b>for</b> تقوم بتكرار 5 مراة مم يخلق قيم غير موجودة </li></ul> 
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Loop for" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Loop for" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Loop for' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> reda<br/>eskouni<br/>25<br/>undefined<br/>undefined </h2>
         </Result>
         <div className="mital">متال 3 :  </div>
         <ul><li> يمكن إستخدام الخاصية <b>length</b> لإنشاء حلقة تقوم بتكرار الأوامر بنفس عدد عناصر المصفوفة </li></ul> 
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Loop for" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Loop for" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Loop for' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> reda<br/> eskouni<br/> 25 </h2>
         </Result>
@@ -185,14 +185,14 @@ name_nums.forEach(MyFunction);`
             <CodeHighlighter code={code5} language="js" addClass="mt-3 mb-3" copie={true} />
         </p> 
         <div className="mital">متال 1 :  </div> 
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="Loop for" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="Loop for" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Loop for' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> Reda<br/> Eskouni<br/> 25 </h2>
         </Result>
         <div className="mital">متال 2 :  </div> 
-        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="Loop for" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="Loop for" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Loop for' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> Reda<br/>Eskouni<br/>27 </h2>
         </Result>
@@ -205,8 +205,8 @@ name_nums.forEach(MyFunction);`
             <CodeHighlighter code={code6} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div> 
-        <CodeHighlighter file_name="index.html"code={codeExemple6.code} language="html" is_html={true} title="Objects" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple6.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple6.code} language="html" is_html={true} title="Objects" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple6.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Objects' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>  </h2>
         </Result>
@@ -221,14 +221,14 @@ name_nums.forEach(MyFunction);`
             <CodeHighlighter code={code9} language="js" addClass="mt-3 mb-3" copie={true} />
         </p> 
         <div className="mital">متال 1 :  </div> 
-        <CodeHighlighter file_name="index.html"code={codeExemple7.code} language="html" is_html={true} title="Objects" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple7.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple7.code} language="html" is_html={true} title="Objects" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple7.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Objects' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> 1 x 2 = 2<br/>2 x 2 = 4<br/>3 x 2 = 6<br/>4 x 2 = 8<br/>5 x 2 = 10<br/>6 x 2 = 12<br/>7 x 2 = 14<br/>8 x 2 = 16<br/>9 x 2 = 18<br/>10 x 2 = 20 </h2>
         </Result>
         <div className="mital">متال 2 :  </div> 
-        <CodeHighlighter file_name="index.html"code={codeExemple8.code} language="html" is_html={true} title="Objects" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple8.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple8.code} language="html" is_html={true} title="Objects" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple8.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Objects' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> a[0] = reda<br/>a[1] = 2<br/>a[2] = 3<br/>a[3] = 13<br/>a[4] = 2<br/>a[5] = 9<br/>a[6] = 6 </h2>
         </Result>

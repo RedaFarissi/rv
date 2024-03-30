@@ -71,22 +71,22 @@ result.innerHTML += "font-size : " + element.getPropertyValue("font-size") + "<b
             <CodeHighlighter code={`window.getComputedStyle(element , pseudoElement	)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال 1 :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="getComputedStyle" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js" code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="getComputedStyle" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='getComputedStyle' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div style={{backgroundColor:"red", border:"2px solid black", padding:"10px"}}>getComputedStyle</div>
             <h2> rgb(255, 0, 0) </h2>
         </Result>
         <div className="mital"> متال 2 :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="getComputedStyle" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js" code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="getComputedStyle" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='getComputedStyle' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div style={{backgroundColor:"#fc9909", border:"2px solid black", padding:"10px", fontSize:"150%"}}>getComputedStyle</div>
             <h2>background-color : rgb(252, 153, 9)<br/>border : 2px solid rgb(0, 0, 0)<br/>padding : 10px<br/>font-size : 24px</h2>
         </Result>
         <div className="mital"> متال 3 :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="getComputedStyle" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js" code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple3.code} head={codeExemple3.head} language="html" is_html={true} title="getComputedStyle" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='getComputedStyle' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
           <div id="getComputedStyle-div_test">getComputedStyle</div>
           <h2>content before : "Hello"<br/>content after : "Word"</h2>

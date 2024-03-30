@@ -88,8 +88,8 @@ function function_name3() {
             <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال 1 :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="onclick" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="onclick" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="onclick" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="div_box" ref={refExemple1}>
                 <button class="btn btn-primary m-1" onClick={function_name1}> change style1 </button>
@@ -98,8 +98,8 @@ function function_name3() {
             </div>
         </Result>
         <div className="mital">متال 2 :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="onclick" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="onclick" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="onclick" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div>Field1: <input type="text" id="f1" value="JavaScript"/></div>
             <br/>

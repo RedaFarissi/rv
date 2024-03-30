@@ -228,26 +228,26 @@ return(
             <CodeHighlighter code={`const fruits = [ "Orange","Banana","Mango"].concat(["Kiwi","Mango"])`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال 1 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Orange,Banana,Apple,Mango,Lemon,Kiwi,Pear,Fig</h2>
         </Result>
         <div className="mital">متال 2 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Orange,Banana,Apple,Mango,Lemon,Kiwi,Pear,Fig,Apricots,Jackfruit,Honeydew Melon,Watermelon</h2>
         </Result>
         <div className="mital">متال 3 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Orange,Banana,Mango,Apple</h2>
         </Result>
         <div className="mital">متال 4 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Orange,Banana,Mango,Kiwi,Mango</h2>
         </Result>
@@ -267,14 +267,14 @@ return(
             <CodeHighlighter code={code6} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال 1 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Pear</h2>
         </Result>
         <div className="mital">متال 2  : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple6.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple6.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple6.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple6.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Mango,Banana</h2>
         </Result>
@@ -288,14 +288,14 @@ return(
             <CodeHighlighter code={code8} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال 1 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple7.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple7.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple7.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple7.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>A,B,C,E,F,K,M,O,T,Z</h2>
         </Result>
         <div className="mital"> متال 2 : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple8.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple8.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple8.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple8.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>-22,0,1,2,3,4,6,7,8,9</h2>
         </Result>
@@ -309,14 +309,14 @@ return(
             <CodeHighlighter code={code10} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال 1 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple9.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple9.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple9.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple9.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>T,B,F,Z,C,A,K,M,E,O</h2>
         </Result>
         <div className="mital"> متال 2 : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple10.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple10.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple10.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple10.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Z,T,M,K,F,E,D,C,B,A</h2>
         </Result>
@@ -328,8 +328,8 @@ return(
             <CodeHighlighter code={code11} language="js" addClass="mt-3 mb-3" copie={true} /> 
         </p>
         <div className="mital"> متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple11.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple11.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple11.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple11.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Reda Eskouni</h2>
         </Result>
@@ -344,8 +344,8 @@ return(
             <CodeHighlighter code={code12} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple12.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple12.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple12.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple12.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>90,8,18,20,25000</h2>
         </Result>
@@ -358,8 +358,8 @@ return(
             <CodeHighlighter code={code13} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple13.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple13.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple13.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple13.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>45,10,25</h2>
         </Result>
@@ -373,8 +373,8 @@ return(
             <CodeHighlighter code={code14} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple14.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple14.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple14.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple14.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>1</h2>
         </Result>
@@ -386,8 +386,8 @@ return(
             <CodeHighlighter code={code15} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple15.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple15.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple15.code} language="html" is_html={true} title="Arrays" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple15.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Arrays' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>3</h2>
         </Result>

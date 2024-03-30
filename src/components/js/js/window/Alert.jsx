@@ -40,8 +40,8 @@ function add_alert() {
             <CodeHighlighter code={`window.alert()`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple.code} language="html" is_html={true} title="Output" addClass="mt-3 mb-3" copie={true} number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple.script} language="js"  addClass="mt-3 mb-3" copie={true} number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple.code} language="html" is_html={true} title="Output" addClass="mt-3 mb-3" copie={true} number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple.script} language="js"  addClass="mt-3 mb-3" copie={true} number={false}/>
         <ResultAlert title='Output' logo={images.html_logo} clickOk={clickOk} displayAlert={resultAlertDisplayAlert} alertValue={resultAlertValue} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <button onClick={addAlert}> Try it </button>
         </ResultAlert>

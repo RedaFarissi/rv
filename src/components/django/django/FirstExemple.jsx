@@ -25,18 +25,18 @@ export default function FirstExemple(){
       <article id="settings">
             <h2 className="title-h2"> 2- Setting .</h2> 
             <ul><li>تحتاج إلى إضافة اسم التطبيق إلى <b>INSTALLED_APPS</b> في <b>settings.py</b> :</li></ul>
-            <CodeHighlighter code={codes[2].settings[0]} file_name="project / project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>      
+            <CodeHighlighter code={codes[2].settings[0]} file_name="project / project / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>      
       </article>
       <article id="includes_app_to_urlpatterns">
             <h2 className="title-h2">3 - تضمين helloapp على urlpatterns .</h2> 
             <h3 className="title-h3">متال 1 : </h3>
-            <CodeHighlighter code={codes[2].includes_app_to_urlpatterns[0]} file_name="project / project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].includes_app_to_urlpatterns[0]} file_name="project / project / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/> 
             <ul>
                <li>الآن كل المسار الذي تم إنشاؤها في <bdi><b>helloapp/urls.py</b></bdi> موجود في : <bdi><b>localhost:8000/helloapp/</b></bdi></li>
                <li> <b>سنستخدم المتال 1 في بقية المشروع </b> </li>
             </ul>
             <h3 className="title-h3">متال 2 : </h3>
-            <CodeHighlighter code={codes[2].includes_app_to_urlpatterns[1]} file_name="project / project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].includes_app_to_urlpatterns[1]} file_name="project / project / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/> 
             <ul><li>الآن كل المسار الذي تم إنشاؤها في <bdi><b>helloapp/urls.py</b></bdi> موجود في : <bdi><b>localhost:8000/</b></bdi></li></ul>
       </article>
       <article id="templates"> 
@@ -49,16 +49,16 @@ export default function FirstExemple(){
                   <li className="mb-3"> <span className="text-success">إضافة القوالب</span> : قم بوضع ملفات القوالب الخاصة بك داخل مجلد <b>templates</b>. يمكنك إضافة ملفات <b>HTML</b> أو ملفات قوالب <b>Django</b> مع امتداد <b>.html</b> .</li>
                </ul>
             </p>
-            <CodeHighlighter code={codes[2].templates[0]} file_name="project / helloapp / templates / home.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-            <CodeHighlighter code={codes[2].templates[1]} file_name="project / helloapp / templates / articles.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-            <CodeHighlighter code={codes[2].templates[2]} file_name="project / helloapp / templates / article.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].templates[0]} file_name="project / helloapp / templates / home.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].templates[1]} file_name="project / helloapp / templates / articles.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].templates[2]} file_name="project / helloapp / templates / article.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/> 
       </article>
       <article id="urls">
             <h2 className="title-h2"> 5 - ملف urls </h2>
             <p className="style_divv">
                في Django، يُستخدم ملف urls.py لتحديد كيفية ربط عناوين الـURL بدوال (views) محددة في تطبيقك. يحدد هذا الملف الطريقة التي يمكن للمستخدمين من خلالها الوصول إلى محتوى معين في تطبيقك.
             </p>
-            <CodeHighlighter code={codes[2].urls[0]} file_name="project / helloapp / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].urls[0]} file_name="project / helloapp / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/> 
       </article>
       <article id="views">
             <h2 className="title-h2"> 6 - ملف views </h2>
@@ -66,7 +66,7 @@ export default function FirstExemple(){
                في <b>Django</b>، الـ <b>Views</b> تمثل الوحدات التي تدير المنطق الأساسي لتطبيقك. يمكنك تصور الـ <b>View</b> كلمفتاح الوصول إلى البيانات والمنطق الخاص بتطبيقك، وهي المسؤولة عن استعراض البيانات وتحويلها إلى صيغة تظهر للمستخدم في المستعرض.<br/><br/>
                في <b>Django</b>، الـ <b>View</b> هي دالة برمجية تستقبل طلب <b>HTTP</b> وتعيد استجابة. يمكن أن تقوم بالتفاعل مع قاعدة البيانات، والحصول على بيانات، وإرسال بيانات إلى القالب ليتم عرضها، أو تنفيذ أي منطق أخرى ذات صلة.
             </p>
-            <CodeHighlighter code={codes[2].views[0]} file_name="project / helloapp / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>   
+            <CodeHighlighter code={codes[2].views[0]} file_name="project / helloapp / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>   
       </article>
       <article id="models">
             <h2 className="title-h2"> 7 - ملف models</h2>
@@ -89,7 +89,7 @@ export default function FirstExemple(){
             <h3 className="title-h3"> 1 - إعداد قاعدة البيانات الأولي</h3>
             <CodeCommand>python manage.py migrate</CodeCommand>
             <h3 className="title-h3"> 2 -  إسناد أوامر المرغوب تنفيدها على قواعد البيانات ذاخل ملف models و الذي بدوره ذاخل تطبيق helloapp </h3>
-            <CodeHighlighter code={codes[2].models[0]} file_name="project / helloapp / models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].models[0]} file_name="project / helloapp / models.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/> 
             <h3 className="title-h3"> 3 -  عكس الأوامر على قاعدة البيانات <bdi>( يجب إستخدامه في كل مرة قمة بإجراء تعديلات )</bdi></h3>
             <CodeCommand>python manage.py makemigrations</CodeCommand>
             <CodeCommand>python manage.py migrate</CodeCommand>
@@ -117,7 +117,7 @@ export default function FirstExemple(){
                   <div className="ms-4">Applying sessions.0001_initial... <span className="text-success">OK</span></div>
             </div>
             <ul><li>تشير المخرجات إلى أنه تم تطبيق عمليات الترحيل بنجاح. يؤكد كل سطر ينتهي بـ "OK" أنه تم تطبيق الترحيل المقابل لتطبيق معين دون أي مشاكل.</li></ul>
-            <CodeHighlighter code={codes[2].models[1]} file_name="project / helloapp / migrations / 0001_initial.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].models[1]} file_name="project / helloapp / migrations / 0001_initial.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/> 
             <ul><li> سيتم إنشاء ملف projectظhelloapp/migrations/0001_initial.py تلقائيا . </li></ul>
             <h3 className="title-h3"> 4 - تشغيل خادم التطوير  </h3>
             <CodeCommand>python manage.py runserver</CodeCommand>
@@ -172,15 +172,15 @@ export default function FirstExemple(){
             <p className="style_divv">
                ملف <bdi><b>admin.py</b></bdi> هو ملف في مشروع <b>Django</b> يستخدم لتكوين وتخصيص واجهة الإدارة لتطبيق محدد. يحتوي هذا الملف عادة على إعدادات خاصة بالإدارة التي تسمح للمطور بتحديد كيفية عرض وتحرير البيانات في واجهة الإدارة. يتم تسجيل النماذج <b>(Models)</b> التي يرغب المطور في إدارتها في هذا الملف، ويمكن أيضًا إضافة تخصيصات إضافية مثل تحديد الحقول المعروضة، وتحديد البحث، وتطبيق الفلاتر، وغيرها من الإعدادات التي تجعل عملية الإدارة أكثر سهولة وفعالية
             </p>
-            <CodeHighlighter code={codes[2].admin[0]} file_name="project / helloapp / admin.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].admin[0]} file_name="project / helloapp / admin.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/> 
             <ul> <li> تحديث صفحة : <bdi>http://127.0.0.1:8000/admin/</bdi> </li> </ul>
             <img src={images.django5_5} className="w-100 my-2 "/>
             <ul> <li> انقر على add في Articles وأضاف article  تم اذهب إلى الرابط http://localhost:8000/helloapp/article/1/ </li> </ul>
             <h2 className="title-h2" id="layout_file_to_avoid_repeat"> 10 - إنشاء ملف layoute لتجنب التكرار وتعديل الملفات .  </h2>
-            <CodeHighlighter code={codes[2].layout_file_to_avoid_repeat[0]} file_name="project / helloapp / templates / layoute.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-            <CodeHighlighter code={codes[2].layout_file_to_avoid_repeat[1]} file_name="project / helloapp / templates / articles.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-            <CodeHighlighter code={codes[2].layout_file_to_avoid_repeat[2]} file_name="project / helloapp / templates / article.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-            <CodeHighlighter code={codes[2].layout_file_to_avoid_repeat[3]} file_name="project / helloapp / templates / home.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].layout_file_to_avoid_repeat[0]} file_name="project / helloapp / templates / layoute.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].layout_file_to_avoid_repeat[1]} file_name="project / helloapp / templates / articles.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].layout_file_to_avoid_repeat[2]} file_name="project / helloapp / templates / article.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[2].layout_file_to_avoid_repeat[3]} file_name="project / helloapp / templates / home.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/> 
       </article>
    </>
    )

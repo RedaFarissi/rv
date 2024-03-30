@@ -81,8 +81,8 @@ document.getElementById("de").innerHTML = x %= 5 ;`
         <h2 className="title-h2">1. عامل الإسناد</h2>
         <div className="mital"> متال :  </div>
         <ul><li>يعين عامل الإسناد(<b style={{color:"darkorange"}}>=</b>) قيمة إلى متغير.</li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Assignment" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Assignment" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Assignment' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>The = Operator</h2>
             <p>10</p>
@@ -92,8 +92,8 @@ document.getElementById("de").innerHTML = x %= 5 ;`
         <h2 className="title-h2">2. عامل التخصيص <bdi>(+=)</bdi></h2>
         <div className="mital"> متال :  </div>
         <ul><li> يضيف عامل التخصيص += قيمة إلى متغير . </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Assignment" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Assignment" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Assignment' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>The += Operator</h2>
             <p>15</p>
@@ -103,8 +103,8 @@ document.getElementById("de").innerHTML = x %= 5 ;`
         <h2 className="title-h2">3. عامل التخصيص <bdi>(-=)</bdi></h2>
         <div className="mital"> متال :  </div>
         <ul><li> يطرح عامل التخصيص -= قيمة من متغير. </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Assignment" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Assignment" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Assignment' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>The -= Operator</h2>
             <p>5</p>
@@ -114,8 +114,8 @@ document.getElementById("de").innerHTML = x %= 5 ;`
         <h2 className="title-h2">4. عامل التخصيص <bdi>(*=)</bdi></h2>
         <div className="mital"> متال :  </div>
         <ul><li> * = عامل الإسناد يضرب متغيرًا.  </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="Assignment" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="Assignment" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Assignment' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>The *= Operator</h2>
             <p>50</p>
@@ -125,8 +125,8 @@ document.getElementById("de").innerHTML = x %= 5 ;`
         <h2 className="title-h2">5. عامل التخصيص <bdi>(/=)</bdi></h2>
         <div className="mital"> متال :  </div>
         <ul><li> /= عامل الإسناد يقسم متغيرًا.  </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="Assignment" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="Assignment" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Assignment' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>The /= Operator</h2>
             <p>2</p>
@@ -137,8 +137,8 @@ document.getElementById("de").innerHTML = x %= 5 ;`
         <h2 className="title-h2">6. عامل التخصيص <bdi>(%=)</bdi></h2>
         <div className="mital"> متال :  </div>
         <ul><li> %= عامل الإسناد يسند باقي القسمة.  </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple6.code} language="html" is_html={true} title="Assignment" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple6.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple6.code} language="html" is_html={true} title="Assignment" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple6.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Assignment' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>The %= Operator</h2>
             <p>0</p>

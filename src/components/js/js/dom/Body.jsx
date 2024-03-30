@@ -46,16 +46,16 @@ document.body.style = "background-color: yellow;border: 4px solid black; margin:
             </div>
         </p>
         <div className="mital"> متال 1 :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="body" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="body" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="body" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2 style={{color:"red"}}> Heading </h2>
             <p style={{padding: "20px 9px", border: "0.5px solid black"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             <div style={{backgroundColor:"black", color: "white", fontSize:"30px"}}>Reda Eskouni</div>
         </Result>
         <div className="mital"> متال 2 :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="body" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="body" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="body" styleAdd="p-0 h-100 bg-yellow" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div  style={{backgroundColor: "yellow",paddingTop:"9px"}}>
                 <div style={{backgroundColor: "yellow",border: "4px solid black", margin: "4px"}}> Hello Word </div>

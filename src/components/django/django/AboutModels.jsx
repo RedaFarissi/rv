@@ -33,13 +33,13 @@ export default function AboutModels(){
             <div className="mital">مثال 1 : </div>
             <h3 className="title-h3">إنشاء app بالاسم testing</h3>
             <CodeCommand>python manage.py startapp testing</CodeCommand>
-            <CodeHighlighter code={codes[7].get_absolute_url[0]} file_name="projet / project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[7].get_absolute_url[1]} file_name="projet / project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[7].get_absolute_url[2]} file_name="projet / testing / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[7].get_absolute_url[3]} file_name="projet / testing / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[7].get_absolute_url[4]} file_name="projet / testing / models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[7].get_absolute_url[5]} file_name="projet / templates / index.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[7].get_absolute_url[6]} file_name="projet / templates / home_detail.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[0]} file_name="projet / project / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[1]} file_name="projet / project / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[2]} file_name="projet / testing / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[3]} file_name="projet / testing / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[4]} file_name="projet / testing / models.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[5]} file_name="projet / templates / index.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[6]} file_name="projet / templates / home_detail.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeCommand>python manage.py makemigrations</CodeCommand>
             <CodeCommand>python manage.py migrate</CodeCommand>
             <CodeCommand>python manage.py shell</CodeCommand>
@@ -97,13 +97,13 @@ export default function AboutModels(){
             <div className="mital"> مثال 2 : </div>
             <h3 className="title-h3">إنشاء app بالاسم shop</h3>
             <CodeCommand>python manage.py startapp shop</CodeCommand>
-            <CodeHighlighter code={codes[7].get_absolute_url[7]}  file_name="projet / project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[7].get_absolute_url[8]}  file_name="projet / project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[7].get_absolute_url[9]}  file_name="projet / shop / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[7].get_absolute_url[10]} file_name="projet / shop / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[7].get_absolute_url[11]} file_name="projet / shop / models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[7].get_absolute_url[12]} file_name="projet / templates / home_detail.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[7].get_absolute_url[13]} file_name="projet / templates / home_detail.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[7]}  file_name="projet / project / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[8]}  file_name="projet / project / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[9]}  file_name="projet / shop / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[10]} file_name="projet / shop / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[11]} file_name="projet / shop / models.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[12]} file_name="projet / templates / home_detail.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].get_absolute_url[13]} file_name="projet / templates / home_detail.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeCommand>python manage.py makemigrations</CodeCommand>
             <CodeCommand>python manage.py migrate</CodeCommand>
             <CodeCommand>python manage.py shell</CodeCommand>
@@ -196,11 +196,11 @@ export default function AboutModels(){
                <li>إنشاء <b>app</b> بالاسم <b>book</b></li>
                <li> وأضف التطبيق الخاص بك في <b>INSTALLED_APPS</b> </li>
             </ul>
-            <CodeHighlighter code={codes[7].annotate[3]} file_name="" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[7].annotate[4]} file_name="" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[7].annotate[5]} file_name="" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[7].annotate[6]} file_name="" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[7].annotate[7]} file_name="" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].annotate[3]} file_name="" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].annotate[4]} file_name="" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].annotate[5]} file_name="" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].annotate[6]} file_name="" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[7].annotate[7]} file_name="" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeCommand> python manage.py makemigrations</CodeCommand>   
             <CodeCommand> python manage.py migrate</CodeCommand>   
             <CodeCommand> python manage.py shell</CodeCommand>   

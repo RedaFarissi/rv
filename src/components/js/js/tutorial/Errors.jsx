@@ -72,8 +72,8 @@ division("demo2",8,0)`
             <CodeHighlighter code={code1} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <h4 className="mital">متال :  </h4>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Conversion" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Conversion" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Conversion' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>document.ge is not a function</h2>
         </Result>
@@ -87,8 +87,8 @@ division("demo2",8,0)`
         </p>
         <h4 className="mital">متال :  </h4>
         <ul><li>عند تنفيد الأمر البرمجي <b>throw</b> يتم تجاوز باقي الكود داخل <b>try</b> تم يتم الذهاب مباشرة إلى <b>catch</b></li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Conversion" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Conversion" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Conversion' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Reda<br/>Error 404</h2>
         </Result>
@@ -100,7 +100,7 @@ division("demo2",8,0)`
             <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <h4 className="mital">متال :  </h4>
-        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
     </article>
 </section>
     )

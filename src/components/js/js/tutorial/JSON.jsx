@@ -113,15 +113,15 @@ id.innerHTML = \`Full name is \${arr[0]} \${arr[1]} and age is \${arr[2]} years\
             <li> يكتب مفتاح <b>JSON</b> داخل علامة الإقتباس الخاصة ب <small><small>string</small></small> ذالك هو الفرق بينه وبين ال <small><small>Object</small></small></li>
             <li> يمكن إسترجاع المعلومات المخزنة داخل <b>JSON</b> بطريقتين </li>
         </ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="JSON" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js" code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="JSON" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='JSON' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> 25REDA<br/>Eskouni </h2>
         </Result>
         <div className="mital">متال 2 :  </div>
         <ul><li>يمكن إستعمال المصفوفات و الكائنات داخل <b>JSON</b></li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="JSON" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js" code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="JSON" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='JSON' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> Reda<br/> undefined<br/> Adil </h2>
         </Result>
@@ -160,15 +160,15 @@ id.innerHTML = \`Full name is \${arr[0]} \${arr[1]} and age is \${arr[2]} years\
         </p>
         <div className="mital">متال 1 : </div>
         <ul><li>الكائن <small>(object)</small> بصيغة <b>JSON</b> مخزن داخل متغير <b>string</b> .</li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="JSON" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js" code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="JSON" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='JSON' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> string </h2>
         </Result>
         <div className="mital">متال 2: </div>
         <ul><li>ننصح بستعمال الطريقة التالية لمعرفة محتوي الكائن لأنه غالبا ما تكون الأمور صعبة القراءة</li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="JSON" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js" code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="JSON" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='JSON' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> object </h2>
         </Result>
@@ -188,8 +188,8 @@ id.innerHTML = \`Full name is \${arr[0]} \${arr[1]} and age is \${arr[2]} years\
         </p>
         <div className="mital">متال : </div>
         <ul><li> ستكون النتيجة عبارة عن سلسلة تتبع تدوين <b>JSON</b> .</li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="JSON" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js" code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="JSON" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='JSON' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> {"{"}"name":"BMW","color":"green","module":"2000"{"}"} </h2>
         </Result>
@@ -200,8 +200,8 @@ id.innerHTML = \`Full name is \${arr[0]} \${arr[1]} and age is \${arr[2]} years\
         </p>
         <div className="mital">متال : </div>
         <ul><li> ستكون النتيجة عبارة عن سلسلة تتبع تدوين <b>JSON</b> .</li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple6.code} language="html" is_html={true} title="JSON" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js" code={codeExemple6.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple6.code} language="html" is_html={true} title="JSON" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple6.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='JSON' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> typeof str = string<br/>["BMW","green",2000] </h2>
         </Result>
@@ -216,8 +216,8 @@ id.innerHTML = \`Full name is \${arr[0]} \${arr[1]} and age is \${arr[2]} years\
             <CodeHighlighter code={code4} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple7.code} language="html" is_html={true} title="JSON" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js" code={codeExemple7.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple7.code} language="html" is_html={true} title="JSON" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple7.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='JSON' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> Full name is Reda Eskouni and age is 25 years </h2>
         </Result>

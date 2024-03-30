@@ -157,8 +157,8 @@ return(
             <CodeHighlighter code={`Object.addEventListener("animationstart", function_name)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="animation" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js" addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="animation" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js" addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="animation" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="js-animation-id_DIV" onClick={myFunction}>Click me to start the animation.</div>
         </Result>
@@ -170,8 +170,8 @@ return(
         <CodeHighlighter code={`Object.addEventListener("animationiteration", function_name)`} language="js" addClass="mt-3 mb-3" copie={true} />
       </p>
       <div className="mital"> متال :  </div>
-      <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="animation" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-      <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js" addClass="mt-3 mb-3" copie={true}  number={true}/>
+      <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="animation" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+      <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js" addClass="mt-3 mb-3" copie={true}  number={false}/>
       <Result title="animation" logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
         <div style={{width:"100%",height:"300px",position:"relative",backgroundColor:"thistle"}}>
           <div id="js-animation-DIV">  </div>

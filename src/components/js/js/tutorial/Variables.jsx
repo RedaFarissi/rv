@@ -95,24 +95,24 @@ document.getElementById("String").innerHTML = str;`
         </p>
         <div className="mital">متال :  </div>
         <ul><li> في هذا المثال ، تعتبر <b>x</b> و <b>y</b> و <b>z</b> متغيرات معرّفة بالكلمة الأساسية <b>var</b>  </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="variables" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="variables" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='variables' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1>JavaScript Variables</h1>
             <p>The value of z is: 30</p>
         </Result>
         <div className="mital"> متال 2 :  </div>
         <ul><li> في هذا المثال ، تعتبر <b>x2</b> و <b>y2</b> و <b>z2</b> متغيرات معرّفة بالكلمة  <b>let</b>  </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="variables" addClass="mt-3 mb-3" copie={true} number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="variables" addClass="mt-3 mb-3" copie={true} number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='variables' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1>JavaScript Variables</h1>
             <p>The value of z2 is: 1.8</p>
         </Result>
         <div className="mital"> متال 3 :  </div>
         <ul><li> في هذا المثال ، تعتبر <b>x3</b> و <b>y3</b> و <b>z3</b> متغيرات معرّفة بدون أي الكلمة .</li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="variables" addClass="mt-3 mb-3" copie={true} number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="variables" addClass="mt-3 mb-3" copie={true} number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='variables' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h1>JavaScript Variables</h1>
             The value of z3 is: 4
@@ -127,8 +127,8 @@ document.getElementById("String").innerHTML = str;`
 
         <div className="mital"> متال :  </div>
         <ul><li> يتم التصريح عن المتغير <b>pi</b> بالكلمة الأساسية <b>const</b>. ويعني ذالك أن هذه قيم ثابتة ولا يمكن تغييرها </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="variables" addClass="mt-3 mb-3" copie={true} number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="variables" addClass="mt-3 mb-3" copie={true} number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='variables' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>JavaScript Variable const</h2>
             <p>6.28</p> 
@@ -144,8 +144,8 @@ document.getElementById("String").innerHTML = str;`
             عند إعلان  عن متغير بإستخدام <b>var</b>  أو <b>let</b> يمكن تغيير قيمة المتغير بحرية .
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="variables" addClass="mt-3 mb-3" copie={true} number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="variables" addClass="mt-3 mb-3" copie={true} number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='variables' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <p style={{color: "brown",backgroundColor: "yellow"}}>20  </p>
             <p style={{color:"orange",backgroundColor: "black"}}> Reda Eskouni</p>
@@ -177,8 +177,8 @@ document.getElementById("String").innerHTML = str;`
             تتم كتابة المتغيرات النصية داخل علامتي اقتباس مزدوجتين أو مفردة. الأرقام تكتب بدون علامات اقتباس .<br/>
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple6.code} head={codeExemple6.head} language="html" is_html={true} title="variables" addClass="mt-3 mb-3" copie={true} number={true}/>  
-        <CodeHighlighter file_name="index.js" code={codeExemple6.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple6.code} head={codeExemple6.head} language="html" is_html={true} title="variables" addClass="mt-3 mb-3" copie={true} number={false}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple6.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='variables' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div style={{fontSize: "xx-large", color: "blueviolet"}}>Hello Word</div>
             <div style={{fontSize: "xx-large", color: "green"}}>2000</div>

@@ -63,8 +63,8 @@ result.innerHTML += a + "<br>"`
             سيعيد document.cookie جميع  <b>cookie</b> في سلسلة واحدة <bdi> cookie1=value; cookie2=value; cookie3=value; </bdi>
         </div>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="cookie" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="cookie" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="cookie" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>user_name = Reda Eskouni; age = 25ans;<br/>string</h2>
         </Result>
@@ -75,8 +75,8 @@ result.innerHTML += a + "<br>"`
             باستخدام <b>JavaScript</b> ، يمكنك تغيير <b>cookie</b> بنفس طريقة إنشائه . <br/>
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="cookie" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="cookie" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="cookie" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> user_name = Reda Eskouni; age = 25ans;<br/>string<br/>user_name = Adil Toumi..; age = 18ans; </h2>
         </Result>

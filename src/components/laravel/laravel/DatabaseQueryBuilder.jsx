@@ -45,7 +45,7 @@ return new class extends Migration {
         Schema::dropIfExists('posts');
     }
 };
-`} file_name={`laravel-app / databse / migrations / ${getCurrentDate()}_221654_create_posts_table.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+`} file_name={`laravel-app / databse / migrations / ${getCurrentDate()}_221654_create_posts_table.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeCommand>php artisan migrate</CodeCommand>
             <h3 className="title-h3">2 - إنشاء ControllerPost </h3>
             <CodeCommand>php artisan make:controller ControllerPost</CodeCommand>
@@ -66,14 +66,14 @@ class ControllerPost extends Controller {
         ]);
         return "Create Success";
     }
-}`} file_name={`laravel-app / app / Http / Controllers / ControllerPost.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+}`} file_name={`laravel-app / app / Http / Controllers / ControllerPost.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <h3 className="title-h3">3 - web.php </h3>
             <CodeHighlighter code={`<?php
 use Illuminate\\Support\\Facades\\Route;
 use App\\Http\\Controllers\\ControllerPost;
 
 Route::get("/posts/create", [ControllerPost::class , 'create'])->name('create-post');
-Route::post("/posts/store", [ControllerPost::class , 'store'])->name('store-post');`} file_name={`laravel-app / routes / web.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+Route::post("/posts/store", [ControllerPost::class , 'store'])->name('store-post');`} file_name={`laravel-app / routes / web.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
 
             <CodeHighlighter code={`@extends('layout')
 
@@ -93,7 +93,7 @@ Route::post("/posts/store", [ControllerPost::class , 'store'])->name('store-post
             <input type="submit" value="Create POST" class="btn btn-primary" />
         </form>
     </div>
-@endsection`} file_name={`laravel-app / resources / views / posts / create.blade.php`} language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+@endsection`} file_name={`laravel-app / resources / views / posts / create.blade.php`} language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
       </article>
       <article id='Get'>
             <h2 className="title-h2">3 - Get  </h2>
@@ -130,7 +130,7 @@ Route::controller(ControllerPost::class)->group(function(){
     Route::DELETE("/posts/delete/{id}", 'destroy' )->name('destroy-post');
 });
 
-*/`} file_name={`laravel-app / routes / web.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+*/`} file_name={`laravel-app / routes / web.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeCommand>php artisan make:controller ControllerPost</CodeCommand>
             <CodeHighlighter code={`<?php
 
@@ -169,7 +169,7 @@ class ControllerPost extends Controller {
         DB::table('posts')->where('id' , $id)->delete();    
         return redirect()->route('all-posts');
     }
-}`} file_name={`laravel-app / app / Http / Controllers / ControllerPost.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+}`} file_name={`laravel-app / app / Http / Controllers / ControllerPost.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={`<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -191,7 +191,7 @@ class ControllerPost extends Controller {
      </header>
      @yield('content')
 </body>
-</html>`} file_name={`laravel-app / resources / views / posts / layoute.blade.php`} language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+</html>`} file_name={`laravel-app / resources / views / posts / layoute.blade.php`} language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={`@extends('layoute')
 
 @section('content')
@@ -223,7 +223,7 @@ class ControllerPost extends Controller {
             @endforeach
         </tbody>
     </table>
-@endsection`} file_name={`laravel-app / resources / views / posts / index.blade.php`} language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+@endsection`} file_name={`laravel-app / resources / views / posts / index.blade.php`} language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={`@extends('layoute')
 
 @section('content')
@@ -242,7 +242,7 @@ class ControllerPost extends Controller {
             <input type="submit" value="Create POST" class="btn btn-primary" />
         </form>
     </div>
-@endsection`} file_name={`laravel-app / resources / views / posts / create.blade.php`} language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+@endsection`} file_name={`laravel-app / resources / views / posts / create.blade.php`} language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={`@extends('layoute')
 
 @section('content')
@@ -267,7 +267,7 @@ class ControllerPost extends Controller {
             <input type="submit" value="Update POST" class="btn btn-primary" />
         </form>
     </div>
-@endsection`} file_name={`laravel-app / resources / views / posts / edit.blade.php`} language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+@endsection`} file_name={`laravel-app / resources / views / posts / edit.blade.php`} language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <img src={images.laravel_query_builder_result} className="w-100 border mb-2" alt="ControllerPost"/>
       </article>
       <article id='Delete_All'>

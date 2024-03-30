@@ -51,17 +51,17 @@ TEMPLATES = [
 .
 .
 .
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'front', 'build', 'static')]   #new`} file_name="project_name / project_name / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'front', 'build', 'static')]   #new`} file_name="project_name / project_name / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <h3 className="title-h3">9 - إنشاء التطبيق بالاسم app في المشروع</h3>
          <CodeCommand>python manage.py startapp app</CodeCommand>
          <CodeHighlighter code={`INSTALLED_APPS = [
    ...
    'app.apps.AppConfig', # new
-]`} file_name="project_name / project_name / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+]`} file_name="project_name / project_name / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <CodeHighlighter code={`from django.shortcuts import render
 
 def front(request):
-   return render(request, "index.html")`} file_name="project_name / app / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+   return render(request, "index.html")`} file_name="project_name / app / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <CodeHighlighter code={`from django.contrib import admin
 from django.urls import path , include # add include
 from app.views import front   # new
@@ -70,7 +70,7 @@ urlpatterns = [
    path('admin/', admin.site.urls),
    path('api-auth/', include('rest_framework.urls')) ,  # authenticate
    path("", front , name="front"),   # new
-]`} file_name="project_name / project_name / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+]`} file_name="project_name / project_name / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <CodeCommand>python manage.py runserver</CodeCommand>
          <h3 className="title-h3">10 - تغيير React </h3>
          <p className="style_divv">
@@ -82,7 +82,7 @@ urlpatterns = [
          <CodeHighlighter code={`INSTALLED_APPS = [
    #...
    'rest_framework',   #new
-]`} file_name="project_name / project_name / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+]`} file_name="project_name / project_name / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <h3 className="title-h3">12 - تثبيت CORS headers </h3>
          <CodeCommand>pip install django-cors-headers </CodeCommand>
          <CodeHighlighter code={`INSTALLED_APPS = [
@@ -107,13 +107,13 @@ CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = ( 
     'http://localhost:8000', 
     'http://localhost:3000', 
-)`} file_name="project_name / project_name / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+)`} file_name="project_name / project_name / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <h3 className="title-h3">13 - إنشاء التطبيق بالاسم api  في المشروع  </h3>
          <CodeCommand>python manage.py startapp api</CodeCommand>
          <CodeHighlighter code={`INSTALLED_APPS = [
     ...
     'api.apps.ApiConfig', # new
-]`} file_name="project_name / project_name / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+]`} file_name="project_name / project_name / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <CodeHighlighter code={`from django.contrib import admin
 from django.urls import path , include
 from app.views import front
@@ -123,34 +123,34 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')) ,  # authenticate
     path("", front , name="front"),
     path('api/', include('api.urls')),    # new
-]`} file_name="project_name / project_name / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+]`} file_name="project_name / project_name / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <CodeHighlighter code={`from django.db import models
 
 class Author(models.Model):
     name = models.CharField(max_length=100)
     age = models.PositiveSmallIntegerField(default=2)
     def __str__(self):
-        return self.name`} file_name="project_name / api / models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        return self.name`} file_name="project_name / api / models.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <CodeHighlighter code={`from .views import AuthorView
 from django.urls import path 
 
 urlpatterns = [
     path("author-list/", AuthorView.as_view() , name="author_list"),
-]`} file_name="project_name / api / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+]`} file_name="project_name / api / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <CodeHighlighter code={`from rest_framework import serializers 
 from .models import Author 
 
 class AuthorSerializer(serializers.ModelSerializer): 
     class Meta: 
         model = Author
-        fields = "__all__"`} file_name="project_name / api / serializers.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        fields = "__all__"`} file_name="project_name / api / serializers.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <CodeHighlighter code={`from .serializers import AuthorSerializer 
 from .models import Author 
 from rest_framework.generics import ListAPIView
 
 class AuthorView(ListAPIView): 
     queryset = Author.objects.all() 
-    serializer_class = AuthorSerializer`} file_name="project_name / api / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+    serializer_class = AuthorSerializer`} file_name="project_name / api / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <CodeCommand>python manage.py makemigrations</CodeCommand>
         <CodeCommand>python manage.py migrate</CodeCommand>
         <CodeCommand>python manage.py shell</CodeCommand>
@@ -177,7 +177,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", front , name="front"),
     path('api/', include('api.urls')),    # new
-]`} file_name="project_name / project_name / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+]`} file_name="project_name / project_name / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <img src={images.django_rest_30} alt="django rest result" className="w-100 mb-2"/>     
         
         <h2 className="title-h2" id="Get_data_in_React"> 2 - احصل على البيانات من نقاط النهاية إلى React </h2>
@@ -214,7 +214,7 @@ function App() {
     );
 }
 
-export default App;`} file_name="project_name / front / src / App.js" language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+export default App;`} file_name="project_name / front / src / App.js" language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <Result title={'React App'} logo={react_logo} route="localhost:3000">
             <ul><li>ID: 1</li><li>Name: Reda Eskouni</li><li>Age: 28</li></ul><br/>
             <ul><li>ID: 2</li><li>Name: author 2</li><li>Age: 27</li></ul><br/>
@@ -235,7 +235,7 @@ export default App;`} file_name="project_name / front / src / App.js" language="
     'DEFAULT_PERMISSION_CLASSES': [
        'rest_framework.permissions.IsAuthenticated', 
     ]
-}`} file_name="project_name / project_name / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+}`} file_name="project_name / project_name / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <img src={images.django_rest_31} alt="django rest result" className="w-100 mb-2"/>     
         <h3 className="title-h3">2 - إضافة إلى ملف عناوين (urls.py) </h3>
         <CodeHighlighter code={`from django.contrib import admin
@@ -247,7 +247,7 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')) , #new authenticate
     path("", front , name="front"),
     path('api/', include('api.urls')),
-]`} file_name="project_name / project_name / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+]`} file_name="project_name / project_name / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <img src={images.django_rest_32} alt="django rest result" className="w-100 mb-2"/>     
         <CodeCommand>python manage.py createsuperuser</CodeCommand>
         <img src={images.django_rest_33} alt="django rest result" className="w-100 mb-2"/>     
@@ -261,7 +261,7 @@ from rest_framework.permissions import AllowAny  #new
 class AuthorView(ListAPIView):
     permission_classes = (AllowAny ,)   #new
     queryset = Author.objects.all() 
-    serializer_class = AuthorSerializer`} file_name="project_name / api / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+    serializer_class = AuthorSerializer`} file_name="project_name / api / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <img src={images.django_rest_29} alt="django rest result" className="w-100 mb-2"/>     
         <h3 className="title-h3">4 - فئات الصلاحيات المضمنة </h3>
         <p className="style_divv">
@@ -328,7 +328,7 @@ REST_FRAMEWORK = {
       'rest_framework.authentication.SessionAuthentication' ,
       'rest_framework.authentication.TokenAuthentication' , 
    ],
-}`} file_name="project_name / project_name / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+}`} file_name="project_name / project_name / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <ul><li>نحتفظ بمصادقة <b>SessionAuthentication</b> لأننا ما زلنا بحاجة إليها لواجهة برمجة التطبيقات القابلة للتصفح الخاصة بنا ، ولكن الآن استخدام الرموز لتمرير بيانات اعتماد المصادقة ذهابًا وإيابًا في رؤوس <b>HTTP</b> الخاصة بنا</li></ul>
         <h3 className="title-h3">5 - تثبيت dj-rest-auth</h3>
         <p className="style_divv">
@@ -345,7 +345,7 @@ REST_FRAMEWORK = {
     'rest_framework.authtoken', 
     'dj_rest_auth', #new
     #...
-]`} file_name="project_name / project_name / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+]`} file_name="project_name / project_name / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <CodeHighlighter code={`from django.contrib import admin
 from django.urls import path , include
 from app.views import front
@@ -356,7 +356,7 @@ urlpatterns = [
     path('api/', include('api.urls')),
     path('api-auth/', include('rest_framework.urls')) , 
     path('rest-auth/', include('dj_rest_auth.urls')),   #new
-]`} file_name="project_name / project_name / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+]`} file_name="project_name / project_name / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <CodeCommand>python manage.py migrate</CodeCommand>
         <div className="alert alert-light" dir="ltr">
             /rest-auth/ password/reset/ [name='rest_password_reset']<br/>
@@ -408,7 +408,7 @@ MIDDLEWARE = [
 #...
 #...
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'    #new
-SITE_ID = 1    #new `} file_name="project_name / project_name / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+SITE_ID = 1    #new `} file_name="project_name / project_name / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <CodeCommand>python manage.py migrate</CodeCommand>
         <CodeHighlighter code={`from django.contrib import admin
 from django.urls import path , include
@@ -421,7 +421,7 @@ urlpatterns = [
     path('api/', include('api.urls')),
     path('rest-auth/', include('dj_rest_auth.urls')), 
     path('rest-auth/registration/', include('dj_rest_auth.registration.urls')), #new
-]`} file_name="project_name / project_name / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+]`} file_name="project_name / project_name / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <CodeCommand>python manage.py runserver</CodeCommand>
         <img src={images.django_rest_36} alt="django rest result" className="w-100 mb-2"/>
         <ul><li>تحديث ملف <b>views.py</b></li></ul>
@@ -433,7 +433,7 @@ from rest_framework.authentication import TokenAuthentication  #new
 class AuthorView(ListAPIView):
     authentication_classes = (TokenAuthentication ,)   #new
     queryset = Author.objects.all() 
-    serializer_class = AuthorSerializer`} file_name="project_name / api / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+    serializer_class = AuthorSerializer`} file_name="project_name / api / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
         
         <h3 className="title-h3"> 7 - التعامل مع التسجيل في React </h3>
         <CodeHighlighter code={`import { BrowserRouter as Router, Routes, Route , Link} from "react-router-dom";
@@ -468,7 +468,7 @@ function App() {
     );
 }
 
-export default App;`} file_name="project_name / front / src / App.js" language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+export default App;`} file_name="project_name / front / src / App.js" language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <CodeHighlighter code={`import { Link , useNavigate} from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
@@ -519,7 +519,7 @@ export default function Login(props){
     </ul>
   </>
   )
-}`} file_name="project_name / front / src / login / Login.jsx" language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+}`} file_name="project_name / front / src / login / Login.jsx" language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <CodeHighlighter code={`import { useState } from "react"
 import axios from 'axios';
 
@@ -576,7 +576,7 @@ export default function CreateAccount(props){
             </form>
         </div>
     )
-}`} file_name="project_name / front / src / create-compte / CreateCompte.jsx" language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+}`} file_name="project_name / front / src / create-compte / CreateCompte.jsx" language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <CodeHighlighter code={`import axios from 'axios';
 import { useState , useEffect} from 'react';
 
@@ -613,7 +613,7 @@ function Home() {
     );
 }
 
-export default Home;`} file_name="project_name / front / src / home / Home.jsx" language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+export default Home;`} file_name="project_name / front / src / home / Home.jsx" language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <img src={images.django_rest_37} alt="django rest result" className="w-100 mb-2"/>
     </article>
 </>

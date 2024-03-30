@@ -68,8 +68,8 @@ console.log(f_name + " " + l_name)`
         </p>
 
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Output" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js" addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Output" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js" addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Output' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> 11 </h2>          
         </Result>
@@ -83,8 +83,8 @@ console.log(f_name + " " + l_name)`
         </p>
     
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Output" addClass="mt-3 mb-3" copie={true} number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js" addClass="mt-3 mb-3" copie={true} number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Output" addClass="mt-3 mb-3" copie={true} number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js" addClass="mt-3 mb-3" copie={true} number={false}/>
         <Result title='Output' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2 style={{color:"red"}}> heading </h2>
             <p> Paragraph lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
@@ -98,8 +98,8 @@ console.log(f_name + " " + l_name)`
             <CodeHighlighter code={code4} language="js" addClass="mt-3 mb-3" copie={true}/>  
         </p>
         <div className="mital">متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Output" addClass="mt-3 mb-3" copie={true} number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true} number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Output" addClass="mt-3 mb-3" copie={true} number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true} number={false}/>
         <ResultAlert title='Output' logo={images.html_logo} clickOk={clickOk} displayAlert={resultAlertDisplayAlert} alertValue="5 + 7 = 12" route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
         </ResultAlert>
     </article>
@@ -112,8 +112,8 @@ console.log(f_name + " " + l_name)`
             <CodeHighlighter code={code5} language="js" addClass="mt-3 mb-3" copie={true}/>  
         </p>
         <div className="mital"> متال : </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="Output" addClass="mt-3 mb-3" copie={true} number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js" addClass="mt-3 mb-3" copie={true} number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="Output" addClass="mt-3 mb-3" copie={true} number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js" addClass="mt-3 mb-3" copie={true} number={false}/>
         <ResultConsole title='Output' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="d-flex justify-content-between align-items-center">
                 <span>Reda Eskouni</span>

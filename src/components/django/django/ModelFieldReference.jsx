@@ -126,7 +126,7 @@ export default function ModelFieldReference(){
                مثل العلاقات بين المستخدم والملف الشخصي، يمكن للمستخدم أن يكون له ملف شخصي واحد، والملف الشخصي له مستخدم واحد.
                <CodeHighlighter code={`column_name = models.OneToOneField(ClassModelsToRelation, on_delete=models.CASCADE, related_name='name_to_get_related_data')`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-            <CodeHighlighter code={codes[3].Relations[0]} file_name="models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[3].Relations[0]} file_name="models.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/> 
             
             <h3 className="title-h3">2 - Foreginkey </h3>
             <p className="style_divv">
@@ -134,7 +134,7 @@ export default function ModelFieldReference(){
                مثل العلاقات بين المستخدم والمنشور، يمكن للمستخدم إنشاء العديد من المنشورات، ولكن يتم التحكم في النشر من قبل مستخدم واحد.
                <CodeHighlighter code={`column_name = models.Foreginkey(ClassModelsToRelation, on_delete=models.CASCADE, related_name='name_to_get_related_data')`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-            <CodeHighlighter code={codes[3].Relations[1]} file_name="models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[3].Relations[1]} file_name="models.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/> 
             
             <h3 className="title-h3">3 - ManyToManyField </h3>
             <p className="style_divv">
@@ -142,7 +142,7 @@ export default function ModelFieldReference(){
                مثل العلاقات بين المستخدم والمجموعات، يمكن للمستخدم إنشاء العديد من المجموعات ويمكن أن تضم المجموعات العديد من المستخدمين.
                <CodeHighlighter code={`column_name = models.ManyToManyField(ClassModelsToRelation,related_name='name_to_get_related_data')`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-            <CodeHighlighter code={codes[3].Relations[2]} file_name="models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[3].Relations[2]} file_name="models.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/> 
       </article>         
       <article>         
             <h2 className="title-h2" id="Parameter"> 4 - Parameter</h2>
@@ -151,7 +151,7 @@ export default function ModelFieldReference(){
                لإنشاء خيار، تحتاج إلى <b>(tuple)</b> يتم فرضها من خلال التحقق من صحة النموذج وستكون أداة النموذج الافتراضية عبارة عن مربع تحديد يحتوي على هذه الاختيارات بدلاً من حقل النص القياسي.
                <CodeHighlighter code={`choices=(  ("Key1", "value1"),    ("Key2", "value2"),   )`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-            <CodeHighlighter code={codes[3].Parameter[0]} file_name="models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[3].Parameter[0]} file_name="models.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/> 
             <h3 className="title-h3">2 - blank</h3>
             <p className="style_divv"> 
                لإخبار جانغو إذا كان الحقل إجباري أو إختياري .<br/><br/>
@@ -161,7 +161,7 @@ export default function ModelFieldReference(){
                </ul>
                <CodeHighlighter code="blank=True" language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p>
-            <CodeHighlighter code={codes[3].Parameter[1]} file_name="models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[3].Parameter[1]} file_name="models.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/> 
             <h3 className="title-h3">3 - related_name</h3>
             <p className="style_divv">
                يستخدم <b>Django</b> الخاصية <b>related_name</b> في حقل <b>ForeignKey</b> أو <b>OneToOneField</b> لتحديد اسم العلاقة العكسية من النموذج المتعلق إلى النموذج الذي يعرّف المفتاح الخارجي. يتيح لك ذلك تحديد اسم أكثر إيضاحاً أو فهمًا للعلاقة العكسية.<br/><br/>
@@ -169,7 +169,7 @@ export default function ModelFieldReference(){
                بشكل افتراضي، يقوم <b>Django</b> بتوليد اسم لهذه العلاقة العكسية استنادًا إلى اسم النموذج الذي يعرّف <b>ForeignKey</b> أو <b>OneToOneField</b>. ومع ذلك، في بعض الحالات، قد ترغب في توفير اسم مخصص وأكثر وضوحًا للعلاقة العكسية، وهنا يأتي دور <b>related_name</b>.
                <CodeHighlighter code={`related_name="name_to_get_related_data"`} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             </p> 
-            <CodeHighlighter code={codes[3].Parameter[2]} file_name="project / helloapp / models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[3].Parameter[2]} file_name="project / helloapp / models.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/> 
             <div className="mital">مثال 1 : </div>
             <CodeCommand>python manage.py shell</CodeCommand>
             <CodeCommand>
@@ -225,9 +225,9 @@ export default function ModelFieldReference(){
                reda eskouni created {"=>"}  My Book 4<br/>
             </CodeCommand>
             <div className="mital">مثال 2 : </div>
-            <CodeHighlighter code={codes[3].Parameter[3]} file_name="project / helloapp / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-            <CodeHighlighter code={codes[3].Parameter[4]} file_name="project / helloapp / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-            <CodeHighlighter code={codes[3].Parameter[5]} file_name="project / helloapp / templates /author_books.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[3].Parameter[3]} file_name="project / helloapp / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[3].Parameter[4]} file_name="project / helloapp / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/> 
+            <CodeHighlighter code={codes[3].Parameter[5]} file_name="project / helloapp / templates /author_books.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/> 
             <Result title='author_books'  route="http://localhost:8000/helloapp/authors/1/books/">
                <h2>Author : reda eskouni</h2>
                <div className="text-light mb-2" style={{backgroundColor:"red",fontSize:"26px"}}>My Book 1</div>

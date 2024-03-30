@@ -79,7 +79,7 @@ function paragragh() {
         </p>
         <ul><li>في هاذا المتال قمنا بتسمية الملفين <b>reda</b> ولاكن يختلف الإمتداد فالملف الأول يحمل إمتداد <b>js</b> والملف التاني يحمل إمتداد <b>html</b> .</li></ul>
         <div className="mital">متال :  </div>
-        <img src={images.js_Introduction3} className="img"/>
+        <img src={images.js_Introduction3} className="img" alt="js_Introduction"/>
     </article>
     <article>
         <h2 className="title-h3">2 - طريقة ربط الملف html ب js</h2>
@@ -87,8 +87,8 @@ function paragragh() {
             لربط ملف <b>html</b> بملف <b>js</b> يجب إستخدام الوسم <kbd>&lt;script&gt;</kbd> مع السمة <b>src</b> و مسار الملف .
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="reda.html"code={codeExemple1.code} language="html" is_html={true} title="Reda eskouni" addClass="mt-3 mb-3" copie={true}  number={true}/>
-        <CodeHighlighter file_name="reda.js"code={codeExemple1.script} language="js" addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="reda.html"code={codeExemple1.code} language="html" is_html={true} title="Reda eskouni" addClass="mt-3 mb-3" copie={true}  number={false}/>
+        <CodeHighlighter file_name="reda.js"code={codeExemple1.script} language="js" addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Reda Eskouni' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/reda.html">
             <h2>Reda Eskouni</h2>            
             <h2>Reda Eskouni</h2>            
@@ -97,7 +97,7 @@ function paragragh() {
             <h2>Reda Eskouni</h2>            
         </Result>
         <div className="mital">متال 2 :  </div>
-        <ul><li> <b>defer</b> لتشعيل ملف js بعد تحميل عناصر  html </li></ul>
+        <ul><li> <b>defer</b> لتشعيل ملف <b>js</b> بعد تحميل عناصر  <b>html</b> </li></ul>
         <CodeHighlighter code={code1} language="html" addClass="mt-3 mb-3" copie={true}/>
     </article>
     <article>
@@ -107,7 +107,7 @@ function paragragh() {
             يمكن أيضًا استخدام تعليقات <b>JavaScript</b> لمنع التنفيذ ، عند اختبار كود بديل.<br/>
             تبدأ التعليقات المكونة من سطر واحد بـ //.<br/>
             سيتم تجاهل أي نص بين // ونهاية السطر بواسطة <b>JavaScript</b> (لن يتم تنفيذه). يكتب التعليق كالتالي :<br/>
-            <div style={{color:"green",direction:"ltr"}}> <bdi>//Comment</bdi></div><br/>
+            <div style={{color:"green",direction:"ltr"}}> <bdi>{"//"} Comment</bdi> </div><br/>
             تبدأ التعليقات متعددة الأسطر بـ /* وتنتهي بـ */.    سيتم تجاهل أي نص بين /* و */ بواسطة <b>JavaScript</b>. <br/>
             يستخدم هذا المثال تعليقًا متعدد الأسطر (جزء تعليق) لشرح الكود يكتب التعليق كالتالي :
             <div style={{color:"green",direction:"ltr"}}> <bdi>/* Comments * /</bdi></div>
@@ -120,8 +120,8 @@ function paragragh() {
             المثال أدناه يجد العانصر <b>HTML</b> عبر <b>id</b> ، ويغير محتوى العنصر 
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" title="Reda eskouni" addClass="mt-3 mb-3" copie={true} number={true}/>
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js" addClass="mt-3 mb-3" copie={true} number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" title="Reda eskouni" addClass="mt-3 mb-3" copie={true} number={false}/>
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js" addClass="mt-3 mb-3" copie={true} number={false}/>
         <Result title='Reda Eskouni' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2 id="h2">Heading</h2>
             <p id="p">Date</p>        

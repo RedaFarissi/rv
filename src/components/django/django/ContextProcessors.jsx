@@ -11,12 +11,12 @@ export default function ContextProcessors(){
                 تعد معالجات السياق أداة قوية في <b>Django</b> تسمح لك بمشاركة البيانات المشتركة عبر جميع قوالب <b>(templates)</b> الخاصة بك دون تكرار التعليمات البرمجية في طرق العرض الفردية. يمكن أن يساعد هذا في الحفاظ على الكود الخاص بك جافًا (لا تكرر نفسك) ويسهل صيانته.
             </p>
             <CodeCommand>python manage.py startapp requests_app_test</CodeCommand>
-            <CodeHighlighter code={codes[15].Context_Processors[0]} file_name="project / project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[15].Context_Processors[0]} file_name="project / project / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeCommand>pip install requests</CodeCommand>
-            <CodeHighlighter code={codes[15].Context_Processors[1]} file_name="project / requests_app_test /context_processors.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[15].Context_Processors[2]} file_name="project / app / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[15].Context_Processors[3]} file_name="project / app / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[15].Context_Processors[4]} file_name="project / app / templates / request_products_to_test.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[15].Context_Processors[1]} file_name="project / requests_app_test /context_processors.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[15].Context_Processors[2]} file_name="project / app / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[15].Context_Processors[3]} file_name="project / app / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[15].Context_Processors[4]} file_name="project / app / templates / request_products_to_test.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <img src={images.django160} className="img" />
             <ul>
                 <li>في هذه الحالة نقوم بإنشاء ملف <b>context_processors.py</b> في التطبيق <b>"requests_app_test"</b> ونضيفه إلى الإعدادات</li>

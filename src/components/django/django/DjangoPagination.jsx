@@ -12,12 +12,12 @@ export default function DjangoPagination(){
         </p>
         <ul><li>إنشاء تطبيق آخر بالاسم <b>app</b> </li></ul>
         <CodeCommand>python manage.py startapp userProfile</CodeCommand>
-        <CodeHighlighter code={codes[10].Django_Pagination[0]} file_name="project / project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter code={codes[10].Django_Pagination[1]} file_name="project / project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter code={codes[10].Django_Pagination[2]} file_name="project / blog / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter code={codes[10].Django_Pagination[3]} file_name="project / blog / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter code={codes[10].Django_Pagination[4]} file_name="project / blog / models.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter code={codes[10].Django_Pagination[5]} file_name="project / blog / templates / blogs.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[10].Django_Pagination[0]} file_name="project / project / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[10].Django_Pagination[1]} file_name="project / project / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[10].Django_Pagination[2]} file_name="project / blog / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[10].Django_Pagination[3]} file_name="project / blog / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[10].Django_Pagination[4]} file_name="project / blog / models.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[10].Django_Pagination[5]} file_name="project / blog / templates / blogs.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <CodeCommand>python manage.py makemigrations</CodeCommand>
         <CodeCommand>python manage.py migrate</CodeCommand>
         <CodeCommand>python manage.py shell</CodeCommand>

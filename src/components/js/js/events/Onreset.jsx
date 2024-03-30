@@ -46,7 +46,7 @@ object.addEventListener("reset", function_name )`
             <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} /> 
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" addClass="mt-3 mb-3" copie={true}  number={false}/>  
         <ResultAlert title='onreset' logo={images.html_logo} clickOk={clickOk} displayAlert={displayAlertExemple} alertValue={"The form was reset."} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <form id="myForm" onReset={()=>{setDisplayAlertExemple(true)}} onSubmit={(event)=>{event.preventDefault()}}>
                 <label for="name">Name :</label>

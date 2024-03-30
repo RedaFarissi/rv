@@ -44,7 +44,7 @@ export default function Scripts(){
             <CodeHighlighter code={`document.scripts`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال 1 :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="scripts" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="scripts" addClass="mt-3 mb-3" copie={true}  number={false}/>  
         <Result title="scripts" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>document scripts</h2>
             <div>
@@ -54,7 +54,7 @@ export default function Scripts(){
             </div>
         </Result>   
         <div className="mital">متال 2 : </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="scripts" addClass="mt-3 mb-3" copie={true}  number={true}/>  
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="scripts" addClass="mt-3 mb-3" copie={true}  number={false}/>  
         <Result title="scripts" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             Hello World!<br/>
             document.write("Hello World!");<br/>

@@ -82,8 +82,8 @@ document.getElementById("test").innerHTML = str.endsWith("Eskouni");`
 str.indexOf("locate");`} language="js" addClass="mt-3 mb-3" copie={true}  />  
             </p>
             <div className="mital">متال  :  </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="String Search" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-            <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="String Search" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+            <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
             <ResultConsole title='String Search' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <div className="d-flex justify-content-between align-items-center">
                     <span className="text-success">7</span>
@@ -103,8 +103,8 @@ str.indexOf("locate");`} language="js" addClass="mt-3 mb-3" copie={true}  />
 str.lastIndexOf("locate");`} language="js" addClass="mt-3 mb-3" copie={true}  />  
             </p>
             <div className="mital">متال :  </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="String Search" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-            <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="String Search" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+            <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
             <ResultConsole title='String Search' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <div className="d-flex justify-content-between align-items-center">
                     <span className="text-success">21</span>
@@ -124,8 +124,8 @@ str.lastIndexOf("locate");`} language="js" addClass="mt-3 mb-3" copie={true}  />
 str.search("locate");`} language="js" addClass="mt-3 mb-3" copie={true}  />  
             </p>
             <div className="mital">متال :  </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="String Search" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-            <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="String Search" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+            <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
             <ResultConsole title='String Search' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <div className="d-flex justify-content-between align-items-center">
                     <span className="text-success">7</span>
@@ -142,8 +142,8 @@ str.search("locate");`} language="js" addClass="mt-3 mb-3" copie={true}  />
 str.match(/ain/g);`} language="js" addClass="mt-3 mb-3" copie={true}  />  
             </p>
             <div className="mital">متال :  </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="String Search" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-            <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="String Search" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+            <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
             <Result title='String Search' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <h2>E,E</h2>
                 <h2>i,i,i,i,i,i,i</h2>
@@ -158,8 +158,8 @@ str.match(/ain/g);`} language="js" addClass="mt-3 mb-3" copie={true}  />
 str.includes("Reda");`} language="js" addClass="mt-3 mb-3" copie={true}  />  
             </p>
             <div className="mital">متال  :  </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="String Search" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-            <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="String Search" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+            <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
             <ResultConsole title='String Search' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <div className="d-flex justify-content-between align-items-center">
                     <span className="text-success">true</span>
@@ -179,8 +179,8 @@ str.startsWith("Eskouni",5);   //true`} language="js" addClass="mt-3 mb-3" copie
 str.startsWith("Eskouni");   //false`} language="js" addClass="mt-3 mb-3" copie={true}  />  
             </p>
             <div className="mital">متال :  </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple6.code} language="html" is_html={true} title="String Search" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-            <CodeHighlighter file_name="index.js"code={codeExemple6.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple6.code} language="html" is_html={true} title="String Search" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+            <CodeHighlighter file_name="index.js"code={codeExemple6.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
             <ResultConsole title='String Search' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <div className="d-flex justify-content-between align-items-center">
                     <span className="text-primary">true</span>
@@ -202,8 +202,8 @@ str.startsWith("Eskouni");   //false`} language="js" addClass="mt-3 mb-3" copie=
                 تعيد الدالة  <b><bdi>endsWith()</bdi></b> true إذا <u>إنتهى</u>  سلسلة نصية (string) بقيمة محددة ، وإلا فهي false .<br/>
             </p>
             <div className="mital">متال :  </div>
-            <CodeHighlighter file_name="index.html"code={codeExemple7.code} language="html" is_html={true} title="String Search" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-            <CodeHighlighter file_name="index.js"code={codeExemple7.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+            <CodeHighlighter file_name="index.html"code={codeExemple7.code} language="html" is_html={true} title="String Search" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+            <CodeHighlighter file_name="index.js"code={codeExemple7.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
             <Result title='String Search' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <h2> true </h2>
             </Result>

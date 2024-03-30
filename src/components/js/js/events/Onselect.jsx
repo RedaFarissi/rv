@@ -35,8 +35,8 @@ object.addEventListener("select", function_name )`
         </p>
         
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="onselect" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js" addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="onselect" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js" addClass="mt-3 mb-3" copie={true}  number={false}/>
         <ResultAlert title='onselect' logo={images.html_logo} clickOk={clickOk} displayAlert={displayAlertExemple} alertValue={"Hello world!"} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             Select some of the text:
             <input type="text" value="Hello world!" onSelect={()=>{setDisplayAlertExemple(true)}}/>

@@ -102,7 +102,7 @@ export default function Mvc(props){
 # New Route
 Route::get('/route-name/{somthinhg}' , function( $somthinhg ){
    return view('welcome',["key"=> $somthinhg]) ;
-});`} file_name="example-app / routes / web.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+});`} file_name="example-app / routes / web.php" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
   
          <CodeHighlighter  code={`<!DOCTYPE html>
 <html>
@@ -116,7 +116,7 @@ Route::get('/route-name/{somthinhg}' , function( $somthinhg ){
             <p>No data available for key.</p>
     @endif
 </body>
-</html>`} file_name="example-app / resources / views / welcome.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+</html>`} file_name="example-app / resources / views / welcome.blade.php" language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <Result title='Welcome' route="http://localhost:8000" url_change="/route-name/reda">
              Key: reda
          </Result>
@@ -134,7 +134,7 @@ Route::get('/route-name/{somthinhg}' , function( $somthinhg ){
          <CodeHighlighter code={`Route::get('/store',function(){
     $variable = request('style') ;
     return '<h2>' . $variable . '</h2>' ;
-});`} file_name="example-app / routes / web.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+});`} file_name="example-app / routes / web.php" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <div className="mital"> متال 1 : </div>
          <Result title='Welcome' route="http://localhost:8000/store" url_change="?style=Reda%20Eskouni">
              Reda Eskouni
@@ -146,7 +146,7 @@ Route::get('/route-name/{somthinhg}' , function( $somthinhg ){
          <CodeHighlighter code={`Route::get('/store',function(){
     $variable = request('style');
     return '<h2>' . strip_tags($variable) . '</h2>'
-})`} file_name="example-app / routes / web.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+})`} file_name="example-app / routes / web.php" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
    </article>
    <article id="Controller"> 
          <h2 className='title-h2'>8 - Controller</h2>
@@ -187,7 +187,7 @@ class ControllerName extends Controller
      public function about(){
          return view("about");
      }
-}`} file_name="example-app / app / Http / Controllers / ControllerName.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+}`} file_name="example-app / app / Http / Controllers / ControllerName.php" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <CodeHighlighter code={`<?php
 
 use Illuminate\\Support\\Facades\\Route;
@@ -195,7 +195,7 @@ use App\\Http\\Controllers\\ControllerName;
 
 Route::get("/",     [ControllerName::class , "welcome" ]) -> name('index');
 Route::get("/home", [ControllerName::class , "home" ]) -> name('home');
-Route::get("/about",[ControllerName::class , "about" ]) -> name('about');`} file_name="example-app / routes / web.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+Route::get("/about",[ControllerName::class , "about" ]) -> name('about');`} file_name="example-app / routes / web.php" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <CodeHighlighter code={`<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -207,7 +207,7 @@ Route::get("/about",[ControllerName::class , "about" ]) -> name('about');`} file
 <body>
     <h2>Welcome</h2>
 </body>
-</html>`} file_name="example-app / resources / views / welcome.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+</html>`} file_name="example-app / resources / views / welcome.blade.php" language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <CodeHighlighter code={`<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -219,7 +219,7 @@ Route::get("/about",[ControllerName::class , "about" ]) -> name('about');`} file
 <body>
     <h2>Home</h2>
 </body>
-</html>`} file_name="example-app / resources / views / home.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+</html>`} file_name="example-app / resources / views / home.blade.php" language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <CodeHighlighter code={`<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -231,7 +231,7 @@ Route::get("/about",[ControllerName::class , "about" ]) -> name('about');`} file
 <body>
     <h2>About</h2>
 </body>
-</html>`} file_name="example-app / resources / views / about.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+</html>`} file_name="example-app / resources / views / about.blade.php" language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <Result title='Welcome' route="http://localhost:8000">
                <h2>Welcome</h2>
          </Result>
@@ -268,26 +268,26 @@ Route::get("/about",[ControllerName::class , "about" ]) -> name('about');`} file
       </nav>
         @yield('content')
    </body>
-</html>`} file_name="example-app / resources / views / layoute.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+</html>`} file_name="example-app / resources / views / layoute.blade.php" language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
    
    <CodeHighlighter code={`@extends('layoute')
 @section('title','Welcome')
 
 @section('content')
     <h2> Welcome </h2>
-@endsection`} file_name="example-app / resources / views / welcome.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+@endsection`} file_name="example-app / resources / views / welcome.blade.php" language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
    <CodeHighlighter code={`@extends('layoute')
 @section('title','Home')
 
 @section('content')
     <h2> Home </h2>
-@endsection`} file_name="example-app / resources / views / home.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+@endsection`} file_name="example-app / resources / views / home.blade.php" language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
    <CodeHighlighter code={`@extends('layoute')
 @section('title','About')
 
 @section('content')
     <h2> About </h2>
-@endsection`} file_name="example-app / resources / views / about.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+@endsection`} file_name="example-app / resources / views / about.blade.php" language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
    </article>
    <article id="css_and_javaScript">
          <h2 className='title-h2'>10 - استخدم CSS و javaScript </h2>
@@ -308,10 +308,10 @@ Route::get("/about",[ControllerName::class , "about" ]) -> name('about');`} file
          </p>
          <CodeHighlighter code={`Route::get("/",     [ControllerName::class , "welcome" ]) -> name('home.index');
 Route::get("/contact", [ControllerName::class , "home" ]) -> name('home.contact');
-Route::get("/about",[ControllerName::class , "about" ]) -> name('home.about');`} file_name="example-app / routes / web.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+Route::get("/about",[ControllerName::class , "about" ]) -> name('home.about');`} file_name="example-app / routes / web.php" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <CodeHighlighter code={`<a href="{{ route('home.index') }}"> index </a>
 <a href="{{ route('home.contact') }}"> contact </a>
-<a href="{{ route('home.about') }}"> about </a>`} file_name="example-app / resources / views / file_name.blade.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+<a href="{{ route('home.about') }}"> about </a>`} file_name="example-app / resources / views / file_name.blade.php" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
    </article>
    <article id="controller_resource">
          <h2 className='title-h2'>12 - controller resource</h2>
@@ -322,7 +322,7 @@ Route::get("/about",[ControllerName::class , "about" ]) -> name('home.about');`}
             لتعريف مورد في <b>Laravel</b> ، عادةً ما تستخدم الطريقة <bdi><b>Route::resource()</b></bdi> في ملف <kbd>routes/web.php</kbd> الخاص بك. تقوم هذه الطريقة بتوليد مسارات للمورد المحدد تلقائيًا ، وتعين الأفعال <b>HTTP</b> لطرق المتحكم.<br/><br/>
             <b>على سبيل المثال سيؤدي هذا إلى توليد المسارات التالية:</b>
             <CodeHighlighter code={`use App\\Http\\Controllers\\YourController;
-Route::resource('your-resource', YourController::class);`} file_name="example-app / routes / web.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+Route::resource('your-resource', YourController::class);`} file_name="example-app / routes / web.php" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
                <ul>
                    <li><b className="text-success">GET /your-resource</b>  - الطريقة <bdi><b>index()</b></bdi> في <b>YourController</b></li>
                    <li><b className="text-success">GET /your-resource/create</b>  - الطريقة <bdi><b>create()</b></bdi> في <b>YourController</b></li>
@@ -355,7 +355,7 @@ class YourController extends Controller {
    public function edit($id){    }
    public function update(Request $request, $id){    }
    public function destroy($id){    }
-}`} file_name="example-app / app / Http / Controllers / YourController.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+}`} file_name="example-app / app / Http / Controllers / YourController.php" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
    </article>
    <article id="list_all_route_in_project">
          <h2 className="title-h2"> 13 - قائمة كافة الطرق (route) في المشروع</h2>
@@ -401,14 +401,14 @@ class CountryController extends Controller {
     public function edit($id){  }
     public function update(Request $request, $id){  }
     public function destroy($id){  }
-}`} file_name="example-app / app / Http / Controllers / CountryController.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+}`} file_name="example-app / app / Http / Controllers / CountryController.php" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <CodeHighlighter code={`<?php
 
 use Illuminate\\Support\\Facades\\Route;
 use App\\Http\\Controllers\\CountryController;
 
 Route::resource('countries', CountryController::class);
-?>`} file_name="example-app / routes / web.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+?>`} file_name="example-app / routes / web.php" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <CodeHighlighter code={`<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -421,7 +421,7 @@ Route::resource('countries', CountryController::class);
 <body>
      @yield('content')
 </body>
-</html>`} file_name="example-app / resources / wiews / layoute.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+</html>`} file_name="example-app / resources / wiews / layoute.php" language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <ul>
              <li> قم بإنشاء مجلد جديد <bdi><b>countries/</b></bdi> في طرق العرض <b>views</b> </li>
              <li> في مجلد <bdi><b>countries/</b></bdi> قم بإنشاء ملف <b>index.blade.php</b> </li>
@@ -440,7 +440,7 @@ Route::resource('countries', CountryController::class);
             </a>
       @endforeach
    </section>
-@endsection`} file_name="example-app / resources / wiews / countries / index.blade.php" language="html" number={true} addclassName="mt-3 mb-3" copie={true}/>
+@endsection`} file_name="example-app / resources / wiews / countries / index.blade.php" language="html" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <ul> <li> في مجلد <bdi><b>countries/</b></bdi> قم بإنشاء ملف <b>show.blade.php</b> </li> </ul>
          <CodeHighlighter code={`@extends('layoute')
 
@@ -452,7 +452,7 @@ Route::resource('countries', CountryController::class);
            <li> nationality : {{ $country['nationality'] }} </li>
        </ul>
     </h2>  
-@endsection`} file_name="example-app / resources / wiews / countries / show.blade.php" language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+@endsection`} file_name="example-app / resources / wiews / countries / show.blade.php" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <CodeHighlighter code={`#section {
     display: flex;
     flex-wrap: wrap;
@@ -466,7 +466,7 @@ Route::resource('countries', CountryController::class);
     box-sizing: border-box;
     color: white;
     font-size: 18px;
-}`} file_name="example-app / public / css / style.css" language="css" number={true} addclassName="mt-3 mb-3" copie={true}/>
+}`} file_name="example-app / public / css / style.css" language="css" number={false} addclassName="mt-3 mb-3" copie={true}/>
       <ul><li> انتقل إلى المسار <bdi><b>http://localhost:8000/countries/</b></bdi> </li></ul>
       <Result title={getAbsoluteUrl.title_route} route={`http://localhost:8000/countries/${getAbsoluteUrl.route}`}>
                {(getAbsoluteUrl.visibility)?(

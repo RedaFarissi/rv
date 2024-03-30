@@ -46,8 +46,8 @@ object.addEventListener("keydown", function_name)`
             </div>
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="onkeydown" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="onkeydown" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <ResultAlert title='onkeydown' logo={images.html_logo} clickOk={clickOk} displayAlert={displayAlertExemple} alertValue={"You pressed a key inside the input field"} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <p> A function is triggered when the user is pressing a key in the input field. </p>
             <input type="text" onKeyDown={myFunction} />

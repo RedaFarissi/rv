@@ -98,8 +98,8 @@ object.addEventListener("scroll", function_name )`
             
         </p>
         <div className="mital"> متال 1 :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="onscroll" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="onscroll" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <ResultAlert title='onscroll' logo={images.html_logo} clickOk={clickOk} displayAlert={displayAlertExemple} alertValue={"you scrolled div"} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div id="js-onscroll-DIV"  onScroll={scrollFunction}>
                 <div id="js-onscroll-child">
@@ -108,8 +108,8 @@ object.addEventListener("scroll", function_name )`
             </div>
         </ResultAlert>
         <div className="mital"> متال 2 :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="onscroll" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} head={codeExemple2.head} language="html" is_html={true} title="onscroll" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="onscroll"  logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div ref={exemple2RefParent} id="js-onscroll-Parent" onScroll={scrollFunction2} class="mt-5">
                 <div id="js-onscroll-Child">

@@ -64,8 +64,8 @@ result.innerHTML = parent.contains(b);`
             <CodeHighlighter code={`document.contains(node)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </div>
         <div className="mital">متال 1 :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="contains" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} language="html" is_html={true} title="contains" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="contains" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div>
                 <div > children 1 </div>
@@ -76,8 +76,8 @@ result.innerHTML = parent.contains(b);`
             <div style={{fontSize:"22px"}}> true </div>
         </Result>       
         <div className="mital">متال 2 :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="contains" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple2.code} language="html" is_html={true} title="contains" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="contains" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div>
                 <div> children 1 <span style={{color:"red"}}>Hello Word</span></div>
@@ -88,8 +88,8 @@ result.innerHTML = parent.contains(b);`
             <div style={{fontSize:"22px"}}> true </div>
         </Result>
         <div className="mital">متال 3 :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple3.code} language="html" is_html={true} title="contains" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple3.code} language="html" is_html={true} title="contains" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="contains" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             children 1 <br/>   children 2 <br/>   children 3 <br/>   children 4 <br/>   false
         </Result>

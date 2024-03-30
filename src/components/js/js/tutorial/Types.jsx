@@ -129,23 +129,23 @@ console.log(s);`
             بدون أنواع البيانات ، لا يمكن للكمبيوتر حل هذا بأمان
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Data Types' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             95Reda     
         </Result>
         <div className="mital"> متال 2 :  </div>
         <ul><li>تقوم <b>JavaScript</b> بتقييم التعبيرات من اليسار إلى اليمين. يمكن أن تؤدي التسلسلات المختلفة إلى نتائج مختلفة</li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Data Types' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             a= 10Reda<br/>
             b= Reda55 
         </Result>
         <div className="mital"> متال 3 :  </div>
         <ul><li> في هاذا المتال تم حساب أول رقمين كأرقام تم بعد إيجاد <b>STRING</b> تم إعتبار باقي النص على أنه من النوع <b>STRING</b>.</li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Data Types' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             it = 10 Reda 55
         </Result>
@@ -157,8 +157,8 @@ console.log(s);`
             جافا سكريبت لديها أنواع ديناميكية. هذا يعني أنه يمكن استخدام نفس المتغير للاحتفاظ بأنواع بيانات مختلفة
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Data Types' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>20</h2>
             <h2>Reda Eskouni</h2>
@@ -172,8 +172,8 @@ console.log(s);`
         </p>
         <div className="mital"> متال 1 :  </div>
         <ul><li> ليس هناك فرق بين '' أو "" خلال كتابة متغير من نوع <b>string</b></li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple5.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple5.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <ResultConsole title='Data Types' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="d-flex justify-content-between align-items-center">
                 <span>Hello</span>
@@ -186,8 +186,8 @@ console.log(s);`
         </ResultConsole>  
         <div className="mital"> متال 2 :  </div>
         <ul><li> يمكنك استخدام علامات الاقتباس داخل التغير من نوع <b>string</b> ، طالما أنها لا تتطابق مع علامات الاقتباس المحيطة بالمتغير . </li></ul>
-        <CodeHighlighter file_name="index.html" code={codeExemple6.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js" code={codeExemple6.script} language="js" addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple6.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple6.script} language="js" addClass="mt-3 mb-3" copie={true}  number={false}/>
         <ResultConsole title='Data Types' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="d-flex justify-content-between align-items-center">
                 <span>"Reda" "Eskouni"</span>
@@ -206,8 +206,8 @@ console.log(s);`
             يمكن كتابة الأرقام بكسور عشرية أو بدونها .
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple7.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js" code={codeExemple7.script} language="js" addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple7.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple7.script} language="js" addClass="mt-3 mb-3" copie={true}  number={false}/>
         <ResultConsole title='Data Types' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="d-flex justify-content-between align-items-center">
                 <span className="text-success">3.5</span>
@@ -231,8 +231,8 @@ console.log(s);`
             سوف تتعلم المزيد عن النوع <b>Booleans</b> لاحقًا في هذا البرنامج التعليمي .<br/>
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple8.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple8.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple8.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple8.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Data Types' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> true <br/> false </h2>
         </Result>    
@@ -246,8 +246,8 @@ console.log(s);`
             سوف تتعلم المزيد عن <b>arrays</b> لاحقًا في هذا البرنامج التعليمي .
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple9.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple9.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple9.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple9.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Data Types' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> Saab </h2>
         </Result>   
@@ -259,8 +259,8 @@ console.log(s);`
             سوف تتعلم المزيد عن <b> Objects</b> لاحقًا في هذا البرنامج التعليمي.
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple10.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple10.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple10.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple10.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Data Types' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Reda Eskouni</h2>
         </Result>   
@@ -272,8 +272,8 @@ console.log(s);`
             يُرجع عامل التشغيل <b>typeof</b> نوع متغير أو تعبير
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple11.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple11.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple11.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple11.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Data Types' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>string</h2>
             <h2>number</h2>
@@ -285,8 +285,8 @@ console.log(s);`
             في <b>JavaScript</b> ، المتغير بدون قيمة له قيمة <b>undefined</b>. النوع أيضًا غير محدد.
         </p>
         <div className="mital"> متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple12.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple12.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple12.code} language="html" is_html={true} title="Data Types" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple12.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <ResultConsole title='Data Types' logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div className="d-flex justify-content-between align-items-center">
                 <span className="text-success">undefined</span>

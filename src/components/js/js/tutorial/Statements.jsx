@@ -45,7 +45,7 @@ document.getElementById("Number").innerHTML = sum2;`
         </p>
         <div className="mital">متال :  </div>
         <ul><li> هذا السطر البرمجي يخبر المتصفح بكتابة <b>Hello Word</b> . داخل عنصر <b>HTML</b> الذي يحتوي على السمة  <bdi><b>id="hw"</b></bdi> :</li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Statements" addClass="mt-3 mb-3" copie={true} number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Statements" addClass="mt-3 mb-3" copie={true} number={false}/>
         <Result title='Statements' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> Hello Word </h2>          
         </Result>
@@ -62,8 +62,8 @@ document.getElementById("Number").innerHTML = sum2;`
             أضف فاصلة منقوطة في نهاية كل عبارة قابلة للتنفيذ لكي لا تحصل على خطأ عند تشغيل الكود .
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Statements" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Statements" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Statements' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> 6 </h2>          
         </Result>
@@ -73,8 +73,8 @@ document.getElementById("Number").innerHTML = sum2;`
             <li> عبارات النهاية بالفاصلة المنقوطة غير مطلوبة ، ولكن يوصى بها بشدة.</li>
             <li>عند الفصل بفاصلة منقوطة ، يُسمح بعبارات متعددة في سطر واحد </li>
         </ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Statements" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js" addClass="mt-3 mb-3" copie={true} number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Statements" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js" addClass="mt-3 mb-3" copie={true} number={false}/>
         <Result title='Statements' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2> 6 </h2>          
         </Result>

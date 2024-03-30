@@ -99,21 +99,21 @@ return(
           <b>ECMAScript 6</b> (المعروفة أيضًا بـ ES6) هي إصدار جديد من لغة <b>JavaScript</b> تم نشره في عام 2015. وهي تأتي مع العديد من الميزات الجديدة والتحسينات التي تهدف إلى تحسين القراءة والكتابة للمطورين. إليك تعريف بسيط وأمثلة لبعض ميزات <b>ES6</b>:
         </p>
         <h5 className="title-h5">class</h5>
-        <CodeHighlighter  code={codes[0].ES6.class[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={codes[0].ES6.class[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <h5 className="title-h5">تعريف المتغيرات بـ let و const</h5>
-        <CodeHighlighter  code={codes[0].ES6.variable[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={codes[0].ES6.variable[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <h5 className="title-h5">الدوال السهمية (Arrow Functions)</h5>
-        <CodeHighlighter  code={codes[0].ES6.arrow[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={codes[0].ES6.arrow[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <h5 className="title-h5">التفكيك (Destructuring)</h5>
-        <CodeHighlighter  code={codes[0].ES6.destructuring[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={codes[0].ES6.destructuring[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <h5 className="title-h5">(Modules)</h5>
-        <CodeHighlighter  code={codes[0].ES6.modules[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={codes[0].ES6.modules[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <h5 className="title-h5">تعيين قيمة افتراضية لمتغير (Default Parameter)</h5>
-        <CodeHighlighter  code={codes[0].ES6.default_parameter[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={codes[0].ES6.default_parameter[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <h5 className="title-h5">عامل الانتشار (Spread Operator):</h5>
-        <CodeHighlighter  code={codes[0].ES6.spread_operator[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={codes[0].ES6.spread_operator[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <h5 className="title-h5">التكرار على الكائنات (Object Iteration)</h5>
-        <CodeHighlighter  code={codes[0].ES6.object_iteration[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={codes[0].ES6.object_iteration[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <h3 className="title-h3" id="Create_React_App">7 - إنشاء تطبيق App</h3>
         <CodeCommand>npm cache verify</CodeCommand>
         <CodeCommand>npx create-react-app myproject</CodeCommand>
@@ -141,7 +141,7 @@ return(
             في <b>React</b>، يمكنك كتابة <b>JSX</b> في علامة <b>HTML</b> واحدة. إذا كنت ترغب في استخدام العديد من العلامات، استخدم <bdi>{"<>"} ..... {"</>"}</bdi>
         </p>         
         <div className="mital">متال : </div>
-        <CodeHighlighter  code={codes[1].JSX[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={codes[1].JSX[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <Result title={'React App'} logo={react_logo} route="localhost:3000">
           <ul className="m-2">
             <li> a = 2 </li>
@@ -160,7 +160,7 @@ return(
           <li>لاستخدام المكون، يلزمك استخدام خيار الاستيراد والتصدير الافتراضي. </li>
           <li>في مكون التطبيق نستخدم <b>ComponentH2</b> و <b>Paragraph</b>. </li>
         </ul>
-        <CodeHighlighter  code={codes[1].function_Component[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={codes[1].function_Component[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <Result title={'React App'} logo={react_logo} route="localhost:3000">
           <h1>  Component haeding</h1><br />
           <p className="p"> Component paragraph </p><br />
@@ -169,24 +169,24 @@ return(
         <ul>
           <li> في <b>React</b>، يمكن تمرير البيانات إلى المكوّنات باستخدام الخصائص <b>(props)</b>. الخصائص تمثل معلومات إضافية يمكن تمريرها من المكوّن الأب إلى المكوّن الابن. إليك كيفية تعريف واستخدام مكوّن دالة <b>(Function Component)</b> مع خصائص .</li>
         </ul>
-        <CodeHighlighter  code={codes[1].function_Component_props[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={codes[1].function_Component_props[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <Result title={'React App'} logo={react_logo} route="localhost:3000">
             <div>Hello, John!</div>
             <div>Hello, Sara!</div>
         </Result>
   
         <h3 className="title-h3" id="class_Component">4 - مكوّن الفئة (Class Component)</h3>
-        <CodeHighlighter code={codes[1].class_Component[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[1].class_Component[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <h3 className="title-h3" id="class_Component_this_props">4 - مكوّن الفئة (Class Component this.props)</h3>
-        <CodeHighlighter code={codes[1].class_Component_this_props[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter code={codes[1].class_Component_this_props[1]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[1].class_Component_this_props[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[1].class_Component_this_props[1]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <Result title={'React App'} logo={react_logo} route="localhost:3000">
            <p style={{backgroundColor:"red",color:"white"}}> Learn React  </p>
         </Result>
         <h3 className="title-h3" id="Components_in_Component">5 - المكونات في المكون </h3>
-        <CodeHighlighter code={codes[1].Components_in_Component[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter code={codes[1].Components_in_Component[1]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter code={codes[1].Components_in_Component[2]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[1].Components_in_Component[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[1].Components_in_Component[1]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[1].Components_in_Component[2]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
     </article>  
 
     <article id="Events">
@@ -204,12 +204,12 @@ return(
             onClick={"{"}shoot{"}"} بدلاً من <bdi>onClick="shoot()"</bdi>
         </p>
         <div className="mital">متال 1 : </div>
-        <CodeHighlighter code={codes[2].Events[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[2].Events[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <EventExemple images={react_logo}/>
         <p><ul><li>إذا كتبت <bdi>onClick={"{"}shoot(){"}"}،</bdi> فسيتم تشغيل الوظيفة <bdi><b>shoot()</b></bdi> عند بدء التطبيق.</li></ul></p>  
         <div className="mital">متال 2 : </div>
-        <CodeHighlighter code={codes[2].Events[1]} language="css" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter code={codes[2].Events[2]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[2].Events[1]} language="css" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[2].Events[2]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <Result title={'React App'} logo={react_logo} route="localhost:3000">
             <EventExemple2 />
         </Result>
@@ -222,7 +222,7 @@ return(
           في <b>React</b>، ستقوم بعرض القوائم باستخدام نوع من أنواع الحلقات. وأسلوب استخدام دالة <bdi><b>map()</b></bdi> في <b>JavaScript</b> على الأراي (المصفوفة) هو عادة الأسلوب المفضل.
         </p>
         <div className="mital">متال 1 : </div>
-        <CodeHighlighter code={codes[3].Lists[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+        <CodeHighlighter code={codes[3].Lists[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
         <Result title={'React App'} logo={react_logo} route="localhost:3000">
           <ul className="m-0">
             <li>Item 1</li>
@@ -231,7 +231,7 @@ return(
           </ul>
         </Result>
         <div className="mital">متال 2 : </div>
-        <CodeHighlighter code={codes[3].Lists[1]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+        <CodeHighlighter code={codes[3].Lists[1]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
         <Result title={'React App'} logo={react_logo} route="localhost:3000">
           <table className="table">
             <tr> <th>name</th> <th>age</th> </tr>
@@ -243,7 +243,7 @@ return(
           </table>
         </Result>
         <div className="mital">متال 3 : </div>
-        <CodeHighlighter code={codes[3].Lists[2]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+        <CodeHighlighter code={codes[3].Lists[2]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
         <Result title={'React App'} logo={react_logo} route="localhost:3000">
           <h1  className="m-0">My Garage</h1>
           <ul className="m-0">
@@ -261,24 +261,24 @@ return(
         </p>
         <div className="mital">متال : </div>
         <ul><li> في هذا المتال قمن بجلب الصورة من مسارها مباشرة  </li></ul>
-        <CodeHighlighter code={codes[4].Handle_images_react[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-        <CodeHighlighter code={codes[4].Handle_images_react[1]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+        <CodeHighlighter code={codes[4].Handle_images_react[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
+        <CodeHighlighter code={codes[4].Handle_images_react[1]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
         <Result title={'React App'} logo={react_logo} route="localhost:3000">
           <img src={react_logo} className="w-25 " alt="logo react" />
         </Result>
         <ul><li>ماذا لو إحتجت لجلب عدة صور ، الطريقة المستعملة في المثال السبق ستكون طريقة <span className="text-danger">غير عملية</span> لذلك <span className="text-success">قم بإنشاء ملف بامتداد js</span> لمعالجة تنظيم الصور</li></ul>
-        <CodeHighlighter code={codes[4].Handle_images_react[2]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-        <CodeHighlighter code={codes[4].Handle_images_react[3]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+        <CodeHighlighter code={codes[4].Handle_images_react[2]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
+        <CodeHighlighter code={codes[4].Handle_images_react[3]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
     </article>
 
     <article id="Handle_import">
         <h2 className="title-h2">6 -  استيراده ملف آخر (import)  </h2>
         <h3 className="title-h3">1 - استيراد مكوّنات (Components)</h3>
         <div className="style_divv">قبل نقوم باستيراد كل مكون من مساره  <bdi className="text-danger">(وهذا غير عملي)</bdi></div>
-        <CodeHighlighter code={codes[5].Handle_import[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-        <CodeHighlighter code={codes[5].Handle_import[1]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-        <CodeHighlighter code={codes[5].Handle_import[2]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-        <CodeHighlighter code={codes[5].Handle_import[3]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+        <CodeHighlighter code={codes[5].Handle_import[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
+        <CodeHighlighter code={codes[5].Handle_import[1]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
+        <CodeHighlighter code={codes[5].Handle_import[2]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
+        <CodeHighlighter code={codes[5].Handle_import[3]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
         <Result title={'React App'} logo={react_logo} route="localhost:3000">
           <h1>Header</h1>
           <p>This is the content of the app.</p>
@@ -287,8 +287,8 @@ return(
         <p className="style_divv">
           للحصول على مكونات تقع في مسارات مختلفة داخل مكون آخر بسهولة، <span className="text-success">نحتاج إلى إنشاء ملف بامتداد js</span> واستخدامه لإستراد كل الكونات .
         </p>
-        <CodeHighlighter code={codes[5].Handle_import[4]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-        <CodeHighlighter code={codes[5].Handle_import[5]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+        <CodeHighlighter code={codes[5].Handle_import[4]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
+        <CodeHighlighter code={codes[5].Handle_import[5]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
         <Result title={'React App'} logo={react_logo} route="localhost:3000">
           <h1>Header</h1>
           <p>This is the content of the app.</p>
@@ -307,8 +307,8 @@ return(
       في <b>React</b>، <b>props.children</b> هو خاصية تُستخدم لنقل عناصر الطفل <b>(children)</b> إلى داخل مكون. يمكن استخدام هذه الطريقة لتمرير المحتوى بين عناصر الفتح والإغلاق ({"<"}OpeningTag{">"}...{"<"}/ClosingTag{">"}).<br/><br/>
       تسمح <b>props.children</b> بتوجيه أي شيء يُمكن عرضه داخل تكوين المكون.
     </p>
-    <CodeHighlighter code={codes[6].props_children[0]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
-    <CodeHighlighter code={codes[6].props_children[1]} language="jsx" number={true} addclassName="mt-3 mb-3" copie={true}/> 
+    <CodeHighlighter code={codes[6].props_children[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
+    <CodeHighlighter code={codes[6].props_children[1]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
   </article>
 
   <article id="hooks">

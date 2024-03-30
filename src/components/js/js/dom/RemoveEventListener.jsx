@@ -44,8 +44,8 @@ document.getElementById("anuler").addEventListener("click", function() {
             <CodeHighlighter code={`element.removeEventListener(event,function_name,Capture)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
-        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="addEventlistener " addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js" code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html" code={codeExemple1.code} head={codeExemple1.head} language="html" is_html={true} title="addEventlistener " addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js" code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <ResultAlert title='addEventlistener' logo={images.html_logo} clickOk={clickOk7} displayAlert={displayAlertExemple7} alertValue={<span>First name = reda <br/> Last_name = Eskouni</span>} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <button onClick={exemple7button} id="myButton" class="btn btn-primary me-2">click</button>
             <button id="anuler" onClick={()=>{ setRemoveEventExemple7(true) }} class="btn btn-outline-danger">

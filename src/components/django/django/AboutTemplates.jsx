@@ -14,9 +14,9 @@ export default function AboutTemplates(){
             </p>
             <ul><li> أنشئ ملفًا بأي اسم تريده في <bdi><b>templates/</b></bdi> في هذا المثال، الاسم هو <b>base.html</b></li></ul>
             <img src={images.django12} className="img"/>
-            <CodeHighlighter code={codes[5].Create_Public_templates[0]} file_name="project / tempaltes / base.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[5].Create_Public_templates[1]} file_name="project / project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[5].Create_Public_templates[2]} file_name="project / app / tempaltes / list_products.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[5].Create_Public_templates[0]} file_name="project / tempaltes / base.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[5].Create_Public_templates[1]} file_name="project / project / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[5].Create_Public_templates[2]} file_name="project / app / tempaltes / list_products.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
          </article>
          <article id="templates_tags">
             <h2 className="title-h2">2 -  templates tags </h2>
@@ -90,8 +90,8 @@ export default function AboutTemplates(){
                </tbody>
             </table>
             <div className="mital">مثال : </div>
-            <CodeHighlighter code={codes[5].template_filters[0]} file_name="views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-            <CodeHighlighter code={codes[5].template_filters[1]} file_name="created_updated.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[5].template_filters[0]} file_name="views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter code={codes[5].template_filters[1]} file_name="created_updated.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <Result title='date'  route="http://localhost:8000/helloapp/article/1/">
                <h2>Products created updated</h2>
                <div className="mb-2 bg-dark text-light">

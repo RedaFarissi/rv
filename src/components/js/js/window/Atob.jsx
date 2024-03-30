@@ -24,8 +24,8 @@ result.innerHTML += "<br/><br/> decodes : " + decodes`
             <CodeHighlighter code={`window.atob(encoded)`} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital"> متال  :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="atob" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="atob" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='atob' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>encode : UmVkYSBFc2tvdW5p<br/><br/>decodes : Reda Eskouni</h2>
         </Result>

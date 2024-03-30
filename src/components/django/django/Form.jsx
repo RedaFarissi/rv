@@ -13,12 +13,12 @@ export default function Form(){
 
         <ul><li>إنشاء تطبيق آخر بالاسم testing </li></ul>
         <CodeCommand>python manage.py startapp testing</CodeCommand>
-        <CodeHighlighter code={codes[11].Form[0]} file_name="project / project / settings.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter code={codes[11].Form[1]} file_name="project / project / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter code={codes[11].Form[2]} file_name="project / testing / forms.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter code={codes[11].Form[3]} file_name="project / testing / urls.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter code={codes[11].Form[4]} file_name="project / testing / views.py" language="python" number={true} addclassName="mt-3 mb-3" copie={true}/>
-        <CodeHighlighter code={codes[11].Form[5]} file_name="project / testing / templates / my_form.html" language="django" number={true} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[11].Form[0]} file_name="project / project / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[11].Form[1]} file_name="project / project / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[11].Form[2]} file_name="project / testing / forms.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[11].Form[3]} file_name="project / testing / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[11].Form[4]} file_name="project / testing / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={codes[11].Form[5]} file_name="project / testing / templates / my_form.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <img src={images.django183} className="img"/>
         <div className="bg-dark alert pb-0">
             <pre>

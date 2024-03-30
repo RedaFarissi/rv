@@ -99,8 +99,8 @@ var result = document.getElementById("result").innerHTML += obj.bind(person2,33)
         
         <div className="mital"> متال 1 :  </div>
         <ul><li> عند كتابة إسم object نقطة إسم الدالة بدون أقواس فإنك تقوم بنسخ الدالة فقط و لن تستطيع إستخدام المعلومات داخل ال object  </li></ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Bind" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple1.code} language="html" is_html={true} title="Bind" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple1.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Bind' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div>fullName() {"{"} if(this.Age {">"} 20){"{"} return this.f_Name + " " + this.l_Name {"} }"}</div>
         </Result>
@@ -109,8 +109,8 @@ var result = document.getElementById("result").innerHTML += obj.bind(person2,33)
             <li> يمكن الإستفادة من نسخة الدالة التي بداخل object و ذالك من خلال إسنادها إلى متغير وإضافة أقواس . </li>
             <li> سيحاول هذا المثال عرض اسم الشخص  ، لكنه سيعرض undefined بدلاً من ذلك . وذالك لأنه لا يستطيع الوصول إلى  F_Name و L_Name و Age لأنه دالة منفصلة </li>
         </ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Bind" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple2.code} language="html" is_html={true} title="Bind" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Bind' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <div>undefined</div>
         </Result>
@@ -118,14 +118,14 @@ var result = document.getElementById("result").innerHTML += obj.bind(person2,33)
         <ul>
             <li> عند إستخدام الخاصية bind يمكن تمرير البيانات الخاصة ب object أخر شرط أن يحتوي العنصر على نفس key مع الدالة المستوردة .</li>    
         </ul>
-        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Bind" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple3.code} language="html" is_html={true} title="Bind" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple3.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Bind' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Reda Eskouni</h2>
         </Result>
         <div className="mital"> متال 4 :  </div>
-        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="Bind" addClass="mt-3 mb-3" copie={true}  number={true}/>  
-        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={true}/>
+        <CodeHighlighter file_name="index.html"code={codeExemple4.code} language="html" is_html={true} title="Bind" addClass="mt-3 mb-3" copie={true}  number={false}/>  
+        <CodeHighlighter file_name="index.js"code={codeExemple4.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title='Bind' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>function () {"{"} [native code] {"}"}<br/>Malak Elaamriwi 33</h2>
         </Result>
