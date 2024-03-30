@@ -1,4 +1,3 @@
-import images from "../imagesLaravel";
 import { CodeCommand , CodeHighlighter } from "../../path";
 
 export default function Middleware(props){
@@ -13,9 +12,7 @@ export default function Middleware(props){
       </article>
       <article id="Example_1">
          <h2 className="title-h2">  مثال 1 </h2>
-         <p className="style_divv">
-               مثال على البرامج الوسيطة مع ميزات <b>Eloquent</b> المضمنة للتحقق مما إذا كان المستخدم مسؤولاً أم لا مع تعليمات برمجية أقل
-         </p>
+         <ul><li> مثال على البرامج الوسيطة مع ميزات <b>Eloquent</b> المضمنة للتحقق مما إذا كان المستخدم مسؤولاً أم لا مع تعليمات برمجية أقل </li></ul>
          <h3 className="title-h3">1 - ميزات Eloquent المضمنة للتحقق مما إذا كان المستخدم مسؤولاً أم لا </h3>
          <CodeHighlighter code={`<?php
 
@@ -107,50 +104,82 @@ class ControllerAdmin extends Controller
       </article>
       <article>
          <h2 className="title-h2">  مثال 2 </h2>
+         <ul>
+            <li> قم بإنشاء برنامج وسيط <b>(Middleware)</b> ثانٍ </li>
+            <li>قم بإنشاء برنامج وسيط جديد باسم <b>SuperAdmin </b></li>
+        </ul>
+         <CodeHighlighter code={`<?php
 
-         <ul><li>  middleware Create Second middleware In the same Controller </li></ul>
-         <b>create new Middleware with name SuperAdminMiddleware</b>
-         <h3> - app\Http\Middleware\SuperAdminMiddleware.php</h3>
-         <img src={images.laravel57} className="w-100 border mb-2" alt="ControllerPost"/>
-         <h3> - app/Http/Kernel.php</h3>
-         <img src={images.laravel55} className="w-100 border mb-2" alt="ControllerPost"/>
-         <h3> - App\Http\Controllers\ControllerName.php</h3>
-         {/* <div className='alert bg-dark text-light'>
-         <pre><span className='b'>class</span> ControllerAdminUser <span className='b'>extends</span> Controller {
-            <span className='text-success'> //give middleware('admin') to all method in class </span>
-            <span className='b'>public function</span> <span className='gold'>__construct</span>(){
-               <span className='b'>$this</span>{"->"}<span className='gold'>middleware(<span className='o'>'admin'</span>)</span>;
-            }
-            <span className='text-success'>//all method will use middleware admin by default</span>
-            <span className='b'>public function</span> <span className='gold'>admin_users_list</span>(){
-               return view('admin.users.list' , ["users"=>User::all()]);
-            }
-            <span className='text-success'> // ..... method </span>
-            <span className='b'>public function</span> <span className='gold'>admin_user_delete</span>($id){  
-                  $user = User::findOrFail($id);
-                  $user{"->"}delete();
-                  return redirect(){"->"} route('admin_users_list');
-            }
-            <span className='b'>public function</span> <span className='gold'>admin_users_delete_selected</span>(Request $request){  
-               $selectedItems = $request{"->"}input('selected_items');
-               if (!is_null($selectedItems) && is_array($selectedItems)) {
-                   User::whereIn('id', $selectedItems){"->"}delete();
-               }
-               return redirect(){"->"}route('admin_users_list'){"->"}with('success', 'Selected items deleted.');
-            }
-         }</pre></div> */}
-         <h3> - web.php</h3>
-         <p> the second middleware('admin') will not run if the middleware('super_admin') passes successfully.</p>
-         {/* <div className='alert bg-dark text-light'>
-         <pre>Route::controller(ControllerAdminUser::class){"->"}group(function(){
-            Route::get('admin/users/list', "admin_users_list"){"->"}name('admin_users_list');
-            Route::get('admin/user/create/view', "admin_user_create_views"){"->"}name('admin_user_create_views');
-            Route::post('admin/user/create/store', "admin_user_create_store"){"->"}name('admin_user_create_store');
-            Route::get('admin/user/edit/{id}/views', "admin_user_edit_views"){"->"}name('admin_user_edit_views');
-            Route::get('admin/user/delete/{id}', "admin_user_delete"){"->"}<span className='gold'>middleware(<span className='o'>'super_admin'</span>)</span>{"->"}name('admin_user_delete');
-            Route::post('admin/users/delete/selected', "admin_users_delete_selected"){"->"}<span className='gold'>middleware(<span className='o'>'super_admin'</span>)</span>{"->"}name('admin_users_delete_selected');
-         });</pre></div> */}
-      
+namespace App\\Http\\Middleware;
+
+use Closure;
+use Illuminate\\Http\\Request;
+use App\\Models\\User;
+use Illuminate\\Support\\Facades\\Auth;
+
+
+class SuperAdminMiddleware {
+    public function handle(Request $request, Closure $next) {
+        if( Auth::check() ){
+            $userAuth = Auth::user();
+            $user = User::find($userAuth->id); 
+        }
+        if( Auth::check() && $user->isSuperAdmin() ){
+            return $next($request);
+        }else if( Auth::check() && $user->isAdmin() ){
+            return redirect()->route("admin_home");
+        }else{
+            return redirect()->route("all-posts");
+        }
+    }
+}`} file_name={`laravel-app app / Http / Middleware / SuperAdminMiddleware.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+
+         <CodeHighlighter code={` protected $routeMiddleware = [
+        'super_admin'=> \\App\\Http\\Middleware\\SuperAdminMiddleware::class,   #new
+        'admin'=> \\App\\Http\\Middleware\\AdminMiddleware::class,
+        'auth' => \\App\\Http\\Middleware\\Authenticate::class,
+        'auth.basic' => \\Illuminate\\Auth\\Middleware\\AuthenticateWithBasicAuth::class,
+        'cache.headers' => \\Illuminate\\Http\\Middleware\\SetCacheHeaders::class,
+        'can' => \\Illuminate\\Auth\\Middleware\\Authorize::class,
+        'guest' => \\App\\Http\\Middleware\\RedirectIfAuthenticated::class,
+        'password.confirm' => \\Illuminate\\Auth\\Middleware\\RequirePassword::class,
+        'signed' => \\Illuminate\\Routing\\Middleware\\ValidateSignature::class,
+        'throttle' => \\Illuminate\\Routing\\Middleware\\ThrottleRequests::class,
+        'verified' => \\Illuminate\\Auth\\Middleware\\EnsureEmailIsVerified::class,
+    ];`} file_name={`laravel-app / App / Http / Kernel.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/> 
+
+        <CodeHighlighter code={`class ControllerAdminUser extends Controller {
+    //give middleware('admin') to all method in class 
+   public function __construct(){
+      $this->middleware('admin');
+   }
+   //all method will use middleware admin by default
+   public function admin_users_list(){
+      return view('admin.users.list' , ["users"=>User::all()]);
+   }
+    // ..... method 
+   public function admin_user_delete($id){  
+         $user = User::findOrFail($id);
+         $user->delete();
+         return redirect()-> route('admin_users_list');
+   }
+   public function admin_users_delete_selected(Request $request){  
+      $selectedItems = $request->input('selected_items');
+      if (!is_null($selectedItems) && is_array($selectedItems)) {
+          User::whereIn('id', $selectedItems)->delete();
+      }
+      return redirect()->route('admin_users_list')->with('success', 'Selected items deleted.');
+   }
+}`} file_name={`laravel-app / App / Http / Controllers / ControllerAdminUser.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <ul><li>لن يتم تشغيل <bdi><b>middleware('admin')</b></bdi> الثاني إذا تم تمرير <bdi><b>middleware('super_admin')</b></bdi> بنجاح.</li></ul>
+        <CodeHighlighter code={`Route::controller(ControllerAdminUser::class)->group(function(){
+   Route::get('admin/users/list', "admin_users_list")->name('admin_users_list');
+   Route::get('admin/user/create/view', "admin_user_create_views")->name('admin_user_create_views');
+   Route::post('admin/user/create/store', "admin_user_create_store")->name('admin_user_create_store');
+   Route::get('admin/user/edit/{id}/views', "admin_user_edit_views")->name('admin_user_edit_views');
+   Route::get('admin/user/delete/{id}', "admin_user_delete")->middleware('super_admin')->name('admin_user_delete');
+   Route::post('admin/users/delete/selected', "admin_users_delete_selected")->middleware('super_admin')->name('admin_users_delete_selected');
+});`} file_name={`laravel-app / routes / web.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
       </article>
    </>
    )

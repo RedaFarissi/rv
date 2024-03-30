@@ -47,9 +47,7 @@ export default function PageX(){
           Move mouse in this heading to get the x (horizontal)
           and y (vertical) coordinates of the mouse pointer
       </h2>
-      <h2 id="id_name">
-          
-      </h2>
+      <h2 id="id_name">  </h2>
     </Result>
   </article>
 </section>
