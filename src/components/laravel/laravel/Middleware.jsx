@@ -1,33 +1,128 @@
 import images from "../imagesLaravel";
-import { CodeCommand } from "../../path";
+import { CodeCommand , CodeHighlighter } from "../../path";
 
 export default function Middleware(props){
+   function getCurrentDate() {
+      const currentDate = new Date();
+      const year = currentDate.getFullYear();
+      const month = String(currentDate.getMonth() + 1).padStart(2, '0'); 
+      const day = String(currentDate.getDate()).padStart(2, '0');
 
+      return `${year}_${month}_${day}`;
+   }
    return(
    <>
       <h1 className="heading-style">Laravel middleware </h1>
       <article className="mt-5">
-         <hr style={{height: "0.9rem",border:"0.3rem solid black"}}/>
-         <h1 className="mt-5"> Middleware </h1>
-         <a href="https://laravel.com/docs/10.x/middleware#registering-middleware" target="_blanck"> https://laravel.com/docs/10.x/middleware#registering-middleware </a>
-         <h2 id="middlewareExemple1">1 - middleware Exemple with Eloquent's built-in features to check if user is admin or not whit less code  </h2>
-         <h3> - App\Models\User;</h3>
-         <p className='fs-4'>Eloquent's built-in features to check if user is admin or not</p>
-         <img src={images.laravel51} className="w-100 border mb-2" alt="ControllerPost"/>
-         <h3>- Create Middleware with specific name </h3>
-         <div className='alert bg-dark text-light pb-0'><pre>php artisan make:middleware <span className='text-danger'>NameMiddleware</span></pre></div>
-         <div className='alert bg-dark text-light pb-0'><pre>php artisan make:middleware AdminMiddleware</pre></div>
-         <p> this will create file AdminMiddleware in "App\Http\Middleware\AdminMiddleware.php" </p>
-         <h3> - app\Http\Middleware\AdminMiddleware.php</h3>
-         <img src={images.laravel52} className="w-100 border mb-2" alt="ControllerPost"/>
-         <h3> - app/Http/Kernel.php</h3>
-         <p> In laravel 10 you must add this line in $middlewareAliases array in other version you can add it in $routeMiddleware  . </p>
-         <img src={images.laravel53} className="w-100 border mb-2" alt="ControllerPost"/>
-         <h3> - App\Http\Controllers\ControllerName.php</h3>
+         <p className="style_divv">
+               الوسيط <b>(middleware)</b> في  هو آلية <b>Laravel</b> لتصفية طلبات <b>HTTP</b> التي تدخل إلى تطبيقك. يقوم الوسيط بالتقاط الطلبات ويمكنه أداء مهام مثل المصادقة، وتسجيل الأحداث، وتعديل كائنات الطلب/الاستجابة، أو إنهاء الطلبات. يعمل الوسيط كجسر بين العميل ومسارات التطبيق أو التحكمات، مما يتيح لك تنفيذ الشفرة قبل أو بعد تنفيذ الطلب. يتم تعريف الوسيط كفئات تحتوي على طريقة <bdi><b>handle()</b></bdi>، التي تستقبل الطلب الوارد، واختياريًا، طريقة <bdi><b>terminate()</b></bdi> التي يتم استدعاؤها بعد إرسال الاستجابة. يمكن تسجيل الوسيط على مستوى عالمي لتشغيله في كل طلب، أو تطبيقه على مسارات محددة أو مجموعات مسارات، أو تجميعه معًا لإدارته بسهولة.<br/><br/>
+               من هنا للذهاب إلى الموقع الرسمي  <a href="https://laravel.com/docs/10.x/middleware#registering-middleware" target="_blanck"> middleware </a>
+         </p>
+      </article>
+      <article id="Example_1">
+         <h2 className="title-h2">  مثال 1 </h2>
+         <p className="style_divv">
+               مثال على البرامج الوسيطة مع ميزات <b>Eloquent</b> المضمنة للتحقق مما إذا كان المستخدم مسؤولاً أم لا مع تعليمات برمجية أقل
+         </p>
+         <h3 className="title-h3">1 - إضافة عمود <b>role</b> إلى جدول <b>users</b> </h3>
+         <CodeCommand>php artisan make:migration add_role_to_users</CodeCommand>
+         <CodeHighlighter code={`<?php
+
+use Illuminate\\Database\\Migrations\\Migration;
+use Illuminate\\Database\\Schema\\Blueprint;
+use Illuminate\\Support\\Facades\\Schema;
+
+return new class extends Migration {
+    public function up() {
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('role');
+        });
+    }
+
+    public function down() {
+        Schema::table('users', function (Blueprint $table) {
+            Schema::dropColumn('role');   
+        });
+    }
+};`} file_name={`laravel-app / databse / migrations / ${getCurrentDate()}_004250_add_role_to_users.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeCommand>php artisan migrate</CodeCommand>
+         <h3 className="title-h3">2 - ميزات Eloquent المضمنة للتحقق مما إذا كان المستخدم مسؤولاً أم لا </h3>
+         <CodeHighlighter code={`<?php
+
+namespace App\\Models;
+
+use Illuminate\\Contracts\\Auth\\MustVerifyEmail;
+use Illuminate\\Database\\Eloquent\\Factories\\HasFactory;
+use Illuminate\\Foundation\\Auth\\User as Authenticatable;
+use Illuminate\\Notifications\\Notifiable;
+use Laravel\\Sanctum\\HasApiTokens;
+
+class User extends Authenticatable {
+    use HasApiTokens, HasFactory, Notifiable;
+
+    protected $fillable = [ 'name', 'email', 'password', ];
+    protected $hidden = [ 'password', 'remember_token',];
+    protected $casts = [ 'email_verified_at' => 'datetime', ];
+
+    public function isSuperAdmin(){    #new
+        return $this->role === "super admin";
+    }
+    public function isAdmin(){         #new
+        return $this->role === "admin";
+    }
+    public function isUser(){          #new
+        return $this->role === "user";
+    }
+}`} file_name={`laravel-app / App / Models / User.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         <h3 className="title-h3">3 - إنشاء وسيط (Middleware) باسم محدد </h3>
+         <div dir="ltr" className="bg-dark text-light alert">php artisan make:middleware <span className="text-warning">NameMiddleware</span></div>    
+         <CodeCommand>php artisan make:middleware AdminMiddleware</CodeCommand>  
+         <ul><li> سيؤدي هذا إلى إنشاء ملف <b>AdminMiddleware</b> في <kbd>App\Http\Middleware\AdminMiddleware.php</kbd> </li></ul>  
+         <CodeHighlighter code={`<?php
+
+namespace App\\Http\\Middleware;
+use App\\Models\\User;      #new
+
+use Closure;
+use Illuminate\\Http\\Request;
+use Illuminate\\Support\\Facades\\Auth;       #new
+use Symfony\\Component\\HttpFoundation\\Response;       #new
+
+class AdminMiddleware {
+    public function handle(Request $request, Closure $next) {
+        # Get the user if Auth
+        $userAuth = Auth::user();
+        # Find user Auth in User Models to use isSuperAdmin() and isAdmin()
+        $user = User::find($userAuth->id);
+
+        if( Auth::check() && ( $user->isAdmin() || $user->isSuperAdmin() ) ){
+            return $next($request);   
+        }
+        return redirect()->route('all-posts');
+    }
+}`} file_name={`laravel-app / App / Http / Middleware / AdminMiddleware.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={` protected $routeMiddleware = [
+        'admin'=> \\App\\Http\\Middleware\\AdminMiddleware::class,   #new
+        'auth' => \\App\\Http\\Middleware\\Authenticate::class,
+        'auth.basic' => \\Illuminate\\Auth\\Middleware\\AuthenticateWithBasicAuth::class,
+        'cache.headers' => \\Illuminate\\Http\\Middleware\\SetCacheHeaders::class,
+        'can' => \\Illuminate\\Auth\\Middleware\\Authorize::class,
+        'guest' => \\App\\Http\\Middleware\\RedirectIfAuthenticated::class,
+        'password.confirm' => \\Illuminate\\Auth\\Middleware\\RequirePassword::class,
+        'signed' => \\Illuminate\\Routing\\Middleware\\ValidateSignature::class,
+        'throttle' => \\Illuminate\\Routing\\Middleware\\ThrottleRequests::class,
+        'verified' => \\Illuminate\\Auth\\Middleware\\EnsureEmailIsVerified::class,
+    ];`} file_name={`laravel-app / App / Http / Kernel.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         <h3 className="title-h3">3 - إنشاء ControllerAdmin</h3>
+         <CodeHighlighter code={``} file_name={`laravel-app / App / Http / Controllers / ControllerAdmin.php`} language="php" number={true} addclassName="mt-3 mb-3" copie={true}/>
+         
          <p> You can use it in any Controller or in web.php if condition don't exept will take you to another page .</p>
          <img src={images.laravel54} className="w-100 border mb-2" alt="ControllerPost"/>
+      </article>
+      <article>
+         <h2 className="title-h2">  مثال 2 </h2>
 
-         <h2 id="middlewareExemple2">2 - middleware Create Second middleware In the same Controller </h2>
+         <ul><li>  middleware Create Second middleware In the same Controller </li></ul>
          <b>create new Middleware with name SuperAdminMiddleware</b>
          <h3> - app\Http\Middleware\SuperAdminMiddleware.php</h3>
          <img src={images.laravel57} className="w-100 border mb-2" alt="ControllerPost"/>

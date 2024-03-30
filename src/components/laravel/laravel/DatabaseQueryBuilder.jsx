@@ -101,7 +101,7 @@ Route::post("/posts/store", [ControllerPost::class , 'store'])->name('store-post
 
 DB::table('tableName')->get()`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>            
       </article>
-      <article id='Full_Exemple'>
+      <article id='Full_Example'>
             <h2 className="title-h2">4 - مثال كامل . </h2>
             <CodeHighlighter code={`<?php
 
@@ -261,6 +261,8 @@ class ControllerPost extends Controller {
 
             <label for="description">Description:</label>
             <textarea id="description" name="description"> {{ $post->description }} </textarea>
+
+            <br/>
 
             <input type="submit" value="Update POST" class="btn btn-primary" />
         </form>
