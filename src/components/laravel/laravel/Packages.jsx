@@ -97,136 +97,115 @@ DB_PASSWORD=`} file_name={`laravel-app / .env`} language="php" number={false} ad
             <CodeCommand>composer require srmklive/PayPal</CodeCommand>
             <h3 className="title-h3">3 - config/app.php </h3>
             <CodeHighlighter code={`'providers' => ServiceProvider::defaultProviders()->merge([
-      ....
+      #....
       srmklive\\PayPal\\Providers\\PayPalServiceProvider::class,
   ])`} file_name={`laravel-app / config / app.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
 
             <h3 className="title-h3">4 -  لنشر ملفات التكوين الخاصة بحزمة PayPal </h3>
             <CodeCommand>php artisan vendor:publish --provider="Srmklive\PayPal\Providers\PayPalServiceProvider::class"</CodeCommand>
-            
-
-
-
-
-            
-            
-            <p>
-                Make sure that the PayPal service provider class file exists and is not corrupted. You can check this by opening the 
-               "vendor/rmklive/paypal/src/Providers/PayPalServiceProvider.php" check if the class if exist 
-            </p>
+            <ul><li>تأكد من وجود ملف فئة موفر خدمة PayPal وأنه غير تالف. يمكنك التحقق من ذلك عن طريق فتح <kbd>"vendor/rmklive/paypal/src/Providers/PayPalServiceProvider.php"</kbd> للتحقق من وجود class</li></ul>
             <div className='alert alert-danger'>
-               <b>If you got some error when try to publish vendor use like this : </b>
-               <img src={images.laravel61} className="w-100 border mb-2" alt="ControllerPost"/>
-               <b>Use this command so salve error </b>
+               <ul><li>إذا حدث خطأ ما عند محاولة نشر <b>vendor</b> مثل هذا : </li></ul>
+               <img src={images.laravel61} className="w-100" alt="ControllerPost"/>
+               <ul><li>استخدم هذا الأمر لحل الخطأ</li></ul>
                <div className='alert bg-dark text-light pb-0'><pre>php artisan config:cache</pre></div>
-               <b>and Then :</b>
+               <ul><li>وثم :</li></ul>
                <div className='alert bg-dark text-light pb-0'><pre>php artisan vendor:publish</pre></div>
-               <b> Chose the number for the provider and you are done. (in my case i use <span className='text-success'>11</span>)</b>
-               <img src={images.laravel62} className="w-100 border mb-2" alt="ControllerPost"/>
-               <p>this will create file paypal.php inside folder config/  <kbd>config/paypal.php</kbd> </p>
+               <ul><li>اختر رقم المزود وانتهيت.  (في حالتي أستخدم 9)</li></ul>
+               <img src={images.laravel62} className="w-100" alt="ControllerPost"/>
+               <ul><li> سيؤدي هذا إلى إنشاء ملف <b>paypal.php</b> داخل المجلد  <bdi><b>config/</b></bdi>  <kbd>config/paypal.php</kbd> </li></ul>
             </div>
-            <h3 className="title-h3">5 - .env </h3>
-            <p> add this to .env </p>
-            <h4>The first method </h4>
-            <div className='alert alert-warning pb-0'><pre>PAYPAL_MODE=sandbox
-         PAYPAL_SANDBOX_API_USERNAME=..
-         PAYPAL_SANDBOX_API_PASSWORD=..
-         PAYPAL_SANDBOX_API_SECRET=..
-         PAYPAL_CURRENCY=USD
-         PAYPAL_SANDBOX_API_CERTIFICATE=</pre>
-         </div>
-         <h4>The second method </h4>
-         <div className='alert alert-warning pb-0'><pre>PAYPAL_MODE=sandbox
-         PAYPAL_SANDBOX_CLIENT_ID=
-         PAYPAL_SANDBOX_CLIENT_SECRET=</pre>
-         </div>
-            <h4>Know we need to add info to .env to connect with paypal</h4>   
-            <p className='alert alert-secondary'>
-               <ul  className="alert alert-secondary">
-                  <li>first you need to go to testing tools{">"}sandbox account and find the account business of you app created <kbd>Apps & Credentials</kbd> </li>
-                  <li>is very important to choice <b>View/Edit account</b> </li>
-               </ul>
-            </p>
-            <img src={images.laravel67} className="w-100 border mb-2" alt="ControllerPost"/>
-            <img src={images.laravel68} className="w-100 border mb-2" alt="ControllerPost"/>
-            <div className='alert alert-warning pb-0'><pre><span className='text-success'>//The first method</span>
-         PAYPAL_MODE=sandbox
-         PAYPAL_SANDBOX_API_USERNAME=<span className="text-danger fs-5">sb-enz1z26813155_api1.business.example.com</span>
-         PAYPAL_SANDBOX_API_PASSWORD=<span className="text-danger fs-5">ABPFXEWWN2PK5RKZ</span>
-         PAYPAL_SANDBOX_API_SECRET=<span className="text-danger fs-5">AMXv0WG6E0oyHPtur6YqWGuOvwuMAHF09Cm82S5lcy4IZswVrmaulq76</span>
-         PAYPAL_CURRENCY=<span className="text-danger fs-5">USD</span>
-         PAYPAL_SANDBOX_API_CERTIFICATE=
-        
-         <hr/>
-        
-         <span className='text-success'>//the second method</span>
-         PAYPAL_SANDBOX_CLIENT_ID=<span className="text-success fs-5">AfILyKjspPjvt8p4rdHjB_PnX4IQcf_J4BLskhHZJF7ae8sxApDItgXzPqhBOUeYa1wYVQD5rHjjn7C9</span>
-         PAYPAL_SANDBOX_CLIENT_SECRET=<span className="text-success fs-5">EMe7LGGXl1PUMYL7SUnlX8Mq4poVpaorCZX6ypxi9ZBEPp0bgF0m23Jox9iMcNvggjh4kXRQFG1A6327</span></pre>
-            </div>
+
+            <h3 className="title-h3">5 - <bdi>.env</bdi> </h3>
+            <ul><li> أضف هذا إلى الملف <bdi><b>.env</b></bdi></li></ul>
+            <h6 className="title-h6"> الطريقة الأولى </h6>
+            <CodeHighlighter code={`PAYPAL_MODE=sandbox
+PAYPAL_SANDBOX_API_USERNAME=..
+PAYPAL_SANDBOX_API_PASSWORD=..
+PAYPAL_SANDBOX_API_SECRET=..
+PAYPAL_CURRENCY=USD
+PAYPAL_SANDBOX_API_CERTIFICATE=`} file_name={`laravel-app / .env`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <h6 className="title-h6">  الطريقة الثانية </h6>
+         <CodeHighlighter code={`PAYPAL_MODE=sandbox
+PAYPAL_SANDBOX_CLIENT_ID=
+PAYPAL_SANDBOX_CLIENT_SECRET=`} file_name={`laravel-app / .env`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <h5 className="title-h5">  نحتاج الآن إلى إضافة معلومات إلى <bdi>.env</bdi> للتواصل مع paypal </h5>
+            <ul  className="alert alert-secondary">
+               <li>أولا عليك أن تذهب إلى testing tools{">"}sandbox account وابحث عن الحساب التجاري الذي أنشأه التطبيق <kbd>Apps & Credentials</kbd> </li>
+               <li>من المهم أن تختار <b>View/Edit account</b> </li>
+            </ul>
+            <img src={images.laravel67} className="w-100" alt="ControllerPost"/>
+            <img src={images.laravel68} className="w-100 mt-3" alt="ControllerPost"/>
+            <h6 className="title-h6">اضف إليه الطريقة الأولى </h6>
+            <CodeHighlighter code={`PAYPAL_MODE=sandbox
+PAYPAL_SANDBOX_API_USERNAME=sb-enz1z26813155_api1.business.example.com
+PAYPAL_SANDBOX_API_PASSWORD=ABPFXEWWN2PK5RKZ
+PAYPAL_SANDBOX_API_SECRET=AMXv0WG6E0oyHPtur6YqWGuOvwuMAHF09Cm82S5lcy4IZswVrmaulq76
+PAYPAL_CURRENCY=USD
+PAYPAL_SANDBOX_API_CERTIFICATE=`} file_name={`laravel-app / .env`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <h6 className="title-h6">اضف إليه الطريقة الثانية </h6>
+         <CodeHighlighter code={`PAYPAL_MODE=sandbox
+PAYPAL_SANDBOX_CLIENT_ID=AfILyKjspPjvt8p4rdHjB_PnX4IQcf_J4BLskhHZJF7ae8sxApDItgXzPqhBOUeYa1wYVQD5rHjjn7C9
+PAYPAL_SANDBOX_CLIENT_SECRET=EMe7LGGXl1PUMYL7SUnlX8Mq4poVpaorCZX6ypxi9ZBEPp0bgF0m23Jox9iMcNvggjh4kXRQFG1A6327`} file_name={`laravel-app / .env`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <h3 className="title-h3">6 - config/paypal.php </h3>
-            <p> Handle paypal.php  code </p>
-            <a href='https://stackoverflow.com/questions/64928459/i-tried-implementing-srmklive-paypal-1-0-into-my-laravel-project-locally' target="_blanck">Here</a>
-            {/* <div className='alert alert-warning pb-0'><pre><span className='text-success'>//The first method compatible config</span>
-         return [
-         'mode'    => env('PAYPAL_MODE', 'sandbox'), // Can only be 'sandbox' Or 'live'. If empty or invalid, 'live' will be used.
-         'sandbox' => [
-             'username'    => env('PAYPAL_SANDBOX_API_USERNAME', ''),
-             'password'    => env('PAYPAL_SANDBOX_API_PASSWORD', ''),
-             'secret'      => env('PAYPAL_SANDBOX_API_SECRET', ''),
-             'certificate' => env('PAYPAL_SANDBOX_API_CERTIFICATE', ''), 
-             'app_id'      => 'APP-80W284485P519543T',
-         ],
+            <ul>
+               <li>التعامل مع رمز <b>paypal.php</b></li>
+               <li>التفاصيل من <a href='https://stackoverflow.com/questions/64928459/i-tried-implementing-srmklive-paypal-1-0-into-my-laravel-project-locally' target="_blanck">هنا</a></li>
+            </ul>
+            <h6 className="title-h6"> الطريقة الأولى </h6>
+            <CodeHighlighter code={`return [
+'mode'    => env('PAYPAL_MODE', 'sandbox'), // Can only be 'sandbox' Or 'live'. If empty or invalid, 'live' will be used.
+'sandbox' => [
+    'username'    => env('PAYPAL_SANDBOX_API_USERNAME', ''),
+    'password'    => env('PAYPAL_SANDBOX_API_PASSWORD', ''),
+    'secret'      => env('PAYPAL_SANDBOX_API_SECRET', ''),
+    'certificate' => env('PAYPAL_SANDBOX_API_CERTIFICATE', ''), 
+    'app_id'      => 'APP-80W284485P519543T',
+],
 
-         'live' => [
-              'username'    => env('PAYPAL_LIVE_API_USERNAME', ''),
-              'password'    => env('PAYPAL_LIVE_API_PASSWORD', ''),
-              'secret'      => env('PAYPAL_LIVE_API_SECRET', ''),
-              'certificate' => env('PAYPAL_LIVE_API_CERTIFICATE', ''),
-              'app_id'      => '',
-         ],
+'live' => [
+     'username'    => env('PAYPAL_LIVE_API_USERNAME', ''),
+     'password'    => env('PAYPAL_LIVE_API_PASSWORD', ''),
+     'secret'      => env('PAYPAL_LIVE_API_SECRET', ''),
+     'certificate' => env('PAYPAL_LIVE_API_CERTIFICATE', ''),
+     'app_id'      => '',
+],
 
-         'payment_action' => env('PAYPAL_PAYMENT_ACTION', 'Sale'), // Can only be 'Sale', 'Authorization' or 'Order'
-         'currency'       => env('PAYPAL_CURRENCY', 'USD'),
-         'billing_type'   => 'MerchantInitiatedBilling',
-         'notify_url'     => '', 
-         'locale'         => '', 
-         'validate_ssl'   => true, 
-         ];   
+'payment_action' => env('PAYPAL_PAYMENT_ACTION', 'Sale'), // Can only be 'Sale', 'Authorization' or 'Order'
+'currency'       => env('PAYPAL_CURRENCY', 'USD'),
+'billing_type'   => 'MerchantInitiatedBilling',
+'notify_url'     => '', 
+'locale'         => '', 
+'validate_ssl'   => true, 
+];   `} file_name={`laravel-app / config / paypal.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <h6 className="title-h6"> الطريقة الثانية </h6>
 
-         <hr/>
-         <span className='text-success'>//the second method compatible config</span>
-         return [
-             'mode'    => env('PAYPAL_MODE', 'sandbox'), 
-             'sandbox' => [
-                 'client_id'         => env('PAYPAL_SANDBOX_CLIENT_ID', ''),
-                 'client_secret'     => env('PAYPAL_SANDBOX_CLIENT_SECRET', ''),
-                 'app_id'            => 'APP-80W284485P519543T',
-             ],
+            <CodeHighlighter code={`return [
+    'mode'    => env('PAYPAL_MODE', 'sandbox'), 
+    'sandbox' => [
+        'client_id'         => env('PAYPAL_SANDBOX_CLIENT_ID', ''),
+        'client_secret'     => env('PAYPAL_SANDBOX_CLIENT_SECRET', ''),
+        'app_id'            => 'APP-80W284485P519543T',
+    ],
+    
+    'live' => [
+        'client_id'         => env('PAYPAL_LIVE_CLIENT_ID', ''),
+        'client_secret'     => env('PAYPAL_LIVE_CLIENT_SECRET', ''),
+        'app_id'            => env('PAYPAL_LIVE_APP_ID', ''),
+    ],
 
-             'live' => [
-                 'client_id'         => env('PAYPAL_LIVE_CLIENT_ID', ''),
-                 'client_secret'     => env('PAYPAL_LIVE_CLIENT_SECRET', ''),
-                 'app_id'            => env('PAYPAL_LIVE_APP_ID', ''),
-             ],
-          
-             'payment_action' => 'Sale', 
-             'currency'       => env('PAYPAL_CURRENCY', 'USD'),
-             'billing_type'   => 'MerchantInitiatedBilling',
-             'notify_url'     => '', 
-             'locale'         => '', 
-             'validate_ssl'   => true,
-         ];</pre>
-                  </div> */}
-
-               
+    'payment_action' => 'Sale', 
+    'currency'       => env('PAYPAL_CURRENCY', 'USD'),
+    'billing_type'   => 'MerchantInitiatedBilling',
+    'notify_url'     => '', 
+    'locale'         => '', 
+    'validate_ssl'   => true,
+];`} file_name={`laravel-app / config / paypal.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <h2 className="title-h5"><a href="https://www.itsolutionstuff.com/post/laravel-10-stripe-payment-gateway-integration-tutorialexample.html" target="_blanck"> Stripe Payment Integration</a></h2>
       </article>
-      <article id="Stripe_Payment_Integration">
-            <h2 className="title-h2">4 - Stripe Payment Integration</h2>
-            <a href="https://www.itsolutionstuff.com/post/laravel-10-stripe-payment-gateway-integration-tutorialexample.html" target="_blanck"> Tutorial </a>
-      </article>
-      <article>
-            <h2 className="title-h2">5 - send email</h2>
-
+      <article id="send_mail">
+            <h2 className="title-h2">4 - send email</h2>
+            <ul><li> التفاصيل من <a href="https://www.itsolutionstuff.com/post/laravel-10-mail-laravel-10-send-mail-tutorialexample.html">هنا</a> </li></ul>
       </article>
    </>
    )

@@ -67,7 +67,7 @@ function App() {
       ["Database_Query_Builder","What_is_Query_Builder","Insert","Get","Full_Example","Delete_All","truncate"],
       "Tinker",
       ["Middleware","Example_1","Example_2"],
-      ["Packages","Authentication_UI","Authentication_Breeze","Paypal_Payment","Stripe_Payment_Integration","send_mail"],
+      ["Packages","Authentication_UI","Authentication_Breeze","Paypal_Payment","send_mail"],
       "Clone_Github"
     ];
     const git_list  = [ "Introduction","Install_git","Diagram_git","Repository","Branch","Local_Repository","Remote_Repository","Pull_Request","Clone_Repository","Initialize_Repository","git_status","git_add","git_commit","git_branch","git_remote","git_push","Work_as_a_team","git_pull","Existing_Project_powerShell","Existing_Project_App","gitignore_file","submodules","Create_new_branch","Generating_SSH","Remove_connection"];
