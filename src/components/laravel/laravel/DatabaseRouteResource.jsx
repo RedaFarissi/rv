@@ -302,12 +302,9 @@ class ProductController extends Controller {
     }`} file_name="laravel-app / app / Http / Controllers / ProductController.php" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
       </article>
       <article id='only_and_except'>
-            <h2 className="title-h2">8 - only and except</h2>
+            <h2 className="title-h2">8 - only و except</h2>
             <p className="style_divv">
-                  <ul>
-                        <li> استخدام الطريقة <b>except</b> مع <b>Route::resource</b> يُستخدم عادة عندما نرغب في تقييد الوصول إلى بعض الإجراءات في متحكم المورد. </li>
-                        <li></li>
-                  </ul>
+                <ul><li> استخدام الطريقة <b>except</b> مع <b>Route::resource</b> يُستخدم عادة عندما نرغب في تقييد الوصول إلى بعض الإجراءات في متحكم المورد. </li> </ul>
             </p>
             <CodeHighlighter code={`use App\\Http\\Controllers\\ProductController;
  

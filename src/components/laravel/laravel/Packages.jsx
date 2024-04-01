@@ -1,57 +1,115 @@
-import { CodeCommand } from "../../path";
+import { CodeCommand , CodeHighlighter } from "../../path";
 import images from "../imagesLaravel";
 
 export default function Packages(props){
    return(
    <>
       <h1 className="heading-style"> Laravel Packages </h1>
-      <article className="mt-5">
-            <hr style={{height: "0.9rem",border:"0.3rem solid black"}}/>
-            <h1 className="mt-5"> Packages </h1>
-            <h2 id="Authentication_UI">1 - Authentication UI </h2>
-            <a href='https://techvblogs.com/blog/laravel-9-authentication-tutorial' target='_blanck'>
-               Authentication UI Tutorial Easy
-            </a>
+      <article id="Authentication_UI" className="mt-5">
+            <h2 className="title-h2">1 - واجهة المستخدم المصادقة </h2>
+            <h3 className="title-h3"> 1 - تثبيت مشروع لارافيل </h3>
+            <CodeCommand>composer create-project --prefer-dist laravel/laravel laravel-auth</CodeCommand>
+            <ul><li>أو إذا قمت بتثبيت <b>Laravel Installer</b></li></ul>
+            <CodeCommand>laravel new laravel-auth</CodeCommand>
+            <h3 className="title-h3"> 2 - تكوين قاعدة البيانات (Configure)</h3>
+            <CodeHighlighter code={`DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel_auth
+DB_USERNAME=root
+DB_PASSWORD=`} file_name={`laravel-app / .env`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeCommand>php artisan migrate</CodeCommand>
+            <h3 className="title-h3">3 - إنشاء المصادقة </h3>
+            <CodeCommand>composer require laravel/ui</CodeCommand>
+            <ul><li><b>إنشاء السقالات الأساسية ونموذج تسجيل الدخول والتسجيل bootstrap</b></li></ul>
+            <CodeCommand>php artisan ui bootstrap</CodeCommand>
+            <CodeCommand>php artisan ui bootstrap --auth</CodeCommand>
+            <ul><li><b> أو إنشاء السقالات الأساسية ونموذج تسجيل الدخول والتسجيل Vue</b></li></ul>
+            <CodeCommand>php artisan ui vue</CodeCommand>
+            <CodeCommand>php artisan ui vue --auth</CodeCommand>
+            <ul><li><b>أو إنشاء السقالات الأساسية ونموذج تسجيل الدخول والتسجيل React</b></li></ul>
+            <CodeCommand>php artisan ui react</CodeCommand>
+            <CodeCommand>php artisan ui react --auth</CodeCommand>
+            <h3 className="title-h3">4 - إنشاء السقالات الأساسية</h3>
+            <CodeCommand>php artisan ui bootstrap</CodeCommand>
+            <CodeCommand>php artisan ui bootstrap --auth</CodeCommand>
+            <b>أو</b>
+            <CodeCommand>php artisan ui vue</CodeCommand>
+            <CodeCommand>php artisan ui vue --auth</CodeCommand>
+            <b>أو</b>
+            <CodeCommand>php artisan ui react</CodeCommand>
+            <CodeCommand>php artisan ui react --auth</CodeCommand>
+            <h3 className="title-h3">5 - تثبيت تبعيات NPM</h3>
+            <CodeCommand>npm install && npm run dev</CodeCommand>
+            <img className="w-100" src={images.laravel_run_dev} alt="laravel run dev" />            
+            <h3 className="title-h3">6 - اختبار نظام المصادقة</h3>
+            <ul><li>افتح موجه أوامر جديد وإستخدم :</li></ul>
+            <CodeCommand>cd C:\xampp\htdocs\laravel-auth</CodeCommand>
+            <CodeCommand>php artisan serve</CodeCommand>
+            <img className="w-100" src={images.laravel_auth1} alt="laravel auth 1"  />
+            <img className="w-100 mt-3" src={images.laravel_auth2} alt="laravel auth 2"  />
+      </article>
+      <article id="Authentication_Breeze">
+            <h2 className="title-h2">2 - واجهة المستخدم المصادقة Breeze </h2>
+            <ul><li> التفاصيل من <a href='https://www.itsolutionstuff.com/post/laravel-9-authentication-using-breeze-tutorialexample.html' target='_blanck'> هنا </a></li></ul>
+            <h3 className="title-h3"> 1 - تثبيت مشروع لارافيل</h3>
+            <CodeCommand>composer create-project laravel/laravel example-app</CodeCommand>
+            <h3 className="title-h3"> 2 - تكوين قاعدة البيانات (Configure)</h3>
+            <CodeHighlighter code={`DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel_example_app
+DB_USERNAME=root
+DB_PASSWORD=`} file_name={`laravel-app / .env`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeCommand>php artisan migrate</CodeCommand>
+            <h3 className="title-h3">3 - إنشاء المصادقة breeze </h3>
+            <CodeCommand>composer require laravel/breeze --dev</CodeCommand>
+            <ul><li> بعدها إستخدم :</li></ul>
+            <CodeCommand>php artisan breeze:install</CodeCommand>
+            <h3 className="title-h3">4 - تثبيت تبعيات NPM </h3>
+            <CodeCommand>npm install && npm run dev</CodeCommand>
+            <h3 className="title-h3">5 - افتح موجه أوامر جديد  </h3>
+            <CodeCommand>cd C:\xampp\htdocs\example-app</CodeCommand>
+            <CodeCommand>php artisan migrate</CodeCommand>
+            <h3 className="title-h3">6 -  اختبار نظام المصادقة </h3>
+            <CodeCommand>php artisan serve</CodeCommand>
+            <img className="w-100" src={images.laravel_auth1} alt="laravel auth breeze"  />
+            <img className="w-100 mt-3" src={images.laravel_auth_breez1} alt="laravel auth breeze"  />
+            
+      </article>
+      <article  id="Paypal_Payment">
+            <h2 className="title-h2">3 - Paypal Payment </h2>
+            <ul><li> التفاصيل من <a href='https://www.laravelia.com/post/laravel-10-paypal-payment-and-dive-into-details#google_vignette' target='_blanck'> هنا </a></li></ul>
+            <h3 className="title-h3">1 - حول لوحة تحكم مطور PayPal Developer </h3>         
+            <ul> 
+               <li>في هذا المثال نستخدم التطبيق الافتراضي في <kbd>Apps & Credentials</kbd> </li>
+               <li>بشكل افتراضي، يمنحك <bdi>paypal "API Credentials"</bdi> للاختبار ويمكنك إنشاء واحد آخر إذا كنت تريد ذلك.</li>
+            </ul>
+            <img src={images.laravel64} className="w-100 mb-2" alt="ControllerPost"/>
+            <ul>
+               <li>في Testing Tools ستجد التطبيق الذي يمكنك من خلاله اختبار <b>API Credentials</b></li>
+               <li>دائمًا ما تكون بيانات <b>Credentials</b> لواجهة برمجة التطبيقات في أدوات الاختبار حسابًا تجاريًا (business account)</li>
+            </ul>
+            <img src={images.laravel65} className="w-100 mb-2" alt="ControllerPost"/>
+            <ul><li>هذا هو <b>API Credentials</b> الافتراضي في أدوات الاختبار، ويمكنك معرفة ذلك من خلال  <b>Client ID</b></li></ul>
+            <img src={images.laravel65} className="w-100 mb-2" alt="ControllerPost"/>
+            <h3 className="title-h3">2 - تثبيت الحزمة srmklive/PayPal </h3>
+            <CodeCommand>composer require srmklive/PayPal</CodeCommand>
+            <h3 className="title-h3">3 - config/app.php </h3>
+            <CodeHighlighter code={`'providers' => ServiceProvider::defaultProviders()->merge([
+      ....
+      srmklive\\PayPal\\Providers\\PayPalServiceProvider::class,
+  ])`} file_name={`laravel-app / config / app.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
 
-            <h2 id="Authentication_Breeze">2 - Authentication Breeze </h2>
-            <a href='https://www.itsolutionstuff.com/post/laravel-9-authentication-using-breeze-tutorialexample.html' target='_blanck'>
-               Authentication Breeze Tutorial More Than Easy (You can use this just in first of project or you will lost your web.php file)
-            </a>
+            <h3 className="title-h3">4 -  لنشر ملفات التكوين الخاصة بحزمة PayPal </h3>
+            <CodeCommand>php artisan vendor:publish --provider="Srmklive\PayPal\Providers\PayPalServiceProvider::class"</CodeCommand>
+            
 
-            <h2 id="Paypal_Payment">3 - Paypal Payment </h2>
 
-            <a className='d-block' href='https://www.laravelia.com/post/laravel-10-paypal-payment-and-dive-into-details#google_vignette' target='_blanck'> Tutorial all file for using paypal to pay with card or with paypal</a>
 
-            <div className='alert bg-success'>
-               <h2> About PayPal Developer Dashboard </h2>
-               <div className="alert alert-secondary"> 
-                  In this exemple we use the default app in <kbd>Apps & Credentials</kbd> :
-                  <ul>
-                     <li>By default paypal give you <span className='fs-5 text-success'>API Credentials</span> to test and you can create another one if you want .</li>
-                  </ul>
-               </div>
-               <img src={images.laravel64} className="w-100 border mb-2" alt="ControllerPost"/>
-               <ul  className="alert alert-secondary">
-                  <li>in <span className='fs-5 text-success'>Testing Tools</span> you will find the app in to can test <span className='fs-5 text-success'>API Credentials</span>  </li>
-                  <li>the <span className='fs-5 text-success'>API Credentials</span> in <span className='fs-5 text-success'>Testing Tools</span> is always business account </li>
-               </ul>
-               <img src={images.laravel65} className="w-100 border mb-2" alt="ControllerPost"/>
-               <ul  className="alert alert-secondary">
-                  <li>this is the default <span className='fs-5 text-success'>API Credentials</span> in <span className='fs-5 text-success'>Testing Tools</span> you can know that by Client ID</li>
-               </ul>
-               <img src={images.laravel65} className="w-100 border mb-2" alt="ControllerPost"/>
-            </div>
-            <h3>1 - intall package </h3>
-            <div className='alert bg-dark text-light pb-0'><pre>composer require srmklive/PayPal</pre></div>
-            <h3>2 - config/app.php </h3>
-            <div className='alert alert-warning'>
-         {/* <pre>'providers' => ServiceProvider::defaultProviders(){"->"}merge([
-               ....
-               srmklive\PayPal\Providers\PayPalServiceProvider::class,
-           ])</pre> */}
-            </div>
-            <h3>3 -  To publish the configuration files for the PayPal package . </h3>
-            <div className='alert bg-dark text-light pb-0'><pre>php artisan vendor:publish --provider="Srmklive\PayPal\Providers\PayPalServiceProvider::class"</pre></div>
+
+            
+            
             <p>
                 Make sure that the PayPal service provider class file exists and is not corrupted. You can check this by opening the 
                "vendor/rmklive/paypal/src/Providers/PayPalServiceProvider.php" check if the class if exist 
@@ -67,7 +125,7 @@ export default function Packages(props){
                <img src={images.laravel62} className="w-100 border mb-2" alt="ControllerPost"/>
                <p>this will create file paypal.php inside folder config/  <kbd>config/paypal.php</kbd> </p>
             </div>
-            <h3>4 - .env </h3>
+            <h3 className="title-h3">5 - .env </h3>
             <p> add this to .env </p>
             <h4>The first method </h4>
             <div className='alert alert-warning pb-0'><pre>PAYPAL_MODE=sandbox
@@ -105,7 +163,7 @@ export default function Packages(props){
          PAYPAL_SANDBOX_CLIENT_ID=<span className="text-success fs-5">AfILyKjspPjvt8p4rdHjB_PnX4IQcf_J4BLskhHZJF7ae8sxApDItgXzPqhBOUeYa1wYVQD5rHjjn7C9</span>
          PAYPAL_SANDBOX_CLIENT_SECRET=<span className="text-success fs-5">EMe7LGGXl1PUMYL7SUnlX8Mq4poVpaorCZX6ypxi9ZBEPp0bgF0m23Jox9iMcNvggjh4kXRQFG1A6327</span></pre>
             </div>
-            <h3>5 - config/paypal.php </h3>
+            <h3 className="title-h3">6 - config/paypal.php </h3>
             <p> Handle paypal.php  code </p>
             <a href='https://stackoverflow.com/questions/64928459/i-tried-implementing-srmklive-paypal-1-0-into-my-laravel-project-locally' target="_blanck">Here</a>
             {/* <div className='alert alert-warning pb-0'><pre><span className='text-success'>//The first method compatible config</span>
@@ -161,9 +219,14 @@ export default function Packages(props){
                   </div> */}
 
                
-            <br id="Stripe_Payment_Integration"/><br/>
-            <h2>4 - Stripe Payment Integration</h2>
+      </article>
+      <article id="Stripe_Payment_Integration">
+            <h2 className="title-h2">4 - Stripe Payment Integration</h2>
             <a href="https://www.itsolutionstuff.com/post/laravel-10-stripe-payment-gateway-integration-tutorialexample.html" target="_blanck"> Tutorial </a>
+      </article>
+      <article>
+            <h2 className="title-h2">5 - send email</h2>
+
       </article>
    </>
    )

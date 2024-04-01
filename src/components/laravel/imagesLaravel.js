@@ -4,7 +4,11 @@ import laravel0_env2 from "../../assests/images/laravel/laravel0_env2.png"
 import laravel0_env3 from "../../assests/images/laravel/laravel0_env3.png"
 import laravel5 from "../../assests/images/laravel/laravel5.png"
 import laravel_query_builder_result from "../../assests/images/laravel/laravel_query_builder_result.png"
-
+import laravel_auth1 from "../../assests/images/laravel/laravel-auth1.png"
+import laravel_auth2 from "../../assests/images/laravel/laravel-auth2.png"
+import laravel_run_dev from "../../assests/images/laravel/laravel-run-dev.png"
+import laravel_auth_breez1 from "../../assests/images/laravel/laravel-auth-breez1.png"
+import laravel58 from "../../assests/images/laravel/laravel58.png"
 
 // delete
 import controller_r from "../../assests/images/laravel/controller-r.png"
@@ -67,7 +71,6 @@ import laravel53 from "../../assests/images/laravel/laravel53.png"
 import laravel54 from "../../assests/images/laravel/laravel54.png"
 import laravel55 from "../../assests/images/laravel/laravel55.png"
 import laravel57 from "../../assests/images/laravel/laravel57.png"
-import laravel58 from "../../assests/images/laravel/laravel58.png"
 import laravel59 from "../../assests/images/laravel/laravel59.png"
 import laravel6 from "../../assests/images/laravel/laravel6.png"
 import laravel60 from "../../assests/images/laravel/laravel60.png"
@@ -82,9 +85,12 @@ import laravel7 from "../../assests/images/laravel/laravel7.png"
 import laravel8 from "../../assests/images/laravel/laravel8.png"
 import laravel9 from "../../assests/images/laravel/laravel9.png"
 
+
 const images = {
     //image laravel
     laravel0_env,laravel0_env2,laravel0_env3,laravel5,laravel_query_builder_result,
+    laravel_auth1,laravel_auth2,laravel_run_dev,laravel_auth_breez1,laravel58,
+
 
     //delete
     controller_r,index,Laravel0,
@@ -96,9 +102,9 @@ const images = {
     laravel32,laravel33,laravel34,laravel35,laravel36,laravel37,laravel38,
     laravel39,laravel4,laravel40,laravel41,laravel42,laravel43,laravel44,
     laravel45,laravel46,laravel47,laravel48,laravel49,laravel50,
-    laravel51,laravel52,laravel53,laravel54,laravel55,laravel57,laravel58,
+    laravel51,laravel52,laravel53,laravel54,laravel55,laravel57,
     laravel59,laravel6,laravel60,laravel61,laravel62,laravel64,laravel65,
-    laravel66,laravel67,laravel68,laravel7,laravel8,laravel9
+    laravel66,laravel67,laravel68,laravel7,laravel8,laravel9,
 }
 
 export default images

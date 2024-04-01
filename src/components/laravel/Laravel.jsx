@@ -1,37 +1,46 @@
 import { useEffect, useRef} from 'react';
 import { Routes, Route , Link } from "react-router-dom";
-import{ 
-   Introduction , Mvc , Database , DatabaseQueryBuilder , 
-   DatabaseRouteResource , Git , Mail , Middleware , Packages , Tinker 
-} from "./pathLaravel.js" 
+import{
+   Introduction , Mvc , Database , DatabaseQueryBuilder ,  DatabaseRouteResource , 
+   Git , Mail , Middleware , Packages , Tinker , GitClone 
+} from "./pathLaravel.js";
 
 export default function Laravel(props){
-    const AsideRef = useRef(null);
-    useEffect(() => {
+   const AsideRef = useRef(null);
+   useEffect(() => {
        AsideRef.current.scrollTop = localStorage.getItem("laravel_aside") || 0;
-    }, []); 
-    
-    const matrix = props.laravel_matrix.map(e =>{ 
-      var keys_map;
-      let dt_title;
-      keys_map = e.map((key,index) => {
-         if(index === 0){
-            dt_title = key.toLowerCase().replace(/_/g, '-');
-           return(<dt className="aside-dl-dt" key={key}>
-                     <Link to={`/laravel/${dt_title}/`}>
-                        <i className="fa-solid fa-caret-right"></i> {key.replace(/_/g, ' ')}
-                     </Link>
-                  </dt>)  
-         }else{
-             return( <dd className="aside-dl-dd" key={key}>
-                        <a href={`/laravel/${dt_title}#${key}`}>
+   }, []);
+
+   const matrix = props.laravel_matrix.map(e =>{ 
+      var keys_map;  
+      if (Array.isArray(e)) { 
+         let dt_title;
+         keys_map = e.map((key,index) => {
+            if(index === 0){
+               dt_title = key.toLowerCase().replace(/_/g, '-');
+              return(<dt className="aside-dl-dt" key={key}>
+                        <Link to={`/laravel/${dt_title}/`}>
+                           <i className="fa-solid fa-caret-right"></i> {key.replace(/_/g, ' ')}
+                        </Link>
+                     </dt>)  
+            }else{
+                return(<dd className="aside-dl-dd" key={key}>
+                           <a href={`/laravel/${dt_title}#${key}`}>
                              <i className="fa-solid fa-circle"></i> {key.replace(/_/g, ' ')}
-                        </a>
-                     </dd>)
-         } 
-      });
+                           </a>
+                        </dd>)
+            } 
+          });
+      }else {
+         keys_map = <dt className="aside-dl-simple" key={e}>
+               <a href={`/laravel/${e.toLowerCase().replace(/_/g, '-')}`}>
+                  <i className="fa-solid fa-caret-right"></i> {e.replace(/_/g, ' ')} 
+               </a>
+            </dt>;
+      }
       return keys_map
    });
+
 
 
    return (
@@ -54,6 +63,7 @@ export default function Laravel(props){
           <Route path='/middleware'  element={<Middleware  />} />                
           <Route path='/packages'  element={<Packages  />} />                
           <Route path='/tinker'  element={<Tinker  />} />                
+          <Route path='/clone-github'  element={<GitClone  />} />                
       </Routes>
    </section>
 </main>

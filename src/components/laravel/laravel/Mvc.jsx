@@ -19,7 +19,7 @@ export default function Mvc(props){
    return(
 <>
    <h1 className="heading-style mb-5">Laravel MVC </h1>
-      <article id="what_is_MVC">
+   <article id="what_is_MVC">
          <h2 className="title-h2">1 - ما هو MVC </h2>
          <p className="style_divv">
             تعتبر MVC في Laravel نمطًا معماريًا يتبعه Laravel.<br/><br/>

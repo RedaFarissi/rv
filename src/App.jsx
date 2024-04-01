@@ -65,11 +65,10 @@ function App() {
       ["Database","Connect_with_database","Create_models","migrate","Create_Table_without_Models","Add_Column_In_Table","Remove_Column_From_Table","Foreign_Keys","Truncate_models_table","Drop_the_last_migrate","Clear_tables_and_create_it_again","soft_delete","eloquent_scopes","Seeder_class"],
       ["Database_Route_resource","New_project","index","create","Store_and_Upload_image","Show","Edit","Destroy","only_and_except"],
       ["Database_Query_Builder","What_is_Query_Builder","Insert","Get","Full_Example","Delete_All","truncate"],
-      ["Tinker"],
-      ["middleware","Example_1","Example_2"],
-      ["mail","send-mail"],
-      ["packages","Authentication_UI","Authentication_Breeze","Paypal_Payment","Stripe_Payment_Integration"],
-      ["github","clone_laravel_project","laravel_docker"],
+      "Tinker",
+      ["Middleware","Example_1","Example_2"],
+      ["Packages","Authentication_UI","Authentication_Breeze","Paypal_Payment","Stripe_Payment_Integration","send_mail"],
+      "Clone_Github"
     ];
     const git_list  = [ "Introduction","Install_git","Diagram_git","Repository","Branch","Local_Repository","Remote_Repository","Pull_Request","Clone_Repository","Initialize_Repository","git_status","git_add","git_commit","git_branch","git_remote","git_push","Work_as_a_team","git_pull","Existing_Project_powerShell","Existing_Project_App","gitignore_file","submodules","Create_new_branch","Generating_SSH","Remove_connection"];
     const cmd_list  = [ "Introduction","Create_Folder","Change_Directory","Remove_Directory","Create_File","Rename_File","Remove_File","Remove_all_Files","Get_all_Directory","Get_Content_File","Clear_Screen","curl_Html","POST_Requests_curl","Copy_Files_to_another_Folder","Change_extension","Change_extensions","Print_all_Files_in_folder","View_System_Information","Turn_off_the_Computer","search_for_File_by_Extensions","Display_Text","Date_and_Time"];
