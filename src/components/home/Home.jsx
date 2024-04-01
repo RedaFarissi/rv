@@ -55,6 +55,26 @@ export default function Home(props){
         />
 
         <HomeBox 
+            link="/mysql"
+            home_box="home-box-mysql"
+            h1_class="h1_mysql"
+            h1="MYSQL"
+            img={images.mysql}
+            code={`-- Switch to the created database
+USE my_database;
+
+-- Create a new table
+CREATE TABLE users (
+  id INT  PRIMARY KEY,
+  username VARCHAR(50) NOT NULL,
+  email VARCHAR(100) NOT NULL
+);`}
+            language="sql"
+            img_class="img-mysql"
+            paragraph="MySQL هو نظام إدارة قواعد البيانات العلاقية de مفتوح المصدر يستخدم لغة الاستعلام المهيكلة (SQL) لإدارة واستعلام البيانات. يُستخدم على نطاق واسع في تطبيقات الويب ويدعم مجموعة متنوعة من أنظمة التشغيل. يوفر MySQL التوسعة والموثوقية والأداء، مما يجعله خيارًا شائعًا للشركات بمختلف الأحجام. يسهل تخزين البيانات واسترجاعها وتلاعبها بكفاءة من خلال مجموعته الشاملة من الميزات والوظائف."
+        />
+
+        <HomeBox 
             link="/python"
             home_box="home-box-python"
             h1_class="h1_python"
