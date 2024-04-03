@@ -2,7 +2,7 @@ import { Routes, Route , Link } from "react-router-dom";
 import {
    Introduction,Virtualenv,FirstExemple,ModelFieldReference,StaticAndMediaFiles,AboutTemplates,
    AboutAdmin,AboutModels,UserAuthentication,DjangoEmail,DjangoPagination,Form,ModelForm,
-   DjangoFilter,Session,ContextProcessors,Ngrok,
+   DjangoFilter,Session,ContextProcessors,
 } from "./pathDjango"
 import React, { useEffect, useRef} from 'react';
 
@@ -59,12 +59,11 @@ export default function Django(props){
          <Route path='user-authentication' element={<UserAuthentication  />} />
          <Route path='django-email' element={<DjangoEmail  />} />
          <Route path='django-pagination' element={<DjangoPagination  />} />
-         <Route path='form' element={<Form  />} />  {/* ModelForm path */}
-         <Route path='modelform' element={<ModelForm  />} /> {/* ModelForm path */}
+         <Route path='form' element={<Form  />} />  
+         <Route path='modelform' element={<ModelForm  />} /> 
          <Route path='django-filter' element={<DjangoFilter  />} />
          <Route path='session' element={<Session  />} />
          <Route path='context-processors' element={<ContextProcessors  />} />
-         <Route path='ngrok' element={<Ngrok  />} />
       </Routes>
    </section>
 </main>

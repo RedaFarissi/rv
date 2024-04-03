@@ -11,7 +11,7 @@ body
     overflow-x: hidden
     color: $textColor 
     font-size: 16px
-    background-color: $bodyBgColor
+    background-color: #080e1f
     &::-webkit-scrollbar 
         width: 8px   
     &::-webkit-scrollbar-thumb 
@@ -27,31 +27,32 @@ body
             
 
 .aside 
-    width: 266px
+    width: 276px
     position: fixed
-    height: calc(100vh - 130px)
+    height: calc(100vh - 128px)
     left: 0px
     bottom: 0
     direction: ltr
     padding: 9x
     padding-top: 20px
     overflow-y: auto
-    overflow-x: hidden
-    background-color: $bgAside
-    @media (max-width: 1115px) 
+    overflow-x: hidden 
+    background-color: #121926 
+    z-index: 998
+    @media (max-width: 1140px) 
         display: none
     &::-webkit-scrollbar 
         box-sizing: border-box
-        width: 9px
+        width: 15px
         visibility: visibile
     &::-webkit-scrollbar-track 
-        background: white
+        background: black
     &::-webkit-scrollbar-thumb 
         background:  gray 
         border: 0.2px solid black
     ul , dl
         width: 100%
-        background-color: $bgAside
+        background-color: #121926 
         li , .aside-dl-simple
             margin: 0 4px 
             border-radius: 3px
@@ -60,7 +61,7 @@ body
             padding: 0
             cursor: pointer
             font-weight: 650
-            background-color: $bgAside
+            background-color: #121926 
             height: 35px
             a
                 display: inline-block
@@ -115,7 +116,7 @@ body
         width: calc( 95% - 296px )
         margin: 0 calc(14px + 2.5%)
         margin-top: 140px
-    @media (max-width: 1115px) 
+    @media (max-width: 1140px) 
         width: calc( 100% - 80px )
         margin: 0 40px
         margin-top: 140px
@@ -127,8 +128,8 @@ body
     .heading-style 
         direction: ltr
         font-style: italic
-        font-size: 52px
-        color: $title_h2
+        font-size: 44px
+        color: white
         margin-bottom: 65px
         font-family: "Readex Pro",sans-serif
         @media (max-width: 500px) 
@@ -138,34 +139,34 @@ body
         margin: 20px  0
         border: 0.1px solid rgba(255 255 255/20%)
     .style_divv
-        background-color:  $style_divv
+        background-color: #121926
         border: 0.2px solid gray
         padding: 20px
         border-radius: 3px
         margin-bottom: 24px 
         font-style: italic
         word-spacing: 3px 
-        font-size: 16px
+        font-size: 15px
         font-family: "Readex Pro",sans-serif
         @media (max-width: 500px) 
-            font-size: 14.5px
+            font-size: 12px
     .title-h2
-        font-size: 31px
-        color: $title_h2
+        font-size: 28px
+        color: white
         margin-top: 45px 
         margin-bottom: 15px 
         font-family: "Readex Pro",sans-serif
         @media (max-width: 500px) 
             font-size: 23px
     .title-h3
-        font-size: 27px
+        font-size: 23px
         margin-top:17px 
-        color:  #004481
+        color:  #adb5bd
         font-family: "Readex Pro",sans-serif
         @media (max-width: 500px) 
             font-size: 19px
     .title-h5
-        font-size: 20px
+        font-size: 19px
         margin-top:15px 
         color: $title_h5
         font-family: "Readex Pro",sans-serif
@@ -173,7 +174,7 @@ body
             font-size: 17px
     .title-h6
         margin-top:13px 
-        font-size: 18px
+        font-size: 17px
         color: red
         font-family: "Readex Pro",sans-serif
         @media (max-width: 500px) 

@@ -43,7 +43,7 @@ function App() {
         ["Django_Email","2_Step_Verification","send_email","list_emails"],
         "Django_Pagination","Form","ModelForm",
         ["Django_Filter","models_Objecjs_filter","raw_filter","lookup_expr","Q_filter","select_related",],
-        "Session","Context_Processors","ngrok"
+        "Session","Context_Processors"
     ];
     const django_rest_framework_matrix = [
         ["Introduction","What_is_django_rest_framework","What_is_API","Install_Django_Rest_Framework"],
@@ -98,11 +98,39 @@ function App() {
     // }   
     // searchAndRetrieve("Introduction");
   
+    
+    function myStartFunction() {
+        this.style.width = "0px"; 
+    }
+    function MyAnimationiteration(){
+        this.style.width = "200px";
+    }
+    function myEndFunction() {
+        this.style.backgroundColor = "red";
+    }
+    
+    function clickMenuHeader(){
+        const asides = document.querySelectorAll('.aside');
+        asides.forEach(aside => {
+            if(aside.style.display !== 'block') {
+
+                aside.style.display = "block"
+                aside.style.animation  = "animationAside 2s";
+                aside.addEventListener("animationstart", myStartFunction);
+                aside.addEventListener("animationiteration", MyAnimationiteration);
+                aside.addEventListener("animationend", myEndFunction);
+            }else{
+                aside.style.display = "none";
+            }
+            //
+        });
+    }
+
     return (
     <Router>
-        <Header />
+        <Header clickMenuHeader={clickMenuHeader} />
         <Routes>
-            <Route path='/' element={<Home />} /> 
+            <Route path='/' element={<Home  />} /> 
             <Route path='/html/*' element={<Html  html_list={html_list} />} />
             <Route path='/css/*' element={<Css  css_list={css_list}  />} />
             <Route path='/js/*' element={<Js js_matrix={js_matrix} />} />

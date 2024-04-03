@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import "./Header.sass"
+import React, { useRef } from 'react';
+import "./Header.sass";
 
-export default function Header(){    
-    
-    const [modeColor,setModeColor] = useState(localStorage.getItem("mode_color") || null)
+export default function Header(props){    
     
     // Course links 
     const programing = [{name:"HTML" , link:"html"},{name:"CSS" , link:"css"},{name:"JAVASCRIPT" , link:"js"},{name:"REACT.js" , link:"react"},{name:"MYSQL" , link:"mysql"},{name:"PYTHON" , link:"python"},{name:"DJANGO" , link:"django"},{name:"DJANGO REST FRAMEWORK" , link:"django-rest-framework"},{name:"PHP" , link:"php"},{name:"LARAVEL" , link:"laravel"} ,{name:"Git" , link:"git"},{name:"CMD" , link:"power-shell"},]
@@ -15,79 +13,56 @@ export default function Header(){
         </Link>
     </li>);
 
-    // Handle color mode 
-    const themeDark = ["rgb(5 5 5)","#f0fff0","rgb(10 10 10)","rgba(255 255 255/5%)","aqua","rgba(255 255 255/7%)","yellow","rgb(35 35 35)","rgba(255 255 255/90%)"];
-    const themeLight = ["#8080801a","black","#f2f2f2","rgba(0 0 0/5%)","#c80f42","rgba(0 0 0/7%)","green","white","black"];
-    
-    const handleModeColor = (themeColor)=>{
-        const [bgBody,textColor,bgAside,styleDivv,titleH2,asideHover,titleH5,bgHeaderSearch,textColorHeaderSearch] = themeColor;
-        
-        document.documentElement.style.setProperty('--bg-body', bgBody);
-        document.documentElement.style.setProperty('--text-color', textColor);
-        document.documentElement.style.setProperty('--bg-aside', bgAside);
-        document.documentElement.style.setProperty('--style-divv', styleDivv);
-        document.documentElement.style.setProperty('--title-h2', titleH2);
-        document.documentElement.style.setProperty('--aside-hover', asideHover);   
-        document.documentElement.style.setProperty('--title-h5', titleH5);
-        document.documentElement.style.setProperty('--bg-header-search', bgHeaderSearch);
-        document.documentElement.style.setProperty('--text-color-header-search', textColorHeaderSearch);
-
-        if(bgBody === "rgb(5 5 5)"){
-            localStorage.setItem("mode_color","black")
-            setModeColor("black");
-        }else{
-            localStorage.setItem("mode_color","white");
-            setModeColor("white");
+    const divRef = useRef(null);
+    const handleScrollButtonClick = (px) => {
+        const divElement = divRef.current;
+        if (divElement) {
+          divElement.scrollBy({
+            left: px,
+            behavior: 'smooth',
+          });
         }
-    }
-    useEffect(()=>{
-        if(modeColor === "black" && modeColor !== null){
-            handleModeColor(themeDark)
-        }else{
-            handleModeColor(themeLight)
-        }
-    },[]);
+    };
 
     return(
 <header className="header p-0" dir="ltr">
     <div className="header-main">
-        <div className="container">
+        <div className="container-h">
             <div className="d-flex justify-content-around">
-               <Link to='/' className="header-logo">  
-                  <div className="logo">R</div>
+               <Link to='/'>  
+                  <i className="fa-solid fa-house fs-5 text-light"></i>
                </Link> &nbsp;&nbsp;
             </div>
 
             <div className="header-search-container">
-                <form method="POST">
                     <input type="text" name="search" className="search-field" />
                     <button className="search-btn" type="submit">
-                        <ion-icon name={`search-outlin`}></ion-icon>
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i className="fa-solid fa-magnifying-glass"></i>
                     </button>
-                </form>
             </div>
 
             <div className={`header-icons`} >          
                 <Link to='/login'>
                     <i className={`fas fa-user`}></i>
                 </Link> 
-                {
-                    (modeColor === "black" && modeColor !== null)?
-                    <i className="fa-solid fa-sun text-warning" onClick={()=>{handleModeColor(themeLight);}}></i>
-                    :<i className="fa-solid fa-moon" onClick={()=>{handleModeColor(themeDark);}}></i>   
-                }
-                <i class="fa-solid fa-bars"></i>
+                <i className="menu-icon fa-solid fa-bars" onClick={props.clickMenuHeader}></i>
             </div>
         </div> 
     </div>
-    <nav className="desktop-navigation-menu">
+    <nav className="desktop-navigation-menu" ref={divRef}>
         
         <div className="container-fliud p-0">
             <ul className="desktop-menu-category-list">   
                 { links }
             </ul>
         </div>
+        <button className="btn-scroll btn-scroll-right" onClick={()=>{handleScrollButtonClick(200)}}>
+            <i className="fa-solid fa-angle-right"></i>
+        </button>
+
+        <button className="btn-scroll btn-scroll-left" onClick={()=>{handleScrollButtonClick(-200)}}>
+            <i className="fa-solid fa-angle-left"></i>
+        </button>
     </nav>
 </header>
     )

@@ -5,12 +5,12 @@
     position: fixed
     top:0
     z-index: 999
-    background-color: $bgAside   
+    background-color: #121926 
     width: 100%
+    z-index: 999
     .header-logo 
         width: 40px
         height: 40px
-        background-color: #0866ff
         display: flex
         justify-content: center 
         align-items: center 
@@ -22,10 +22,14 @@
             font-weight: 400
             font-style: normal
 .header-main
-    .container
+    .container-h
         display: flex
-        justify-content: space-between
+        justify-content: space-around
         align-items: center
+        @media (max-width: 1140px) 
+            justify-content: space-between
+            padding: 0 40px
+
     .header-search-container
         width: 57%
         height: 70px
@@ -34,13 +38,13 @@
             margin-top: 12px
             margin-left: 0px
             font-size: 0.875rem
-            background-color: $bgHeaderSearch
-            color: $textColorHeaderSearch
+            background-color: #19243e
+            color: white
             padding: 10px 15px
             padding-right: 30px
             padding-left: 17px
             height: 45px
-            border: 1px solid gray
+            border: 0.2px solid rgba(255 255 255/20%)
             border-radius: 10px 0 0 10px
             width: calc(100% - 50px)
             outline: none
@@ -50,13 +54,13 @@
             right: 0px
             width: 50px
             height: 45px
-            background-color: gray
-            border: none
+            background-color: #080e1f
+            color: rgba(255 255 255/50%)
+            border: 0.2px solid rgba(255 255 255/20%)
             outline: none
             border-radius:  0 10px 10px 0
-
     .header-icons
-        width: 110px
+        width: 80px
         display: flex
         justify-content: space-between
         align-items: center
@@ -64,9 +68,12 @@
             font-size: 20px
             cursor: pointer
             color: $textColor
+        .menu-icon
+            display: none
+            @media (max-width: 1140px) 
+                display: block
     .desktop-menu-category-list
         margin: 0 35px
-
 
 //Nav
 .desktop-navigation-menu
@@ -75,20 +82,17 @@
     justify-content: center
     border-bottom: 0.5px solid gray
     border-top: 0.5px solid gray
+    background-color: #19243e 
     align-items: center
+    position: relative
     &::-webkit-scrollbar 
         box-sizing: border-box
-        height: 5px
+        height: 0px
         visibility: auto
-    &::-webkit-scrollbar-track 
-        background: $textColor
-    &::-webkit-scrollbar-thumb 
-        background: gray
-        //-webkit-border-radius: 10px  
     @media (max-width: 1140px) 
         justify-content: start
         overflow-x: auto 
-    
+        padding: 0px 35px 
     .desktop-menu-category-list
         display: flex
         justify-content: center
@@ -115,8 +119,23 @@
                 text-decoration: none
                 width: max-content
                 color:  $textColor
+    .btn-scroll 
+        position: fixed
+        width: 40px
+        height: 40px
+        border: none
+        outline: none
+        border-radius: 9px
+        display: none
+        background-color: #121926 
+        color: white
+        @media (max-width: 1100px) 
+            display: block
+    .btn-scroll-right
+        right: 0px 
+    .btn-scroll-left
+        left: 0px 
 
-   
 .color-link-nav-light
     background: #f0fff0
     &::after
