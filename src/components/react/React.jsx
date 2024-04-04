@@ -3,42 +3,34 @@ import images from "./imagesReact";
 import { CodeHighlighter , CodeCommand , Result } from "../path";
 import react_logo from "../../assests/images/logo/react_logo.svg";
 import {ThisState, EventExemple, EventExemple2} from "./pathExemple";
-import { useEffect } from 'react';
 
-function React(props){
-  useEffect(() => {
-    // Scroll to the element with the ID specified in the hash fragment
-    const hash = window.location.hash;
-    if (hash) {
-      const element = document.querySelector(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' , block: 'start', inline: 'nearest' });
-        setTimeout(() => {
-          // Retrieve the scrollTop value after the animation is complete
-          const scrollTop = window.scrollY - 140;
-          window.scrollTo({
-            top: scrollTop,
-            behavior: 'smooth'
-          });
-        }, 1000);      
-      }
-    }
-  }, []);
+function React(props){  
+   
+    const arrays = codes.map(e =>{ 
+        const keys = Object.keys(e) 
+        var keys_map;
+        if (keys.includes("title")) { 
+          keys_map = keys.map((key) => (
+            key === "title" ? <dt className="aside-dl-dt" key={key}>
+                        <a href={`/react#${e[key]}`} onClick={ props.scrollYAdd }>
+                            <i className="fa-solid fa-caret-right"></i> {e[key]} 
+                        </a>
+                    </dt> :
+                    <dd className="aside-dl-dd" key={key}>
+                        <a href={`/react#${key}`} onClick={ props.scrollYAdd }>
+                            <i class="fa-solid fa-circle"></i> {key.replace(/_/g, ' ')} 
+                        </a>
+                    </dd> 
+          ));
+        }else{
+            keys_map = <dt className="aside-dl-simple" key={keys[0]}>
+                <a href={`/react#${keys[0]}`} onClick={ props.scrollYAdd }><i className="fa-solid fa-caret-right"></i> {keys[0].replace(/_/g, ' ')} </a>
+              </dt>;
+        }
+        return keys_map
+    });
 
-  const arrays = codes.map(e =>{ 
-    const keys = Object.keys(e) 
-    var keys_map;
-    if (keys.includes("title")) { 
-      keys_map = keys.map((key) => (
-        key === "title" ? <dt className="aside-dl-dt" key={key}><a href={`/react#${e[key]}`}><i className="fa-solid fa-caret-right"></i> {e[key]}</a></dt> : <dd className="aside-dl-dd" key={key}><a href={`/react#${key}`}><i class="fa-solid fa-circle"></i> {key.replace(/_/g, ' ')}</a></dd>
-      ));
-    } else {
-      keys_map = <dt className="aside-dl-simple" key={keys[0]}><a href={`/react#${keys[0]}`}><i className="fa-solid fa-caret-right"></i> {keys[0].replace(/_/g, ' ')} </a></dt>;
-    }
-    return keys_map
-  });
-
-return(
+  return(
 <main onClick={ ()=>{props.clickMenuHeader(false)} }>
   <aside  className="aside">
       <dl className="list-group m-0">
@@ -51,11 +43,11 @@ return(
         <h2 className="title-h2 mt-5"> 1 -مقدمة حول React.js  </h2>
         <h3 id="What_is_React" className="title-h3">1 - ما هو React  </h3>
         <p className="style_divv">
-          <ul>
-            <li><b>React</b> هو مكتبة جافا سكريبت تم إنشاؤها بواسطة <b>Facebook</b>.</li>
-            <li>يشار إليه أحيانًا باسم إطار عمل جافا سكريبت الأمام.</li>
-            <li>يستخدم <b>React</b> لبناء مكونات واجهة المستخدم <b>(UI)</b>، خاصة في سياق تطبيقات الصفحة الواحدة.</li>
-          </ul>
+            <ul>
+              <li><b>React</b> هو مكتبة جافا سكريبت تم إنشاؤها بواسطة <b>Facebook</b>.</li>
+              <li>يشار إليه أحيانًا باسم إطار عمل جافا سكريبت الأمام.</li>
+              <li>يستخدم <b>React</b> لبناء مكونات واجهة المستخدم <b>(UI)</b>، خاصة في سياق تطبيقات الصفحة الواحدة.</li>
+            </ul>
         </p>
         <h3 id="How_react_work" className="title-h3">2 - كيف يعمل React  </h3>
         <p className="style_divv">

@@ -25,7 +25,7 @@ export default function Laravel(props){
                      </dt>)  
             }else{
                 return(<dd className="aside-dl-dd" key={key}>
-                           <a href={`/laravel/${dt_title}#${key}`}>
+                           <a href={`/laravel/${dt_title}#${key}`} onClick={ props.scrollYAdd }>
                              <i className="fa-solid fa-circle"></i> {key.replace(/_/g, ' ')}
                            </a>
                         </dd>)
@@ -33,7 +33,7 @@ export default function Laravel(props){
           });
       }else {
          keys_map = <dt className="aside-dl-simple" key={e}>
-               <a href={`/laravel/${e.toLowerCase().replace(/_/g, '-')}`}>
+               <a href={`/laravel/${e.toLowerCase().replace(/_/g, '-')}`} onClick={ props.scrollYAdd }>
                   <i className="fa-solid fa-caret-right"></i> {e.replace(/_/g, ' ')} 
                </a>
             </dt>;
@@ -44,7 +44,7 @@ export default function Laravel(props){
 
 
    return (
-<main>
+<main onClick={ ()=>{ props.clickMenuHeader(false) } }>
    <aside className="aside" onScroll={()=>{ localStorage.setItem("laravel_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
        <ul className="list-group m-0">
           {matrix}

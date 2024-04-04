@@ -1,11 +1,40 @@
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
 import { Header,Home,Html,Css,Js,React,Mysql,Python,Django,DjangoRestFramework,Cmd,Git,Php,Laravel} from './components/path';
+import { useEffect } from 'react';
 import "./App.sass";
 
 function App() {
-    //https://review-code.com/ 
-    const html_list = [ "Introduction","Editor","Attributes","Heading (h1)","Paragraph (p)" ,"Break (br)","Horizontal (hr)","Superscript (sup)","Subscript (sub)","Underline (u)","Italic (i)","Abbreviation (abbr)","Blockquote","Quotation (q)","Mark","Deleted (del)","Preformatted (pre)","Small","Anchor (a)","Image (img)","Division (div)","Span","Audio","Video","Details","Bi-Directional Isolation (bdi)","Bi-Directional Override (bdo)","Lists Ordered (ol)","Lists Unordered (ul)","Lists Definitionul (dl)","Table","Input","Select","Textarea","Form","Button", "Header","Fieldset","Dialog","Iframe","Meter","Style","Link","Meta" ]
-    const css_list  = [ "Introduction","width","height","background","color","border","border-radius","padding","margin","font-size","font-style","font-weight","font-variant","white-space","word-wrap","word-break","text-decoration","letter-spacing","word-spacing","text-align","text-transform","text-indent","line-height","float","clear","opacity","hover","display","block","inline","inline-block","visibility","border-collapse","overflow","text-shadow","transform","transform-3D","perspective","resize","focus","transition","position","list-style-type","box-sizing","object-fit","animation","clip-path","cursor","scroll-behavior","z-index","outline","invalid & valid","after & before","writing-mode","filter","quotes","transform-style","-webkit-text-stroke", "flex-direction","flex-wrap","align-items","align-self","justify-content","order","grid","accent-color","Selectors","Functions","media","scss","sass"]
+    // Scroll to id when print route direct in browser
+    useEffect(() => {
+        const hash = window.location.hash;
+        if (hash) {
+          const element = document.querySelector(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' , block: 'start', inline: 'nearest' });
+            setTimeout(() => {
+                const scrollTop = window.scrollY - 140;
+                window.scrollTo({
+                  top: scrollTop ,
+                  behavior: 'smooth'
+                });
+            }, 1000);  
+          }
+        }
+    }, []);
+
+    const scrollYAdd = () => {
+        setTimeout(() => {
+            const scrollTop = window.scrollY - 140;
+            window.scrollTo({
+              top: scrollTop ,
+              behavior: 'smooth'
+            });
+        }, 1000 );  
+    };
+
+
+    const html_list = ["Introduction","Editor","Attributes","Heading (h1)","Paragraph (p)" ,"Break (br)","Horizontal (hr)","Superscript (sup)","Subscript (sub)","Underline (u)","Italic (i)","Abbreviation (abbr)","Blockquote","Quotation (q)","Mark","Deleted (del)","Preformatted (pre)","Small","Anchor (a)","Image (img)","Division (div)","Span","Audio","Video","Details","Bi-Directional Isolation (bdi)","Bi-Directional Override (bdo)","Lists Ordered (ol)","Lists Unordered (ul)","Lists Definitionul (dl)","Table","Input","Select","Textarea","Form","Button", "Header","Fieldset","Dialog","Iframe","Meter","Style","Link","Meta" ];
+    const css_list  = ["Introduction","width","height","background","color","border","border-radius","padding","margin","font-size","font-style","font-weight","font-variant","white-space","word-wrap","word-break","text-decoration","letter-spacing","word-spacing","text-align","text-transform","text-indent","line-height","float","clear","opacity","hover","display","block","inline","inline-block","visibility","border-collapse","overflow","text-shadow","transform","transform-3D","perspective","resize","focus","transition","position","list-style-type","box-sizing","object-fit","animation","clip-path","cursor","scroll-behavior","z-index","outline","invalid & valid","after & before","writing-mode","filter","quotes","transform-style","-webkit-text-stroke", "flex-direction","flex-wrap","align-items","align-self","justify-content","order","grid","accent-color","Selectors","Functions","media","scss","sass"];
     const js_matrix = [
         ["JS Tutorial","Introduction","Statements","Output","Variables","Arithmetic","Assignment","Types","String","String Search","Strings Templates","Numbers","Booleans","Date","Random","Conditions","Switch","Arrays part 1","Arrays part 2","Objects","Loop for","Loop while","Break","Conversion","Modules","Errors","JSON",],
         ["JS Functions","Functions", "bind", "call","apply",  "Map","Filter", ],
@@ -132,25 +161,27 @@ function App() {
             }
         });
     }
-    
+
     return (
     <Router>
-        <Header clickMenuHeader={clickMenuHeader} />
+        <Header 
+            clickMenuHeader={clickMenuHeader} 
+        />
         <Routes>
             <Route path='/' element={<Home  />} /> 
             <Route path='/html/*' element={<Html clickMenuHeader={clickMenuHeader} html_list={html_list} />} />
-            <Route path='/css/*' element={<Css css_list={css_list}  />} />
-            <Route path='/js/*' element={<Js js_matrix={js_matrix} />} />
-            <Route path='/react' element={<React clickMenuHeader={clickMenuHeader} react_matrix={react_matrix} />} />
-            <Route path='/mysql/*' element={<Mysql sql_list={sql_list} />} />
-            <Route path='/python/*' element={<Python python_list={python_list} />} />
-            <Route path='/django/*' element={<Django  django_matrix={django_matrix} />} />
-            <Route path='/django-rest-framework/*' element={<DjangoRestFramework django_rest_framework_matrix={django_rest_framework_matrix} />} />
-            <Route path='/php/*' element={<Php php_list={php_list}  />} />
-            <Route path='/laravel/*' element={<Laravel laravel_matrix={laravel_matrix}  />} />
-            <Route path='/power-shell' element={<Cmd cmd_list={cmd_list}  />} />
-            <Route path='/git' element={<Git git_list={git_list}  />} />
-        </Routes> 
+            <Route path='/css/*' element={<Css clickMenuHeader={clickMenuHeader} css_list={css_list}  />} />
+            <Route path='/js/*' element={<Js clickMenuHeader={clickMenuHeader} js_matrix={js_matrix} />} />
+            <Route path='/react' element={<React scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} react_matrix={react_matrix} />} />
+            <Route path='/mysql/*' element={<Mysql scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} sql_list={sql_list} />} />
+            <Route path='/python/*' element={<Python clickMenuHeader={clickMenuHeader} python_list={python_list} />} />
+            <Route path='/django/*' element={<Django scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} django_matrix={django_matrix} />} />
+            <Route path='/django-rest-framework/*' element={<DjangoRestFramework scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} django_rest_framework_matrix={django_rest_framework_matrix} />} />
+            <Route path='/php/*' element={<Php clickMenuHeader={clickMenuHeader} php_list={php_list}  />} />
+            <Route path='/laravel/*' element={<Laravel scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} laravel_matrix={laravel_matrix}  />} />
+            <Route path='/power-shell' element={<Cmd scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} cmd_list={cmd_list}  />} />
+            <Route path='/git' element={<Git scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} git_list={git_list}  />} />
+        </Routes>
     </Router> 
     );
 }

@@ -3,13 +3,13 @@ import { CodeHighlighter  } from "../path";
 
 export default function Sql(props){
     const arrays = props.sql_list.map(e => <li className="list-group-item">
-        <a  href={`/mysql#${e.toLowerCase().replace(/\s/g, '-')}`}  className="p-2"> 
+        <a  href={`/mysql#${e.toLowerCase().replace(/\s/g, '-')}`}  onClick={ props.scrollYAdd } className="p-2"> 
             <i className="fa-solid fa-caret-right me-1"></i>SQL {e}
         </a>
     </li>)
     
     return(
-<main>
+<main onClick={ ()=>{ props.clickMenuHeader(false) } }>
     <aside className="aside">
         <ul className="list-group m-0">
             {arrays}

@@ -13,9 +13,12 @@ import {
 
 export default function Css(props){
     const arrays = props.css_list.map(e => <li><Link  to={`/css/${e.toLowerCase().replace(/\s/g, '-')}`}> <i className="fa-solid fa-caret-right me-2"></i>CSS {e}</Link></li>)
+    
+    
+    
     return(
     <>
-     <main>
+     <main onClick={ ()=>{props.clickMenuHeader(false)} }>
         <aside className="aside">
             <ul className="list-group m-0">
                 {arrays}

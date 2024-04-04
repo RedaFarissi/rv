@@ -16,7 +16,7 @@ export default function Python(props){
     </li>)
 
     return(
-    <main>
+    <main onClick={ ()=>{ props.clickMenuHeader(false) } }>
         <aside className="aside">
             <ul className="list-group m-0">
                 {arr}

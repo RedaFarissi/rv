@@ -21,14 +21,13 @@ export default function DjangoRestFramework(props){
                 if(index === 0){
                 dt_title = key.toLowerCase().replace(/_/g, '-');
                     return(<dt className="aside-dl-dt" key={key}>
-                        
                                 <Link to={`/django-rest-framework/${dt_title}/`}>
                                     <i className="fa-solid fa-caret-right"></i> {key.replace(/_/g, ' ')}
                                 </Link>
                             </dt>)  
                 }else{
                     return(<dd className="aside-dl-dd" key={key}>
-                                <a href={`/django-rest-framework/${dt_title}#${key}`}>
+                                <a href={`/django-rest-framework/${dt_title}#${key}`} onClick={ props.scrollYAdd }>
                                     <i className="fa-solid fa-circle"></i> {key.replace(/_/g, ' ')}
                                 </a>
                             </dd>)
@@ -41,7 +40,7 @@ export default function DjangoRestFramework(props){
     });
 
     return (
-    <main>
+    <main onClick={ ()=>{ props.clickMenuHeader(false) } }>
         <aside className="aside" onScroll={()=>{ localStorage.setItem("django_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
             <ul className="list-group m-0">
                {matrix}

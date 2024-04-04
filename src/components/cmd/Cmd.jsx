@@ -5,11 +5,13 @@ import images from "./imagesCmd";
 export default function Cmd(props){
    
     const arrays = props.cmd_list.map(e => <li className="list-group-item">
-        <a href={`/power-shell#${e}`}><i className="fa-solid fa-caret-right me-2"></i>CMD {e.replace(/_/g, ' ')}</a>
+        <a href={`/power-shell#${e}`} onClick={ props.scrollYAdd }>
+            <i className="fa-solid fa-caret-right me-2"></i>CMD {e.replace(/_/g, ' ')}
+        </a>
     </li>)
 
     return(
-    <main>
+    <main onClick={ ()=>{ props.clickMenuHeader(false) } }>
         <aside className="aside">
             <ul className="list-group m-0">
                 {arrays}
@@ -32,14 +34,13 @@ export default function Cmd(props){
                 </p>
             </article>          
             <article className="mt-5">
-                <h2 className="title-h2"> 2 - الأوامر الأكثر إستخداما</h2>
-                <h3 className="title-h3"  id="Create_Folder">1 - إنشاء مجلد </h3>
+                <h2 className="title-h2"  id="Create_Folder">2 - إنشاء مجلد </h2>
                 <CodeCommand>mkdir folder_name</CodeCommand>
                 <CodeCommand>C:\Users\SURFACE BOOK\Desktop{">"} <span className="text-warning">mkdir folder_name</span></CodeCommand>
-                <h3 className="title-h3" id="Change_Directory"> 2 - تغيير الدليل</h3>
+                <h2 className="title-h2" id="Change_Directory"> 3 - تغيير الدليل</h2>
                 <CodeCommand>cd folder_name</CodeCommand>
                 <CodeCommand>C:\Users\SURFACE BOOK\Desktop{">"} <span className="text-warning">cd folder_name</span></CodeCommand>
-                <h3 className="title-h3"  id="Remove_Directory"> 3 - حذف مجلد </h3>
+                <h2 className="title-h2"  id="Remove_Directory"> 4 - حذف مجلد </h2>
                 <CodeCommand>rmdir /s folder_name</CodeCommand>
                 <CodeCommand>C:\Users\SURFACE BOOK\Desktop{">"}<span className="text-warning"> rmdir /s folder_name</span></CodeCommand>
                 <p className="style_divv">
@@ -47,33 +48,33 @@ export default function Cmd(props){
                     إذا كنت لا تزال موافقًا على حذف جميع الملفات في المجلد، قم بتشغيل:
                 </p>
                 <CodeCommand>attrib -hs *</CodeCommand>
-                <h3 className="title-h3" id="Create_File"> 4 - إنشاء ملف </h3>
+                <h2 className="title-h2" id="Create_File"> 5 - إنشاء ملف </h2>
                 <CodeCommand>type nul {">"} file_name.extension</CodeCommand>
                 <CodeCommand>C:\Users\SURFACE BOOK\Desktop\folder_name{">"} <span className="text-warning">type nul {">"} index.html</span></CodeCommand>
-                <h3 className="title-h3" id="Create_File"> 5 - إعادة تسمية ملف </h3>
+                <h2 className="title-h2" id="Create_File"> 6 - إعادة تسمية ملف </h2>
                 <CodeCommand>ren OldFileName NewFileName</CodeCommand>
                 <CodeCommand>C:\Users\SURFACE BOOK\Desktop\folder_name{">"} <span className="text-warning">ren index.html home.html</span></CodeCommand>
-                <h3 className="title-h3" id="Remove_File"> 6 - حذف ملف </h3>
+                <h2 className="title-h2" id="Remove_File"> 7 - حذف ملف </h2>
                 <CodeCommand> del file_name.extension</CodeCommand>
                 <CodeCommand>C:\Users\SURFACE BOOK\Desktop\folder_name{">"} <span className="text-warning">del index.html</span></CodeCommand>
-                <h3 className="title-h3" id="Remove_all_Files"> 7 - حذف جميع الملفات في المجلد </h3>
+                <h2 className="title-h2" id="Remove_all_Files"> 8 - حذف جميع الملفات في المجلد </h2>
                 <CodeCommand>del *</CodeCommand>
                 <CodeCommand>C:\Users\SURFACE BOOK\Desktop\folder_name{">"} <span className="text-warning">del *</span></CodeCommand>
-                <h3 className="title-h3" id="Get_all_Directory"> 8 - الحصول على جميع المجلدات و الملفات في المسار</h3>
+                <h2 className="title-h2" id="Get_all_Directory"> 9 - الحصول على جميع المجلدات و الملفات في المسار</h2>
                 <CodeCommand>dir</CodeCommand>
                 <CodeCommand>C:\Users\SURFACE BOOK\Desktop\folder_name{">"} <span className="text-warning">dir</span></CodeCommand>
-                <h3 className="title-h3" id="Get_Content_File"> 9 - الحصول على محتوى الملف</h3>
+                <h2 className="title-h2" id="Get_Content_File"> 10 - الحصول على محتوى الملف</h2>
                 <CodeCommand>more file_name.extension</CodeCommand>
                 <CodeCommand>C:\Users\SURFACE BOOK\Desktop\folder_name{">"} <span className="text-warning">more index.html</span></CodeCommand>
-                <h3 className="title-h3" id="Clear_Screen"> 10 - مسح الشاشة </h3>
+                <h2 className="title-h2" id="Clear_Screen"> 11 - مسح الشاشة </h2>
                 <CodeCommand>cls</CodeCommand>
-                <h3 className="title-h3" id="curl_Html">11 - جلب محتوى HTML باستخدام curl</h3>
+                <h2 className="title-h2" id="curl_Html">12 - جلب محتوى HTML باستخدام curl</h2>
                 <CodeCommand>curl https://exemple.com/</CodeCommand>
                 <CodeCommand>C:\Users\SURFACE BOOK\Desktop\folder_name{">"} <span className="text-warning">curl https://harmash.com/</span></CodeCommand>
-                <h3 className="title-h3" id="POST_Requests_curl">12 - إرسال طلبات POST باستخدام curl </h3>
+                <h2 className="title-h2" id="POST_Requests_curl">13 - إرسال طلبات POST باستخدام curl </h2>
                 <p className="style_divv">سيقوم هذا بإرسال طلب POST إلى www.example.com/login بحمولة تحتوي على حقلي اسم المستخدم وكلمة المرور.</p>
                 <CodeCommand>curl --request POST --data "username=johndoe&password=secret" https://www.example.com/login</CodeCommand>
-                <h3 className="title-h3" id="Copy_Files_to_another_Folder">13 - نسخ جميع الملفات إلى مجلد آخر </h3>
+                <h2 className="title-h2" id="Copy_Files_to_another_Folder">14 - نسخ جميع الملفات إلى مجلد آخر </h2>
                 <h5>نسخ جميع الملفات بامتداد معين </h5>
                 <p className="style_divv">في هذا المثال، نقوم بنسخ جميع الملفات بامتداد <kbd>.php</kbd> من المجلد <kbd>C:\xampp\htdocs\js\js\</kbd> ونلصقها في <kbd>"C:\Users\SURFACE BOOK\Desktop\all_course_dj_env\project\templates\js"</kbd></p>
                 <CodeCommand>for %F in ("C:\xampp\htdocs\js\js\*.php") do copy "%F" "C:\Users\SURFACE BOOK\Desktop\all_course_dj_env\project\templates\js"</CodeCommand>
@@ -81,22 +82,22 @@ export default function Cmd(props){
                 <p className="style_divv">نسخ جميع الملفات ذاخل مجلد إلى مجلد آخر .<br/> قم بذهاب إلى المسار الذي يحتوي الملفات تم إستخدم</p>
                 <CodeCommand>xcopy /s /i * "C:\Path\To\Target\Folder"</CodeCommand>
                 
-                <h3 className="title-h3" id="Change_extension"> 14 - تغيير امتداد الملف من php إلى html </h3>
+                <h2 className="title-h2" id="Change_extension"> 15 - تغيير امتداد الملف من php إلى html </h2>
                 <CodeCommand>ren filename.php filename.html</CodeCommand>
                 
-                <h3 className="title-h3" id="Change_extensions"> 15 - تغيير امتداد الملفات من php إلى html </h3>
+                <h2 className="title-h2" id="Change_extensions"> 16 - تغيير امتداد الملفات من php إلى html </h2>
                 <p className="style_divv">  انتقل أولاً إلى مسار المجلد الذي يحتوى الملفات.<br/>قم بتغيير كل الملفات ذات الامتداد <kbd>.php</kbd> بالامتداد <kbd>.html</kbd> </p>
                 <CodeCommand>for %i in (*.php) do ren "%i" "*.html"</CodeCommand>
                 
-                <h3 className="title-h3" id="Print_all_Files_in_folder"> 16 - طباعة جميع أسماء الملفات في مجلد معين </h3>
+                <h2 className="title-h2" id="Print_all_Files_in_folder"> 17 - طباعة جميع أسماء الملفات في مجلد معين </h2>
                 <CodeCommand>dir /A-D /B</CodeCommand>
                 <CodeCommand>C:\Users\SURFACE BOOK\Desktop\folder_name{">"} <span className="text-warning">dir /A-D /B</span></CodeCommand>
-                <h3 className="title-h3" id="View_System_Information"> 17 - عرض معلومات النظام</h3>
+                <h2 className="title-h2" id="View_System_Information"> 18 - عرض معلومات النظام</h2>
                 <p className="style_divv">يعرض معلومات حول النظام مثل اسم الكمبيوتر وإصدار النظام.</p>
                 <CodeCommand>systeminfo</CodeCommand>
-                <h3 className="title-h3" id="Turn_off_the_Computer"> 18 - إيقاف تشغيل الكمبيوتر </h3>
+                <h2 className="title-h2" id="Turn_off_the_Computer"> 19 - إيقاف تشغيل الكمبيوتر </h2>
                 <CodeCommand>shutdown</CodeCommand>
-                <h3 className="title-h3" id="search_for_File_by_Extensions"> 19 - البحث عن امتدادات ملفات محددة في مجلد </h3>
+                <h2 className="title-h2" id="search_for_File_by_Extensions"> 20 - البحث عن امتدادات ملفات محددة في مجلد </h2>
                 <img src={images.cmd1} alt="cmd1" className="w-50 m-auto d-block border my-4" />
                 <h4><ul><li> تنسيق الناتج <bdi>/B</bdi></li></ul></h4>
                 <p className="style_divv"> 
@@ -117,9 +118,9 @@ export default function Cmd(props){
                     C:\Users\SURFACE BOOK\Desktop\test_powerShell\header\header.html<br/>
                     C:\Users\SURFACE BOOK\Desktop\test_powerShell\header\headerComponent\Nav.html<br/>
                 </div>
-                <h3 className="title-h3" id="Display_Text"> 20 - عرض النص </h3>
+                <h2 className="title-h2" id="Display_Text"> 21 - عرض النص </h2>
                 <CodeCommand>echo Hello, World!</CodeCommand>
-                <h3 className="title-h3" id=""> 21 - عرض أو ضبط التاريخ والوقت </h3>
+                <h2 className="title-h2" id="Date_and_Time"> 22 - عرض أو ضبط التاريخ والوقت </h2>
                 <CodeCommand>date</CodeCommand>
                 <CodeCommand>time</CodeCommand>
             </article>

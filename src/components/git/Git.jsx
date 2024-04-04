@@ -3,11 +3,13 @@ import images from "./imagesGit";
 
 export default function Git(props){
     const arrays = props.git_list.map(e => <li className="list-group-item">
-        <a href={`/git#${e}`}><i className="fa-solid fa-caret-right me-1"></i> GIT {e.replace(/_/g, ' ')}</a>
+        <a href={`/git#${e}`} onClick={ props.scrollYAdd }>
+            <i className="fa-solid fa-caret-right me-1"></i> GIT {e.replace(/_/g, ' ')}
+        </a>
     </li>);
 
     return(
-        <main>
+        <main onClick={ ()=>{ props.clickMenuHeader(false) } }>
             <aside className="aside">
                 <ul className="list-group m-0">
                     {arrays}
@@ -367,7 +369,6 @@ export default function Git(props){
                     <h2 className="title-h2"> 25 - قم بإزالة الاتصال بين مجلد في جهاز الكمبيوتر الخاص بك و GitHub</h2>
                     <CodeCommand>rd /s /q .git</CodeCommand>
                 </article>
-
             </section>
         </main>
     )

@@ -22,7 +22,7 @@ export default function Php(props){
         </dl>
     ));
     return(
-        <main>
+<main onClick={ ()=>{ props.clickMenuHeader(false) } }>
     <aside className="aside">
         <ul className="list-group m-0">
             {matrix}

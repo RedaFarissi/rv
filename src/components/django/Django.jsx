@@ -9,7 +9,7 @@ import React, { useEffect, useRef} from 'react';
 export default function Django(props){
    const AsideRef = useRef(null);
    useEffect(() => {
-      AsideRef.current.scrollTop = localStorage.getItem("django_aside") || 0;
+      AsideRef.current.scrollTop = localStorage.getItem("django_aside") || 0 ;
    }, []); 
    
    const matrix = props.django_matrix.map(e =>{ 
@@ -26,7 +26,7 @@ export default function Django(props){
                      </dt>)  
             }else{
                 return(<dd className="aside-dl-dd" key={key}>
-                           <a href={`/django/${dt_title}#${key}`}>
+                           <a href={`/django/${dt_title}#${key}`} onClick={ props.scrollYAdd }>
                              <i className="fa-solid fa-circle"></i> {key.replace(/_/g, ' ')}
                            </a>
                         </dd>)
@@ -39,7 +39,7 @@ export default function Django(props){
    });
 
    return (
-<main  onClick={ ()=>{ props.clickMenuHeader(false) } }>
+<main onClick={ ()=>{ props.clickMenuHeader(false) } }>
    <aside className="aside" onScroll={()=>{ localStorage.setItem("django_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
        <ul className="list-group m-0">
           {matrix}
