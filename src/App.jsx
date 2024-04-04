@@ -6,7 +6,7 @@ import "./App.sass";
 function App() {
     useEffect(() => {
             // Scroll to id when print route direct in browser
-            const hash = window.location.hash;
+            const hash = window.location.hash;   //get The id  
             if (hash) {
                 const element = document.querySelector(hash);
                 if (element) {
@@ -21,16 +21,27 @@ function App() {
                 }
             }
 
-            // Show Aside if window more than 1140
-            window.addEventListener('resize', ()=>{
+            // handle Resize
+            const handleResize = () => {
+                const asides = document.querySelectorAll('.aside');
                 if(window.innerWidth > 1140){
-                    const asides = document.querySelectorAll('.aside');
-                    asides.forEach( aside => {
-                        aside.style.display = "block";
+                    asides.forEach( (aside)=>{
+                        aside.style.display = "block"
+                        aside.style.animation  = "moveAsideOpen 1s forwards";
+                        aside.addEventListener("animationstart", myStartFunctionOpen);
+                        aside.addEventListener("animationiteration", MyAnimationiterationOpen);
+                    });
+                }else{
+                    asides.forEach( (aside)=>{
+                        aside.style.animation  = "moveAsideClose 1s forwards";
+                        aside.style.display = "none";    
+                    aside.addEventListener("animationstart", myStartFunctionClose);
+                    aside.addEventListener("animationiteration", MyAnimationiterationClose);
                     });
                 }
-            }); 
-    }, []);
+            };
+            window.addEventListener('resize', handleResize);
+      }, []);
 
     const scrollYAdd = () => {
         setTimeout(() => {
@@ -155,11 +166,9 @@ function App() {
     // close
     function myStartFunctionClose() {
         this.style.width = "276px";
-        this.style.display = "block"; 
     }
     function MyAnimationiterationClose(){
         this.style.width = "0px"; 
-        this.style.display = "none"; 
     }
     
     function clickMenuHeader(clickFromMenu){

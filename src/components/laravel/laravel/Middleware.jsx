@@ -102,7 +102,7 @@ class ControllerAdmin extends Controller
     }
 }`} file_name={`laravel-app / App / Http / Controllers / ControllerAdmin.php`} language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
       </article>
-      <article>
+      <article id="Example_2">
          <h2 className="title-h2">  مثال 2 </h2>
          <ul>
             <li> قم بإنشاء برنامج وسيط <b>(Middleware)</b> ثانٍ </li>
