@@ -6,7 +6,7 @@ export default function BiDirectionalOverride(props){
         الكتابة بالعربية تكون من اليمين
     </bdo>`
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML Bi-Directional Override (bdo)</h1>
     <article className="mt-5">
         <p className="style_divv mt-5">
@@ -23,6 +23,6 @@ export default function BiDirectionalOverride(props){
             </Result>
         </div>
     </article>
-</section>
+</>
 )
 }

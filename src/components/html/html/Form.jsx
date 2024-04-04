@@ -3,7 +3,6 @@ import { useState , useRef} from "react";
 
 export default function Form(props){
     
-    
     const code = `    <form action="/submit_form" method="post">
         <!-- Text Input -->
         <label for="name">Name:</label>
@@ -49,7 +48,7 @@ export default function Form(props){
     }
 
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML Form</h1>
     <article className="mt-5">
         <h2 className="title-h2">1. الوسم form</h2>
@@ -59,16 +58,14 @@ export default function Form(props){
             الوسم <kbd>&lt;form&gt;</kbd>  بحد ذاته ليس شيئاً يتم عرضه في الصفحة بل هو بمثابة حاوية للوسوم التي نضعها فيه.<br/>
         </p>
         <CodeHighlighter  code={code} language="html" is_html={true}  addclassName="mt-3 mb-3" number={true} copie={true}/>
-        <div className="sum_exemple_style">
-            <div className="mital">مثال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple1} language="html" is_html={true} title="Form" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Form' url_change={codeExemple1Route} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html" logo={props.html_logo}>
-                <label>Full Name : </label> 
-                <input type="text" ref={inputRefExemple1} name="full_name"/>
-                <input type="submit" value="Submit" onClick={codeExemple1RouteHandle}/>
-            </Result>
-            <ul><li> عند النقر على الزر OK سيتم إرسال البيانات إلى الخادم .  </li></ul>
-        </div>
+        <div className="mital">مثال : </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple1} language="html" is_html={true} title="Form" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='Form' url_change={codeExemple1Route} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html" logo={props.html_logo}>
+            <label>Full Name : </label> 
+            <input type="text" ref={inputRefExemple1} name="full_name"/>
+            <input type="submit" value="Submit" onClick={codeExemple1RouteHandle}/>
+        </Result>
+        <ul><li> عند النقر على الزر OK سيتم إرسال البيانات إلى الخادم .  </li></ul>
         <ul>    
             <li> لا تقلق إن لم تفهم الوسم <kbd>&lt;input&gt;</kbd> و الوسم <kbd>&lt;button&gt;</kbd> سنشرح ذالك في دروس القادمة . </li>
             <li> كل ما عليك فهمه  هو أن الوسم <kbd>&lt;form&gt;</kbd> يستعمل لإرسال البيانات إلى الخادم . </li>
@@ -76,12 +73,12 @@ export default function Form(props){
     </article>
     <article>
         <h2 className="title-h2">2. مفوم الخادم </h2>
-        <h5>ما هو  الخادم</h5>
+        <h5 className="title-h5">ما هو  الخادم</h5>
         <p className="style_divv">
         <b>السيرفر</b> أو <b>الخادم</b> أو <b>المخدم</b> أو <b> المزود</b> كلها مسميات تم ترجمتها من الكلمة الإنجليزية <b>Server</b>، والسيرفر هو عبارة عن جهاز حاسوب / كمبيوتر له القدرة على تحمل ظروف التشغيل بإستمرار لفترات طويلة قد تصل لأكثر من عام
         ، ويتم توصيل الخادم بالشبكة (أي كان نوعها أو حجمها - سواء شبكة داخلية أو شبكة الإنترنت)، ويتم تخصيص هذا الجهاز للقيام بمهام محددة لخدمة باقي الأجهزة المتصلة بنفس الشبكة، وطبقا للمهام التي يتخصص بها جهاز الخادم / السيرفر يتم تحديد عتاد الجهاز، فهناك مهام تحتاج لمعالجة الكثير من البيانات، وبالتالي يتم إختيار جهاز خادم يحتوي على أكثر من نواة - Core - في وحدة المعالجة المركزية، وهناك مهام تحتاج إلى الكثير من المساحات التخزينية، وبالتالي يتم إستخدام خادم يحتوي على وحدات تخزين كبيرة، وهكذا يتم تحديد العتاد الخاص بجهاز الخادم، ومع التطور في تصنيع أجهزة الكمبيوتر، فإن أي جهاز حاسوب ذو عتاد جيد (مواصفات الجهاز - Hardware) يمكن أن يستخدم كخادم في أي شبكة.
         </p>
-        <h5> خادم الويب </h5>
+        <h5 className="title-h5"> خادم الويب </h5>
         <p className="style_divv">
         وهو الجهاز الذي يحتوي على الملفات البرمجية للمواقع الإلكترونية، بحيث يقوم بإستقبال ومعالجة الطلبات القادمة من الشبكة (من خلال متصفحات المستخدمين)، وتقديم صفحات بمحتوى الموقع الإلكتروني، وتسمى الخدمة المقدمة في هذا النوع من الخوادم بـ إستضافة المواقع الإلكترونية.<br/>
         البرامج: يوجد العديد من البرامج التي يمكن إستخدامها لتقوم بمهمة خادم الويب ومنها على سبيل المثال وبترتيب الأكثر إستخداما <b>Apache Httpd</b> وهو الأكثر إستخداما في هذه الأيام، ويوجد أيضا برنامج <b>nginx</b> وبرنامج <b>IIS</b> وغيرها الكثير من البرامج.<br/>
@@ -90,6 +87,6 @@ export default function Form(props){
         </p>
         <ul><li> ستتعرف  على سمات  <b>form</b> أتناء تعلم دروس <b>php</b></li></ul>
     </article>
-</section>
-)
+</>
+    )
 }

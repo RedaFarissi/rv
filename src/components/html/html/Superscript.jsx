@@ -5,7 +5,7 @@ export default function Superscript(props){
     const codeExemple = `<h2>2<sup>3</sup> = 8</h2>
 <h2>1<sup>er</sup></h2>`
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style"> HTML Superscript (sup) </h1>
     <article className="mt-5">
         <p className="style_divv mt-5">
@@ -22,6 +22,6 @@ export default function Superscript(props){
         </Result>
         </div>
     </article>
-</section>
+</>
 )
 }

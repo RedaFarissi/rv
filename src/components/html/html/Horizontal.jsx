@@ -10,7 +10,7 @@ const codeExemple =  `<p>
   PHP (Hypertext Preprocessor) is a server-side scripting language that is used to add dynamic and interactive elements to a web page. PHP can be used to generate HTML, connect to databases, and perform other tasks that require access to the server. PHP is an interpreted language, which means that it is executed by a PHP interpreter on the server.
 </p>`
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML Horizontal Line (hr) </h1>
     <p className="style_divv mt-5">
         عندما نقوم بكتابة الفقرات و نريد ان نفصل بينها بخط فاننا نقوم بوضع خط افقي لكي 
@@ -30,6 +30,6 @@ const codeExemple =  `<p>
     </div>
     <div className="green"> ملاحظة :</div>
     <ul><li> يتم إضافة القليل من الفراغ فوق السطر وأسفله يمكنك التعديل وجعله كيفما تريده بستعمال CSS ( ستتعلم ذالك في دروس CSS).</li></ul>
-</section>
+</>
 )
 }

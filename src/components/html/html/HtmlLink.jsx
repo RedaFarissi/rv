@@ -17,7 +17,7 @@ p{
         `     <h1>My Heading</h1>
     <p>My Paragraph.</p>`]
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML Link </h1>
     <article className="mt-5">
         <p className="style_divv mt-5">
@@ -40,6 +40,6 @@ p{
             <p className="html-link-p">My Paragraph.</p>
         </Result>
     </article>
-</section>
+</>
 )
 }

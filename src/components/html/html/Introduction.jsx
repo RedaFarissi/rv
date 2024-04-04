@@ -11,7 +11,7 @@ export default function Introduction(props){
 </article>`
 
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style"> HTML Introduction </h1>
     <article className="mt-5">
         <h2 className="title-h2">1. ما هي HTML ؟</h2>
@@ -49,18 +49,19 @@ export default function Introduction(props){
     <article>
         <h2 className="title-h2">5. معلومة تقنية</h2>
         <p className="style_divv">
-        عند استخدام وسم فردي يمكنك عدم وضع الرمز / في آخره إن أردت و لكن يفضّل وضعه للإشارة إلى أنه وسم فردي.
-        <div style={{color:"yellow", padding:"15px"}}>مثال : </div>
-        <ul>
-        <li>  سواء قمت بكتابة <kbd><bdi>&lt;hr&gt;</bdi></kbd> أو <kbd><bdi>&lt;hr/&gt;</bdi></kbd> فالنتيجة هي نفسها تماماً. </li>
-        <li>  الوسم الزوجي عبارة عن وسم له بداية و نهاية. </li>
-        </ul>
-        نهاية الوسم الزوجي تكون بإضافة الرمز / في أول إسم الوسم فقط.
-        <div className="mital">مثال : </div>
-        <ul><li> الوسم الزوجي <b>div</b> نبدأه بالوسم <kbd>&lt;div&gt;</kbd> و ننهيه بالوسم <kbd><bdi>&lt;/div&gt;</bdi></kbd>.</li></ul>
-        <div className="alert alert-danger mt-3" style={{color:"red",padding:"15px"}}><b>ملاحظة هامة :</b><br/>
-            يجب تأكد  من  إنهاء كل الأوسمة الزوجية الموجودة داخل موقعك لكي لا تحدت مشاكل أتناء تشغيل الكود
-        </div>
+            عند استخدام وسم فردي يمكنك عدم وضع الرمز / في آخره إن أردت و لكن يفضّل وضعه للإشارة إلى أنه وسم فردي.
+            <div style={{color:"yellow", padding:"15px"}}>مثال : </div>
+            <ul>
+            <li>  سواء قمت بكتابة <kbd><bdi>&lt;hr&gt;</bdi></kbd> أو <kbd><bdi>&lt;hr/&gt;</bdi></kbd> فالنتيجة هي نفسها تماماً. </li>
+            <li>  الوسم الزوجي عبارة عن وسم له بداية و نهاية. </li>
+            </ul>
+            نهاية الوسم الزوجي تكون بإضافة الرمز / في أول إسم الوسم فقط.
+            <div className="mital">مثال : </div>
+            <ul><li> الوسم الزوجي <b>div</b> نبدأه بالوسم <kbd>&lt;div&gt;</kbd> و ننهيه بالوسم <kbd><bdi>&lt;/div&gt;</bdi></kbd>.</li></ul>
+
+            <div className="alert alert-danger mt-3">
+                يجب تأكد  من  إنهاء كل الأوسمة الزوجية الموجودة داخل موقعك لكي لا تحدت مشاكل أتناء تشغيل الكود .
+            </div>
         </p>
     </article>
     <article>
@@ -119,6 +120,6 @@ export default function Introduction(props){
             <li>  من خلال هذه الدورة ستتعرف على كل العناصر التي تلزمك للإنطلاق في عالم البرمجة . </li>
         </ul>
     </article>
-</section>
-)
+</>
+    )
 }

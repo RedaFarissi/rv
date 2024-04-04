@@ -45,7 +45,7 @@ export default function ListsUnordered(props){
     <li>Milk</li>
   </ul>`
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style"> HTML Lists Unordered ul </h1>
     <article  className="mt-5">
         <h2 className="title-h2">1. شرح الوسم ul </h2>
@@ -119,6 +119,6 @@ export default function ListsUnordered(props){
             </ul>
         </Result>  
     </article>
-</section>
-)
+</>
+  )
 }

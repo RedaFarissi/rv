@@ -9,7 +9,7 @@ const codeExemple = `1. HTML
 7. API`
 
     return(
-    <section className="section-conetent">
+    <>
         <h1 className="heading-style"> HTML Break (br)</h1>
         <article className="mt-5">
             <p className="style_divv">
@@ -31,6 +31,6 @@ const codeExemple = `1. HTML
                 </Result>
             </div>
         </article>
-    </section>
-)
+    </>
+    )
 }

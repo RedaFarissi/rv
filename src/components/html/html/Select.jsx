@@ -28,7 +28,7 @@ export default function Select(props){
         <option value="Tanger">Tanger</option>
     </select> `
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML Select</h1>
     <article className="mt-5">
         <h2 className="title-h2">1 . العنصر select </h2>
@@ -75,6 +75,6 @@ export default function Select(props){
             </Result>  
         </div>
     </article>
-</section>
-)
+</>
+    )
 }

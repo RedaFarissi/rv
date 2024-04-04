@@ -4,7 +4,7 @@ export default function Italic(props){
     const code = `<i> content  </i>`
     const codeExemple = `    italique <br/> <i>italique</i> <hr/> <i>italique</i>`
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML Italic (i)</h1>
     <article className="mt-5">
         <p className="style_divv">
@@ -20,6 +20,6 @@ export default function Italic(props){
             </Result>
         </div>
     </article>
-</section>
+</>
 )
 }

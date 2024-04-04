@@ -8,7 +8,7 @@ export default function Audio(){
 </video>`
     
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML video</h1>
     <article className="mt-5">
         <h2 className="title-h2">1. الوسم video</h2>
@@ -105,6 +105,6 @@ export default function Audio(){
         <img src={images.html24_video7} alt="code_video" className="img"/>
         </div>
     </article>
-</section>
-)
+</>
+    )
 }

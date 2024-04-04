@@ -5,7 +5,7 @@ export default function Span(props){
     const codeExemple = `     <span style="font-size:xx-large;color:red;">M</span>other has <span style="color:blue">blue</span> eyes.`
 
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML Span</h1>
     <article className="mt-5">
         <p className="style_divv mt-5">
@@ -17,14 +17,12 @@ export default function Span(props){
             </ul>
         </p>
         <CodeHighlighter  code={code} language="html" addclassName="mt-3 mb-3" copie={true}/>
-        <div className="sum_exemple_style">
-            <div className="mital">متال : </div>
-            <CodeHighlighter file_name="index.html" code={codeExemple} language="html" is_html={true} title="Span" addClass="mt-3 mb-3" copie={true}/>
-            <Result title='Span' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
-                <span style={{fontSize:"xx-large",color:"red"}}>M</span>other has <span style={{color:"blue"}}>blue</span> eyes.
-            </Result>
-        </div>
+        <div className="mital">متال : </div>
+        <CodeHighlighter file_name="index.html" code={codeExemple} language="html" is_html={true} title="Span" addClass="mt-3 mb-3" copie={true}/>
+        <Result title='Span' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
+            <span style={{fontSize:"xx-large",color:"red"}}>M</span>other has <span style={{color:"blue"}}>blue</span> eyes.
+        </Result>
     </article>
-</section>
+</>
 )
 }

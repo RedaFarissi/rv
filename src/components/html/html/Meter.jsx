@@ -7,7 +7,7 @@ export default function Meter(props){
     <meter id="disk_c" value="66" min="0" max="100" low="50" high="70" optimum="90"></meter><br/>
     <meter id="disk_c" value="99" min="0" max="100" low="50" high="70" optimum="90"></meter><br/>`     
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style"> HTML Meter </h1>
     <article className="mt-5">
         <h2 className="title-h2">1. الوسم meter</h2>
@@ -51,6 +51,6 @@ export default function Meter(props){
         </div>
         <ul><li>يمكن تصميم الشكل ليكون أكتر إحترافية عبر لغة <b>CSS</b> .</li></ul>
     </article>
-</section>
-)
+</>
+    )
 }

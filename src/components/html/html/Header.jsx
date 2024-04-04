@@ -18,7 +18,7 @@ export default function Header(){
 </header>`
     
     return(
-<section className="section-conetent">
+<>
     <h1 class="heading-style">HTML Header</h1>
     <article className="mt-5">
         <p class="style_divv mt-5">
@@ -32,6 +32,6 @@ export default function Header(){
         <CodeHighlighter  code={code} language="html"  addclassName="mt-3 mb-3" copie={true}/>
     </article>
     
-</section>
-)
+</>
+    )
 }

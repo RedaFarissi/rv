@@ -25,7 +25,7 @@ const codeExemple5 = `      <audio controls autoplay loop>
 const codeExemple6 = `      <audio src="./music.mp3" controls preload="metadata" loop></audio>`
 
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML Audio</h1>
     <article  className="mt-5">
         <h2 className="title-h2">1. الوسم audio</h2>
@@ -125,6 +125,6 @@ const codeExemple6 = `      <audio src="./music.mp3" controls preload="metadata"
             </Result>
         </div>
     </article>
-</section>
+</>
     )
     }

@@ -17,7 +17,7 @@ export default function Division(props){
     </style>`
     ]
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML Division (div)</h1>
     <article className="mt-5">
         <p className="style_divv mt-5">
@@ -41,6 +41,6 @@ export default function Division(props){
             </Result>
         </div>
     </article>
-</section>
+</>
 )
 }

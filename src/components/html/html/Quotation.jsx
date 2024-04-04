@@ -4,7 +4,7 @@ export default function Quotation(props){
     const code = `<q cite="url"> content </q> `
     const codeExemple = `    <p>The <q>quick brown fox</q> jumps over the lazy dog.</p>`
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">  HTML Quotation (q) </h1>
     <article className="mt-5">
         <p className="style_divv mt-5">
@@ -19,6 +19,6 @@ export default function Quotation(props){
             </Result>
         </div>
     </article>
-</section>
+</>
 )
 }

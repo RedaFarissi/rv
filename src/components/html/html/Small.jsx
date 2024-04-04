@@ -13,7 +13,7 @@ export default function Small(props){
     <big><big><big> Reda Eskouni  </big></big></big><br/>
     <big><big><big><big> Reda Eskouni  </big></big></big></big><br/>`
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML Small and Big</h1>
     <article className="mt-5">
         <h2 className="title-h2">1. تصغير الخط </h2>
@@ -48,7 +48,6 @@ export default function Small(props){
             <li>لا تلقي بالا لذالك  لأنه يمكنك ستعمال <b>CSS</b> في تحكم بحجم زر كما تريد <small><small>(ستتعلم دالك خلال دروس CSS)</small></small></li>
         </ul>
     </article>
-
-</section>
-)
+</>
+    )
 }

@@ -6,7 +6,7 @@ export default function Mark(props){
     The <mark>quick brown fox</mark> jumps over the lazy dog.
 </p>`
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML mark</h1>
     <article  className="mt-5">
         <p className="style_divv">
@@ -23,6 +23,6 @@ export default function Mark(props){
             </Result>
         </div>
     </article>
-</section>
-)
+</>
+    )
 }

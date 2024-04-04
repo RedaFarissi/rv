@@ -39,7 +39,7 @@ export default function ListsOrdered(props){
         <li>php</li>
     </ol>`
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML ListsOrdered (ol)</h1>
     <article className="mt-5">
         <h2 className="title-h2">1. شرح الوسم ol </h2>
@@ -130,6 +130,6 @@ export default function ListsOrdered(props){
         </Result>
     </div>
     </article>
-</section>
-)
+</>
+    )
 }

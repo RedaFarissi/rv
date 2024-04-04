@@ -14,7 +14,7 @@ export default function Heading(props){
     <h5> Reda Eskouni </h5>
     <h6> Reda Eskouni </h6>`
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML Heading</h1>
     <p className="style_divv mt-5">
         العناوين في لغة <b>HTML</b> من أهم الوسوم التي تسخدم في <b>HTML</b> فالعناوين معرّفة بوسوم من :<br/>
@@ -39,7 +39,6 @@ export default function Heading(props){
             <h6> Reda Eskouni </h6>
         </Result>
     </div>
-
-</section>
+</>
 )
 }

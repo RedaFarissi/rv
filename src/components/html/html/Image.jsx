@@ -5,7 +5,7 @@ export default function Image(props){
     const codeExemple1 = `      <img src="./logo_html.png" width="50%" alt="description"/>`
     const codeExemple2 = `      <img src="./logo/logo.png" width="50%" alt="description"/>`
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML img</h1>
     <article className="mt-5">
         <p className="style_divv mt-5">
@@ -36,6 +36,6 @@ export default function Image(props){
             </Result>
         </div>
     </article>
-</section>
+</>
 )
 }

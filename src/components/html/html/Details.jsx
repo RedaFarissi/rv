@@ -29,7 +29,7 @@ export default function Details(props){
     </div>
 </details>`
     return(
-    <section className="section-conetent">
+    <>
         <h1 className="heading-style">HTML Details</h1>
         <p className="style_divv mt-5">
             يحدد الوسم <kbd>&lt;details&gt;</kbd> تفاصيل إضافية يمكن للمستخدم فتحها وإغلاقها عند النقر
@@ -72,6 +72,6 @@ export default function Details(props){
         </Result>
       
         </div>
-    </section>
+    </>
     )
 }

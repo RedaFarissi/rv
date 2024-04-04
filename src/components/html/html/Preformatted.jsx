@@ -8,7 +8,7 @@ export default function Preformatted(props){
       }
     </pre>`
     return(
-    <section className="section-conetent">
+    <>
         <h1 className="heading-style"> HTML Preformatted (pre)</h1>
         <article className="mt-5">
             <p className="style_divv mt-5">
@@ -27,6 +27,6 @@ export default function Preformatted(props){
                 </pre>
             </Result>
         </article>
-    </section>
+    </>
     )
 }

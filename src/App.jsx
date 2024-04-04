@@ -98,46 +98,53 @@ function App() {
     // }   
     // searchAndRetrieve("Introduction");
   
-    
-    function myStartFunction() {
+    /***************************  Aside animation and event click ***************************/
+    // open
+    function myStartFunctionOpen() {
         this.style.width = "0px"; 
     }
-    function MyAnimationiteration(){
-        this.style.width = "200px";
+    function MyAnimationiterationOpen(){
+        this.style.width = "276px";
     }
-    function myEndFunction() {
-        this.style.backgroundColor = "red";
+    // close
+    function myStartFunctionClose() {
+        this.style.width = "276px";
+    }
+    function MyAnimationiterationClose(){
+        this.style.width = "0px"; 
     }
     
-    function clickMenuHeader(){
+    function clickMenuHeader(clickFromMenu){
         const asides = document.querySelectorAll('.aside');
-        asides.forEach(aside => {
-            if(aside.style.display !== 'block') {
-
+        asides.forEach( aside => {
+            if( aside.style.display !== 'block' && clickFromMenu === true  )  {
                 aside.style.display = "block"
-                aside.style.animation  = "animationAside 2s";
-                aside.addEventListener("animationstart", myStartFunction);
-                aside.addEventListener("animationiteration", MyAnimationiteration);
-                aside.addEventListener("animationend", myEndFunction);
+                aside.style.animation  = "moveAsideOpen 1s forwards";
+                aside.addEventListener("animationstart", myStartFunctionOpen);
+                aside.addEventListener("animationiteration", MyAnimationiterationOpen);
             }else{
-                aside.style.display = "none";
+                if(window.innerWidth <= 1140){
+                    aside.style.animation  = "moveAsideClose 1s forwards";
+                    setTimeout(()=>{   aside.style.display = "none";    } , 950 );
+                    aside.addEventListener("animationstart", myStartFunctionClose);
+                    aside.addEventListener("animationiteration", MyAnimationiterationClose);
+                }
             }
-            //
         });
     }
-
+    
     return (
     <Router>
         <Header clickMenuHeader={clickMenuHeader} />
         <Routes>
             <Route path='/' element={<Home  />} /> 
-            <Route path='/html/*' element={<Html  html_list={html_list} />} />
-            <Route path='/css/*' element={<Css  css_list={css_list}  />} />
+            <Route path='/html/*' element={<Html clickMenuHeader={clickMenuHeader} html_list={html_list} />} />
+            <Route path='/css/*' element={<Css css_list={css_list}  />} />
             <Route path='/js/*' element={<Js js_matrix={js_matrix} />} />
-            <Route path='/react/' element={<React react_matrix={react_matrix} />} />
+            <Route path='/react' element={<React clickMenuHeader={clickMenuHeader} react_matrix={react_matrix} />} />
             <Route path='/mysql/*' element={<Mysql sql_list={sql_list} />} />
             <Route path='/python/*' element={<Python python_list={python_list} />} />
-            <Route path='/django/*' element={<Django django_matrix={django_matrix} />} />
+            <Route path='/django/*' element={<Django  django_matrix={django_matrix} />} />
             <Route path='/django-rest-framework/*' element={<DjangoRestFramework django_rest_framework_matrix={django_rest_framework_matrix} />} />
             <Route path='/php/*' element={<Php php_list={php_list}  />} />
             <Route path='/laravel/*' element={<Laravel laravel_matrix={laravel_matrix}  />} />

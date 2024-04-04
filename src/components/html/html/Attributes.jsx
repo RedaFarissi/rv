@@ -66,7 +66,7 @@ const codeExemple4 = `<!DOCTYPE html>
 </body>
 </html>`
 return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style"> HTML Attributes </h1>
     <article className="mt-5">
         <h2 className="title-h2">1. ما هو attribute </h2>
@@ -191,6 +191,6 @@ return(
             </tbody>
         </table> 
     </article>
-</section>
+</>
 )
 }

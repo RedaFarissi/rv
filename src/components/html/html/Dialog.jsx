@@ -11,7 +11,7 @@ export default function Dialog(props){
         <div class="py-1 px-2 border border-dark">React</div>
     </dialog>`
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML Dialog</h1>
     <article className="mt-5">
         <p className="style_divv mt-5">
@@ -34,6 +34,6 @@ export default function Dialog(props){
             </Result>
         </div>
     </article>
-</section>
-)
+</>
+    )
 }

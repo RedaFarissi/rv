@@ -5,7 +5,13 @@ import "./Header.sass";
 export default function Header(props){    
     
     // Course links 
-    const programing = [{name:"HTML" , link:"html"},{name:"CSS" , link:"css"},{name:"JAVASCRIPT" , link:"js"},{name:"REACT.js" , link:"react"},{name:"MYSQL" , link:"mysql"},{name:"PYTHON" , link:"python"},{name:"DJANGO" , link:"django"},{name:"DJANGO REST FRAMEWORK" , link:"django-rest-framework"},{name:"PHP" , link:"php"},{name:"LARAVEL" , link:"laravel"} ,{name:"Git" , link:"git"},{name:"CMD" , link:"power-shell"},]
+    const programing = [
+        {name:"HTML",link:"html"} , {name:"CSS",link:"css"} , {name:"JAVASCRIPT",link:"js"}, 
+        {name:"REACT.js",link:"react"} , {name:"MYSQL",link:"mysql"} , {name:"PYTHON",link:"python"},
+        {name:"DJANGO",link:"django"} , {name:"DJANGO REST FRAMEWORK",link:"django-rest-framework"},
+        {name:"PHP",link:"php"} , {name:"LARAVEL" , link:"laravel"} , {name:"Git" , link:"git"},
+        {name:"CMD",link:"power-shell"}
+    ];
     const links = programing.map(e=> 
     <li className="menu-category">
         <Link to={e.link} className={`menu-title color-link-nav-light`}>
@@ -45,22 +51,21 @@ export default function Header(props){
                 <Link to='/login'>
                     <i className={`fas fa-user`}></i>
                 </Link> 
-                <i className="menu-icon fa-solid fa-bars" onClick={props.clickMenuHeader}></i>
+                <i className="menu-icon fa-solid fa-bars" onClick={()=>{ props.clickMenuHeader(true) }}></i>
             </div>
         </div> 
     </div>
     <nav className="desktop-navigation-menu" ref={divRef}>
-        
         <div className="container-fliud p-0">
             <ul className="desktop-menu-category-list">   
                 { links }
             </ul>
         </div>
-        <button className="btn-scroll btn-scroll-right" onClick={()=>{handleScrollButtonClick(200)}}>
+        <button className="btn-scroll btn-scroll-right" onClick={()=>{handleScrollButtonClick(250)}}>
             <i className="fa-solid fa-angle-right"></i>
         </button>
 
-        <button className="btn-scroll btn-scroll-left" onClick={()=>{handleScrollButtonClick(-200)}}>
+        <button className="btn-scroll btn-scroll-left" onClick={()=>{handleScrollButtonClick(-250)}}>
             <i className="fa-solid fa-angle-left"></i>
         </button>
     </nav>

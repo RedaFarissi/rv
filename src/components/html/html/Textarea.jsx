@@ -8,7 +8,7 @@ export default function Textarea(props){
             <button>OK</button>
       </form>`
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style"> HTML Textarea </h1>
     <article className="mt-5">
         <h2 className="title-h2">1. الوسم textarea </h2>
@@ -55,6 +55,6 @@ export default function Textarea(props){
             تستعمل هذه السمة لتحديد أن الحقل يجب ملأه بشكل إجباري   .
         </p>
     </article>
-</section>
-)
+</>
+    )
 }

@@ -66,7 +66,7 @@ const codeExemple5  =`<!DOCTYPE html>
 </html>`
 
     return(
-<section className="section-conetent">
+<>
 <h1 className="heading-style">HTML meta</h1>
 <article className="mt-5">
     <h2 className="title-h2">1. تعريف الوسم meta </h2>
@@ -130,6 +130,6 @@ const codeExemple5  =`<!DOCTYPE html>
     تستخدم الخاصية <b>meta</b> مع السمة <b><bdi>property="og:height"</bdi></b> لتحديد طول الصورة الذي قمة بتحديدها لموقعك عند مشاركته على فيس بوك . يتم تحديد الطول داخل الخاصية <b>content</b> 
     <CodeHighlighter  code={code10} language="html"  addclassName="mt-3 mb-3" copie={true}/>
 </article>
-</section>
-)
+</>
+    )
 }

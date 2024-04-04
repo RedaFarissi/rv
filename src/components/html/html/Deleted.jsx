@@ -4,7 +4,7 @@ export default function Deleted(props){
     const code = `<del> content </del>`
     const codeExemple = `    <del>100DH</del> <strong>70 dh</strong>`
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML Deleted (del)</h1>
     <article className="mt-5">
         <p className="style_divv">
@@ -21,6 +21,6 @@ export default function Deleted(props){
             </Result>
         </div>
     </article>
-</section>
-)
+</>
+    )
 }

@@ -2,10 +2,29 @@ import codes from "../../assests/codes/react-js/react"
 import images from "./imagesReact";
 import { CodeHighlighter , CodeCommand , Result } from "../path";
 import react_logo from "../../assests/images/logo/react_logo.svg";
-import {ThisState, EventExemple, EventExemple2} from "./pathExemple"
-
+import {ThisState, EventExemple, EventExemple2} from "./pathExemple";
+import { useEffect } from 'react';
 
 function React(props){
+  useEffect(() => {
+    // Scroll to the element with the ID specified in the hash fragment
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' , block: 'start', inline: 'nearest' });
+        setTimeout(() => {
+          // Retrieve the scrollTop value after the animation is complete
+          const scrollTop = window.scrollY - 140;
+          window.scrollTo({
+            top: scrollTop,
+            behavior: 'smooth'
+          });
+        }, 1000);      
+      }
+    }
+  }, []);
+
   const arrays = codes.map(e =>{ 
     const keys = Object.keys(e) 
     var keys_map;
@@ -20,7 +39,7 @@ function React(props){
   });
 
 return(
-<main>
+<main onClick={ ()=>{props.clickMenuHeader(false)} }>
   <aside  className="aside">
       <dl className="list-group m-0">
         {arrays}

@@ -68,7 +68,7 @@ export default function Input(props){
     }
     
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML Input</h1>
     <article className="mt-5">
         <h2 className="title-h2">1. الوسم input</h2>
@@ -307,6 +307,6 @@ export default function Input(props){
             تعتبر هذه السمة من أكتر السمات أهمية لأنه في حالة إستعمال الوسم <kbd>&lt;form&gt;</kbd> إذا قام المستخدم بإرسال بيانات فارغة إلى الخدم سيتم إرسالها رغم أنها فارغة ذالك قد يسبب مشاكل . 
         </p>
     </article>
-</section>
+</>
     )
-    }
+}

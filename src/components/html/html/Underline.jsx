@@ -5,7 +5,7 @@ export default function Underline(props){
     const codeExemple = `   <u>This text is underlined.</u>
     <h2><u>Heading</u></h2>`
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style"> HTML Underline (u)</h1>
     <p className="style_divv mt-5">
         تمثل العلامة <kbd>&lt;u&gt;</kbd> بعض النصوص غير المفصلية والمنمقة بشكل مختلف عن النص العادي ، مثل الكلمات التي بها أخطاء إملائية أو أسماء العلم في النص الصيني. عادةً ما يتم عرض المحتوى الموجود بالداخل بتسطير. يمكنك تغيير هذا باستخدام <b>CSS</b>
@@ -19,6 +19,6 @@ export default function Underline(props){
             <h2><u>Heading</u></h2>
         </Result>
     </div>
-</section>
-)
+</>
+    )
 }

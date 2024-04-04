@@ -212,7 +212,7 @@ export default function Table(props){
        }
     </style>`]
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML table</h1>
     <article className="mt-5">
         <h2 className="title-h2">1. الوسم table </h2>
@@ -377,6 +377,6 @@ export default function Table(props){
             </Result>
         </div>
     </article>
-</section>
-)
+</>
+  )
 }

@@ -60,7 +60,7 @@ export default function AboutTemplates(){
             </p>
          </article>
          <article id="template_filters">
-            <h2 className="title-h2">4 -   template filters </h2>
+            <h2 className="title-h2">4 - template filters </h2>
             <table className="table table-bordered text-light">
                <tbody>
                   <tr className="mb-2"> 

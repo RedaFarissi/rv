@@ -41,13 +41,13 @@ const codeExemple5RouteHandle =()=>{
 }    
     
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML Anchor (a)</h1>
     <article className="mt-5">
         <h2 className="title-h2">1. مفهوم الروابط</h2>
         <p className="style_divv">
-        الروابط هي جزء أساسي في صفحات الويب، حيث ان الويب تم إنشاؤه أصلاً ليكون بمثابة شبكة معلوماتية من الوثائق المرتبطة ببعضها البعض.<br/><br/>
-        يمكننا إنشاء رابط بإستخدام الوسم <kbd>&lt;a&gt;</kbd> وهو اختصار لـ anchor. ونستخدم الخاصية <b>href</b> وهي اختصار لـ (Hypertext Reference) لتحديد رابط الصفحة التي نريد الذهاب إليها عند الضغط على الرابط.
+            الروابط هي جزء أساسي في صفحات الويب، حيث ان الويب تم إنشاؤه أصلاً ليكون بمثابة شبكة معلوماتية من الوثائق المرتبطة ببعضها البعض.<br/><br/>
+            يمكننا إنشاء رابط بإستخدام الوسم <kbd>&lt;a&gt;</kbd> وهو اختصار لـ anchor. ونستخدم الخاصية <b>href</b> وهي اختصار لـ (Hypertext Reference) لتحديد رابط الصفحة التي نريد الذهاب إليها عند الضغط على الرابط.
         </p>
     </article>
     <article>
@@ -146,17 +146,14 @@ const codeExemple5RouteHandle =()=>{
                     {codeDefault}
                 </div>
             </Result>
-
-
             <h4 className="green">  بعد تشغيل كود الصفحة html2.html </h4>
             <h4 className="green">  عند نقر على رابط </h4>
-
         </div>
         <ul>
             <li> بعد النقر على الرابط الذي يحمل <q>href=</q>html.html يتم توجيه إلى html.html .</li>
             <li> إن أردت الإحتفاظ بالصفحة الأولى إستعمل السمة  target .</li>
         </ul> 
     </article>
-</section>
+</>
 )
 }

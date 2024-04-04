@@ -16,12 +16,13 @@ export default function Html(props){
         </Link>
     </li>)
     return(    
-    <main>
+    <main onClick={ ()=>{props.clickMenuHeader(false)} }>
         <aside className="aside">
             <ul className="list-group m-0">
                 {arrays}
             </ul>
         </aside>
+        <section className="section-conetent">
             <Routes>
                 <Route path='/' element={<Introduction html_logo={html_logo} modeColorCode={props.modeColorCode}/>} />
                 <Route path='introduction' element={<Introduction html_logo={html_logo} modeColorCode={props.modeColorCode} />} /> 
@@ -70,6 +71,7 @@ export default function Html(props){
                 <Route path='link' element={<HtmlLink html_logo={html_logo} />} /> 
                 <Route path='meta' element={<Meta html_logo={html_logo} />} /> 
             </Routes>
+        </section>
     </main>
     )
 }

@@ -5,7 +5,7 @@ export default function Subscript(props){
     const codeExemple = `   <p>H<sub>2</sub>O</p>
     <p>H<sub>2</sub>O<sup>+</sup></p>`
     return(
-    <section className="section-conetent">
+    <>
         <h1 className="heading-style"> HTML Subscript (sub) </h1>
         <article className="mt-5">
             <p className="style_divv mt-5">
@@ -22,6 +22,6 @@ export default function Subscript(props){
                 </Result>
             </div>
         </article>
-    </section>
+    </>
     )
 }

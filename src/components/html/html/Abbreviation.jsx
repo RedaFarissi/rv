@@ -7,7 +7,7 @@ export default function Abbreviation(props){
     <br/>
     <abbr title="gram"><b>G</b></abbr>`
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style"> HTML Abbreviation (abbr)</h1>
     <article className="mt-5">
         <p className="style_divv">
@@ -30,6 +30,6 @@ export default function Abbreviation(props){
             </Result>
         </div>
     </article>
-</section>
+</>
 )
 }

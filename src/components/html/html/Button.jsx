@@ -28,7 +28,7 @@ export default function Button(props){
     }
 
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML Button</h1>
     <article className="mt-5">
         <h2 className="title-h2"> 1. الوسم button</h2>
@@ -138,6 +138,6 @@ export default function Button(props){
             </tbody>
         </table>
     </article>
-</section>
-)
+</>
+    )
 }

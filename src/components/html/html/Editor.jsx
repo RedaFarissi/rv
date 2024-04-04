@@ -3,7 +3,7 @@ import images from "../imagesHtml";
 export default function Editor() {
 
 return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style">HTML Editor</h1>
     <article className="mt-5">
         <h2 className="title-h2">1. ما هو محرر الأكواد</h2>
@@ -65,8 +65,7 @@ return(
         <ul><li>عند تحول شكل الملف كتالي إعلم أن كل شيء يعمل بشكل جيد</li></ul>
         <img src={images.html_Editor_12} alt="Editor" className="img"/> 
     </article>
-
-</section>
+</>
     )
 
 }

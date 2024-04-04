@@ -8,7 +8,7 @@ export default function BiDirectionalIsolation(props){
         <div>User <bdi>إيان</bdi>: 90 points</div>
     </bdi>`    
     return(
-<section className="section-conetent">
+<>
     <h1 className="heading-style"> HTML Bi-Directional Isolation (bdi)</h1>
     <article  className="mt-5">
         <p className="style_divv mt-5">
@@ -29,6 +29,6 @@ export default function BiDirectionalIsolation(props){
             </Result>        
         </div>
     </article>
-</section>
+</>
 )
 }
