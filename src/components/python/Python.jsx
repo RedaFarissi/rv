@@ -10,7 +10,7 @@ import {
 
 export default function Python(props){    
     const arr = props.python_list.map(e => <li className="list-group-item">
-        <Link to={`/python/${e.toLowerCase().replace(/\s/g, '-')}`} className="p-2">
+        <Link to={`/python/${e.toLowerCase().replace(/\s/g, '-')}`} className="p-2" onClick={props.scrollY_to_0}>
             <i className="fa-solid fa-caret-right me-1"></i> Python {e}
         </Link>
     </li>)

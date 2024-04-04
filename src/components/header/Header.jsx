@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import "./Header.sass";
 
 export default function Header(props){    
+    const divRef = useRef(null);
     
     // Course links 
     const programing = [
@@ -10,8 +11,9 @@ export default function Header(props){
         {name:"REACT.js",link:"react"} , {name:"MYSQL",link:"mysql"} , {name:"PYTHON",link:"python"},
         {name:"DJANGO",link:"django"} , {name:"DJANGO REST FRAMEWORK",link:"django-rest-framework"},
         {name:"PHP",link:"php"} , {name:"LARAVEL" , link:"laravel"} , {name:"Git" , link:"git"},
-        {name:"CMD",link:"power-shell"}
+        {name:"CMD",link:"powerShell"}
     ];
+    
     const links = programing.map(e=> 
     <li className="menu-category">
         <Link to={e.link} className={`menu-title color-link-nav-light`}>
@@ -19,8 +21,8 @@ export default function Header(props){
         </Link>
     </li>);
 
-    const divRef = useRef(null);
-    const handleScrollButtonClick = (px) => {
+
+    const handleScrollButtonLeftAndRight = (px) => {
         const divElement = divRef.current;
         if (divElement) {
           divElement.scrollBy({
@@ -61,11 +63,11 @@ export default function Header(props){
                 { links }
             </ul>
         </div>
-        <button className="btn-scroll btn-scroll-right" onClick={()=>{handleScrollButtonClick(250)}}>
+        <button className="btn-scroll btn-scroll-right" onClick={()=>{handleScrollButtonLeftAndRight(250)}}>
             <i className="fa-solid fa-angle-right"></i>
         </button>
 
-        <button className="btn-scroll btn-scroll-left" onClick={()=>{handleScrollButtonClick(-250)}}>
+        <button className="btn-scroll btn-scroll-left" onClick={()=>{handleScrollButtonLeftAndRight(-250)}}>
             <i className="fa-solid fa-angle-left"></i>
         </button>
     </nav>

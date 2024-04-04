@@ -4,22 +4,32 @@ import { useEffect } from 'react';
 import "./App.sass";
 
 function App() {
-    // Scroll to id when print route direct in browser
     useEffect(() => {
-        const hash = window.location.hash;
-        if (hash) {
-          const element = document.querySelector(hash);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' , block: 'start', inline: 'nearest' });
-            setTimeout(() => {
-                const scrollTop = window.scrollY - 140;
-                window.scrollTo({
-                  top: scrollTop ,
-                  behavior: 'smooth'
-                });
-            }, 1000);  
-          }
-        }
+            // Scroll to id when print route direct in browser
+            const hash = window.location.hash;
+            if (hash) {
+                const element = document.querySelector(hash);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' , block: 'start', inline: 'nearest' });
+                    setTimeout(() => {
+                        const scrollTop = window.scrollY - 140;
+                        window.scrollTo({
+                            top: scrollTop ,
+                            behavior: 'smooth'
+                        });
+                    }, 1000);  
+                }
+            }
+
+            // Show Aside if window more than 1140
+            window.addEventListener('resize', ()=>{
+                if(window.innerWidth > 1140){
+                    const asides = document.querySelectorAll('.aside');
+                    asides.forEach( aside => {
+                        aside.style.display = "block";
+                    });
+                }
+            }); 
     }, []);
 
     const scrollYAdd = () => {
@@ -31,6 +41,13 @@ function App() {
             });
         }, 1000 );  
     };
+    const scrollY_to_0 = () => {
+        window.scrollTo({
+          top: 0 ,
+          behavior: 'smooth'
+        });
+    };
+
 
 
     const html_list = ["Introduction","Editor","Attributes","Heading (h1)","Paragraph (p)" ,"Break (br)","Horizontal (hr)","Superscript (sup)","Subscript (sub)","Underline (u)","Italic (i)","Abbreviation (abbr)","Blockquote","Quotation (q)","Mark","Deleted (del)","Preformatted (pre)","Small","Anchor (a)","Image (img)","Division (div)","Span","Audio","Video","Details","Bi-Directional Isolation (bdi)","Bi-Directional Override (bdo)","Lists Ordered (ol)","Lists Unordered (ul)","Lists Definitionul (dl)","Table","Input","Select","Textarea","Form","Button", "Header","Fieldset","Dialog","Iframe","Meter","Style","Link","Meta" ];
@@ -138,9 +155,11 @@ function App() {
     // close
     function myStartFunctionClose() {
         this.style.width = "276px";
+        this.style.display = "block"; 
     }
     function MyAnimationiterationClose(){
         this.style.width = "0px"; 
+        this.style.display = "none"; 
     }
     
     function clickMenuHeader(clickFromMenu){
@@ -154,7 +173,7 @@ function App() {
             }else{
                 if(window.innerWidth <= 1140){
                     aside.style.animation  = "moveAsideClose 1s forwards";
-                    setTimeout(()=>{   aside.style.display = "none";    } , 950 );
+                    aside.style.display = "none";    
                     aside.addEventListener("animationstart", myStartFunctionClose);
                     aside.addEventListener("animationiteration", MyAnimationiterationClose);
                 }
@@ -169,17 +188,17 @@ function App() {
         />
         <Routes>
             <Route path='/' element={<Home  />} /> 
-            <Route path='/html/*' element={<Html clickMenuHeader={clickMenuHeader} html_list={html_list} />} />
-            <Route path='/css/*' element={<Css clickMenuHeader={clickMenuHeader} css_list={css_list}  />} />
-            <Route path='/js/*' element={<Js clickMenuHeader={clickMenuHeader} js_matrix={js_matrix} />} />
+            <Route path='/html/*' element={<Html scrollY_to_0={scrollY_to_0} clickMenuHeader={clickMenuHeader} html_list={html_list} />} />
+            <Route path='/css/*' element={<Css scrollY_to_0={scrollY_to_0} clickMenuHeader={clickMenuHeader} css_list={css_list}  />} />
+            <Route path='/js/*' element={<Js scrollY_to_0={scrollY_to_0} clickMenuHeader={clickMenuHeader} js_matrix={js_matrix} />} />
             <Route path='/react' element={<React scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} react_matrix={react_matrix} />} />
             <Route path='/mysql/*' element={<Mysql scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} sql_list={sql_list} />} />
-            <Route path='/python/*' element={<Python clickMenuHeader={clickMenuHeader} python_list={python_list} />} />
+            <Route path='/python/*' element={<Python scrollY_to_0={scrollY_to_0} clickMenuHeader={clickMenuHeader} python_list={python_list} />} />
             <Route path='/django/*' element={<Django scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} django_matrix={django_matrix} />} />
             <Route path='/django-rest-framework/*' element={<DjangoRestFramework scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} django_rest_framework_matrix={django_rest_framework_matrix} />} />
-            <Route path='/php/*' element={<Php clickMenuHeader={clickMenuHeader} php_list={php_list}  />} />
+            <Route path='/php/*' element={<Php scrollY_to_0={scrollY_to_0} clickMenuHeader={clickMenuHeader} php_list={php_list}  />} />
             <Route path='/laravel/*' element={<Laravel scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} laravel_matrix={laravel_matrix}  />} />
-            <Route path='/power-shell' element={<Cmd scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} cmd_list={cmd_list}  />} />
+            <Route path='/powerShell' element={<Cmd scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} cmd_list={cmd_list}  />} />
             <Route path='/git' element={<Git scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} git_list={git_list}  />} />
         </Routes>
     </Router> 

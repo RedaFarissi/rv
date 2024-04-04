@@ -3,7 +3,7 @@ import { CodeHighlighter , CodeCommand} from "../../path";
 export default function Condition(){
     return(
     <>
-        <h1 className="heading-style heading-style-python-color"> Python Condition if...else</h1>
+        <h1 className="heading-style heading-style-python-color"> Python Condition </h1>
         <article className="mt-5">
             <h2 className="title-h2">1 - الشروط (if...else)</h2>
             <p className="style_divv">

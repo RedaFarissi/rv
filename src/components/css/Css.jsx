@@ -12,7 +12,11 @@ import {
 } from './pathCss.js';
 
 export default function Css(props){
-    const arrays = props.css_list.map(e => <li><Link  to={`/css/${e.toLowerCase().replace(/\s/g, '-')}`}> <i className="fa-solid fa-caret-right me-2"></i>CSS {e}</Link></li>)
+    const arrays = props.css_list.map(e => <li>
+            <Link  to={`/css/${e.toLowerCase().replace(/\s/g, '-')}`} onClick={props.scrollY_to_0}> 
+                <i className="fa-solid fa-caret-right me-2"></i>CSS {e}
+            </Link>
+        </li>)
     
     
     

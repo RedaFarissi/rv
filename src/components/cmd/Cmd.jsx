@@ -5,7 +5,7 @@ import images from "./imagesCmd";
 export default function Cmd(props){
    
     const arrays = props.cmd_list.map(e => <li className="list-group-item">
-        <a href={`/power-shell#${e}`} onClick={ props.scrollYAdd }>
+        <a href={`/powerShell#${e}`} onClick={ props.scrollYAdd }>
             <i className="fa-solid fa-caret-right me-2"></i>CMD {e.replace(/_/g, ' ')}
         </a>
     </li>)

@@ -15,8 +15,14 @@ export default function Php(props){
             { 
                 e.map((value, index) => (
                     (index === 0) ? 
-                    <dt className="aside-dl-dt"><Link> <i className="fa-solid fa-caret-right"></i> {value}</Link></dt> : 
-                    <dd className="aside-dl-dd"><Link to={`/php/${value.toLowerCase().replace(/\s/g, '-')}`}> <i className="fa-solid fa-circle"></i> {value}</Link></dd>
+                    <dt className="aside-dl-dt">
+                        <i className="fa-solid fa-caret-right"></i> {value}
+                    </dt> : 
+                    <dd className="aside-dl-dd">
+                        <Link to={`/php/${value.toLowerCase().replace(/\s/g, '-')}`} onClick={props.scrollY_to_0}> 
+                            <i className="fa-solid fa-circle"></i> {value}
+                        </Link>
+                    </dd>
                 ))
             }
         </dl>
