@@ -180,7 +180,7 @@ function App() {
                 aside.addEventListener("animationstart", myStartFunctionOpen);
                 aside.addEventListener("animationiteration", MyAnimationiterationOpen);
             }else{
-                if(window.innerWidth <= 1140){
+                if( window.innerWidth <= 1140 ){
                     aside.style.animation  = "moveAsideClose 1s forwards";
                     aside.style.display = "none";    
                     aside.addEventListener("animationstart", myStartFunctionClose);

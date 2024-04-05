@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-import React, { useRef } from 'react';
+import React, { useRef  } from 'react';
 import "./Header.sass";
 
 export default function Header(props){    
     const divRef = useRef(null);
-    
+    const searchPhone = useRef(null);
+        
     // Course links 
     const programing = [
         {name:"HTML",link:"html"} , {name:"CSS",link:"css"} , {name:"JAVASCRIPT",link:"js"}, 
@@ -21,7 +22,6 @@ export default function Header(props){
         </Link>
     </li>);
 
-
     const handleScrollButtonLeftAndRight = (px) => {
         const divElement = divRef.current;
         if (divElement) {
@@ -32,21 +32,24 @@ export default function Header(props){
         }
     };
 
+    const openSearchPhone = ()=>{ 
+        const divElement = searchPhone.current;
+        (divElement.style.display !== "block")? divElement.style.display= "block" : divElement.style.display= "none" ;    
+    }
+
     return(
 <header className="header p-0" dir="ltr">
     <div className="header-main">
         <div className="container-h">
-            <div className="d-flex justify-content-around">
-               <Link to='/'>  
-                  <i className="fa-solid fa-house fs-5 text-light"></i>
-               </Link> &nbsp;&nbsp;
-            </div>
-
+            <Link to='/'>  
+               <i className="fa-solid fa-house fs-5 text-light"></i>
+            </Link> &nbsp;&nbsp;
+          
             <div className="header-search-container">
-                    <input type="text" name="search" className="search-field" />
-                    <button className="search-btn" type="submit">
-                        <i className="fa-solid fa-magnifying-glass"></i>
-                    </button>
+                <input type="text" name="search" className="search-field" />
+                <button className="search-btn" type="submit">
+                    <i className="fa-solid fa-magnifying-glass"></i>
+                </button>
             </div>
 
             <div className={`header-icons`} >          
@@ -57,20 +60,46 @@ export default function Header(props){
             </div>
         </div> 
     </div>
-    <nav className="desktop-navigation-menu" ref={divRef}>
-        <div className="container-fliud p-0">
+
+    {/* To handle  STYLE FOR PHONE  */}
+    <div className="header-main-phone">
+        <Link to='/' className="icons-header-phone">  
+            <i className="fa-solid fa-house fs-5 text-light"></i>
+        </Link>
+        <button className="icons-header-phone" onClick={ openSearchPhone }>
+            <i className="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <Link to='/login' className="icons-header-phone">
+            <i className={`fas fa-user`}></i>
+        </Link> 
+        <button className="icons-header-phone" onClick={()=>{ props.clickMenuHeader(true) }}>
+            <i className="menu-icon fa-solid fa-bars"></i>
+        </button>    
+    </div>
+
+    <div className="header-search-container-phone" ref={searchPhone}>
+        <input type="text" name="search-phone" className="search-field-phone" />
+        <button className="search-btn-phone" type="submit">
+            <i className="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+
+    <nav className={`desktop-navigation-menu`} ref={divRef}>
+        <div className={`container-fliud p-0`}>
             <ul className="desktop-menu-category-list">   
                 { links }
             </ul>
         </div>
-        <button className="btn-scroll btn-scroll-right" onClick={()=>{handleScrollButtonLeftAndRight(250)}}>
+        
+        <button className={`btn-scroll btn-scroll-right`} onClick={()=>{handleScrollButtonLeftAndRight(250)}}>
             <i className="fa-solid fa-angle-right"></i>
         </button>
 
-        <button className="btn-scroll btn-scroll-left" onClick={()=>{handleScrollButtonLeftAndRight(-250)}}>
+        <button className={`btn-scroll btn-scroll-left`} onClick={()=>{handleScrollButtonLeftAndRight(-250)}}>
             <i className="fa-solid fa-angle-left"></i>
         </button>
     </nav>
+
 </header>
     )
 }
