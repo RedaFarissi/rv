@@ -1,11 +1,20 @@
 import { Link } from "react-router-dom";
-import React, { useRef  } from 'react';
+import React, { useRef  , useEffect } from 'react';
 import "./Header.sass";
 
 export default function Header(props){    
     const divRef = useRef(null);
     const searchPhone = useRef(null);
-        
+    useEffect(()=>{
+        //hide searchPhone when window less than or equal 470 
+        window.addEventListener('resize', () => {
+            const divElement = searchPhone.current;
+            if( window.innerWidth <= 470 ){
+                divElement.style.display = "none";
+            }
+        });
+    },[]);
+
     // Course links 
     const programing = [
         {name:"HTML",link:"html"} , {name:"CSS",link:"css"} , {name:"JAVASCRIPT",link:"js"}, 
@@ -21,7 +30,7 @@ export default function Header(props){
             {e.name}
         </Link>
     </li>);
-
+    //Event
     const handleScrollButtonLeftAndRight = (px) => {
         const divElement = divRef.current;
         if (divElement) {
@@ -31,7 +40,6 @@ export default function Header(props){
           });
         }
     };
-
     const openSearchPhone = ()=>{ 
         const divElement = searchPhone.current;
         (divElement.style.display !== "block")? divElement.style.display= "block" : divElement.style.display= "none" ;    

@@ -1,195 +1,43 @@
-@import "../../assests/sass/var"
+*
+    box-sizing: border-box
 
 .main-home
-    margin-top: 130px 
-.home-box
-    display: flex
-    align-items: center
-    position: relative
-    height: 700px
-    padding-right: 25px
-    position: relative
-    text-decoration: none
-    @media (max-width: 1220px) 
-        padding: 0px
-    .logo
-        position: absolute
-        left: 0%
-        opacity: 0.06
-        transform: rotate(-20deg)
-    .home-box-2
-        transform: translateY(3%)
-        border: 0.9px solid rgba(255 255 255/40% )
-        width: 70%
-        height: 500px
-        padding: 20px 30px
-        @media (max-width: 1220px) 
-            width: 100%
-        .box-code
-            height: 340px
-            z-index: 999 
-         
-        .h1
-            font-family: "Readex Pro",sans-serif
-            direction: ltr
-            font-size: 45px
-            text-shadow: 5px 2px 2px black    
-        p   
-            font-family: "Readex Pro",sans-serif
-            font-size: 24px
-            color: white
-            padding-top: 20px
-            text-shadow: 2.5px 2px 2px black
-            @media (max-width: 900px) 
-                font-size: 20px
+    width: 80%
+    margin: 200px 10% 90px 10%
+    @media (max-width: 1366px) 
+        width: 100%
+        margin: 200px 0% 90px 0%
 
-
-
-.home-box-html
-    background-image: linear-gradient(to left, rgb(20, 20, 20), $html-color , rgb(20, 20, 20))
-.h1_html
-    color: $html-color
-.img-html
-    width: 700px
-
-
-//css
-.home-box-css
-    background-image: linear-gradient(to left, rgb(20, 20, 20), $css-color , rgb(20, 20, 20))
-.h1_css
-    color: $css-color
-.img-css
-    width: 450px
-
-//js
-.home-box-js
-    background-image: linear-gradient(to left, rgb(20, 20, 20), $js-color , rgb(20, 20, 20))
-.h1_js
-    color:$js-color
-.img-js
-    width: 550px
-
-//React.js
-.home-box-react
-    background-image: linear-gradient(to left, rgb(20, 20, 20), $react-color , rgb(20, 20, 20))
-.h1_react
-    color: $react-color
-.img-react
-    width: 550px
-
-//Mysql
-.home-box-mysql
-    background-image: linear-gradient(to left, rgb(20, 20, 20), $mysql-color , rgb(20, 20, 20))
-.h1_mysql
-    color: $mysql-color
-.img-mysql
-    width: 550px
-    
-
-//PHP
-.home-box-php
-    background-image: linear-gradient(to left, rgb(20, 20, 20), $php-color , rgb(20, 20, 20))
-.h1_php
-    color: $php-color
-.img-php
-    width: 550px
-
-//Laravel
-.home-box-laravel
-    background-image: linear-gradient(to left, rgb(20, 20, 20), $laravel-color , rgb(20, 20, 20))
-.h1_laravel
-    color: $laravel-color
-.img-laravel
-    width: 550px
-
-//Python
-.home-box-python
-    background-image: linear-gradient(to left, rgb(20, 20, 20), $python-color , rgb(20, 20, 20))
-.h1_python
-    color: $python-color
-.img-python
-    width: 550px
-
-//Django
-.home-box-django
-    background-image: linear-gradient(to left, rgb(20, 20, 20), $django-color , rgb(20, 20, 20))
-.h1_django
-    color: $django-color
-.img-django
-    width: 550px
-
-//Git
-.home-box-git
-    background-image: linear-gradient(to left, rgb(20, 20, 20), $git-color , rgb(20, 20, 20))
-.h1_git
-    color:$git-color
-.img-git
-    width: 950px
-
-//PowerShell
-.home-box-powerShell
-    background-image: linear-gradient(to left,rgb(30, 30, 30), $powerShell-color ,rgb(30, 30, 30))
-.h1_powerShell
-    color: white
-.img-powerShell
-    width: 550px
-
-
-
-
-
-
-
-
-
-
-// // Footer
-// footer  
-//     width: 100%
-//     margin-bottom: 55px 
-//     .footer_p 
-//         margin-right: -77px
-//         width: 300px
-//         font-family: "Readex Pro",sans-serif
-//     .h4  
-//         color: gold 
-//         margin: 25px 0px 
-//         text-shadow: 1px 2px 5px rgba(185 0 255/85%) 
-//     #footer-div2  
-//         width: 70%
-//         margin: 0px auto
-//         display: flex
-//         justify-content: space-around
-//         font-family: "Readex Pro",sans-serif
-//     #tabara3_lilmaw9i3 
-//         display: flex
-//         flex-direction: column
-//         width: 300px
-//         word-spacing: 2px
-//         font-family: "Readex Pro",sans-serif
-//     #tabara3_lilmaw9i3 button 
-//         width: 60%
-//         outline: none
-//         border: none
-//         background-color: rgb(90, 90, 90)
-//         color: white
-//         height: 40px
-//         // background-image: url(https://img.icons8.com/color/48/000000/paypal.png)
-//         background-size: 35px
-//         background-repeat: no-repeat
-//         background-position: left
-//         margin-top: 15px
-//         border-radius: 20px
-//         transition: background-color 2s
-//         font-family: "Readex Pro",sans-serif
-//     #tabara3_lilmaw9i3 button:hover 
-//         background-color: white
-//         color: black
-//         font-family: "Readex Pro",sans-serif
-//     #sovini 
-//         padding-left: 20px 
-//         font-size: 130%
-//         font-family: "Readex Pro",sans-serif
-//     .logo-connecte
-//         width: 50px 
-//         padding-left: 9px
+    .box-lang
+        direction: rtl
+        width: 343px
+        border-radius: 12px 
+        background-color: rgba(255 255 255/6%)
+        @media (max-width: 470px) 
+            width: 90%
+            margin: 5%
+        .card-header
+            border-radius: 12px 12px 0px 0px 
+            background-color: #19243e
+            h3
+                font-family: "Playfair Display", serif
+                font-optical-sizing: auto
+                font-weight: 500
+                font-style: normal
+        .card-body
+            height: 425px
+            padding: 20px
+            @media (max-width: 470px) 
+                height: max-content
+                padding-bottom: 30px
+            .div-img
+                height: 120px
+                width: 100%
+                display: flex
+                justify-content: center
+                align-items: center
+                img
+                    width: 90px
+            .card-text
+                font-family: "Readex Pro",sans-serif
+                font-size: 16px
