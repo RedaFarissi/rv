@@ -4,17 +4,25 @@
 .main-home
     width: 80%
     margin: 200px 10% 90px 10%
+    gap:30px
     @media (max-width: 1366px) 
         width: 100%
         margin: 200px 0% 90px 0%
+    @media (max-width: 1104px) 
+        gap: 40px
     @media (max-width: 470px) 
         margin: 155px 0% 90px 0%
+        gap: 0px
     .box-lang
         direction: rtl
         width: 343px
+        height: 490px
         border-radius:  12px 
         background-color: rgba(255 255 255/6%)
-        margin:  40px 
+        @media (max-width: 741px) 
+            width: 80%
+            height: max-content
+            padding-bottom: 30px
         @media (max-width: 470px) 
             width: 90%
             margin: 5%
@@ -27,11 +35,8 @@
                 font-weight: 500
                 font-style: normal
         .card-body
-            height: 420px
             padding: 20px
-            @media (max-width: 470px) 
-                height: max-content
-                padding-bottom: 30px
+                
             .div-img
                 height: 120px
                 width: 100%

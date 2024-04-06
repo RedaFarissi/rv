@@ -6,9 +6,8 @@ import images from "../images";
 export default function Home(props){
     return(
 <>
-    <main className="main-home" dir="ltr">
-        <div className="d-flex justify-content-center align-items-center flex-wrap">
-              <div className="box-lang mx-2 my-3">
+    <main className="main-home d-flex justify-content-center align-items-center flex-wrap" dir="ltr">
+              <div className="box-lang">
                 <Link to="/html" className="text-light text-decoration-none ">
                   <div class="card-header py-3"> 
                       <h3 class="text-center">HTML</h3>
@@ -22,7 +21,7 @@ export default function Home(props){
                 </Link>
               </div>
            
-              <div className="box-lang mx-2 my-3">
+              <div className="box-lang">
                 <Link to="/css" className="text-light text-decoration-none ">
                   <div class="card-header py-3"> 
                       <h3 class="text-center">CSS</h3>
@@ -36,7 +35,7 @@ export default function Home(props){
                 </Link>
               </div>
            
-              <div className="box-lang mx-2 my-3">
+              <div className="box-lang">
                 <Link to="/js" className="text-light text-decoration-none ">
                   <div class="card-header py-3"> 
                       <h3 class="text-center">JavaScript</h3>
@@ -50,7 +49,7 @@ export default function Home(props){
                 </Link>
               </div>
            
-              <div className="box-lang mx-2 my-3">
+              <div className="box-lang">
                 <Link to="/react" className="text-light text-decoration-none ">
                   <div class="card-header py-3"> 
                       <h3 class="text-center">React</h3>
@@ -64,7 +63,7 @@ export default function Home(props){
                 </Link>
               </div>
 
-              <div className="box-lang mx-2 my-3">
+              <div className="box-lang">
                 <Link to="/mysql" className="text-light text-decoration-none ">
                   <div class="card-header py-3"> 
                       <h3 class="text-center">Mysql</h3>
@@ -78,7 +77,7 @@ export default function Home(props){
                 </Link>
               </div>
 
-              <div className="box-lang mx-2 my-3">
+              <div className="box-lang">
                 <Link to="/python" className="text-light text-decoration-none ">
                   <div class="card-header py-3"> 
                       <h3 class="text-center">Python</h3>
@@ -92,7 +91,7 @@ export default function Home(props){
                 </Link>
               </div>
 
-              <div className="box-lang mx-2 my-3">
+              <div className="box-lang">
                 <Link to="/django" className="text-light text-decoration-none ">
                   <div class="card-header py-3"> 
                       <h3 class="text-center">Django</h3>
@@ -106,7 +105,7 @@ export default function Home(props){
                 </Link>
               </div>
               
-              <div className="box-lang mx-2 my-3">
+              <div className="box-lang">
                 <Link to="/django-rest-framework" className="text-light text-decoration-none ">
                   <div class="card-header py-3"> 
                       <h3 class="text-center">Django Rest</h3>
@@ -120,7 +119,7 @@ export default function Home(props){
                 </Link>
               </div>
               
-              <div className="box-lang mx-2 my-3">
+              <div className="box-lang">
                 <Link to="/php" className="text-light text-decoration-none ">
                   <div class="card-header py-3"> 
                       <h3 class="text-center">PHP</h3>
@@ -134,7 +133,7 @@ export default function Home(props){
                 </Link>
               </div>
               
-              <div className="box-lang mx-2 my-3">
+              <div className="box-lang">
                 <Link to="/laravel" className="text-light text-decoration-none ">
                   <div class="card-header py-3"> 
                       <h3 class="text-center">Laravel</h3>
@@ -148,7 +147,7 @@ export default function Home(props){
                 </Link>
               </div>
 
-              <div className="box-lang mx-2 my-3">
+              <div className="box-lang">
                 <Link to="/git" className="text-light text-decoration-none ">
                   <div class="card-header py-3"> 
                       <h3 class="text-center">Git</h3>
@@ -162,7 +161,7 @@ export default function Home(props){
                 </Link>
               </div>
 
-              <div className="box-lang mx-2 my-3">
+              <div className="box-lang">
                 <Link to="/powerShell" className="text-light text-decoration-none ">
                   <div class="card-header py-3"> 
                       <h3 class="text-center">CMD</h3>
@@ -175,7 +174,7 @@ export default function Home(props){
                   </div>
                   </Link>
               </div>
-        </div>
+  
     </main>
     <Footer />
 </>

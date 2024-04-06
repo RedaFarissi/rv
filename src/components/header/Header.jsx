@@ -15,20 +15,19 @@ export default function Header(props){
     useEffect(()=>{
         //hide searchPhone when window less than or equal 470 
         window.addEventListener('resize', () => {
-            const divElement = searchPhone.current;
+            const divSearchElement = searchPhone.current;
             if( window.innerWidth <= 470 ){
-                divElement.style.display = "none";
+                divSearchElement.style.display = "none";
             }
         });
     },[]);
 
     // Course links 
     const programing = [
-        {name:"HTML",link:"html"} , {name:"CSS",link:"css"} , {name:"JAVASCRIPT",link:"js"}, 
-        {name:"REACT.js",link:"react"} , {name:"MYSQL",link:"mysql"} , {name:"PYTHON",link:"python"},
-        {name:"DJANGO",link:"django"} , {name:"DJANGO REST FRAMEWORK",link:"django-rest-framework"},
-        {name:"PHP",link:"php"} , {name:"LARAVEL" , link:"laravel"} , {name:"Git" , link:"git"},
-        {name:"CMD",link:"powerShell"}
+        {name:"HTML",link:"html"}, {name:"CSS",link:"css"}, {name:"JAVASCRIPT",link:"js"}, {name:"REACT.js",link:"react"}, 
+        {name:"MYSQL",link:"mysql"}, {name:"PYTHON",link:"python"}, {name:"DJANGO",link:"django"},
+        {name:"DJANGO REST FRAMEWORK",link:"django-rest-framework"}, {name:"PHP",link:"php"}, {name:"LARAVEL" , link:"laravel"},
+        {name:"Git" , link:"git"} , {name:"CMD",link:"powerShell"}
     ];
     
     const links = programing.map(e=> 
