@@ -31,7 +31,7 @@ function React(props){
     });
 
   return(
-<main onClick={ ()=>{props.clickMenuHeader(false)} }>
+<main onClick={ (event)=>{ props.clickMenuHeader(event, false) } }>
   <aside  className="aside">
       <dl className="list-group m-0">
         {arrays}

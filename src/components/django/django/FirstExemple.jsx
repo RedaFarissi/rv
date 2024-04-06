@@ -40,7 +40,7 @@ export default function FirstExemple(){
             <ul><li>الآن كل المسار الذي تم إنشاؤها في <bdi><b>helloapp/urls.py</b></bdi> موجود في : <bdi><b>localhost:8000/</b></bdi></li></ul>
       </article>
       <article id="templates"> 
-            <h2 className="title-h2"> 4 - مجلد templates/</h2>
+            <h2 className="title-h2"> 4 - مجلد <bdi>templates/</bdi></h2>
             <p className="style_divv">
                في <b>Django</b>، يتم استخدام مجلد <b>templates</b> لتخزين ملفات القوالب <b>(templates)</b> الخاصة بتطبيقك. هذا المجلد يتيح لك تنظيم وتخزين أي ملفات <b>HTML</b> أو قوالب <b>Django</b> خاصة بواجهة مستخدم التطبيق.<br/>
                لتفعيل استخدام مجلد <b>templates</b>، يجب أن تتبع الخطوات التالية:<br/>

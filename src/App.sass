@@ -40,18 +40,27 @@ body
     overflow-x: hidden 
     background-color: #121926 
     z-index: 998
-    @media (max-width: 1140px) 
-        display: none
-    @keyframes moveAsideOpen 
-        from  
-            width: 0px
-        to  
-            width: 276px 
     @keyframes moveAsideClose
         from  
             width: 276px 
         to  
             width: 0px
+    @keyframes moveAsideOpen 
+        from  
+            width: 0px
+        to  
+            width: 276px 
+    @media (max-width: 1140px) 
+        display: none
+    @media (max-width: 470px)
+        @keyframes moveAsideOpen 
+            from  
+                width: 0px
+            to  
+                width: 100%
+                padding: 20px
+    
+            
     &::-webkit-scrollbar 
         box-sizing: border-box
         width: 15px
@@ -200,7 +209,7 @@ body
     .addClass
         width: 75%
     .mital
-        color: red
+        color: aqua
         font-size: 23px
         font-family: "Readex Pro",sans-serif
 

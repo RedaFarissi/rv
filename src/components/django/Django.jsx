@@ -39,7 +39,7 @@ export default function Django(props){
    });
 
    return (
-<main onClick={ ()=>{ props.clickMenuHeader(false) } }>
+<main onClick={ (event)=>{ props.clickMenuHeader(event, false) } }>
    <aside className="aside" onScroll={()=>{ localStorage.setItem("django_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
        <ul className="list-group m-0">
           {matrix}

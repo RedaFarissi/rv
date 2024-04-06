@@ -22,7 +22,7 @@ export default function Css(props){
     
     return(
     <>
-     <main onClick={ ()=>{props.clickMenuHeader(false)} }>
+     <main onClick={ (event)=>{ props.clickMenuHeader(event, false) } }>
         <aside className="aside">
             <ul className="list-group m-0">
                 {arrays}

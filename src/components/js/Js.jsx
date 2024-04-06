@@ -54,7 +54,7 @@ export default function Js(props){
     ));
 return(
 <>
- <main onClick={ ()=>{ props.clickMenuHeader(false) } }>
+ <main onClick={ (event)=>{ props.clickMenuHeader(event, false) } }>
     <aside className="aside" onScroll={()=>{ localStorage.setItem("js_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
         {matrix}
     </aside>

@@ -1,10 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link , useLocation } from "react-router-dom";
 import React, { useRef  , useEffect } from 'react';
 import "./Header.sass";
 
-export default function Header(props){    
+export default function Header(props){   
     const divRef = useRef(null);
     const searchPhone = useRef(null);
+    const location = useLocation();
+
+    const checkAboutRouteHome =()=>{
+        const currentPath = location.pathname;        
+        return ( currentPath === "/"  || currentPath === ""  ) ? true : false 
+    }
+    
     useEffect(()=>{
         //hide searchPhone when window less than or equal 470 
         window.addEventListener('resize', () => {
@@ -46,7 +53,7 @@ export default function Header(props){
     }
 
     return(
-<header className="header p-0" dir="ltr">
+<header className="header p-0" dir="ltr" onClick={(event)=>{ props.clickMenuHeader(event, false) }}>
     <div className="header-main">
         <div className="container-h">
             <Link to='/'>  
@@ -60,11 +67,13 @@ export default function Header(props){
                 </button>
             </div>
 
-            <div className={`header-icons`} >          
+            <div className={`header-icons`} >  
+                <div className={`${ (checkAboutRouteHome()) ? "d-none" : "d-block" }`}>
+                    <i onClick={(event)=>{ props.clickMenuHeader(event , true) }} className={`menu-icon fa-solid fa-bars`}></i>
+                </div>        
                 <Link to='/login'>
                     <i className={`fas fa-user`}></i>
                 </Link> 
-                <i className="menu-icon fa-solid fa-bars" onClick={()=>{ props.clickMenuHeader(true) }}></i>
             </div>
         </div> 
     </div>
@@ -80,7 +89,7 @@ export default function Header(props){
         <Link to='/login' className="icons-header-phone">
             <i className={`fas fa-user`}></i>
         </Link> 
-        <button className="icons-header-phone" onClick={()=>{ props.clickMenuHeader(true) }}>
+        <button onClick={(event)=>{ props.clickMenuHeader(event , true) }} className={`icons-header-phone ${ (checkAboutRouteHome()) ? "d-none" : "d-block" }`} >
             <i className="menu-icon fa-solid fa-bars"></i>
         </button>    
     </div>

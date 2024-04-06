@@ -7,8 +7,7 @@ export default function Home(props){
     return(
 <>
     <main className="main-home" dir="ltr">
-        <div className="d-flex justify-content-around align-items-center flex-wrap">
-
+        <div className="d-flex justify-content-center align-items-center flex-wrap">
               <div className="box-lang mx-2 my-3">
                 <Link to="/html" className="text-light text-decoration-none ">
                   <div class="card-header py-3"> 

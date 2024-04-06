@@ -130,6 +130,35 @@ function App() {
     const git_list  = [ "Introduction","Install_git","Diagram_git","Repository","Branch","Local_Repository","Remote_Repository","Pull_Request","Clone_Repository","Initialize_Repository","git_status","git_add","git_commit","git_branch","git_remote","git_push","Work_as_a_team","git_pull","Existing_Project_powerShell","Existing_Project_App","gitignore_file","submodules","Create_new_branch","Generating_SSH","Remove_connection"];
     const cmd_list  = [ "Introduction","Create_Folder","Change_Directory","Remove_Directory","Create_File","Rename_File","Remove_File","Remove_all_Files","Get_all_Directory","Get_Content_File","Clear_Screen","curl_Html","POST_Requests_curl","Copy_Files_to_another_Folder","Change_extension","Change_extensions","Print_all_Files_in_folder","View_System_Information","Turn_off_the_Computer","search_for_File_by_Extensions","Display_Text","Date_and_Time"];
 
+    
+    /***************************  Aside animation and event click ***************************/
+    // animation open
+    function myStartFunctionOpen() { this.style.width = "0px";  }
+    function MyAnimationiterationOpen(){ this.style.width = "276px"; }
+    // animation close
+    function myStartFunctionClose() { this.style.width = "276px"; }
+    function MyAnimationiterationClose(){ this.style.width = "0px"; }
+    
+    function clickMenuHeader(event , clickFromMenu ){
+        event.stopPropagation();
+
+        const asides = document.querySelectorAll('.aside');
+        asides.forEach( aside => {
+            if( aside.style.display !== 'block' && clickFromMenu === true  )  {
+                aside.style.display = "block"
+                aside.style.animation  = "moveAsideOpen 1s forwards";
+                aside.addEventListener("animationstart", myStartFunctionOpen);
+                aside.addEventListener("animationiteration", MyAnimationiterationOpen);
+            }else{
+                if( window.innerWidth <= 1140 ){
+                    aside.style.animation  = "moveAsideClose 1s forwards";
+                    aside.style.display = "none";    
+                    aside.addEventListener("animationstart", myStartFunctionClose);
+                    aside.addEventListener("animationiteration", MyAnimationiterationClose);
+                }
+            }
+        });
+    }
     // function searchAndRetrieve(searchTerm) {
     //     let matchingValues = [];
     //     const includesSearchTerm =(value)=>{
@@ -154,41 +183,6 @@ function App() {
     //     });
     // }   
     // searchAndRetrieve("Introduction");
-  
-    /***************************  Aside animation and event click ***************************/
-    // open
-    function myStartFunctionOpen() {
-        this.style.width = "0px"; 
-    }
-    function MyAnimationiterationOpen(){
-        this.style.width = "276px";
-    }
-    // close
-    function myStartFunctionClose() {
-        this.style.width = "276px";
-    }
-    function MyAnimationiterationClose(){
-        this.style.width = "0px"; 
-    }
-    
-    function clickMenuHeader(clickFromMenu){
-        const asides = document.querySelectorAll('.aside');
-        asides.forEach( aside => {
-            if( aside.style.display !== 'block' && clickFromMenu === true  )  {
-                aside.style.display = "block"
-                aside.style.animation  = "moveAsideOpen 1s forwards";
-                aside.addEventListener("animationstart", myStartFunctionOpen);
-                aside.addEventListener("animationiteration", MyAnimationiterationOpen);
-            }else{
-                if( window.innerWidth <= 1140 ){
-                    aside.style.animation  = "moveAsideClose 1s forwards";
-                    aside.style.display = "none";    
-                    aside.addEventListener("animationstart", myStartFunctionClose);
-                    aside.addEventListener("animationiteration", MyAnimationiterationClose);
-                }
-            }
-        });
-    }
 
     return (
     <Router>
