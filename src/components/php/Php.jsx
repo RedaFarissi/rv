@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Routes, Route , Link} from "react-router-dom";
 import {
     Introduction,Install,Comments,Variables,EchoPrint,DataTypes,Strings,Numbers,Casting,
@@ -10,6 +11,10 @@ import {
 import xampp_logo from "../../assests/images/logo/xampp.jpg";
 
 export default function Php(props){    
+    useEffect(()=>{
+       props.scrollY_to_0();
+    },[props]);
+
     const matrix = props.php_list.map( e =>(
         <dl>
             { 
@@ -28,7 +33,7 @@ export default function Php(props){
         </dl>
     ));
     return(
-<main onClick={ (event)=>{ props.clickMenuHeader(event, false) } }>
+<main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone();  } }>
     <aside className="aside">
         <ul className="list-group m-0">
             {matrix}

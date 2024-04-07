@@ -179,8 +179,8 @@ footer { width: 100%; }
 }
 @media screen and (max-width: 740px) {
     #header_div1 img { width: 70px; height: 70px; margin-top: 20px; margin-bottom: 46px; }
-    footer { height: max-content; padding-right: 69px; margin-bottom: 0px; padding-bottom: 50px; }
-    #footer-div1 { flex-direction: column; height: max-content; margin-bottom: 20px; }
+    footer { height: max-content;  margin-bottom: 0px; padding-bottom: 50px; }
+    #footer-div1 { background-color: red; flex-direction: column; height: max-content; margin-bottom: 20px; }
     #footer-div2 { flex-direction: column; height: max-content; padding-bottom: 30px; }
 }
 @media screen and (max-width: 580px) {

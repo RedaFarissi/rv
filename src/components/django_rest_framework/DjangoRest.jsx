@@ -21,8 +21,8 @@ export default function DjangoRestFramework(props){
                 if(index === 0){
                 dt_title = key.toLowerCase().replace(/_/g, '-');
                     return(<dt className="aside-dl-dt" key={key}>
-                                <Link to={`/django-rest-framework/${dt_title}/`}>
-                                    <i className="fa-solid fa-caret-right"></i> {key.replace(/_/g, ' ')}
+                                <Link to={`/django-rest-framework/${dt_title}/`}  onClick={ props.scrollY_to_0 }>
+                                    <i className="fa-solid fa-caret-right me-1"></i> {key.replace(/_/g, ' ')}
                                 </Link>
                             </dt>)  
                 }else{
@@ -34,13 +34,17 @@ export default function DjangoRestFramework(props){
                 } 
             });
         }else {
-            keys_map = <dt className="aside-dl-simple" key={e}><a href={`/django-rest-framework/${e.toLowerCase().replace(/_/g, '-')}`}><i className="fa-solid fa-caret-right"></i> {e.replace(/_/g, ' ')} </a></dt>;
+            keys_map = <dt className="aside-dl-simple" key={e}>
+                <a href={`/django-rest-framework/${e.toLowerCase().replace(/_/g, '-')}`} onClick={ props.scrollY_to_0 }>
+                    <i className="fa-solid fa-caret-right me-1"></i> {e.replace(/_/g, ' ')} 
+                </a>
+            </dt>;
         }
         return keys_map
     });
 
     return (
-    <main onClick={ (event)=>{ props.clickMenuHeader(event, false) } }>
+    <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone();  } }>
         <aside className="aside" onScroll={()=>{ localStorage.setItem("django_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
             <ul className="list-group m-0">
                {matrix}

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Routes, Route , Link} from "react-router-dom";
 import {
     Introduction,InstallPython,ExecutePythonInCmd,Indentation,PythonInVisualStudioCode,
@@ -8,7 +9,11 @@ import {
 } from "./pathPython"
 
 
-export default function Python(props){    
+export default function Python(props){ 
+    useEffect(()=>{
+       props.scrollY_to_0();
+    },[props]);
+
     const arr = props.python_list.map(e => <li className="list-group-item">
         <Link to={`/python/${e.toLowerCase().replace(/\s/g, '-')}`} className="p-2" onClick={props.scrollY_to_0}>
             <i className="fa-solid fa-caret-right me-1"></i> Python {e}
@@ -16,7 +21,7 @@ export default function Python(props){
     </li>)
 
     return(
-    <main onClick={ (event)=>{ props.clickMenuHeader(event, false) } }>
+    <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone(); } }>
         <aside className="aside">
             <ul className="list-group m-0">
                 {arr}

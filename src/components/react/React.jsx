@@ -5,36 +5,39 @@ import react_logo from "../../assests/images/logo/react_logo.svg";
 import {ThisState, EventExemple, EventExemple2} from "./pathExemple";
 
 function React(props){  
-   
-    const arrays = codes.map(e =>{ 
-        const keys = Object.keys(e) 
-        var keys_map;
-        if (keys.includes("title")) { 
-          keys_map = keys.map((key) => (
-            key === "title" ? <dt className="aside-dl-dt" key={key}>
-                        <a href={`/react#${e[key]}`} onClick={ props.scrollYAdd }>
-                            <i className="fa-solid fa-caret-right"></i> {e[key]} 
+    const matrix = props.react_matrix.map(e =>{ 
+      var keys_map;  
+      if ( Array.isArray(e) ) { 
+         keys_map = e.map((key,index) => {
+            if(index === 0){
+                  return(<dt className="aside-dl-dt" key={key}>
+                        <a href={`/react#${key.replace(/_/g, '-')}`} onClick={ props.scrollYAdd }>
+                           <i className="fa-solid fa-caret-right me-1"></i> {key.replace(/_/g, ' ')}
                         </a>
-                    </dt> :
-                    <dd className="aside-dl-dd" key={key}>
-                        <a href={`/react#${key}`} onClick={ props.scrollYAdd }>
-                            <i class="fa-solid fa-circle"></i> {key.replace(/_/g, ' ')} 
-                        </a>
-                    </dd> 
-          ));
-        }else{
-            keys_map = <dt className="aside-dl-simple" key={keys[0]}>
-                <a href={`/react#${keys[0]}`} onClick={ props.scrollYAdd }><i className="fa-solid fa-caret-right"></i> {keys[0].replace(/_/g, ' ')} </a>
-              </dt>;
-        }
-        return keys_map
+                     </dt>);
+            }else{
+                return(<dd className="aside-dl-dd" key={key}>
+                         <a href={`/react#${key}`} onClick={ props.scrollYAdd }>
+                           <i className="fa-solid fa-circle"></i> {key.replace(/_/g, ' ')}
+                         </a>
+                      </dd>);
+            } 
+          });
+      }else {
+         keys_map = <dt className="aside-dl-simple" key={e}>
+                          <a href={`/react#${e.replace(/_/g, '-')}`} onClick={ props.scrollYAdd }>
+                              <i className="fa-solid fa-caret-right me-1"></i> {e.replace(/_/g, ' ')} 
+                          </a>
+                    </dt>;
+      }
+      return keys_map
     });
 
   return(
-<main onClick={ (event)=>{ props.clickMenuHeader(event, false) } }>
+<main onClick={ (event)=>{ props.clickMenuHeader(event, false);  props.closeSearchPhone(); } }>
   <aside  className="aside">
       <dl className="list-group m-0">
-        {arrays}
+        {matrix}
       </dl>
   </aside>
   <section className="section-conetent">
@@ -265,7 +268,7 @@ function React(props){
         </Result>
     </article>
 
-    <article id="Handle_images_react">
+    <article id="Handle-images-react">
         <h2 className="title-h2">5 - التعامل مع الصور في React </h2>
         <p className="style_divv">
           يجب أن تكون الصور في مجلد <kbd>src/</kbd> <br/>
@@ -282,7 +285,7 @@ function React(props){
         <CodeHighlighter code={codes[4].Handle_images_react[3]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
     </article>
 
-    <article id="Handle_import">
+    <article id="Handle-import">
         <h2 className="title-h2">6 -  استيراده ملف آخر (import)  </h2>
         <h3 className="title-h3">1 - استيراد مكوّنات (Components)</h3>
         <div className="style_divv">قبل نقوم باستيراد كل مكون من مساره  <bdi className="text-danger">(وهذا غير عملي)</bdi></div>
@@ -312,7 +315,7 @@ function React(props){
         </p>
     </article>
 
-  <article id="props_children">
+  <article id="props-children">
     <h2 className="title-h2">7 - الخاصية (props.children)  </h2>
     <p className="style_divv">
       في <b>React</b>، <b>props.children</b> هو خاصية تُستخدم لنقل عناصر الطفل <b>(children)</b> إلى داخل مكون. يمكن استخدام هذه الطريقة لتمرير المحتوى بين عناصر الفتح والإغلاق ({"<"}OpeningTag{">"}...{"<"}/ClosingTag{">"}).<br/><br/>
@@ -322,7 +325,7 @@ function React(props){
     <CodeHighlighter code={codes[6].props_children[1]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
   </article>
 
-  <article id="hooks">
+  <article id="Hooks">
     <h2 className="title-h2">8 - (Hooks) </h2>
     <h3 className="title-h3" id="useState">1 - <bdi>useState()</bdi> </h3>
     <p className="style_divv">
@@ -367,7 +370,7 @@ function React(props){
   </article>
 
 
-  <article id="packages">
+  <article id="Packages">
     <h2 className="title-h2">9 - Packages React</h2>
     <h3 className="title-h3" id='npm_list'>1 - npm list  </h3>
     <p className="style_divv">
@@ -402,7 +405,7 @@ function React(props){
     <ul><li>إستخدام <b className="text-success">{"{"}withCredentials: true{"}"}</b> في طلب <b>Axios</b> يرتبط بمعالجة مشكلة مشاركة الموارد عبر أصل الموارد <b>(CORS)</b> وإدراج الاعتمادات مثل <b>(cookies)</b> أو <b>(session)</b>  في الطلب.</li></ul>
     
     <h3 className="title-h3" id="react_paypal_js"> 3 - مكتبة react-paypal-js </h3>
-    <a href="https://paypal.github.io/react-paypal-js/?path=/story/getting-started--page"> react-paypal-js </a>
+    <ul><li>التفاصيل من <a href="https://paypal.github.io/react-paypal-js/?path=/story/getting-started--page">هنا</a></li></ul>
     <h3 className="title-h3" id="react_sass"> 4 - مكتبة sass</h3>
     <h5 className="title-h5">1 - تثبيت المكتبة </h5>
     <CodeCommand>npm install sass</CodeCommand>

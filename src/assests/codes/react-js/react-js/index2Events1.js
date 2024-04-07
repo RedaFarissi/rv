@@ -1,35 +1,38 @@
 const index2Events1 =()=>{
     return`.boxesGroup {
-    /* main layout to display nested boxes */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 150px 150px;
     place-items: center;
-    /* decorating */
     background-color: lightgrey;
-    /* drag style */
     cursor: default;
 }
   
 .box {
-    /* nested boxes */
     height: 100px;
     width: 150px;
-    /* decorating */
     border-radius: 10px;
-    /* drag style */
     cursor: move;
 }
   
 .content {
-    /* centering content in box */
     position: relative;
     float: left;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* decorating */
     font-weight: bold;
+}
+
+@media only screen and (max-width: 600px){
+    .boxesGroup {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .box {
+        margin: 9px 0 ;
+    }
 }`
   }
   

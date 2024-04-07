@@ -2,13 +2,16 @@ import { CodeHighlighter ,  Result} from "../../path";
 
 export default function Introduction(props){
     const code1 = `   Content`;
-    const code2 = `<article>
-        <h2>Eagle</h2>
-        <p> 
-            Eagle is the common name for the golden eagle, bald eagle, and other birds of prey in the family Accipitridae. Eagles belong to several groups of genera, some of which are closely related. True eagles comprise the genus Aquila. Most of the 68 species of eagles are from Eurasia and Africa.[1] Outside this area, just 14 species can be found—two in North America, nine in Central and South America, and three in Australia.<br/>
-            Eagles are not a natural group but denote essentially any kind of bird of prey large enough to hunt sizeable (about 50 cm long or more overall) vertebrates.<br/>
-        </p>
-</article>`
+    const code2 = `     <article>
+            <h2>Eagle</h2>
+            <p> 
+        Eagle is the common name for the golden eagle, bald eagle, and other birds of prey in the family Accipitridae. 
+        Eagles belong to several groups of genera, some of which are closely related. True eagles comprise the genus 
+        Aquila. Most of the 68 species of eagles are from Eurasia and Africa.[1] Outside this area, just 14 species 
+                can be found—two in North America, nine in Central and South America, and three in Australia.<br/>
+                Eagles are not a natural group but denote essentially any kind of bird of prey large enough to hunt sizeable (about 50 cm long or more overall) vertebrates.<br/>
+            </p>
+    </article>`
 
     return(
 <>
@@ -72,7 +75,7 @@ export default function Introduction(props){
             language="html" 
             addClass="addClass m-auto mt-3 mb-3"
             copie={true}
-            number={true}
+            number={false}
             modeColorCode={props.modeColorCode}
         /> 
     </article>
@@ -103,7 +106,7 @@ export default function Introduction(props){
         مثال عن بنية مستند <b>HTML</b> بسيط يظهر فيه العنصر <kbd>&lt;body&gt;</kbd>، مع العنصر <kbd>&lt;head&gt;</kbd> الذي يحتوي على عنوان المستند العنصر <kbd>&lt;title&gt;</kbd> :
         </p>
         <div className="sum_exemple_style">
-            <CodeHighlighter file_name="index.html" is_html={true} code={code2} language="html" title='Eagle' number={true} addclassName="mt-3 mb-3" copie={true}/>
+            <CodeHighlighter file_name="index.html" is_html={true} code={code2} language="html" title='Eagle' number={false} addclassName="mt-3 mb-3" copie={true}/>
             <Result title={'Eagle'}  logo={props.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
                 <div>
                     <h2>Eagle</h2>

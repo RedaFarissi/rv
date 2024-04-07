@@ -6,7 +6,7 @@ import images from "../images";
 export default function Home(props){
     return(
 <>
-    <main className="main-home d-flex justify-content-center align-items-center flex-wrap" dir="ltr">
+    <main className="main-home d-flex justify-content-center align-items-center flex-wrap" dir="ltr" onClick={(event)=>{ props.closeSearchPhone(event) }}>
               <div className="box-lang">
                 <Link to="/html" className="text-light text-decoration-none ">
                   <div class="card-header py-3"> 

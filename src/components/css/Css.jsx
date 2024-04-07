@@ -10,19 +10,27 @@ import {
     FlexDirection,FlexWrap,AlignItems,AlignSelf,JustifyContent,Order,Grid,AccentColor,
     Selectors,Functions,Media,ScssComponent,SassComponent
 } from './pathCss.js';
+import { useEffect } from "react";
 
 export default function Css(props){
-    const arrays = props.css_list.map(e => <li>
-            <Link  to={`/css/${e.toLowerCase().replace(/\s/g, '-')}`} onClick={props.scrollY_to_0}> 
-                <i className="fa-solid fa-caret-right me-2"></i>CSS {e}
-            </Link>
-        </li>)
+    useEffect(()=>{
+        props.scrollY_to_0();
+    },[props]);
     
-    
-    
+    const arrays = props.css_list.map(e => <li className="list-group-item">
+        <Link  to={`/css/${e.toLowerCase().replace(/\s/g, '-')}`} onClick={props.scrollY_to_0}>
+            <i className="fa-solid fa-caret-right me-2"></i>CSS {e}
+        </Link>
+    </li>);
+
+
     return(
-    <>
-     <main onClick={ (event)=>{ props.clickMenuHeader(event, false) } }>
+<>
+    <main onClick={ (event)=>{ 
+                props.clickMenuHeader(event, false);
+                props.closeSearchPhone(); 
+            }}
+    >
         <aside className="aside">
             <ul className="list-group m-0">
                 {arrays}
@@ -103,6 +111,6 @@ export default function Css(props){
                 <Route path='/sass' element={<SassComponent />} /> 
             </Routes>
     </main>
-    </>
+</>
     )
 }

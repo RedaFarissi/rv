@@ -33,7 +33,8 @@ export default function Js(props){
     const AsideRef = useRef(null);
     useEffect(() => {
        AsideRef.current.scrollTop = localStorage.getItem("js_aside") || 0;
-    }, []); 
+       props.scrollY_to_0();
+    },[props]); 
 
     const matrix = props.js_matrix.map( e =>(
         <dl>
@@ -41,7 +42,7 @@ export default function Js(props){
                 e.map((value, index) => (
                     (index === 0) ? 
                         <dt className="aside-dl-dt"> 
-                            <i className="fa-solid fa-caret-right"></i> {value}
+                            <i className="fa-solid fa-caret-right me-1"></i> {value}
                         </dt>:
                         <dd className="aside-dl-dd">
                             <Link to={`/js/${value.toLowerCase().replace(/\s/g, '-')}`} onClick={props.scrollY_to_0}> 
@@ -54,7 +55,7 @@ export default function Js(props){
     ));
 return(
 <>
- <main onClick={ (event)=>{ props.clickMenuHeader(event, false) } }>
+ <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone();  } }>
     <aside className="aside" onScroll={()=>{ localStorage.setItem("js_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
         {matrix}
     </aside>

@@ -90,7 +90,7 @@ return(
                 <li>ايضا <b>href</b> داخل الوسم <strong>&lt;a&gt;</strong> هي سمة <small>(Attributes)</small> والرابط المقدم هو قيمته <small>(value)</small>، وهكذا</li>
             </ol>
             <Result title='My HTML Document' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
-                <img src={props.html_logo} alt="html logo"/><br/>
+                <img src={props.html_logo} className="w-75" alt="html logo"/><br/>
                 <a href="https://www.google.com/">https://www.google.com/</a>
             </Result>
         </div>

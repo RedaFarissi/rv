@@ -29,7 +29,7 @@ p{
         <ul><li>يجب أن تكون الصورة من نوع <b>icon</b> داخل نفس المجلد الذي يحتوي على ملف <b>HTML</b></li></ul>
         <CodeHighlighter file_name="index.html" code=""  language="html" is_html={true} title="Html Link" addClass="mt-3 mb-3" copie={true}/>
         <Result title='Html Link' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
-            <div style={{position:"relative",bottom:"87px",left:"3px",width:"37px",height:"37px",border: "3px solid red",borderRadius:"50%"}}></div>
+            <div className="html-link-ex1"></div>
         </Result>
         <div className="mital">مثال 2 : </div>
         <ul><li> في هاذ المتال قمنا بإنشاء ملف <b>CSS</b> داخل نفس مجلد الدي يحتوي على ملف <b>HTML</b> </li></ul>

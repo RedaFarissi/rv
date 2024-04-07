@@ -40,11 +40,6 @@ body
     overflow-x: hidden 
     background-color: #121926 
     z-index: 998
-    @keyframes moveAsideClose
-        from  
-            width: 276px 
-        to  
-            width: 0px
     @keyframes moveAsideOpen 
         from  
             width: 0px
@@ -52,21 +47,17 @@ body
             width: 276px 
     @media (max-width: 1140px) 
         display: none
-    @media (max-width: 470px)
+    @media (max-width: 500px)
         @keyframes moveAsideOpen 
             from  
                 width: 0px
             to  
                 width: 100%
                 padding: 20px
-    
-            
     &::-webkit-scrollbar 
         box-sizing: border-box
         width: 15px
         visibility: visibile
-        // @media (max-width: 470px) 
-        //     width: 9px
     &::-webkit-scrollbar-track 
         background: black
     &::-webkit-scrollbar-thumb 
@@ -96,9 +87,6 @@ body
                 font-family: 'Tajawal', sans-serif
                 &:hover
                     background-color: $asideHover
-                // &:focus
-                //     background-color: $textColor
-                //     color: $bgAside
     .aside-dl-dt
         padding: 7px 20px
         font-size: 13px 
@@ -151,7 +139,7 @@ body
         direction: ltr
         font-style: italic
         font-size: 44px
-        color: white
+        color: #a4e5e5f5
         margin-bottom: 65px
         font-family: "Readex Pro",sans-serif
         @media (max-width: 500px) 
@@ -174,7 +162,7 @@ body
             font-size: 12px
     .title-h2
         font-size: 28px
-        color: white
+        color: #a4e5e5f5
         margin-top: 45px 
         margin-bottom: 15px 
         font-family: "Readex Pro",sans-serif
@@ -208,6 +196,8 @@ body
         margin: 20px 0 
     .addClass
         width: 75%
+        @media (max-width: 500px) 
+            width: 100%
     .mital
         color: aqua
         font-size: 23px

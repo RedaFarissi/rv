@@ -105,7 +105,7 @@ export default function Cmd(props){
                     المثال:  سيقوم بعرض أسماء الملفات فقط.</p>
                 <CodeCommand>dir C:\Path\To\Folder\*.html /B</CodeCommand>
                 <CodeCommand>C:\Users\SURFACE BOOK\Desktop\test_powerShell{">"} <span className="text-warning">dir .\*.html /B</span></CodeCommand>
-                <div className="style-result">index.html</div>
+                <div className="alert bg-dark text-light" dir="ltr">index.html</div>
                 <h4><ul><li> تنسيق الناتج <bdi>/S</bdi></li></ul></h4>
                 <p className="style_divv">
                     يستخدم هذا الخيار لتوسيع البحث ليشمل الدلائل الفرعية أو الأقسام الفرعية من الدليل المحدد.<br/><br/>
@@ -113,10 +113,10 @@ export default function Cmd(props){
                 </p>
                 <CodeCommand>dir C:\Path\To\Folder\*.html /B /S</CodeCommand>
                 <CodeCommand>C:\Users\SURFACE BOOK\Desktop\test_powerShell{">"} <span className="text-warning">dir .\*.html /B /S</span></CodeCommand>
-                <div className="style-result">
-                    C:\Users\SURFACE BOOK\Desktop\test_powerShell\index.html<br/>
-                    C:\Users\SURFACE BOOK\Desktop\test_powerShell\header\header.html<br/>
-                    C:\Users\SURFACE BOOK\Desktop\test_powerShell\header\headerComponent\Nav.html<br/>
+                <div className="alert bg-dark text-light" dir="ltr">
+                    C:\Users\SURFACE BOOK \ Desktop \ test_powerShell \ index.html<br/><br/>
+                    C:\Users\SURFACE BOOK \ Desktop \ test_powerShell \ header \ header.html<br/><br/>
+                    C:\Users\SURFACE BOOK \ Desktop \ test_powerShell \ header \ headerComponent \ Nav.html<br/><br/>
                 </div>
                 <h2 className="title-h2" id="Display_Text"> 21 - عرض النص </h2>
                 <CodeCommand>echo Hello, World!</CodeCommand>

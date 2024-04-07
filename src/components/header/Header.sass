@@ -26,7 +26,7 @@
 
 .header-main
     display: block
-    @media (max-width: 470px) 
+    @media (max-width: 500px) 
         display: none
     .container-h
         display: flex
@@ -64,15 +64,15 @@
             outline: none
             border-radius:  0 10px 10px 0
     .header-icons
-        width: 80px
+        width: max-content
         display: flex
-        justify-content: space-between
         align-items: center
         flex-direction: row-reverse 
         i
             font-size: 20px
             cursor: pointer
             color: $textColor
+            margin: 0 14px 
         .menu-icon
             display: none
             @media (max-width: 1140px) 
@@ -86,7 +86,7 @@
     justify-content: space-around
     align-items: center
     display: none
-    @media (max-width: 470px) 
+    @media (max-width: 500px) 
         display: flex
     .icons-header-phone
         width: 45px
@@ -152,7 +152,9 @@
         justify-content: flex-start
         overflow-x: auto 
         padding: 0px 35px 
-    @media (max-width: 470px) 
+    @media (max-width: 700px) 
+        padding: 0px 25px 
+    @media (max-width: 500px) 
         padding: 0px 5px 
 
     .desktop-menu-category-list
@@ -173,7 +175,7 @@
             text-transform: uppercase
             list-style-type: none
             position: relative
-            @media (max-width: 470px) 
+            @media (max-width: 500px) 
                 font-size: 12px
             a
                 display: inline-block
@@ -193,15 +195,25 @@
         display: none
         background-color: #121926 
         color: white
+        padding: 0px
+        line-height: center
         @media (max-width: 1100px) 
             display: block
     .btn-scroll-right
         right: 0px 
-        @media (max-width: 470px) 
+        @media (max-width: 700px) 
+            width: 25px
+            height: 25px
+            border-radius: 3px
+        @media (max-width: 500px) 
             display: none
     .btn-scroll-left
         left: 0px 
-        @media (max-width: 470px) 
+        @media (max-width: 700px) 
+            width: 25px
+            height: 25px
+            border-radius: 3px
+        @media (max-width: 500px) 
             display: none
 .color-link-nav-light
     background: #f0fff0

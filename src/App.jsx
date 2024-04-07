@@ -1,9 +1,11 @@
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
 import { Header,Home,Html,Css,Js,React,Mysql,Python,Django,DjangoRestFramework,Cmd,Git,Php,Laravel} from './components/path';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import "./App.sass";
 
 function App() {
+    const searchPhone = useRef(null);
+
     useEffect(() => {
             // Scroll to id when print route direct in browser
             const hash = window.location.hash;   //get The id  
@@ -33,16 +35,13 @@ function App() {
                     });
                 }else{
                     asides.forEach( (aside)=>{
-                        aside.style.animation  = "moveAsideClose 1s forwards";
                         aside.style.display = "none";    
-                    aside.addEventListener("animationstart", myStartFunctionClose);
-                    aside.addEventListener("animationiteration", MyAnimationiterationClose);
                     });
                 }
             };
             window.addEventListener('resize', handleResize);
       }, []);
-
+    //scroll with link have ID
     const scrollYAdd = () => {
         setTimeout(() => {
             const scrollTop = window.scrollY - 140;
@@ -52,6 +51,7 @@ function App() {
             });
         }, 1000 );  
     };
+    //scroll to 0
     const scrollY_to_0 = () => {
         window.scrollTo({
           top: 0 ,
@@ -59,7 +59,15 @@ function App() {
         });
     };
 
-
+    const openSearchPhone = (event)=>{ 
+        event.stopPropagation();
+        const divElement = searchPhone.current;
+        (divElement.style.display !== "block")? divElement.style.display= "block" : divElement.style.display= "none" ;    
+    }
+    const closeSearchPhone = ()=>{ 
+        const divElement = searchPhone.current;
+        divElement.style.display= "none"
+    }
 
     const html_list = ["Introduction","Editor","Attributes","Heading (h1)","Paragraph (p)" ,"Break (br)","Horizontal (hr)","Superscript (sup)","Subscript (sub)","Underline (u)","Italic (i)","Abbreviation (abbr)","Blockquote","Quotation (q)","Mark","Deleted (del)","Preformatted (pre)","Small","Anchor (a)","Image (img)","Division (div)","Span","Audio","Video","Details","Bi-Directional Isolation (bdi)","Bi-Directional Override (bdo)","Lists Ordered (ol)","Lists Unordered (ul)","Lists Definitionul (dl)","Table","Input","Select","Textarea","Form","Button", "Header","Fieldset","Dialog","Iframe","Meter","Style","Link","Meta" ];
     const css_list  = ["Introduction","width","height","background","color","border","border-radius","padding","margin","font-size","font-style","font-weight","font-variant","white-space","word-wrap","word-break","text-decoration","letter-spacing","word-spacing","text-align","text-transform","text-indent","line-height","float","clear","opacity","hover","display","block","inline","inline-block","visibility","border-collapse","overflow","text-shadow","transform","transform-3D","perspective","resize","focus","transition","position","list-style-type","box-sizing","object-fit","animation","clip-path","cursor","scroll-behavior","z-index","outline","invalid & valid","after & before","writing-mode","filter","quotes","transform-style","-webkit-text-stroke", "flex-direction","flex-wrap","align-items","align-self","justify-content","order","grid","accent-color","Selectors","Functions","media","scss","sass"];
@@ -76,8 +84,8 @@ function App() {
         ["Introduction","What_is_React","How_react_work","What_you_need_to_get_started","multiple_versions_of_Node","Verify_required_installations","ES6","Create_React_App","Run_React_App",],
         ["Component","JSX","function_Component","function_Component_props","class_Component","class_Component_this_props","Components_in_Component",],
         "Events", "Lists", "Handle_images_react", "Handle_import", "props_children",
-        ["hooks","useState","this_state"],
-        ["packages","npm_list","axios","react_paypal_js","react_sass","Router","useNavigate_Router","useParams_Router","react_syntax_highlighter"],
+        ["Hooks","useState","this_state"],
+        ["Packages","npm_list","axios","react_paypal_js","react_sass","Router","useNavigate_Router","useParams_Router","react_syntax_highlighter"],
     ];
     const sql_list = [
         "Intro" , "Install Mysql","Create Database","Drop Database","Comments","Data Types","Select Database","Create Table","Drop Table","Insert Row","Auto-increment","Retrieving Data from Table","Merge Columns while Retrieving","IF EXISTS","IF NOT EXISTS","Retrieve Data with Conditions","Retrieve Data with Sorting","Retrieve Distinct Data","Merge Tables into One","Delete Data from Table","Update Table Data","Limit Rows Returned","Handling Null Fields","Retrieve Minimum Value in Column","Retrieve Maximum Value in Column","Count Rows in Table","Sum of Column Values","Average of Column Values","Aggregate Common Field Values","Conditions on Aggregated Fields","Copy Data to Another Table","Set Default Value for Column","CASE Condition","Relationships between tables",
@@ -132,12 +140,9 @@ function App() {
 
     
     /***************************  Aside animation and event click ***************************/
-    // animation open
+    // animation aside open
     function myStartFunctionOpen() { this.style.width = "0px";  }
     function MyAnimationiterationOpen(){ this.style.width = "276px"; }
-    // animation close
-    function myStartFunctionClose() { this.style.width = "276px"; }
-    function MyAnimationiterationClose(){ this.style.width = "0px"; }
     
     function clickMenuHeader(event , clickFromMenu ){
         event.stopPropagation();
@@ -151,10 +156,7 @@ function App() {
                 aside.addEventListener("animationiteration", MyAnimationiterationOpen);
             }else{
                 if( window.innerWidth <= 1140 ){
-                    aside.style.animation  = "moveAsideClose 1s forwards";
                     aside.style.display = "none";    
-                    aside.addEventListener("animationstart", myStartFunctionClose);
-                    aside.addEventListener("animationiteration", MyAnimationiterationClose);
                 }
             }
         });
@@ -188,21 +190,102 @@ function App() {
     <Router>
         <Header 
             clickMenuHeader={clickMenuHeader} 
+            searchPhone={searchPhone}
+            openSearchPhone={openSearchPhone}
+            closeSearchPhone={closeSearchPhone}
         />
         <Routes>
-            <Route path='/' element={<Home  />} /> 
-            <Route path='/html/*' element={<Html scrollY_to_0={scrollY_to_0} clickMenuHeader={clickMenuHeader} html_list={html_list} />} />
-            <Route path='/css/*' element={<Css scrollY_to_0={scrollY_to_0} clickMenuHeader={clickMenuHeader} css_list={css_list}  />} />
-            <Route path='/js/*' element={<Js scrollY_to_0={scrollY_to_0} clickMenuHeader={clickMenuHeader} js_matrix={js_matrix} />} />
-            <Route path='/react' element={<React scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} react_matrix={react_matrix} />} />
-            <Route path='/mysql/*' element={<Mysql scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} sql_list={sql_list} />} />
-            <Route path='/python/*' element={<Python scrollY_to_0={scrollY_to_0} clickMenuHeader={clickMenuHeader} python_list={python_list} />} />
-            <Route path='/django/*' element={<Django scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} django_matrix={django_matrix} />} />
-            <Route path='/django-rest-framework/*' element={<DjangoRestFramework scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} django_rest_framework_matrix={django_rest_framework_matrix} />} />
-            <Route path='/php/*' element={<Php scrollY_to_0={scrollY_to_0} clickMenuHeader={clickMenuHeader} php_list={php_list}  />} />
-            <Route path='/laravel/*' element={<Laravel scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} laravel_matrix={laravel_matrix}  />} />
-            <Route path='/powerShell' element={<Cmd scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} cmd_list={cmd_list}  />} />
-            <Route path='/git' element={<Git scrollYAdd={scrollYAdd} clickMenuHeader={clickMenuHeader} git_list={git_list}  />} />
+            <Route path='/'       element={<Home 
+                                                closeSearchPhone={closeSearchPhone} 
+                                            />} 
+            />
+            <Route path='/html/*' element={<Html 
+                                                scrollY_to_0={scrollY_to_0} 
+                                                clickMenuHeader={clickMenuHeader} 
+                                                html_list={html_list}
+                                                closeSearchPhone={closeSearchPhone} 
+                                            />}
+            />
+            <Route path='/css/*' element={<Css 
+                                                scrollY_to_0={scrollY_to_0} 
+                                                clickMenuHeader={clickMenuHeader} 
+                                                css_list={css_list} 
+                                                closeSearchPhone={closeSearchPhone} 
+                                            />} 
+            />
+            <Route path='/js/*' element={<Js 
+                                                scrollY_to_0={scrollY_to_0} 
+                                                clickMenuHeader={clickMenuHeader} 
+                                                js_matrix={js_matrix} 
+                                                closeSearchPhone={closeSearchPhone}
+                                            />} 
+            />
+            <Route path='/react' element={<React 
+                                                scrollYAdd={scrollYAdd} 
+                                                clickMenuHeader={clickMenuHeader} 
+                                                react_matrix={react_matrix} 
+                                                closeSearchPhone={closeSearchPhone}
+                                            />} 
+            />
+            <Route path='/mysql/*' element={<Mysql  
+                                                scrollYAdd={scrollYAdd} 
+                                                clickMenuHeader={clickMenuHeader} 
+                                                sql_list={sql_list} 
+                                                closeSearchPhone={closeSearchPhone}
+                                            />} 
+            />
+            <Route path='/python/*' element={<Python
+                                                scrollY_to_0={scrollY_to_0} 
+                                                clickMenuHeader={clickMenuHeader} 
+                                                python_list={python_list} 
+                                                closeSearchPhone={closeSearchPhone}
+                                            />} 
+            />
+            <Route path='/django/*' element={<Django 
+                                                scrollYAdd={scrollYAdd} 
+                                                scrollY_to_0={scrollY_to_0} 
+                                                clickMenuHeader={clickMenuHeader} 
+                                                django_matrix={django_matrix} 
+                                                closeSearchPhone={closeSearchPhone}
+                                            />} 
+            />
+            <Route path='/django-rest-framework/*' element={<DjangoRestFramework 
+                                                scrollY_to_0={scrollY_to_0} 
+                                                scrollYAdd={scrollYAdd} 
+                                                clickMenuHeader={clickMenuHeader} 
+                                                django_rest_framework_matrix={django_rest_framework_matrix} 
+                                                closeSearchPhone={closeSearchPhone}
+                                            />} 
+            />
+            <Route path='/php/*' element={<Php 
+                                                scrollY_to_0={scrollY_to_0} 
+                                                clickMenuHeader={clickMenuHeader} 
+                                                php_list={php_list}  
+                                                closeSearchPhone={closeSearchPhone}
+                                            />} 
+            />
+            <Route path='/laravel/*' element={<Laravel 
+                                                scrollY_to_0={scrollY_to_0} 
+                                                scrollYAdd={scrollYAdd} 
+                                                clickMenuHeader={clickMenuHeader} 
+                                                laravel_matrix={laravel_matrix} 
+                                                closeSearchPhone={closeSearchPhone} 
+                                            />} 
+            />
+            <Route path='/powerShell' element={<Cmd 
+                                                scrollYAdd={scrollYAdd} 
+                                                clickMenuHeader={clickMenuHeader} 
+                                                cmd_list={cmd_list}  
+                                                closeSearchPhone={closeSearchPhone}
+                                            />} 
+            />
+            <Route path='/git' element={<Git 
+                                                scrollYAdd={scrollYAdd} 
+                                                clickMenuHeader={clickMenuHeader} 
+                                                git_list={git_list} 
+                                                closeSearchPhone={closeSearchPhone}
+                                            />}
+            />
         </Routes>
     </Router> 
     );

@@ -9,7 +9,7 @@ export default function Git(props){
     </li>);
 
     return(
-        <main onClick={ (event)=>{ props.clickMenuHeader(event, false) } }>
+        <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone();  } }>
             <aside className="aside">
                 <ul className="list-group m-0">
                     {arrays}

@@ -87,12 +87,14 @@
                 margin-left: 9px
         .style-result-header-1-right    
             display: flex
-            
+            @media (max-width: 500px)
+                display: none
+    
             i
                 font-size: 15px
 
     .style-result-header-2
-        background:#cbdcf7
+        background: #cbdcf7
         height: 39px
         border-bottom: 0.8px solid gray
         display: flex
@@ -111,6 +113,7 @@
             border-radius: 20px
             height: 28.6px
             display: flex
+            padding-right: 5px 
             align-items: center
             i
                 font-size: 14px
