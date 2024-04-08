@@ -1,5 +1,7 @@
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
-import { Header,Home,Html,Css,Js,React,Mysql,Python,Django,DjangoRestFramework,Cmd,Git,Php,Laravel} from './components/path';
+import { 
+    Header,Home,Html,Css,Js,React,Mysql,Python,Django,DjangoRestFramework,Cmd,Git,Php,Laravel,Login,
+} from './components/path';
 import { useEffect, useRef } from 'react';
 import "./App.sass";
 
@@ -286,6 +288,7 @@ function App() {
                                                 closeSearchPhone={closeSearchPhone}
                                             />}
             />
+            <Route path='/login' element={<Login  />} />
         </Routes>
     </Router> 
     );

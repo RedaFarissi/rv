@@ -1,0 +1,11 @@
+.login-section{
+    margin-top: 128px;
+    height: calc(100vh - 128px);
+}
+
+.divider:after , .divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}

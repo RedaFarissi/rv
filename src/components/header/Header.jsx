@@ -26,7 +26,7 @@ export default function Header(props){
     
     const checkAboutRouteHome =()=>{
         const currentPath = location.pathname;        
-        return ( currentPath === "/"  || currentPath === ""  ) ? true : false 
+        return ( currentPath === "/" || currentPath === "" || currentPath === "/login" ) ? true : false 
     }
 
     const links = programing.map(e=> 
