@@ -1,6 +1,6 @@
 .login-section{
     margin-top: 128px;
-    height: calc(100vh - 128px);
+    height: max-content;
 }
 
 .divider:after , .divider:before {
