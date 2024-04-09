@@ -2,7 +2,7 @@ import { useEffect, useRef} from 'react';
 import { Routes, Route , Link } from "react-router-dom";
 import{
    Introduction , Mvc , Database , DatabaseQueryBuilder ,  DatabaseRouteResource , 
-   Git , Mail , Middleware , Packages , Tinker , GitClone 
+   Git , Mail , Middleware , Packages , Tinker , GitClone  , Footer
 } from "./pathLaravel.js";
 
 export default function Laravel(props){
@@ -44,28 +44,36 @@ export default function Laravel(props){
 
 
    return (
-<main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone();  } }>
-   <aside className="aside" onScroll={()=>{ localStorage.setItem("laravel_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
-       <ul className="list-group m-0">
-          {matrix}
-       </ul>
-   </aside>
-   <section className="section-conetent"> 
-      <Routes>
-          <Route path='/'  element={<Introduction  />} />
-          <Route path='/introduction'  element={<Introduction  />} />
-          <Route path='/mvc'  element={<Mvc  />} />
-          <Route path='/database'  element={<Database  />} />
-          <Route path='/database-route-resource'  element={<DatabaseRouteResource   />} />                
-          <Route path='/database-query-builder'  element={<DatabaseQueryBuilder  />} />                
-          <Route path='/git'  element={<Git  />} />                
-          <Route path='/mail'  element={<Mail  />} />                
-          <Route path='/middleware'  element={<Middleware  />} />                
-          <Route path='/packages'  element={<Packages  />} />                
-          <Route path='/tinker'  element={<Tinker  />} />                
-          <Route path='/clone-github'  element={<GitClone  />} />                
-      </Routes>
-   </section>
-</main>
+<>
+   <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone();  } }>
+      <aside className="aside" onScroll={()=>{ localStorage.setItem("laravel_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
+          <ul className="list-group m-0">
+             {matrix}
+          </ul>
+      </aside>
+      <section className="section-conetent"> 
+         <Routes>
+             <Route path='/'  element={<Introduction  />} />
+             <Route path='/introduction'  element={<Introduction  />} />
+             <Route path='/mvc'  element={<Mvc  />} />
+             <Route path='/database'  element={<Database  />} />
+             <Route path='/database-route-resource'  element={<DatabaseRouteResource   />} />                
+             <Route path='/database-query-builder'  element={<DatabaseQueryBuilder  />} />                
+             <Route path='/git'  element={<Git  />} />                
+             <Route path='/mail'  element={<Mail  />} />                
+             <Route path='/middleware'  element={<Middleware  />} />                
+             <Route path='/packages'  element={<Packages  />} />                
+             <Route path='/tinker'  element={<Tinker  />} />                
+             <Route path='/clone-github'  element={<GitClone  />} />                
+         </Routes>
+      </section>
+   </main>
+   <Footer 
+        widthFooter={props.footerWidth.width}
+        block_1={props.footerWidth.block_1}
+        block_2={props.footerWidth.block_2}
+        blockChildStyle={{width: "100%"}}
+   />
+</>
     )
 }

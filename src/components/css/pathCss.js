@@ -69,3 +69,5 @@ export {default as Functions} from './css/Functions';
 export {default as Media} from './css/Media';
 export {default as ScssComponent} from './css/ScssComponent';
 export {default as SassComponent} from './css/SassComponent';
+
+export {default as Footer} from '../footer/Footer';

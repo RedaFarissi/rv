@@ -1,5 +1,6 @@
 import { CodeCommand } from "../path";
 import images from "./imagesGit";
+import Footer from "../footer/Footer";
 
 export default function Git(props){
     const arrays = props.git_list.map(e => <li className="list-group-item">
@@ -9,6 +10,7 @@ export default function Git(props){
     </li>);
 
     return(
+    <>
         <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone();  } }>
             <aside className="aside">
                 <ul className="list-group m-0">
@@ -371,5 +373,12 @@ export default function Git(props){
                 </article>
             </section>
         </main>
+        <Footer 
+            widthFooter={props.footerWidth.width}
+            block_1={props.footerWidth.block_1}
+            block_2={props.footerWidth.block_2}
+            blockChildStyle={{width: "100%"}}
+        />
+    </>
     )
 }        

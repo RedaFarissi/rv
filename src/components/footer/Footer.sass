@@ -1,0 +1,65 @@
+*
+    box-sizing: border-box
+    background-clip: border-box
+.img-logo-box
+    width: 180px
+    height: 180px
+    border: 4px dashed white
+    border-radius: 50%
+    padding: 2px
+    margin: auto
+    margin-bottom: 40px
+    animation: logo-div 20s infinite normal
+    @keyframes logo-div 
+        0% 
+            transform: rotate(0deg)
+        80% 
+            transform: rotate(360deg)
+        100%  
+            transform: rotate(0deg)
+    @media (max-width: 991px) 
+        display: none
+    .my-logo
+        width: 100%
+        height: 100%
+        object-fit: cover
+        border-radius:50%
+        padding: 4px
+        animation: logo_div_img 20s infinite normal
+        background-color: #0dcaf0
+        font-size: 100px
+        text-align: center
+        font-family: "Anta", sans-serif
+        font-weight: 400
+        font-style: normal
+        @keyframes logo_div_img 
+            0% 
+                transform: rotate(0deg)
+            80% 
+                transform: rotate(-720deg)
+            100% 
+                transform: rotate(360deg)
+.footer-h4
+    color: gold 
+    margin: 25px 0px
+    text-shadow: 1px 2px 5px rgba(185 0 255/85%)
+
+#Paypal-me
+    padding-left: 20px 
+    button
+        width: 180px
+        outline: none
+        border: none 
+        background-color: rgb(90, 90, 90)
+        color: white 
+        height: 40px
+        background-image: url(https://img.icons8.com/color/48/000000/paypal.png)
+        background-size: 35px
+        background-repeat: no-repeat
+        background-position: left
+        margin-top: 15px
+        border-radius: 20px
+        transition: background-color 2s
+        &:hover  
+            background-color: white
+            color: black

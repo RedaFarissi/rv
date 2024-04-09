@@ -4,15 +4,16 @@ import {
     Introduction, Editor, Attributes, Heading, Paragraph, Break, Horizontal, Superscript, Subscript, Underline, Italic, 
     Abbreviation, Blockquote, Header, Quotation, Mark, Deleted, Preformatted, Small, Anchor, Image, Division, Span, 
     Audio, Video, Details, BiDirectionalIsolation, BiDirectionalOverride, ListsOrdered, ListsUnordered, ListsDefinitionul, 
-    Table, Input, Select, Form, Textarea, Button, Fieldset, Dialog, Iframe, Meter, Style, HtmlLink, Meta
+    Table, Input, Select, Form, Textarea, Button, Fieldset, Dialog, Iframe, Meter, Style, HtmlLink, Meta , Footer
 } from './pathHtml.js';
 import html_logo from "../../assests/images/logo/html_logo.png";
+
 
 export default function Html(props){  
     useEffect(()=>{
         props.scrollY_to_0();
     },[props]);
-    
+
     const arrays = props.html_list.map(e => <li className="list-group-item">
         <Link  to={`/html/${e.toLowerCase().replace(/\s/g, '-')}`}  onClick={props.scrollY_to_0} >
             <i className="fa-solid fa-caret-right me-1"></i> HTML {e}
@@ -20,6 +21,7 @@ export default function Html(props){
     </li>);
 
     return(    
+    <>
     <main onClick={(event)=>{ 
             props.clickMenuHeader(event, false);
             props.closeSearchPhone(); 
@@ -81,5 +83,12 @@ export default function Html(props){
             </Routes>
         </section>
     </main>
+    <Footer 
+        widthFooter={props.footerWidth.width}
+        block_1={props.footerWidth.block_1}
+        block_2={props.footerWidth.block_2}
+        blockChildStyle={{width: "100%"}}
+    />
+    </>
     )
 }

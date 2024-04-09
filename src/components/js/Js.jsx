@@ -27,6 +27,8 @@ import {
     Onscroll,Onselect,Onsubmit,Ontoggle,Onunload,Onvolumechange,Target,
     //api
     Intro,Fetch,ValidationAPI,History,SetInterval,ClearInterval,SetTimeout,
+    //footer
+    Footer,
 } from './pathJs.js';
 
 export default function Js(props){
@@ -222,6 +224,12 @@ return(
         </Routes>
     </section>
 </main>
+<Footer 
+    widthFooter={props.footerWidth.width}
+    block_1={props.footerWidth.block_1}
+    block_2={props.footerWidth.block_2}
+    blockChildStyle={{width: "100%"}}
+/>
 </>
 )
 }

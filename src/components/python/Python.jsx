@@ -5,7 +5,7 @@ import {
     Comments,Variables,Casting,Numbers,Strings,Booleans,Operators,Lists,Tuples,Sets,
     Dictionaries,Condition,WhileLoops,ForLoops,Functions,Lambda,ClassesObjects,
     Inheritance,Iterators,Scope,Modules,Dates,Math,JSON,RegEx,PIP,TryExcept,
-    Input,StringFormatting,FileHandling,ReadFiles,WriteCreateFiles,DeleteFiles,
+    Input,StringFormatting,FileHandling,ReadFiles,WriteCreateFiles,DeleteFiles,Footer
 } from "./pathPython"
 
 
@@ -21,6 +21,7 @@ export default function Python(props){
     </li>)
 
     return(
+<>
     <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone(); } }>
         <aside className="aside">
             <ul className="list-group m-0">
@@ -71,6 +72,13 @@ export default function Python(props){
             </Routes>            
         </section>
     </main>
+    <Footer 
+        widthFooter={props.footerWidth.width}
+        block_1={props.footerWidth.block_1}
+        block_2={props.footerWidth.block_2}
+        blockChildStyle={{width: "100%"}}
+    />
+</>
     )
 }
 /*

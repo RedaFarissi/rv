@@ -1,7 +1,10 @@
 import "./Login.css";
+import Footer from "../footer/Footer";
+
 
 export default function Login(){
     return(
+<>
 <section className="login-section">
   <div className="container py-5 h-100">
     <div className="row d-flex align-items-center justify-content-center h-100">
@@ -40,5 +43,13 @@ export default function Login(){
     </div>
   </div>
 </section>
+
+<Footer 
+    widthFooter="100%"
+    block_1={"col-sm-10 col-sm-10 col-md-8 col-lg-4 offset-lg-2 col-xl-4 offset-xl-1"}
+    block_2={"col-sm-10 col-md-8 col-lg-4 col-xl-4"}
+    blockChildStyle={{width: "90%" , margin:"auto"}}
+/>
+</>
 	)
 }

@@ -43,3 +43,5 @@ export {default as Database} from './php/mysql/Database';
 export {default as Connect} from './php/mysql/Connect';
 export {default as CreateDatabase} from './php/mysql/CreateDatabase';
 export {default as CreateTable} from './php/mysql/CreateTable';
+
+export {default as Footer} from '../footer/Footer';

@@ -6,7 +6,7 @@ import {
     RegEx,DateAndTime,IncludeFiles,Filters,CallbackFunctions,Exceptions,FormHandling,Json,
     WhatIsOop,ClassesObjects,Constructor,Destructor,AccessModifiers,Inheritance,
     ClassConstants,AbstractClasses,Traits,StaticMethods,StaticProperties,Iterables,
-    Database,Connect,CreateDatabase,CreateTable,
+    Database,Connect,CreateDatabase,CreateTable,Footer,
 } from "./pathPhp";
 import xampp_logo from "../../assests/images/logo/xampp.jpg";
 
@@ -33,6 +33,7 @@ export default function Php(props){
         </dl>
     ));
     return(
+<>
 <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone();  } }>
     <aside className="aside">
         <ul className="list-group m-0">
@@ -92,5 +93,12 @@ export default function Php(props){
         </Routes>
     </section>
 </main>
+<Footer 
+    widthFooter={props.footerWidth.width}
+    block_1={props.footerWidth.block_1}
+    block_2={props.footerWidth.block_2}
+    blockChildStyle={{width: "100%"}}
+/>
+</>
     )
 }

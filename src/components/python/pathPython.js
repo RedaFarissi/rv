@@ -36,3 +36,5 @@ export {default as FileHandling} from './python/FileHandling';
 export {default as ReadFiles} from './python/ReadFiles';
 export {default as WriteCreateFiles} from './python/WriteCreateFiles';
 export {default as DeleteFiles} from './python/DeleteFiles';  
+
+export {default as Footer} from '../footer/Footer';

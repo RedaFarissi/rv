@@ -42,3 +42,5 @@ export {default as HtmlLink} from './html/HtmlLink';
 export {default as Meta} from './html/Meta';
 export {default as Select} from './html/Select';
 export {default as Header} from './html/Header';
+
+export {default as Footer} from '../footer/Footer';

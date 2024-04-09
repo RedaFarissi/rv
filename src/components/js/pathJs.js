@@ -156,3 +156,5 @@ export {default as History} from './js/api/History';
 export {default as SetInterval} from './js/api/SetInterval';
 export {default as ClearInterval} from './js/api/ClearInterval';
 export {default as SetTimeout} from './js/api/SetTimeout';
+
+export {default as Footer} from '../footer/Footer';

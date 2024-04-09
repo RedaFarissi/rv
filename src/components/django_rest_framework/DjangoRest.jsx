@@ -2,7 +2,7 @@ import { Routes, Route , Link } from "react-router-dom";
 import React, { useEffect, useRef} from 'react';
 import {
     Introduction,Serializers,SelfKwargs,ApiViews,ClassGenericViews,Status,
-    ConnectDjangoWithReact,
+    ConnectDjangoWithReact,Footer,
 } from "./pathDjangoRest";
 
 
@@ -44,6 +44,7 @@ export default function DjangoRestFramework(props){
     });
 
     return (
+<>
     <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone();  } }>
         <aside className="aside" onScroll={()=>{ localStorage.setItem("django_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
             <ul className="list-group m-0">
@@ -64,5 +65,12 @@ export default function DjangoRestFramework(props){
             </Routes>
         </section>
     </main>
+    <Footer 
+        widthFooter={props.footerWidth.width}
+        block_1={props.footerWidth.block_1}
+        block_2={props.footerWidth.block_2}
+        blockChildStyle={{width: "100%"}}
+    />
+</>
     )
 }

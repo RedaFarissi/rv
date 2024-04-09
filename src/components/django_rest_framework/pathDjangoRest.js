@@ -5,3 +5,5 @@ export {default as ApiViews}  from './django_rest_framework/ApiViews.jsx';
 export {default as ClassGenericViews}  from './django_rest_framework/ClassGenericViews.jsx';
 export {default as Status}  from './django_rest_framework/Status.jsx';
 export {default as ConnectDjangoWithReact}  from './django_rest_framework/ConnectDjangoWithReact.jsx';
+
+export {default as Footer} from '../footer/Footer';

@@ -2,7 +2,7 @@ import codes from "../../assests/codes/react-js/react"
 import images from "./imagesReact";
 import { CodeHighlighter , CodeCommand , Result } from "../path";
 import react_logo from "../../assests/images/logo/react_logo.svg";
-import {ThisState, EventExemple, EventExemple2} from "./pathExemple";
+import {ThisState, EventExemple, EventExemple2, Footer} from "./pathExemple";
 
 function React(props){  
     const matrix = props.react_matrix.map(e =>{ 
@@ -34,6 +34,7 @@ function React(props){
     });
 
   return(
+<>
 <main onClick={ (event)=>{ props.clickMenuHeader(event, false);  props.closeSearchPhone(); } }>
   <aside  className="aside">
       <dl className="list-group m-0">
@@ -462,7 +463,14 @@ function React(props){
  </section>
 
 </main>
-)
+<Footer 
+    widthFooter={props.footerWidth.width}
+    block_1={props.footerWidth.block_1}
+    block_2={props.footerWidth.block_2}
+    blockChildStyle={{width: "100%"}}
+/>
+</>
+  )
 }
 
 

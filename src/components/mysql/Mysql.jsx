@@ -1,5 +1,6 @@
 import images  from "./imagesMysql"
 import { CodeHighlighter  } from "../path";
+import Footer from "../footer/Footer"
 
 export default function Sql(props){
     const arrays = props.sql_list.map(e => <li className="list-group-item">
@@ -8,8 +9,9 @@ export default function Sql(props){
         </a>
     </li>)
     
-    return(
-<main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone();  } }>
+return(
+<>
+<main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone(); } }>
     <aside className="aside">
         <ul className="list-group m-0">
             {arrays}
@@ -1529,6 +1531,13 @@ ON e.course_id = c.course_id;`} language="sql" addclassName="mt-3 mb-3" copie={t
     </article>    
 </section>
 </main>
+<Footer 
+    widthFooter={props.footerWidth.width}
+    block_1={props.footerWidth.block_1}
+    block_2={props.footerWidth.block_2}
+    blockChildStyle={{width: "100%"}}
+/>
+</>
     )
 }
 

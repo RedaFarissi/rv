@@ -8,9 +8,10 @@ import {
     BoxSizing,ObjectFit,Animation,ClipPath,Cursor,ScrollBehavior,ZIndex,InvalidAndValid,
     Outline,AfterAndBefore,WritingMode,Filter,Quotes,TransformStyle,WebkitTextStroke,
     FlexDirection,FlexWrap,AlignItems,AlignSelf,JustifyContent,Order,Grid,AccentColor,
-    Selectors,Functions,Media,ScssComponent,SassComponent
+    Selectors,Functions,Media,ScssComponent,SassComponent,Footer
 } from './pathCss.js';
 import { useEffect } from "react";
+
 
 export default function Css(props){
     useEffect(()=>{
@@ -111,6 +112,12 @@ export default function Css(props){
                 <Route path='/sass' element={<SassComponent />} /> 
             </Routes>
     </main>
+    <Footer 
+        widthFooter={props.footerWidth.width}
+        block_1={props.footerWidth.block_1}
+        block_2={props.footerWidth.block_2}
+        blockChildStyle={{width: "100%"}}
+    />
 </>
     )
 }
