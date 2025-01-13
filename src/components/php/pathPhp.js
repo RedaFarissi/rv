@@ -39,7 +39,6 @@ export {default as StaticMethods} from './php/oop/StaticMethods';
 export {default as StaticProperties} from './php/oop/StaticProperties';
 export {default as Iterables} from './php/oop/Iterables';
 
-export {default as Database} from './php/mysql/Database';
 export {default as Connect} from './php/mysql/Connect';
 export {default as CreateDatabase} from './php/mysql/CreateDatabase';
 export {default as CreateTable} from './php/mysql/CreateTable';

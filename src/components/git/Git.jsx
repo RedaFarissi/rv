@@ -62,7 +62,7 @@ export default function Git(props){
 
                 <article id="Diagram_git">
                     <h2 className="title-h2 mt-5">3 - مخطط سير عمل Git</h2>
-                    <img src={images.git3} alt="git" className="img"/>
+                    <img src={images.git3} alt="git" style={{ width: "80%", marginRight :"10%" }}/>
                 </article>
 
                 <article id="Repository">

@@ -248,7 +248,7 @@ export default function Strings(props){
     <h2>
         <?php 
             $str = "   Hello World   ";
-            $trimmedStr = preg_replace('/\s+/', '', $str);
+            $trimmedStr = preg_replace('/s+/', '', $str);
             echo $trimmedStr; 
         ?>
     </h2>
@@ -425,7 +425,7 @@ export default function Strings(props){
             </CodeCommand>
             <div className="mital"> متال 3 : </div>
             <CodeHighlighter  code={`<?php
-$x = "Escape php variable name \$myvar";
+$x = "Escape php variable name $myvar";
 echo $x;
 ?> `} language="php" file_name="C:\xampp\htdocs\php-test\index.php" addclassName="mt-3 mb-3" copie={true}/>   
             <CodeCommand>

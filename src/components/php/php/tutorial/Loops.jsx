@@ -1,4 +1,4 @@
-import { CodeHighlighter , CodeCommand , Result} from "../../../path";
+import { CodeHighlighter , CodeCommand } from "../../../path";
 
 export default function Loops(props){
     return(

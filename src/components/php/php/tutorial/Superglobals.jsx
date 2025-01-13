@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { CodeHighlighter , CodeCommand , Result} from "../../../path";
+import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Superglobals(props){
     const [pagePhp1,setPagePhp1] = useState("index");

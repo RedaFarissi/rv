@@ -1,4 +1,4 @@
-import { CodeHighlighter , CodeCommand , Result} from "../../../path";
+import { CodeHighlighter  , Result} from "../../../path";
 
 export default function Json(props){
     return(
