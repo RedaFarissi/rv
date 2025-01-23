@@ -3,40 +3,51 @@ import {
    Introduction,Virtualenv,FirstExemple,ModelFieldReference,StaticAndMediaFiles,AboutTemplates,
    AboutAdmin,AboutModels,UserAuthentication,DjangoEmail,DjangoPagination,Form,ModelForm,
    DjangoFilter,Session,ContextProcessors,Footer,
-} from "./pathDjango"
-import React, { useEffect, useRef} from 'react';
+} from "./pathDjango";
+import React, { useEffect, useRef } from 'react';
 
 export default function Django(props){
    const AsideRef = useRef(null);
    useEffect(() => {
       AsideRef.current.scrollTop = localStorage.getItem("django_aside") || 0 ;
    }, []); 
-   
+    
+   // Scroll to the element with the hash on page load or when the hash changes
+   useEffect(() => {
+      if (window.location.hash) {
+        const element = document.getElementById(window.location.hash.substring(1)); // Remove the '#' from the hash
+        if (element) {
+          const offsetTop = element.getBoundingClientRect().top + window.pageYOffset - 140;
+          window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+        }
+      }
+   }, [window.location.hash]); // Run the effect when the hash changes
+
    const matrix = props.django_matrix.map(e =>{ 
       var keys_map;  
       if (Array.isArray(e)) { 
          let dt_title;
          keys_map = e.map((key,index) => {
-            if(index === 0){
-               dt_title = key.toLowerCase().replace(/_/g, '-');
-              return(<dt className="aside-dl-dt" key={key}>
-                        <Link to={`/django/${dt_title}/`} onClick={props.scrollY_to_0}>
-                           <i className="fa-solid fa-caret-right"></i> {key.replace(/_/g, ' ')}
-                        </Link>
-                     </dt>)  
-            }else{
-                return(<dd className="aside-dl-dd" key={key}>
+               if(index === 0){
+                     dt_title = key.toLowerCase().replace(/_/g, '-');
+                     return(<dt className="aside-dl-dt" key={key}>
+                           <Link to={`/django/${dt_title}/`} onClick={props.scrollY_to_0}>
+                              <i className="fa-solid fa-caret-right"></i> {key.replace(/_/g, ' ')}
+                           </Link>
+                        </dt>)  
+               }else{
+                     return(<dd className="aside-dl-dd" key={key}>
                            <a href={`/django/${dt_title}#${key}`} onClick={ props.scrollYAdd }>
-                             <i className="fa-solid fa-circle"></i> {key.replace(/_/g, ' ')}
-                           </a>
-                        </dd>)
-            } 
+                                <i className="fa-solid fa-circle"></i> {key.replace(/_/g, ' ')}
+                              </a>
+                           </dd>)
+               } 
           });
       }else {
          keys_map = <dt className="aside-dl-simple" key={e}>
-            <a href={`/django/${e.toLowerCase().replace(/_/g, '-')}`} onClick={props.scrollY_to_0}>
-               <i className="fa-solid fa-caret-right"></i> {e.replace(/_/g, ' ')} 
-            </a>
+               <a href={`/django/${e.toLowerCase().replace(/_/g, '-')}`} onClick={props.scrollY_to_0}>
+                     <i className="fa-solid fa-caret-right"></i> {e.replace(/_/g, ' ')} 
+               </a>
          </dt>;
       }
       return keys_map

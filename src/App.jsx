@@ -1,6 +1,6 @@
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
 import { 
-    Header,Home,Html,Css,Js,React,Mysql,Python,Django,DjangoRestFramework,Cmd,Git,Php,Laravel,Login
+    Header,Home,Html,Css,Js,React,Mysql,Python,Django,DjangoRestFramework,Cmd,Git,Php,Laravel,Login,Search
 } from './components/path';
 import { useEffect, useRef , useState} from 'react';
 import "./App.sass";
@@ -79,7 +79,7 @@ function App() {
         ["JS API","Intro","Forms","fetch","History","setInterval","clearInterval","setTimeout"],
     ];
     const react_matrix  = [
-        ["Introduction","What_is_React","How_react_work","What_you_need_to_get_started","multiple_versions_of_Node","Verify_required_installations","ES6","Create_React_App","Run_React_App",],
+        ["Introduction","What is React","How react work","What you need to get started","multiple_versions_of_Node","Verify_required_installations","ES6","Create_React_App","Run_React_App",],
         ["Component","JSX","function_Component","function_Component_props","class_Component","class_Component_this_props","Components_in_Component",],
         "Events", "Lists", "Handle_images_react", "Handle_import", "props_children",
         ["Hooks","useState","this_state"],
@@ -137,6 +137,9 @@ function App() {
     const cmd_list  = [ "Introduction","Create_Folder","Change_Directory","Remove_Directory","Create_File","Rename_File","Remove_File","Remove_all_Files","Get_all_Directory","Get_Content_File","Clear_Screen","curl_Html","POST_Requests_curl","Copy_Files_to_another_Folder","Change_extension","Change_extensions","Print_all_Files_in_folder","View_System_Information","Turn_off_the_Computer","search_for_File_by_Extensions","Display_Text","Date_and_Time"];
 
     
+
+
+    
     /***************************  Aside animation and event click ***************************/
     // animation aside open
     function myStartFunctionOpen() { this.style.width = "0px";  }
@@ -175,30 +178,207 @@ function App() {
             block_2: "col-sm-10 col-md-8 col-lg-4 col-xl-4"
         });
     }
-    // function searchAndRetrieve(searchTerm) {
-    //     let matchingValues = [];
-    //     const includesSearchTerm =(value)=>{
-    //         value.toLowerCase().includes(searchTerm.toLowerCase());
-    //     };
-    //     matchingValues.push(...html_list.filter((value) => includesSearchTerm(value)));
-    //     matchingValues.push(...css_list.filter((value) => includesSearchTerm(value)));
-    //     matchingValues.push(...js_matrix.flat().filter((value) => includesSearchTerm(value)));
-    //     matchingValues.push(...react_matrix.flat().filter((value) => includesSearchTerm(value)));
-    //     matchingValues.push(...sql_list.filter((value) => includesSearchTerm(value)));
-    //     matchingValues.push(...python_list.filter((value) => includesSearchTerm(value)));
-    //     matchingValues.push(...django_matrix.flat().filter((value) => includesSearchTerm(value)));
-    //     matchingValues.push(...django_rest_framework_matrix.flat().filter((value) => includesSearchTerm(value)));
-    //     matchingValues.push(...php_list.flat().filter((value) => includesSearchTerm(value)));
-    //     matchingValues.push(...laravel_matrix.flat().filter((value) => includesSearchTerm(value)));
-    //     matchingValues.push(...git_list.filter((value) => includesSearchTerm(value)));
-    //     matchingValues.push(...cmd_list.filter((value) => includesSearchTerm(value)));
-    //     document.write("Matching Values:", searchTerm);
-    //     document.write(matchingValues);
-    //     matchingValues.forEach(element => {
-    //         console.log(element)
-    //     });
-    // }   
-    // searchAndRetrieve("Introduction");
+    /**********************************  Serach    ******************************************** */
+    const [searchValue, setSearchValue] = useState("");
+    const handleInputChange = (e) => {
+        setSearchValue(e.target.value);
+    };
+    const handleSubmit = (e) => {
+        e.preventDefault(); // Prevent page reload on submit
+        searchAndRetrieve(searchValue);
+    };
+
+
+
+
+    function searchAndRetrieve(searchTerm) {
+        let matchingValues = [];
+        // Normalize function to replace underscores and handle case insensitivity
+        const normalize = (value) => value.toLowerCase().replace(/_/g, ' ');
+        const includesSearchTerm = (value) => {
+            return normalize(value).includes(normalize(searchTerm));
+        };
+        // Helper function to format the result by removing underscores
+        const formatResult = (category, value) => `${category} ${value.replace(/_/g, ' ')}`;
+        
+        // Search in HTML list
+        html_list.forEach((value) => {
+            if (includesSearchTerm(value)) {
+                
+                matchingValues.push({ route: `/html/${value.toLowerCase().replace(/\s/g, '-')}`,  value: formatResult("HTML", value) });
+            }
+        });
+    
+        // Search in CSS list
+        css_list.forEach((value) => {
+            if (includesSearchTerm(value)) {
+                matchingValues.push({ route: `/css/${value.toLowerCase().replace(/\s/g, '-')}`, value: formatResult("CSS", value) });
+            }
+        });
+    
+        // Search in JS matrix
+        js_matrix.forEach((category) => {
+            category.forEach((value) => {
+                if (includesSearchTerm(value)) {
+                    matchingValues.push({ route: `/js/${value.toLowerCase().replace(/\s/g, '-')}`, value: formatResult("JS", value) });
+                }
+            });
+        });
+    
+        // Search in React matrix
+        react_matrix.forEach((category) => {
+            if (Array.isArray(category)) {
+                category.forEach((value, index) => {
+                    if (includesSearchTerm(value)) {
+                        if (index === 0) {
+                            matchingValues.push({
+                                route: `/react#${value.replace(/_/g, '-')}`,
+                                value: formatResult("React", value),
+                            });
+                        } else {
+                            matchingValues.push({
+                                route: `/react#${value}`,
+                                value: formatResult("React", value),
+                            });
+                        }
+                    }
+                });
+            } else {
+                if (includesSearchTerm(category)) {
+                    matchingValues.push({
+                        route: `/react#${category.replace(/_/g, '-')}`,
+                        value: formatResult("React", category),
+                    });
+                }
+            }
+        });
+
+    
+        // Search in SQL list
+        sql_list.forEach((value) => {
+            if (includesSearchTerm(value)) {
+                matchingValues.push({ route: `/mysql#${value.toLowerCase().replace(/\s/g, '-')}`, value: formatResult("SQL", value) });
+            }
+        });
+    
+        // Search in Python list
+        python_list.forEach((value) => {
+            if (includesSearchTerm(value)) {
+                matchingValues.push({ route: `/python/${value.toLowerCase().replace(/\s/g, '-')}`, value: formatResult("PYTHON", value) });
+            }
+        });
+    
+        // Search in Django matrix
+        django_matrix.forEach((category) => {
+            if( Array.isArray(category) ) {
+                const firstElement = category[0].toLowerCase().replace(/_/g, '-');
+                category.forEach((value , index) => {
+                    if (includesSearchTerm(value)) {
+                        if( index === 0) {        
+                            matchingValues.push({ 
+                                route: `/django/${firstElement}/`, 
+                                value: formatResult("django", value) 
+                            });
+                        }else{
+                            matchingValues.push({ 
+                                route: `/django/${firstElement}#${value}`, 
+                                value: formatResult("django", value) 
+                            });
+                        }
+                    }
+                });
+            }else{
+                if (includesSearchTerm(category)) {
+                    matchingValues.push({ route: `/django/${category.toLowerCase().replace(/_/g, '-')}`, value: formatResult("Django", category) });
+                }
+            }
+        });
+    
+        // Search in Django Rest Framework matrix
+        django_rest_framework_matrix.forEach((category) => {
+            if (Array.isArray(category)) {
+                const firstElement = category[0].toLowerCase().replace(/_/g, '-');
+                category.forEach((value , index) => {
+                    if (includesSearchTerm(value)) {
+                        if( index === 0) {     
+                            matchingValues.push({ 
+                                route: `/django-rest-framework/${firstElement}/`, 
+                                value: formatResult("django rest framework", value) 
+                            });
+                        }else{
+                            matchingValues.push({ 
+                                route: `/django-rest-framework/${firstElement}#${value}`, 
+                                value: formatResult("django rest framework", value) 
+                            });
+                        }
+                    }
+                });
+            } else {
+                if (includesSearchTerm(category)) {
+                    matchingValues.push({ 
+                        route: `/django-rest-framework/${category.toLowerCase().replace(/_/g, '-')}`, 
+                        value: formatResult("django rest framework", category) 
+                    });
+                }
+            }
+        });
+    
+        // Search in PHP list
+        php_list.forEach((category) => {
+            category.forEach((value , index) => {
+                if (includesSearchTerm(value) && index !== 0) {
+                    matchingValues.push({ route: `/php/${value.toLowerCase().replace(/\s/g, '-')}`, value: formatResult("php", value) });
+                }
+            });
+        });
+    
+        // Search in Laravel matrix
+        laravel_matrix.forEach((category) => {
+            if (Array.isArray(category)) {
+                const firstElement = category[0].toLowerCase().replace(/_/g, '-');
+                category.forEach((value , index) => {
+                    if (includesSearchTerm(value)) {
+                        if( index === 0) {  
+                            matchingValues.push({ 
+                                route: `/laravel/${firstElement}/`, 
+                                value: formatResult("laravel", value) 
+                            });
+                        }else{
+                            matchingValues.push({ 
+                                route: `/laravel/${firstElement}#${value}`, 
+                                value: formatResult("laravel", value) 
+                            });
+                        }
+                    }
+                });
+            } else {
+                if (includesSearchTerm(category)) {
+                    matchingValues.push({ 
+                        route: `/laravel/${category.toLowerCase().replace(/_/g, '-')}`, 
+                        value: formatResult("laravel", category) 
+                    });
+                }
+            }
+        });
+    
+        // Search in Git list
+        git_list.forEach((value) => {
+            if (includesSearchTerm(value)) {
+                matchingValues.push({ route: `/git#${value}`, value: formatResult("git", value) });
+            }
+        });
+    
+        // Search in CMD list
+        cmd_list.forEach((value) => {
+            if (includesSearchTerm(value)) {
+                matchingValues.push({ route: `/powerShell#${value}`, value: formatResult("powerShell", value) });
+            }
+        });
+    
+        console.log(matchingValues);
+        return matchingValues;
+    }
+    
 
     return (
     <Router>
@@ -207,6 +387,11 @@ function App() {
             searchPhone={searchPhone}
             openSearchPhone={openSearchPhone}
             closeSearchPhone={closeSearchPhone}
+
+            searchValue={searchValue}
+            setSearchValue={setSearchValue}
+            handleInputChange={handleInputChange}
+            handleSubmit={handleSubmit}
         />
         <Routes>
             <Route path='/'       element={<Home 
@@ -313,6 +498,15 @@ function App() {
                                                 footerWidth={footerWidth}
                                             />}
             />
+            <Route path='/search' element={<Search
+                searchValue={searchValue}
+                setSearchValue={setSearchValue}
+                handleInputChange={handleInputChange}
+                handleSubmit={handleSubmit}
+                Search={Search}
+                searchAndRetrieve={searchAndRetrieve}
+                scrollY_to_0={scrollY_to_0}
+            />} />
             <Route path='/login' element={<Login  />} />
         </Routes>
     </Router> 

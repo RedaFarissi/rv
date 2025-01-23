@@ -3,6 +3,7 @@ import images from "./imagesReact";
 import { CodeHighlighter , CodeCommand , Result } from "../path";
 import react_logo from "../../assests/images/logo/react_logo.svg";
 import {ThisState, EventExemple, EventExemple2, Footer} from "./pathExemple";
+import { useEffect } from "react";
 
 function React(props){  
     const matrix = props.react_matrix.map(e =>{ 
@@ -32,6 +33,17 @@ function React(props){
       }
       return keys_map
     });
+    
+    // Scroll to the element with the hash on page load or when the hash changes
+    useEffect(() => {
+      if (window.location.hash) {
+        const element = document.getElementById(window.location.hash.substring(1)); // Remove the '#' from the hash
+        if (element) {
+          const offsetTop = element.getBoundingClientRect().top + window.pageYOffset - 140;
+          window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+        }
+      }
+    }, [window.location.hash]); // Run the effect when the hash changes
 
   return(
 <>

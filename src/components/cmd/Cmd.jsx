@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { CodeCommand } from "../path";
 import images from "./imagesCmd";
 
@@ -9,7 +10,18 @@ export default function Cmd(props){
             <i className="fa-solid fa-caret-right me-2"></i>CMD {e.replace(/_/g, ' ')}
         </a>
     </li>)
-
+    
+   // Scroll to the element with the hash on page load or when the hash changes
+   useEffect(() => {
+          if (window.location.hash) {
+            const element = document.getElementById(window.location.hash.substring(1)); // Remove the '#' from the hash
+            if (element) {
+                const offsetTop = element.getBoundingClientRect().top + window.pageYOffset - 140;
+                window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+            }
+          }
+   }, [window.location.hash]); // Run the effect when the hash changes
+   
     return(
     <main onClick={ (event)=>{ props.clickMenuHeader(event, false) } }>
         <aside className="aside">

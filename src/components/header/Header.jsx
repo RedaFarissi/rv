@@ -1,10 +1,16 @@
 import { Link , useLocation } from "react-router-dom";
-import React, { useRef  , useEffect } from 'react';
+import React, { useRef , useState , useEffect } from 'react';
 import "./Header.sass";
+
+import { Search } from "../path"
+
 
 export default function Header(props){   
     const divRef = useRef(null);
     const location = useLocation();
+   
+    //2025
+    // const [searchValue, setSearchValue] = useState("");
 
     const programing = [
         {name:"HTML",link:"html"}, {name:"CSS",link:"css"}, {name:"JAVASCRIPT",link:"js"}, {name:"REACT.js",link:"react"}, 
@@ -45,8 +51,8 @@ export default function Header(props){
           });
         }
     };
-
     return(
+<>
 <header className="header p-0" dir="ltr" 
     onClick={ (event)=>{ 
         props.clickMenuHeader(event, false);
@@ -59,12 +65,19 @@ export default function Header(props){
                <i className="fa-solid fa-house fs-5 text-light"></i>
             </Link> &nbsp;&nbsp;
           
-            <div className="header-search-container">
-                <input type="text" name="search" className="search-field" />
-                <button className="search-btn" type="submit">
-                    <i className="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </div>
+                <div className="header-search-container">  
+            <form onSubmit={props.handleSubmit} >
+                    <input type="text" name="search" className="search-field"
+                        value={props.searchValue} // Step 4: Bind the value to state
+                        onChange={props.handleInputChange} // Step 5: Handle input change 
+                    />
+                    <Link to='/search'> 
+                    <button className="search-btn" type="submit">
+                        <i className="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    </Link>
+            </form>
+                </div>
 
             <div className={`header-icons`} >  
                 <div className={`${ (checkAboutRouteHome()) ? "d-none" : "d-block" }`}>
@@ -123,5 +136,7 @@ export default function Header(props){
     </nav>
 
 </header>
-    )
+
+</>
+)
 }

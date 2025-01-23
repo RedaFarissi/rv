@@ -36,6 +36,10 @@ export {default as CodeCommand} from './codeCommand/CodeCommand';
 
 export {default as InteractivCss} from './css/InteractivCss';
 
+
+export {default as Search} from './search/Search';
+
+
 export {default as Result} from './result/Result';
 export {default as ResultConsole} from './result/ResultConsole';
 export {default as ResultAlert} from './result/ResultAlert';

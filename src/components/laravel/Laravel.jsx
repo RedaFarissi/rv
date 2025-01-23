@@ -10,7 +10,17 @@ export default function Laravel(props){
    useEffect(() => {
        AsideRef.current.scrollTop = localStorage.getItem("laravel_aside") || 0;
    }, []);
-
+   // Scroll to the element with the hash on page load or when the hash changes
+   useEffect(() => {
+          if (window.location.hash) {
+            const element = document.getElementById(window.location.hash.substring(1)); // Remove the '#' from the hash
+            if (element) {
+                const offsetTop = element.getBoundingClientRect().top + window.pageYOffset - 140;
+                window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+            }
+          }
+   }, [window.location.hash]); // Run the effect when the hash changes
+    
    const matrix = props.laravel_matrix.map(e =>{ 
       var keys_map;  
       if (Array.isArray(e)) { 
