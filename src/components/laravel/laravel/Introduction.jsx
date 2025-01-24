@@ -21,37 +21,45 @@ export default function Introduction(props){
    
    <article id="what_we_need_to_use_laravel">
         <h2 className='title-h2'> 2 - ما نحتاجه لاستخدام laravel  </h2>
-        <p className='style_divv'>
-            نحتاج إلى بيئة تشغيل محلية لتطوير تطبيقات <b>Laravel</b> باستخدام <b>PHP</b>. هناك اثنان من أشهر البيئات هما <b>XAMPP</b> و <b>MAMP</b>، ويمكنك اختيار أي منهما حسب نظام التشغيل الخاص بك.<br/>
-            <ul>
-               <li>
-                  <b>XAMPP أو MAMP:</b>
+               <h3 className="title-h3">1 - XAMPP أو MAMP:</h3>
+               <p className='style_divv'>
+                      نحتاج إلى بيئة تشغيل محلية لتطوير تطبيقات <b>Laravel</b> باستخدام <b>PHP</b>. هناك اثنان من أشهر البيئات هما <b>XAMPP</b> و <b>MAMP</b>، ويمكنك اختيار أي منهما حسب نظام التشغيل الخاص بك.<br/><br />
+                     <ul>
+                        <li>قم بتثبيت <b>XAMPP</b> أو <b>MAMP</b> على جهاز الكمبيوتر الخاص بك. هذا سيوفر لك خوادم <b>Apache</b> و <b>MySQL</b> و <b>PHP</b> جاهزة للاستخدام.</li>
+                        <li>قم بتشغيل الخوادم لبدء تشغيل بيئتك المحلية.</li>
+                     </ul>
+               </p>
+               <h3 className="title-h3">2 - Composer:</h3>
+               <p className='style_divv'>
                   <ul>
-                     <li>قم بتثبيت <b>XAMPP</b> أو <b>MAMP</b> على جهاز الكمبيوتر الخاص بك. هذا سيوفر لك خوادم <b>Apache</b> و <b>MySQL</b> و <b>PHP</b> جاهزة للاستخدام.</li>
-                     <li>قم بتشغيل الخوادم لبدء تشغيل بيئتك المحلية.</li>
+                     <li>تحقق من توافر <a dir="ltr" href="https://getcomposer.org/download/" target="blanck">Composer</a> على نظامك عبر الأمر  في واجهة الأوامر. إذا لم يكن مثبتًا، يمكنك تنزيله وتثبيته من الموقع الرسمي للمكتبة. </li>
                   </ul>
-               </li>
-               <li>
-                  <b>Composer:</b>
+                  <CodeCommand>composer</CodeCommand>
+               </p>
+               <h3 className="title-h3"> 3 - Node.js:</h3>
+               <p className='style_divv'>
                   <ul>
-                     <li>تحقق من توافر <b>Composer</b> على نظامك عبر الأمر  في واجهة الأوامر. إذا لم يكن مثبتًا، يمكنك تنزيله وتثبيته من الموقع الرسمي للمكتبة.</li>
+                     <li>لتجميع ملفات <b>CSS</b> و <b>JavaScript</b>، ستحتاج إلى تثبيت <a href="https://nodejs.org/en/download" target="blanck">Node.js</a>.  يمكنك تحقق من توافره باستخدام الأمر  ، أو يمكنك تنزيله وتثبيته من الموقع الرسمي للمكتبة. (إن لم يتواجد)</li>
                   </ul>
-               </li>
-               <CodeCommand>composer</CodeCommand>
-               <li>
-                  <b>Node.js:</b>
+                  <CodeCommand>node -v</CodeCommand>
+               </p>
+               <h3 className="title-h3"> 4 - التحقق من المسار و إضافته إن لم يتواجد</h3>
+               <p className='style_divv'>
                   <ul>
-                     <li>لتجميع ملفات <b>CSS</b> و <b>JavaScript</b>، ستحتاج إلى تثبيت <b>Node.js</b>. يمكنك تحقق من توافره باستخدام الأمر .</li>
+                     <li>اضغط على مفتاح <kbd>Windows</kbd> + <kbd>R</kbd> لفتح مربع الحوار . (dialog)</li>
+                     <li>اكتب <b>sysdm.cpl</b> ثم اضغط على Enter.</li>
+                     <li>انقر فوق <b>Advanced</b> </li>
+                     <li>انقر فوق  <b>Environment Variables</b></li>
+                     <li>اذهب الى  <b>path</b> داخل <b>User variables</b></li>
+                     <li> أضف المسار إذا لم يكن موجودا <b>C:\xampp\php</b></li>
+                     <li> اضغط  <b>OK</b></li>
                   </ul>
-               </li>
-               <CodeCommand>node -v</CodeCommand>
-            </ul>
-        </p>
-        <div className='row mt-2'>
-            <img src={images.laravel0_env} alt="laravel path"  className="col-md-4"/>
-            <img src={images.laravel0_env2} alt="laravel path" className="col-md-4"/>
-            <img src={images.laravel0_env3} alt="laravel path" className="col-md-4"/>
-        </div>
+               </p>
+               <div className='row mt-2'>
+                     <img src={images.laravel0_env} alt="laravel path"  className="col-md-4 mb-3"/>
+                     <img src={images.laravel0_env2} alt="laravel path" className="col-md-4 mb-3"/>
+                     <img src={images.laravel0_env3} alt="laravel path" className="col-md-4 mb-3"/>
+               </div>
    </article>
 </>
 )
