@@ -13,7 +13,7 @@ export default function GitClone(props){
             <ul><li><b>تثبيت تبعيات المشروع</b></li></ul>
             <CodeCommand>composer install</CodeCommand>
             <div className="alert alert-danger">
-                  إذا حدث خطأ مثل هذا، فقم بتثبيت <a href="https://www.7-zip.org/"><bdi>https://www.7-zip.org/</bdi></a> وقم بتشغيل <kbd>composer install</kbd> مرة أخرى
+                  إذا حدث خطأ مثل هذا، فقم بتثبيت <a href="https://www.7-zip.org/" target="blanck"><bdi>https://www.7-zip.org/</bdi></a> وقم بتشغيل <kbd>composer install</kbd> مرة أخرى
             </div>
             <img src={images.laravel58} className="w-100 border mb-2 mt-3" alt="ControllerPost"/>
             <ul><li><b>إعداد ملفات البيئة</b></li></ul>
