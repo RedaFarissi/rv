@@ -309,7 +309,7 @@ function App() {
                             matchingValues.push({ route: `/git#${value}`, value: formatResult("git", value) });
                         }
                     }); break;
-                case "COmmand Proppt":
+                case "Command Proppt":
                 case "cmd":
                 case "powershell":     cmd_list.forEach((value) => {
                     if (includesSearchTerm(value)) {
