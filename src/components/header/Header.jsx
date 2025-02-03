@@ -84,9 +84,11 @@ export default function Header(props){
                     <i onClick={(event)=>{ props.clickMenuHeader(event , true) }} className={`menu-icon fa-solid fa-bars`}></i>
                 </div>        
                 <i className="fa-brands fa-paypal"></i>
-                <Link to='/login'>
+                {/* <Link to='/login'>
                     <i className={`fas fa-user`}></i>
-                </Link> 
+                </Link>  */}
+                <Link to='/login'> تسجيل الدخول </Link>
+                <Link to='/register'> إنشاء حساب</Link>
             </div>
         </div> 
     </div>

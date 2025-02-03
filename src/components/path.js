@@ -28,6 +28,8 @@ export {default as Git} from './git/Git';
 
 export {default as Login} from './login/Login';
 
+export {default as CreateAccount} from './register/CreateAccount';
+
 export {default as Footer} from './footer/Footer';
 
 export {default as CodeHighlighter} from './codeHighlighter/CodeHighlighter';

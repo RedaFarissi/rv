@@ -1,13 +1,13 @@
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
 import { 
-    Header,Home,Html,Css,Js,React,Mysql,Python,Django,DjangoRestFramework,Cmd,Git,Php,Laravel,Login,Search
+    Header,Home,Html,Css,Js,React,Mysql,Python,Django,DjangoRestFramework,Cmd,Git,Php,Laravel,Login,Search,CreateAccount,
 } from './components/path';
 import { useEffect, useRef , useState} from 'react';
 import "./App.sass";
 
 function App() {
+    const url =  "http://localhost:8000" ;
     const searchPhone = useRef(null);
-
     useEffect(() => {
             // Scroll to id when print route direct in browser
             const hash = window.location.hash;   //get The id  
@@ -385,6 +385,14 @@ function App() {
     }    
     
 
+    // handle connection with back-end 
+    const logout =()=>{
+        if(localStorage.getItem('auth_token') !== null){
+            localStorage.removeItem('auth_token')
+            window.location.reload()
+        }
+    }
+
     return (
     <Router>
         <Header 
@@ -512,7 +520,8 @@ function App() {
                 searchAndRetrieve={searchAndRetrieve}
                 scrollY_to_0={scrollY_to_0}
             />} />
-            <Route path='/login' element={<Login  />} />
+            <Route path='/login' element={<Login url={url} />} />
+            <Route path='/register' element={<CreateAccount url={url} />} />
         </Routes>
     </Router> 
     );

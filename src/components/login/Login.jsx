@@ -1,21 +1,43 @@
+import { useState , useEffect} from 'react';
+import { Link , useNavigate} from "react-router-dom";
+import axios from 'axios';
 import "./Login.css";
 import Footer from "../footer/Footer";
 
+export default function Login(props){
+	const [login , setLogin] = useState({ username:"" , password:"" });
+	const navigate = useNavigate();
+	
+	const handleLogin =(e)=>{
+	  setLogin({...login , [e.target.name]: e.target.value});
+	}
+	
+	const handleSubmit = async (event) => {
+		event.preventDefault();
+		try{
+			const response = await axios.post(`${props.url}/rest-auth/login/`, login);
+			console.log(response.data.key)
+			localStorage.setItem('auth_token', response.data.key );
+			setLogin({ username:"" , password:"" });
+			navigate('/');
+		}catch(err){
+			alert(err);
+		}
+	}
 
-export default function Login(){
     return(
 <>
 <section className="login-section">
   <div className="container py-5 h-100">
     <div className="row d-flex align-items-center justify-content-center h-100">
 		<div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-		  	<form>
+		  	<form method="POST" onSubmit={handleSubmit}>
       	  	    <div className="form-outline mb-4">
-      	  	      	<input type="email" id="form1Example13" className="form-control form-control-lg" dir='ltr' />
+      	  	      	<input type="text" name="username" onChange={handleLogin}  id="form1Example13" className="form-control form-control-lg" dir='ltr' />
       	  	      	<label className="form-label" for="form1Example13">بريد إلكتروني</label>
       	  	    </div>
       	  	    <div className="form-outline mb-4">
-      	  	      	<input type="password" id="form1Example23" className="form-control form-control-lg" dir='ltr' />
+      	  	      	<input type="password" name="password" onChange={handleLogin} id="form1Example23" className="form-control form-control-lg" dir='ltr' />
       	  	      	<label className="form-label" for="form1Example23">كلمة المرور</label>
       	  	    </div>
       	  	    <div className="d-flex justify-content-around align-items-center mb-4">
