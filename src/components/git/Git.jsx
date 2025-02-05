@@ -2,6 +2,7 @@ import { CodeCommand } from "../path";
 import images from "./imagesGit";
 import Footer from "../footer/Footer";
 import { useEffect } from "react";
+import PowerShell_logo from "../../assests/images/logo/PowerShell_logo.png";
 
 export default function Git(props){
     const arrays = props.git_list.map(e => <li className="list-group-item">
@@ -10,6 +11,18 @@ export default function Git(props){
         </a>
     </li>);
     
+   const stylePreTag = `
++---[RSA 4096]----+
+|      +.         |
+|     o .   .     |
+| o .  . o . .    |
+|+ o  . = o .     |
+| o .. B.S = o    |
+|.  ..+.XoO o .   |
+| o ...+*o =      |
+|. o ooo EB .     |
+| . .... o.+      |
++----[SHA256]-----+ `
    // Scroll to the element with the hash on page load or when the hash changes
    useEffect(() => {
           if (window.location.hash) {
@@ -339,9 +352,12 @@ export default function Git(props){
                     <CodeCommand>git commit -m  "message"</CodeCommand>
                     <CodeCommand>git push</CodeCommand>
                 </article>
-
-                <article id="Generating_SSH">
-                    <h2 className="title-h2"> 24 - توليد SSH </h2>
+                <article id="Remove_connection">
+                    <h2 className="title-h2"> 24 - قم بإزالة الاتصال بين مجلد في جهاز الكمبيوتر الخاص بك و GitHub</h2>
+                    <CodeCommand>rd /s /q .git</CodeCommand>
+                </article>
+                <article id="SSH">
+                    <h2 className="title-h2"> 25 -  مفاتيح SSH </h2>
                     <p className="style_divv">
                         مفتاح <b>SSH</b> في <b>GitHub</b> هو زوج من المفاتيح التشفيرية (العامة والخاصة) المستخدمة للمصادقة الآمنة عند التفاعل مع خوادم <b>GitHub</b> عبر بروتوكول <b>SSH</b>.<br/>
                         <ul>
@@ -358,31 +374,81 @@ export default function Git(props){
                         </ul>
                         باختصار، تقدم مفاتيح <b>SSH</b> وسيلة آمنة ومريحة وفعالة للتفاعل مع مستودعات وخدمات <b>GitHub</b>.
                     </p>
-                    <h3  className="title-h3">1 - إفتح Git Bash </h3>
-                    <ul><li>الصق النص أدناه، مع استبدال البريد الإلكتروني المستخدم في المثال بعنوان بريدك الإلكتروني على <b>GitHub</b>.</li></ul>
-                    <CodeCommand> ssh-keygen -t ed25519 -C "your_email@example.com" </CodeCommand>
-                    <h3  className="title-h3">2 - إضافة SSH جديد </h3>
-                    <ul><li>إذا كان لملف مفتاح SSH العام الخاص بك اسم مختلف عن رمز المثال، فقم بتعديل اسم الملف ليتوافق مع الإعداد الحالي. عند نسخ مفتاحك، لا تضف أي أسطر جديدة أو مسافات بيضاء.</li></ul>
-                    <CodeCommand>clip &lt; ~/.ssh/id_ed25519.pub </CodeCommand>
-                    <img src={images.git31} alt="git" className="img" />
+                    <img src={images.SSH} alt="SSH" className="w-100 border border-2" />
+                    <h2 className="title-h3"> 1 - إنشاء مفاتيح SSH  باستخدام Windows PowerShell</h2>
+                    <CodeCommand> ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</CodeCommand>
                     <ul>
-                        <li>انقر فوق <b>SSH and GPG keys</b></li>
-                        <li>انقر فوق <b>new SSH Key</b> </li>
-                    </ul>
-                    <img src={images.git33} alt="git" className="img" />
+                        <li><b class="text-danger">-t rsa</b> : يحدد خوارزمية <b>RSA</b> .</li>
+                        <li><b class="text-danger">-b 4096</b> : إنشاء مفتاح 4096 بت (أكثر أمانًا من 2048 بت).</li>
+                        <li><b class="text-danger">-C "your_email@example.com"</b> : يضيف تعليقًا (استخدم بريدك الإلكتروني الفعلي)..</li>
+                    </ul>        
+            <div className="text-light" dir="ltr" style={{backgroundColor: "#012456"}}>
+                <h6 class="bg-light text-dark mb-5"> <img src={PowerShell_logo} alt="PowerShell_logo" className="ms-1 mb-1" style={{ width : "20px"}} /> Windows PowerShell</h6>
+                PS C:\Users\Dell{">"} <span class="text-warning">ssh-keygen -t rsa -b 4096 -C "redaesskouni@gmail.com"</span><br />
+                Generating public/private rsa key pair.<br />
+                Enter file in which to save the key (C:\Users\Dell/.ssh/id_rsa):<br />
+                Enter passphrase (empty for no passphrase): **************<br />
+                Enter same passphrase again: **************<br />
+                Your identification has been saved in C:\Users\Dell/.ssh/id_rsa<br />
+                Your public key has been saved in C:\Users\Dell/.ssh/id_rsa.pub<br />
+                The key fingerprint is:<br />
+                SHA256:pEFh/7r5DGBKfRazecdzedcezzsvBDeC7jIEpF5+Xulhc8 redaesskouni@gmail.com<br />
+                The key's randomart image is:<br />
+                <pre style={{whiteSpace: "pre", fontFamily: "monospace"}}> {stylePreTag} </pre>
+                PS C:\Users\Dell{">"} <br /><br />
+            </div>
+            <div>
+                <h5 class="title-h5"> 1 - تعيين كلمة المرور (اختياري ولكن موصى به)</h5>
+                <ul><li>أدخل كلمة مرور قوية أو اضغط على Enter للتخطي.</li></ul>
+                <h5 class="title-h5">2 - ابحث عن مفاتيح SSH الخاصة بك</h5>
+                <ul>
+                    <li>سيتم تخزين مفاتيحك في:</li>
                     <ul>
-                        <li>في حقل "العنوان"، أضف تسمية وصفية للمفتاح الجديد. على سبيل المثال، إذا كنت تستخدم كمبيوتر محمولًا شخصيًا، فيمكنك تسمية هذا المفتاح "كمبيوتر محمول شخصي".</li>
-                        <li>في حقل "key"، الصق مفتاحك العام <kbd>Ctrl + v</kbd>.</li>
+                        <li><b>Private key:</b> C:\Users\YourUsername\.ssh\id_rsa </li>
+                        <li><b>Public key:</b> C:\Users\YourUsername\.ssh\id_rsa.pub </li>
                     </ul>
-                    <img src={images.git32} alt="git" className="img" />
-                    <h3  className="title-h3">3 - استنساخ الريبو باستخدام SSH </h3>
-                    <CodeCommand>git clone git@github.com:RedaFarissi/shopping.git</CodeCommand>
+                </ul>
+            </div>
+            <h2 class="title-h5"> 3 - انسخ قيمة مفتاح SSH العام (pub) إلى حساب GitHub الخاص بك</h2>
+            <ul><li>استخدم هذا الطلب للحصول عليه </li></ul>
+            <CodeCommand>  Get-Content C:\Users\dell\.ssh\id_rsa.pub </CodeCommand>
+            <div className="text-light" dir="ltr" style={{backgroundColor: "#012456"}}>
+                    <h6 class="bg-light text-dark mb-5"> <img src={PowerShell_logo} alt="PowerShell_logo" className="ms-1 mb-1" style={{ width : "20px"}} /> Windows PowerShell</h6>                
+                    PS C:\Users\Dell{">"} <span class="text-warning"> Get-Content C:\Users\dell\.ssh\id_rsa.pub</span>
+                    <div style={{ wordBreak:"break-all"}}> ssh-rsa AAA3NzaAADAQABAAACAQC3eeaCkPZSwVdTqt4C09JWcYTGuYjvJ63/jGhrMsiPEnAsxsJNRWGDYdZCJ+MtkwBGEmM0pfLBG3MWkkNko5VYdCjvaV4ZWOKvH+ammS9AOiIJDPVTaKo3LV7bE7e4sKn3HZHt8K+RkXLRZJQByNm3o73solUm+IEvQLZViKvQZTZzSC9QkO+Kn8aE222zy93/RthtJHIGJUuYwd/hwpC9rCHjeoeeNNMpCKandH7B5wPN3DtUsVVrK/0DBwNhP3JBVQIqcYTwCprkkwfp11Ms2b1aIfm/7ktfR9zLMlkDmy3WNq83PzmvbC7ZcQ+GX6F+WLHBSqaCeO+JCvRjwOxfdYc/EVAPS2C1hPB1HLyDkzNDEF/SQdrJKy4u7VwB+aP/JH62vyAX5gr5d17TDVGTxzQd/4dInBQ== redaesskouni@gmail.com </div>
+                    PS C:\Users\Dell{">"} <br /><br />
+            </div>
+            <ul>
+                <li>نسخ المحتوى الذي تم إرجاعه</li>
+                <li>انتقل إلى <a href="https://github.com/settings/keys" target="_blank">GitHub SSH Settings</a> .</li>
+                <li>انقر <b>"New SSH Key".</b></li>
+                <li>العنوان: (على سبيل المثال، "My Laptop Key").</li>
+                <li>ألصق المفتاح</li>
+                <li>انقر  <b>Add SSH Key</b></li>
+            </ul>
+            <CodeCommand>git clone git@github.com:RedaFarissi/all-course.git</CodeCommand>
+            <h3  className="title-h3">2 - إنشاء مفاتيح SSH  باستخدام Git Bash </h3>
+            <ul><li>الصق النص أدناه، مع استبدال البريد الإلكتروني المستخدم في المثال بعنوان بريدك الإلكتروني على <b>GitHub</b>.</li></ul>
+            <CodeCommand> ssh-keygen -t ed25519 -C "your_email@example.com" </CodeCommand>
+            <h4  className="title-h4">2 - إضافة SSH جديد </h4>
+            <ul><li>إذا كان لملف مفتاح SSH العام الخاص بك اسم مختلف عن رمز المثال، فقم بتعديل اسم الملف ليتوافق مع الإعداد الحالي. عند نسخ مفتاحك، لا تضف أي أسطر جديدة أو مسافات بيضاء.</li></ul>
+            <CodeCommand>clip &lt; ~/.ssh/id_ed25519.pub </CodeCommand>
+            <img src={images.git31} alt="git" className="img" />
+            <ul>
+                <li>انقر فوق <b>SSH and GPG keys</b></li>
+                <li>انقر فوق <b>new SSH Key</b> </li>
+            </ul>
+            <img src={images.git33} alt="git" className="img" />
+            <ul>
+                <li>في حقل "العنوان"، أضف تسمية وصفية للمفتاح الجديد. على سبيل المثال، إذا كنت تستخدم كمبيوتر محمولًا شخصيًا، فيمكنك تسمية هذا المفتاح "كمبيوتر محمول شخصي".</li>
+                <li>في حقل "key"، الصق مفتاحك العام <kbd>Ctrl + v</kbd>.</li>
+            </ul>
+            <img src={images.git32} alt="git" className="img" />
+            <h4  className="title-h4">3 - استنساخ الريبو باستخدام SSH </h4>
+                    <CodeCommand>git clone git@github.com:RedaFarissi/project-name.git</CodeCommand>
                 </article>
                 
-                <article id="Remove_connection">
-                    <h2 className="title-h2"> 25 - قم بإزالة الاتصال بين مجلد في جهاز الكمبيوتر الخاص بك و GitHub</h2>
-                    <CodeCommand>rd /s /q .git</CodeCommand>
-                </article>
+                
             </section>
         </main>
         <Footer 

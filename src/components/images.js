@@ -11,10 +11,11 @@ import git_logo from '../assests/images/logo/git_logo.png'
 import powershell_log from '../assests/images/logo/powershell_log.png'
 import mysql from '../assests/images/logo/mysql.svg'
 import Django_REST from '../assests/images/logo/Django_REST.png'
+import PowerShell_logo from '../assests/images/logo/PowerShell_logo.png'
 
 const images = {
     html_logo , css_logo , js_logo , react_logo, vue_logo, php_logo , laravel_logo , 
-    python_logo , django_logo, Django_REST , git_logo , powershell_log , mysql
+    python_logo , django_logo, Django_REST , git_logo , powershell_log , mysql , PowerShell_logo ,
 }
 
 export default images ;
