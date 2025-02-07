@@ -326,9 +326,9 @@ export default function Git(props){
                        </p>
                        <h3 className="title-h3"> 1 - ربط المستودع الفارغ بالمستودع الموجود </h3>
                        
-                      <h4 className="title-h4">1 - إنشاء مستودع جديد باسم rv-back (هذا المستودع فارغ)</h4>
+                      <h4 className="title-h5">1 - إنشاء مستودع جديد باسم rv-back (هذا المستودع فارغ)</h4>
                         <img src={images.git34} alt="git" className="w-100" />
-                      <h4  className="title-h4">2 - لدي بالفعل مستودع آخر باسم (rv) يحتوي على تطبيق React</h4>
+                      <h4  className="title-h5">2 - لدي بالفعل مستودع آخر باسم (rv) يحتوي على تطبيق React</h4>
                         <img src={images.git35} alt="git" className="w-100" />
                       <div className="alert alert-primary mt-2"><b>بالترتيب التالي نستخدم وحدات فرعية لإضافة مستودع REACT <kbd>rv</kbd> إلى مستودع فارغ <kbd>rv-back</kbd></b></div>
     <div className="alert bg-dark text-light" dir="trl">
@@ -375,13 +375,25 @@ branch 'main' set up to track 'origin/main'.<br />
 </div>
                     <img src={images.git36} alt="git" className="w-100" />
                     <ul><li><b> عند النقر على "front @ 1a67cd6"  سيأخذك github إلى المستودع rv </b></li></ul>
-                    <h3 className="title-h3"> 2 - ربط المستودعات الموجودة </h3>
-                     
-                     
+                    <h3 className="title-h3">2 - ربط المستودعات الموجودة </h3>
+                    <h4 className="title-h5">1 - مستودع باسم (rv-back) يحتوي على تطبيق Djando </h4>
+                    <img src={images.git36} alt="git" className="w-100" />
+                    <h4 className="title-h5">2 - مستودع باسم (rv) يحتوي على تطبيق React </h4>
+                    <img src={images.git35} alt="git" className="w-100" />
 
-
-                     
                 </article>
+
+
+
+
+
+
+
+
+
+
+
+
 
                 <article id="Create_new_branch">
                     <h2 className="title-h2">23 -  إنشاء فرع جديد (new branch)  </h2>
