@@ -19,11 +19,15 @@ import git30 from "../../assests/images/git/git30.png"
 import git31 from "../../assests/images/git/git31.png"
 import git32 from "../../assests/images/git/git32.png"
 import git33 from "../../assests/images/git/git33.png"
+import git34 from "../../assests/images/git/git34.png"
+import git35 from "../../assests/images/git/git35.png"
+import git36 from "../../assests/images/git/git36.png"
 import SSH from "../../assests/images/git/SSH.png"
 
 const images = {
     git3,git14,git15,git16,git17,git18,git19,git20,git21,git22,git23,
-    git24,git25,git26,git27,git28,git29,git30,git31,git32,git33,SSH,
+    git24,git25,git26,git27,git28,git29,git30,git31,git32,git33,git34,
+    git35,git36,SSH,
 }
 
 export default images ;

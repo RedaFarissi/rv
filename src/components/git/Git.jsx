@@ -323,18 +323,64 @@ export default function Git(props){
                             استخدام <b>submodules</b> في <b>Git</b> يتيح لك تضمين مستودع داخل مستودع آخر كمجلد فرعي. يمكن أن يكون ذلك مفيدًا في حالات مثل السيرة الذاتية، حيث قد ترغب في تضمين عدة مشاريع مختلفة قمت بالعمل عليها كوحدات فرعية في مستودع السيرة الذاتية الرئيسي الخاص بك. من خلال ذلك، يمكنك الاحتفاظ بشيفرة كل مشروع في مستودع منفصل بينما لا تزال قادرًا على تضمينه في مستودع السيرة الذاتية الخاص بك.<br/><br/>
                             تساعد <b>submodules</b> أيضًا في الحفاظ على نظافة الشيفرة وقابلية الصيانة عن طريق السماح للمطورين بتفريق مختلف قطع الشيفرة إلى مستودعات منفصلة، كل منها يحمل تاريخ مراقبة الإصدار الخاص به. يمكن أن يسهل هذا تتبع التغييرات والعودة إلى الإصدارات السابقة إذا كان ذلك ضروريًا. بالإضافة إلى ذلك، يمكن للوحدات الفرعية أن تساعد في إدارة التبعيات عن طريق السماح لك بتضمين مكتبات أو أطُقًا خارجية كوحدات فرعية في مشروعك الرئيسي.<br/><br/>
                             بشكل عام، يمكن للوحدات الفرعية في <b>Git</b> أن تساعد في تسهيل عملية التطوير، وتجعل من السهل إدارة التبعيات، وتحافظ على تنظيم شيفرتك وسهولة صيانتها.
-                      </p>
-                      <h4>طريقة الكتابة</h4>
-                      <CodeCommand>git submodule add {"<"}repository-url{">"} {"<"}submodule-path{">"}</CodeCommand>
-                      <div className="mital">متال : </div>
-                      <p>في هذه الحالة استخدمت <b>submodule</b> لإنشاء <b>(repo)</b> يحتوي مجلد <b>front</b> , (<bdi>front/</bdi> هو مجلد React) </p>
-                      <CodeCommand>C:\project{">"} git init </CodeCommand>
-                      <CodeCommand>C:\project{">"} git submodule add https://github.com/RedaFarissi/front-ecommerce.git front</CodeCommand>
-                      <p> أستخدم هذا الأمر في مسار project/  لأنه في مجلد project لدي واجهة (project/front)</p>
-                      <CodeCommand>C:\project{">"} git commit -m "commit message to front"</CodeCommand>
-                      <CodeCommand>C:\project{">"} git remote add origin https://github.com/RedaFarissi/portfolio-back.git</CodeCommand>
-                      <CodeCommand>C:\project{">"} git push {"<"}remote{">"} {"<"}branch{">"}</CodeCommand>
-                      <p> يمكنك الآن إنشاء <b>rebo</b> آخر في <b>github</b> ودفع المجلد الأب فيه وستكون النتيجة ربط rebo الأول والثاني </p>
+                       </p>
+                       <h3 className="title-h3"> 1 - ربط المستودع الفارغ بالمستودع الموجود </h3>
+                       
+                      <h4 className="title-h4">1 - إنشاء مستودع جديد باسم rv-back (هذا المستودع فارغ)</h4>
+                        <img src={images.git34} alt="git" className="w-100" />
+                      <h4  className="title-h4">2 - لدي بالفعل مستودع آخر باسم (rv) يحتوي على تطبيق React</h4>
+                        <img src={images.git35} alt="git" className="w-100" />
+                      <div className="alert alert-primary mt-2"><b>بالترتيب التالي نستخدم وحدات فرعية لإضافة مستودع REACT <kbd>rv</kbd> إلى مستودع فارغ <kbd>rv-back</kbd></b></div>
+    <div className="alert bg-dark text-light" dir="trl">
+    <pre>
+C:\Users\Dell\Desktop\env-rv-back\rvBack{">"} <span className="text-warning">git status</span><br />
+fatal: not a git repository (or any of the parent directories): .git<br />
+<br /><br />
+C:\Users\Dell\Desktop\env-rv-back\rvBack{">"} <span className="text-warning">git init</span><br />
+Initialized empty Git repository in C:/Users/Dell/Desktop/env-rv-back/rvBack/.git/<br />
+<br /><br />
+C:\Users\Dell\Desktop\env-rv-back\rvBack{">"} <span className="text-warning">git submodule add git@github.com:RedaFarissi/rv.git front</span><br />
+Cloning into 'C:/Users/Dell/Desktop/env-rv-back/rvBack/front'...<br />
+Enter passphrase for key '/c/Users/Dell/.ssh/id_rsa':<br />
+remote: Enumerating objects: 7034, done.<br />
+remote: Counting objects: 100% (1852/1852), done.<br />
+remote: Compressing objects: 100% (779/779), done.<br />
+remote: Total 7034 (delta 1120), reused 1792 (delta 1071), pack-reused 5182 (from 1)<br />
+Receiving objects: 100% (7034/7034), 206.24 MiB | 7.54 MiB/s, done.<br />
+Resolving deltas: 100% (3509/3509), done.<br />
+warning: in the working copy of '.gitmodules', LF will be replaced by CRLF the next time Git touches it<br />
+<br /><br />
+C:\Users\Dell\Desktop\env-rv-back\rvBack{">"} <span className="text-warning">git commit -m "give rv react name front in repo rv-back"</span><br />
+[master (root-commit) e18f862] give rv react name front in repo rv-back<br />
+ 2 files changed, 4 insertions(+)<br />
+ create mode 100644 .gitmodules<br />
+ create mode 160000 front<br />
+<br /><br />
+C:\Users\Dell\Desktop\env-rv-back\rvBack{">"} <span className="text-warning">git remote add origin git@github.com:RedaFarissi/rv-back.git</span><br />
+<br /><br />
+C:\Users\Dell\Desktop\env-rv-back\rvBack{">"} <span className="text-warning">git branch -M main</span><br />
+<br /><br />
+C:\Users\Dell\Desktop\env-rv-back\rvBack{">"} <span className="text-warning">git push -u origin main</span><br />
+Enter passphrase for key '/c/Users/Dell/.ssh/id_rsa':  ****************<br />
+Enumerating objects: 3, done.<br />
+Counting objects: 100% (3/3), done.<br />
+Delta compression using up to 8 threads<br />
+Compressing objects: 100% (3/3), done.<br />
+Writing objects: 100% (3/3), 415 bytes | 103.00 KiB/s, done.<br />
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)<br />
+To github.com:RedaFarissi/rv-back.git<br />
+ * [new branch] &nbsp; &nbsp;    main -{">"} main<br />
+branch 'main' set up to track 'origin/main'.<br />
+</pre>
+</div>
+                    <img src={images.git36} alt="git" className="w-100" />
+                    <ul><li><b> عند النقر على "front @ 1a67cd6"  سيأخذك github إلى المستودع rv </b></li></ul>
+                    <h3 className="title-h3"> 2 - ربط المستودعات الموجودة </h3>
+                     
+                     
+
+
+                     
                 </article>
 
                 <article id="Create_new_branch">
