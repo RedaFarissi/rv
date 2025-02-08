@@ -77,7 +77,7 @@ export default function Virtualenv(){
                يمكنك استخدام اسم مختلف لملف <b>requirements.txt</b>، تتمثل الاتفاقية في استخدام <b>requirements.txt</b> لأنه معترف به على نطاق واسع في مجتمع تطوير <b>Python</b>. ومع ذلك، إذا كنت تفضل اسمًا مختلفًا لأي سبب من الأسباب، فيمكنك اختيار الاسم المناسب لمشروعك.
             </p>
             <h3 className="title-h3"> 1 - احفظ جميع الحزم المستخدمة في virtualenv في ملف بامتداد txt </h3>
-            <CodeCommand>pip freeze {">"} requirements.txt .</CodeCommand>
+            <CodeCommand>pip freeze {'>'} requirements.txt .</CodeCommand>
             <img src={images.django33} className="img"/>
             <h3 className="title-h3"> 2 - لتحميل كل هذه الحزم من مشروع آخر أو عند استخدام جيثب  </h3>
             <CodeCommand>pip install -r requirements.txt .</CodeCommand>
