@@ -1,5 +1,5 @@
-import { useState , useEffect} from 'react';
-import { Link , useNavigate} from "react-router-dom";
+import { useState } from 'react';
+import { useNavigate} from "react-router-dom";
 import axios from 'axios';
 import "./Login.css";
 import Footer from "../footer/Footer";
@@ -34,7 +34,7 @@ export default function Login(props){
 		  	<form method="POST" onSubmit={handleSubmit}>
       	  	    <div className="form-outline mb-4">
       	  	      	<input type="text" name="username" onChange={handleLogin}  id="form1Example13" className="form-control form-control-lg" dir='ltr' />
-      	  	      	<label className="form-label" for="form1Example13">بريد إلكتروني</label>
+      	  	      	<label className="form-label" for="form1Example13">اسم المستخدم</label>
       	  	    </div>
       	  	    <div className="form-outline mb-4">
       	  	      	<input type="password" name="password" onChange={handleLogin} id="form1Example23" className="form-control form-control-lg" dir='ltr' />

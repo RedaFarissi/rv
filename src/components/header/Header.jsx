@@ -1,9 +1,6 @@
 import { Link , useLocation } from "react-router-dom";
-import React, { useRef , useState , useEffect } from 'react';
+import React, { useRef  , useEffect } from 'react';
 import "./Header.sass";
-
-import { Search } from "../path"
-
 
 export default function Header(props){   
     const divRef = useRef(null);
@@ -83,12 +80,13 @@ export default function Header(props){
                 <div className={`${ (checkAboutRouteHome()) ? "d-none" : "d-block" }`}>
                     <i onClick={(event)=>{ props.clickMenuHeader(event , true) }} className={`menu-icon fa-solid fa-bars`}></i>
                 </div>        
-                <i className="fa-brands fa-paypal"></i>
+                
                 {/* <Link to='/login'>
                     <i className={`fas fa-user`}></i>
                 </Link>  */}
-                <Link to='/login'> تسجيل الدخول </Link>
-                <Link to='/register'> إنشاء حساب</Link>
+                <i className="fa-brands fa-paypal btn btn-outline-light"></i>
+                <Link className="btn btn-outline-light ms-2" to='/login'> تسجيل الدخول </Link>
+                <Link className="btn btn-outline-light" to='/register'> إنشاء حساب</Link>
             </div>
         </div> 
     </div>
