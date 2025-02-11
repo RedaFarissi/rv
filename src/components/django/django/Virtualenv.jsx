@@ -25,20 +25,20 @@ export default function Virtualenv(){
             <h2 className="title-h2"> 2 - تثبيت virtualenv </h2>
             <ul><li>لتثبيت <b>Virtualenv</b>، افتح موجه الأوامر <b>(Command Prompt)</b> واستخدمه  :</li></ul>
             <CodeCommand>pip install virtualenv</CodeCommand>
-            <img src={images.django26} className="img"/>
+            <img src={images.django26} alt="django" className="img"/>
         </article>
         <article id="Create_virtualenv">
             <h2 className="title-h2"> 3 - إنشاء virtualenv </h2>
             <ul><li>لإنشاء <b>virtualenv</b>، انتقل إلى المسار الذي تريد إنشاء <b>virtualenv</b> فيه واستخدمه :</li></ul>
             <CodeCommand>python -m virtualenv Your_Folder_Name</CodeCommand>
             <div className="mital">متال : </div>
-            <img src={images.django27} className="img"/>
+            <img src={images.django27} alt="django" className="img"/>
         </article>
         <article id="Activate_virtualenv">
             <h2 className="title-h2"> 4 - تفعيل  virtualenv </h2>
             <CodeCommand>cd Your_Folder_Name</CodeCommand>
             <CodeCommand>.\\Scripts\activate</CodeCommand>
-            <img src={images.django28} className="img"/>
+            <img src={images.django28} alt="django" className="img"/>
         </article>
         <article id="Deactivate_virtualenv">
             <h2 className="title-h2"> 5 - إلغاء التنشيط virtualenv </h2>
@@ -47,15 +47,15 @@ export default function Virtualenv(){
         <article id="Check_packages_installed">
             <h2 className="title-h2"> 6 -  التحقق من الحزم المثبتة</h2>
             <CodeCommand>pip freeze</CodeCommand>
-            <img src={images.django29} className="img"/>
+            <img src={images.django29} alt="django" className="img"/>
             <ul><li>في هذه الحالة لم نقوم بتثبيت أي شيء حتى الآن</li></ul>
         </article>
         <article id="Install_django">
             <h2 className="title-h2"> 7 -  تثبيت django في virtualenv</h2>
             <ul><li>لدي تثبيت <b>django</b> في جهازي، ولكن لاستخدامه داخل <b>virtualenv</b> أحتاج إلى تثبيته مرة أخرى</li></ul>
             <CodeCommand>python -m pip install django</CodeCommand>
-            <img src={images.django30} className="img"/>
-            <img src={images.django31} className="img"/>
+            <img src={images.django30} alt="django" className="img"/>
+            <img src={images.django31} alt="django" className="img"/>
         </article>
         <article id="Creating_Django_project">
             <h2 className="title-h2"> 8 - إنشاء مشروع django </h2>
@@ -64,7 +64,7 @@ export default function Virtualenv(){
             <CodeCommand> python -m django startproject project_name  </CodeCommand>
             <ul><li> إذا كنت ترغب في إنشاء مشروع في نفس الدليل استخدم : </li></ul>
             <CodeCommand>python -m django startproject project_name .</CodeCommand>
-            <img src={images.django32} className="img"/>
+            <img src={images.django32} alt="django" className="img"/>
         </article>
         <article id="Get_version_installed_django">
             <h2 className="title-h2">9 - احصل على إصدار Django المثبت لديك</h2>
@@ -78,7 +78,7 @@ export default function Virtualenv(){
             </p>
             <h3 className="title-h3"> 1 - احفظ جميع الحزم المستخدمة في virtualenv في ملف بامتداد txt </h3>
             <CodeCommand>pip freeze {'>'} requirements.txt .</CodeCommand>
-            <img src={images.django33} className="img"/>
+            <img src={images.django33} alt="django" className="img"/>
             <h3 className="title-h3"> 2 - لتحميل كل هذه الحزم من مشروع آخر أو عند استخدام جيثب  </h3>
             <CodeCommand>pip install -r requirements.txt .</CodeCommand>
         </article>

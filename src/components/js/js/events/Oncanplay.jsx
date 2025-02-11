@@ -8,16 +8,16 @@ export default function Canplay(){
     const code1 = ``
     const code2 = ``
     const code3 = ``
-    const codeExemple1= { 
-    head:`
-    <style>
+    // const codeExemple1= { 
+    // head:`
+    // <style>
       
-    </style>`,
-    code: `      <h2 id="result"></h2>
+    // </style>`,
+    // code: `      <h2 id="result"></h2>
       
-     <script src="./index.js"></script>`,
-    script:``
-    }
+    //  <script src="./index.js"></script>`,
+    // script:``
+    // }
     
     return(
   <section className="section-conetent">
@@ -40,7 +40,7 @@ export default function Canplay(){
             <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
-        <img src="{% static 'js/js95_oncanplay.png' %}" className="img"/>
+        <img src="{% static 'js/js95_oncanplay.png' %}" alt="oncanplay" className="img"/>
         <div className="styleee"> 
             <video controls oncanplay="myFunction()" width="60%">
                 <source src={images.video} type="video/mp4"/>

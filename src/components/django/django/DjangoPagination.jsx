@@ -1,6 +1,6 @@
 import codes from "../../../assests/codes/django/django"
 import images from "../imagesDjango";
-import { CodeCommand , CodeHighlighter , Result } from "../../path";
+import { CodeCommand , CodeHighlighter } from "../../path";
 
 export default function DjangoPagination(){
     return(
@@ -32,7 +32,7 @@ export default function DjangoPagination(){
             {">>>"} Blog.objects.create(user=user , title="blog title 6" , article="article 6")<br/>
             {">>>"} Blog.objects.create(user=user , title="blog title 7" , article="article 7")<br/>
         </CodeCommand>
-        <img src={images.django61} className="img"/>
+        <img src={images.django61} alt="django" className="img"/>
     </article>
     </>
     )

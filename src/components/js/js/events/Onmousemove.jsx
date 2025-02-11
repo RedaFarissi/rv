@@ -1,5 +1,5 @@
 import images from "../../imagesJs"
-import { CodeHighlighter ,  Result} from "../../../path";
+import { CodeHighlighter } from "../../../path";
 
 export default function Onmousemove(){
   // #div {
@@ -22,16 +22,16 @@ export default function Onmousemove(){
   const code1 = ``
   const code2 = ``
   const code3 = ``
-      const codeExemple1= { 
-    head:`
-    <style>
+    //   const codeExemple1= { 
+    // head:`
+    // <style>
       
-    </style>`,
-    code: `      <h2 id="result"></h2>
+    // </style>`,
+    // code: `      <h2 id="result"></h2>
       
-     <script src="./index.js"></script>`,
-    script:``
-    }
+    //  <script src="./index.js"></script>`,
+    // script:``
+    // }
   return(
 <section className="section-conetent">
   <h1 className="heading-style">JavaScript onmousemove</h1>
@@ -42,7 +42,7 @@ export default function Onmousemove(){
         <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
     </p>
     <div className="mital">متال : </div>
-    <img src={images.js113_onmousemove} className="img"/>
+    <img src={images.js113_onmousemove} className="img" alt="onmousemove"/>
     <div className="styleee">
         <div id="div" onmousemove="myFunction(event)" onmouseout="clearCoor()"></div>
         <p>Mouse over the rectangle above, and get the coordinates of your mouse pointer.</p>

@@ -66,7 +66,7 @@ document.getElementById("DIV").appendChild(img);`
         <CodeHighlighter file_name="index.js"code={codeExemple2.script} language="js"  addClass="mt-3 mb-3" copie={true}  number={false}/>
         <Result title="createElement" logo={images.html_logo} route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Heading Element</h2>
-            <img src={images.hajime}  style={{height: "250px",objectFit:"contain"}}/>
+            <img src={images.hajime} alt="hajime"  style={{height: "250px",objectFit:"contain"}}/>
         </Result>
         <div className="mital">متال 3 :  </div>
         <CodeHighlighter file_name="index.html" code={codeExemple3.code} language="html" is_html={true} title="createElement" addClass="mt-3 mb-3" copie={true}  number={false}/>  

@@ -1,5 +1,5 @@
 import images from "../../imagesJs"
-import { CodeHighlighter ,  Result} from "../../../path";
+//import { CodeHighlighter ,  Result} from "../../../path";
 
 export default function Onafterprint(){
     // const codeExemple1= { 

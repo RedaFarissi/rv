@@ -165,7 +165,7 @@ export default function FirstExemple(){
             </p>
             <CodeCommand>python manage.py createsuperuser</CodeCommand>
             <ul><li>   اذهب إلى الرابط <bdi>http://127.0.0.1:8000/admin/</bdi> وقم بتسجيل الدخول باستخدام الحساب الذي قمت بإنشائه</li></ul>
-            <img src={images.django5} className="w-100 my-2 "/>
+            <img src={images.django5} alt="django" className="w-100 my-2 "/>
       </article>
       <article id="admin">
             <h2 className="title-h2">9 - ملف admin </h2>
@@ -174,7 +174,7 @@ export default function FirstExemple(){
             </p>
             <CodeHighlighter code={codes[2].admin[0]} file_name="project / helloapp / admin.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/> 
             <ul> <li> تحديث صفحة : <bdi>http://127.0.0.1:8000/admin/</bdi> </li> </ul>
-            <img src={images.django5_5} className="w-100 my-2 "/>
+            <img src={images.django5_5} alt="django" className="w-100 my-2 "/>
             <ul> <li> انقر على add في Articles وأضاف article  تم اذهب إلى الرابط http://localhost:8000/helloapp/article/1/ </li> </ul>
             <h2 className="title-h2" id="layout_file_to_avoid_repeat"> 10 - إنشاء ملف layoute لتجنب التكرار وتعديل الملفات .  </h2>
             <CodeHighlighter code={codes[2].layout_file_to_avoid_repeat[0]} file_name="project / helloapp / templates / layoute.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/> 

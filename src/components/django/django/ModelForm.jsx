@@ -1,6 +1,6 @@
 import codes from "../../../assests/codes/django/django"
 import images from "../imagesDjango";
-import { CodeCommand , CodeHighlighter , Result } from "../../path";
+import { CodeCommand , CodeHighlighter  } from "../../path";
 
 export default function ModelForm(){
     return(
@@ -18,8 +18,8 @@ export default function ModelForm(){
             <CodeHighlighter code={codes[12].ModelForm[5]} file_name="project / app / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[12].ModelForm[6]} file_name="project / app / templates / create_post.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[12].ModelForm[7]} file_name="project / app / templates / post_list.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
-            <img src={images.django39} className="img"/>
-            <img src={images.django40} className="img"/>
+            <img src={images.django39} alt="django" className="img"/>
+            <img src={images.django40} alt="django" className="img"/>
         </article>
     )
 }

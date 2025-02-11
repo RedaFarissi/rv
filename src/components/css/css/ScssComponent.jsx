@@ -1,5 +1,4 @@
 
-import { CodeHighlighter ,  Result} from "../../path";
 import images from "../imagesCss";
 import "./ScssComponent.css"
 

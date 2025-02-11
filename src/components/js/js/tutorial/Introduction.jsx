@@ -110,7 +110,7 @@ function paragragh() {
             <div style={{color:"green",direction:"ltr"}}> <bdi>{"//"} Comment</bdi> </div><br/>
             تبدأ التعليقات متعددة الأسطر بـ /* وتنتهي بـ */.    سيتم تجاهل أي نص بين /* و */ بواسطة <b>JavaScript</b>. <br/>
             يستخدم هذا المثال تعليقًا متعدد الأسطر (جزء تعليق) لشرح الكود يكتب التعليق كالتالي :
-            <div style={{color:"green",direction:"ltr"}}> <bdi>/* Comments * /</bdi></div>
+            <div style={{color:"green",direction:"ltr"}}> <bdi>{"/* Comments * /"}</bdi></div>
         </p>
     </article>
     <article>

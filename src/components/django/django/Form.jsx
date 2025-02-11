@@ -19,7 +19,7 @@ export default function Form(){
         <CodeHighlighter code={codes[11].Form[3]} file_name="project / testing / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <CodeHighlighter code={codes[11].Form[4]} file_name="project / testing / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <CodeHighlighter code={codes[11].Form[5]} file_name="project / testing / templates / my_form.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
-        <img src={images.django183} className="img"/>
+        <img src={images.django183} alt="django" className="img"/>
         <div className="bg-dark alert pb-0">
             <pre>
 

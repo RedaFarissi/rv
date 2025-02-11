@@ -1,5 +1,5 @@
 import images from "../../imagesJs"
-import { CodeHighlighter ,  Result} from "../../../path";
+import { CodeHighlighter } from "../../../path";
 
 export default function Oncut(){
     // const a = document.getElementById("inP")
@@ -11,16 +11,16 @@ export default function Oncut(){
     const code1 = ``
     const code2 = ``
     const code3 = ``
-        const codeExemple1= { 
-    head:`
-    <style>
+    //     const codeExemple1= { 
+    // head:`
+    // <style>
       
-    </style>`,
-    code: `      <h2 id="result"></h2>
+    // </style>`,
+    // code: `      <h2 id="result"></h2>
       
-     <script src="./index.js"></script>`,
-    script:``
-    }
+    //  <script src="./index.js"></script>`,
+    // script:``
+    // }
     return(
   <section className="section-conetent">
     <h1 className="heading-style">JavaScript oncut</h1>
@@ -40,7 +40,7 @@ export default function Oncut(){
             <CodeHighlighter code={code3} language="js" addClass="mt-3 mb-3" copie={true} />
         </p>
         <div className="mital">متال :  </div>
-        <img src={images.js102_oncut} className="img"/>
+        <img src={images.js102_oncut} alt="oncut" className="img"/>
         <div className="styleee">
             <input type="text" id="inP" value="cut this text"/>
         </div>

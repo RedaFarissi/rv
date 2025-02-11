@@ -4,9 +4,9 @@ import { useState } from "react";
 
 export default function Oncopy(){
     const [displayAlertExemple,setDisplayAlertExemple] = useState(false)
-    function myFunction(){
-        setDisplayAlertExemple(true)
-    }
+    // function myFunction(){
+    //     setDisplayAlertExemple(true)
+    // }
     function clickOk(){
         setDisplayAlertExemple(false)
     }

@@ -79,8 +79,8 @@ export default function DjangoFilter(){
                ... )<br/>
                {">>>"} product4.sizes.add(size2)<br/>
             </CodeCommand>
-            <img src={images.django13} className="img"/>
-            <img src={images.django14} className="img"/>
+            <img src={images.django13} alt="django" className="img"/>
+            <img src={images.django14} alt="django" className="img"/>
       </article>
       <article id="raw_filter">
             <h2 className="title-h2"> 2 - raw filter  </h2>

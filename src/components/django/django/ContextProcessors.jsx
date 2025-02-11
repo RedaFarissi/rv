@@ -1,6 +1,6 @@
 import codes from "../../../assests/codes/django/django"
 import images from "../imagesDjango";
-import { CodeCommand , CodeHighlighter , Result } from "../../path";
+import { CodeCommand , CodeHighlighter  } from "../../path";
 
 export default function ContextProcessors(){
     return(
@@ -17,7 +17,7 @@ export default function ContextProcessors(){
             <CodeHighlighter code={codes[15].Context_Processors[2]} file_name="project / app / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[15].Context_Processors[3]} file_name="project / app / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[15].Context_Processors[4]} file_name="project / app / templates / request_products_to_test.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
-            <img src={images.django160} className="img" />
+            <img src={images.django160} alt="django" className="img" />
             <ul>
                 <li>في هذه الحالة نقوم بإنشاء ملف <b>context_processors.py</b> في التطبيق <b>"requests_app_test"</b> ونضيفه إلى الإعدادات</li>
                 <li>بعد ذلك يمكنني استخدام البيانات التي تم إرجاعها من <b>(requests_app)</b> في أي قوالب في مشاريعي</li>

@@ -1,6 +1,6 @@
 import codes from "../../../assests/codes/django/django"
 import images from "../imagesDjango";
-import { CodeCommand , CodeHighlighter , Result } from "../../path";
+import { CodeCommand , CodeHighlighter } from "../../path";
 
 export default function DjangoEmail(){
    return(
@@ -14,27 +14,27 @@ export default function DjangoEmail(){
       <article id="2_Step_Verification">
             <h2 className="title-h2"> 1 -  التحقق بخطوتين من بريدك الإلكتروني <bdi>2 Step Verification </bdi> </h2>
             <ul><li> انتقل أولاً إلى بريدك الإلكتروني وانقر على إدارة حساب <b>Google</b> الخاص بك <b>(Manage your Google Account)</b> </li> </ul> 
-            <img src={images.django214} className="w-100 mt-2 mb-3"/> 
+            <img src={images.django214} alt="django" className="w-100 mt-2 mb-3"/> 
             <ul> 
                <li>  انقر فوق <b>Security</b> في اليسار   </li> 
                <li> انقر <bdi><b>2-Step Verification</b></bdi></li>
             </ul>
-            <img src={images.django215} className="img"/> 
-            <img src={images.django216} className="img"/> 
-            <img src={images.django217} className="img"/> 
-            <img src={images.django218} className="img"/> 
-            <img src={images.django219} className="img"/> 
-            <img src={images.django220} className="img"/> 
-            <img src={images.django221} className="img"/> 
+            <img src={images.django215} alt="django" className="img"/> 
+            <img src={images.django216} alt="django" className="img"/> 
+            <img src={images.django217} alt="django" className="img"/> 
+            <img src={images.django218} alt="django" className="img"/> 
+            <img src={images.django219} alt="django" className="img"/> 
+            <img src={images.django220} alt="django" className="img"/> 
+            <img src={images.django221} alt="django" className="img"/> 
             <ul>
                <li>هذا الرمز هو كلمة المرور للبريد الإلكتروني لحسابي و الذي أحتاج إلى نسخه لاستخدامه في <b>settings.py</b> </li>
             </ul>
-            <img src={images.django222} className="w-100 mt-2 mb-3"/> 
+            <img src={images.django222} alt="django" className="w-100 mt-2 mb-3"/> 
       </article>
       <article id="send_email">
             <h2 className="title-h2">  2 - ارسل بريد الكتروني  </h2>
             <ul><li> في هذا المثال أستخدم بريدًا إلكترونيًا آخر redaesskouni@gmail.com</li> </ul>
-            <img src={images.django213} className="w-100 mt-2 mb-3"/> 
+            <img src={images.django213} alt="django" className="w-100 mt-2 mb-3"/> 
             <CodeHighlighter code={codes[9].send_email[0]} file_name="project / project / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeCommand>python manage.py startapp sendEmail</CodeCommand>
             <CodeHighlighter code={codes[9].send_email[1]} file_name="project / project / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
@@ -42,9 +42,9 @@ export default function DjangoEmail(){
             <CodeHighlighter code={codes[9].send_email[3]} file_name="project / sendEmail / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[9].send_email[4]} file_name="project / sendEmail / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[9].send_email[5]} file_name="project / templates / send_email.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
-            <img src={images.django223} className="img"/> 
+            <img src={images.django223} alt="django" className="img"/> 
             <ul><li> تم إرسال البريد الإلكتروني بنجاح </li></ul>
-            <img src={images.django224} className="img"/>    
+            <img src={images.django224} alt="django" className="img"/>    
       </article>
       <article>
             <h2 className="title-h2" id="list_emails"> 3 - List Emails</h2>
@@ -55,7 +55,7 @@ export default function DjangoEmail(){
             <CodeHighlighter code={codes[9].list_emails[0]} file_name="project / sendEmail / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[9].list_emails[1]} file_name="project / sendEmail / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
             <CodeHighlighter code={codes[9].list_emails[2]} file_name="project / templates / send_email.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
-            <img src={images.django227} className="img"/>      
+            <img src={images.django227} alt="django" className="img"/>      
       </article>
    </>
     )

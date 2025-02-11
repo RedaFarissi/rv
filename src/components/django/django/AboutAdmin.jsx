@@ -1,6 +1,6 @@
 import codes from "../../../assests/codes/django/django"
 import images from "../imagesDjango";
-import { CodeCommand , CodeHighlighter , Result } from "../../path";
+import {  CodeHighlighter } from "../../path";
 
 export default function AboutAdmin(){
    return(

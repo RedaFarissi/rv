@@ -21,7 +21,7 @@ export default function Session(){
             <CodeHighlighter file_name="project / your_app / urls.py"  code={codes[14].Session[1]} language="python" number={false} addClass="mt-3 mb-3" copie={true}/>
             <CodeHighlighter file_name="project / your_app / views.py"  code={codes[14].Session[2]} language="python" number={false} addClass="mt-3 mb-3" copie={true}/>
             <ul><li>يزداد الرقم في كل مرة تقوم فيها باستدعاء الوظيفة وتقوم الوظيفة بتشغيل كل إعادة تحميل</li></ul>
-            <img src={images.django149} className="img"/>
+            <img src={images.django149} alt="django" className="img"/>
       </article>
     )
 }

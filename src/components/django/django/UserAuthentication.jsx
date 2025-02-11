@@ -122,7 +122,7 @@ export default function UserAuthentication(){
          <CodeHighlighter code={codes[8].Add_fields_to_User_SignUp[0]} file_name="project / handleAccount / forms.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <CodeHighlighter code={codes[8].Add_fields_to_User_SignUp[1]} file_name="project / handleAccount / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <CodeHighlighter code={codes[8].Add_fields_to_User_SignUp[2]} file_name="project / handleAccount / templates / signup.html" language="django" number={false} addclassName="mt-3 mb-3" copie={true}/>
-         <img src={images.django209} className="w-100 mt-2 mb-3"/> 
+         <img src={images.django209} alt="django" className="w-100 mt-2 mb-3"/> 
    </article>
    )
  }

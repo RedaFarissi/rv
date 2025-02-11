@@ -1,6 +1,6 @@
 import codes from "../../../assests/codes/django/django"
 import images from "../imagesDjango";
-import { CodeCommand , CodeHighlighter , Result } from "../../path";
+import { CodeCommand , CodeHighlighter  } from "../../path";
 
 export default function StaticAndMediaFiles(){
     return( 
@@ -17,7 +17,7 @@ export default function StaticAndMediaFiles(){
             <CodeHighlighter code={codes[4].Manage_static_files[2]} language="python" addclassName="mt-3 mb-3" copie={true}/> 
             <CodeHighlighter code={codes[4].Manage_static_files[3]} file_name="project / project / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/> 
             <ul><li>قم بإنشاء مجلد باسم <b>static/</b> في نفس مسار ملف <b>manage.py</b> مما يعنب بجانب تطبيقات المنشأت في مشروعك </li></ul>
-            <img src={images.django9} className="img"/>
+            <img src={images.django9} alt="django" className="img"/>
             <ul><li>يمكنك الآن إضافة جميع الملفات الثابتة أو المجلدات التي تحتوي على ملفات ثابت في <b>static/</b></li></ul>
             <h5  className="title-h5"> 3 - الحصول على الملفات من المجلد <b>static/</b> </h5>
             <p className="style_divv">
@@ -39,7 +39,7 @@ export default function StaticAndMediaFiles(){
                للسماح للمستخدم بتحميل الملفات في <b>Django</b>، يجب عليك تثبيت <b>Pillow</b> 
             </p>
             <CodeCommand>python -m pip install Pillow</CodeCommand>
-            <img src={images.django18} className="img"/>
+            <img src={images.django18} alt="django" className="img"/>
             <div className="mital">مثال : </div>
             <h6 className="title-h6"> إنشاء تطبيق آخر (app)</h6>
             <CodeCommand>python manage.py startapp app</CodeCommand>
