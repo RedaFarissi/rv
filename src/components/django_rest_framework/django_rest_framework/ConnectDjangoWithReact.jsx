@@ -63,12 +63,11 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'front', 'build', 'static')]   #new`}
 def front(request):
    return render(request, "index.html")`} file_name="project_name / app / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <CodeHighlighter code={`from django.contrib import admin
-from django.urls import path , include # add include
+from django.urls import path 
 from app.views import front   # new
 
 urlpatterns = [
    path('admin/', admin.site.urls),
-   path('api-auth/', include('rest_framework.urls')) ,  # authenticate
    path("", front , name="front"),   # new
 ]`} file_name="project_name / project_name / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <CodeCommand>python manage.py runserver</CodeCommand>
@@ -83,6 +82,34 @@ urlpatterns = [
    #...
    'rest_framework',   #new
 ]`} file_name="project_name / project_name / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+         <CodeHighlighter code={`from django.contrib import admin
+from django.urls import path , include # add include
+from app.views import front 
+
+urlpatterns = [
+   path('admin/', admin.site.urls),
+   path('api-auth/', include('rest_framework.urls')) ,  #  new authenticate
+   path("", front , name="front"),   
+]`} file_name="project_name / project_name / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <img src={images.django_rest_38} alt="django_rest_38" className="w-100" />
+            <h3 className="title-h5">1 -   مصادقة لوحة الإدارة path('admin/', admin.site.urls) </h3>
+            <ul>
+                <li>هذا هو نظام المصادقة الافتراضي للوحة إدارة Django.</li>
+                <li>عند الوصول إلى /admin/، تحتاج إلى تسجيل الدخول باستخدام حساب المشرف (superuser) أو حساب الموظف (staff).</li>
+                <li>يتم إدارة المصادقة باستخدام نظام المصادقة المدمج في Django (django.contrib.auth)</li>
+                <li>يمكنك إنشاء حساب مشرف باستخدام الأمر التالي</li>
+                <CodeCommand>python manage.py createsuperuser</CodeCommand>
+                <li>بعد تسجيل الدخول، يمكنك إدارة النماذج والمستخدمين من خلال لوحة الإدارة</li>
+            </ul>
+            <h3 className="title-h5">2 - مصادقة واجهة برمجة التطبيقات (API)  path('api-auth/', include('rest_framework.urls'))   </h3>
+            <ul>
+                <li>يتم توفيرها بواسطة Django REST Framework (DRF).</li>
+                <li>تُتيح للمستخدمين تسجيل الدخول والخروج عند استخدام الواجهة القابلة للتصفح (Browsable API).</li>
+                <li>عند زيارة /api-auth/login/، ستجد نموذج تسجيل دخول مشابهًا لنموذج Django admin، لكنه مخصص لمصادقة طلبات API.</li>
+                <li>يدعم المصادقة المستندة إلى الجلسات (Session Authentication) بشكل افتراضي.</li>
+                <li>يجب تفعيل مصادقة الجلسة في settings.py </li>
+            </ul>
+
          <h3 className="title-h3">12 - تثبيت CORS headers </h3>
          <CodeCommand>pip install django-cors-headers </CodeCommand>
          <CodeHighlighter code={`INSTALLED_APPS = [
