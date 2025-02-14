@@ -418,7 +418,11 @@ function React(props){
     <ul><li>إستخدام <b className="text-success">{"{"}withCredentials: true{"}"}</b> في طلب <b>Axios</b> يرتبط بمعالجة مشكلة مشاركة الموارد عبر أصل الموارد <b>(CORS)</b> وإدراج الاعتمادات مثل <b>(cookies)</b> أو <b>(session)</b>  في الطلب.</li></ul>
     
     <h3 className="title-h3" id="react_paypal_js"> 3 - مكتبة react-paypal-js </h3>
-    <ul><li>التفاصيل من <a href="https://paypal.github.io/react-paypal-js/?path=/story/getting-started--page">هنا</a></li></ul>
+    <ul>
+      <li>التفاصيل من <a href="https://paypal.github.io/react-paypal-js/?path=/story/getting-started--page" target="_blanck" role="">هنا</a></li>
+      <li> <a href="https://developer.paypal.com/dashboard/" target="_blanck" role="" ><bdi>https://developer.paypal.com/dashboard/</bdi></a></li>
+    </ul> 
+
     <h3 className="title-h3" id="react_sass"> 4 - مكتبة sass</h3>
     <h5 className="title-h5">1 - تثبيت المكتبة </h5>
     <CodeCommand>npm install sass</CodeCommand>

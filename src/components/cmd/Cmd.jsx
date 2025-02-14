@@ -135,6 +135,49 @@ export default function Cmd(props){
                 <h2 className="title-h2" id="Date_and_Time"> 22 - عرض أو ضبط التاريخ والوقت </h2>
                 <CodeCommand>date</CodeCommand>
                 <CodeCommand>time</CodeCommand>
+                <h2 className="title-h2" id="your_password_wifi">23 - احصل على كلمة المرور لجميع شبكات الواي فاي المتصلة بجهازك</h2>
+                <CodeCommand>   C:\Users\Dell{">"}<b class="text-danger">netsh wlan show profiles</b><br /><br />
+                    Profiles on interface Wi-Fi:<br /><br />
+                    Group policy profiles (read only)<br />
+                    ---------------------------------<br />
+                    &nbsp; &nbsp; &nbsp;  {"<"}None{">"}<br /><br />
+                    User profiles<br />
+                    -------------<br />
+                    &nbsp; &nbsp; &nbsp;   All User Profile     : <span className="text-warning">Bibliotheque_De_Riyad</span><br />
+                    &nbsp; &nbsp; &nbsp;   All User Profile     : <span className="text-warning">Fibre_MarocTelecom_2.4G</span><br />
+                    &nbsp; &nbsp; &nbsp;   All User Profile     : <span className="text-warning">HP=SMB01&lt;9C_4003dw LJ</span><br />
+                    &nbsp; &nbsp; &nbsp;   All User Profile     : <span className="text-warning">AndroidAP_5588</span><br />
+                    &nbsp; &nbsp; &nbsp;   All User Profile     : <span className="text-warning">inwi Home 4G 6C8142</span><br />
+                    &nbsp; &nbsp; &nbsp;   All User Profile     : <span className="text-warning">Linksys</span><br />
+                    &nbsp; &nbsp; &nbsp;   All User Profile     : <span className="text-warning">Tenda_E45A30</span><br />
+                    &nbsp; &nbsp; &nbsp;   All User Profile     : <span className="text-warning">Wifi_Perso_2.4Ghz</span><br />
+                    &nbsp; &nbsp; &nbsp;   All User Profile     : <span className="text-warning">ADSL_inwi_2.4G_6125</span><br />
+                    &nbsp; &nbsp; &nbsp;   All User Profile     : <span className="text-warning">AndroidAP6E8E</span><br />
+                    &nbsp; &nbsp; &nbsp;   All User Profile     : <span className="text-warning">tsunami</span><br />
+                    &nbsp; &nbsp; &nbsp;   All User Profile     : <span className="text-warning">TP-LINK_692579</span><br />
+                    <br />
+                    C:\Users\Dell{">"}<b class="text-danger">netsh wlan show profiles  name="<span class="text-success">TP-LINK_692579</span>" Key=Clear | find "Key Content"</b><br />
+                    &nbsp; &nbsp;  Key Content            : 39428689<br />
+                    <br />
+                    C:\Users\Dell{">"}<b class="text-danger">netsh wlan show profiles  name="<span class="text-success">Fibre_MarocTelecom_2.4G</span>" Key=Clear | find "Key Content"</b><br />
+                    &nbsp; &nbsp;  Key Content            : Qods3636<br />
+                </CodeCommand>
+                <h2 className="title-h2" id="All_Available_WiFi">24 -  إظهار جميع شبكات WiFi المتوفرة </h2>
+                <CodeCommand>C:\Users\Dell{">"}<b class="text-danger">netsh wlan show networks mode=bssid</b><br /><br />
+                Interface name : Wi-Fi<br />
+                There are 1 networks currently visible.<br /><br />
+                SSID 1 : TP-LINK_692579<br />
+                &nbsp; &nbsp; Network type       &nbsp;      : Infrastructure<br />
+                &nbsp; &nbsp; Authentication     &nbsp;      : WPA2-Personal<br />
+                &nbsp; &nbsp; Encryption         &nbsp;      : CCMP<br />
+                &nbsp; &nbsp; BSSID 1            &nbsp;      : 34:d8:94:89:35:76<br />
+                &nbsp; &nbsp;  &nbsp; &nbsp;   Signal             : 89%<br />
+                &nbsp; &nbsp;  &nbsp; &nbsp;   Radio type         : 801.11n<br />
+                &nbsp; &nbsp;  &nbsp; &nbsp;   Channel            : 1<br />
+                &nbsp; &nbsp;  &nbsp; &nbsp;   Basic rates (Mbps) : 1 * 5.5 11<br />
+                &nbsp; &nbsp;  &nbsp; &nbsp;   Other rates (Mbps) : 1 2 12 18 24 36 48 54<br />
+                </CodeCommand>
+
             </article>
         </section>
     </main>
