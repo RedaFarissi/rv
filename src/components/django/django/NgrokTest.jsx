@@ -6,7 +6,7 @@ export default function NgrokTest(){
         <article id="ModelForm">
             <h1 className="heading-style"> Django Ngrok test on Windows </h1> 
             
-            <ul><li> التفاصيل <a href="https://ngrok.com/docs/getting-started/" target="_blanck" role="link">من هنا  </a></li></ul>
+            <ul><li> التفاصيل <a href="https://ngrok.com/docs/getting-started/" target="_blanck" >من هنا  </a></li></ul>
             <h2 className="title-h2">1 - افتح PowerShell ك Administrator</h2>
             <p className="style_divv">
                 اضغط على <kbd>Windows</kbd> + <kbd>S</kbd>، واكتب <b>PowerShell</b>، وانقر بزر الماوس الأيمن فوق <b>Windows PowerShell</b>، واختر تشغيل كمسؤول.
@@ -45,7 +45,7 @@ export default function NgrokTest(){
             </CodePowerShell>
             <h2 className="title-h2"> 3 - قم بربط حسابك </h2>    
             <p className="style_divv">
-                بعد ذلك، قم بتوصيل وكيل ngrok بحساب ngrok الخاص بك. إذا لم تكن قد قمت بذلك بالفعل، فقم <a href="https://dashboard.ngrok.com/get-started/setup/windows" target="_blanck" role="link">بالتسجيل للحصول على حساب </a> ngrok. انسخ رمز مصادقة ngrok الخاص بك من لوحة معلومات ngrok الخاصة بك.
+                بعد ذلك، قم بتوصيل وكيل ngrok بحساب ngrok الخاص بك. إذا لم تكن قد قمت بذلك بالفعل، فقم <a href="https://dashboard.ngrok.com/get-started/setup/windows" target="_blanck">بالتسجيل للحصول على حساب </a> ngrok. انسخ رمز مصادقة ngrok الخاص بك من لوحة معلومات ngrok الخاصة بك.
             </p><br />
             <CodePowerShell>
                 PS C:\Windows\system32{">"} <span className="text-warning">ngrok config add-authtoken ************************************PChnJWv2TrR </span><br />
@@ -85,7 +85,7 @@ export default function NgrokTest(){
                 Region                        Europe (eu) <br />                             
                 Latency                       80ms    <br />                             
                 Web Interface                 http://127.0.0.1:4040 <br />                             
-                Forwarding                    https://bf09-160-178-211-192.ngrok-free.app -{">"} http://localhost:9000<br />            
+                Forwarding                    https://bf09-160-178-211-192.ngrok-free.app -{">"} http://localhost:9000<br /> <br />           
                 Connections                   ttl     opn     rt1     rt5     p50     p90  <br />
                  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;           0       0       0.00    0.00    0.00    0.00 <br />
                </pre>

@@ -8,6 +8,43 @@
     background-color: #121926 
     width: 100%
     z-index: 999
+    .img-logo-box-header
+        width: 42px
+        height: 42px
+        border: 1px dashed white
+        border-radius: 50%
+        padding: 2px
+        margin: auto
+        animation: logo-div 20s infinite normal
+        @keyframes logo-div 
+            0% 
+                transform: rotate(0deg)
+            80% 
+                transform: rotate(360deg)
+            100%  
+                transform: rotate(0deg)
+        @media (max-width: 991px) 
+            display: none
+    .my-logo-header
+        width: 100%
+        height: 100%
+        object-fit: cover
+        border-radius:50%
+        padding: 4px
+        animation: logo_div_img 20s infinite normal
+        background-color: #0dcaf0
+        font-size: 20px
+        text-align: center
+        font-family: "Anta", sans-serif
+        font-weight: 400
+        font-style: normal
+        @keyframes logo_div_img 
+            0% 
+                transform: rotate(0deg)
+            80% 
+                transform: rotate(-720deg)
+            100% 
+                transform: rotate(360deg)
     .header-logo 
         width: 40px
         height: 40px
@@ -75,7 +112,7 @@
             margin: 0 14px 
         .fa-paypal
             &:hover
-                color: black
+                color: #4574f6
         .menu-icon
             display: none
             @media (max-width: 1140px) 

@@ -1,6 +1,8 @@
-import { CodeCommand , CodeHighlighter , Result } from "../../path";
+import { CodeCommand , CodeHighlighter , Result , CodePowerShell } from "../../path";
 import images from "../imagesDjangoRest"
 import react_logo from "../../../assests/images/logo/react_logo.svg";
+import { Link } from "react-router-dom";
+import PowerShell_logo from "../../../assests/images/logo/PowerShell_logo.png";
 
 export default function ConnectDjangoWithReact(props){
 
@@ -642,6 +644,57 @@ function Home() {
 
 export default Home;`} file_name="project_name / front / src / home / Home.jsx" language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <img src={images.django_rest_37} alt="django rest result" className="w-100 mb-2"/>
+
+        <h2 className="title-h2" id="Ngrok_to_testing">5 - Ngrok لاختبار مشروع React و Django</h2>
+        <h3 className="title-h3">1 - راجع الدرس السابق حول كيفية استخدام Ngrok</h3>
+        <ul><li> <Link to="/django/ngrok-to-testing">من هنا</Link></li></ul>
+        <h3 className="title-h3">2 - البحث عن ملف التكوين أو إنشائه </h3>
+        <CodeCommand>ngrok config check</CodeCommand>
+        <div className="alert bg-dark text-light" dir="ltr">
+            C:\Users\Dell{">"} <span className="text-warning">ngrok config check</span> <br />
+            Valid configuration file at C:\Users\Dell\AppData\Local/ngrok/ngrok.yml<br /><br />
+        </div>
+        <ul>
+            <li>إذا كان ملف ngrok.yml موجودًا، فسوف يتم تأكيد مسار الملف. </li>
+            <li>وإذا لم يكن موجودًا، فسوف نقوم بإنشائه (الدرس السابق). </li>
+        </ul>
+        <h3 className="title-h3">3 - اذهب إلى المسار الذي تم إرجاعه  </h3>
+        <ul>
+            <li>باستخدام الأمر :</li>
+                <CodeCommand>notepad C:\Users\Dell\AppData\Local\ngrok\ngrok.yml</CodeCommand>
+            <li> أو افتحه يدويا </li>
+        </ul>
+        <h3 className="title-h3">4 - أضف إلى ngrok.yml</h3>
+       <CodeCommand>
+            tunnels: <br />
+            &nbsp;&nbsp;&nbsp; django: <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; addr: 8000 <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; proto: http <br />
+            &nbsp;&nbsp;&nbsp; react: <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; addr: 3000 <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; proto: http <br />
+        </CodeCommand>
+        <h3 className="title-h3">5 - تشغيل المشروع باستخدام ngrok </h3>
+        <CodeCommand>ngrok start --all</CodeCommand>
+        <CodePowerShell>PS C:\Windows\system32{">"} <span className="text-warning">ngrok start --all</span> <br /><br /> </CodePowerShell>
+        <br />
+        <div className="text-light bg-black" dir="ltr">
+            <h6 class="bg-light text-dark mb-3"> <img src={PowerShell_logo} alt="PowerShell_logo" className="ms-1 mb-1" style={{ width : "20px"}} />Administrator : Windows PowerShell</h6>
+           <pre>
+            <span style={{color : "aqua"}}>ngrok</span>                                                                                     (Ctrl+C to quit)  <br />                  
+            <span className="text-secondary">❤️  ngrok? We're hiring https://ngrok.com/careers</span> <br /><br /> 
+            <span className="text-success">Session Status                online</span>                    <br />                             
+            Account                       RedaFarissi (Plan: Free)  <br />                             
+            Version                       3.19.0  <br />                             
+            Region                        Europe (eu) <br />                             
+            Latency                       80ms    <br />                             
+            Web Interface                 http://127.0.0.1:4040 <br />                             
+            Forwarding                    https://4304-160-178-211-192.ngrok-free.app -{">"} http://localhost:8000<br />
+            Forwarding                    https://654e-160-178-211-192.ngrok-free.app -{">"} http://localhost:3000 <br /> <br />      
+            Connections                   ttl     opn     rt1     rt5     p50     p90  <br />
+             &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;           0       0       0.00    0.00    0.00    0.00 <br />
+           </pre>
+        </div>
     </article>
 </>
    )

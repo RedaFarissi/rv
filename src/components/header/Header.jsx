@@ -6,9 +6,6 @@ export default function Header(props){
     const divRef = useRef(null);
     const location = useLocation();
    
-    //2025
-    // const [searchValue, setSearchValue] = useState("");
-
     const programing = [
         {name:"HTML",link:"html"}, {name:"CSS",link:"css"}, {name:"JAVASCRIPT",link:"js"}, {name:"REACT.js",link:"react"}, 
         {name:"MYSQL",link:"mysql"}, {name:"PYTHON",link:"python"}, {name:"DJANGO",link:"django"},
@@ -17,7 +14,6 @@ export default function Header(props){
     ];
     
     useEffect(()=>{
-        //hide searchPhone when window less than or equal 470 
         window.addEventListener('resize', () => {
             const divSearchElement = props.searchPhone.current;
             if( window.innerWidth <= 470 ){
@@ -58,8 +54,10 @@ export default function Header(props){
 >
     <div className="header-main">
         <div className="container-h">
-            <Link to='/'>  
-               <i className="fa-solid fa-house fs-5 text-light"></i>
+            <Link to='/' className="text-decoration-none text-light">  
+                <div className="img-logo-box-header">
+                        <div className="my-logo-header"> RV </div> 
+                </div>
             </Link> &nbsp;&nbsp;
           
                 <div className="header-search-container">  
@@ -85,8 +83,11 @@ export default function Header(props){
                     <i className={`fas fa-user`}></i>
                 </Link>  */}
                 <i className="fa-brands fa-paypal btn btn-outline-light"></i>
-                <Link className="btn btn-outline-light ms-2" to='/login'> تسجيل الدخول </Link>
-                <Link className="btn btn-outline-light" to='/register'> إنشاء حساب</Link>
+                
+                {(localStorage.getItem('auth_token') !== null)? <button className="btn btn-outline-danger" onClick={props.logout}>تسجيل الخروج </button> : <div>
+                    <Link className="btn btn-outline-light" to='/register'> إنشاء حساب</Link>
+                    <Link className="btn btn-outline-light ms-2" to='/login'> تسجيل الدخول </Link>
+                </div> }
             </div>
         </div> 
     </div>

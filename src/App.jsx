@@ -115,7 +115,7 @@ function App() {
         ["APIView","What_is_APIView","post","get","put","delete",],
         ["class_generic_views","ListAPIView","CreateAPIView","RetrieveAPIView","UpdateAPIView","DestroyAPIView","ListCreateAPIView","RetrieveUpdateAPIView","RetrieveDestroyAPIView","RetrieveUpdateDestroyAPIView"],
         "status",
-        [ "DRF_and_React","Connect_Django_with_React","Get_data_in_React","Permissions","Authentication"],
+        [ "DRF_and_React","Connect_Django_with_React","Get_data_in_React","Permissions","Authentication","Ngrok_to_testing"],
     ];
     const php_list = [
       ["PHP Tutorial","Introduction","Install","Comments","Variables","echo print","Data Types","Strings","Numbers","Casting","Math","Constants","Operators","Conditions","Switch","Loops","Break","Functions","Arrays","Superglobals","Form Handling","RegEx","Date and Time","Include Files","Filters","Callback Functions","Exceptions","JSON"],
@@ -405,6 +405,7 @@ function App() {
             setSearchValue={setSearchValue}
             handleInputChange={handleInputChange}
             handleSubmit={handleSubmit}
+            logout={logout}
         />
         <Routes>
             <Route path='/'       element={<Home 

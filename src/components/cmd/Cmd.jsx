@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CodeCommand } from "../path";
+import { CodeCommand , Footer} from "../path";
 import images from "./imagesCmd";
 
 
@@ -23,6 +23,7 @@ export default function Cmd(props){
    }, [window.location.hash]); // Run the effect when the hash changes
    
     return(
+    <>
     <main onClick={ (event)=>{ props.clickMenuHeader(event, false) } }>
         <aside className="aside">
             <ul className="list-group m-0">
@@ -181,5 +182,12 @@ export default function Cmd(props){
             </article>
         </section>
     </main>
+    <Footer 
+        widthFooter={props.footerWidth.width}
+        block_1={props.footerWidth.block_1}
+        block_2={props.footerWidth.block_2}
+        blockChildStyle={{width: "100%"}}
+    />
+    </>
     )
 }   
