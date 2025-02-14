@@ -106,7 +106,7 @@ function App() {
         ["Django_Email","2_Step_Verification","send_email","list_emails"],
         "Django_Pagination","Form","ModelForm",
         ["Django_Filter","models_Objecjs_filter","raw_filter","lookup_expr","Q_filter","select_related",],
-        "Session","Context_Processors"
+        "Session","Context_Processors","Ngrok_to_testing"
     ];
     const django_rest_framework_matrix = [
         ["Introduction","What_is_django_rest_framework","What_is_API","Install_Django_Rest_Framework"],

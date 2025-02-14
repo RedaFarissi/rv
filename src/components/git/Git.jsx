@@ -1,8 +1,7 @@
-import { CodeCommand } from "../path";
+import { CodeCommand , CodePowerShell } from "../path";
 import images from "./imagesGit";
 import Footer from "../footer/Footer";
 import { useEffect } from "react";
-import PowerShell_logo from "../../assests/images/logo/PowerShell_logo.png";
 
 export default function Git(props){
     const arrays = props.git_list.map(e => <li className="list-group-item">
@@ -43,7 +42,7 @@ export default function Git(props){
                 </ul>
             </aside>
             <section className="section-conetent">
-                <h1 className="heading-style"> Git and  github</h1>
+                <h1 className="heading-style"> Git and github</h1>
                 <article id="Introduction">
                     <h2 className="title-h2 mt-5">1 - مقدمة عن Git</h2>
                     <p className="style_divv">
@@ -361,9 +360,7 @@ export default function Git(props){
                         <li><b class="text-danger">-b 4096</b> : إنشاء مفتاح 4096 بت (أكثر أمانًا من 2048 بت).</li>
                         <li><b class="text-danger">-C "your_email@example.com"</b> : يضيف تعليقًا (استخدم بريدك الإلكتروني الفعلي)..</li>
                     </ul>        
-            <div className="text-light" dir="ltr" style={{backgroundColor: "#012456"}}>
-                <h6 class="bg-light text-dark mb-5"> <img src={PowerShell_logo} alt="PowerShell_logo" className="ms-1 mb-1" style={{ width : "20px"}} /> Windows PowerShell</h6>
-                PS C:\Users\Dell{">"} <span class="text-warning">ssh-keygen -t rsa -b 4096 -C "redaesskouni@gmail.com"</span><br />
+                    <CodePowerShell>   PS C:\Users\Dell{">"} <span class="text-warning">ssh-keygen -t rsa -b 4096 -C "redaesskouni@gmail.com"</span><br />
                 Generating public/private rsa key pair.<br />
                 Enter file in which to save the key (C:\Users\Dell/.ssh/id_rsa):<br />
                 Enter passphrase (empty for no passphrase): **************<br />
@@ -371,11 +368,11 @@ export default function Git(props){
                 Your identification has been saved in C:\Users\Dell/.ssh/id_rsa<br />
                 Your public key has been saved in C:\Users\Dell/.ssh/id_rsa.pub<br />
                 The key fingerprint is:<br />
-                SHA256:pEFh/7r5DGBKfRazecdzedcezzsvBDeC7jIEpF5+Xulhc8 redaesskouni@gmail.com<br />
+                SHA256:pEFh/7r5DdGBKfeRazecdzedcezfghsvBDeC7jIEpF5+Xulhc8 redaeskouni00@gmail.com<br />
                 The key's randomart image is:<br />
                 <pre style={{whiteSpace: "pre", fontFamily: "monospace"}}> {stylePreTag} </pre>
                 PS C:\Users\Dell{">"} <br /><br />
-            </div>
+                </CodePowerShell>
             <div>
                 <h5 class="title-h5"> 1 - تعيين كلمة المرور (اختياري ولكن موصى به)</h5>
                 <ul><li>أدخل كلمة مرور قوية أو اضغط على Enter للتخطي.</li></ul>
@@ -391,15 +388,14 @@ export default function Git(props){
             <h2 class="title-h5"> 3 - انسخ قيمة مفتاح SSH العام (pub) إلى حساب GitHub الخاص بك</h2>
             <ul><li>استخدم هذا الطلب للحصول عليه </li></ul>
             <CodeCommand>  Get-Content C:\Users\dell\.ssh\id_rsa.pub </CodeCommand>
-            <div className="text-light" dir="ltr" style={{backgroundColor: "#012456"}}>
-                    <h6 class="bg-light text-dark mb-5"> <img src={PowerShell_logo} alt="PowerShell_logo" className="ms-1 mb-1" style={{ width : "20px"}} /> Windows PowerShell</h6>                
-                    PS C:\Users\Dell{">"} <span class="text-warning"> Get-Content C:\Users\dell\.ssh\id_rsa.pub</span>
-                    <div style={{ wordBreak:"break-all"}}> ssh-rsa AAA3NzaAADAQABAAACAQC3eeaCkPZSwVdTqt4C09JWcYTGuYjvJ63/jGhrMsiPEnAsxsJNRWGDYdZCJ+MtkwBGEmM0pfLBG3MWkkNko5VYdCjvaV4ZWOKvH+ammS9AOiIJDPVTaKo3LV7bE7e4sKn3HZHt8K+RkXLRZJQByNm3o73solUm+IEvQLZViKvQZTZzSC9QkO+Kn8aE222zy93/RthtJHIGJUuYwd/hwpC9rCHjeoeeNNMpCKandH7B5wPN3DtUsVVrK/0DBwNhP3JBVQIqcYTwCprkkwfp11Ms2b1aIfm/7ktfR9zLMlkDmy3WNq83PzmvbC7ZcQ+GX6F+WLHBSqaCeO+JCvRjwOxfdYc/EVAPS2C1hPB1HLyDkzNDEF/SQdrJKy4u7VwB+aP/JH62vyAX5gr5d17TDVGTxzQd/4dInBQ== redaesskouni@gmail.com </div>
-                    PS C:\Users\Dell{">"} <br /><br />
-            </div>
+            <CodePowerShell>
+                PS C:\Users\Dell{">"} <span class="text-warning"> Get-Content C:\Users\dell\.ssh\id_rsa.pub</span>
+                <div style={{ wordBreak:"break-all"}}> ssh-rsa AAA3NzaAADAQABAAACAQC3eeaCkPZSwVdTqt4C09JWcYTGuYjvJ63/jGhrMsiPEnAsxsJNRWGDYdZCJ+MtkwBGEmM0pfLBG3MWkkNko5VYdCjvaV4ZWOKvH+ammS9AOiIJDPVTaKo3LV7bE7e4sKn3HZHt8K+RkXLRZJQByNm3o73solUm+IEvQLZViKvQZTZzSC9QkO+Kn8aE222zy93/RthtJHIGJUuYwd/hwpC9rCHjeoeeNNMpCKndH7B5wPN3DtUsVVrK0DBwNhP3JBVQIqcYTwCrkkwfp11Ms2b1aIfm7ktfR9zLMlkDmy3WNq83PbC7ZcQ+GX6F+WSqaCeO+JCvRjwOxfdYc/EV2C1hPB1HLyDkzNDEF/SQdrJKy4u7VwB+aP/JH62vyAX5gr5d17TDVGTxzQd/4dInBQ== redaesskouni@gmail.com </div>
+                PS C:\Users\Dell{">"} <br /><br />
+            </CodePowerShell>
             <ul>
                 <li>نسخ المحتوى الذي تم إرجاعه</li>
-                <li>انتقل إلى <a href="https://github.com/settings/keys" target="_blank">GitHub SSH Settings</a> .</li>
+                <li>انتقل إلى <a href="https://github.com/settings/keys" target="_blank" rel="noreferrer">GitHub SSH Settings</a> .</li>
                 <li>انقر <b>"New SSH Key".</b></li>
                 <li>العنوان: (على سبيل المثال، "My Laptop Key").</li>
                 <li>ألصق المفتاح</li>

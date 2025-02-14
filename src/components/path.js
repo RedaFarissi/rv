@@ -36,6 +36,8 @@ export {default as CodeHighlighter} from './codeHighlighter/CodeHighlighter';
 
 export {default as CodeCommand} from './codeCommand/CodeCommand';
 
+export {default as CodePowerShell} from './codePowerShell/CodePowerShell';
+
 export {default as InteractivCss} from './css/InteractivCss';
 
 

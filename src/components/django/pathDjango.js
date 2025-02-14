@@ -15,5 +15,6 @@ export {default as ModelForm} from './django/ModelForm';
 export {default as DjangoFilter} from './django/DjangoFilter';
 export {default as Session} from './django/Session';
 export {default as ContextProcessors} from './django/ContextProcessors';
+export {default as NgrokTest} from './django/NgrokTest';
 
 export {default as Footer} from '../footer/Footer';
