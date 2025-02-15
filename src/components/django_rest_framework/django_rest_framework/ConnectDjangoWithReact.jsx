@@ -645,7 +645,145 @@ function Home() {
 export default Home;`} file_name="project_name / front / src / home / Home.jsx" language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <img src={images.django_rest_37} alt="django rest result" className="w-100 mb-2"/>
 
-        <h2 className="title-h2" id="Ngrok_to_testing">5 - Ngrok لاختبار مشروع React و Django</h2>
+
+
+
+        <h2 className="title-h2" id="PayPal">5 - الدفع عن طريق PayPal في Django وReact  </h2>
+        <h3 className="title-h3">1 - إنشاء حساب تجاري على PayPal </h3>
+        <p className="style_divv">
+            <ul>
+                <li>انتقل إلى <a href="https://developer.paypal.com/dashboard/" target="_blanck">PayPal Developer Dashboard</a> وقم بتسجيل الدخول.</li>
+                <li>قم بإنشاء تطبيق PayPal ضمن Apps & Credentials الاعتماد الخاصة بي (حدد "Live" للإنتاج أو "Sandbox" للاختبار).</li>
+                <li>احصل على Client ID و Secret Key الخاص بك.</li>
+            </ul>
+        </p>
+        <h3 className="title-h3">2 - تثبيت PayPal SDK في React </h3>
+        <ul><li>قم بتشغيل هذا الأمر في مشروع React الخاص بك:</li></ul>
+        <CodeCommand>npm install @paypal/react-paypal-js</CodeCommand>
+
+        <h3 className="title-h3">3 -إنشاء زر PayPal في React </h3>
+        <CodeHighlighter code={`import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+
+const PayPalPayment = () => {
+  return (
+    <PayPalScriptProvider options={{ "client-id": "YOUR_PAYPAL_CLIENT_ID" }}>
+      <PayPalButtons
+        createOrder={(data, actions) => {
+          return actions.order.create({
+            purchase_units: [
+              {
+                amount: {
+                  value: "10.00", // Change this to your price
+                },
+              },
+            ],
+          });
+        }}
+        onApprove={(data, actions) => {
+          return actions.order.capture().then((details) => {
+            alert(\`Transaction completed by \${details.payer.name.given_name}\`);
+            // Send transaction details to Django backend
+            fetch("/api/paypal-success/", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ orderID: data.orderID }),
+            });
+          });
+        }}
+      />
+    </PayPalScriptProvider>
+  );
+};
+
+export default PayPalPayment;`} file_name="front / src / components / PayPalPayment.jsx" language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        <h3 className="title-h3">4. التعامل مع الدفع في Django Backend</h3>
+        <h5 className="title-h5">1 - تثبيت  الطلبات  (requests)</h5>
+        <CodeCommand>pip install requests</CodeCommand>
+
+        <h5 className="title-h5">2 - إنشاء تطبيق الدفع</h5>
+        <CodeCommand>python manage.py startapp payment</CodeCommand>
+        <ul>
+            <li>أضفه إلى الإعدادات</li>
+        </ul>
+        <h5 className="title-h5">3 - views.py</h5>
+        <CodeHighlighter code={`import requests
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+
+PAYPAL_CLIENT_ID = "YOUR_PAYPAL_CLIENT_ID"
+PAYPAL_SECRET = "YOUR_PAYPAL_SECRET"
+PAYPAL_API_URL = "https://api-m.paypal.com"  # Use sandbox URL for testing: "https://api-m.sandbox.paypal.com"
+
+@csrf_exempt
+def paypal_success(request):
+    if request.method == "POST":
+        data = request.POST
+        order_id = data.get("orderID")
+
+        # Verify the order with PayPal
+        auth = (PAYPAL_CLIENT_ID, PAYPAL_SECRET)
+        response = requests.get(f"{PAYPAL_API_URL}/v2/checkout/orders/{order_id}", auth=auth)
+
+        if response.status_code == 200:
+            order_info = response.json()
+            # Process the order (store in database, send confirmation email, etc.)
+            return JsonResponse({"message": "Payment successful!", "order": order_info})
+        else:
+            return JsonResponse({"error": "Payment verification failed."}, status=400)
+
+    return JsonResponse({"error": "Invalid request."}, status=400)
+`} file_name="payment / views.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        
+        <h5 className="title-h5">4 - urls.py</h5>
+        <CodeHighlighter code={`from django.urls import path
+from .views import paypal_success
+
+urlpatterns = [
+    path("api/paypal-success/", paypal_success, name="paypal_success"),
+]`} file_name="payment / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+            <ul className="mb-4">
+                <li>استبدل "YOUR_PAYPAL_CLIENT_ID" و"YOUR_PAYPAL_SECRET" ببيانات الاعتماد الفعلية الخاصة بك.</li>
+                <li>قم بتشغيل واجهة Django الخلفية وواجهة React الأمامية.</li>
+                <li>انقر فوق زر PayPal وأكمل الدفع.</li>
+                <li>تحقق مما إذا كان PayPal يرسل تأكيدًا إلى واجهة برمجة تطبيقات Django الخاصة بك.</li>
+            </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2 className="title-h2" id="Ngrok_to_testing">6 - Ngrok لاختبار مشروع React و Django</h2>
         <h3 className="title-h3">1 - راجع الدرس السابق حول كيفية استخدام Ngrok</h3>
         <ul><li> <Link to="/django/ngrok-to-testing">من هنا</Link></li></ul>
         <h3 className="title-h3">2 - البحث عن ملف التكوين أو إنشائه </h3>
@@ -661,7 +799,7 @@ export default Home;`} file_name="project_name / front / src / home / Home.jsx" 
         <h3 className="title-h3">3 - اذهب إلى المسار الذي تم إرجاعه  </h3>
         <ul>
             <li>باستخدام الأمر :</li>
-                <CodeCommand>notepad C:\Users\Dell\AppData\Local\ngrok\ngrok.yml</CodeCommand>
+            <CodeCommand>notepad C:\Users\Dell\AppData\Local\ngrok\ngrok.yml</CodeCommand>
             <li> أو افتحه يدويا </li>
         </ul>
         <h3 className="title-h3">4 - أضف إلى ngrok.yml</h3>
@@ -695,6 +833,9 @@ export default Home;`} file_name="project_name / front / src / home / Home.jsx" 
              &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;           0       0       0.00    0.00    0.00    0.00 <br />
            </pre>
         </div>
+
+
+
     </article>
 </>
    )

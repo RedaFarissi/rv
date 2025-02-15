@@ -1,6 +1,6 @@
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
 import { 
-    Header,Home,Html,Css,Js,React,Mysql,Python,Django,DjangoRestFramework,Cmd,Git,Php,Laravel,Login,Search,CreateAccount,
+    Header,Home,Html,Css,Js,React,Mysql,Python,Django,DjangoRestFramework,Cmd,Git,Php,Laravel,Login,Search,CreateAccount,PayPalPayment
 } from './components/path';
 import { useEffect, useRef , useState} from 'react';
 import "./App.sass";
@@ -115,7 +115,7 @@ function App() {
         ["APIView","What_is_APIView","post","get","put","delete",],
         ["class_generic_views","ListAPIView","CreateAPIView","RetrieveAPIView","UpdateAPIView","DestroyAPIView","ListCreateAPIView","RetrieveUpdateAPIView","RetrieveDestroyAPIView","RetrieveUpdateDestroyAPIView"],
         "status",
-        [ "DRF_and_React","Connect_Django_with_React","Get_data_in_React","Permissions","Authentication","Ngrok_to_testing"],
+        [ "DRF_and_React","Connect_Django_with_React","Get_data_in_React","Permissions","Authentication","PayPal","Ngrok_to_testing"],
     ];
     const php_list = [
       ["PHP Tutorial","Introduction","Install","Comments","Variables","echo print","Data Types","Strings","Numbers","Casting","Math","Constants","Operators","Conditions","Switch","Loops","Break","Functions","Arrays","Superglobals","Form Handling","RegEx","Date and Time","Include Files","Filters","Callback Functions","Exceptions","JSON"],
@@ -521,6 +521,7 @@ function App() {
                 searchAndRetrieve={searchAndRetrieve}
                 scrollY_to_0={scrollY_to_0}
             />} />
+            <Route path='/paypal-payment' element={<PayPalPayment />} />
             <Route path='/login' element={<Login url={url} />} />
             <Route path='/register' element={<CreateAccount url={url} />} />
         </Routes>

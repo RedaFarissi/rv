@@ -60,29 +60,28 @@ export default function Header(props){
                 </div>
             </Link> &nbsp;&nbsp;
           
-                <div className="header-search-container">  
-            <form onSubmit={props.handleSubmit} >
-                    <input type="text" name="search" className="search-field"
-                        value={props.searchValue} // Step 4: Bind the value to state
-                        onChange={props.handleInputChange} // Step 5: Handle input change 
-                    />
-                    <Link to='/search'> 
-                    <button className="search-btn" type="submit">
-                        <i className="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                    </Link>
-            </form>
-                </div>
+            <div className="header-search-container">  
+                <form onSubmit={props.handleSubmit} >
+                        <input type="text" name="search" className="search-field"
+                            value={props.searchValue} // Step 4: Bind the value to state
+                            onChange={props.handleInputChange} // Step 5: Handle input change 
+                        />
+                        <Link to='/search'> 
+                            <button className="search-btn" type="submit">
+                                <i className="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </Link>
+                </form>
+            </div>
 
-            <div className={`header-icons`} >  
+            <div className={`header-icons`} >
                 <div className={`${ (checkAboutRouteHome()) ? "d-none" : "d-block" }`}>
                     <i onClick={(event)=>{ props.clickMenuHeader(event , true) }} className={`menu-icon fa-solid fa-bars`}></i>
-                </div>        
-                
-                {/* <Link to='/login'>
-                    <i className={`fas fa-user`}></i>
-                </Link>  */}
-                <i className="fa-brands fa-paypal btn btn-outline-light"></i>
+                </div>
+
+                <Link  to='/paypal-payment'>
+                    <i className="fa-brands fa-paypal btn btn-outline-light"></i>
+                </Link>
                 
                 {(localStorage.getItem('auth_token') !== null)? <button className="btn btn-outline-danger" onClick={props.logout}>تسجيل الخروج </button> : <div>
                     <Link className="btn btn-outline-light" to='/register'> إنشاء حساب</Link>

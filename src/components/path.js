@@ -40,6 +40,10 @@ export {default as CodePowerShell} from './codePowerShell/CodePowerShell';
 
 export {default as InteractivCss} from './css/InteractivCss';
 
+export {default as PayPalPayment} from './paypalpayment/PayPalPayment';
+
+
+
 
 export {default as Search} from './search/Search';
 
