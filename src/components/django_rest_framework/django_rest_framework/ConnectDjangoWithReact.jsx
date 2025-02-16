@@ -743,44 +743,12 @@ from .views import paypal_success
 urlpatterns = [
     path("api/paypal-success/", paypal_success, name="paypal_success"),
 ]`} file_name="payment / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
-            <ul className="mb-4">
-                <li>استبدل "YOUR_PAYPAL_CLIENT_ID" و"YOUR_PAYPAL_SECRET" ببيانات الاعتماد الفعلية الخاصة بك.</li>
-                <li>قم بتشغيل واجهة Django الخلفية وواجهة React الأمامية.</li>
-                <li>انقر فوق زر PayPal وأكمل الدفع.</li>
-                <li>تحقق مما إذا كان PayPal يرسل تأكيدًا إلى واجهة برمجة تطبيقات Django الخاصة بك.</li>
-            </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <ul className="mb-4">
+            <li>استبدل "YOUR_PAYPAL_CLIENT_ID" و"YOUR_PAYPAL_SECRET" ببيانات الاعتماد الفعلية الخاصة بك.</li>
+            <li>قم بتشغيل واجهة Django الخلفية وواجهة React الأمامية.</li>
+            <li>انقر فوق زر PayPal وأكمل الدفع.</li>
+            <li>تحقق مما إذا كان PayPal يرسل تأكيدًا إلى واجهة برمجة تطبيقات Django الخاصة بك.</li>
+        </ul>
 
 
         <h2 className="title-h2" id="Ngrok_to_testing">6 - Ngrok لاختبار مشروع React و Django</h2>

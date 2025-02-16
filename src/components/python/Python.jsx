@@ -33,9 +33,9 @@ export default function Python(props){
                   <Route path='/'  element={<Introduction  />} />
                   <Route path='introduction' element={<Introduction  />} />
                   <Route path='install-windows' element={<InstallPython  />} />
-                  <Route path='execute-python-in-cmd' element={<ExecutePythonInCmd  />} />
+                  <Route path='execute-in-cmd' element={<ExecutePythonInCmd  />} />
                   <Route path='indentation'  element={<Indentation  />} />
-                  <Route path='python-in-visual-studio-code' element={<PythonInVisualStudioCode  />} />
+                  <Route path='in-visual-studio-code' element={<PythonInVisualStudioCode  />} />
                   <Route path='comments' element={<Comments  />} />
                   <Route path='variables' element={<Variables  />} />
                   <Route path='casting' element={<Casting  />} />

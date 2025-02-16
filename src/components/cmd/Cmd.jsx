@@ -137,7 +137,10 @@ export default function Cmd(props){
                 <CodeCommand>date</CodeCommand>
                 <CodeCommand>time</CodeCommand>
                 <h2 className="title-h2" id="your_password_wifi">23 - احصل على كلمة المرور لجميع شبكات الواي فاي المتصلة بجهازك</h2>
-                <CodeCommand>   C:\Users\Dell{">"}<b class="text-danger">netsh wlan show profiles</b><br /><br />
+                <CodeCommand> netsh wlan show profiles </CodeCommand>
+                <CodeCommand> netsh wlan show profiles  name="WIFI_NAME" Key=Clear | find "Key Content" </CodeCommand>
+                <div className="mital"> متال : </div>
+                <CodeCommand>C:\Users\Dell{">"}<b class="text-danger">netsh wlan show profiles</b><br /><br />
                     Profiles on interface Wi-Fi:<br /><br />
                     Group policy profiles (read only)<br />
                     ---------------------------------<br />
@@ -164,19 +167,21 @@ export default function Cmd(props){
                     &nbsp; &nbsp;  Key Content            : Qods3636<br />
                 </CodeCommand>
                 <h2 className="title-h2" id="All_Available_WiFi">24 -  إظهار جميع شبكات WiFi المتوفرة </h2>
+                <CodeCommand> netsh wlan show networks mode=bssid </CodeCommand>
+                <div className="mital"> متال : </div>
                 <CodeCommand>C:\Users\Dell{">"}<b class="text-danger">netsh wlan show networks mode=bssid</b><br /><br />
-                Interface name : Wi-Fi<br />
-                There are 1 networks currently visible.<br /><br />
-                SSID 1 : TP-LINK_692579<br />
-                &nbsp; &nbsp; Network type       &nbsp;      : Infrastructure<br />
-                &nbsp; &nbsp; Authentication     &nbsp;      : WPA2-Personal<br />
-                &nbsp; &nbsp; Encryption         &nbsp;      : CCMP<br />
-                &nbsp; &nbsp; BSSID 1            &nbsp;      : 34:d8:94:89:35:76<br />
-                &nbsp; &nbsp;  &nbsp; &nbsp;   Signal             : 89%<br />
-                &nbsp; &nbsp;  &nbsp; &nbsp;   Radio type         : 801.11n<br />
-                &nbsp; &nbsp;  &nbsp; &nbsp;   Channel            : 1<br />
-                &nbsp; &nbsp;  &nbsp; &nbsp;   Basic rates (Mbps) : 1 * 5.5 11<br />
-                &nbsp; &nbsp;  &nbsp; &nbsp;   Other rates (Mbps) : 1 2 12 18 24 36 48 54<br />
+                    Interface name : Wi-Fi<br />
+                    There are 1 networks currently visible.<br /><br />
+                    SSID 1 : TP-LINK_692579<br />
+                    &nbsp; &nbsp; Network type       &nbsp;      : Infrastructure<br />
+                    &nbsp; &nbsp; Authentication     &nbsp;      : WPA2-Personal<br />
+                    &nbsp; &nbsp; Encryption         &nbsp;      : CCMP<br />
+                    &nbsp; &nbsp; BSSID 1            &nbsp;      : 34:d8:94:89:35:76<br />
+                    &nbsp; &nbsp;  &nbsp; &nbsp;   Signal             : 89%<br />
+                    &nbsp; &nbsp;  &nbsp; &nbsp;   Radio type         : 801.11n<br />
+                    &nbsp; &nbsp;  &nbsp; &nbsp;   Channel            : 1<br />
+                    &nbsp; &nbsp;  &nbsp; &nbsp;   Basic rates (Mbps) : 1 * 5.5 11<br />
+                    &nbsp; &nbsp;  &nbsp; &nbsp;   Other rates (Mbps) : 1 2 12 18 24 36 48 54<br />
                 </CodeCommand>
 
             </article>

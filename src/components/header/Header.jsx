@@ -10,7 +10,7 @@ export default function Header(props){
         {name:"HTML",link:"html"}, {name:"CSS",link:"css"}, {name:"JAVASCRIPT",link:"js"}, {name:"REACT.js",link:"react"}, 
         {name:"MYSQL",link:"mysql"}, {name:"PYTHON",link:"python"}, {name:"DJANGO",link:"django"},
         {name:"DJANGO REST FRAMEWORK",link:"django-rest-framework"}, {name:"PHP",link:"php"}, {name:"LARAVEL" , link:"laravel"},
-        {name:"Git" , link:"git"} , {name:"CMD",link:"powerShell"}
+        {name:"Git" , link:"git"} , {name:"CMD", link:"powerShell"}
     ];
     
     useEffect(()=>{
@@ -30,7 +30,7 @@ export default function Header(props){
 
     const links = programing.map(e=> 
         <li className="menu-category">
-            <Link to={e.link} className={`menu-title color-link-nav-light`}>
+            <Link to={e.link} className={`menu-title color-link-nav-light`} style={{cursor: "pointer"}}>
                 {e.name}
             </Link>
         </li>);
