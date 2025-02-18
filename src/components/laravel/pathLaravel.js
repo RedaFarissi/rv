@@ -9,5 +9,5 @@ export {default as Middleware }  from './laravel/Middleware.jsx';
 export {default as Packages }  from './laravel/Packages.jsx';
 export {default as Tinker }  from './laravel/Tinker.jsx';
 export {default as GitClone }  from './laravel/GitClone.jsx';
-
+export {default as ReactVite }  from './laravel/ReactVite.jsx';
 export {default as Footer} from '../footer/Footer';

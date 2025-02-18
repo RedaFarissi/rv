@@ -2,7 +2,7 @@ import { useEffect, useRef} from 'react';
 import { Routes, Route , Link } from "react-router-dom";
 import{
    Introduction , Mvc , Database , DatabaseQueryBuilder ,  DatabaseRouteResource , 
-   Git , Mail , Middleware , Packages , Tinker , GitClone  , Footer
+   Git , Mail , Middleware , Packages , Tinker , GitClone  , ReactVite ,  Footer 
 } from "./pathLaravel.js";
 
 export default function Laravel(props){
@@ -75,6 +75,7 @@ export default function Laravel(props){
              <Route path='/packages'  element={<Packages  />} />                
              <Route path='/tinker'  element={<Tinker  />} />                
              <Route path='/clone-github'  element={<GitClone  />} />                
+             <Route path='/react-vite'  element={<ReactVite  />} />                
          </Routes>
       </section>
    </main>

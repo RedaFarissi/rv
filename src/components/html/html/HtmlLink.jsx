@@ -25,7 +25,7 @@ p{
             غالبا ما يستخدم الوسم <kbd>&lt;link&gt;</kbd> للارتباط بأوراق الأنماط الخارجية أو لإضافة رمز <b>favicon</b> إلى موقعك على الويب.<br/>
             يتم وضع الوسم <kbd>&lt;link&gt;</kbd>  داخل الوسم <kbd>&lt;head&gt;</kbd>  و هو وسم فارغ، يحتوي على السمات فقط.
         </p>
-        <div className="mital">مثال : </div>
+        <div className="mital">مثال 1 : </div>
         <ul><li>يجب أن تكون الصورة من نوع <b>icon</b> داخل نفس المجلد الذي يحتوي على ملف <b>HTML</b></li></ul>
         <CodeHighlighter file_name="index.html" code=""  language="html" is_html={true} title="Html Link" addClass="mt-3 mb-3" copie={true}/>
         <Result title='Html Link' logo={props.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
@@ -39,6 +39,11 @@ p{
             <h1 className="html-link-h1">My Heading</h1>
             <p className="html-link-p">My Paragraph.</p>
         </Result>
+        <div className="mital">مثال 3 : </div>
+        <ul><li>bootstrap</li></ul>
+        <CodeHighlighter file_name="index.html" code={`<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  
+        `} head={codeExempleHtml[0]} language="html" is_html={false} title="Html Link" addClass="mt-3 mb-3" copie={true}/>
+      
     </article>
 </>
 )
