@@ -1,5 +1,5 @@
-import { CodeCommand , CodeHighlighter ,  Result , ResultAlert } from "../../path";
-import { useState } from "react";
+import { CodeCommand , CodeHighlighter } from "../../path";
+  import images from "../imagesLaravel";
 
 export default function ReactVite(props){
 
@@ -24,7 +24,7 @@ export default function ReactVite(props){
         <div className="mital">مثال :</div>
         <div className="alert bg-dark text-light">
             <pre>
-        C:\xampp\htdocs{">"}laravel new laravel-react-vite <br />
+        C:\xampp\htdocs{">"}<span className="text-danger">laravel new laravel-react-vite </span><br />
         <br />
 _                               _  <br />
 | |                             | |<br />
@@ -37,12 +37,12 @@ Would you like to install a starter kit? [No starter kit]:<br />
 [none     ] No starter kit<br />
 [breeze   ] Laravel Breeze<br />
 [jetstream] Laravel Jetstream<br />
-{">"} none<br />
+{">"} <span className="text-danger">none</span><br />
 <br /><br />
 Which testing framework do you prefer? [Pest]:<br />
 [0] Pest<br />
 [1] PHPUnit<br />
-{">"} 0<br /> </pre>
+{">"} <span className="text-danger">0</span><br /> </pre>
         </div>
         <ul>
             <li>انتقل إلى اتجاه مشروع Laravel</li>
@@ -76,9 +76,9 @@ Done. Now run:<br />
   npm run dev<br />
   <br />
   <br />
-C:\xampp\htdocs\laravel-react-vite{">"}cd front<br />
+C:\xampp\htdocs\laravel-react-vite{">"} <span className="text-danger">cd front</span><br />
 <br />
-C:\xampp\htdocs\laravel-react-vite\front{">"}npm install<br />
+C:\xampp\htdocs\laravel-react-vite\front{">"}<span className="text-danger">npm install</span><br />
 <br />
 added 259 packages, and audited 260 packages in 1m<br />
 <br />
@@ -87,13 +87,19 @@ added 259 packages, and audited 260 packages in 1m<br />
   <br />
 found 0 vulnerabilities<br />
 <br />
+C:\xampp\htdocs\laravel-react-vite\front{">"}<span className="text-danger">npm run dev</span><br />
 <br />
-  VITE v6.1.0  ready in 608 ms<br />
+{">"} front@0.0.0 dev<br />
+{">"} vite<br />
+<br /><br />
+  VITE v6.1.1  ready in 279 ms<br />
   <br />
   ➜  Local:   <span className="text-success">http://localhost:5173/</span><br />
   ➜  Network: use --host to expose<br />
-  ➜  press h + enter to show help   <br /></pre>
+  ➜  press h + enter to show help<br />
+</pre>
         </div>
+        <img src={images.laravel1} alt="laravel react" className="w-100" />
         <h2 className='title-h2' id="Switch_Port">4 -  تبديل  المنفذ </h2>
         <ul><li>انتقل إلى ملف <b>package.json</b> في المجلد <bdi>front/</bdi> وأضف <bdi>--port=3000</bdi></li></ul>
         <div className='alert bg-light text-dark ' dir="ltr"> 
@@ -102,7 +108,124 @@ found 0 vulnerabilities<br />
              &nbsp; &nbsp; &nbsp;   .....<br />
             {"}"}<br />
         </div>
+        <div className="alert bg-dark text-light">
+            <pre>
+C:\xampp\htdocs\laravel-react-vite\front{">"}<span className="text-danger">npm run dev</span><br />
+<br />
+{">"} front@0.0.0 dev<br />
+{">"} vite --port=3000<br />
+<br />
+<br />
+  VITE v6.1.0  ready in 430 ms<br />
+  <br />
+  ➜  Local:   <span className="text-success">http://localhost:3000/</span><br />
+  ➜  Network: use --host to expose<br />
+  ➜  press h + enter to show help</pre>
+        </div><br />
+        <h2 className='title-h2' id="Install_react-router-dom">5 - تثبيت  react-router-dom </h2>
+        <CodeCommand> npm install react-router-dom -S </CodeCommand>
+        <div className="alert bg-dark text-light">
+            <pre>C:\xampp\htdocs\laravel-react-vite\front{">"}<span className="text-danger">npm install react-router-dom -S</span> <br/>
+<br/>
+added 6 packages, and audited 265 packages in 7s<br/>
+<br/>
+108 packages are looking for funding<br/>
+  run `npm fund` for details<br/>
+  <br/>
+3 moderate severity vulnerabilities<br/>
+<br/>
+To address all issues (including breaking changes), run:<br/>
+  npm audit fix --force<br/>
+  <br/>
+Run `npm audit` for details.<br/></pre>
+        </div>
+        <h2 className='title-h2' id="Create_views_folder">6 - إنشاء مجلد <bdi>views/</bdi> (أو <bdi>pages/</bdi>) في <bdi>front/src/</bdi> </h2>
+        <ul>
+          <li>في المجلد <bdi>views/</bdi> سنضع جميع الصفحات ذات الامتداد jsx .</li>
+          <li><bdi>front/src/views/Login.jsx</bdi></li>
+          <li><bdi>front/src/views/Signup.jsx</bdi></li>
+          <li><bdi>front/src/views/User.jsx</bdi></li>
+          <li><bdi>front/src/views/Home.jsx</bdi></li>
+        </ul>
+        <CodeHighlighter  code={`export default function Login(){
+    return (
+        <>
+            <h2>Login Page</h2>
+        </>
+    )
+}`} file_name="laravel-react-vite / front / src / views / Login.jsx" language="js" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={`export default function Signup(){
+    return (
+        <>
+            <h2>Signup Page</h2>
+        </>
+    )
+}`} file_name="laravel-react-vite / front / src / views / Signup.jsx" language="js" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={`export default function User(){
+    return (
+        <>
+            <h2>User Page</h2>
+        </>
+    )
+}`} file_name="laravel-react-vite / front / src / views / User.jsx" language="js" number={false} addclassName="mt-3 mb-3" copie={true}/>
+<CodeHighlighter  code={`export default function Home(){
+    return (
+        <>
+            <h2>Home Page</h2>
+        </>
+    )
+}`} file_name="laravel-react-vite / front / src / views / Home.jsx" language="js" number={false} addclassName="mt-3 mb-3" copie={true}/>
 
+
+        <h2 className='title-h2' id="editorconfig_file">6 - ملف .editorconfig </h2>
+        <ul><li>أضف هذا إلى الملف <bdi>.editorconfig</bdi> الموجود في المجلد <bdi>laravel-react-vite/</bdi></li></ul>
+        <CodeHighlighter  code={`[*.{js , jsx , css , sass}]
+indent_size = 2`} file_name="laravel-react-vite / .editorconfig" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        <h2 className='title-h2' id="Create_router.jsx">7 - إنشاء router.jsx </h2>
+        <ul><li>انتقل إلى المجلد <bdi>front/src/</bdi> وقم بإنشاء ملف بالاسم router.jsx</li></ul>
+        <CodeHighlighter  code={`import {createBrowserRouter} from "react-router-dom";
+import Login from "./views/Login";
+import Signup from "./views/Login";
+import User from "./views/User";
+import Home from "./views/Home";
+
+const router = createBrowserRouter([
+    { 
+        path: '/login',
+        element: <Login />
+    },
+    { 
+        path: '/signup',
+        element: <Signup />
+    },
+    { 
+        path: '/user',
+        element: <User />
+    }, 
+    { 
+        path: '',
+        element: <Home />
+    },
+])
+
+export default router;`} file_name="laravel-react-vite / front / src / router.jsx" language="js" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter  code={`import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+
+import router from './router.jsx' //new
+import { RouterProvider } from 'react-router-dom' //new
+
+
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <RouterProvider  router={router} />     {/* new */}
+  </StrictMode>,
+)`} file_name="laravel-react-vite / front / src / main.jsx" language="js" number={false} addclassName="mt-3 mb-3" copie={true}/>
+
+      
 
     </>
     )

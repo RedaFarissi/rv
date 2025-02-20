@@ -13,10 +13,11 @@ import laravel65 from "../../assests/images/laravel/laravel65.png"
 import laravel61 from "../../assests/images/laravel/laravel61.png"
 import laravel62 from "../../assests/images/laravel/laravel62.png"
 import laravel67 from "../../assests/images/laravel/laravel67.png"
-import laravel68 from "../../assests/images/laravel/laravel68.png"
+import laravel68 from "../../assests/images/laravel/laravel68.png";
+import laravel1 from "../../assests/images/laravel/laravel1.png";
 
 const images = {
-    laravel0_env, laravel0_env2, laravel0_env3, laravel5, laravel_query_builder_result,
+    laravel0_env, laravel0_env2, laravel0_env3,  laravel1 , laravel5, laravel_query_builder_result,
     laravel_auth1, laravel_auth2, laravel_run_dev, laravel_auth_breez1, laravel58,
     laravel64, laravel65, laravel61, laravel62, laravel67, laravel68, 
 }
