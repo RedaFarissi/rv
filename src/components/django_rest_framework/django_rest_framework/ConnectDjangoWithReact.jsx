@@ -683,7 +683,7 @@ const PayPalPayment = () => {
           return actions.order.capture().then((details) => {
             alert(\`Transaction completed by \${details.payer.name.given_name}\`);
             // Send transaction details to Django backend
-            fetch("/api/paypal-success/", {
+            fetch("/payment/api/paypal-success/", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -704,9 +704,52 @@ export default PayPalPayment;`} file_name="front / src / components / PayPalPaym
 
         <h5 className="title-h5">2 - إنشاء تطبيق الدفع</h5>
         <CodeCommand>python manage.py startapp payment</CodeCommand>
-        <ul>
-            <li>أضفه إلى الإعدادات</li>
-        </ul>
+        <ul><li>أضفه إلى الإعدادات</li></ul>
+        <CodeHighlighter code={`INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    # packages
+    'rest_framework',   
+    'rest_framework.authtoken',      
+    'corsheaders',  
+    'dj_rest_auth', 
+    
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'dj_rest_auth.registration', 
+
+    # app
+    'cnxReact.apps.CnxreactConfig', 
+    'payment.apps.PaymentConfig', # new
+    
+]`} file_name="project_name / settings.py.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
+        <CodeHighlighter code={`from django.contrib import admin
+from django.urls import path , include ,  re_path 
+from cnxReact.views import rv    
+
+
+from django.views.generic import TemplateView  
+
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    #path('api-auth/', include('rest_framework.urls')) , 
+    path("", rv , name="rv"),   
+    path('rest-auth/', include('dj_rest_auth.urls')),   
+    path('rest-auth/registration/', include('dj_rest_auth.registration.urls')), 
+    path('payment/', include('payment.urls')),   #new
+
+
+
+
+    # Catch all other routes and serve React index.html * you can go to all route manualy 
+    re_path(r'^(?:.*)/?$', TemplateView.as_view(template_name='index.html'), name='react_frontend'),
+]`} file_name="project_name / urls.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
         <h5 className="title-h5">3 - views.py</h5>
         <CodeHighlighter code={`import requests
 from django.http import JsonResponse

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate} from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from 'axios';
 import "./Login.css";
 import Footer from "../footer/Footer";
@@ -45,18 +46,15 @@ export default function Login(props){
       	  	      	  	<input className="form-check-input" type="checkbox" value="" id="form1Example3" checked />
       	  	      	  	<label className="form-check-label" for="form1Example3"> تذكرني </label>
       	  	      	</div>
-      	  	      	<a href="#!">هل نسيت كلمة السر؟</a>
+      	  	      	<a  style={{backgroundColor: "#171c2c", color: "blue"}} href="#">هل نسيت كلمة السر؟</a>
       	  	    </div>
       	  	    <button type="submit" className="btn btn-lg btn-block w-100 text-light"  style={{backgroundColor:"#19243e"}}>
 						تسجيل الدخول
-					</button>
-      	  	    <div className="divider d-flex align-items-center my-4">
-      	  	      	<p className="text-center fw-bold mx-3 mb-0 text-muted">أو</p>
-      	  	    </div>
-      	  	    <a className="btn btn-primary btn-lg btn-block w-100" style={{backgroundColor: "#3b5998"}} href="#!" role="button">
-      	  	      	<i className="fab fa-facebook-f me-2"></i> تواصل مع الفيسبوك
-      	  	    </a>
+				</button>
       	  	</form>
+			<div className='mt-4'>
+				<Link style={{backgroundColor: "#171c2c", color: "blue" , fontSize: "20px"}} to='/register'> قم بإنشاء حساب جديد </Link>
+	      	</div>
       	</div>
 	  	<div className="col-md-8 col-lg-7 col-xl-6 my-5">
       	  	<img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"

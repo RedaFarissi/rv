@@ -55,17 +55,16 @@ export default function Header(props){
     <div className="header-main">
         <div className="container-h">
             <Link to='/' className="text-decoration-none text-light">  
-                <div className="img-logo-box-header">
-                        <div className="my-logo-header"> RV </div> 
-                </div>
-            </Link> &nbsp;&nbsp;
+                <i className="fa-solid fa-house fs-5 text-light"></i>
+            </Link> 
+
           
             <div className="header-search-container">  
                 <form onSubmit={props.handleSubmit} >
                         <input type="text" name="search" className="search-field"
                             value={props.searchValue} // Step 4: Bind the value to state
                             onChange={props.handleInputChange} // Step 5: Handle input change 
-                        />
+                            />
                         <Link to='/search'> 
                             <button className="search-btn" type="submit">
                                 <i className="fa-solid fa-magnifying-glass"></i>
@@ -83,10 +82,16 @@ export default function Header(props){
                     <i className="fa-brands fa-paypal btn btn-outline-light"></i>
                 </Link>
                 
-                {(localStorage.getItem('auth_token') !== null)? <button className="btn btn-outline-danger" onClick={props.logout}>تسجيل الخروج </button> : <div>
-                    <Link className="btn btn-outline-light" to='/register'> إنشاء حساب</Link>
-                    <Link className="btn btn-outline-light ms-2" to='/login'> تسجيل الدخول </Link>
-                </div> }
+                { 
+                    ( localStorage.getItem('auth_token') === null ) ?
+                    <Link className="btn border btn-outline-fa-right-to-bracket" to='/login'> 
+                        <i className="fa-solid fa-user"></i>
+                    </Link> : 
+                    <button className="btn btn-outline-danger" onClick={props.logout}> 
+                    
+                    </button> 
+                }
+                {/* <button className="btn btn-outline-danger" onClick={props.logout}> تسجيل الخروج </button>  */}
             </div>
         </div> 
     </div>
