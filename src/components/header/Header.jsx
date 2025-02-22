@@ -1,5 +1,5 @@
 import { Link , useLocation } from "react-router-dom";
-import React, { useRef  , useEffect } from 'react';
+import React, { useRef  , useEffect , useState } from 'react';
 import "./Header.sass";
 
 export default function Header(props){   
@@ -44,6 +44,18 @@ export default function Header(props){
           });
         }
     };
+
+    const [isVisibleProfile, setIsVisibleProfile] = useState(false);
+    
+    function boxProfile(){
+        setIsVisibleProfile(!isVisibleProfile);
+        
+    }
+    // function boxProfileStyle(event){
+    //     setIsVisibleProfile(false);
+    //     event.stopPropagation();
+    // }
+
     return(
 <>
 <header className="header p-0" dir="ltr" 
@@ -54,17 +66,33 @@ export default function Header(props){
 >
     <div className="header-main">
         <div className="container-h">
-            <Link to='/' className="text-decoration-none text-light">  
-                <i className="fa-solid fa-house fs-5 text-light"></i>
-            </Link> 
+            <div>
+
+                { 
+                    ( localStorage.getItem('auth_token') === null ) ?
+                    <Link className="text-light ms-4 me-4" to='/login'> 
+                        <i className="fa-solid fa-user p-2" ></i>
+                    </Link> : 
+                    <>
+                        <i className="fa-solid fa-user ms-4 me-4 p-2" style={{cursor: "pointer"}} onClick={boxProfile}></i>
+                        <div className="box-profile" dir="rtl" style={{display: isVisibleProfile ? "block" : "none" }}> 
+                            <button> <i className="fa-solid fa-circle-user ms-2"></i> صفحتي </button><br />
+                            <button className="out" onClick={props.logout}>   تسجيل الخروج   </button> 
+                        </div>
+                    </>
+                }
+                <Link to='/' className="text-decoration-none text-light ms-4">  
+                    <i className="fa-solid fa-house fs-5 text-light p-2"></i>
+                </Link> 
+            </div>
 
           
             <div className="header-search-container">  
                 <form onSubmit={props.handleSubmit} >
                         <input type="text" name="search" className="search-field"
                             value={props.searchValue} // Step 4: Bind the value to state
-                            onChange={props.handleInputChange} // Step 5: Handle input change 
-                            />
+                            onChange={props.handleInputChange} // Step 5: Handle input change
+                        />
                         <Link to='/search'> 
                             <button className="search-btn" type="submit">
                                 <i className="fa-solid fa-magnifying-glass"></i>
@@ -81,17 +109,6 @@ export default function Header(props){
                 <Link  to='/paypal-payment'>
                     <i className="fa-brands fa-paypal btn btn-outline-light"></i>
                 </Link>
-                
-                { 
-                    ( localStorage.getItem('auth_token') === null ) ?
-                    <Link className="btn border btn-outline-fa-right-to-bracket" to='/login'> 
-                        <i className="fa-solid fa-user"></i>
-                    </Link> : 
-                    <button className="btn btn-outline-danger" onClick={props.logout}> 
-                    
-                    </button> 
-                }
-                {/* <button className="btn btn-outline-danger" onClick={props.logout}> تسجيل الخروج </button>  */}
             </div>
         </div> 
     </div>
