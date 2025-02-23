@@ -57,7 +57,7 @@ export default function DjangoRestFramework(props){
 
     return (
 <>
-    <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone();  } }>
+    <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone(); props.boxProfileStyle();  } }>
         <aside className="aside" onScroll={()=>{ localStorage.setItem("django_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
             <ul className="list-group m-0">
                {matrix}

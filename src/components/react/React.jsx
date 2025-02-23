@@ -47,7 +47,7 @@ function React(props){
 
   return(
 <>
-<main onClick={ (event)=>{ props.clickMenuHeader(event, false);  props.closeSearchPhone(); } }>
+<main onClick={ (event)=>{ props.clickMenuHeader(event, false);  props.closeSearchPhone(); props.boxProfileStyle();} }>
   <aside  className="aside">
       <dl className="list-group m-0">
         {matrix}

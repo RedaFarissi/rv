@@ -1,9 +1,9 @@
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import "./PayPalPayment.css";
 
-const PayPalPayment = () => {
+const PayPalPayment = (props) => {
   return (
-<section className="PayPalPayment-section">
+<section className="PayPalPayment-section" onClick={props.boxProfileStyle}>
   <div className="container  d-flex align-items-center justify-content-center">
     <div className="row w-100 h-100  d-flex align-items-center justify-content-center">
         <PayPalScriptProvider options={{ "client-id": "AWNVpwOgDcdK7J8lXb8SqSM8-sud2BKP_Vgblzf47NIlZnLLVYRjEoTDhgw1L8RMqOQl7gXlj-xR8B0Z" }}>
@@ -23,7 +23,7 @@ const PayPalPayment = () => {
               return actions.order.capture().then((details) => {
                 alert(`Transaction completed by ${details.payer.name.given_name}`);
                 // Send transaction details to Django backend
-                fetch("/api/paypal-success/", {
+                fetch("/payment/api/paypal-success/", {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json",

@@ -25,9 +25,14 @@ export default function Home(props){
     ]
     const cards = languages.map(e=> <HomeBox  link={e.link}  h3={e.h3}  img={e.img}  p={e.p} /> )
     return(
-    <>
+  <>
+    <section onClick={props.boxProfileStyle}>
+
         <main className="main-home d-flex justify-content-center align-items-center flex-wrap" dir="ltr" 
-          onClick={(event)=>{ props.closeSearchPhone(event) }}
+          onClick={(event)=>{ 
+              props.closeSearchPhone(event);
+              props.boxProfileStyle();
+          }}
         >
             {cards}
         </main>
@@ -36,7 +41,8 @@ export default function Home(props){
           block_1={"col-sm-10 col-sm-10 col-md-8 col-lg-4 offset-lg-2 col-xl-4 offset-xl-1"}
           block_2={"col-sm-10 col-md-8 col-lg-4 col-xl-4"}
           blockChildStyle={{width: "90%" , margin:"auto"}}
-        />
-    </>
+          />
+    </section>
+  </>
     )
 }

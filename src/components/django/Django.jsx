@@ -57,6 +57,7 @@ export default function Django(props){
       <main onClick={ (event)=>{ 
                   props.clickMenuHeader(event, false);
                   props.closeSearchPhone(); 
+                  props.boxProfileStyle();
              }}
       >
          <aside className="aside" onScroll={()=>{ localStorage.setItem("django_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>

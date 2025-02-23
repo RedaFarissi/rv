@@ -26,7 +26,7 @@ export default function CreateAccount(props){
     
     return(
     <>
-        <div className="container" style={{ marginTop: "190px" , marginBottom: "60px" }}>
+        <section onClick={props.boxProfileStyle} className="container" style={{ marginTop: "190px" , marginBottom: "60px" }}>
             <form  method="POST" onSubmit={hundleSubmit}>
                 <div>
                     <label htmlFor="username">اسم المستخدم</label>
@@ -54,7 +54,7 @@ export default function CreateAccount(props){
                 </div>
                 <input type="submit" value="إنشاء حساب" className="btn mt-4 text-white btn-block btn-primary"/>
             </form>
-        </div>
+        </section>
         <Footer 
             widthFooter="100%"
             block_1={"col-sm-10 col-sm-10 col-md-8 col-lg-4 offset-lg-2 col-xl-4 offset-xl-1"}

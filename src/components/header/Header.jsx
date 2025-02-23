@@ -1,5 +1,5 @@
 import { Link , useLocation } from "react-router-dom";
-import React, { useRef  , useEffect , useState } from 'react';
+import React, { useRef  , useEffect } from 'react';
 import "./Header.sass";
 
 export default function Header(props){   
@@ -45,16 +45,7 @@ export default function Header(props){
         }
     };
 
-    const [isVisibleProfile, setIsVisibleProfile] = useState(false);
-    
-    function boxProfile(){
-        setIsVisibleProfile(!isVisibleProfile);
-        
-    }
-    // function boxProfileStyle(event){
-    //     setIsVisibleProfile(false);
-    //     event.stopPropagation();
-    // }
+
 
     return(
 <>
@@ -62,6 +53,7 @@ export default function Header(props){
     onClick={ (event)=>{ 
         props.clickMenuHeader(event, false);
         props.closeSearchPhone();
+        props.boxProfileStyle();
     }}
 >
     <div className="header-main">
@@ -74,8 +66,8 @@ export default function Header(props){
                         <i className="fa-solid fa-user p-2" ></i>
                     </Link> : 
                     <>
-                        <i className="fa-solid fa-user ms-4 me-4 p-2" style={{cursor: "pointer"}} onClick={boxProfile}></i>
-                        <div className="box-profile" dir="rtl" style={{display: isVisibleProfile ? "block" : "none" }}> 
+                        <i className="fa-solid fa-user ms-4 me-4 p-2" style={{cursor: "pointer"}} onClick={props.boxProfile}></i>
+                        <div className="box-profile" dir="rtl" style={{display: props.isVisibleProfile ? "block" : "none" }}> 
                             <button> <i className="fa-solid fa-circle-user ms-2"></i> صفحتي </button><br />
                             <button className="out" onClick={props.logout}>   تسجيل الخروج   </button> 
                         </div>

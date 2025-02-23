@@ -30,6 +30,7 @@ export default function Css(props){
     <main onClick={ (event)=>{ 
                 props.clickMenuHeader(event, false);
                 props.closeSearchPhone(); 
+                props.boxProfileStyle();
             }}
     >
         <aside className="aside">

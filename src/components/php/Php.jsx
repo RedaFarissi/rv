@@ -34,7 +34,7 @@ export default function Php(props){
     ));
     return(
 <>
-<main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone();  } }>
+<main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone(); props.boxProfileStyle();  } }>
     <aside className="aside">
         <ul className="list-group m-0">
             {matrix}

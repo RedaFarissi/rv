@@ -24,7 +24,7 @@ export default function Cmd(props){
    
     return(
     <>
-    <main onClick={ (event)=>{ props.clickMenuHeader(event, false) } }>
+    <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.boxProfileStyle(); } }>
         <aside className="aside">
             <ul className="list-group m-0">
                 {arrays}

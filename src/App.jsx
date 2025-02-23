@@ -385,6 +385,15 @@ function App() {
         return matchingValues;
     }    
     
+    // Visiblity if user login  
+    const [isVisibleProfile, setIsVisibleProfile] = useState(false);
+    function boxProfile(event){
+        setIsVisibleProfile(!isVisibleProfile);
+        event.stopPropagation();
+    }
+    function boxProfileStyle(){
+        setIsVisibleProfile(false);
+    }
 
     // handle connection with back-end 
     const logout =()=>{
@@ -406,15 +415,23 @@ function App() {
             setSearchValue={setSearchValue}
             handleInputChange={handleInputChange}
             handleSubmit={handleSubmit}
+
+            isVisibleProfile={isVisibleProfile}
+            boxProfile={boxProfile}
+            boxProfileStyle={boxProfileStyle}
+            
             logout={logout}
         />
         <Routes>
+
             <Route path='/'       element={<Home 
                                                 closeSearchPhone={closeSearchPhone} 
                                                 scrollY_to_0={scrollY_to_0} 
+                                                boxProfileStyle={boxProfileStyle}
                                             />} 
             />
             <Route path='/html/*' element={<Html 
+                                                boxProfileStyle={boxProfileStyle}
                                                 scrollY_to_0={scrollY_to_0} 
                                                 clickMenuHeader={clickMenuHeader} 
                                                 html_list={html_list}
@@ -423,6 +440,7 @@ function App() {
                                             />}
             />
             <Route path='/css/*' element={<Css 
+                                                boxProfileStyle={boxProfileStyle}
                                                 scrollY_to_0={scrollY_to_0} 
                                                 clickMenuHeader={clickMenuHeader} 
                                                 css_list={css_list} 
@@ -431,6 +449,7 @@ function App() {
                                             />} 
             />
             <Route path='/js/*' element={<Js 
+                                                boxProfileStyle={boxProfileStyle}
                                                 scrollY_to_0={scrollY_to_0} 
                                                 clickMenuHeader={clickMenuHeader} 
                                                 js_matrix={js_matrix} 
@@ -439,6 +458,7 @@ function App() {
                                             />} 
             />
             <Route path='/react' element={<React 
+                                                boxProfileStyle={boxProfileStyle}
                                                 scrollYAdd={scrollYAdd} 
                                                 clickMenuHeader={clickMenuHeader} 
                                                 react_matrix={react_matrix} 
@@ -447,6 +467,7 @@ function App() {
                                             />} 
             />
             <Route path='/mysql/*' element={<Mysql  
+                                                boxProfileStyle={boxProfileStyle}
                                                 scrollYAdd={scrollYAdd} 
                                                 clickMenuHeader={clickMenuHeader} 
                                                 sql_list={sql_list} 
@@ -455,6 +476,7 @@ function App() {
                                             />} 
             />
             <Route path='/python/*' element={<Python
+                                                boxProfileStyle={boxProfileStyle}
                                                 scrollY_to_0={scrollY_to_0} 
                                                 clickMenuHeader={clickMenuHeader} 
                                                 python_list={python_list} 
@@ -463,6 +485,7 @@ function App() {
                                             />} 
             />
             <Route path='/django/*' element={<Django 
+                                                boxProfileStyle={boxProfileStyle}
                                                 scrollYAdd={scrollYAdd} 
                                                 scrollY_to_0={scrollY_to_0} 
                                                 clickMenuHeader={clickMenuHeader} 
@@ -472,6 +495,7 @@ function App() {
                                             />} 
             />
             <Route path='/django-rest-framework/*' element={<DjangoRestFramework 
+                                                boxProfileStyle={boxProfileStyle}
                                                 scrollY_to_0={scrollY_to_0} 
                                                 scrollYAdd={scrollYAdd} 
                                                 clickMenuHeader={clickMenuHeader} 
@@ -481,6 +505,7 @@ function App() {
                                             />} 
             />
             <Route path='/php/*' element={<Php 
+                                                boxProfileStyle={boxProfileStyle}
                                                 scrollY_to_0={scrollY_to_0} 
                                                 clickMenuHeader={clickMenuHeader} 
                                                 php_list={php_list}  
@@ -489,6 +514,7 @@ function App() {
                                             />} 
             />
             <Route path='/laravel/*' element={<Laravel 
+                                                boxProfileStyle={boxProfileStyle}
                                                 scrollY_to_0={scrollY_to_0} 
                                                 scrollYAdd={scrollYAdd} 
                                                 clickMenuHeader={clickMenuHeader} 
@@ -498,6 +524,7 @@ function App() {
                                             />} 
             />
             <Route path='/powerShell' element={<Cmd 
+                                                boxProfileStyle={boxProfileStyle}
                                                 scrollYAdd={scrollYAdd} 
                                                 clickMenuHeader={clickMenuHeader} 
                                                 cmd_list={cmd_list}  
@@ -506,6 +533,7 @@ function App() {
                                             />} 
             />
             <Route path='/git' element={<Git 
+                                                boxProfileStyle={boxProfileStyle}
                                                 scrollYAdd={scrollYAdd} 
                                                 clickMenuHeader={clickMenuHeader} 
                                                 git_list={git_list} 
@@ -514,17 +542,30 @@ function App() {
                                             />}
             />
             <Route path='/search' element={<Search
-                searchValue={searchValue}
-                setSearchValue={setSearchValue}
-                handleInputChange={handleInputChange}
-                handleSubmit={handleSubmit}
-                Search={Search}
-                searchAndRetrieve={searchAndRetrieve}
-                scrollY_to_0={scrollY_to_0}
-            />} />
-            <Route path='/paypal-payment' element={<PayPalPayment />} />
-            <Route path='/login' element={<Login url={url} />} />
-            <Route path='/register' element={<CreateAccount url={url} />} />
+                                                boxProfileStyle={boxProfileStyle}
+                                                searchValue={searchValue}
+                                                setSearchValue={setSearchValue}
+                                                handleInputChange={handleInputChange}
+                                                handleSubmit={handleSubmit}
+                                                Search={Search}
+                                                searchAndRetrieve={searchAndRetrieve}
+                                                scrollY_to_0={scrollY_to_0}
+                                            />} 
+            />
+            <Route path='/paypal-payment' element={<PayPalPayment 
+                                                boxProfileStyle={boxProfileStyle} 
+                                            />} 
+            />
+            <Route path='/login' element={<Login 
+                                                boxProfileStyle={boxProfileStyle} 
+                                                url={url} 
+                                            />} 
+            />
+            <Route path='/register' element={<CreateAccount 
+                                                boxProfileStyle={boxProfileStyle} 
+                                                url={url} 
+                                            />} 
+            />
         </Routes>
     </Router> 
     );
