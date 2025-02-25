@@ -18,7 +18,7 @@ const MyPage = (props) => {
         const fetchUser = async () => {
             setLoading(true);
             try {
-                const token = localStorage.getItem("auth_token");  // Ensure token is stored
+                const token = localStorage.getItem("auth_token");
                 const response = await fetch("http://localhost:8000/api/user/", {
                     method: "GET",
                     headers: {
@@ -83,37 +83,44 @@ const MyPage = (props) => {
   
     return (
     <section  className="container" style={{marginTop: "200px", textAlign: "right"}} onClick={props.boxProfileStyle}>
-        <div>
-            <h2 className="font-bold mb-4">ملف تعريف المستخدم</h2>
-            <strong>اسم المستخدم :</strong> {user.username}
+      <div className="my-page-parent">
+        <div className="my-page-child">
+            <h2 className="font-bold mb-4 font-family-cursive">ملف تعريف المستخدم</h2>
+            <strong>اسم المستخدم :</strong> {user.username} <br />
             <strong>بريد إلكتروني :</strong> {user.email}
         </div>
-        <br />
-        <br />
-        <div>
-            <h2 className="font-bold mb-4">تغيير كلمة المرور</h2>
-            <form onSubmit={handlePasswordChange} className="mt-2">
-                  <strong>  كلمة المرور الحالية : </strong><input
+        
+        <hr />
+        <div className="my-page-child">
+            <h2 className="font-bold mb-4 font-family-cursive">تغيير كلمة المرور</h2>
+            <form onSubmit={handlePasswordChange} className="mt-2 row">
+        
+                  <strong className="col-sm-3 mt-3">  كلمة المرور الحالية : </strong>
+                  <input
                     type="password"    value={oldPassword} 
-                    onChange={(e) => setOldPassword(e.target.value)} className="block w-full p-2 border rounded mt-1 w-my-page-field"
+                    onChange={(e) => setOldPassword(e.target.value)} className="block w-full p-2 border rounded mt-1 col-sm-8"
                     required
-                  /><br />
-                  <strong>كلمة المرور الجديدة :</strong>
+                  />
+                  <strong className="col-sm-3 mt-3">كلمة المرور الجديدة :</strong> 
                   <input
                     type="password"    value={newPassword}   
-                    onChange={(e) => setNewPassword(e.target.value)} className="block w-full p-2 border rounded mt-2 w-my-page-field"
+                    onChange={(e) => setNewPassword(e.target.value)} className="block w-full p-2 border rounded mt-2 col-sm-8"
                     required
-                  /><br />
-                  <strong>تأكيد كلمة المرور الجديدة :</strong>
+                  />
+                  <strong className="col-sm-3 mt-3">تأكيد كلمة المرور الجديدة :</strong>
                   <input
                     type="password"    value={confirmPassword}   
-                    onChange={(e) => setConfirmPassword(e.target.value)}  className="block w-full p-2 border rounded mt-2 w-my-page-field"  
+                    onChange={(e) => setConfirmPassword(e.target.value)}  className="block w-full p-2 border rounded mt-2 col-sm-8"
                     required
-                  /><br />
-                  <button type="submit" className="p-2 rounded mt-2 w-my-page-field">  تحديث كلمة المرور  </button>
+                  />
+                  <div className="col-sm-3 mt-3">  </div>
+                  <button type="submit" className="btn border pt-3 pb-3 mt-2 col-sm-8" style={{backgroundColor: "#171c2c",color:"white"}}>  تحديث كلمة المرور  </button>
             </form>
-            {message && <p className="mt-2 text-red-500">{message}</p>}
+            <div className="text-center mt-4">
+                {message && <p className="mt-2 text-red-500">{message}</p>}
+            </div>
         </div>
+      </div>
     </section>
     );
 };
