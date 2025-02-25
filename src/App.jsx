@@ -1,6 +1,7 @@
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
 import { 
-    Header,Home,Html,Css,Js,React,Mysql,Python,Django,DjangoRestFramework,Cmd,Git,Php,Laravel,Login,Search,CreateAccount,PayPalPayment
+    Header , Home , Html , Css , Js , React , Mysql , Python , Django , DjangoRestFramework , Cmd , Git , Php , 
+    Laravel , Login , Search , CreateAccount , PayPalPayment , MyPage ,
 } from './components/path';
 import { useEffect, useRef , useState} from 'react';
 import "./App.sass";
@@ -562,6 +563,11 @@ function App() {
                                             />} 
             />
             <Route path='/register' element={<CreateAccount 
+                                                boxProfileStyle={boxProfileStyle} 
+                                                url={url} 
+                                            />} 
+            />
+            <Route path='/my-page' element={<MyPage 
                                                 boxProfileStyle={boxProfileStyle} 
                                                 url={url} 
                                             />} 

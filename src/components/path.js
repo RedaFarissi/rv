@@ -42,6 +42,8 @@ export {default as InteractivCss} from './css/InteractivCss';
 
 export {default as PayPalPayment} from './paypalpayment/PayPalPayment';
 
+export {default as MyPage} from './myPage/MyPage';
+
 
 
 

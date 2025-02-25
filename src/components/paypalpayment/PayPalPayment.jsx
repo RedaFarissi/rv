@@ -1,11 +1,11 @@
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
-import "./PayPalPayment.css";
+import "./PayPalPayment.sass";
 
 const PayPalPayment = (props) => {
   return (
 <section className="PayPalPayment-section" onClick={props.boxProfileStyle}>
   <div className="container  d-flex align-items-center justify-content-center">
-    <div className="row w-100 h-100  d-flex align-items-center justify-content-center">
+    <div className="row box-payment">
         <PayPalScriptProvider options={{ "client-id": "AWNVpwOgDcdK7J8lXb8SqSM8-sud2BKP_Vgblzf47NIlZnLLVYRjEoTDhgw1L8RMqOQl7gXlj-xR8B0Z" }}>
           <PayPalButtons
             createOrder={(data, actions) => {
