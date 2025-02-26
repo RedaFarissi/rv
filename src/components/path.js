@@ -44,6 +44,8 @@ export {default as PayPalPayment} from './paypalpayment/PayPalPayment';
 
 export {default as MyPage} from './myPage/MyPage';
 
+export {default as ReportAnErrorUser} from './reportAnError/ReportAnErrorUser';
+
 
 
 

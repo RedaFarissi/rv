@@ -6,6 +6,8 @@ import "./Login.css";
 import Footer from "../footer/Footer";
 
 export default function Login(props){
+	props.scrollY_to_0();
+  
 	const [login , setLogin] = useState({ username:"" , password:"" });
 	const navigate = useNavigate();
 	

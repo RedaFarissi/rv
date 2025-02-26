@@ -4,6 +4,8 @@ import { Footer } from "../path";
 import { useNavigate } from "react-router-dom";
 
 const MyPage = (props) => {
+    props.scrollY_to_0();
+  
     const navigate = useNavigate();
   
     const [user, setUser] = useState(null);
@@ -47,7 +49,7 @@ const MyPage = (props) => {
                 setLoading(false);
             }
         };
-        
+
         fetchUser();
     }, [navigate]);
 

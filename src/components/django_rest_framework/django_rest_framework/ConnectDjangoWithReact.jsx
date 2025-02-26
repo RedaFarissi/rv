@@ -49,10 +49,7 @@ TEMPLATES = [
       },
    },
 ]
-.
-.
-.
-.
+
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'front', 'build', 'static')]   #new`} file_name="project_name / project_name / settings.py" language="python" number={false} addclassName="mt-3 mb-3" copie={true}/>
          <h3 className="title-h3">9 - إنشاء التطبيق بالاسم app في المشروع</h3>
          <CodeCommand>python manage.py startapp app</CodeCommand>
@@ -130,7 +127,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-#...
 # new
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = ( 

@@ -1,7 +1,7 @@
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
 import { 
     Header , Home , Html , Css , Js , React , Mysql , Python , Django , DjangoRestFramework , Cmd , Git , Php , 
-    Laravel , Login , Search , CreateAccount , PayPalPayment , MyPage ,
+    Laravel , Login , Search , CreateAccount , PayPalPayment , MyPage , ReportAnErrorUser , 
 } from './components/path';
 import { useEffect, useRef , useState} from 'react';
 import "./App.sass";
@@ -554,20 +554,31 @@ function App() {
                                             />} 
             />
             <Route path='/paypal-payment' element={<PayPalPayment 
+                                                scrollY_to_0={scrollY_to_0}
                                                 boxProfileStyle={boxProfileStyle} 
                                             />} 
             />
             <Route path='/login' element={<Login 
+                                                scrollY_to_0={scrollY_to_0}
                                                 boxProfileStyle={boxProfileStyle} 
                                                 url={url} 
                                             />} 
             />
             <Route path='/register' element={<CreateAccount 
+                                                scrollY_to_0={scrollY_to_0}
                                                 boxProfileStyle={boxProfileStyle} 
                                                 url={url} 
                                             />} 
             />
             <Route path='/my-page' element={<MyPage 
+                                                scrollY_to_0={scrollY_to_0}
+                                                boxProfileStyle={boxProfileStyle} 
+                                                url={url} 
+                                            />} 
+            />
+            
+            <Route path='/report-error' element={<ReportAnErrorUser  
+                                                scrollY_to_0={scrollY_to_0}
                                                 boxProfileStyle={boxProfileStyle} 
                                                 url={url} 
                                             />} 

@@ -69,7 +69,8 @@ export default function Header(props){
                         <i className="fa-solid fa-user ms-4 me-4 p-2" style={{cursor: "pointer"}} onClick={props.boxProfile}></i>
                         <div className="box-profile" dir="rtl" style={{display: props.isVisibleProfile ? "block" : "none" }}> 
                             <Link to="/my-page"><button> <i className="fa-solid fa-circle-user ms-2"></i> صفحتي </button></Link><br />
-                            <button className="out" onClick={props.logout}>   تسجيل الخروج   </button> 
+                            <Link to="/report-error"><button> <i className="fa-solid fa-bug ms-2"></i> إبلاغ عن خطأ</button></Link><br />
+                            <button className="out" onClick={props.logout}>  <i className="fa-solid fa-right-from-bracket ms-2"></i> تسجيل الخروج   </button> 
                         </div>
                     </>
                 }

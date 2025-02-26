@@ -3,6 +3,8 @@ import axios from 'axios';
 import Footer from "../footer/Footer";
 
 export default function CreateAccount(props){
+    props.scrollY_to_0();
+  
     const [formData, setFormData] = useState({
         username:"",
         email:"", 
