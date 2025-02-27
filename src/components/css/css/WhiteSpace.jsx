@@ -45,7 +45,7 @@ export default function WhiteSpace(props){
         <p className="style_divv mt-5">
             تحدد خاصية <b>white-space</b> كيفية معالجة المسافة البيضاء داخل عنصر.<br/>
             تقبل الخاصية <b>white-space</b> القيم التالية :<br/>
-            <ul dir='ltr' className="p-0">
+            <ul dir='ltr'>
                 <li><b>nowrap</b>  </li>
                 <li><b>normal</b> </li> 
                 <li><b>pre</b>  </li>

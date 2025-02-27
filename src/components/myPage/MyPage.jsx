@@ -53,8 +53,8 @@ const MyPage = (props) => {
         fetchUser();
     }, [navigate]);
 
-    if (loading) return <p style={{marginTop: "200px"}} > Loading user info...</p>;
-    if (error) return <p style={{marginTop: "200px"}} >Error: {error}</p>;
+    if (loading) return <div className="container" style={{marginTop: "270px"}} > تحميل معلومات المستخدم ...</div>;
+    if (error) return <div className="container" style={{marginTop: "270px"}} >خطأ : {error}</div>;
 
     const handlePasswordChange = async (e) => {
       e.preventDefault();
@@ -115,23 +115,28 @@ const MyPage = (props) => {
                   <strong className="col-sm-3 mt-3">  كلمة المرور الحالية : </strong>
                   <input
                     type="password"    value={oldPassword} 
-                    onChange={(e) => setOldPassword(e.target.value)} className="block w-full p-2 border rounded mt-1 col-sm-7"
-                    required
-                  />
-                  <strong className="col-sm-3 mt-3">كلمة المرور الجديدة :</strong> 
-                  <input
-                    type="password"    value={newPassword}   
-                    onChange={(e) => setNewPassword(e.target.value)} className="block w-full p-2 border rounded mt-2 col-sm-7"
-                    required
-                  />
-                  <strong className="col-sm-3 mt-3">تأكيد كلمة المرور الجديدة :</strong>
-                  <input
-                    type="password"    value={confirmPassword}   
-                    onChange={(e) => setConfirmPassword(e.target.value)}  className="block w-full p-2 border rounded mt-2 col-sm-7"
+                    onChange={(e) => setOldPassword(e.target.value)} className="block w-full p-2 border rounded mt-1 col-sm-5"
                     required
                   />
                   <div className="col-sm-3 mt-3">  </div>
-                  <button type="submit" className="btn btn-outline-success mt-2 col-sm-7" >  تحديث كلمة المرور  </button>
+
+                  <strong className="col-sm-3 mt-3">كلمة المرور الجديدة :</strong> 
+                  <input
+                    type="password"    value={newPassword}   
+                    onChange={(e) => setNewPassword(e.target.value)} className="block w-full p-2 border rounded mt-2 col-sm-5"
+                    required
+                  />
+                  <div className="col-sm-3 mt-3">  </div>
+
+                  <strong className="col-sm-3 mt-3">تأكيد كلمة المرور الجديدة :</strong>
+                  <input
+                    type="password"    value={confirmPassword}   
+                    onChange={(e) => setConfirmPassword(e.target.value)}  className="block w-full p-2 border rounded mt-2 col-sm-5"
+                    required
+                  />
+                  <div className="col-sm-3 mt-3">  </div>
+                  <div className="col-sm-3 mt-3">  </div>
+                  <button type="submit" className="btn btn-outline-success mt-2 col-sm-5" >  تحديث كلمة المرور  </button>
             </form>
             <div className="text-center mt-4">
                 {message && <p className="mt-2 text-red-500">{message}</p>}
