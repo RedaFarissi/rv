@@ -114,25 +114,31 @@ export default function Header(props){
         <button className="icons-header-phone" onClick={ (event)=>{ props.openSearchPhone(event); props.clickMenuHeader(event, false); }}>
             <i className="fa-solid fa-magnifying-glass"></i>
         </button>
-        <Link to='/login' className="icons-header-phone">
-            <i className={`fas fa-user`}></i>
-        </Link> 
-        
-        <button className="icons-header-phone">
+        { 
+            ( localStorage.getItem('auth_token') === null ) ?
+            <Link to='/login' className="icons-header-phone">
+                <i className={`fas fa-user`}></i>
+            </Link> : 
+            <Link to='/my-page' className="icons-header-phone">
+                <i className={`fas fa-user`}></i>
+            </Link>
+        }
+                                 
+        <Link to='/paypal-payment' className="icons-header-phone">
             <i className="fa-brands fa-paypal"></i>
-        </button>
-        
+        </Link>
+
         <button onClick={(event)=>{ props.clickMenuHeader(event , true); props.closeSearchPhone(); }} className={`icons-header-phone ${ (checkAboutRouteHome()) ? "d-none" : "d-block" }`} >
             <i className="menu-icon fa-solid fa-bars"></i>
         </button>    
     </div>
+
     <div className="header-search-container-phone" ref={props.searchPhone} onClick={(event)=>{ event.stopPropagation() }}>
         <input type="text" name="search-phone" className="search-field-phone" />
         <button className="search-btn-phone" type="submit">
             <i className="fa-solid fa-magnifying-glass"></i>
         </button>
     </div>
-
 
     <nav className={`desktop-navigation-menu`} ref={divRef}>
         <div className={`container-fliud p-0`}>

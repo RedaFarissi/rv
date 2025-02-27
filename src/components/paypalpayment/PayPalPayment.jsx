@@ -3,6 +3,9 @@ import "./PayPalPayment.sass";
 import { Footer } from "../path";
 
 const PayPalPayment = (props) => {
+  props.scrollY_to_0();
+
+  
   return (
 <>
     <section className="PayPalPayment-section" onClick={props.boxProfileStyle}>

@@ -48,14 +48,14 @@ export default function Login(props){
       	  	      	  	<input className="form-check-input" type="checkbox" value="" id="form1Example3" checked />
       	  	      	  	<label className="form-check-label" for="form1Example3"> تذكرني </label>
       	  	      	</div>
-      	  	      	<a  style={{backgroundColor: "#171c2c", color: "blue"}} href="#">هل نسيت كلمة السر؟</a>
+      	  	      	<a  style={{backgroundColor: "#171c2c", color: "#197cf0"}} href="#">هل نسيت كلمة السر؟</a>
       	  	    </div>
       	  	    <button type="submit" className="btn btn-lg btn-block w-100 text-light"  style={{backgroundColor:"#19243e"}}>
 						تسجيل الدخول
 				</button>
       	  	</form>
 			<div className='mt-4'>
-				<Link style={{backgroundColor: "#171c2c", color: "blue" , fontSize: "20px"}} to='/register'> قم بإنشاء حساب جديد </Link>
+				<Link style={{backgroundColor: "#171c2c", color: "#197cf0" , fontSize: "20px"}} to='/register'> قم بإنشاء حساب جديد </Link>
 	      	</div>
       	</div>
 	  	<div className="col-md-8 col-lg-7 col-xl-6 my-5">

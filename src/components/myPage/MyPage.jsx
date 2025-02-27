@@ -79,35 +79,37 @@ const MyPage = (props) => {
         });
   
         if (response.ok) {
-          setMessage("تم تغيير كلمة المرور بنجاح!");
+          setMessage(<span className='text-success fs-5'>تم تغيير كلمة المرور بنجاح!</span>);
           setOldPassword("");
           setNewPassword("");
           setConfirmPassword("");
         } else {
           const data = await response.json();
-          setMessage(data.detail || "خطأ في تغيير كلمة المرور");
+          setMessage(data.detail || <span className='text-danger fs-5'>خطأ في تغيير كلمة المرور</span>);
         }
       } catch (error) {
-        setMessage("حدث خطأ أثناء تحديث كلمة المرور");
+        setMessage(<span className='text-danger fs-5'>حدث خطأ أثناء تحديث كلمة المرور</span>);
       }
     };
   
     return (
 <>
-    <section  className="container" style={{marginTop: "200px", textAlign: "right"}} onClick={props.boxProfileStyle}>
-      <div className="my-page-parent">
-        <div className="my-page-child row">
-            <h2 className="font-bold mb-4 font-family-cursive col-sm-12">ملف تعريف المستخدم</h2>
-            <strong className="col-sm-3">اسم المستخدم :</strong> 
-            <div className="col-sm-8 fs-5"> {user.username}   </div>
-            <strong className="col-sm-3">بريد إلكتروني :</strong> 
-            <div  className="col-sm-8 fs-5">{user.email}</div>
+    <h2 className="font-bold font-family-cursive col-sm-12" style={{marginTop: "200px", marginRight: "9%"}}>ملف تعريف المستخدم</h2>
+    <section  className="container text-end"  onClick={props.boxProfileStyle}>
+        <div className="my-page-child row" style={{width: "90%" , margin: "auto"}}>
+            <i className="fa-solid fa-address-card col-sm-3 me-4" style={{fontSize:"120px"}}></i>
+            <div  className="col-sm-3">
+                <strong className="fs-4 me-4"> {user.username} </strong> 
+            </div>
         </div>
-        <br />
-        <hr />
-        <br />
-        <div className="my-page-child">
-            <h2 className="font-bold mb-4 font-family-cursive">تغيير كلمة المرور</h2>
+    </section>
+
+    <br />
+    
+    <h2 className="font-bold mb-4 font-family-cursive" style={{marginRight: "9%"}}>تغيير كلمة المرور</h2>
+    <section  className="container text-end" onClick={props.boxProfileStyle}>
+        <div className="my-page-parent" style={{width: "90%" , margin: "auto"}}>
+            <div className="my-page-child">
             <form onSubmit={handlePasswordChange} className="mt-2 row">
         
                   <strong className="col-sm-3 mt-3">  كلمة المرور الحالية : </strong>
