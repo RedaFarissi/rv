@@ -40,16 +40,20 @@ export {default as CodePowerShell} from './codePowerShell/CodePowerShell';
 
 export {default as InteractivCss} from './css/InteractivCss';
 
+export {default as Search} from './search/Search';
+
 export {default as PayPalPayment} from './paypalpayment/PayPalPayment';
 
 export {default as MyPage} from './myPage/MyPage';
 
 export {default as ReportAnErrorUser} from './reportAnError/ReportAnErrorUser';
 
+export {default as AllQuestion} from './allQuestion/AllQuestion';
 
+export {default as AddQuestion} from './addQuestion/AddQuestion';
 
+export {default as QuestionDetail} from './questionDetail/QuestionDetail';
 
-export {default as Search} from './search/Search';
 
 
 export {default as Result} from './result/Result';

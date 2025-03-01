@@ -15,8 +15,7 @@ export default function Footer(props){
                     <div className="mt-4">
                         <h4 className="footer-h4"> <i class="fa-solid fa-bullseye fs-4 ms-2"></i> هدف الموقع</h4>
                         <p>
-                            
-                            تم أيضًا إنشاء هذا الموقع لتعلم البرمجة المجاني و للمراجعة وتذكر الكود الخاص بك بسهولة
+                            تم إنشاء هذا الموقع لتعلم البرمجة المجاني و للمراجعة وتذكر الكود الخاص بك بسهولة و سرعة
                         </p>
                     </div>
                 </div>

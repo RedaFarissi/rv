@@ -1,7 +1,8 @@
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
 import { 
     Header , Home , Html , Css , Js , React , Mysql , Python , Django , DjangoRestFramework , Cmd , Git , Php , 
-    Laravel , Login , Search , CreateAccount , PayPalPayment , MyPage , ReportAnErrorUser , 
+    Laravel , Login , Search , CreateAccount , PayPalPayment , MyPage , ReportAnErrorUser , AllQuestion , AddQuestion , 
+    QuestionDetail ,
 } from './components/path';
 import { useEffect, useRef , useState} from 'react';
 import "./App.sass";
@@ -583,6 +584,25 @@ function App() {
                                                 url={url} 
                                             />} 
             />
+            <Route path='/all-question' element={<AllQuestion  
+                                                scrollY_to_0={scrollY_to_0}
+                                                boxProfileStyle={boxProfileStyle} 
+                                                url={url} 
+                                            />} 
+            />
+            <Route path='/add-question' element={<AddQuestion  
+                                                scrollY_to_0={scrollY_to_0}
+                                                boxProfileStyle={boxProfileStyle} 
+                                                url={url} 
+                                            />} 
+            />
+            <Route path='/question/:id'  element={<QuestionDetail 
+                                                scrollY_to_0={scrollY_to_0} 
+                                                boxProfileStyle={boxProfileStyle} 
+                                                url={url} 
+                                            />} 
+            />
+
         </Routes>
     </Router> 
     );

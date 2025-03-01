@@ -65,7 +65,7 @@ const MyPage = (props) => {
       }
   
       try {
-        const response = await fetch("http://localhost:8000/rest-auth/password/change/", {
+        const response = await fetch(`${props.url}/rest-auth/password/change/`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -93,9 +93,9 @@ const MyPage = (props) => {
     };
   
     return (
-<>
-    <h2 className="font-bold font-family-cursive col-sm-12" style={{marginTop: "200px", marginRight: "9%"}}>ملف تعريف المستخدم</h2>
-    <section  className="container text-end"  onClick={props.boxProfileStyle}>
+<div onClick={props.boxProfileStyle}>
+    <h4 className="font-bold f-family col-sm-12" style={{marginTop: "200px", marginRight: "9%"}}>ملف تعريف المستخدم</h4>
+    <section  className="container text-end">
         <div className="my-page-child row" style={{width: "90%" , margin: "auto"}}>
             <i className="fa-solid fa-address-card col-sm-3 me-4" style={{fontSize:"120px"}}></i>
             <div  className="col-sm-3">
@@ -106,8 +106,8 @@ const MyPage = (props) => {
 
     <br />
     
-    <h2 className="font-bold mb-4 font-family-cursive" style={{marginRight: "9%"}}>تغيير كلمة المرور</h2>
-    <section  className="container text-end" onClick={props.boxProfileStyle}>
+    <h4 className="font-bold mb-4 f-family" style={{marginRight: "9%"}}>تغيير كلمة المرور</h4>
+    <section  className="container text-end">
         <div className="my-page-parent" style={{width: "90%" , margin: "auto"}}>
             <div className="my-page-child">
             <form onSubmit={handlePasswordChange} className="mt-2 row">
@@ -145,13 +145,20 @@ const MyPage = (props) => {
       </div>
     </section>
     <br /><br />
+    <h4 className="font-bold mb-4 f-family" style={{marginRight: "9%"}}> أسئلتك </h4>
+    <section  className="container text-end" onClick={props.boxProfileStyle}>
+    
+    
+    
+    </section>
+    
     <Footer 
           widthFooter="100%"
           block_1={"col-sm-10 col-sm-10 col-md-8 col-lg-4 offset-lg-2 col-xl-4 offset-xl-1"}
           block_2={"col-sm-10 col-md-8 col-lg-4 col-xl-4"}
           blockChildStyle={{width: "90%" , margin:"auto"}}
     />
-</>
+</div>
     );
 };
 
