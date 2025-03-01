@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { Footer } from "../path";
+
 
 const QuestionDetail = (props) => {
     props.scrollY_to_0();
@@ -37,12 +39,19 @@ const QuestionDetail = (props) => {
     if (error) return <p style={{ color: "red" }}>{error}</p>;
 
     return (
-    <div onClick={props.boxProfileStyle}>
-        <section style={{ marginTop: "200px" }} className="container text-end">
+    <div onClick={props.boxProfileStyle} >
+        <section style={{ marginTop: "200px" }} className="container text-end mb-5">
                 <h2>{question?.title}</h2>
                 <p>{question?.text}</p><br />
                 <small>أرسلت بواسطة : {question?.author || "Anonymous"}</small>
         </section>
+        <br />
+        <Footer 
+                  widthFooter="100%"
+                  block_1={"col-sm-10 col-sm-10 col-md-8 col-lg-4 offset-lg-2 col-xl-4 offset-xl-1"}
+                  block_2={"col-sm-10 col-md-8 col-lg-4 col-xl-4"}
+                  blockChildStyle={{width: "90%" , margin:"auto"}}
+        />
     </div>
     );
 };
