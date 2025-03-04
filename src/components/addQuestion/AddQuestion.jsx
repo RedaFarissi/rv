@@ -1,12 +1,18 @@
 import { Footer } from "../path";
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
 const AddQuestion = (props) => {
     props.scrollY_to_0();
     const navigate = useNavigate();
+    const token = localStorage.getItem("auth_token");
+    
+    useEffect(()=>{
+        if (!token)  navigate("/login")
+    },[])
+    
 
     const [dataForm, setDataForm] = useState({   
         title: '',
@@ -23,7 +29,7 @@ const AddQuestion = (props) => {
         const response = await axios.post(`${props.url}/question/create/`, dataForm ,
             {
                 headers : { 
-                    'Authorization': `Token ${localStorage.getItem('auth_token')}` ,
+                    'Authorization': `Token ${token}` ,
                     "Content-Type": "application/json"
                 }
             }

@@ -2,22 +2,33 @@ import { useEffect, useState } from "react";
 import { Footer } from "../path";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 
 const AllQuestion = (props) => {
-    const [questions, setQuestions] = useState([]); // State to store questions
+
+    const navigate = useNavigate();
+    const [questions, setQuestions] = useState([]); 
 
     useEffect(() => {
         props.scrollY_to_0();
+        
+        const token = localStorage.getItem("auth_token");
+        if (!token) {
+          navigate("/login");
+          return;
+        }
+     
 
         async function getAllQuestion() {
             try {
                 const response = await axios.get(`${props.url}/question/all/`, {
                     headers: {
                         "Content-Type": "application/json",
-                        Authorization: `Token ${localStorage.getItem("auth_token")}`,
+                        Authorization: `Token ${token}`,
                     },
                 });
-                setQuestions(response.data.reverse()); // Store fetched questions in state
+                setQuestions(response.data.reverse());
             } catch (err) {
                 console.error("Failed to fetch questions:", err);
             }

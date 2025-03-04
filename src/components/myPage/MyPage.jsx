@@ -29,7 +29,7 @@ const MyPage = (props) => {
                   return;
                 }
              
-                const response = await fetch("http://localhost:8000/api/user/", {
+                const response = await fetch(`${props.url}/api/user/`, {
                     method: "GET",
                     headers: {
                         "Authorization": `Token ${token}`,
