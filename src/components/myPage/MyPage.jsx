@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./MyPage.sass";
 import { Footer } from "../path";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const MyPage = (props) => {
     props.scrollY_to_0();
@@ -12,6 +13,7 @@ const MyPage = (props) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const [yourQuestions, setYourQuestions] = useState([]);
 
     const [oldPassword, setOldPassword] = useState("");
     const [newPassword, setNewPassword] = useState("");
@@ -25,10 +27,9 @@ const MyPage = (props) => {
             try {
                 const token = localStorage.getItem("auth_token");
                 if (!token) {
-                  navigate("/login"); // Redirect if no token
+                  navigate("/login"); 
                   return;
                 }
-             
                 const response = await fetch(`${props.url}/api/user/`, {
                     method: "GET",
                     headers: {
@@ -36,11 +37,7 @@ const MyPage = (props) => {
                         "Content-Type": "application/json",
                     },
                 });
-
-                if (!response.ok) {
-                    throw new Error("Failed to fetch user info");
-                }
-
+                if (!response.ok)  throw new Error("Failed to fetch user info");
                 const data = await response.json();
                 setUser(data);
             } catch (err) {
@@ -49,49 +46,61 @@ const MyPage = (props) => {
                 setLoading(false);
             }
         };
-
         fetchUser();
+
+
+        async function fetchMyQuestions() {
+          try {
+              const response = await axios.get(`${props.url}/question/my-questions/`, {
+                  headers: {
+                      "Content-Type": "application/json",
+                      Authorization: `Token ${localStorage.getItem("auth_token")}`,
+                  },
+              });
+  
+              setYourQuestions(response.data);
+          } catch (err) {
+              setError("Failed to load your questions.");
+          } 
+        }
+        fetchMyQuestions();
     }, [navigate]);
 
     if (loading) return <div className="container" style={{marginTop: "270px"}} > تحميل معلومات المستخدم ...</div>;
     if (error) return <div className="container" style={{marginTop: "270px"}} >خطأ : {error}</div>;
 
     const handlePasswordChange = async (e) => {
-      e.preventDefault();
-  
-      if (newPassword !== confirmPassword) {
-        setMessage("كلمات المرور غير متطابقة!");
-        return;
-      }
-  
-      try {
-        const response = await fetch(`${props.url}/rest-auth/password/change/`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Token ${localStorage.getItem("auth_token")}`,
-          },
-          body: JSON.stringify({
-            old_password: oldPassword,
-            new_password1: newPassword,
-            new_password2: confirmPassword,
-          }),
-        });
-  
-        if (response.ok) {
-          setMessage(<span className='text-success fs-5'>تم تغيير كلمة المرور بنجاح!</span>);
-          setOldPassword("");
-          setNewPassword("");
-          setConfirmPassword("");
-        } else {
-          const data = await response.json();
-          setMessage(data.detail || <span className='text-danger fs-5'>خطأ في تغيير كلمة المرور</span>);
+        e.preventDefault();  
+        if (newPassword !== confirmPassword) 
+            setMessage("كلمات المرور غير متطابقة!")
+        try {
+            const response = await fetch(`${props.url}/rest-auth/password/change/`, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  Authorization: `Token ${localStorage.getItem("auth_token")}`,
+                },
+                body: JSON.stringify({
+                  old_password: oldPassword,
+                  new_password1: newPassword,
+                  new_password2: confirmPassword,
+                }),
+            });
+            if (response.ok) {
+                setMessage(<span className='text-success fs-5'>تم تغيير كلمة المرور بنجاح!</span>);
+                setOldPassword("");
+                setNewPassword("");
+                setConfirmPassword("");
+            } else {
+                const data = await response.json();
+                setMessage(data.detail || <span className='text-danger fs-5'>خطأ في تغيير كلمة المرور</span>);
+            }
+        } catch (error) {
+            setMessage(<span className='text-danger fs-5'>حدث خطأ أثناء تحديث كلمة المرور</span>);
         }
-      } catch (error) {
-        setMessage(<span className='text-danger fs-5'>حدث خطأ أثناء تحديث كلمة المرور</span>);
-      }
     };
-  
+    const  myQuestions = yourQuestions.map(e=> <section  className="container text-end" > {e.text} {e.created_at}</section> )
+    console.log(yourQuestions)
     return (
 <div onClick={props.boxProfileStyle}>
     <h4 className="font-bold f-family col-sm-12" style={{marginTop: "200px", marginRight: "9%"}}>ملف تعريف المستخدم</h4>
@@ -114,25 +123,25 @@ const MyPage = (props) => {
         
                   <strong className="col-sm-3 mt-3">  كلمة المرور الحالية : </strong>
                   <input
-                    type="password"    value={oldPassword} 
-                    onChange={(e) => setOldPassword(e.target.value)} className="block w-full p-2 border rounded mt-1 col-sm-5"
-                    required
+                      type="password"    value={oldPassword} 
+                      onChange={(e) => setOldPassword(e.target.value)} className="block w-full p-2 border rounded mt-1 col-sm-5"
+                      required
                   />
                   <div className="col-sm-3 mt-3">  </div>
 
                   <strong className="col-sm-3 mt-3">كلمة المرور الجديدة :</strong> 
                   <input
-                    type="password"    value={newPassword}   
-                    onChange={(e) => setNewPassword(e.target.value)} className="block w-full p-2 border rounded mt-2 col-sm-5"
-                    required
+                      type="password"    value={newPassword}   
+                      onChange={(e) => setNewPassword(e.target.value)} className="block w-full p-2 border rounded mt-2 col-sm-5"
+                      required
                   />
                   <div className="col-sm-3 mt-3">  </div>
 
                   <strong className="col-sm-3 mt-3">تأكيد كلمة المرور الجديدة :</strong>
                   <input
-                    type="password"    value={confirmPassword}   
-                    onChange={(e) => setConfirmPassword(e.target.value)}  className="block w-full p-2 border rounded mt-2 col-sm-5"
-                    required
+                      type="password"    value={confirmPassword}   
+                      onChange={(e) => setConfirmPassword(e.target.value)}  className="block w-full p-2 border rounded mt-2 col-sm-5"
+                      required
                   />
                   <div className="col-sm-3 mt-3">  </div>
                   <div className="col-sm-3 mt-3">  </div>
@@ -144,14 +153,13 @@ const MyPage = (props) => {
         </div>
       </div>
     </section>
+
     <br /><br />
+    
     <h4 className="font-bold mb-4 f-family" style={{marginRight: "9%"}}> أسئلتك </h4>
-    <section  className="container text-end" onClick={props.boxProfileStyle}>
-    
-    
-    
-    </section>
-    
+    {myQuestions}
+     
+    <br /><br />
     <Footer 
           widthFooter="100%"
           block_1={"col-sm-10 col-sm-10 col-md-8 col-lg-4 offset-lg-2 col-xl-4 offset-xl-1"}

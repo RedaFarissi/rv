@@ -50,7 +50,7 @@ const QuestionDetail = (props) => {
         <section style={{ marginTop: "200px" }} className="container text-end mb-5">
                 <h2>{question?.title}</h2>
                 <p>{question?.text}</p><br />
-                <small>أرسلت بواسطة : {question?.author || "Anonymous"}</small>
+                <small>أرسلت بواسطة : {question.username}</small>
         </section>
 
         <br />
