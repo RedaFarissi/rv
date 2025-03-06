@@ -39,7 +39,7 @@ const QuestionDetail = (props) => {
         }
 
         fetchQuestion();
-    }, [id,props.url]); 
+    }, [id,props.url,navigate]); 
 
 
     if (loading) return <p>تحميل ...</p>;
@@ -47,19 +47,22 @@ const QuestionDetail = (props) => {
 
     return (
     <div onClick={props.boxProfileStyle} >
-        <section style={{ marginTop: "200px" }} className="container text-end mb-5">
-                <h2>{question?.title}</h2>
-                <p>{question?.text}</p><br />
-                <small>أرسلت بواسطة : {question.username}</small>
+        <h3 style={{ marginTop: "200px" ,marginRight: "8%" }}>السؤال :</h3>
+        <section  className="container text-end mb-5">
+                <h4>{question.title}</h4>
+                <small>{question.text}</small>
+                <p><small>{question.language}</small></p>
+                <small>أرسل بواسطة : {question.username}</small>
         </section>
+        <h3 style={{ marginTop: "20px" ,marginRight: "8%" }}>الأجوبة :</h3>
 
         <br />
 
         <Footer 
-                  widthFooter="100%"
-                  block_1={"col-sm-10 col-sm-10 col-md-8 col-lg-4 offset-lg-2 col-xl-4 offset-xl-1"}
-                  block_2={"col-sm-10 col-md-8 col-lg-4 col-xl-4"}
-                  blockChildStyle={{width: "90%" , margin:"auto"}}
+            widthFooter="100%"
+            block_1={"col-sm-10 col-sm-10 col-md-8 col-lg-4 offset-lg-2 col-xl-4 offset-xl-1"}
+            block_2={"col-sm-10 col-md-8 col-lg-4 col-xl-4"}
+            blockChildStyle={{width: "90%" , margin:"auto"}}
         />
     </div>
     );

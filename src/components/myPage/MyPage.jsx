@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./MyPage.sass";
 import { Footer } from "../path";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const MyPage = (props) => {
@@ -20,6 +20,30 @@ const MyPage = (props) => {
     const [confirmPassword, setConfirmPassword] = useState("");
     const [message, setMessage] = useState("");
    
+    
+    const getFormattedDate = (createdAt) => {
+        const createdDate = new Date(createdAt);
+        const now = new Date();
+        const diffMs = now - createdDate; // Difference in milliseconds
+        const diffSec = Math.floor(diffMs / 1000);
+        const diffMin = Math.floor(diffSec / 60);
+        const diffHrs = Math.floor(diffMin / 60);
+        
+        if (diffHrs < 24) {
+            if(diffHrs > 0){
+                return `${diffHrs} hour${diffHrs > 1 ? "s" : ""} ago`;
+            }else if(diffMin > 0){
+                return `${diffMin} minute${diffMin > 1 ? "s" : ""} ago`;
+            }else{
+                return `${diffSec} second${diffSec > 1 ? "s" : ""} ago`;
+            }
+        }
+      
+        // If more than 24 hours, return just the date
+        return createdDate.toLocaleDateString("en-US", { year: "numeric", month: "2-digit", day: "2-digit" });
+    };
+      
+      
     
     useEffect(() => {
         const fetchUser = async () => {
@@ -99,7 +123,15 @@ const MyPage = (props) => {
             setMessage(<span className='text-danger fs-5'>حدث خطأ أثناء تحديث كلمة المرور</span>);
         }
     };
-    const  myQuestions = yourQuestions.map(e=> <section  className="container text-end" > {e.text} {e.created_at}</section> )
+    
+    const   myQuestions = yourQuestions.map(e=>
+            <Link to={`/question/${e.id}`} style={{ color: "white", textDecoration: "none" }}>
+                <section  className="container text-end d-flex justify-content-between align-items-center"> 
+                    <div>{e.title} </div>
+                    <small dir="ltr">{getFormattedDate(e.created_at)}</small>
+                </section> 
+            </Link>
+            )
     console.log(yourQuestions)
     return (
 <div onClick={props.boxProfileStyle}>
@@ -157,7 +189,7 @@ const MyPage = (props) => {
     <br /><br />
     
     <h4 className="font-bold mb-4 f-family" style={{marginRight: "9%"}}> أسئلتك </h4>
-    {myQuestions}
+    {myQuestions.reverse()}
      
     <br /><br />
     <Footer 

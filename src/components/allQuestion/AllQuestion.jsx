@@ -15,10 +15,9 @@ const AllQuestion = (props) => {
         
         const token = localStorage.getItem("auth_token");
         if (!token) {
-          navigate("/login");
-          return;
+            navigate("/login");
+            return;
         }
-     
 
         async function getAllQuestion() {
             try {
@@ -36,13 +35,40 @@ const AllQuestion = (props) => {
         getAllQuestion();
     }, [props]);
     
-        const allQuestions = questions.map((question) => (
-            <Link to={`/question/${question.id}`} style={{ color: "white", textDecoration: "none" }}>
-                <div key={question.id} style={{ color: "white", backgroundColor: "#171c2c"  }} className="alert mb-4">
-                    {question.title}
-                </div>
-            </Link>
-        ))
+    const getFormattedDate = (createdAt) => {
+        const createdDate = new Date(createdAt);
+        const now = new Date();
+        const diffMs = now - createdDate; // Difference in milliseconds
+        const diffSec = Math.floor(diffMs / 1000);
+        const diffMin = Math.floor(diffSec / 60);
+        const diffHrs = Math.floor(diffMin / 60);
+        
+        if (diffHrs < 24) {
+            if(diffHrs > 0){
+                return `${diffHrs} hour${diffHrs > 1 ? "s" : ""} ago`;
+            }else if(diffMin > 0){
+                return `${diffMin} minute${diffMin > 1 ? "s" : ""} ago`;
+            }else{
+                return `${diffSec} second${diffSec > 1 ? "s" : ""} ago`;
+            }
+        }
+      
+        // If more than 24 hours, return just the date
+        return createdDate.toLocaleDateString("en-US", { year: "numeric", month: "2-digit", day: "2-digit" });
+    };
+    const allQuestions = questions.map((question) => (
+        <Link to={`/question/${question.id}`} style={{ color: "white", textDecoration: "none" }}>
+            <div 
+                key={question.id} 
+                style={{ color: "white", backgroundColor: "#171c2c"  }} 
+                className="alert mb-4 d-flex justify-content-between align-items-center"
+            >
+               <div> {question.title} </div>
+               <small> {getFormattedDate(question.created_at)} </small>
+            </div>
+        </Link>
+    ));
+
                     
     return (
         <div onClick={props.boxProfileStyle}>
