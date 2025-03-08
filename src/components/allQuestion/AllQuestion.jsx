@@ -56,6 +56,7 @@ const AllQuestion = (props) => {
         // If more than 24 hours, return just the date
         return createdDate.toLocaleDateString("en-US", { year: "numeric", month: "2-digit", day: "2-digit" });
     };
+
     const allQuestions = questions.map((question) => (
         <Link to={`/question/${question.id}`} style={{ color: "white", textDecoration: "none" }}>
             <div 
@@ -64,7 +65,7 @@ const AllQuestion = (props) => {
                 className="alert mb-4 d-flex justify-content-between align-items-center"
             >
                <div> {question.title} </div>
-               <small> {getFormattedDate(question.created_at)} </small>
+               <small dir="ltr"> {getFormattedDate(question.created_at)} </small>
             </div>
         </Link>
     ));
@@ -93,6 +94,7 @@ const AllQuestion = (props) => {
 
             <br /><br />
 
+            
             <Footer
                 widthFooter="100%"
                 block_1={"col-sm-10 col-sm-10 col-md-8 col-lg-4 offset-lg-2 col-xl-4 offset-xl-1"}
