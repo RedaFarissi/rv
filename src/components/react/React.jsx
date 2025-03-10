@@ -7,6 +7,9 @@ import { useEffect, useState } from "react";
 
 function React(props){  
     const [ countNum1 , setCountNum1] = useState(9);
+    const [ countNum2 , setCountNum2] = useState(0);
+    const [ countNum3 , setCountNum3] = useState(0);
+    const [ message3 , setMessage3] = useState("");
 
     const matrix = props.react_matrix.map(e =>{ 
       var keys_map;  
@@ -577,10 +580,10 @@ root.render(
 
 reportWebVitals();`} language="jsx" number={false} file_name="src / index.js"  addclassName="mt-3 mb-3" copie={true}/> 
     <Result title={'React App'} logo={react_logo} route="localhost:3000">
-    <h1>Redux Counter App</h1>
+      <h1>Redux Counter App</h1>
        <h2>Counter: {countNum1}</h2>
-       <button  className="btn" onClick={ ()=>{setCountNum1( countNum1 + 1 )} }>+</button>
-       <button  className="btn" onClick={ ()=>{setCountNum1( countNum1 - 1 )} }>-</button>
+       <button  className="btn border" onClick={ ()=>{setCountNum1( countNum1 + 1 )} }>+</button>
+       <button  className="btn border" onClick={ ()=>{setCountNum1( countNum1 - 1 )} }>-</button>
        <h2> a = 20 </h2>
        <h2> b = 30 </h2>
     </Result>
@@ -649,10 +652,139 @@ const CounterControls = () => {
 
 export default CounterControls;`} language="jsx" number={false} file_name="src / components / counter / CounterControls.jsx"  addclassName="mt-3 mb-3" copie={true}/> 
     <h6> نفس النتيجة .</h6>
+    <Result title={'React App'} logo={react_logo} route="localhost:3000">
+        <h1> Redux Counter App </h1>
+        <h2> Counter: {countNum2} </h2>
+        <button  className="btn border" onClick={ ()=>{setCountNum2( countNum2 + 1 )} }> + </button>
+        <button  className="btn border" onClick={ ()=>{setCountNum2( countNum2 - 1 )} }> - </button>
+        <h2> a = 20 </h2>
+        <h2> b = 30 </h2>
+    </Result>
+
     <h5 className="title-h5" id='example_3'> مثال 3 : </h5>
-    <CodeHighlighter code={``} language="jsx" number={false} file_name="src / store.js"  addclassName="mt-3 mb-3" copie={true}/> 
-    <CodeHighlighter code={``} language="jsx" number={false} file_name="src / .js"  addclassName="mt-3 mb-3" copie={true}/> 
-    <CodeHighlighter code={``} language="jsx" number={false} file_name="src / .js"  addclassName="mt-3 mb-3" copie={true}/> 
+    <h6> أولاً قم بإنشاء مجلد  reducers </h6>
+    <CodeHighlighter code={`const initialState = {
+    count: 0
+};
+  
+const counterReducer = (state = initialState, action) => {
+    switch (action.type) {
+      case 'INCREMENT':
+        return { count: state.count + 1 };
+      case 'DECREMENT':
+        return { count: state.count - 1 };
+      default:
+        return state;
+    }
+};
+  
+export default counterReducer;`} language="jsx" number={false} file_name="src / reducers / counterReducer.js"  addclassName="mt-3 mb-3" copie={true}/> 
+    <CodeHighlighter code={`const initialMessageState = {
+    message: ''
+};
+  
+ const messageReducer = (state = initialMessageState, action) => {
+    switch (action.type) {
+        case 'SET_MESSAGE':
+            return { message: action.payload };
+        default:
+            return state;
+    }
+};
+  
+export default messageReducer;`} language="jsx" number={false} file_name="src / reducers / messageReducer.js"  addclassName="mt-3 mb-3" copie={true}/> 
+    <CodeHighlighter code={`import { createStore, combineReducers } from 'redux';
+import counterReducer from './reducers/counterReducer';
+import messageReducer from './reducers/messageReducer';
+
+const rootReducer = combineReducers({
+  counter: counterReducer,
+  message: messageReducer
+});
+
+const store = createStore(rootReducer);
+export default store;`} language="jsx" number={false} file_name="src / store.js"  addclassName="mt-3 mb-3" copie={true}/> 
+    <CodeHighlighter code={`import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
+const Message = () => {
+  const message = useSelector(state => state.message.message);
+  const dispatch = useDispatch();
+
+  return (
+    <div>
+        <h2>Message: {message}</h2>
+        <input 
+            type="text" 
+            onChange={(e) => dispatch({ type: 'SET_MESSAGE', payload: e.target.value })} 
+            placeholder="Type a message"
+        />
+    </div>
+  );
+};
+
+export default Message;`} language="jsx" number={false} file_name="src / components / message / Message.jsx"  addclassName="mt-3 mb-3" copie={true}/> 
+    <CodeHighlighter code={`import React from 'react';
+import { useSelector } from 'react-redux';
+import CounterControls from "./CounterControls"
+
+const Counter = () => {
+  const count = useSelector(state => state.counter.count);
+
+  
+  return (
+    <div>
+        <h1> Counter: {count} </h1>
+        <CounterControls />
+    </div>
+  );
+};
+
+export default Counter;`} language="jsx" number={false} file_name="src / components / counter / Counter.jsx"  addclassName="mt-3 mb-3" copie={true}/> 
+    <CodeHighlighter code={`import React from 'react';
+import { useDispatch } from 'react-redux';
+
+const CounterControls = () => {
+  const dispatch = useDispatch();   
+  return (
+    <>
+      <button className='btn' onClick={() => dispatch({ type: 'INCREMENT' })}>+</button>
+      <button className='btn' onClick={() => dispatch({ type: 'DECREMENT' })}>-</button>
+    </>
+  );
+};
+
+export default CounterControls;`} language="jsx" number={false} file_name="src / components / counter / CounterControls.jsx"  addclassName="mt-3 mb-3" copie={true}/> 
+    <CodeHighlighter code={`import React from 'react';
+import Counter from './components/counter/Counter';
+import Message from './components/message/Message';
+
+const App = () => {
+  return (
+    <div>
+      <h1>Redux Multi-Reducer App</h1>
+      <Counter />
+      <Message />
+    </div>
+  );
+};
+
+export default App;`} language="jsx" number={false} file_name="src / App.jsx"  addclassName="mt-3 mb-3" copie={true}/>
+    <Result title={'React App'} logo={react_logo} route="localhost:3000">
+        <br />
+        <h1> Redux Multi-Reducer App </h1>
+        <h2> Counter: {countNum3} </h2>
+        <button  className="btn border" onClick={ ()=>{setCountNum3( countNum3 + 1 )} }> + </button>
+        <button  className="btn border" onClick={ ()=>{setCountNum3( countNum3 - 1 )} }> - </button>
+        <h2>Message: {message3}</h2>
+        <input 
+            type="text" 
+            onChange={(e) => setMessage3(e.target.value) } 
+            placeholder="Type a message"
+        />
+        
+    </Result>
+
     <h5 className="title-h5" id='example_4'> مثال 4 : </h5>
     <CodeHighlighter code={``} language="jsx" number={false} file_name="src / store.js"  addclassName="mt-3 mb-3" copie={true}/> 
     <CodeHighlighter code={``} language="jsx" number={false} file_name="src / .js"  addclassName="mt-3 mb-3" copie={true}/> 
