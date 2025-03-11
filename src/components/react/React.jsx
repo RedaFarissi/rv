@@ -9,8 +9,12 @@ function React(props){
     const [ countNum1 , setCountNum1] = useState(9);
     const [ countNum2 , setCountNum2] = useState(0);
     const [ countNum3 , setCountNum3] = useState(0);
+
     const [ message3 , setMessage3] = useState("");
+    
     const [ visibility , setVisibility] = useState(false);
+    
+    
     
     const matrix = props.react_matrix.map(e =>{ 
       var keys_map;  
@@ -40,6 +44,7 @@ function React(props){
       return keys_map
     });
     
+    
     // Scroll to the element with the hash on page load or when the hash changes
     useEffect(() => {
       if (window.location.hash) {
@@ -51,12 +56,13 @@ function React(props){
       }
     }, [window.location.hash]); // Run the effect when the hash changes
 
+
   return(
 <>
 <main onClick={ (event)=>{ props.clickMenuHeader(event, false);  props.closeSearchPhone(); props.boxProfileStyle();} }>
   <aside  className="aside">
       <dl className="list-group m-0">
-        {matrix}
+          {matrix}
       </dl>
   </aside>
   <section className="section-conetent">
