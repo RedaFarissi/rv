@@ -10,7 +10,8 @@ function React(props){
     const [ countNum2 , setCountNum2] = useState(0);
     const [ countNum3 , setCountNum3] = useState(0);
     const [ message3 , setMessage3] = useState("");
-
+    const [ visibility , setVisibility] = useState(false);
+    
     const matrix = props.react_matrix.map(e =>{ 
       var keys_map;  
       if ( Array.isArray(e) ) { 
@@ -781,15 +782,147 @@ export default App;`} language="jsx" number={false} file_name="src / App.jsx"  a
             type="text" 
             onChange={(e) => setMessage3(e.target.value) } 
             placeholder="Type a message"
-        />
-        
+        />        
     </Result>
 
     <h5 className="title-h5" id='example_4'> مثال 4 : </h5>
-    <CodeHighlighter code={``} language="jsx" number={false} file_name="src / store.js"  addclassName="mt-3 mb-3" copie={true}/> 
-    <CodeHighlighter code={``} language="jsx" number={false} file_name="src / .js"  addclassName="mt-3 mb-3" copie={true}/> 
-    <CodeHighlighter code={``} language="jsx" number={false} file_name="src / .js"  addclassName="mt-3 mb-3" copie={true}/> 
+    <ul><li>نُنشئ مُجلد <bdi>reducers/</bdi> في React-Redux لـ تجميع منطق إدارة الحالة في مكان واحد وفصل المهام، مما يُسهّل صيانة واختبار وتوسعة التحديثات عبر المكونات، مع الالتزام بالنمط المُنتظم لـ Redux. </li></ul>
+    <CodeHighlighter code={`const initiallogoVisibility = {
+    logoVisibility: false
+};
+  
+ const logoReducer = (state = initiallogoVisibility, action) => {
+    switch (action.type) {
+        case 'LOGO_BOX_VISIBILITY':
+            return { logoVisibility: !state.logoVisibility };
+        case 'LOGO_BOX_INVISIBILITY':
+            return { logoVisibility: false };
+        default:
+            return state;
+    }
+};
+  
+export default logoReducer;`} language="jsx" number={false} file_name="src / reducers / logoReducer.js"  addclassName="mt-3 mb-3" copie={true}/> 
+    <CodeHighlighter code={`import { createStore, combineReducers } from 'redux';
+import logoReducer from './reducers/logoReducer';
+
+const rootReducer = combineReducers({
+    logo: logoReducer ,
+});
+
+const store = createStore(rootReducer);
+export default store;`} language="jsx" number={false} file_name="src / store.js"  addclassName="mt-3 mb-3" copie={true}/> 
+    <CodeHighlighter code={`import { useDispatch, useSelector } from "react-redux";
+
+export default function Header(){
+    const visibility = useSelector(state => state.logo.logoVisibility);
+    const dispatch = useDispatch();   
+    
+
+    return(
+    <header className="bg-warning p-3">               
+        <div 
+            onClick={()=>{ dispatch({ type: 'LOGO_BOX_VISIBILITY' }) }}
+            className="logo bg-danger text-light p-5 rounded-circle fs-5 border"
+            style={{width: "max-content",cursor: "pointer"}} 
+        > logo </div>
+        <div  style={{display: (visibility) ? "block" : "none"}}>
+            <ul>
+                <li>option 1</li>
+                <li>option 2</li>
+                <li>option 3</li>
+            </ul>
+        </div>
+    </header>
+    )
+}`} language="jsx" number={false} file_name="src / components / header / Header.jsx"  addclassName="mt-3 mb-3" copie={true}/> 
+    <CodeHighlighter code={`import { useDispatch } from "react-redux"
+
+export default function Aside(){
+    
+    const dispatch = useDispatch()
+    
+    return(
+    <aside 
+        onClick={()=>{ dispatch({type : "LOGO_BOX_INVISIBILITY"}) }} 
+        className="w-25 bg-success fs-3 text-light" 
+        style={{ height: "500px"}}  
+    >
+        Aside
+    </aside>
+    )
+}`} language="jsx" number={false} file_name="src / components / aside / Aside.jsx"  addclassName="mt-3 mb-3" copie={true}/> 
+    <CodeHighlighter code={`import { useDispatch } from "react-redux"
+
+export default function Main(){
+ 
+    const dispatch = useDispatch()
+ 
+    return(
+    <main  
+        onClick={()=>{ dispatch({type : "LOGO_BOX_INVISIBILITY"}) }}
+        className="w-75 bg-danger fs-3 text-light" 
+        style={{ height: "500px"}} 
+    >
+        Main
+    </main>
+    )
+}`} language="jsx" number={false} file_name="src / components / main / Mian.jsx"  addclassName="mt-3 mb-3" copie={true}/> 
+    <CodeHighlighter code={`import React from 'react';
+import { Header , Aside , Main } from './components/path'
+
+const App = () => {
+return (
+<div>
+    <Header/>
+    <div className='d-flex'> 
+      <Aside />
+      <Main />
+    </div>
+</div>
+);
+};
+
+export default App;`} language="jsx" number={false} file_name="src / App.jsx"  addclassName="mt-3 mb-3" copie={true}/> 
+    
+    <Result title={'React App'} logo={react_logo} route="localhost:3000">
+        <div className="bg-warning p-3">               
+            <div 
+                onClick={()=>{ setVisibility(!visibility) }}
+                className="logo bg-danger text-light p-5 rounded-circle fs-5 border"
+                style={{width: "max-content",cursor: "pointer"}} 
+            > logo </div>
+            <div  style={{display: (visibility) ? "block" : "none"}}>
+                <ul>
+                    <li>option 1</li>
+                    <li>option 2</li>
+                    <li>option 3</li>
+                </ul>
+            </div>
+        </div>  
+        <div className="d-flex">
+            <div 
+                onClick={()=>{setVisibility(false)}}
+                className="w-25 bg-success fs-3 text-light" 
+                style={{ height: "500px"}}  
+            >
+                Aside
+            </div>
+            <div  
+                onClick={()=>{setVisibility(false)}}
+                className="w-75 bg-danger fs-3 text-light" 
+                style={{ height: "500px"}} 
+            >
+                Main
+            </div>
+        </div>
+    </Result>
+
+    
+    
+    <CodeHighlighter code={``} language="jsx" number={false} file_name="src / .jsx"  addclassName="mt-3 mb-3" copie={true}/> 
     </article>
+    
   </section>
 
 </main>
