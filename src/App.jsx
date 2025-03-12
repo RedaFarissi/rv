@@ -460,7 +460,7 @@ function App() {
                                                 footerWidth={footerWidth}
                                             />} 
             />
-            <Route path='/react' element={<React 
+            <Route path='/react/*' element={<React 
                                                 boxProfileStyle={boxProfileStyle}
                                                 scrollYAdd={scrollYAdd} 
                                                 clickMenuHeader={clickMenuHeader} 
