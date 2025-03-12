@@ -7,9 +7,14 @@ import {
     Table, Input, Select, Form, Textarea, Button, Fieldset, Dialog, Iframe, Meter, Style, HtmlLink, Meta , Footer
 } from './pathHtml.js';
 import html_logo from "../../assests/images/logo/html_logo.png";
+//import { useSelector  } from 'react-redux';
 
 
 export default function Html(props){  
+
+    //const footer = useSelector(state => state.footer);
+    //document.write(footer);
+
     useEffect(()=>{
         props.scrollY_to_0();
     },[props]);
