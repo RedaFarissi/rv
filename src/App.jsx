@@ -80,14 +80,6 @@ function App() {
         ["JS Events","currentTarget","target","ctrlKey","data","onclick","ondblclick","onbeforeprint","animation","onfocus","onblur","onloadstart","ondurationchange","onloadedmetadata","onloadeddata","onprogress","onended","onchange","oninput","oncontextmenu","oncopy","oninvalid","onkeydown","onkeypress","onkeyup","onload","onmousedown","onmouseup","onmouseenter","onmouseleave","onmouseover","onmouseout","ondrag","onsubmit","onfocusin","onfocusout","onerror","onpagehide","onpaste","onpause","onplay","onresize","onreset","onscroll","onselect","ontoggle","onunload","onvolumechange",],
         ["JS API","Intro","Forms","fetch","History","setInterval","clearInterval","setTimeout"],
     ];
-    const react_matrix  = [
-        ["Introduction","What_is_React","How_react_work","What_you_need_to_get_started","multiple_versions_of_Node","Verify_required_installations","ES6","Create_React_App","Run_React_App",],
-        ["Component","JSX","function_Component","function_Component_props","class_Component","class_Component_this_props","Components_in_Component",],
-        "Events", "Lists", "Handle_images_react", "Handle_import", "props_children",
-        ["Hooks","useState","this_state"],
-        ["Packages","npm_list","axios","react_paypal_js","react_sass","Router","useNavigate_Router","useParams_Router","react_syntax_highlighter"],
-        ["Redux","What_is_redux","install_redux","example_1","example_2","example_3","example_4"],
-    ];
     const sql_list = [
         "Intro" , "Install Mysql","Create Database","Drop Database","Comments","Data Types","Select Database","Create Table","Drop Table","Insert Row","Auto-increment","Retrieving Data from Table","Merge Columns while Retrieving","IF EXISTS","IF NOT EXISTS","Retrieve Data with Conditions","Retrieve Data with Sorting","Retrieve Distinct Data","Merge Tables into One","Delete Data from Table","Update Table Data","Limit Rows Returned","Handling Null Fields","Retrieve Minimum Value in Column","Retrieve Maximum Value in Column","Count Rows in Table","Sum of Column Values","Average of Column Values","Aggregate Common Field Values","Conditions on Aggregated Fields","Copy Data to Another Table","Set Default Value for Column","CASE Condition","Relationships between tables",
     ];
@@ -124,6 +116,14 @@ function App() {
       ["PHP Tutorial","Introduction","Install","Comments","Variables","echo print","Data Types","Strings","Numbers","Casting","Math","Constants","Operators","Conditions","Switch","Loops","Break","Functions","Arrays","Superglobals","Form Handling","RegEx","Date and Time","Include Files","Filters","Callback Functions","Exceptions","JSON"],
       ["PHP OOP","What is OOP","Classes Objects","Constructor","Destructor","Access Modifiers","Inheritance","Class Constants","Abstract Classes","Traits","Static Methods","Static Properties","Iterables"],
       ["PHP MySQL","Connect","Create Database","Create Table"]
+    ];
+    const react_matrix  = [
+        ["Introduction","What_is_React","How_react_work","What_you_need_to_get_started","multiple_versions_of_Node","Verify_required_installations","ES6","Create_React_App","Run_React_App",],
+        ["Component","JSX","function_Component","function_Component_props","class_Component","class_Component_this_props","Components_in_Component",],
+        "Events", "Lists", "Handle_images_react", "Handle_import", "props_children",
+        ["Hooks","useState","this_state","custom_hooks"],
+        ["Packages","npm_list","axios","react_paypal_js","react_sass","Router","useNavigate_Router","useParams_Router","react_syntax_highlighter"],
+        ["Redux","What_is_redux","install_redux","example_1","example_2","example_3","example_4"],
     ];
     const laravel_matrix = [
       ["Introduction","what_is_laravel","what_we_need_to_use_laravel"],
