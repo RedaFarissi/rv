@@ -2,9 +2,7 @@ import { Footer} from "./pathExemple";
 import { useEffect } from "react";
 import { Introduction , Component , Events , Lists , HandleImagesReact , Import, PropsChildren , Hooks , Packages ,Redux ,} from "./pathReact";
 
-function React(props){  
-    
-    
+function React(props){      
     
     const matrix = props.react_matrix.map(e =>{ 
       var keys_map;  
@@ -49,33 +47,31 @@ function React(props){
 
   return(
 <>
-<main onClick={ (event)=>{ props.clickMenuHeader(event, false);  props.closeSearchPhone(); props.boxProfileStyle();} }>
-  <aside  className="aside">
-      <dl className="list-group m-0">
-          {matrix}
-      </dl>
-  </aside>
-  <section className="section-conetent">
-    <h1 className="heading-style"> REACT JS </h1>
-    <Introduction />
-    <Component />
-    <Events />
-    <Lists />
-    <HandleImagesReact />
-    <Import />
-    <PropsChildren />
-    <Hooks />
-    <Packages />
-    <Redux />
-  </section>
-
-</main>
-<Footer 
-    widthFooter={props.footerWidth.width}
-    block_1={props.footerWidth.block_1}
-    block_2={props.footerWidth.block_2}
-    blockChildStyle={{width: "100%"}}
-/>
+    <main onClick={ (event)=>{ props.clickMenuHeader(event, false);  props.closeSearchPhone(); props.boxProfileStyle();} }>
+      <aside  className="aside">
+          <dl className="list-group m-0">
+              {matrix}
+          </dl>
+      </aside>
+      <section className="section-conetent">
+          <Introduction />
+          <Component />
+          <Events />
+          <Lists />
+          <HandleImagesReact />
+          <Import />
+          <PropsChildren />
+          <Hooks />
+          <Packages />
+          <Redux />
+      </section>
+    </main>
+    <Footer 
+        widthFooter={props.footerWidth.width}
+        block_1={props.footerWidth.block_1}
+        block_2={props.footerWidth.block_2}
+        blockChildStyle={{width: "100%"}}
+    />
 </>
   )
 }
