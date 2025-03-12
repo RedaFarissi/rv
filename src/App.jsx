@@ -6,10 +6,9 @@ import {
     QuestionDetail ,
 } from './components/path';
 import {
-    useCustomHtmlList , useCustomCssList , useCustomJsList , useCustomSqlList , useCustomPythonList ,  useCustomDjangoList ,
-    useCustomDjangoRestList, useCustomPhpList , useCustomReactList , useCustomLaravelList , useCustomGitList , 
-    useCustomCmdList 
-} from "./customData/pathCustoms"
+    useCustomHtmlList , useCustomCssList , useCustomJsList , useCustomSqlList , useCustomPythonList ,  useCustomDjangoList ,useCustomDjangoRestList, useCustomPhpList , useCustomReactList , useCustomLaravelList , useCustomGitList , useCustomCmdList ,
+    useCustomScrollToHash , useCustomResizeAside , 
+} from "./custom/pathCustoms"
 
 
 
@@ -17,45 +16,52 @@ import "./App.sass";
 function App() {
     const url =  "http://localhost:8000" ;
     const searchPhone = useRef(null);
+
+    // will return tables. tables contain title and link of all languages 
+    const [html_list] = useCustomHtmlList();
+    const [css_list]  =  useCustomCssList();
+    const [js_matrix] = useCustomJsList();
+    const [sql_list] = useCustomSqlList();
+    const [python_list] = useCustomPythonList(); 
+    const [django_matrix] = useCustomDjangoList();
+    const [django_rest_framework_matrix] = useCustomDjangoRestList();
+    const [php_list] = useCustomPhpList();
+    const [react_matrix]  = useCustomReactList();
+    const [laravel_matrix] = useCustomLaravelList();
+    const [git_list]  = useCustomGitList();
+    const [cmd_list]  = useCustomCmdList();
+
+     
+    useCustomScrollToHash();  // Scroll to id when print url  direct in browser
+
+    useCustomResizeAside();   // Handle Resize Aside 
+    
+    
+    /************************************ Handle footer style ***********************************/
+    const [footerWidth , setFooterWidth] = useState({ width: "", block_1: "", block_2: "" });
+    const handleResizeFooterWithAside =()=>{
+        (window.innerWidth > 1140) ?
+        setFooterWidth({
+            width: "calc( 100% - 265px )",
+            block_1: "col-sm-11 col-sm-11 col-md-9 col-lg-5 offset-lg-1 col-xl-5 offset-xl-1" ,
+            block_2: "col-sm-11 col-md-9 col-lg-5 col-xl-5"
+        }):
+        setFooterWidth({
+            width: "100%",
+            block_1: "col-sm-10 col-sm-10 col-md-8 col-lg-4 offset-lg-2 col-xl-4 offset-xl-1" ,
+            block_2: "col-sm-10 col-md-8 col-lg-4 col-xl-4"
+        });
+    }
+
     useEffect(() => {
-            // Scroll to id when print route direct in browser
-            const hash = window.location.hash;   //get The id  
-            if (hash) {
-                const element = document.querySelector(hash);
-                if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' , block: 'start', inline: 'nearest' });
-                    setTimeout(() => {
-                        const scrollTop = window.scrollY - 140;
-                        window.scrollTo({
-                            top: scrollTop ,
-                            behavior: 'smooth'
-                        });
-                    }, 1000);  
-                }
-            }
-
-            // handle Resize
-            const handleResize = () => {
-                const asides = document.querySelectorAll('.aside');
-                if(window.innerWidth > 1140){
-                    asides.forEach( (aside)=>{
-                        aside.style.display = "block"
-                        aside.style.animation  = "moveAsideOpen 1s forwards";
-                        aside.addEventListener("animationstart", myStartFunctionOpen);
-                        aside.addEventListener("animationiteration", MyAnimationiterationOpen);
-                    });
-                }else{
-                    asides.forEach( (aside)=>{
-                        aside.style.display = "none";    
-                    });
-                }
-            };
-            window.addEventListener('resize', handleResize);
-
             //Handle footer style
             handleResizeFooterWithAside();
             window.addEventListener('resize', handleResizeFooterWithAside);
-      }, []);
+    }, []);
+
+
+    
+    
     //scroll with link have ID
     const scrollYAdd = () => {
         setTimeout(() => {
@@ -76,18 +82,6 @@ function App() {
         divElement.style.display= "none"
     }
 
-    const [html_list] = useCustomHtmlList();
-    const [css_list]  =  useCustomCssList();
-    const [js_matrix] = useCustomJsList();
-    const [sql_list] = useCustomSqlList();
-    const [python_list] = useCustomPythonList(); 
-    const [django_matrix] = useCustomDjangoList();
-    const [django_rest_framework_matrix] = useCustomDjangoRestList();
-    const [php_list] = useCustomPhpList();
-    const [react_matrix]  = useCustomReactList();
-    const [laravel_matrix] = useCustomLaravelList();
-    const [git_list]  =useCustomGitList();
-    const [cmd_list]  =useCustomCmdList();
     
     /***************************  Aside animation and event click ***************************/
     // animation aside open
@@ -112,21 +106,6 @@ function App() {
         });
     }
 
-    /************************************ Handle footer style ***********************************/
-    const [footerWidth , setFooterWidth] = useState({ width: "", block_1: "", block_2: "" });
-    const handleResizeFooterWithAside =()=>{
-        (window.innerWidth > 1140) ?
-        setFooterWidth({
-            width: "calc( 100% - 265px )",
-            block_1: "col-sm-11 col-sm-11 col-md-9 col-lg-5 offset-lg-1 col-xl-5 offset-xl-1" ,
-            block_2: "col-sm-11 col-md-9 col-lg-5 col-xl-5"
-        }):
-        setFooterWidth({
-            width: "100%",
-            block_1: "col-sm-10 col-sm-10 col-md-8 col-lg-4 offset-lg-2 col-xl-4 offset-xl-1" ,
-            block_2: "col-sm-10 col-md-8 col-lg-4 col-xl-4"
-        });
-    }
     /**********************************  Serach    ******************************************** */
     const [searchValue, setSearchValue] = useState("");
     const handleInputChange = (e) => {
@@ -147,6 +126,9 @@ function App() {
         return null; // Return null if no language is detected
     };
     
+
+
+
     function searchAndRetrieve(searchTerm) {
         let matchingValues = [];
         const detectedLanguage = detectLanguage(searchTerm);
