@@ -1546,9 +1546,6 @@ ON e.course_id = c.course_id;`} language="sql" addclassName="mt-3 mb-3" copie={t
 </section>
 </main>
 <Footer 
-    widthFooter={props.footerWidth.width}
-    block_1={props.footerWidth.block_1}
-    block_2={props.footerWidth.block_2}
     blockChildStyle={{width: "100%"}}
 />
 </>

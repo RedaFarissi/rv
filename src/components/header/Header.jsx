@@ -45,6 +45,13 @@ export default function Header(props){
         }
     };
 
+    // handle connection with back-end 
+    const logout =()=>{
+        if(localStorage.getItem('auth_token') !== null){
+            localStorage.removeItem('auth_token')
+            window.location.reload()
+        }
+    }
 
 
     return(
@@ -71,7 +78,7 @@ export default function Header(props){
                             <Link to="/my-page"><button> <i className="fa-solid fa-circle-user ms-2"></i> صفحتي </button></Link><br />
                             <Link to="/all-question"><button> <i class="fa-solid fa-question ms-2"></i>  كل الأسئلة </button></Link><br />
                             <Link to="/report-error"><button> <i className="fa-solid fa-bug ms-2"></i> إبلاغ عن خطأ</button></Link><br />
-                            <button className="out" onClick={props.logout}>  <i className="fa-solid fa-right-from-bracket ms-2"></i> تسجيل الخروج   </button> 
+                            <button className="out" onClick={logout}>  <i className="fa-solid fa-right-from-bracket ms-2"></i> تسجيل الخروج   </button> 
                         </div>
                     </>
                 }

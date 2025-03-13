@@ -37,11 +37,11 @@ export default function Home(props){
             {cards}
         </main>
         <Footer 
-          widthFooter="100%"
-          block_1={"col-sm-10 col-sm-10 col-md-8 col-lg-4 offset-lg-2 col-xl-4 offset-xl-1"}
-          block_2={"col-sm-10 col-md-8 col-lg-4 col-xl-4"}
+          // widthFooter="100%"
+          // block_1={"col-sm-10 col-sm-10 col-md-8 col-lg-4 offset-lg-2 col-xl-4 offset-xl-1"}
+          // block_2={"col-sm-10 col-md-8 col-lg-4 col-xl-4"}
           blockChildStyle={{width: "90%" , margin:"auto"}}
-          />
+        />
     </section>
   </>
     )

@@ -1,3 +1,4 @@
+import "./App.sass";
 import { useEffect, useRef , useState} from 'react';
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
 import { 
@@ -8,11 +9,10 @@ import {
 import {
     useCustomHtmlList , useCustomCssList , useCustomJsList , useCustomSqlList , useCustomPythonList ,  useCustomDjangoList ,useCustomDjangoRestList, useCustomPhpList , useCustomReactList , useCustomLaravelList , useCustomGitList , useCustomCmdList ,
     useCustomScrollToHash , useCustomResizeAside , 
-} from "./custom/pathCustoms"
+} from "./custom/pathCustoms";
 
 
 
-import "./App.sass";
 function App() {
     const url =  "http://localhost:8000" ;
     const searchPhone = useRef(null);
@@ -30,36 +30,9 @@ function App() {
     const [laravel_matrix] = useCustomLaravelList();
     const [git_list]  = useCustomGitList();
     const [cmd_list]  = useCustomCmdList();
-
      
     useCustomScrollToHash();  // Scroll to id when print url  direct in browser
-
     useCustomResizeAside();   // Handle Resize Aside 
-    
-    
-    /************************************ Handle footer style ***********************************/
-    const [footerWidth , setFooterWidth] = useState({ width: "", block_1: "", block_2: "" });
-    const handleResizeFooterWithAside =()=>{
-        (window.innerWidth > 1140) ?
-        setFooterWidth({
-            width: "calc( 100% - 265px )",
-            block_1: "col-sm-11 col-sm-11 col-md-9 col-lg-5 offset-lg-1 col-xl-5 offset-xl-1" ,
-            block_2: "col-sm-11 col-md-9 col-lg-5 col-xl-5"
-        }):
-        setFooterWidth({
-            width: "100%",
-            block_1: "col-sm-10 col-sm-10 col-md-8 col-lg-4 offset-lg-2 col-xl-4 offset-xl-1" ,
-            block_2: "col-sm-10 col-md-8 col-lg-4 col-xl-4"
-        });
-    }
-
-    useEffect(() => {
-            //Handle footer style
-            handleResizeFooterWithAside();
-            window.addEventListener('resize', handleResizeFooterWithAside);
-    }, []);
-
-
     
     
     //scroll with link have ID
@@ -69,9 +42,9 @@ function App() {
             window.scrollTo({ top: scrollTop , behavior: 'smooth' });
         }, 1000 );  
     };
+
     //scroll to 0
     const scrollY_to_0 = () => {  window.scrollTo({  top: 0 ,  behavior: 'smooth' })  };
-
     const openSearchPhone = (event)=>{ 
         event.stopPropagation();
         const divElement = searchPhone.current;
@@ -126,9 +99,6 @@ function App() {
         return null; // Return null if no language is detected
     };
     
-
-
-
     function searchAndRetrieve(searchTerm) {
         let matchingValues = [];
         const detectedLanguage = detectLanguage(searchTerm);
@@ -318,23 +288,16 @@ function App() {
         return matchingValues;
     }    
     
-    // Visiblity if user login  
-    const [isVisibleProfile, setIsVisibleProfile] = useState(false);
-    function boxProfile(event){
-        setIsVisibleProfile(!isVisibleProfile);
-        event.stopPropagation();
-    }
-    function boxProfileStyle(){
-        setIsVisibleProfile(false);
-    }
-
-    // handle connection with back-end 
-    const logout =()=>{
-        if(localStorage.getItem('auth_token') !== null){
-            localStorage.removeItem('auth_token')
-            window.location.reload()
+        // Visiblity if user login  
+        const [isVisibleProfile, setIsVisibleProfile] = useState(false);
+        function boxProfile(event){
+            setIsVisibleProfile(!isVisibleProfile);
+            event.stopPropagation();
         }
-    }
+        function boxProfileStyle(){
+            setIsVisibleProfile(false);
+        }
+    
 
     return (
     <Router>
@@ -349,15 +312,12 @@ function App() {
             handleInputChange={handleInputChange}
             handleSubmit={handleSubmit}
 
-            isVisibleProfile={isVisibleProfile}
+            //isVisibleProfile={isVisibleProfile}
             boxProfile={boxProfile}
             boxProfileStyle={boxProfileStyle}
-            
-            logout={logout}
         />
         <Routes>
-
-            <Route path='/'       element={<Home 
+         <Route path='/'       element={<Home 
                                                 closeSearchPhone={closeSearchPhone} 
                                                 scrollY_to_0={scrollY_to_0} 
                                                 boxProfileStyle={boxProfileStyle}
@@ -369,7 +329,6 @@ function App() {
                                                 clickMenuHeader={clickMenuHeader} 
                                                 html_list={html_list}
                                                 closeSearchPhone={closeSearchPhone} 
-                                                footerWidth={footerWidth}
                                             />}
             />
             <Route path='/css/*' element={<Css 
@@ -378,7 +337,6 @@ function App() {
                                                 clickMenuHeader={clickMenuHeader} 
                                                 css_list={css_list} 
                                                 closeSearchPhone={closeSearchPhone} 
-                                                footerWidth={footerWidth}
                                             />} 
             />
             <Route path='/js/*' element={<Js 
@@ -387,7 +345,6 @@ function App() {
                                                 clickMenuHeader={clickMenuHeader} 
                                                 js_matrix={js_matrix} 
                                                 closeSearchPhone={closeSearchPhone}
-                                                footerWidth={footerWidth}
                                             />} 
             />
             <Route path='/react/*' element={<React 
@@ -396,7 +353,6 @@ function App() {
                                                 clickMenuHeader={clickMenuHeader} 
                                                 react_matrix={react_matrix} 
                                                 closeSearchPhone={closeSearchPhone}
-                                                footerWidth={footerWidth}
                                             />} 
             />
             <Route path='/mysql/*' element={<Mysql  
@@ -405,7 +361,6 @@ function App() {
                                                 clickMenuHeader={clickMenuHeader} 
                                                 sql_list={sql_list} 
                                                 closeSearchPhone={closeSearchPhone}
-                                                footerWidth={footerWidth}
                                             />} 
             />
             <Route path='/python/*' element={<Python
@@ -414,7 +369,6 @@ function App() {
                                                 clickMenuHeader={clickMenuHeader} 
                                                 python_list={python_list} 
                                                 closeSearchPhone={closeSearchPhone}
-                                                footerWidth={footerWidth}
                                             />} 
             />
             <Route path='/django/*' element={<Django 
@@ -424,7 +378,6 @@ function App() {
                                                 clickMenuHeader={clickMenuHeader} 
                                                 django_matrix={django_matrix} 
                                                 closeSearchPhone={closeSearchPhone}
-                                                footerWidth={footerWidth}
                                             />} 
             />
             <Route path='/django-rest-framework/*' element={<DjangoRestFramework 
@@ -434,7 +387,6 @@ function App() {
                                                 clickMenuHeader={clickMenuHeader} 
                                                 django_rest_framework_matrix={django_rest_framework_matrix} 
                                                 closeSearchPhone={closeSearchPhone}
-                                                footerWidth={footerWidth}
                                             />} 
             />
             <Route path='/php/*' element={<Php 
@@ -443,7 +395,6 @@ function App() {
                                                 clickMenuHeader={clickMenuHeader} 
                                                 php_list={php_list}  
                                                 closeSearchPhone={closeSearchPhone}
-                                                footerWidth={footerWidth}
                                             />} 
             />
             <Route path='/laravel/*' element={<Laravel 
@@ -453,7 +404,6 @@ function App() {
                                                 clickMenuHeader={clickMenuHeader} 
                                                 laravel_matrix={laravel_matrix} 
                                                 closeSearchPhone={closeSearchPhone} 
-                                                footerWidth={footerWidth}
                                             />} 
             />
             <Route path='/powerShell' element={<Cmd 
@@ -462,7 +412,6 @@ function App() {
                                                 clickMenuHeader={clickMenuHeader} 
                                                 cmd_list={cmd_list}  
                                                 closeSearchPhone={closeSearchPhone}
-                                                footerWidth={footerWidth}
                                             />} 
             />
             <Route path='/git' element={<Git 
@@ -471,7 +420,6 @@ function App() {
                                                 clickMenuHeader={clickMenuHeader} 
                                                 git_list={git_list} 
                                                 closeSearchPhone={closeSearchPhone}
-                                                footerWidth={footerWidth}
                                             />}
             />
             <Route path='/search' element={<Search

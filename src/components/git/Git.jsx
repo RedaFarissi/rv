@@ -21,7 +21,8 @@ export default function Git(props){
 | o ...+*o =      |
 |. o ooo EB .     |
 | . .... o.+      |
-+----[SHA256]-----+ `
++----[SHA256]-----+ `;
+
    // Scroll to the element with the hash on page load or when the hash changes
    useEffect(() => {
           if (window.location.hash) {
@@ -550,9 +551,6 @@ branch 'main' set up to track 'origin/main'.<br />
             </section>
         </main>
         <Footer 
-            widthFooter={props.footerWidth.width}
-            block_1={props.footerWidth.block_1}
-            block_2={props.footerWidth.block_2}
             blockChildStyle={{width: "100%"}}
         />
     </>

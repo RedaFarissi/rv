@@ -73,9 +73,6 @@ export default function Python(props){
         </section>
     </main>
     <Footer 
-        widthFooter={props.footerWidth.width}
-        block_1={props.footerWidth.block_1}
-        block_2={props.footerWidth.block_2}
         blockChildStyle={{width: "100%"}}
     />
 </>

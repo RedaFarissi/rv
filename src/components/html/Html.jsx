@@ -1,3 +1,4 @@
+import html_logo from "../../assests/images/logo/html_logo.png";
 import { useEffect } from "react";
 import { Routes, Route , Link } from "react-router-dom";
 import { 
@@ -6,14 +7,9 @@ import {
     Audio, Video, Details, BiDirectionalIsolation, BiDirectionalOverride, ListsOrdered, ListsUnordered, ListsDefinitionul, 
     Table, Input, Select, Form, Textarea, Button, Fieldset, Dialog, Iframe, Meter, Style, HtmlLink, Meta , Footer
 } from './pathHtml.js';
-import html_logo from "../../assests/images/logo/html_logo.png";
-//import { useSelector  } from 'react-redux';
 
 
 export default function Html(props){  
-
-    //const footer = useSelector(state => state.footer);
-    //document.write(footer);
 
     useEffect(()=>{
         props.scrollY_to_0();
@@ -90,9 +86,6 @@ export default function Html(props){
         </section>
     </main>
     <Footer 
-        widthFooter={props.footerWidth.width}
-        block_1={props.footerWidth.block_1}
-        block_2={props.footerWidth.block_2}
         blockChildStyle={{width: "100%"}}
     />
     </>

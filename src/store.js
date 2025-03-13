@@ -2,8 +2,8 @@ import { createStore, combineReducers } from 'redux';
 import reducerFooter from './reducers/reducerFooter';
 
 const rootReducer = combineReducers({
-    footer: reducerFooter ,
+    footer: reducerFooter,
 });
 
-const store = createStore(reducerFooter);
+const store = createStore(rootReducer);
 export default store;
