@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import { Footer } from "../path";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { useCustomScroolTo0 } from "../../custom/pathCustoms";
 
 
 
 const ReportAnErrorUser = (props) => {
-    props.scrollY_to_0();
+    const dispatch = useDispatch();
+    useCustomScroolTo0();
     const navigate = useNavigate();
     const [dataForm, setDataForm] = useState({ pageLink: '' , issueType: '' , issueDescription: '' ,});
 
@@ -38,7 +41,7 @@ const ReportAnErrorUser = (props) => {
 
   return (
 <> 
-    <section className="container" style={{marginTop: "200px"}}  onClick={props.boxProfileStyle}>
+    <section className="container" style={{marginTop: "200px"}}  onClick={()=>{dispatch({ type: 'FALSE_VISIBILTY_PROFILE' })}}>
         <form method="POST" onSubmit={handleCreatePost} >
             <div className="row">
                 <span className="col-sm-1"></span>

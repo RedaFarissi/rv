@@ -1,11 +1,14 @@
+import { useCustoScrollYAdd } from "../../custom/pathCustoms";
 import images  from "./imagesMysql"
 import { CodeHighlighter  } from "../path";
 import Footer from "../footer/Footer"
 import { useEffect } from "react";
+import { useDispatch } from 'react-redux';
 
 export default function Sql(props){
-    const arrays = props.sql_list.map(e => <li className="list-group-item">
-        <a  href={`/mysql#${e.toLowerCase().replace(/\s/g, '-')}`}  onClick={ props.scrollYAdd } className="p-2"> 
+  const dispatch = useDispatch();
+  const arrays = props.sql_list.map(e => <li className="list-group-item">
+        <a  href={`/mysql#${e.toLowerCase().replace(/\s/g, '-')}`}  onClick={ useCustoScrollYAdd } className="p-2"> 
             <i className="fa-solid fa-caret-right me-1"></i> SQL {e}
         </a>
     </li>)
@@ -25,7 +28,7 @@ export default function Sql(props){
       
 return(
 <>
-<main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone();props.boxProfileStyle(); } }>
+<main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone();dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }) } }>
     <aside className="aside">
         <ul className="list-group m-0">
             {arrays}

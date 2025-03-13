@@ -5,9 +5,13 @@ import {
    DjangoFilter,Session,ContextProcessors,Footer,NgrokTest,
 } from "./pathDjango";
 import React, { useEffect, useRef } from 'react';
+import { useCustoScrollYAdd , useCustomScroolTo0 } from "../../custom/pathCustoms";
+import { useDispatch } from 'react-redux';
 
 export default function Django(props){
    const AsideRef = useRef(null);
+   const dispatch = useDispatch();
+   
    useEffect(() => {
       AsideRef.current.scrollTop = localStorage.getItem("django_aside") || 0 ;
    }, []); 
@@ -31,13 +35,15 @@ export default function Django(props){
                if(index === 0){
                      dt_title = key.toLowerCase().replace(/_/g, '-');
                      return(<dt className="aside-dl-dt" key={key}>
-                           <Link to={`/django/${dt_title}/`} onClick={props.scrollY_to_0}>
+                           <Link to={`/django/${dt_title}/`} 
+                              onClick={useCustomScroolTo0}
+                           >
                               <i className="fa-solid fa-caret-right"></i> {key.replace(/_/g, ' ')}
                            </Link>
                         </dt>)  
                }else{
                      return(<dd className="aside-dl-dd" key={key}>
-                           <a href={`/django/${dt_title}#${key}`} onClick={ props.scrollYAdd }>
+                           <a href={`/django/${dt_title}#${key}`} onClick={ useCustoScrollYAdd }>
                                 <i className="fa-solid fa-circle"></i> {key.replace(/_/g, ' ')}
                               </a>
                            </dd>)
@@ -45,7 +51,9 @@ export default function Django(props){
           });
       }else {
          keys_map = <dt className="aside-dl-simple" key={e}>
-               <a href={`/django/${e.toLowerCase().replace(/_/g, '-')}`} onClick={props.scrollY_to_0}>
+               <a href={`/django/${e.toLowerCase().replace(/_/g, '-')}`} 
+                  onClick={useCustomScroolTo0}
+               >
                      <i className="fa-solid fa-caret-right"></i> {e.replace(/_/g, ' ')} 
                </a>
          </dt>;
@@ -57,8 +65,8 @@ export default function Django(props){
       <main onClick={ (event)=>{ 
                   props.clickMenuHeader(event, false);
                   props.closeSearchPhone(); 
-                  props.boxProfileStyle();
-             }}
+                  dispatch({ type: 'FALSE_VISIBILTY_PROFILE' });
+            }}
       >
          <aside className="aside" onScroll={()=>{ localStorage.setItem("django_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
              <ul className="list-group m-0">

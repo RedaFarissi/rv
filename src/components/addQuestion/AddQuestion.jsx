@@ -2,10 +2,11 @@ import { Footer } from "../path";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useCustomScroolTo0 } from "../../custom/pathCustoms";
 
 
 const AddQuestion = (props) => {
-    props.scrollY_to_0();
+    useCustomScroolTo0(); 
     const navigate = useNavigate();
     const token = localStorage.getItem("auth_token");
     

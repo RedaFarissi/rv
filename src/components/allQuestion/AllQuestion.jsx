@@ -3,15 +3,18 @@ import { Footer } from "../path";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { useCustomScroolTo0 } from "../../custom/pathCustoms";
 
 
 const AllQuestion = (props) => {
-
+    const dispatch = useDispatch();
+    useCustomScroolTo0();
     const navigate = useNavigate();
     const [questions, setQuestions] = useState([]); 
 
     useEffect(() => {
-        props.scrollY_to_0();
+       
         
         const token = localStorage.getItem("auth_token");
         if (!token) {
@@ -72,7 +75,7 @@ const AllQuestion = (props) => {
 
                     
     return (
-        <div onClick={props.boxProfileStyle}>
+        <div onClick={ ()=>{dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }) }}>
             <div style={{ marginTop: "200px", marginRight: "8%", marginLeft: "8%" }} className="d-flex justify-content-between">
                 <h2 className="font-bold f-family fs-4">أسئلة المستخدمين</h2>
                 <Link to="/add-question">

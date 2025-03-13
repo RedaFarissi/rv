@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import "./Login.css";
 import Footer from "../footer/Footer";
+import { useDispatch } from 'react-redux';
+import { useCustomScroolTo0 } from "../../custom/pathCustoms";
 
 export default function Login(props){
-	props.scrollY_to_0();
-  
+	const dispatch = useDispatch();
+	useCustomScroolTo0();
+	  
 	const [login , setLogin] = useState({ username:"" , password:"" });
 	const navigate = useNavigate();
 	
@@ -30,7 +33,7 @@ export default function Login(props){
 
     return(
 <>
-<section className="login-section" onClick={props.boxProfileStyle}>
+<section className="login-section" onClick={()=>{dispatch({ type: 'FALSE_VISIBILTY_PROFILE' })}}>
   <div className="container py-5 h-100">
     <div className="row d-flex align-items-center justify-content-center h-100">
 		<div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1">

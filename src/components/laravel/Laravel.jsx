@@ -4,9 +4,13 @@ import{
    Introduction , Mvc , Database , DatabaseQueryBuilder ,  DatabaseRouteResource , 
    Git , Mail , Middleware , Packages , Tinker , GitClone  , ReactVite ,  Footer 
 } from "./pathLaravel.js";
+import { useDispatch } from 'react-redux';
+import { useCustoScrollYAdd } from "../../custom/pathCustoms";
+import { useCustomScroolTo0 } from "../../custom/pathCustoms";
 
 export default function Laravel(props){
    const AsideRef = useRef(null);
+   const dispatch = useDispatch();
    useEffect(() => {
        AsideRef.current.scrollTop = localStorage.getItem("laravel_aside") || 0;
    }, []);
@@ -29,13 +33,15 @@ export default function Laravel(props){
             if(index === 0){
                dt_title = key.toLowerCase().replace(/_/g, '-');
               return(<dt className="aside-dl-dt" key={key}>
-                        <Link to={`/laravel/${dt_title}/`} onClick={ props.scrollY_to_0 }>
+                        <Link to={`/laravel/${dt_title}/`} 
+                           onClick={ useCustomScroolTo0 }
+                        >
                            <i className="fa-solid fa-caret-right me-1"></i> {key.replace(/_/g, ' ')}
                         </Link>
                      </dt>)  
             }else{
                 return(<dd className="aside-dl-dd" key={key}>
-                           <a href={`/laravel/${dt_title}#${key}`} onClick={ props.scrollYAdd }>
+                           <a href={`/laravel/${dt_title}#${key}`} onClick={ useCustoScrollYAdd }>
                              <i className="fa-solid fa-circle"></i> {key.replace(/_/g, ' ')}
                            </a>
                         </dd>)
@@ -43,7 +49,9 @@ export default function Laravel(props){
           });
       }else {
          keys_map = <dt className="aside-dl-simple" key={e}>
-               <a href={`/laravel/${e.toLowerCase().replace(/_/g, '-')}`} onClick={ props.scrollY_to_0 }>
+               <a href={`/laravel/${e.toLowerCase().replace(/_/g, '-')}`}
+                  onClick={ useCustomScroolTo0 }
+               >
                   <i className="fa-solid fa-caret-right me-1"></i> {e.replace(/_/g, ' ')} 
                </a>
             </dt>;
@@ -55,7 +63,7 @@ export default function Laravel(props){
 
    return (
 <>
-   <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone(); props.boxProfileStyle(); } }>
+   <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone(); dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }); } }>
       <aside className="aside" onScroll={()=>{ localStorage.setItem("laravel_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
           <ul className="list-group m-0">
              {matrix}

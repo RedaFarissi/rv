@@ -9,11 +9,12 @@ import {
     Connect,CreateDatabase,CreateTable,Footer,
 } from "./pathPhp";
 import xampp_logo from "../../assests/images/logo/xampp.jpg";
+import { useDispatch } from 'react-redux';
+import { useCustomScroolTo0 } from "../../custom/pathCustoms";
 
 export default function Php(props){    
-    useEffect(()=>{
-       props.scrollY_to_0();
-    },[props]);
+    const dispatch = useDispatch();
+    useCustomScroolTo0();  
 
     const matrix = props.php_list.map( e =>(
         <dl>
@@ -24,7 +25,7 @@ export default function Php(props){
                         <i className="fa-solid fa-caret-right"></i> {value}
                     </dt> : 
                     <dd className="aside-dl-dd">
-                        <Link to={`/php/${value.toLowerCase().replace(/\s/g, '-')}`} onClick={props.scrollY_to_0}> 
+                        <Link to={`/php/${value.toLowerCase().replace(/\s/g, '-')}`}> 
                             <i className="fa-solid fa-circle"></i> {value}
                         </Link>
                     </dd>
@@ -34,7 +35,7 @@ export default function Php(props){
     ));
     return(
 <>
-<main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone(); props.boxProfileStyle();  } }>
+<main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone(); dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }) } }>
     <aside className="aside">
         <ul className="list-group m-0">
             {matrix}

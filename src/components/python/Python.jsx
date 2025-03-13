@@ -7,22 +7,25 @@ import {
     Inheritance,Iterators,Scope,Modules,Dates,Math,JSON,RegEx,PIP,TryExcept,
     Input,StringFormatting,FileHandling,ReadFiles,WriteCreateFiles,DeleteFiles,Footer
 } from "./pathPython"
+import { useDispatch } from 'react-redux';
+import { useCustomScroolTo0 } from "../../custom/pathCustoms";
 
 
 export default function Python(props){ 
-    useEffect(()=>{
-       props.scrollY_to_0();
-    },[props]);
-
+    const dispatch = useDispatch();
+    useCustomScroolTo0();
+    
     const arr = props.python_list.map(e => <li className="list-group-item">
-        <Link to={`/python/${e.toLowerCase().replace(/\s/g, '-')}`} className="p-2" onClick={props.scrollY_to_0}>
+        <Link to={`/python/${e.toLowerCase().replace(/\s/g, '-')}`} className="p-2" 
+            onClick={useCustomScroolTo0}
+        >
             <i className="fa-solid fa-caret-right me-1"></i> Python {e}
         </Link>
     </li>)
 
     return(
 <>
-    <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone(); props.boxProfileStyle(); } }>
+    <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone(); dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }); } }>
         <aside className="aside">
             <ul className="list-group m-0">
                 {arr}

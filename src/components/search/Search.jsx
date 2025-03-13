@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
 import Footer from "../footer/Footer";
 import "./Search.css"
+import { useDispatch } from 'react-redux';
+import { useCustomScroolTo0 } from "../../custom/pathCustoms";
 
 export default function Search(props){    
     
-    props.scrollY_to_0();
+    const dispatch = useDispatch();
+    useCustomScroolTo0();
+    
     const links = props.searchAndRetrieve(props.searchValue).map( e => 
         <Link to={`${e.route}`}> 
                 <div class="card box-search mb-1" style={{width: "18rem"}}>
@@ -26,14 +30,15 @@ export default function Search(props){
     <>
         <main 
             className="main-home d-flex justify-content-center align-items-center flex-wrap" dir="ltr" 
+            onClick={()=>{dispatch({ type: 'FALSE_VISIBILTY_PROFILE' });}}
         >          
             {(links.length > 0)? links : empty_search}
         </main>
         
         <Footer 
-          widthFooter="100%"
-          block_1={"col-sm-10 col-sm-10 col-md-8 col-lg-4 offset-lg-2 col-xl-4 offset-xl-1"}
-          block_2={"col-sm-10 col-md-8 col-lg-4 col-xl-4"}
+        //   widthFooter="100%"
+        //   block_1={"col-sm-10 col-sm-10 col-md-8 col-lg-4 offset-lg-2 col-xl-4 offset-xl-1"}
+        //   block_2={"col-sm-10 col-md-8 col-lg-4 col-xl-4"}
           blockChildStyle={{width: "90%" , margin:"auto"}}
         />
 

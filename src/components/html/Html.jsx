@@ -7,16 +7,16 @@ import {
     Audio, Video, Details, BiDirectionalIsolation, BiDirectionalOverride, ListsOrdered, ListsUnordered, ListsDefinitionul, 
     Table, Input, Select, Form, Textarea, Button, Fieldset, Dialog, Iframe, Meter, Style, HtmlLink, Meta , Footer
 } from './pathHtml.js';
+import { useDispatch } from 'react-redux';
+import { useCustomScroolTo0 } from "../../custom/pathCustoms";
 
 
 export default function Html(props){  
-
-    useEffect(()=>{
-        props.scrollY_to_0();
-    },[props]);
-
+    const dispatch = useDispatch();
+    useCustomScroolTo0();
+    
     const arrays = props.html_list.map(e => <li className="list-group-item">
-        <Link  to={`/html/${e.toLowerCase().replace(/\s/g, '-')}`}  onClick={props.scrollY_to_0} >
+        <Link  to={`/html/${e.toLowerCase().replace(/\s/g, '-')}`}  onClick={useCustomScroolTo0} >
             <i className="fa-solid fa-caret-right me-1"></i> HTML {e}
         </Link>
     </li>);
@@ -26,7 +26,7 @@ export default function Html(props){
     <main onClick={(event)=>{ 
             props.clickMenuHeader(event, false);
             props.closeSearchPhone(); 
-            props.boxProfileStyle();
+            dispatch({ type: 'FALSE_VISIBILTY_PROFILE' });
         }}
     >
         <aside className="aside">

@@ -2,10 +2,15 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Footer } from "../path";
+import { useDispatch } from 'react-redux';
+import { useCustomScroolTo0 } from "../../custom/pathCustoms";
 
 const QuestionDetail = (props) => {
-    props.scrollY_to_0();    
+    const dispatch = useDispatch();
+    useCustomScroolTo0();
+    
     const { id } = useParams(); // Get question ID from URL
+    
     const [question, setQuestion] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -78,7 +83,7 @@ const QuestionDetail = (props) => {
     if (error) return <p style={{ color: "red" }}>{error}</p>;
 
     return (
-        <div onClick={props.boxProfileStyle}>
+        <div onClick={()=>{dispatch({ type: 'FALSE_VISIBILTY_PROFILE' })}}>
             <h3 style={{ marginTop: "200px", marginRight: "8%" }}>السؤال :</h3>
             <section className="container text-end mb-5">
                 <h4>{question.title}</h4>

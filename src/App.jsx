@@ -1,5 +1,5 @@
 import "./App.sass";
-import { useEffect, useRef , useState} from 'react';
+import { useEffect , useRef , useState} from 'react';
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
 import { 
     Header , Home , Html , Css , Js , React , Mysql , Python , Django , DjangoRestFramework , Cmd , Git , Php , 
@@ -34,17 +34,9 @@ function App() {
     useCustomScrollToHash();  // Scroll to id when print url  direct in browser
     useCustomResizeAside();   // Handle Resize Aside 
     
-    
-    //scroll with link have ID
-    const scrollYAdd = () => {
-        setTimeout(() => {
-            const scrollTop = window.scrollY - 140;
-            window.scrollTo({ top: scrollTop , behavior: 'smooth' });
-        }, 1000 );  
-    };
 
-    //scroll to 0
-    const scrollY_to_0 = () => {  window.scrollTo({  top: 0 ,  behavior: 'smooth' })  };
+
+
     const openSearchPhone = (event)=>{ 
         event.stopPropagation();
         const divElement = searchPhone.current;
@@ -288,17 +280,6 @@ function App() {
         return matchingValues;
     }    
     
-        // Visiblity if user login  
-        const [isVisibleProfile, setIsVisibleProfile] = useState(false);
-        function boxProfile(event){
-            setIsVisibleProfile(!isVisibleProfile);
-            event.stopPropagation();
-        }
-        function boxProfileStyle(){
-            setIsVisibleProfile(false);
-        }
-    
-
     return (
     <Router>
         <Header 
@@ -311,176 +292,104 @@ function App() {
             setSearchValue={setSearchValue}
             handleInputChange={handleInputChange}
             handleSubmit={handleSubmit}
-
-            //isVisibleProfile={isVisibleProfile}
-            boxProfile={boxProfile}
-            boxProfileStyle={boxProfileStyle}
         />
         <Routes>
-         <Route path='/'       element={<Home 
-                                                closeSearchPhone={closeSearchPhone} 
-                                                scrollY_to_0={scrollY_to_0} 
-                                                boxProfileStyle={boxProfileStyle}
+            <Route path='/'       element={<Home 
+                                                closeSearchPhone={closeSearchPhone}  
                                             />} 
             />
             <Route path='/html/*' element={<Html 
-                                                boxProfileStyle={boxProfileStyle}
-                                                scrollY_to_0={scrollY_to_0} 
                                                 clickMenuHeader={clickMenuHeader} 
                                                 html_list={html_list}
                                                 closeSearchPhone={closeSearchPhone} 
                                             />}
             />
             <Route path='/css/*' element={<Css 
-                                                boxProfileStyle={boxProfileStyle}
-                                                scrollY_to_0={scrollY_to_0} 
                                                 clickMenuHeader={clickMenuHeader} 
                                                 css_list={css_list} 
                                                 closeSearchPhone={closeSearchPhone} 
                                             />} 
             />
             <Route path='/js/*' element={<Js 
-                                                boxProfileStyle={boxProfileStyle}
-                                                scrollY_to_0={scrollY_to_0} 
                                                 clickMenuHeader={clickMenuHeader} 
                                                 js_matrix={js_matrix} 
                                                 closeSearchPhone={closeSearchPhone}
                                             />} 
             />
             <Route path='/react/*' element={<React 
-                                                boxProfileStyle={boxProfileStyle}
-                                                scrollYAdd={scrollYAdd} 
                                                 clickMenuHeader={clickMenuHeader} 
                                                 react_matrix={react_matrix} 
                                                 closeSearchPhone={closeSearchPhone}
                                             />} 
             />
             <Route path='/mysql/*' element={<Mysql  
-                                                boxProfileStyle={boxProfileStyle}
-                                                scrollYAdd={scrollYAdd} 
                                                 clickMenuHeader={clickMenuHeader} 
                                                 sql_list={sql_list} 
                                                 closeSearchPhone={closeSearchPhone}
                                             />} 
             />
-            <Route path='/python/*' element={<Python
-                                                boxProfileStyle={boxProfileStyle}
-                                                scrollY_to_0={scrollY_to_0} 
+          <Route path='/python/*' element={<Python
                                                 clickMenuHeader={clickMenuHeader} 
                                                 python_list={python_list} 
                                                 closeSearchPhone={closeSearchPhone}
                                             />} 
             />
             <Route path='/django/*' element={<Django 
-                                                boxProfileStyle={boxProfileStyle}
-                                                scrollYAdd={scrollYAdd} 
-                                                scrollY_to_0={scrollY_to_0} 
                                                 clickMenuHeader={clickMenuHeader} 
                                                 django_matrix={django_matrix} 
                                                 closeSearchPhone={closeSearchPhone}
                                             />} 
             />
             <Route path='/django-rest-framework/*' element={<DjangoRestFramework 
-                                                boxProfileStyle={boxProfileStyle}
-                                                scrollY_to_0={scrollY_to_0} 
-                                                scrollYAdd={scrollYAdd} 
+                                                 
                                                 clickMenuHeader={clickMenuHeader} 
                                                 django_rest_framework_matrix={django_rest_framework_matrix} 
+
                                                 closeSearchPhone={closeSearchPhone}
                                             />} 
             />
             <Route path='/php/*' element={<Php 
-                                                boxProfileStyle={boxProfileStyle}
-                                                scrollY_to_0={scrollY_to_0} 
                                                 clickMenuHeader={clickMenuHeader} 
                                                 php_list={php_list}  
                                                 closeSearchPhone={closeSearchPhone}
                                             />} 
             />
             <Route path='/laravel/*' element={<Laravel 
-                                                boxProfileStyle={boxProfileStyle}
-                                                scrollY_to_0={scrollY_to_0} 
-                                                scrollYAdd={scrollYAdd} 
                                                 clickMenuHeader={clickMenuHeader} 
                                                 laravel_matrix={laravel_matrix} 
                                                 closeSearchPhone={closeSearchPhone} 
                                             />} 
             />
             <Route path='/powerShell' element={<Cmd 
-                                                boxProfileStyle={boxProfileStyle}
-                                                scrollYAdd={scrollYAdd} 
                                                 clickMenuHeader={clickMenuHeader} 
                                                 cmd_list={cmd_list}  
                                                 closeSearchPhone={closeSearchPhone}
                                             />} 
             />
+
             <Route path='/git' element={<Git 
-                                                boxProfileStyle={boxProfileStyle}
-                                                scrollYAdd={scrollYAdd} 
                                                 clickMenuHeader={clickMenuHeader} 
                                                 git_list={git_list} 
                                                 closeSearchPhone={closeSearchPhone}
                                             />}
             />
             <Route path='/search' element={<Search
-                                                boxProfileStyle={boxProfileStyle}
                                                 searchValue={searchValue}
                                                 setSearchValue={setSearchValue}
                                                 handleInputChange={handleInputChange}
                                                 handleSubmit={handleSubmit}
                                                 Search={Search}
                                                 searchAndRetrieve={searchAndRetrieve}
-                                                scrollY_to_0={scrollY_to_0}
                                             />} 
             />
-            <Route path='/paypal-payment' element={<PayPalPayment 
-                                                scrollY_to_0={scrollY_to_0}
-                                                boxProfileStyle={boxProfileStyle} 
-                                            />} 
-            />
-            <Route path='/login' element={<Login 
-                                                scrollY_to_0={scrollY_to_0}
-                                                boxProfileStyle={boxProfileStyle} 
-                                                url={url} 
-                                            />} 
-            />
-            <Route path='/register' element={<CreateAccount 
-                                                scrollY_to_0={scrollY_to_0}
-                                                boxProfileStyle={boxProfileStyle} 
-                                                url={url} 
-                                            />} 
-            />
-            <Route path='/my-page' element={<MyPage 
-                                                scrollY_to_0={scrollY_to_0}
-                                                boxProfileStyle={boxProfileStyle} 
-                                                url={url} 
-                                            />} 
-            />
-            
-            <Route path='/report-error' element={<ReportAnErrorUser  
-                                                scrollY_to_0={scrollY_to_0}
-                                                boxProfileStyle={boxProfileStyle} 
-                                                url={url} 
-                                            />} 
-            />
-            <Route path='/all-question' element={<AllQuestion  
-                                                scrollY_to_0={scrollY_to_0}
-                                                boxProfileStyle={boxProfileStyle} 
-                                                url={url} 
-                                            />} 
-            />
-            <Route path='/add-question' element={<AddQuestion  
-                                                scrollY_to_0={scrollY_to_0}
-                                                boxProfileStyle={boxProfileStyle} 
-                                                url={url} 
-                                            />} 
-            />
-            <Route path='/question/:id'  element={<QuestionDetail 
-                                                scrollY_to_0={scrollY_to_0} 
-                                                boxProfileStyle={boxProfileStyle} 
-                                                url={url} 
-                                            />} 
-            />
+            <Route path='/paypal-payment' element={<PayPalPayment  />} />
+            <Route path='/login' element={<Login  url={url} />}  />
+            <Route path='/register' element={<CreateAccount url={url}  />} />
+            <Route path='/my-page' element={<MyPage url={url}  />} />
+            <Route path='/report-error' element={<ReportAnErrorUser   url={url} />} />
+            <Route path='/all-question' element={<AllQuestion   url={url} />}         />
+            <Route path='/add-question' element={<AddQuestion      url={url} />}      />
+            <Route path='/question/:id'  element={<QuestionDetail  url={url}     />}  /> 
 
         </Routes>
     </Router> 

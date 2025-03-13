@@ -2,9 +2,12 @@ import { Footer} from "./pathExemple";
 import { useEffect, useRef } from "react";
 import { Introduction , Component , Events , Lists , HandleImagesReact , Import, PropsChildren , Hooks , Packages ,Redux ,} from "./pathReact";
 import { Routes, Route , Link } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { useCustoScrollYAdd , useCustomScroolTo0} from "../../custom/pathCustoms";
 
 
 function React(props){      
+      const dispatch = useDispatch();
       const AsideRef = useRef(null);
       useEffect(() => {
            AsideRef.current.scrollTop = localStorage.getItem("react_aside") || 0;
@@ -29,13 +32,15 @@ function React(props){
                 if(index === 0){
                    dt_title = key.toLowerCase().replace(/_/g, '-');
                   return(<dt className="aside-dl-dt" key={key}>
-                            <Link to={`/react/${dt_title}/`} onClick={ props.scrollY_to_0 }>
+                            <Link to={`/react/${dt_title}/`} 
+                              onClick={ useCustomScroolTo0 }
+                            >
                                <i className="fa-solid fa-caret-right me-1"></i> {key.replace(/_/g, ' ')}
                             </Link>
                          </dt>)  
                 }else{
                     return(<dd className="aside-dl-dd" key={key}>
-                               <a href={`/react/${dt_title}#${key}`} onClick={ props.scrollYAdd }>
+                               <a href={`/react/${dt_title}#${key}`} onClick={ useCustoScrollYAdd }>
                                  <i className="fa-solid fa-circle"></i> {key.replace(/_/g, ' ')}
                                </a>
                             </dd>)
@@ -43,9 +48,11 @@ function React(props){
               });
             }else {
              keys_map = <dt className="aside-dl-simple" key={e}>
-                   <a href={`/react/${e.toLowerCase().replace(/_/g, '-')}`} onClick={ props.scrollY_to_0 }>
+                  <a href={`/react/${e.toLowerCase().replace(/_/g, '-')}`} 
+                      onClick={ useCustomScroolTo0 }
+                  >
                       <i className="fa-solid fa-caret-right me-1"></i> {e.replace(/_/g, ' ')} 
-                   </a>
+                  </a>
                 </dt>;
           }
           return keys_map
@@ -53,7 +60,7 @@ function React(props){
 
     return(
   <>
-  <main onClick={ (event)=>{ props.clickMenuHeader(event, false);  props.closeSearchPhone(); props.boxProfileStyle();} }>
+  <main onClick={ (event)=>{ props.clickMenuHeader(event, false);  props.closeSearchPhone(); dispatch({ type: 'FALSE_VISIBILTY_PROFILE' });} }>
     <aside  className="aside"  onScroll={()=>{ localStorage.setItem("react_aside",AsideRef.current.scrollTop) }} ref={AsideRef}> 
         <dl className="list-group m-0">
             {matrix}

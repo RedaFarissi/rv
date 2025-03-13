@@ -3,10 +3,13 @@ import "./MyPage.sass";
 import { Footer } from "../path";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useDispatch } from 'react-redux';
+import { useCustomScroolTo0 } from "../../custom/pathCustoms";
 
 const MyPage = (props) => {
-    props.scrollY_to_0();
-  
+    const dispatch = useDispatch();
+    useCustomScroolTo0();
+
     const navigate = useNavigate();
   
     const [user, setUser] = useState(null);
@@ -134,7 +137,7 @@ const MyPage = (props) => {
             )
     console.log(yourQuestions)
     return (
-<div onClick={props.boxProfileStyle}>
+<div onClick={()=>{dispatch({ type: 'FALSE_VISIBILTY_PROFILE' })}}>
     <h4 className="font-bold f-family col-sm-12" style={{marginTop: "200px", marginRight: "9%"}}>ملف تعريف المستخدم</h4>
     <section  className="container text-end">
         <div className="my-page-child row" style={{width: "90%" , margin: "auto"}}>

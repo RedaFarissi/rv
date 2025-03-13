@@ -10,16 +10,17 @@ import {
     FlexDirection,FlexWrap,AlignItems,AlignSelf,JustifyContent,Order,Grid,AccentColor,
     Selectors,Functions,Media,ScssComponent,SassComponent,Footer
 } from './pathCss.js';
-import { useEffect } from "react";
+import { useDispatch } from 'react-redux';
+import { useCustomScroolTo0 } from "../../custom/pathCustoms";
 
 
 export default function Css(props){
-    useEffect(()=>{
-        props.scrollY_to_0();
-    },[props]);
+    useCustomScroolTo0();
+    const dispatch = useDispatch();
     
+
     const arrays = props.css_list.map(e => <li className="list-group-item">
-        <Link  to={`/css/${e.toLowerCase().replace(/\s/g, '-')}`} onClick={props.scrollY_to_0}>
+        <Link  to={`/css/${e.toLowerCase().replace(/\s/g, '-')}`} onClick={useCustomScroolTo0}>
             <i className="fa-solid fa-caret-right me-2"></i>CSS {e}
         </Link>
     </li>);
@@ -30,7 +31,7 @@ export default function Css(props){
     <main onClick={ (event)=>{ 
                 props.clickMenuHeader(event, false);
                 props.closeSearchPhone(); 
-                props.boxProfileStyle();
+                dispatch({ type: 'FALSE_VISIBILTY_PROFILE' });
             }}
     >
         <aside className="aside">

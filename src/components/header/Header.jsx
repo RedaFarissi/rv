@@ -1,10 +1,14 @@
 import { Link , useLocation } from "react-router-dom";
 import React, { useRef  , useEffect } from 'react';
 import "./Header.sass";
+import { useSelector, useDispatch } from 'react-redux';
 
 export default function Header(props){   
     const divRef = useRef(null);
     const location = useLocation();
+    
+    const dispatch = useDispatch();
+    const  isVisibleProfile = useSelector(state => state.boxProfile.isVisibleProfile ); // Ensure "footer" matches the key in the store
    
     const programing = [
         {name:"HTML",link:"html"}, {name:"CSS",link:"css"}, {name:"JAVASCRIPT",link:"js"}, {name:"REACT.js",link:"react"}, 
@@ -53,6 +57,10 @@ export default function Header(props){
         }
     }
 
+    const handleToggleProfile = (event) => {
+        event.stopPropagation(); // Stop event propagation
+        dispatch({ type: 'TOGGLE_VISIBILTY_PROFILE' });
+    };
 
     return(
 <>
@@ -60,7 +68,7 @@ export default function Header(props){
     onClick={ (event)=>{ 
         props.clickMenuHeader(event, false);
         props.closeSearchPhone();
-        props.boxProfileStyle();
+        dispatch({ type: 'FALSE_VISIBILTY_PROFILE' });
     }}
 >
     <div className="header-main">
@@ -73,8 +81,8 @@ export default function Header(props){
                         <i className="fa-solid fa-user p-2" ></i>
                     </Link> : 
                     <>
-                        <i className="fa-solid fa-user ms-4 me-4 p-2" style={{cursor: "pointer"}} onClick={props.boxProfile}></i>
-                        <div className="box-profile" dir="rtl" style={{display: props.isVisibleProfile ? "block" : "none" }}> 
+                        <i  onClick={handleToggleProfile} className="fa-solid fa-user ms-4 me-4 p-2" style={{cursor: "pointer"}}></i>
+                        <div className="box-profile" dir="rtl" style={{display: isVisibleProfile ? "block" : "none" }}> 
                             <Link to="/my-page"><button> <i className="fa-solid fa-circle-user ms-2"></i> صفحتي </button></Link><br />
                             <Link to="/all-question"><button> <i class="fa-solid fa-question ms-2"></i>  كل الأسئلة </button></Link><br />
                             <Link to="/report-error"><button> <i className="fa-solid fa-bug ms-2"></i> إبلاغ عن خطأ</button></Link><br />

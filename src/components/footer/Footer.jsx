@@ -13,7 +13,7 @@ export default function Footer(props) {
     
             if (asideElement) {
                 // If aside exists, adjust footer width and classes based on window width
-                if (window.innerWidth > 1140) {
+                if ( window.innerWidth > 1140 ) {
                     dispatch({
                         type: 'UPDATE_FOOTER_WIDTH',
                         payload: {
@@ -60,6 +60,7 @@ export default function Footer(props) {
         <div 
             className="row d-flex align-items-center justify-content-center py-5 m-0"
             style={{ width: width, backgroundColor: "#121926" }}
+            //onClick={()=>{dispatch({ type: 'FALSE_VISIBILTY_PROFILE' })}}
         >
             <div className={`${block_1}`}>
                 <div style={props.blockChildStyle}>

@@ -1,10 +1,13 @@
 import { useState } from "react"
 import axios from 'axios';
 import Footer from "../footer/Footer";
+import { useDispatch } from 'react-redux';
+import { useCustomScroolTo0 } from "../../custom/pathCustoms";
 
 export default function CreateAccount(props){
-    props.scrollY_to_0();
-  
+    const dispatch = useDispatch();
+    useCustomScroolTo0();
+      
     const [formData, setFormData] = useState({
         username:"",
         email:"", 
@@ -28,7 +31,7 @@ export default function CreateAccount(props){
     
     return(
     <>
-        <section onClick={props.boxProfileStyle} className="container" style={{ marginTop: "190px" , marginBottom: "60px" }}>
+        <section onClick={()=>{dispatch({ type: 'FALSE_VISIBILTY_PROFILE' })}} className="container" style={{ marginTop: "190px" , marginBottom: "60px" }}>
             <form  method="POST" onSubmit={hundleSubmit}>
                 <div>
                     <label htmlFor="username">اسم المستخدم</label>

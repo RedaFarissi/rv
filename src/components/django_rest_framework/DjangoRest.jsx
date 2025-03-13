@@ -4,10 +4,13 @@ import {
     Introduction,Serializers,SelfKwargs,ApiViews,ClassGenericViews,Status,
     ConnectDjangoWithReact,Footer,
 } from "./pathDjangoRest";
+import { useDispatch } from 'react-redux';
+import { useCustoScrollYAdd , useCustomScroolTo0 } from "../../custom/pathCustoms";
 
 
 export default function DjangoRestFramework(props){
     const AsideRef = useRef(null);
+    const dispatch = useDispatch();
 
     useEffect(() => {
        AsideRef.current.scrollTop = localStorage.getItem("django_aside") || 0;
@@ -33,13 +36,15 @@ export default function DjangoRestFramework(props){
                 if(index === 0){
                 dt_title = key.toLowerCase().replace(/_/g, '-');
                     return(<dt className="aside-dl-dt" key={key}>
-                                <Link to={`/django-rest-framework/${dt_title}/`}  onClick={ props.scrollY_to_0 }>
+                                <Link to={`/django-rest-framework/${dt_title}/`}  
+                                    onClick={ useCustomScroolTo0 }
+                                >
                                     <i className="fa-solid fa-caret-right me-1"></i> {key.replace(/_/g, ' ')}
                                 </Link>
                             </dt>)  
                 }else{
                     return(<dd className="aside-dl-dd" key={key}>
-                                <a href={`/django-rest-framework/${dt_title}#${key}`} onClick={ props.scrollYAdd }>
+                                <a href={`/django-rest-framework/${dt_title}#${key}`} onClick={ useCustoScrollYAdd }>
                                     <i className="fa-solid fa-circle"></i> {key.replace(/_/g, ' ')}
                                 </a>
                             </dd>)
@@ -47,7 +52,9 @@ export default function DjangoRestFramework(props){
             });
         }else {
             keys_map = <dt className="aside-dl-simple" key={e}>
-                <a href={`/django-rest-framework/${e.toLowerCase().replace(/_/g, '-')}`} onClick={ props.scrollY_to_0 }>
+                <a href={`/django-rest-framework/${e.toLowerCase().replace(/_/g, '-')}`} 
+                    onClick={ useCustomScroolTo0 }
+                >
                     <i className="fa-solid fa-caret-right me-1"></i> {e.replace(/_/g, ' ')} 
                 </a>
             </dt>;
@@ -57,7 +64,11 @@ export default function DjangoRestFramework(props){
 
     return (
 <>
-    <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone(); props.boxProfileStyle();  } }>
+    <main onClick={ (event)=>{ 
+        props.clickMenuHeader(event, false); 
+        props.closeSearchPhone(); 
+        dispatch({ type: 'FALSE_VISIBILTY_PROFILE' });  
+    }}>
        
         <aside className="aside" onScroll={()=>{ localStorage.setItem("django_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
             <ul className="list-group m-0">

@@ -1,12 +1,17 @@
 import { useEffect } from "react";
 import { CodeCommand , Footer} from "../path";
 import images from "./imagesCmd";
+import { useDispatch } from 'react-redux';
+import { useCustomScroolTo0 } from "../../custom/pathCustoms";
 
 
 export default function Cmd(props){
+    const dispatch = useDispatch();
    
     const arrays = props.cmd_list.map(e => <li className="list-group-item">
-        <a href={`/powerShell#${e}`} onClick={ props.scrollYAdd }>
+        <a href={`/powerShell#${e}`} 
+            onClick={ useCustomScroolTo0 }
+        >
             <i className="fa-solid fa-caret-right me-2"></i>CMD {e.replace(/_/g, ' ')}
         </a>
     </li>)
@@ -24,7 +29,7 @@ export default function Cmd(props){
    
     return(
     <>
-    <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.boxProfileStyle(); } }>
+    <main onClick={ (event)=>{ props.clickMenuHeader(event, false); dispatch({ type: 'FALSE_VISIBILTY_PROFILE' })  } }>
         <aside className="aside">
             <ul className="list-group m-0">
                 {arrays}

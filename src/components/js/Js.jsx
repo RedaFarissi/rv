@@ -30,13 +30,18 @@ import {
     //footer
     Footer,
 } from './pathJs.js';
+import { useDispatch } from 'react-redux';
+import { useCustomScroolTo0 } from "../../custom/pathCustoms";
+
 
 export default function Js(props){
     const AsideRef = useRef(null);
+    const dispatch = useDispatch();
+    useCustomScroolTo0();
+    
     useEffect(() => {
        AsideRef.current.scrollTop = localStorage.getItem("js_aside") || 0;
-       props.scrollY_to_0();
-    },[props]); 
+    },[]); 
 
     const matrix = props.js_matrix.map( e =>(
         <dl>
@@ -47,7 +52,9 @@ export default function Js(props){
                             <i className="fa-solid fa-caret-right me-1"></i> {value}
                         </dt>:
                         <dd className="aside-dl-dd">
-                            <Link to={`/js/${value.toLowerCase().replace(/\s/g, '-')}`} onClick={props.scrollY_to_0}> 
+                            <Link to={`/js/${value.toLowerCase().replace(/\s/g, '-')}`} 
+                                onClick={useCustomScroolTo0}
+                            > 
                                 <i className="fa-solid fa-circle"></i> {value}
                             </Link>
                         </dd>
@@ -57,7 +64,7 @@ export default function Js(props){
     ));
 return(
 <>
- <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone(); props.boxProfileStyle(); } }>
+ <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone(); dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }); } }>
     <aside className="aside" onScroll={()=>{ localStorage.setItem("js_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
         {matrix}
     </aside>
