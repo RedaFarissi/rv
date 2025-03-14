@@ -1,15 +1,23 @@
 import { Link } from "react-router-dom";
 import Footer from "../footer/Footer";
 import "./Search.css"
-import { useDispatch } from 'react-redux';
-import { useCustomScroolTo0 } from "../../custom/pathCustoms";
+import { useDispatch, useSelector } from 'react-redux';
+import { 
+    useCustomScroolTo0 
+} from "../../custom/pathCustoms";
 
-export default function Search(props){    
-    
+
+
+export default function Search(props){       
+    const  searchResult = useSelector(state => state.search.result ); // Ensure "footer" matches the key in the store
+    console.log(searchResult)
     const dispatch = useDispatch();
-    useCustomScroolTo0();
     
-    const links = props.searchAndRetrieve(props.searchValue).map( e => 
+    
+    useCustomScroolTo0();
+
+    
+    const links = searchResult.map( e => 
         <Link to={`${e.route}`}> 
                 <div class="card box-search mb-1" style={{width: "18rem"}}>
                     <div class="card-body">
@@ -34,14 +42,7 @@ export default function Search(props){
         >          
             {(links.length > 0)? links : empty_search}
         </main>
-        
-        <Footer 
-        //   widthFooter="100%"
-        //   block_1={"col-sm-10 col-sm-10 col-md-8 col-lg-4 offset-lg-2 col-xl-4 offset-xl-1"}
-        //   block_2={"col-sm-10 col-md-8 col-lg-4 col-xl-4"}
-          blockChildStyle={{width: "90%" , margin:"auto"}}
-        />
-
+        <Footer blockChildStyle={{width: "90%" , margin:"auto"}}/>
     </>
     )
 }

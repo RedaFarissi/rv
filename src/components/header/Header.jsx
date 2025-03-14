@@ -1,32 +1,260 @@
-import { Link , useLocation } from "react-router-dom";
+import { Link , useLocation , useNavigate} from "react-router-dom";
 import React, { useRef  , useEffect } from 'react';
 import "./Header.sass";
 import { useSelector, useDispatch } from 'react-redux';
+import {
+    useCustomHtmlList , useCustomCssList , useCustomJsList , useCustomSqlList , useCustomPythonList ,  
+    useCustomDjangoList ,useCustomDjangoRestList, useCustomPhpList , useCustomReactList , useCustomLaravelList , 
+    useCustomGitList , useCustomCmdList ,  
+} from "../../custom/pathCustoms";
+
 
 export default function Header(props){ 
+    const navigate = useNavigate()
     const searchPhone = useRef(null);
     const openSearchPhone = (event)=>{ 
         event.stopPropagation();
         const divElement = searchPhone.current;
-
-        (divElement.style.display !== "block") ? 
-        divElement.style.display= "block"  : 
-        divElement.style.display= "none"   ;    
+        (divElement.style.display !== "block") ? divElement.style.display= "block"  :  divElement.style.display= "none"   ;    
     }
     const closeSearchPhone = ()=>{ 
         const divElement = searchPhone.current;
         divElement.style.display= "none"
     }
-    
-    
-
-
     const divRef = useRef(null);
     const location = useLocation();
     
     const dispatch = useDispatch();
-    const  isVisibleProfile = useSelector(state => state.boxProfile.isVisibleProfile ); // Ensure "footer" matches the key in the store
+    const  isVisibleProfile = useSelector(state => state.boxProfile.isVisibleProfile );
+    
+    //**********************************SEARCH  ***********************************//
+    const  searchTitle = useSelector(state => state.search.title ); 
+    const [html_list] = useCustomHtmlList();
+    const [css_list]  =  useCustomCssList();
+    const [js_matrix] = useCustomJsList();
+    const [sql_list] = useCustomSqlList();
+    const [python_list] = useCustomPythonList(); 
+    const [django_matrix] = useCustomDjangoList();
+    const [django_rest_framework_matrix] = useCustomDjangoRestList();
+    const [php_list] = useCustomPhpList();
+    const [react_matrix]  = useCustomReactList();
+    const [laravel_matrix] = useCustomLaravelList();
+    const [git_list]  = useCustomGitList();
+    const [cmd_list]  = useCustomCmdList();
+
    
+    const handleSubmitSearch = (e) => {
+        e.preventDefault(); // Prevent page reload on submit
+        const resultArray = searchAndRetrieve(searchTitle)
+        console.log(resultArray)
+        dispatch({type:'SEARCH_RESULT' , payload: resultArray})
+    };
+
+    const detectLanguage = (searchTerm) => {
+        const languages = ["html", "css", "js", "react", "sql", "python", "django", "django rest framework", "php", "laravel", "git", "cmd", "powershell"];
+        const normalizedSearchTerm = searchTerm.toLowerCase();
+        for (let lang of languages) {
+            if (normalizedSearchTerm.startsWith(lang)) {
+                return lang; // Return the language if it matches the start of the search term
+            }
+        }
+        return null; // Return null if no language is detected
+    };
+    
+    function searchAndRetrieve(searchTerm) {
+        let matchingValues = [];
+        const detectedLanguage = detectLanguage(searchTerm);
+        
+        // Remove the language name from the search term if detected
+        const normalizedSearchTerm = detectedLanguage ? searchTerm.slice(detectedLanguage.length).trim() : searchTerm ;
+
+        // Normalize function to replace underscores and handle case insensitivity
+        const normalize = (value) => value.toLowerCase().replace(/_/g, ' ');
+        const includesSearchTerm = (value) => {
+            return normalize(value).includes(normalize(normalizedSearchTerm));
+        };
+        const formatResult = (category, value) => `${category} ${value.replace(/_/g, ' ')}`;
+        const searchInList = (list, category, routePrefix , symbole="/") => {
+            list.forEach((value) => {
+                if (includesSearchTerm(value)) {
+                    matchingValues.push({
+                        route: `${routePrefix}${symbole}${value.toLowerCase().replace(/\s/g, '-')}`,
+                        value: formatResult(category, value)
+                    });
+                }
+            });
+        };
+    
+        const searchInMatrix = (matrix, category, routePrefix) => {
+            matrix.forEach((subcategory) => {
+                if (Array.isArray(subcategory)) {
+                    const firstElement = subcategory[0].toLowerCase().replace(/_/g, '-');
+                    subcategory.forEach((value, index) => {
+                        if (includesSearchTerm(value)) {
+                            const route = index === 0 
+                                ? `${routePrefix}/${firstElement}/`
+                                : `${routePrefix}/${firstElement}#${value}`;
+                            matchingValues.push({
+                                route,
+                                value: formatResult(category, value),
+                            });
+                        }
+                    });
+                } else {
+                    if (includesSearchTerm(subcategory)) {
+                        matchingValues.push({
+                            route: `${routePrefix}/${subcategory.toLowerCase().replace(/_/g, '-')}`,
+                            value: formatResult(category, subcategory),
+                        });
+                    }
+                }
+            });
+        };
+        
+        if (detectedLanguage) {
+            switch (detectedLanguage) {
+                case "html": searchInList(html_list, "HTML", "/html"); break;
+                case "css": searchInList(css_list, "CSS", "/css"); break;
+                case "js":  // Search in JS matrix
+                    js_matrix.forEach((category) => {
+                        category.forEach((value) => {
+                            if (includesSearchTerm(value)) {
+                                matchingValues.push({ route: `/js/${value.toLowerCase().replace(/\s/g, '-')}`, value: formatResult("JS", value) });
+                            }
+                        });
+                    });break;
+                case "react": 
+                    react_matrix.forEach((category) => {
+                        if (Array.isArray(category)) {
+                            category.forEach((value, index) => {
+                                if (includesSearchTerm(value)) {
+                                    if (index === 0) {
+                                        matchingValues.push({
+                                            route: `/react#${value.replace(/_/g, '-')}`,
+                                            value: formatResult("React", value),
+                                        });
+                                    } else {
+                                        matchingValues.push({
+                                            route: `/react#${value}`,
+                                            value: formatResult("React", value),
+                                        });
+                                    }
+                                }
+                            });
+                        } else {
+                            if (includesSearchTerm(category)) {
+                                matchingValues.push({
+                                    route: `/react#${category.replace(/_/g, '-')}`,
+                                    value: formatResult("React", category),
+                                });
+                            }
+                        }
+                    }); break;
+                case "sql": searchInList(sql_list, "SQL", "/mysql","#"); break;
+                case "python": searchInList(python_list, "Python", "/python"); break;
+                case "django": searchInMatrix(django_matrix, "Django", "/django"); break;
+                case "django rest framework" :
+                case "drf" :
+                    searchInMatrix(django_rest_framework_matrix, "Django Rest Framework", "/django-rest-framework"); break;
+                case "php":
+                    php_list.forEach((subcategory) => {
+                        subcategory.forEach((value, index) => {
+                            if (includesSearchTerm(value) && index !== 0) {
+                                matchingValues.push({
+                                    route: `/php/${value.toLowerCase().replace(/\s/g, '-')}`,
+                                    value: formatResult("PHP", value),
+                                });
+                            }
+                        });
+                    });
+                    break;
+                case "laravel": searchInMatrix(laravel_matrix, "Laravel", "/laravel"); break;
+                case "git": 
+                    git_list.forEach((value) => {
+                        if (includesSearchTerm(value)) {
+                            matchingValues.push({ route: `/git#${value}`, value: formatResult("git", value) });
+                        }
+                    }); break;
+                case "Command Proppt":
+                case "cmd":
+                case "powershell":     cmd_list.forEach((value) => {
+                    if (includesSearchTerm(value)) {
+                        matchingValues.push({ route: `/powerShell#${value}`, value: formatResult("powerShell", value) });
+                    }
+                });break;
+                default:break;
+            }
+        } else {
+            // General search across all categories
+            searchInList(html_list, "HTML", "/html");
+            searchInList(css_list, "CSS", "/css");
+            js_matrix.forEach((category) => {
+                category.forEach((value) => {
+                    if (includesSearchTerm(value)) {
+                        matchingValues.push({ route: `/js/${value.toLowerCase().replace(/\s/g, '-')}`, value: formatResult("JS", value) });
+                    }
+                });
+            });
+            react_matrix.forEach((category) => {
+                if (Array.isArray(category)) {
+                    category.forEach((value, index) => {
+                        if (includesSearchTerm(value)) {
+                            if (index === 0) {
+                                matchingValues.push({
+                                    route: `/react#${value.replace(/_/g, '-')}`,
+                                    value: formatResult("React", value),
+                                });
+                            } else {
+                                matchingValues.push({
+                                    route: `/react#${value}`,
+                                    value: formatResult("React", value),
+                                });
+                            }
+                        }
+                    });
+                } else {
+                    if (includesSearchTerm(category)) {
+                        matchingValues.push({
+                            route: `/react#${category.replace(/_/g, '-')}`,
+                            value: formatResult("React", category),
+                        });
+                    }
+                }
+            });
+            searchInList(sql_list, "SQL", "/mysql","#");
+            searchInList(python_list, "Python", "/python");
+            searchInMatrix(django_matrix, "Django", "/django");
+            searchInMatrix(django_rest_framework_matrix, "Django Rest Framework", "/django-rest-framework");
+            php_list.forEach((subcategory) => {
+                subcategory.forEach((value, index) => {
+                    if (includesSearchTerm(value) && index !== 0) {
+                        matchingValues.push({
+                            route: `/php/${value.toLowerCase().replace(/\s/g, '-')}`,
+                            value: formatResult("PHP", value),
+                        });
+                    }
+                });
+            });
+            searchInMatrix(laravel_matrix, "Laravel", "/laravel");
+            git_list.forEach((value) => {
+                if (includesSearchTerm(value)) {
+                    matchingValues.push({ route: `/git#${value}`, value: formatResult("git", value) });
+                }
+            });
+            cmd_list.forEach((value) => {
+                if (includesSearchTerm(value)) {
+                    matchingValues.push({ route: `/powerShell#${value}`, value: formatResult("powerShell", value) });
+                }
+            });
+        }
+        return matchingValues
+    } 
+
+
+
+
+    //////////
+    
     const programing = [
         {name:"HTML",link:"html"}, {name:"CSS",link:"css"}, {name:"JAVASCRIPT",link:"js"}, {name:"REACT.js",link:"react"}, 
         {name:"MYSQL",link:"mysql"}, {name:"PYTHON",link:"python"}, {name:"DJANGO",link:"django"},
@@ -114,16 +342,13 @@ export default function Header(props){
 
           
             <div className="header-search-container">  
-                <form onSubmit={props.handleSubmit} >
+                <form onSubmit={handleSubmitSearch} >
                         <input type="text" name="search" className="search-field"
-                            value={props.searchValue} // Step 4: Bind the value to state
-                            onChange={props.handleInputChange} // Step 5: Handle input change
+                            onChange={ (e) => dispatch({ type: 'SET_MESSAGE_SEARCH', payload: e.target.value })}
                         />
-                        <Link to='/search'> 
-                            <button className="search-btn" type="submit">
-                                <i className="fa-solid fa-magnifying-glass"></i>
-                            </button>
-                        </Link>
+                        <button className="search-btn" type="submit" onClick={()=>{navigate("/search")}}>
+                            <i className="fa-solid fa-magnifying-glass"></i>
+                        </button>
                 </form>
             </div>
 

@@ -1,5 +1,4 @@
 import "./App.sass";
-import {  useState  } from 'react';
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
 import { 
     Header , Home , Html , Css , Js , React , Mysql , Python , Django , DjangoRestFramework , Cmd , Git , Php , 
@@ -34,226 +33,10 @@ function App() {
     useCustomScrollToHash();  // Scroll to id when print url  direct in browser
     useCustomResizeAside();   // Handle Resize Aside 
    
-
-    
-    /**********************************  Serach    ******************************************** */
-    const [searchValue, setSearchValue] = useState("");
-    const handleInputChange = (e) => {
-        setSearchValue(e.target.value);
-    };
-    const handleSubmit = (e) => {
-        e.preventDefault(); // Prevent page reload on submit
-        searchAndRetrieve(searchValue);
-    };
-    const detectLanguage = (searchTerm) => {
-        const languages = ["html", "css", "js", "react", "sql", "python", "django", "django rest framework", "php", "laravel", "git", "cmd", "powershell"];
-        const normalizedSearchTerm = searchTerm.toLowerCase();
-        for (let lang of languages) {
-            if (normalizedSearchTerm.startsWith(lang)) {
-                return lang; // Return the language if it matches the start of the search term
-            }
-        }
-        return null; // Return null if no language is detected
-    };
-    
-    function searchAndRetrieve(searchTerm) {
-        let matchingValues = [];
-        const detectedLanguage = detectLanguage(searchTerm);
-        
-        // Remove the language name from the search term if detected
-        const normalizedSearchTerm = detectedLanguage ? searchTerm.slice(detectedLanguage.length).trim() : searchTerm ;
-
-        // Normalize function to replace underscores and handle case insensitivity
-        const normalize = (value) => value.toLowerCase().replace(/_/g, ' ');
-        const includesSearchTerm = (value) => {
-            return normalize(value).includes(normalize(normalizedSearchTerm));
-        };
-        const formatResult = (category, value) => `${category} ${value.replace(/_/g, ' ')}`;
-        const searchInList = (list, category, routePrefix , symbole="/") => {
-            list.forEach((value) => {
-                if (includesSearchTerm(value)) {
-                    matchingValues.push({
-                        route: `${routePrefix}${symbole}${value.toLowerCase().replace(/\s/g, '-')}`,
-                        value: formatResult(category, value)
-                    });
-                }
-            });
-        };
-    
-        const searchInMatrix = (matrix, category, routePrefix) => {
-            matrix.forEach((subcategory) => {
-                if (Array.isArray(subcategory)) {
-                    const firstElement = subcategory[0].toLowerCase().replace(/_/g, '-');
-                    subcategory.forEach((value, index) => {
-                        if (includesSearchTerm(value)) {
-                            const route = index === 0 
-                                ? `${routePrefix}/${firstElement}/`
-                                : `${routePrefix}/${firstElement}#${value}`;
-                            matchingValues.push({
-                                route,
-                                value: formatResult(category, value),
-                            });
-                        }
-                    });
-                } else {
-                    if (includesSearchTerm(subcategory)) {
-                        matchingValues.push({
-                            route: `${routePrefix}/${subcategory.toLowerCase().replace(/_/g, '-')}`,
-                            value: formatResult(category, subcategory),
-                        });
-                    }
-                }
-            });
-        };
-        
-        if (detectedLanguage) {
-            switch (detectedLanguage) {
-                case "html": searchInList(html_list, "HTML", "/html"); break;
-                case "css": searchInList(css_list, "CSS", "/css"); break;
-                case "js":  // Search in JS matrix
-                    js_matrix.forEach((category) => {
-                        category.forEach((value) => {
-                            if (includesSearchTerm(value)) {
-                                matchingValues.push({ route: `/js/${value.toLowerCase().replace(/\s/g, '-')}`, value: formatResult("JS", value) });
-                            }
-                        });
-                    });break;
-                case "react": 
-                    react_matrix.forEach((category) => {
-                        if (Array.isArray(category)) {
-                            category.forEach((value, index) => {
-                                if (includesSearchTerm(value)) {
-                                    if (index === 0) {
-                                        matchingValues.push({
-                                            route: `/react#${value.replace(/_/g, '-')}`,
-                                            value: formatResult("React", value),
-                                        });
-                                    } else {
-                                        matchingValues.push({
-                                            route: `/react#${value}`,
-                                            value: formatResult("React", value),
-                                        });
-                                    }
-                                }
-                            });
-                        } else {
-                            if (includesSearchTerm(category)) {
-                                matchingValues.push({
-                                    route: `/react#${category.replace(/_/g, '-')}`,
-                                    value: formatResult("React", category),
-                                });
-                            }
-                        }
-                    }); break;
-                case "sql": searchInList(sql_list, "SQL", "/mysql","#"); break;
-                case "python": searchInList(python_list, "Python", "/python"); break;
-                case "django": searchInMatrix(django_matrix, "Django", "/django"); break;
-                case "django rest framework" :
-                case "drf" :
-                    searchInMatrix(django_rest_framework_matrix, "Django Rest Framework", "/django-rest-framework"); break;
-                case "php":
-                    php_list.forEach((subcategory) => {
-                        subcategory.forEach((value, index) => {
-                            if (includesSearchTerm(value) && index !== 0) {
-                                matchingValues.push({
-                                    route: `/php/${value.toLowerCase().replace(/\s/g, '-')}`,
-                                    value: formatResult("PHP", value),
-                                });
-                            }
-                        });
-                    });
-                    break;
-                case "laravel": searchInMatrix(laravel_matrix, "Laravel", "/laravel"); break;
-                case "git": 
-                    git_list.forEach((value) => {
-                        if (includesSearchTerm(value)) {
-                            matchingValues.push({ route: `/git#${value}`, value: formatResult("git", value) });
-                        }
-                    }); break;
-                case "Command Proppt":
-                case "cmd":
-                case "powershell":     cmd_list.forEach((value) => {
-                    if (includesSearchTerm(value)) {
-                        matchingValues.push({ route: `/powerShell#${value}`, value: formatResult("powerShell", value) });
-                    }
-                });break;
-                default:break;
-            }
-        } else {
-            // General search across all categories
-            searchInList(html_list, "HTML", "/html");
-            searchInList(css_list, "CSS", "/css");
-            js_matrix.forEach((category) => {
-                category.forEach((value) => {
-                    if (includesSearchTerm(value)) {
-                        matchingValues.push({ route: `/js/${value.toLowerCase().replace(/\s/g, '-')}`, value: formatResult("JS", value) });
-                    }
-                });
-            });
-            react_matrix.forEach((category) => {
-                if (Array.isArray(category)) {
-                    category.forEach((value, index) => {
-                        if (includesSearchTerm(value)) {
-                            if (index === 0) {
-                                matchingValues.push({
-                                    route: `/react#${value.replace(/_/g, '-')}`,
-                                    value: formatResult("React", value),
-                                });
-                            } else {
-                                matchingValues.push({
-                                    route: `/react#${value}`,
-                                    value: formatResult("React", value),
-                                });
-                            }
-                        }
-                    });
-                } else {
-                    if (includesSearchTerm(category)) {
-                        matchingValues.push({
-                            route: `/react#${category.replace(/_/g, '-')}`,
-                            value: formatResult("React", category),
-                        });
-                    }
-                }
-            });
-            searchInList(sql_list, "SQL", "/mysql","#");
-            searchInList(python_list, "Python", "/python");
-            searchInMatrix(django_matrix, "Django", "/django");
-            searchInMatrix(django_rest_framework_matrix, "Django Rest Framework", "/django-rest-framework");
-            php_list.forEach((subcategory) => {
-                subcategory.forEach((value, index) => {
-                    if (includesSearchTerm(value) && index !== 0) {
-                        matchingValues.push({
-                            route: `/php/${value.toLowerCase().replace(/\s/g, '-')}`,
-                            value: formatResult("PHP", value),
-                        });
-                    }
-                });
-            });
-            searchInMatrix(laravel_matrix, "Laravel", "/laravel");
-            git_list.forEach((value) => {
-                if (includesSearchTerm(value)) {
-                    matchingValues.push({ route: `/git#${value}`, value: formatResult("git", value) });
-                }
-            });
-            cmd_list.forEach((value) => {
-                if (includesSearchTerm(value)) {
-                    matchingValues.push({ route: `/powerShell#${value}`, value: formatResult("powerShell", value) });
-                }
-            });
-        }
-        return matchingValues;
-    }    
     
     return (
     <Router>
-        <Header 
-            clickMenuHeader={useCustomClickMenuHeader} 
-            searchValue={searchValue}
-            setSearchValue={setSearchValue}
-            handleInputChange={handleInputChange}
-            handleSubmit={handleSubmit}
-        />
+        <Header  clickMenuHeader={useCustomClickMenuHeader}  />
         <Routes>
             <Route path='/'       element={<Home />} />
             <Route path='/html/*' element={<Html  html_list={html_list}  clickMenuHeader={useCustomClickMenuHeader}/>}/>
@@ -263,7 +46,7 @@ function App() {
             <Route path='/mysql/*' element={<Mysql  sql_list={sql_list}  clickMenuHeader={useCustomClickMenuHeader}  />}  />
             <Route path='/python/*' element={<Python   python_list={python_list}  clickMenuHeader={useCustomClickMenuHeader} />}  />
             <Route path='/django/*' element={<Django  django_matrix={django_matrix}  clickMenuHeader={useCustomClickMenuHeader} />}/>
-            <Route path='/django-rest-framework/*' element={<DjangoRestFramework clickMenuHeader={useCustomClickMenuHeader} django_rest_framework_matrix={django_rest_framework_matrix} />} />
+            <Route path='/django-rest-framework/*' element={<DjangoRestFramework django_rest_framework_matrix={django_rest_framework_matrix}  clickMenuHeader={useCustomClickMenuHeader} />} />
             <Route path='/php/*' element={<Php   php_list={php_list}  clickMenuHeader={useCustomClickMenuHeader}  />}  />
             <Route path='/laravel/*' element={<Laravel  laravel_matrix={laravel_matrix}  clickMenuHeader={useCustomClickMenuHeader} />} />
             <Route path='/powerShell' element={<Cmd  cmd_list={cmd_list}  clickMenuHeader={useCustomClickMenuHeader} />} />
@@ -276,15 +59,7 @@ function App() {
             <Route path='/all-question' element={<AllQuestion   url={url} />}         />
             <Route path='/add-question' element={<AddQuestion      url={url} />}      />
             <Route path='/question/:id'  element={<QuestionDetail  url={url}     />}  />  
-            <Route path='/search' element={<Search
-                                                searchValue={searchValue}
-                                                setSearchValue={setSearchValue}
-                                                handleInputChange={handleInputChange}
-                                                handleSubmit={handleSubmit}
-                                                Search={Search}
-                                                searchAndRetrieve={searchAndRetrieve}
-                                            />} 
-            />
+            <Route path='/search' element={<Search />}  /> 
         </Routes>
     </Router> 
     );
