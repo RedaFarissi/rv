@@ -5,9 +5,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import {
     useCustomHtmlList , useCustomCssList , useCustomJsList , useCustomSqlList , useCustomPythonList ,  
     useCustomDjangoList ,useCustomDjangoRestList, useCustomPhpList , useCustomReactList , useCustomLaravelList , 
-    useCustomGitList , useCustomCmdList ,  
+    useCustomGitList , useCustomCmdList ,  useCustomScroolTo0
 } from "../../custom/pathCustoms";
-
 
 export default function Header(props){ 
     const navigate = useNavigate()
@@ -279,7 +278,7 @@ export default function Header(props){
 
     const links = programing.map(e=> 
         <li className="menu-category">
-            <Link to={e.link} className={`menu-title color-link-nav-light`} style={{cursor: "pointer"}}>
+            <Link to={e.link} className={`menu-title color-link-nav-light`} style={{cursor: "pointer"}} onClick={useCustomScroolTo0}>
                 {e.name}
             </Link>
         </li>);
