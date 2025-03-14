@@ -3,7 +3,24 @@ import React, { useRef  , useEffect } from 'react';
 import "./Header.sass";
 import { useSelector, useDispatch } from 'react-redux';
 
-export default function Header(props){   
+export default function Header(props){ 
+    const searchPhone = useRef(null);
+    const openSearchPhone = (event)=>{ 
+        event.stopPropagation();
+        const divElement = searchPhone.current;
+
+        (divElement.style.display !== "block") ? 
+        divElement.style.display= "block"  : 
+        divElement.style.display= "none"   ;    
+    }
+    const closeSearchPhone = ()=>{ 
+        const divElement = searchPhone.current;
+        divElement.style.display= "none"
+    }
+    
+    
+
+
     const divRef = useRef(null);
     const location = useLocation();
     
@@ -19,12 +36,12 @@ export default function Header(props){
     
     useEffect(()=>{
         window.addEventListener('resize', () => {
-            const divSearchElement = props.searchPhone.current;
+            const divSearchElement = searchPhone.current;
             if( window.innerWidth <= 470 ){
                 divSearchElement.style.display = "none";
             }
         });
-    },[props.searchPhone]);
+    },[searchPhone]);
 
     
     const checkAboutRouteHome =()=>{
@@ -67,7 +84,7 @@ export default function Header(props){
 <header className="header p-0" dir="ltr" 
     onClick={ (event)=>{ 
         props.clickMenuHeader(event, false);
-        props.closeSearchPhone();
+        closeSearchPhone();
         dispatch({ type: 'FALSE_VISIBILTY_PROFILE' });
     }}
 >
@@ -127,9 +144,14 @@ export default function Header(props){
         <Link to='/' className="icons-header-phone">  
             <i className="fa-solid fa-house fs-5 text-light"></i>
         </Link>
-        <button className="icons-header-phone" onClick={ (event)=>{ props.openSearchPhone(event); props.clickMenuHeader(event, false); }}>
+        
+        <button className="icons-header-phone" onClick={ (event)=>{ 
+            openSearchPhone(event); 
+            props.clickMenuHeader(event, false); }}
+        >
             <i className="fa-solid fa-magnifying-glass"></i>
         </button>
+
         { 
             ( localStorage.getItem('auth_token') === null ) ?
             <Link to='/login' className="icons-header-phone">
@@ -144,12 +166,17 @@ export default function Header(props){
             <i className="fa-brands fa-paypal"></i>
         </Link>
 
-        <button onClick={(event)=>{ props.clickMenuHeader(event , true); props.closeSearchPhone(); }} className={`icons-header-phone ${ (checkAboutRouteHome()) ? "d-none" : "d-block" }`} >
+        <button onClick={(event)=>{ 
+                props.clickMenuHeader(event , true); 
+                closeSearchPhone(); 
+            }} 
+            className={`icons-header-phone ${ (checkAboutRouteHome()) ? "d-none" : "d-block" }`} 
+        >
             <i className="menu-icon fa-solid fa-bars"></i>
         </button>    
     </div>
 
-    <div className="header-search-container-phone" ref={props.searchPhone} onClick={(event)=>{ event.stopPropagation() }}>
+    <div className="header-search-container-phone" ref={searchPhone} onClick={(event)=>{ event.stopPropagation() }}>
         <input type="text" name="search-phone" className="search-field-phone" />
         <button className="search-btn-phone" type="submit">
             <i className="fa-solid fa-magnifying-glass"></i>

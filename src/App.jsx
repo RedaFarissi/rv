@@ -1,21 +1,21 @@
 import "./App.sass";
-import { useEffect , useRef , useState} from 'react';
+import {  useState  } from 'react';
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
 import { 
     Header , Home , Html , Css , Js , React , Mysql , Python , Django , DjangoRestFramework , Cmd , Git , Php , 
-    Laravel , Login , Search , CreateAccount , PayPalPayment , MyPage , ReportAnErrorUser , AllQuestion , AddQuestion , 
-    QuestionDetail ,
+    Laravel , Login , Search , CreateAccount , PayPalPayment , MyPage , ReportAnErrorUser , AllQuestion , 
+    AddQuestion , QuestionDetail , 
 } from './components/path';
 import {
-    useCustomHtmlList , useCustomCssList , useCustomJsList , useCustomSqlList , useCustomPythonList ,  useCustomDjangoList ,useCustomDjangoRestList, useCustomPhpList , useCustomReactList , useCustomLaravelList , useCustomGitList , useCustomCmdList ,
-    useCustomScrollToHash , useCustomResizeAside , 
+    useCustomHtmlList , useCustomCssList , useCustomJsList , useCustomSqlList , useCustomPythonList ,  
+    useCustomDjangoList ,useCustomDjangoRestList, useCustomPhpList , useCustomReactList , useCustomLaravelList , 
+    useCustomGitList , useCustomCmdList , useCustomScrollToHash , useCustomResizeAside , useCustomClickMenuHeader 
 } from "./custom/pathCustoms";
 
 
 
 function App() {
     const url =  "http://localhost:8000" ;
-    const searchPhone = useRef(null);
 
     // will return tables. tables contain title and link of all languages 
     const [html_list] = useCustomHtmlList();
@@ -33,44 +33,9 @@ function App() {
      
     useCustomScrollToHash();  // Scroll to id when print url  direct in browser
     useCustomResizeAside();   // Handle Resize Aside 
-    
-
-
-
-    const openSearchPhone = (event)=>{ 
-        event.stopPropagation();
-        const divElement = searchPhone.current;
-        (divElement.style.display !== "block")? divElement.style.display= "block" : divElement.style.display= "none" ;    
-    }
-    const closeSearchPhone = ()=>{ 
-        const divElement = searchPhone.current;
-        divElement.style.display= "none"
-    }
+   
 
     
-    /***************************  Aside animation and event click ***************************/
-    // animation aside open
-    function myStartFunctionOpen() { this.style.width = "0px";  }
-    function MyAnimationiterationOpen(){ this.style.width = "276px"; }
-    
-    function clickMenuHeader(event , clickFromMenu ){
-        event.stopPropagation();
-
-        const asides = document.querySelectorAll('.aside');
-        asides.forEach( aside => {
-            if( aside.style.display !== 'block' && clickFromMenu === true  )  {
-                aside.style.display = "block"
-                aside.style.animation  = "moveAsideOpen 1s forwards";
-                aside.addEventListener("animationstart", myStartFunctionOpen);
-                aside.addEventListener("animationiteration", MyAnimationiterationOpen);
-            }else{
-                if( window.innerWidth <= 1140 ){
-                    aside.style.display = "none" 
-                }
-            }
-        });
-    }
-
     /**********************************  Serach    ******************************************** */
     const [searchValue, setSearchValue] = useState("");
     const handleInputChange = (e) => {
@@ -283,10 +248,7 @@ function App() {
     return (
     <Router>
         <Header 
-            clickMenuHeader={clickMenuHeader} 
-            searchPhone={searchPhone}
-            openSearchPhone={openSearchPhone}
-            closeSearchPhone={closeSearchPhone}
+            clickMenuHeader={useCustomClickMenuHeader} 
 
             searchValue={searchValue}
             setSearchValue={setSearchValue}
@@ -295,82 +257,67 @@ function App() {
         />
         <Routes>
             <Route path='/'       element={<Home 
-                                                closeSearchPhone={closeSearchPhone}  
                                             />} 
             />
             <Route path='/html/*' element={<Html 
-                                                clickMenuHeader={clickMenuHeader} 
+                                                clickMenuHeader={useCustomClickMenuHeader} 
                                                 html_list={html_list}
-                                                closeSearchPhone={closeSearchPhone} 
                                             />}
             />
             <Route path='/css/*' element={<Css 
-                                                clickMenuHeader={clickMenuHeader} 
+                                                clickMenuHeader={useCustomClickMenuHeader} 
                                                 css_list={css_list} 
-                                                closeSearchPhone={closeSearchPhone} 
                                             />} 
             />
             <Route path='/js/*' element={<Js 
-                                                clickMenuHeader={clickMenuHeader} 
+                                                clickMenuHeader={useCustomClickMenuHeader} 
                                                 js_matrix={js_matrix} 
-                                                closeSearchPhone={closeSearchPhone}
                                             />} 
             />
             <Route path='/react/*' element={<React 
-                                                clickMenuHeader={clickMenuHeader} 
+                                                clickMenuHeader={useCustomClickMenuHeader} 
                                                 react_matrix={react_matrix} 
-                                                closeSearchPhone={closeSearchPhone}
                                             />} 
             />
             <Route path='/mysql/*' element={<Mysql  
-                                                clickMenuHeader={clickMenuHeader} 
+                                                clickMenuHeader={useCustomClickMenuHeader} 
                                                 sql_list={sql_list} 
-                                                closeSearchPhone={closeSearchPhone}
                                             />} 
             />
           <Route path='/python/*' element={<Python
-                                                clickMenuHeader={clickMenuHeader} 
+                                                clickMenuHeader={useCustomClickMenuHeader} 
                                                 python_list={python_list} 
-                                                closeSearchPhone={closeSearchPhone}
                                             />} 
             />
             <Route path='/django/*' element={<Django 
-                                                clickMenuHeader={clickMenuHeader} 
+                                                clickMenuHeader={useCustomClickMenuHeader} 
                                                 django_matrix={django_matrix} 
-                                                closeSearchPhone={closeSearchPhone}
                                             />} 
             />
             <Route path='/django-rest-framework/*' element={<DjangoRestFramework 
-                                                 
-                                                clickMenuHeader={clickMenuHeader} 
+                                                clickMenuHeader={useCustomClickMenuHeader} 
                                                 django_rest_framework_matrix={django_rest_framework_matrix} 
-
-                                                closeSearchPhone={closeSearchPhone}
                                             />} 
             />
             <Route path='/php/*' element={<Php 
-                                                clickMenuHeader={clickMenuHeader} 
+                                                clickMenuHeader={useCustomClickMenuHeader} 
                                                 php_list={php_list}  
-                                                closeSearchPhone={closeSearchPhone}
                                             />} 
             />
             <Route path='/laravel/*' element={<Laravel 
-                                                clickMenuHeader={clickMenuHeader} 
+                                                clickMenuHeader={useCustomClickMenuHeader} 
                                                 laravel_matrix={laravel_matrix} 
-                                                closeSearchPhone={closeSearchPhone} 
                                             />} 
             />
             <Route path='/powerShell' element={<Cmd 
-                                                clickMenuHeader={clickMenuHeader} 
+                                                clickMenuHeader={useCustomClickMenuHeader} 
                                                 cmd_list={cmd_list}  
-                                                closeSearchPhone={closeSearchPhone}
                                             />} 
             />
 
             <Route path='/git' element={<Git 
-                                                clickMenuHeader={clickMenuHeader} 
+                                                clickMenuHeader={useCustomClickMenuHeader} 
                                                 git_list={git_list} 
-                                                closeSearchPhone={closeSearchPhone}
                                             />}
             />
             <Route path='/search' element={<Search
@@ -389,8 +336,7 @@ function App() {
             <Route path='/report-error' element={<ReportAnErrorUser   url={url} />} />
             <Route path='/all-question' element={<AllQuestion   url={url} />}         />
             <Route path='/add-question' element={<AddQuestion      url={url} />}      />
-            <Route path='/question/:id'  element={<QuestionDetail  url={url}     />}  /> 
-
+            <Route path='/question/:id'  element={<QuestionDetail  url={url}     />}  />  
         </Routes>
     </Router> 
     );

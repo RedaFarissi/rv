@@ -1,5 +1,4 @@
 import html_logo from "../../assests/images/logo/html_logo.png";
-import { useEffect } from "react";
 import { Routes, Route , Link } from "react-router-dom";
 import { 
     Introduction, Editor, Attributes, Heading, Paragraph, Break, Horizontal, Superscript, Subscript, Underline, Italic, 
@@ -21,11 +20,12 @@ export default function Html(props){
         </Link>
     </li>);
 
+
     return(    
     <>
-    <main onClick={(event)=>{ 
-            props.clickMenuHeader(event, false);
-            props.closeSearchPhone(); 
+    <main onClick={(event) => {
+            props.clickMenuHeader(event,false);
+            props.closeSearchPhone();
             dispatch({ type: 'FALSE_VISIBILTY_PROFILE' });
         }}
     >
