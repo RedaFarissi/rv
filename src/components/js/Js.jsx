@@ -64,7 +64,12 @@ export default function Js(props){
     ));
 return(
 <>
- <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone(); dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }); } }>
+ <main onClick={ 
+    (event)=>{ 
+        props.clickMenuHeader(event, false); 
+        // props.closeSearchPhone(); 
+        dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }); }}
+    >
     <aside className="aside" onScroll={()=>{ localStorage.setItem("js_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
         {matrix}
     </aside>

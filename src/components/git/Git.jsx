@@ -3,12 +3,14 @@ import images from "./imagesGit";
 import Footer from "../footer/Footer";
 import { useEffect } from "react";
 import { useDispatch } from 'react-redux';
+import { useCustoScrollYAdd } from "../../custom/pathCustoms";
 
 
 export default function Git(props){
     const dispatch = useDispatch();
+    
     const arrays = props.git_list.map(e => <li className="list-group-item">
-        <a href={`/git#${e}`} >
+        <a href={`/git#${e}`} onClick={useCustoScrollYAdd}>
             <i className="fa-solid fa-caret-right me-1"></i> GIT {e.replace(/_/g, ' ')}
         </a>
     </li>);
@@ -39,7 +41,11 @@ export default function Git(props){
     
     return(
     <>
-        <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone(); dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }) } }>
+        <main onClick={ (event)=>{ 
+            props.clickMenuHeader(event, false); 
+            // props.closeSearchPhone(); 
+            dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }) }}
+        >
             <aside className="aside">
                 <ul className="list-group m-0">
                     {arrays}

@@ -1,6 +1,5 @@
 import "./Home.sass";
 import images from "../images";
-import { useEffect } from "react";
 import Footer from "../footer/Footer";
 import HomeBox from "./HomeBox";
 import { useDispatch } from 'react-redux';
@@ -68,10 +67,10 @@ export default function Home(props){
     <section onClick={()=>{ dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }) }}>
 
         <main className="main-home d-flex justify-content-center align-items-center flex-wrap" dir="ltr" 
-          onClick={(event)=>{ 
-              props.closeSearchPhone(event);
-              props.boxProfileStyle();
-          }}
+            onClick={(event)=>{ 
+                // props.closeSearchPhone(event);
+                props.boxProfileStyle();
+            }}
         >
             {cards}
         </main>

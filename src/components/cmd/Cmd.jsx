@@ -2,15 +2,16 @@ import { useEffect } from "react";
 import { CodeCommand , Footer} from "../path";
 import images from "./imagesCmd";
 import { useDispatch } from 'react-redux';
-import { useCustomScroolTo0 } from "../../custom/pathCustoms";
+import { useCustomScroolTo0 , useCustoScrollYAdd } from "../../custom/pathCustoms";
 
 
 export default function Cmd(props){
+    useCustomScroolTo0();
+    
     const dispatch = useDispatch();
-   
-    const arrays = props.cmd_list.map(e => <li className="list-group-item">
+        const arrays = props.cmd_list.map(e => <li className="list-group-item">
         <a href={`/powerShell#${e}`} 
-            onClick={ useCustomScroolTo0 }
+            onClick={ useCustoScrollYAdd }
         >
             <i className="fa-solid fa-caret-right me-2"></i>CMD {e.replace(/_/g, ' ')}
         </a>
@@ -25,7 +26,7 @@ export default function Cmd(props){
                 window.scrollTo({ top: offsetTop, behavior: 'smooth' });
             }
           }
-   }, [window.location.hash]); // Run the effect when the hash changes
+   }, [window.location.hash]); // Run the effect when the url changes manual
    
     return(
     <>

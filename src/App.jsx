@@ -249,77 +249,33 @@ function App() {
     <Router>
         <Header 
             clickMenuHeader={useCustomClickMenuHeader} 
-
             searchValue={searchValue}
             setSearchValue={setSearchValue}
             handleInputChange={handleInputChange}
             handleSubmit={handleSubmit}
         />
         <Routes>
-            <Route path='/'       element={<Home 
-                                            />} 
-            />
-            <Route path='/html/*' element={<Html 
-                                                clickMenuHeader={useCustomClickMenuHeader} 
-                                                html_list={html_list}
-                                            />}
-            />
-            <Route path='/css/*' element={<Css 
-                                                clickMenuHeader={useCustomClickMenuHeader} 
-                                                css_list={css_list} 
-                                            />} 
-            />
-            <Route path='/js/*' element={<Js 
-                                                clickMenuHeader={useCustomClickMenuHeader} 
-                                                js_matrix={js_matrix} 
-                                            />} 
-            />
-            <Route path='/react/*' element={<React 
-                                                clickMenuHeader={useCustomClickMenuHeader} 
-                                                react_matrix={react_matrix} 
-                                            />} 
-            />
-            <Route path='/mysql/*' element={<Mysql  
-                                                clickMenuHeader={useCustomClickMenuHeader} 
-                                                sql_list={sql_list} 
-                                            />} 
-            />
-          <Route path='/python/*' element={<Python
-                                                clickMenuHeader={useCustomClickMenuHeader} 
-                                                python_list={python_list} 
-                                            />} 
-            />
-            <Route path='/django/*' element={<Django 
-                                                clickMenuHeader={useCustomClickMenuHeader} 
-                                                django_matrix={django_matrix} 
-                                            />} 
-            />
-            <Route path='/django-rest-framework/*' element={<DjangoRestFramework 
-                                                clickMenuHeader={useCustomClickMenuHeader} 
-                                                django_rest_framework_matrix={django_rest_framework_matrix} 
-                                            />} 
-            />
-            <Route path='/php/*' element={<Php 
-                                                clickMenuHeader={useCustomClickMenuHeader} 
-                                                php_list={php_list}  
-                                            />} 
-            />
-            <Route path='/laravel/*' element={<Laravel 
-                                                clickMenuHeader={useCustomClickMenuHeader} 
-                                                laravel_matrix={laravel_matrix} 
-                                            />} 
-            />
-            <Route path='/powerShell' element={<Cmd 
-                                                clickMenuHeader={useCustomClickMenuHeader} 
-                                                cmd_list={cmd_list}  
-                                            />} 
-            />
-
-            <Route path='/git' element={<Git 
-                                                clickMenuHeader={useCustomClickMenuHeader} 
-                                                git_list={git_list} 
-                                            />}
-            />
+            <Route path='/'       element={<Home />} />
+            <Route path='/html/*' element={<Html  html_list={html_list}  clickMenuHeader={useCustomClickMenuHeader}/>}/>
+            <Route path='/css/*' element={<Css    css_list={css_list}  clickMenuHeader={useCustomClickMenuHeader}   />}  />
+            <Route path='/js/*' element={<Js  js_matrix={js_matrix}  clickMenuHeader={useCustomClickMenuHeader} />}  />
+            <Route path='/react/*' element={<React  react_matrix={react_matrix}  clickMenuHeader={useCustomClickMenuHeader} />}  />
+            <Route path='/mysql/*' element={<Mysql  sql_list={sql_list}  clickMenuHeader={useCustomClickMenuHeader}  />}  />
+            <Route path='/python/*' element={<Python   python_list={python_list}  clickMenuHeader={useCustomClickMenuHeader} />}  />
+            <Route path='/django/*' element={<Django  django_matrix={django_matrix}  clickMenuHeader={useCustomClickMenuHeader} />}/>
+            <Route path='/django-rest-framework/*' element={<DjangoRestFramework clickMenuHeader={useCustomClickMenuHeader} django_rest_framework_matrix={django_rest_framework_matrix} />} />
+            <Route path='/php/*' element={<Php   php_list={php_list}  clickMenuHeader={useCustomClickMenuHeader}  />}  />
+            <Route path='/laravel/*' element={<Laravel  laravel_matrix={laravel_matrix}  clickMenuHeader={useCustomClickMenuHeader} />} />
+            <Route path='/powerShell' element={<Cmd  cmd_list={cmd_list}  clickMenuHeader={useCustomClickMenuHeader} />} />
+            <Route path='/git' element={<Git  git_list={git_list}  clickMenuHeader={useCustomClickMenuHeader}  />} />
+            <Route path='/paypal-payment' element={<PayPalPayment  />} />
+            <Route path='/login' element={<Login  url={url} />}  />
+            <Route path='/register' element={<CreateAccount url={url}  />} />
+            <Route path='/my-page' element={<MyPage url={url}  />} />
+            <Route path='/report-error' element={<ReportAnErrorUser   url={url} />} />
+            <Route path='/all-question' element={<AllQuestion   url={url} />}         />
+            <Route path='/add-question' element={<AddQuestion      url={url} />}      />
+            <Route path='/question/:id'  element={<QuestionDetail  url={url}     />}  />  
             <Route path='/search' element={<Search
                                                 searchValue={searchValue}
                                                 setSearchValue={setSearchValue}
@@ -329,14 +285,6 @@ function App() {
                                                 searchAndRetrieve={searchAndRetrieve}
                                             />} 
             />
-            <Route path='/paypal-payment' element={<PayPalPayment  />} />
-            <Route path='/login' element={<Login  url={url} />}  />
-            <Route path='/register' element={<CreateAccount url={url}  />} />
-            <Route path='/my-page' element={<MyPage url={url}  />} />
-            <Route path='/report-error' element={<ReportAnErrorUser   url={url} />} />
-            <Route path='/all-question' element={<AllQuestion   url={url} />}         />
-            <Route path='/add-question' element={<AddQuestion      url={url} />}      />
-            <Route path='/question/:id'  element={<QuestionDetail  url={url}     />}  />  
         </Routes>
     </Router> 
     );

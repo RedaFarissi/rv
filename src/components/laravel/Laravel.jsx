@@ -63,7 +63,12 @@ export default function Laravel(props){
 
    return (
 <>
-   <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone(); dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }); } }>
+   <main onClick={ 
+      (event)=>{ 
+         props.clickMenuHeader(event, false); 
+         // props.closeSearchPhone(); 
+         dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }); }}
+      >
       <aside className="aside" onScroll={()=>{ localStorage.setItem("laravel_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
           <ul className="list-group m-0">
              {matrix}

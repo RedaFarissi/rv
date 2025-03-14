@@ -66,7 +66,7 @@ export default function DjangoRestFramework(props){
 <>
     <main onClick={ (event)=>{ 
         props.clickMenuHeader(event, false); 
-        props.closeSearchPhone(); 
+        // props.closeSearchPhone(); 
         dispatch({ type: 'FALSE_VISIBILTY_PROFILE' });  
     }}>
        

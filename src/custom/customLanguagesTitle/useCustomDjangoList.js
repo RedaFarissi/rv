@@ -9,7 +9,7 @@ export default function useCustomDjangoList(){
         ["about_admin","list_display", "prepopulated_fields", "list_editable", "inlines",],
         ["about_models","get_absolute_url","create_a_database_backup","restore_the_data_from_the_backup","remove_all_from_db_models","annotate"],
         ["User_Authentication","User_and_authontication","include_urls_and_files_html","Sign_Up","Add_fields_to_User_SignUp" ,],
-        ["Django_Email","2_Step_Verification","send_email","list_emails"],
+        ["Django_Email","_2_Step_Verification","send_email","list_emails"],
         "Django_Pagination","Form","ModelForm",
         ["Django_Filter","models_Objecjs_filter","raw_filter","lookup_expr","Q_filter","select_related",],
         "Session","Context_Processors","Ngrok_to_testing"

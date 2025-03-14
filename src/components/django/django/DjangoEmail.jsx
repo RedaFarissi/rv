@@ -11,7 +11,7 @@ export default function DjangoEmail(){
                في <b>Django</b>، يمكنك استخدام وظيفة <b>send_mail</b> من الوحدة النمطية <b>django.core.mail</b> لإرسال رسائل البريد الإلكتروني
             </p>
       </article>
-      <article id="2_Step_Verification">
+      <article id="_2_Step_Verification">
             <h2 className="title-h2"> 1 -  التحقق بخطوتين من بريدك الإلكتروني <bdi>2 Step Verification </bdi> </h2>
             <ul><li> انتقل أولاً إلى بريدك الإلكتروني وانقر على إدارة حساب <b>Google</b> الخاص بك <b>(Manage your Google Account)</b> </li> </ul> 
             <img src={images.django214} alt="django" className="w-100 mt-2 mb-3"/> 

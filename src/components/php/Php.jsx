@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Routes, Route , Link} from "react-router-dom";
 import {
     Introduction,Install,Comments,Variables,EchoPrint,DataTypes,Strings,Numbers,Casting,
@@ -35,7 +34,11 @@ export default function Php(props){
     ));
     return(
 <>
-<main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone(); dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }) } }>
+<main onClick={ (event)=>{ 
+    props.clickMenuHeader(event, false); 
+    // props.closeSearchPhone(); 
+    dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }) }}
+>
     <aside className="aside">
         <ul className="list-group m-0">
             {matrix}

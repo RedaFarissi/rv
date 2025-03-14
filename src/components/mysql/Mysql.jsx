@@ -28,7 +28,12 @@ export default function Sql(props){
       
 return(
 <>
-<main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone();dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }) } }>
+<main onClick={ 
+    (event)=>{ 
+        props.clickMenuHeader(event, false); 
+        // props.closeSearchPhone();
+        dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }) }}
+>
     <aside className="aside">
         <ul className="list-group m-0">
             {arrays}

@@ -25,7 +25,12 @@ export default function Python(props){
 
     return(
 <>
-    <main onClick={ (event)=>{ props.clickMenuHeader(event, false); props.closeSearchPhone(); dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }); } }>
+    <main onClick={ 
+        (event)=>{ 
+            props.clickMenuHeader(event, false); 
+            // props.closeSearchPhone(); 
+            dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }); }}
+    >
         <aside className="aside">
             <ul className="list-group m-0">
                 {arr}
