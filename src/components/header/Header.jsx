@@ -394,13 +394,13 @@ export default function Header(props){
         </button>    
     </div>
 
-    <div className="header-search-container-phone" ref={searchPhone} onClick={(event)=>{ event.stopPropagation() }}>
-        <input type="text" name="search-phone" className="search-field-phone" />
-        <button className="search-btn-phone" type="submit">
+    <form className="header-search-container-phone" ref={searchPhone} onClick={(event)=>{ event.stopPropagation() }}  onSubmit={handleSubmitSearch}>
+        <input type="text" name="search-phone" className="search-field-phone"  onChange={ (e) => dispatch({ type: 'SET_MESSAGE_SEARCH', payload: e.target.value })} />
+        <button className="search-btn-phone" type="submit" onClick={()=>{navigate("/search")}}>
             <i className="fa-solid fa-magnifying-glass"></i>
         </button>
-    </div>
-
+    </form>
+   
     <nav className={`desktop-navigation-menu`} ref={divRef}>
         <div className={`container-fliud p-0`}>
             <ul className="desktop-menu-category-list">   

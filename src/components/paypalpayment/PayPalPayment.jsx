@@ -1,9 +1,10 @@
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import "./PayPalPayment.sass";
 import { Footer } from "../path";
+import { useCustomScroolTo0  } from "../../custom/pathCustoms";
 
 const PayPalPayment = (props) => {
-  props.scrollY_to_0();
+  useCustomScroolTo0();
 
   
   return (

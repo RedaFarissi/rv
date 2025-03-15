@@ -51,7 +51,7 @@ export default function Introduction(props){
                      <li>انقر فوق <b>Advanced</b> </li>
                      <li>انقر فوق  <b>Environment Variables</b></li>
                      <li>اذهب الى  <b>path</b> داخل <b>User variables</b></li>
-                     <li> أضف المسار إذا لم يكن موجودا <b>C:\xampp\php</b></li>
+                     <li> أضف المسار <bdi><b>C:\xampp\php</b></bdi> إذا لم يكن موجودا </li>
                      <li> اضغط  <b>OK</b></li>
                   </ul>
                </p>

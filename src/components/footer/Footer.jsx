@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import "./Footer.sass";
 import images from "../images";
+import { Link } from 'react-router-dom';
 
 export default function Footer(props) {
     const dispatch = useDispatch();
@@ -83,7 +84,9 @@ export default function Footer(props) {
                         <p>
                             في حال أردت تقديم دعم مادي لمطوري الموقع يمكنك التبرع مرة واحدة أو بشكل شهري بالمبلغ الذي تريده من خلال بايبال 
                         </p>
-                        <button> Paypal </button>
+                        <Link to='/paypal-payment'>
+                            <button> Paypal </button>
+                        </Link>
                     </div>
                     <div className="mt-4">
                         <h4 className="footer-h4"> <i className="fa-solid fa-share-nodes fs-4 ms-2"></i> تابعنا </h4>

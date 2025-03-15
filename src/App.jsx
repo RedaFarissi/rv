@@ -1,35 +1,33 @@
 import "./App.sass";
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
 import { 
-    Header , Home , Html , Css , Js , React , Mysql , Python , Django , DjangoRestFramework , Cmd , Git , Php , 
-    Laravel , Login , Search , CreateAccount , PayPalPayment , MyPage , ReportAnErrorUser , AllQuestion , 
-    AddQuestion , QuestionDetail , 
+    Header , Home , Html , Css , Js , React , Mysql , Python , Django , DjangoRestFramework , Cmd ,  Git , Php , Laravel , Login ,
+    Search , CreateAccount , PayPalPayment , MyPage , ReportAnErrorUser , AllQuestion , AddQuestion , QuestionDetail , 
 } from './components/path';
 import {  useCustomScrollToHash , useCustomResizeAside , useCustomClickMenuHeader } from "./custom/pathCustoms";
 
 function App() {
     const url =  "http://localhost:8000" ;  
-    // Scroll to id when print url  direct in browser
-    useCustomScrollToHash();  
-    // Handle Resize Aside 
-    useCustomResizeAside();   
+    useCustomScrollToHash();   // Scroll to id when print url  direct in browser
+    useCustomResizeAside();    // Handle Resize Aside 
     return (
     <Router>
         <Header  clickMenuHeader={useCustomClickMenuHeader}  />
         <Routes>
             <Route path='/'       element={<Home />} />
-            <Route path='/html/*' element={<Html     clickMenuHeader={useCustomClickMenuHeader}/>}/>
-            <Route path='/css/*' element={<Css       clickMenuHeader={useCustomClickMenuHeader}   />}  />
-            <Route path='/js/*' element={<Js         clickMenuHeader={useCustomClickMenuHeader} />}  />
-            <Route path='/react/*' element={<React   clickMenuHeader={useCustomClickMenuHeader} />}  />
-            <Route path='/mysql/*' element={<Mysql   clickMenuHeader={useCustomClickMenuHeader}  />}  />
-            <Route path='/python/*' element={<Python clickMenuHeader={useCustomClickMenuHeader} />}  />
-            <Route path='/django/*' element={<Django clickMenuHeader={useCustomClickMenuHeader} />}/>
-            <Route path='/django-rest-framework/*' element={<DjangoRestFramework  clickMenuHeader={useCustomClickMenuHeader} />} />
-            <Route path='/php/*' element={<Php          clickMenuHeader={useCustomClickMenuHeader}  />}  />
-            <Route path='/laravel/*' element={<Laravel  clickMenuHeader={useCustomClickMenuHeader} />} />
-            <Route path='/powerShell' element={<Cmd     clickMenuHeader={useCustomClickMenuHeader} />} />
-            <Route path='/git' element={<Git            clickMenuHeader={useCustomClickMenuHeader}  />} />
+            <Route path='/html/*' element={<Html       clickMenuHeader={useCustomClickMenuHeader} />} />
+            <Route path='/css/*' element={<Css         clickMenuHeader={useCustomClickMenuHeader} />} />
+            <Route path='/js/*' element={<Js           clickMenuHeader={useCustomClickMenuHeader} />} />
+            <Route path='/react/*' element={<React     clickMenuHeader={useCustomClickMenuHeader} />} />
+            <Route path='/mysql/*' element={<Mysql     clickMenuHeader={useCustomClickMenuHeader} />} />
+            <Route path='/python/*' element={<Python   clickMenuHeader={useCustomClickMenuHeader} />} />
+            <Route path='/django/*' element={<Django   clickMenuHeader={useCustomClickMenuHeader} />} />
+            <Route path='/django-rest-framework/*' 
+                        element={<DjangoRestFramework  clickMenuHeader={useCustomClickMenuHeader} />} />
+            <Route path='/php/*' element={<Php         clickMenuHeader={useCustomClickMenuHeader} />}  />
+            <Route path='/laravel/*' element={<Laravel clickMenuHeader={useCustomClickMenuHeader} />} />
+            <Route path='/powerShell' element={<Cmd    clickMenuHeader={useCustomClickMenuHeader} />} />
+            <Route path='/git' element={<Git           clickMenuHeader={useCustomClickMenuHeader}  />} />
             <Route path='/paypal-payment' element={<PayPalPayment  />} />
             <Route path='/login' element={<Login  url={url} />}  />
             <Route path='/register' element={<CreateAccount url={url}  />} />

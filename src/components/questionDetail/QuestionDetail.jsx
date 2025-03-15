@@ -85,7 +85,7 @@ const QuestionDetail = (props) => {
     return (
         <div onClick={()=>{dispatch({ type: 'FALSE_VISIBILTY_PROFILE' })}}>
             <h3 style={{ marginTop: "200px", marginRight: "8%" }}>السؤال :</h3>
-            <section className="container text-end mb-5">
+            <section className="container alert text-end mb-5" style={{backgroundColor:"#171c2c"}}>
                 <h4>{question.title}</h4>
                 <small>{question.text}</small>
                 <p><small>{question.language}</small></p>

@@ -14,9 +14,7 @@ const ReportAnErrorUser = (props) => {
     const [dataForm, setDataForm] = useState({ pageLink: '' , issueType: '' , issueDescription: '' ,});
 
     useEffect(()=>{
-        if (!localStorage.getItem("auth_token")) {
-              navigate("/login"); // Redirect if no token
-        }
+        if (!localStorage.getItem("auth_token"))  navigate("/login");   //Redirect if no token
     },[localStorage.getItem("auth_token")])
 
     const handleInputChange = (event) => {
@@ -41,7 +39,7 @@ const ReportAnErrorUser = (props) => {
 
   return (
 <> 
-    <section className="container" style={{marginTop: "200px"}}  onClick={()=>{dispatch({ type: 'FALSE_VISIBILTY_PROFILE' })}}>
+    <section className="container alert text-center" style={{marginTop: "200px", backgroundColor:"#171c2c"}}  onClick={()=>{dispatch({ type: 'FALSE_VISIBILTY_PROFILE' })}}>
         <form method="POST" onSubmit={handleCreatePost} >
             <div className="row">
                 <span className="col-sm-1"></span>
