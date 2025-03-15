@@ -4,9 +4,9 @@ import react_logo from "../../../assests/images/logo/react_logo.svg";
 
 export default function Import(){
     return(
-    <article id="Handle-import">
-        <h2 className="title-h2">6 -  استيراده ملف آخر (import)  </h2>
-        <h3 className="title-h3">1 - استيراد مكوّنات (Components)</h3>
+    <div id="Handle-import">
+        <h1 className="heading-style"> React import </h1>
+        <h2 className="title-h2">1 - استيراد مكوّنات (Components)</h2>
         <div className="style_divv">قبل نقوم باستيراد كل مكون من مساره  <bdi className="text-danger">(وهذا غير عملي)</bdi></div>
         <CodeHighlighter code={codes[5].Handle_import[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
         <CodeHighlighter code={codes[5].Handle_import[1]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
@@ -27,12 +27,11 @@ export default function Import(){
           <p>This is the content of the app.</p>
           <h3>Footer</h3>
         </Result>
-        <h3 className="title-h3">2 - استيراد مكتبات أو وحدات خارجية </h3>
+        <h2 className="title-h2">2 - استيراد مكتبات أو وحدات خارجية </h2>
         <p className="style_divv">
           يمكنك أيضًا استخدام <b>import</b> لجلب مكتبات أو وحدات خارجية. على سبيل المثال، إذا كنت ترغب في استخدام مكتبة <b>axios</b> لعمل طلبات <b>HTTP</b>، يمكنك استيرادها بهذه الطريقة.<br/><br/>
           سنتطرق لذالك في دروس المكتبات . 
         </p>
-    </article>
-
+    </div>
     )
 }

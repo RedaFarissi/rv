@@ -5,9 +5,9 @@ import react_logo from "../../../assests/images/logo/react_logo.svg";
 export default function Lists(){
     return(
     <article id="Lists">
-        <h2 className="title-h2">4 -  القوائم (Lists) </h2>
+        <h1 className="heading-style"> React Lists </h1>
         <p className="style_divv">
-          القوائم في <b>React</b> تشير إلى مجموعة من العناصر المترابطة يمكن عرضها أو تكرارها داخل واجهة المستخدم.<br/><br/>
+          القوائم (Lists) في <b>React</b> تشير إلى مجموعة من العناصر المترابطة يمكن عرضها أو تكرارها داخل واجهة المستخدم.<br/><br/>
           في <b>React</b>، ستقوم بعرض القوائم باستخدام نوع من أنواع الحلقات. وأسلوب استخدام دالة <bdi><b>map()</b></bdi> في <b>JavaScript</b> على الأراي (المصفوفة) هو عادة الأسلوب المفضل.
         </p>
         <div className="mital">متال 1 : </div>

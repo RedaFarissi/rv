@@ -14,24 +14,28 @@ export default function Redux(){
     const [ visibility , setVisibility] = useState(false);
 
     return(
-<article id="Redux">
-    <h2 className="title-h2">10 - Redux</h2>
-    <h3 className="title-h3" id='What_is_redux'>1 -  ما هو redux  </h3>
-    <p className="style_divv">
-        <b>Redux</b> هو مكتبة لإدارة الحالة (State Management) في تطبيقات JavaScript، تُستخدم غالبًا مع React. تُساعد Redux في تنظيم البيانات وتحديث الحالة بطريقة متوقعة من خلال الاحتفاظ بحالة التطبيق في <b>"Store"</b> مركزي. <br /><br />
-          مميزات Redux:
-        <ul>
-          <li><span className="text-success">إدارة مركزية للحالة : </span> جميع بيانات التطبيق تكون في مكان واحد.</li>
-          <li><span className="text-success">تحديثات متوقعة : </span> يتم تعديل البيانات فقط من خلال "Actions" و"Reducers"، مما يسهل التنبؤ بالتغييرات.</li>
-          <li><span className="text-success">تصحيح الأخطاء بسهولة : </span> يُمكن تتبع جميع التغييرات في الحالة باستخدام أدوات Redux DevTools.</li>
-          <li><span className="text-success">تكامل قوي مع React : </span> يمكن استخدام useSelector و useDispatch للحصول على البيانات وإرسال الأحداث بسهولة</li>
-        </ul>
-    </p>
-    <img src={images.react6} alt="react6" className="w-100" />
-    <h3 className="title-h3" id='install_redux'>2 - تثبيت التبعيات  </h3>
-    <CodeCommand>npm install redux react-redux</CodeCommand>
-    <h5 className="title-h5" id='example_1'> مثال 1 : </h5>
-    
+<div id="Redux">
+    <h1 className="heading-style"> React Redux </h1>
+    <article  id='What_is_redux'>
+        <h2 className="title-h2">1 -  ما هو redux  </h2>
+        <p className="style_divv">
+            <b>Redux</b> هو مكتبة لإدارة الحالة (State Management) في تطبيقات JavaScript، تُستخدم غالبًا مع React. تُساعد Redux في تنظيم البيانات وتحديث الحالة بطريقة متوقعة من خلال الاحتفاظ بحالة التطبيق في <b>"Store"</b> مركزي. <br /><br />
+              مميزات Redux:
+            <ul>
+              <li><span className="text-success">إدارة مركزية للحالة : </span> جميع بيانات التطبيق تكون في مكان واحد.</li>
+              <li><span className="text-success">تحديثات متوقعة : </span> يتم تعديل البيانات فقط من خلال "Actions" و"Reducers"، مما يسهل التنبؤ بالتغييرات.</li>
+              <li><span className="text-success">تصحيح الأخطاء بسهولة : </span> يُمكن تتبع جميع التغييرات في الحالة باستخدام أدوات Redux DevTools.</li>
+              <li><span className="text-success">تكامل قوي مع React : </span> يمكن استخدام useSelector و useDispatch للحصول على البيانات وإرسال الأحداث بسهولة</li>
+            </ul>
+        </p>
+        <img src={images.react6} alt="react6" className="w-100" />
+    </article>
+    <article  id='install_redux'>
+        <h2 className="title-h2">2 - تثبيت التبعيات  </h2>
+        <CodeCommand>npm install redux react-redux</CodeCommand>
+    </article>
+    <article id='example_1'>
+    <h2 className="title-h2"> مثال 1 : </h2>
     <CodeHighlighter code={`import { createStore } from 'redux';
 
 // Initial State
@@ -123,9 +127,10 @@ reportWebVitals();`} language="jsx" number={false} file_name="src / index.js"  a
        <h2> b = 30 </h2>
     </Result>
     
-    
-    <h5 className="title-h5" id='example_2'> مثال 2 : </h5>
-    <h6>نفس ملف store بدون أي تغيير .</h6>
+    </article>
+    <article id='example_2'>
+        <h2 className="title-h2"> مثال 2 : </h2>
+        <h6>نفس ملف store بدون أي تغيير .</h6>
     <CodeHighlighter code={`import { createStore } from 'redux';
 
 // Initial State
@@ -195,10 +200,11 @@ export default CounterControls;`} language="jsx" number={false} file_name="src /
         <h2> a = 20 </h2>
         <h2> b = 30 </h2>
     </Result>
-
-    <h5 className="title-h5" id='example_3'> مثال 3 : </h5>
-    <h6> أولاً قم بإنشاء مجلد  reducers </h6>
-    <CodeHighlighter code={`const initialState = {
+    </article>
+    <article id='example_3'>
+        <h2 className="title-h2"> مثال 3 : </h2>
+        <h6> أولاً قم بإنشاء مجلد  reducers </h6>
+        <CodeHighlighter code={`const initialState = {
     count: 0
 };
   
@@ -318,10 +324,11 @@ export default App;`} language="jsx" number={false} file_name="src / App.jsx"  a
             placeholder="Type a message"
         />        
     </Result>
-
-    <h5 className="title-h5" id='example_4'> مثال 4 : </h5>
-    <ul><li>نُنشئ مُجلد <bdi>reducers/</bdi> في React-Redux لـ تجميع منطق إدارة الحالة في مكان واحد وفصل المهام، مما يُسهّل صيانة واختبار وتوسعة التحديثات عبر المكونات، مع الالتزام بالنمط المُنتظم لـ Redux. </li></ul>
-    <CodeHighlighter code={`const initiallogoVisibility = {
+    </article>
+    <article id='example_4'>
+        <h5 className="title-h5"> مثال 4 : </h5>
+        <ul><li>نُنشئ مُجلد <bdi>reducers/</bdi> في React-Redux لـ تجميع منطق إدارة الحالة في مكان واحد وفصل المهام، مما يُسهّل صيانة واختبار وتوسعة التحديثات عبر المكونات، مع الالتزام بالنمط المُنتظم لـ Redux. </li></ul>
+        <CodeHighlighter code={`const initiallogoVisibility = {
     logoVisibility: false
 };
   
@@ -455,5 +462,6 @@ export default App;`} language="jsx" number={false} file_name="src / App.jsx"  a
         
     {/* <CodeHighlighter code={``} language="jsx" number={false} file_name="src / .jsx"  addclassName="mt-3 mb-3" copie={true}/>  */}
 </article>
+</div>
     )
 }

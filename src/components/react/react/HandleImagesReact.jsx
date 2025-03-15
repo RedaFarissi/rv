@@ -5,9 +5,9 @@ import react_logo from "../../../assests/images/logo/react_logo.svg";
 export default function HandleImagesReact(){
     return(
     <article id="Handle-images-react">
-        <h2 className="title-h2">5 - التعامل مع الصور في React </h2>
+        <h1 className="heading-style"> React Images </h1>
         <p className="style_divv">
-          يجب أن تكون الصور في مجلد <kbd>src/</kbd> <br/>
+            لتعامل مع الصور في React يجب أن تكون الصور في مجلد <kbd>src/</kbd> <br/>
         </p>
         <div className="mital">متال : </div>
         <ul><li> في هذا المتال قمن بجلب الصورة من مسارها مباشرة  </li></ul>

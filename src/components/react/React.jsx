@@ -10,7 +10,8 @@ function React(props){
       const dispatch = useDispatch();
       const AsideRef = useRef(null);
       const [react_matrix]  = useCustomReactList();
-  
+      
+      
       useEffect(() => {
            AsideRef.current.scrollTop = localStorage.getItem("react_aside") || 0;
        }, []);
@@ -62,12 +63,11 @@ function React(props){
 
     return(
   <>
-  <main onClick={ 
+<main onClick={ 
     (event)=>{ 
         props.clickMenuHeader(event, false);  
-        // props.closeSearchPhone(); 
         dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }); }}
-  >
+>
     <aside  className="aside"  onScroll={()=>{ localStorage.setItem("react_aside",AsideRef.current.scrollTop) }} ref={AsideRef}> 
         <dl className="list-group m-0">
             {matrix}
@@ -80,7 +80,7 @@ function React(props){
            <Route path='/component'  element={<Component  />} />
            <Route path='/events'  element={<Events  />} />
            <Route path='/lists'  element={<Lists  />} />
-           <Route path='/handle-images-react'  element={<HandleImagesReact  />} />
+           <Route path='/images-react'  element={<HandleImagesReact  />} />
            <Route path='/import'  element={<Import  />} />
            <Route path='/props-children'  element={<PropsChildren  />} />
            <Route path='/hooks'  element={<Hooks  />} />
@@ -88,10 +88,10 @@ function React(props){
            <Route path='/redux'  element={<Redux  />} />
         </Routes>
     </section>
-  </main>
-  <Footer 
+</main>
+<Footer 
       blockChildStyle={{width: "100%"}}
-  />
+/>
 </>
   )
 }
