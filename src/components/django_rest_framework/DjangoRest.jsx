@@ -5,12 +5,14 @@ import {
     ConnectDjangoWithReact,Footer,
 } from "./pathDjangoRest";
 import { useDispatch } from 'react-redux';
-import { useCustoScrollYAdd , useCustomScroolTo0 } from "../../custom/pathCustoms";
+import { useCustoScrollYAdd , useCustomScroolTo0 , useCustomDjangoRestList} from "../../custom/pathCustoms";
 
 
 export default function DjangoRestFramework(props){
     const AsideRef = useRef(null);
     const dispatch = useDispatch();
+    const [django_rest_framework_matrix] = useCustomDjangoRestList();
+
 
     useEffect(() => {
        AsideRef.current.scrollTop = localStorage.getItem("django_aside") || 0;
@@ -28,7 +30,7 @@ export default function DjangoRestFramework(props){
     }, [window.location.hash]); // Run the effect when the hash changes
     
    
-    const matrix = props.django_rest_framework_matrix.map(e =>{ 
+    const matrix = django_rest_framework_matrix.map(e =>{ 
         var keys_map;  
         if (Array.isArray(e)) { 
             let dt_title;

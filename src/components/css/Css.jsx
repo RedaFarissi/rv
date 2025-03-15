@@ -11,15 +11,16 @@ import {
     Selectors,Functions,Media,ScssComponent,SassComponent,Footer
 } from './pathCss.js';
 import { useDispatch } from 'react-redux';
-import { useCustomScroolTo0 } from "../../custom/pathCustoms";
+import { useCustomScroolTo0 , useCustomCssList} from "../../custom/pathCustoms";
 
 
 export default function Css(props){
     useCustomScroolTo0();
     const dispatch = useDispatch();
+    const [css_list]  =  useCustomCssList();
     
 
-    const arrays = props.css_list.map(e => <li className="list-group-item">
+    const arrays = css_list.map(e => <li className="list-group-item">
         <Link  to={`/css/${e.toLowerCase().replace(/\s/g, '-')}`} onClick={useCustomScroolTo0}>
             <i className="fa-solid fa-caret-right me-2"></i>CSS {e}
         </Link>

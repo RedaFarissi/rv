@@ -7,14 +7,17 @@ import {
     Table, Input, Select, Form, Textarea, Button, Fieldset, Dialog, Iframe, Meter, Style, HtmlLink, Meta , Footer
 } from './pathHtml.js';
 import { useDispatch } from 'react-redux';
-import { useCustomScroolTo0 } from "../../custom/pathCustoms";
+import { useCustomScroolTo0 , useCustomHtmlList } from "../../custom/pathCustoms";
 
 
 export default function Html(props){  
     const dispatch = useDispatch();
     useCustomScroolTo0();
     
-    const arrays = props.html_list.map(e => <li className="list-group-item">
+    const [html_list] = useCustomHtmlList();
+
+
+    const arrays = html_list.map(e => <li className="list-group-item">
         <Link  to={`/html/${e.toLowerCase().replace(/\s/g, '-')}`}  onClick={useCustomScroolTo0} >
             <i className="fa-solid fa-caret-right me-1"></i> HTML {e}
         </Link>

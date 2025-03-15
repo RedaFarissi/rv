@@ -45,7 +45,6 @@ export default function Header(props){
     const handleSubmitSearch = (e) => {
         e.preventDefault(); // Prevent page reload on submit
         const resultArray = searchAndRetrieve(searchTitle)
-        console.log(resultArray)
         dispatch({type:'SEARCH_RESULT' , payload: resultArray})
     };
 
@@ -250,10 +249,6 @@ export default function Header(props){
     } 
 
 
-
-
-    //////////
-    
     const programing = [
         {name:"HTML",link:"html"}, {name:"CSS",link:"css"}, {name:"JAVASCRIPT",link:"js"}, {name:"REACT.js",link:"react"}, 
         {name:"MYSQL",link:"mysql"}, {name:"PYTHON",link:"python"}, {name:"DJANGO",link:"django"},
@@ -338,7 +333,6 @@ export default function Header(props){
                     <i className="fa-solid fa-house fs-5 text-light p-2"></i>
                 </Link> 
             </div>
-
           
             <div className="header-search-container">  
                 <form onSubmit={handleSubmitSearch} >

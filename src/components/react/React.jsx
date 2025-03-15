@@ -3,12 +3,14 @@ import { useEffect, useRef } from "react";
 import { Introduction , Component , Events , Lists , HandleImagesReact , Import, PropsChildren , Hooks , Packages ,Redux ,} from "./pathReact";
 import { Routes, Route , Link } from "react-router-dom";
 import { useDispatch } from 'react-redux';
-import { useCustoScrollYAdd , useCustomScroolTo0} from "../../custom/pathCustoms";
+import { useCustoScrollYAdd , useCustomScroolTo0 , useCustomReactList} from "../../custom/pathCustoms";
 
 
 function React(props){      
       const dispatch = useDispatch();
       const AsideRef = useRef(null);
+      const [react_matrix]  = useCustomReactList();
+  
       useEffect(() => {
            AsideRef.current.scrollTop = localStorage.getItem("react_aside") || 0;
        }, []);
@@ -24,7 +26,7 @@ function React(props){
         }
       }, [window.location.hash]); // Run the effect when the hash changes
         
-      const matrix = props.react_matrix.map(e =>{ 
+      const matrix = react_matrix.map(e =>{ 
           var keys_map;  
           if (Array.isArray(e)) { 
              let dt_title;

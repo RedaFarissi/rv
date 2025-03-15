@@ -5,52 +5,31 @@ import {
     Laravel , Login , Search , CreateAccount , PayPalPayment , MyPage , ReportAnErrorUser , AllQuestion , 
     AddQuestion , QuestionDetail , 
 } from './components/path';
-import {
-    useCustomHtmlList , useCustomCssList , useCustomJsList , useCustomSqlList , useCustomPythonList ,  
-    useCustomDjangoList ,useCustomDjangoRestList, useCustomPhpList , useCustomReactList , useCustomLaravelList , 
-    useCustomGitList , useCustomCmdList , useCustomScrollToHash , useCustomResizeAside , useCustomClickMenuHeader 
-} from "./custom/pathCustoms";
-
-
+import {  useCustomScrollToHash , useCustomResizeAside , useCustomClickMenuHeader } from "./custom/pathCustoms";
 
 function App() {
-    const url =  "http://localhost:8000" ;
-
-    // will return tables. tables contain title and link of all languages 
-    const [html_list] = useCustomHtmlList();
-    const [css_list]  =  useCustomCssList();
-    const [js_matrix] = useCustomJsList();
-    const [sql_list] = useCustomSqlList();
-    const [python_list] = useCustomPythonList(); 
-    const [django_matrix] = useCustomDjangoList();
-    const [django_rest_framework_matrix] = useCustomDjangoRestList();
-    const [php_list] = useCustomPhpList();
-    const [react_matrix]  = useCustomReactList();
-    const [laravel_matrix] = useCustomLaravelList();
-    const [git_list]  = useCustomGitList();
-    const [cmd_list]  = useCustomCmdList();
-     
-    useCustomScrollToHash();  // Scroll to id when print url  direct in browser
-    useCustomResizeAside();   // Handle Resize Aside 
-   
-    
+    const url =  "http://localhost:8000" ;  
+    // Scroll to id when print url  direct in browser
+    useCustomScrollToHash();  
+    // Handle Resize Aside 
+    useCustomResizeAside();   
     return (
     <Router>
         <Header  clickMenuHeader={useCustomClickMenuHeader}  />
         <Routes>
             <Route path='/'       element={<Home />} />
-            <Route path='/html/*' element={<Html  html_list={html_list}  clickMenuHeader={useCustomClickMenuHeader}/>}/>
-            <Route path='/css/*' element={<Css    css_list={css_list}  clickMenuHeader={useCustomClickMenuHeader}   />}  />
-            <Route path='/js/*' element={<Js  js_matrix={js_matrix}  clickMenuHeader={useCustomClickMenuHeader} />}  />
-            <Route path='/react/*' element={<React  react_matrix={react_matrix}  clickMenuHeader={useCustomClickMenuHeader} />}  />
-            <Route path='/mysql/*' element={<Mysql  sql_list={sql_list}  clickMenuHeader={useCustomClickMenuHeader}  />}  />
-            <Route path='/python/*' element={<Python   python_list={python_list}  clickMenuHeader={useCustomClickMenuHeader} />}  />
-            <Route path='/django/*' element={<Django  django_matrix={django_matrix}  clickMenuHeader={useCustomClickMenuHeader} />}/>
-            <Route path='/django-rest-framework/*' element={<DjangoRestFramework django_rest_framework_matrix={django_rest_framework_matrix}  clickMenuHeader={useCustomClickMenuHeader} />} />
-            <Route path='/php/*' element={<Php   php_list={php_list}  clickMenuHeader={useCustomClickMenuHeader}  />}  />
-            <Route path='/laravel/*' element={<Laravel  laravel_matrix={laravel_matrix}  clickMenuHeader={useCustomClickMenuHeader} />} />
-            <Route path='/powerShell' element={<Cmd  cmd_list={cmd_list}  clickMenuHeader={useCustomClickMenuHeader} />} />
-            <Route path='/git' element={<Git  git_list={git_list}  clickMenuHeader={useCustomClickMenuHeader}  />} />
+            <Route path='/html/*' element={<Html     clickMenuHeader={useCustomClickMenuHeader}/>}/>
+            <Route path='/css/*' element={<Css       clickMenuHeader={useCustomClickMenuHeader}   />}  />
+            <Route path='/js/*' element={<Js         clickMenuHeader={useCustomClickMenuHeader} />}  />
+            <Route path='/react/*' element={<React   clickMenuHeader={useCustomClickMenuHeader} />}  />
+            <Route path='/mysql/*' element={<Mysql   clickMenuHeader={useCustomClickMenuHeader}  />}  />
+            <Route path='/python/*' element={<Python clickMenuHeader={useCustomClickMenuHeader} />}  />
+            <Route path='/django/*' element={<Django clickMenuHeader={useCustomClickMenuHeader} />}/>
+            <Route path='/django-rest-framework/*' element={<DjangoRestFramework  clickMenuHeader={useCustomClickMenuHeader} />} />
+            <Route path='/php/*' element={<Php          clickMenuHeader={useCustomClickMenuHeader}  />}  />
+            <Route path='/laravel/*' element={<Laravel  clickMenuHeader={useCustomClickMenuHeader} />} />
+            <Route path='/powerShell' element={<Cmd     clickMenuHeader={useCustomClickMenuHeader} />} />
+            <Route path='/git' element={<Git            clickMenuHeader={useCustomClickMenuHeader}  />} />
             <Route path='/paypal-payment' element={<PayPalPayment  />} />
             <Route path='/login' element={<Login  url={url} />}  />
             <Route path='/register' element={<CreateAccount url={url}  />} />

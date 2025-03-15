@@ -8,14 +8,16 @@ import {
     Input,StringFormatting,FileHandling,ReadFiles,WriteCreateFiles,DeleteFiles,Footer
 } from "./pathPython"
 import { useDispatch } from 'react-redux';
-import { useCustomScroolTo0 } from "../../custom/pathCustoms";
+import { useCustomScroolTo0 , useCustomPythonList} from "../../custom/pathCustoms";
 
 
 export default function Python(props){ 
     const dispatch = useDispatch();
     useCustomScroolTo0();
+    const [python_list] = useCustomPythonList(); 
     
-    const arr = props.python_list.map(e => <li className="list-group-item">
+
+    const arr = python_list.map(e => <li className="list-group-item">
         <Link to={`/python/${e.toLowerCase().replace(/\s/g, '-')}`} className="p-2" 
             onClick={useCustomScroolTo0}
         >

@@ -3,13 +3,14 @@ import images from "./imagesGit";
 import Footer from "../footer/Footer";
 import { useEffect } from "react";
 import { useDispatch } from 'react-redux';
-import { useCustoScrollYAdd } from "../../custom/pathCustoms";
+import { useCustoScrollYAdd , useCustomGitList } from "../../custom/pathCustoms";
 
 
 export default function Git(props){
     const dispatch = useDispatch();
+    const [git_list]  = useCustomGitList();
     
-    const arrays = props.git_list.map(e => <li className="list-group-item">
+    const arrays = git_list.map(e => <li className="list-group-item">
         <a href={`/git#${e}`} onClick={useCustoScrollYAdd}>
             <i className="fa-solid fa-caret-right me-1"></i> GIT {e.replace(/_/g, ' ')}
         </a>

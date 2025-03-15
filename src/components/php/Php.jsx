@@ -9,13 +9,14 @@ import {
 } from "./pathPhp";
 import xampp_logo from "../../assests/images/logo/xampp.jpg";
 import { useDispatch } from 'react-redux';
-import { useCustomScroolTo0 } from "../../custom/pathCustoms";
+import { useCustomScroolTo0 , useCustomPhpList } from "../../custom/pathCustoms";
 
 export default function Php(props){    
     const dispatch = useDispatch();
     useCustomScroolTo0();  
+    const [php_list] = useCustomPhpList();
 
-    const matrix = props.php_list.map( e =>(
+    const matrix = php_list.map( e =>(
         <dl>
             { 
                 e.map((value, index) => (

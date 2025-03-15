@@ -5,12 +5,14 @@ import{
    Git , Mail , Middleware , Packages , Tinker , GitClone  , ReactVite ,  Footer 
 } from "./pathLaravel.js";
 import { useDispatch } from 'react-redux';
-import { useCustoScrollYAdd } from "../../custom/pathCustoms";
-import { useCustomScroolTo0 } from "../../custom/pathCustoms";
+import { useCustoScrollYAdd ,useCustomScroolTo0 ,useCustomLaravelList} from "../../custom/pathCustoms";
 
 export default function Laravel(props){
    const AsideRef = useRef(null);
    const dispatch = useDispatch();
+   const [laravel_matrix] = useCustomLaravelList();
+
+
    useEffect(() => {
        AsideRef.current.scrollTop = localStorage.getItem("laravel_aside") || 0;
    }, []);
@@ -25,7 +27,7 @@ export default function Laravel(props){
           }
    }, [window.location.hash]); // Run the effect when the hash changes
     
-   const matrix = props.laravel_matrix.map(e =>{ 
+   const matrix = laravel_matrix.map(e =>{ 
       var keys_map;  
       if (Array.isArray(e)) { 
          let dt_title;

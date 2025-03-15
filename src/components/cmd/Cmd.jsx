@@ -2,14 +2,15 @@ import { useEffect } from "react";
 import { CodeCommand , Footer} from "../path";
 import images from "./imagesCmd";
 import { useDispatch } from 'react-redux';
-import { useCustomScroolTo0 , useCustoScrollYAdd } from "../../custom/pathCustoms";
+import { useCustomScroolTo0 , useCustoScrollYAdd  , useCustomCmdList } from "../../custom/pathCustoms";
 
 
 export default function Cmd(props){
     useCustomScroolTo0();
+    const [cmd_list]  = useCustomCmdList();
     
     const dispatch = useDispatch();
-        const arrays = props.cmd_list.map(e => <li className="list-group-item">
+        const arrays = cmd_list.map(e => <li className="list-group-item">
         <a href={`/powerShell#${e}`} 
             onClick={ useCustoScrollYAdd }
         >

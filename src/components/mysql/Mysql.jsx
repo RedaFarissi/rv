@@ -4,10 +4,13 @@ import { CodeHighlighter  } from "../path";
 import Footer from "../footer/Footer"
 import { useEffect } from "react";
 import { useDispatch } from 'react-redux';
+import { useCustomSqlList } from "../../custom/pathCustoms";
 
 export default function Sql(props){
-  const dispatch = useDispatch();
-  const arrays = props.sql_list.map(e => <li className="list-group-item">
+    const dispatch = useDispatch();
+    const [sql_list] = useCustomSqlList();
+    
+    const arrays = sql_list.map(e => <li className="list-group-item">
         <a  href={`/mysql#${e.toLowerCase().replace(/\s/g, '-')}`}  onClick={ useCustoScrollYAdd } className="p-2"> 
             <i className="fa-solid fa-caret-right me-1"></i> SQL {e}
         </a>

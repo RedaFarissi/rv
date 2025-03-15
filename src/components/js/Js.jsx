@@ -31,19 +31,20 @@ import {
     Footer,
 } from './pathJs.js';
 import { useDispatch } from 'react-redux';
-import { useCustomScroolTo0 } from "../../custom/pathCustoms";
+import { useCustomScroolTo0 , useCustomJsList } from "../../custom/pathCustoms";
 
 
 export default function Js(props){
     const AsideRef = useRef(null);
     const dispatch = useDispatch();
     useCustomScroolTo0();
+    const [js_matrix] = useCustomJsList();
     
     useEffect(() => {
        AsideRef.current.scrollTop = localStorage.getItem("js_aside") || 0;
     },[]); 
 
-    const matrix = props.js_matrix.map( e =>(
+    const matrix = js_matrix.map( e =>(
         <dl>
             { 
                 e.map((value, index) => (
