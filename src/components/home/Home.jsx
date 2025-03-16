@@ -66,12 +66,7 @@ export default function Home(props){
   <>
     <section onClick={()=>{ dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }) }}>
 
-        <main className="main-home d-flex justify-content-center align-items-center flex-wrap" dir="ltr" 
-            onClick={(event)=>{ 
-                // props.closeSearchPhone(event);
-                props.boxProfileStyle();
-            }}
-        >
+        <main className="main-home d-flex justify-content-center align-items-center flex-wrap" dir="ltr" >
             {cards}
         </main>
         <Footer 
