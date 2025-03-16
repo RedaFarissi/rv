@@ -177,7 +177,7 @@ document.getElementById("demo").innerHTML += myArray[6]  ;`
             النوع <b>string</b> في لغة  <b>JavaScript</b> مخصصة لتخزين النص ومعالجته .
         </p>
     </article>
-    <article>
+    <article  id="length">
         <h2 className="title-h2" id="length">1. String Length </h2>
         <p className="style_divv">
             تستخدم الخاصية <b>length</b> للعثور على طول المتغير من نوع <b>string</b> .<br/>
@@ -193,8 +193,8 @@ document.getElementById("demo").innerHTML += myArray[6]  ;`
             </div>
         </ResultConsole>
     </article>
-    <article>
-        <h2 className="title-h2" id="character">2. Escape Character</h2>
+    <article id="character">
+        <h2 className="title-h2">2. Escape Character</h2>
         <p className="style_divv">
             سيتم تقطيع السلسلة إلى  نحن من يسمى.<br/>
             الحل لتجنب هذه المشكلة ، هو استخدام  الخط المائل .
@@ -251,8 +251,8 @@ document.getElementById("demo").innerHTML += myArray[6]  ;`
             <h2>{"text length \f Adil"}</h2>
         </Result> 
     </article>
-    <article> 
-        <h2 className="title-h2" id="objects">3. JavaScript Strings as Objects</h2>
+    <article id="objects"> 
+        <h2 className="title-h2">3. JavaScript Strings as Objects</h2>
         <p className="style_divv">
             عادةً ما تكون متغيرات من نوع <b>string</b> في لغة  <b>JavaScript</b> عبارة عن قيم أولية تم إنشاؤها من العناصر الحرفية:<br/><br/>
             <CodeHighlighter code={`let x = "Reda" ;`}  language="js" addClass="mt-3 mb-3" copie={true}  />  
@@ -277,8 +277,8 @@ document.getElementById("demo").innerHTML += myArray[6]  ;`
             <li> يمكن أن تنتج كائنات السلسلة نتائج غير متوقعة .</li>
         </ul>
     </article>
-    <article>
-        <h2 className="title-h2" id="extracting"> 4.  JavaScript Extracting String Parts </h2>
+    <article id="extracting">
+        <h2 className="title-h2"> 4.  JavaScript Extracting String Parts </h2>
         <p className="style_divv">
             هناك ثلاث طرق لاستخراج جزء من السلسلة :
             <CodeHighlighter code={`let variable = variable.slice(start, end);`} language="js" addClass="mt-3 mb-3" copie={true}  />  
@@ -333,8 +333,8 @@ document.getElementById("demo").innerHTML += myArray[6]  ;`
             <h2>Kiwi</h2>
         </Result>
     </article>
-    <article>
-        <h2 className="title-h2" id="replace">5. Replace String</h2>
+    <article id="replace">
+        <h2 className="title-h2">5. Replace String</h2>
         <p className="style_divv">
             تستبدل الدالة <bdi><b>replace()</b></bdi> قيمة محددة بقيمة أخرى في سلسلة.<br/>
             <CodeHighlighter code={`let newText = text.replace("old string", "new string");`} language="js" addClass="mt-3 mb-3" copie={true}  />  
@@ -351,8 +351,8 @@ document.getElementById("demo").innerHTML += myArray[6]  ;`
             <li   li> الدالة <b><bdi>replace()</bdi></b>  ترجع سلسلة نصية جديدة.</li>
         </ul>
     </article>
-    <article>    
-        <h2 className="title-h2" id="Upper">6. Converting to Upper and Lower Case</h2>
+    <article id="Upper">
+        <h2 className="title-h2">6. Converting to Upper and Lower Case</h2>
         <p className="style_divv">
             يتم تحويل متغير من نوع <b>string</b> إلى أحرف كبيرة باستخدام <b><bdi>toUpperCase()</bdi></b>.<br/>
             يتم تحويل متغير من نوع <b>string</b> إلى أحرف صغيرة باستخدام <b><bdi>toLowerCase()</bdi></b>  
@@ -382,7 +382,9 @@ let text3 = text.concat(" ", text2);`} language="js" addClass="mt-3 mb-3" copie=
         <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>Reda Eskouni</h2>
         </Result>
-        <h2 className="title-h2" id="trim">8. JavaScript String trim</h2>
+    </article>
+    <article id="trim">
+    <h2 className="title-h2">8. JavaScript String trim</h2>
         <p className="style_divv">
             تستعمل الدالة <b><bdi>trim()</bdi></b> لإزالة المسافة البيضاء من جانبي السلسلة .<br/>
             <CodeHighlighter code={`let text1 = "    Reda    ";
@@ -401,7 +403,9 @@ let text2 = text1.trim();`} language="js" addClass="mt-3 mb-3" copie={true}  />
                 <span>index.js : 4</span>
             </div>
         </ResultConsole>
-        <h2 className="title-h2" id="Padding">9. JavaScript String Padding</h2>
+    </article>
+    <article id="Padding">
+    <h2 className="title-h2">9. JavaScript String Padding</h2>
         <p className="style_divv">
             تستعمل الدالة <b><bdi>padStart</bdi></b>  و <b><bdi>padEnd</bdi></b> لدعم الحشو في بداية السلسلة ونهايتها .
         </p>
@@ -418,13 +422,17 @@ let text2 = text1.trim();`} language="js" addClass="mt-3 mb-3" copie={true}  />
         <Result title='String' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
             <h2>padded : 500000</h2>
         </Result>
-        <h2 className="title-h2" id="charAt">10. JavaScript String charAt</h2>
+    </article>
+    <article id="charAt">
+    <h2 className="title-h2">10. JavaScript String charAt</h2>
         <p className="style_divv">
         تستعمل الدالة <b><bdi>charAt</bdi></b>  لإرجاع الحرف في فهرس (موضع) محدد في المتغير النصي .<br/>
         <CodeHighlighter code={`let text = "Hello Word";
 let newText = text.charAt(0);`} language="js" addClass="mt-3 mb-3" copie={true}  />
         </p>
-        <h2 className="title-h2" id="split">11. JavaScript String split</h2>
+    </article>
+    <article id="split">
+    <h2 className="title-h2">11. JavaScript String split</h2>
         <p className="style_divv">
             تستعمل الدالة <b><bdi>split</bdi></b> لتقسم سلسلة إلى مصفوفة من السلاسل الفرعية .<br/>
             طريقة <bdi><b>split()</b></bdi> ترجع المصفوفة الجديدة .<br/>

@@ -4,7 +4,7 @@ import Footer from "../footer/Footer";
 import { useEffect } from "react";
 import { useDispatch } from 'react-redux';
 import { useCustoScrollYAdd , useCustomGitList } from "../../custom/pathCustoms";
-
+import "./Git.sass";
 
 export default function Git(props){
     const dispatch = useDispatch();
@@ -379,7 +379,7 @@ export default function Git(props){
                 Your identification has been saved in C:\Users\Dell/.ssh/id_rsa<br />
                 Your public key has been saved in C:\Users\Dell/.ssh/id_rsa.pub<br />
                 The key fingerprint is:<br />
-                SHA256:pEFh/7r5DdGBKfeRazecdzedcezfghsvBDeC7jIEpF5+Xulhc8 redaeskouni00@gmail.com<br />
+                SHA256:pEFh/7r5DdGBK***...***ulhc8 redaeskouni00@gmail.com<br />
                 The key's randomart image is:<br />
                 <pre style={{whiteSpace: "pre", fontFamily: "monospace"}}> {stylePreTag} </pre>
                 PS C:\Users\Dell{">"} <br /><br />
@@ -448,7 +448,7 @@ export default function Git(props){
                       <h4  className="title-h5">2 - لدي بالفعل مستودع آخر باسم (rv) يحتوي على تطبيق React</h4>
                         <img src={images.git35} alt="git" className="w-100" />
                       <div className="alert alert-primary mt-2"><b>بالترتيب التالي نستخدم وحدات فرعية لإضافة مستودع REACT <kbd>rv</kbd> إلى مستودع فارغ <kbd>rv-back</kbd></b></div>
-    <div className="alert bg-dark text-light" dir="trl">
+    <div className="alert bg-dark text-light overflowXauto" dir="trl">
     <pre>
 C:\Users\Dell\Desktop\env-rv-back\rvBack{">"} <span className="text-warning">git status</span><br />
 fatal: not a git repository (or any of the parent directories): .git<br />
@@ -497,7 +497,8 @@ branch 'main' set up to track 'origin/main'.<br />
                     <img src={images.git37} alt="git" className="w-100" />
                     <h4 className="title-h5">2 - مستودع باسم (rv) يحتوي على تطبيق React </h4>
                     <img src={images.git35} alt="git" className="w-100" />
-                    <div className="alert bg-dark text-light mt-3" dir="ltr">
+                    <div className="alert bg-dark text-light mt-3 overflowXauto" dir="ltr">
+                        <pre>
                         (env-rv-back) C:\Users\Dell\Desktop\env-rv-back\rvBack{">"} <span className="text-warning">git submodule add git@github.com:RedaFarissi/rv.git rv</span> <br />
                         Cloning into 'C:/Users/Dell/Desktop/env-rv-back/rvBack/rv'...<br />
                         Enter passphrase for key '/c/Users/Dell/.ssh/id_rsa':    &nbsp; &nbsp;  **************** <br />
@@ -540,6 +541,7 @@ branch 'main' set up to track 'origin/main'.<br />
                         8fd4f8b..e71f441  main -{">"} main<br />
                         <br />
                         (env-rv-back) C:\Users\Dell\Desktop\env-rv-back\rvBack{">"} <br />
+                        </pre>
                     </div>
                     <img src={images.git38} alt="git" className="w-100" />
                     <h5 className="title-h5"> تفصيل : </h5>

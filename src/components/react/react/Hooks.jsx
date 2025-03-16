@@ -34,7 +34,7 @@ export default function Hooks(){
         <p className="style_divv">
           نستخدم <b>this.state</b> عندما نعمل مع مكون الفئة <b>(Component class)</b>
         </p>
-        <h5 className="title-h5">1 - إنشاء حالة المكون (this.state) و إعطائه قيمة أولية </h5>
+        <h3 className="title-h3">1 - إنشاء حالة المكون (this.state) و إعطائه قيمة أولية </h3>
         <CodeHighlighter code={codes[7].this_state[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
         <Result title={'React App'} logo={react_logo} route="localhost:3000">
           <ul>
@@ -46,7 +46,7 @@ export default function Hooks(){
             </li>
           </ul>
         </Result>
-        <h5 className="title-h5">2 - تغيير القيمة (this.state) </h5>
+        <h3 className="title-h3">2 - تغيير القيمة (this.state) </h3>
         <CodeHighlighter code={codes[7].this_state[1]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/> 
         <Result title={'React App'} logo={react_logo} route="localhost:3000">
           <ThisState />

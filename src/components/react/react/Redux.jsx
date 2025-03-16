@@ -326,7 +326,7 @@ export default App;`} language="jsx" number={false} file_name="src / App.jsx"  a
     </Result>
     </article>
     <article id='example_4'>
-        <h5 className="title-h5"> مثال 4 : </h5>
+        <h2 className="title-h2"> مثال 4 : </h2>
         <ul><li>نُنشئ مُجلد <bdi>reducers/</bdi> في React-Redux لـ تجميع منطق إدارة الحالة في مكان واحد وفصل المهام، مما يُسهّل صيانة واختبار وتوسعة التحديثات عبر المكونات، مع الالتزام بالنمط المُنتظم لـ Redux. </li></ul>
         <CodeHighlighter code={`const initiallogoVisibility = {
     logoVisibility: false

@@ -43,7 +43,7 @@ export default function Introduction(){
             <p className="style_divv">
               في <b>React</b>، يشير <b>nvm</b> إلى <b>Node Version Manager</b>، وهي أداة تُستخدم لإدارة إصدارات <b>Node.js</b> المتعددة على جهازك. ومع ذلك، في سياق تطوير <b>React</b>، قد تشير إلى شيء آخر أو استخدام محدد لـ "nvm".
             </p>
-            <h5 className="title-h5">1 - تثبيت  nvm</h5>
+            <h3 className="title-h3">1 - تثبيت  nvm</h3>
             <p className="style_divv">
                 أولا عليك تثبيت <b>nvm</b>. يمكنك اتباع تعليمات التثبيت المتوفرة في مستودع <a className="text-success" href="https://github.com/coreybutler/nvm-windows/releases">GitHub </a>.
             </p>
@@ -53,20 +53,20 @@ export default function Introduction(){
             <ul><li>حدد الإصدارات المتوفرة من <b>Node.js</b> التي يمكنك تثبيتها باستخدام <b>nvm</b></li></ul>
             <CodeCommand>nvm list available</CodeCommand>
             
-            <h5 className="title-h5">2 - قم بتثبيت إصدارات Node.js</h5>
+            <h3 className="title-h3">2 - قم بتثبيت إصدارات Node.js</h3>
             <p className="style_divv">
                 بمجرد تثبيت <b>nvm</b>، يمكنك استخدامه لتثبيت إصدارات مختلفة من <b>Node.js</b>. على سبيل المثال، لتثبيت الإصدار <b>12</b> من <b>Node.js</b>، يمكنك استخدام الأمر التالي:
                 <CodeCommand>nvm install 12</CodeCommand>
                 <CodeCommand>nvm install latest</CodeCommand>
                 يمكنك تثبيت إصدارات متعددة من <b>Node.js</b> باستخدام أوامر مماثلة.
             </p>
-            <h5 className="title-h5">3 - التبديل بين إصدارات Node.js</h5>
+            <h3 className="title-h3">3 - التبديل بين إصدارات Node.js</h3>
             <p className="style_divv">
                 يمكنك التبديل بسهولة بين إصدارات <b>Node.js</b> المثبتة باستخدام الأمر التالي:
                 <CodeCommand>nvm use 12</CodeCommand>
                 يؤدي هذا إلى تعيين الإصدار <b>12</b> من <b>Node.js</b> باعتباره الإصدار النشط لجلستك الطرفية الحالية.
             </p>
-            <h5 className="title-h5">4 - قم بتعيين إصدار Node.js الافتراضي</h5>
+            <h3 className="title-h3">4 - قم بتعيين إصدار Node.js الافتراضي</h3>
             <p className="style_divv">
                 إذا كنت تريد تعيين إصدار <b>Node.js</b> افتراضي لجلسات العمل الطرفية الجديدة، فيمكنك استخدام:
                 <CodeCommand>nvm alias default 15</CodeCommand>
@@ -74,11 +74,11 @@ export default function Introduction(){
         </article>
         <article id="Verify_required_installations">
             <h2 className="title-h2">5 - التحقق من التثبيتات المطلوبة</h2>
-            <h5 className="title-h5">فحص إصدار Node.js</h5>
+            <h3 className="title-h3">فحص إصدار Node.js</h3>
             <CodeCommand>node -v</CodeCommand>
-            <h5 className="title-h5">فحص إصدار npm</h5>
+            <h3 className="title-h3">فحص إصدار npm</h3>
             <CodeCommand>npm -v</CodeCommand>
-            <h5 className="title-h5">فحص إصدار npx</h5>
+            <h3 className="title-h3">فحص إصدار npx</h3>
             <CodeCommand>npx -v</CodeCommand>
         </article>
         <article id="ES6">
@@ -86,21 +86,21 @@ export default function Introduction(){
             <p className="style_divv">
               <b>ECMAScript 6</b> (المعروفة أيضًا بـ ES6) هي إصدار جديد من لغة <b>JavaScript</b> تم نشره في عام 2015. وهي تأتي مع العديد من الميزات الجديدة والتحسينات التي تهدف إلى تحسين القراءة والكتابة للمطورين. إليك تعريف بسيط وأمثلة لبعض ميزات <b>ES6</b>:
             </p>
-            <h5 className="title-h5">class</h5>
+            <h3 className="title-h3">class</h3>
             <CodeHighlighter  code={codes[0].ES6.class[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
-            <h5 className="title-h5">تعريف المتغيرات بـ let و const</h5>
+            <h3 className="title-h3">تعريف المتغيرات بـ let و const</h3>
             <CodeHighlighter  code={codes[0].ES6.variable[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
-            <h5 className="title-h5">الدوال السهمية (Arrow Functions)</h5>
+            <h3 className="title-h3">الدوال السهمية (Arrow Functions)</h3>
             <CodeHighlighter  code={codes[0].ES6.arrow[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
-            <h5 className="title-h5">التفكيك (Destructuring)</h5>
+            <h3 className="title-h3">التفكيك (Destructuring)</h3>
             <CodeHighlighter  code={codes[0].ES6.destructuring[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
-            <h5 className="title-h5">(Modules)</h5>
+            <h3 className="title-h3">(Modules)</h3>
             <CodeHighlighter  code={codes[0].ES6.modules[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
-            <h5 className="title-h5">تعيين قيمة افتراضية لمتغير (Default Parameter)</h5>
+            <h3 className="title-h3">تعيين قيمة افتراضية لمتغير (Default Parameter)</h3>
             <CodeHighlighter  code={codes[0].ES6.default_parameter[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
-            <h5 className="title-h5">عامل الانتشار (Spread Operator):</h5>
+            <h3 className="title-h3">عامل الانتشار (Spread Operator):</h3>
             <CodeHighlighter  code={codes[0].ES6.spread_operator[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
-            <h5 className="title-h5">التكرار على الكائنات (Object Iteration)</h5>
+            <h3 className="title-h3">التكرار على الكائنات (Object Iteration)</h3>
             <CodeHighlighter  code={codes[0].ES6.object_iteration[0]} language="jsx" number={false} addclassName="mt-3 mb-3" copie={true}/>
         </article>
         <article id="Create_React_App">
@@ -113,10 +113,10 @@ export default function Introduction(){
             <h2 className="title-h2"> 8 - تشغيل تطبيق App</h2>
             <CodeCommand>cd myproject</CodeCommand>
             <CodeCommand>npm start</CodeCommand>
-            <h5 className="title-h5">كنتيجة، تم تنزيل هذا الملف على npm وهو قيد الاستخدام بالفعل</h5> 
-            <img src={images.react1} alt="react"  className="img"/>
-            <img src={images.react2} alt="react"  className="img"/>
-            <img src={images.react3} alt="react"  className="img"/>
+            <h3 className="title-h3">كنتيجة، تم تنزيل هذا الملف على npm وهو قيد الاستخدام بالفعل</h3> 
+            <img src={images.react1} alt="react"  className="img" />
+            <img src={images.react2} alt="react"  className="img" />
+            <img src={images.react3} alt="react"  className="img" />
         </article>
     </div>
         )
