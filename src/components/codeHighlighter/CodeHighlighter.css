@@ -7,3 +7,10 @@ pre>code{
 .undefined {
     border-radius: 50%;
 }
+
+/* Media query for screens less than 500px */
+@media (max-width: 430px) {
+    pre > code {
+        font-size: 15px !important;
+    }
+}

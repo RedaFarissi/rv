@@ -5,6 +5,7 @@ import Footer from "../footer/Footer"
 import { useEffect } from "react";
 import { useDispatch } from 'react-redux';
 import { useCustomSqlList } from "../../custom/pathCustoms";
+import "./Mysql.sass";
 
 export default function Sql(props){
     const dispatch = useDispatch();
@@ -450,6 +451,7 @@ INSERT INTO student (id, nom, ville) values (2000003, 'louae', 'sidi hya');
 INSERT INTO student (id, nom, ville) values (2000004, 'manal', 'taroudant');
 
 SELECT CONCAT("Name is : " , nom , ' ville is : ', ville) AS info FROM student;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+            
             <table dir="ltr" className="table"> 
                 <thead className="bg-secondary">
                     <tr> <th>info </th> </tr>
@@ -486,15 +488,21 @@ INSERT INTO users VALUES ( Null , "Name6 ..." , "Name6@gmail.com");
 INSERT INTO users VALUES ( Null , "Name7 ..." , "Name7@gmail.com");
 
 SELECT 
-	user_id ,
-	10 + user_id AS add_10 ,
-    10 - user_id AS subtraction_10 ,
-    10 * user_id AS multiplication_10  ,
-    10 / user_id AS division_10 
+	user_id      As user  ,
+	10 + user_id AS add ,
+    10 - user_id AS sub ,
+    10 * user_id AS mul  ,
+    10 / user_id AS div 
 FROM users;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
-            <table dir="ltr" className="table"> 
-                <thead className="bg-secondary">
-                    <tr> <th>user_id</th> <th>add_10</th> <th>subtraction_10</th> <th>multiplication_10</th> <th>division_10</th> </tr>
+            <table dir="ltr" className="table w-100"> 
+                <thead className="bg-secondary overflowXauto">
+                    <tr> 
+                        <th>user</th> 
+                        <th>add</th> 
+                        <th>sub</th> 
+                        <th>mul</th> 
+                        <th>div</th> 
+                    </tr>
                 </thead>
                 <tbody>
                     <tr> <td className="text-start">1</td> <td className="text-start">11</td> <td className="text-start">9</td> <td className="text-start">10</td> <td className="text-start">10.0000</td> </tr>
@@ -608,14 +616,14 @@ ORDER BY column1 [ASC | DESC] ، column2 [ASC | DESC] ، ...;`} language="sql" a
         <CodeHighlighter  code={`USE my_database;
 -- Create the employees table
 CREATE TABLE employees (
-    employee_id INT PRIMARY KEY,
+    id INT PRIMARY KEY,
     first_name VARCHAR(255),
     last_name VARCHAR(255),
     age INT
 );
 
 -- Insert some sample data
-INSERT INTO employees (employee_id, first_name, last_name, age) VALUES
+INSERT INTO employees (id, first_name, last_name, age) VALUES
 (1, 'Reda', 'Eskouni', 30),
 (2, 'Adil', 'Eskouni', 25),
 (3, 'Mohamed', 'Eskouni', 35),
@@ -629,7 +637,7 @@ SELECT * FROM employees ORDER BY age DESC;`} language="sql" addclassName="mt-3 m
         <ul dir="ltr"><li><kbd>SELECT * FROM employees ORDER BY last_name ASC, age DESC;</kbd></li></ul>
         <table dir="ltr" className="table"> 
             <thead className="bg-secondary">
-                <tr> <th>employee_id</th> <th>first_name</th> <th>last_name</th> <th>age</th> </tr>
+                <tr> <th>id</th> <th>first_name</th> <th>last_name</th> <th>age</th> </tr>
             </thead>
             <tbody>
                 <tr> <td className="text-start">5</td> <td className="text-start">Mohsin</td> <td className="text-start">Brown</td> <td className="text-start">32</td> </tr>
@@ -642,7 +650,7 @@ SELECT * FROM employees ORDER BY age DESC;`} language="sql" addclassName="mt-3 m
         <ul dir="ltr"><li><kbd>SELECT * FROM employees ORDER BY last_name ASC ;</kbd></li></ul>
         <table dir="ltr" className="table"> 
             <thead className="bg-secondary">
-                <tr> <th>employee_id</th> <th>first_name</th> <th>last_name</th> <th>age</th> </tr>
+                <tr> <th>id</th> <th>first_name</th> <th>last_name</th> <th>age</th> </tr>
             </thead>
             <tbody>
                 <tr> <td className="text-start">5</td> <td className="text-start">Mohsin</td> <td className="text-start">Brown</td> <td className="text-start">32</td> </tr>
@@ -655,7 +663,7 @@ SELECT * FROM employees ORDER BY age DESC;`} language="sql" addclassName="mt-3 m
         <ul dir="ltr"><li><kbd>SELECT * FROM employees ORDER BY age DESC;</kbd></li></ul>
         <table dir="ltr" className="table"> 
             <thead className="bg-secondary">
-                <tr> <th>employee_id</th> <th>first_name</th> <th>last_name</th> <th>age</th> </tr>
+                <tr> <th>id</th> <th>first_name</th> <th>last_name</th> <th>age</th> </tr>
             </thead>
             <tbody>
                 <tr> <td className="text-start">3</td> <td className="text-start">Mohamed</td> <td className="text-start">Eskouni</td> <td className="text-start">35</td> </tr>
@@ -742,41 +750,41 @@ DROP TABLE IF EXISTS employees2 ;
 
 -- Create employees1 table
 CREATE TABLE employees1 (
-    employee_id INT PRIMARY KEY,
-    first_name VARCHAR(255),
-    last_name VARCHAR(255),
+    id INT PRIMARY KEY,
+    f_name VARCHAR(255),
+    l_name VARCHAR(255),
     department VARCHAR(50)
 );
 
 -- Insert some sample data into employees1
-INSERT INTO employees1 (employee_id, first_name, last_name, department) VALUES
+INSERT INTO employees1 (id, f_name, l_name, department) VALUES
 (1, 'Reda', 'Eskouni', 'HR'),
 (2, 'Reda', 'Thami', 'IT'),
 (3, 'Amal', 'Jhison', 'Finance');
 
 -- Create employees2 table
 CREATE TABLE employees2 (
-    employee_id INT PRIMARY KEY,
-    first_name VARCHAR(255),
-    last_name VARCHAR(255),
+    id INT PRIMARY KEY,
+    f_name VARCHAR(255),
+    l_name VARCHAR(255),
     department VARCHAR(50)
 );
 
 -- Insert some sample data into employees2
-INSERT INTO employees2 (employee_id, first_name, last_name, department) VALUES
+INSERT INTO employees2 (id, f_name, l_name, department) VALUES
 (4, 'Adil', 'Davis', 'IT'),
 (5, 'Malak', 'Brown', 'Marketing');
 
 
 -- Merge data from employees1 and employees2 (remove duplicates)
-SELECT employee_id, first_name, last_name, department
+SELECT id, f_name, l_name, department
 FROM employees1
 UNION
-SELECT employee_id, first_name, last_name, department
+SELECT id, f_name, l_name, department
 FROM employees2;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
         <table dir="ltr" className="table"> 
             <thead className="bg-secondary">
-                <tr> <th>employee_id</th> <th>first_name</th> <th>last_name</th> <th>department</th> </tr>
+                <tr> <th>id</th> <th>f_name</th> <th>l_name</th> <th>department</th> </tr>
             </thead>
             <tbody>
                 <tr> <td className="text-start">1</td> <td className="text-start">Reda</td>  <td className="text-start">Eskouni</td> <td className="text-start">HR</td> </tr>
