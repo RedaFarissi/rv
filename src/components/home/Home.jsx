@@ -63,9 +63,7 @@ export default function Home(props){
   const cards = languages.map(e=> <HomeBox  link={e.link}  h3={e.h3}  img={e.img}  p={e.p} /> )
     
   return(
-  <>
     <section onClick={()=>{ dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }) }}>
-
         <main className="main-home d-flex justify-content-center align-items-center flex-wrap" dir="ltr" >
             {cards}
         </main>
@@ -73,6 +71,5 @@ export default function Home(props){
             blockChildStyle={{width: "90%" , margin:"auto"}}
         />
     </section>
-  </>
     )
 }

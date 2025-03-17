@@ -10,7 +10,9 @@ import {
 
 export default function Header(props){ 
     const navigate = useNavigate()
+    
     const searchPhone = useRef(null);
+    
     const openSearchPhone = (event)=>{ 
         event.stopPropagation();
         const divElement = searchPhone.current;
@@ -20,6 +22,7 @@ export default function Header(props){
         const divElement = searchPhone.current;
         divElement.style.display= "none"
     }
+
     const divRef = useRef(null);
     const location = useLocation();
     
@@ -312,8 +315,7 @@ export default function Header(props){
 >
     <div className="header-main">
         <div className="container-h">
-            <div>
-
+            <div className="d-flex align-items-center">
                 { 
                     ( localStorage.getItem('auth_token') === null ) ?
                     <Link className="text-light ms-4 me-4" to='/login'> 
