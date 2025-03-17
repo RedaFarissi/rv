@@ -3,9 +3,8 @@ import { CodeHighlighter ,  ResultConfirm} from "../../../path";
 import { useState } from "react";
 
 export default function Confirm(){
-    const [displayConfirm ,setDisplayConfirm] = useState(false)
-    const [resultConfirmValue ,setResultConfirmValue] = useState("")
-    
+    const [displayConfirm ,setDisplayConfirm] = useState(false);
+    const [resultConfirmValue ,setResultConfirmValue] = useState("");
 
     function click_button(){
         setDisplayConfirm(true)
@@ -18,8 +17,6 @@ export default function Confirm(){
         setDisplayConfirm(false)
         setResultConfirmValue(<span style={{color:'red'}}>You canceled</span>)
     }
-
-    
 
     const codeExemple1= { 
     code: `     <button onclick="name_function()"> Click Here </button>

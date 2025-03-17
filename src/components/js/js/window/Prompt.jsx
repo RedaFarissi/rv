@@ -3,13 +3,13 @@ import { CodeHighlighter ,  ResultPrompt} from "../../../path";
 import { useRef, useState } from "react";
 
 export default function Prompt(){
-    const exempleRefPrompt = useRef()
-    const [displayPrompt ,setDisplayPrompt] = useState(false)
-    const [valueInput ,setValueInput] = useState("")
-    const [resultPromptValue ,setResultPromptValue] = useState("")
-    function inputChange(){
-        setValueInput(exempleRefPrompt.current.value)
-    }
+    const exempleRefPrompt = useRef();
+    const [displayPrompt ,setDisplayPrompt] = useState(false);
+    const [valueInput ,setValueInput] = useState("");
+    const [resultPromptValue ,setResultPromptValue] = useState("");
+
+    function inputChange(){   setValueInput(exempleRefPrompt.current.value)  }
+
     function switchFunction(text){
         text = text.toUpperCase();
         switch(text) {
@@ -20,16 +20,14 @@ export default function Prompt(){
           }
         return text;
     }
-    function click_button(){
-        setDisplayPrompt(true)
-    }
+    function click_button(){  setDisplayPrompt(true)  }
     function click_on_ok(){
-        setDisplayPrompt(false)
-        setResultPromptValue(switchFunction(valueInput))
+        setDisplayPrompt(false);
+        setResultPromptValue(switchFunction(valueInput));
     }
     function click_on_cancel(){
-        setDisplayPrompt(false)
-        setResultPromptValue("")
+        setDisplayPrompt(false);
+        setResultPromptValue("");
     }
 
     const codeExemple1= { 

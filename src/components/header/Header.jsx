@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import {
     useCustomHtmlList , useCustomCssList , useCustomJsList , useCustomSqlList , useCustomPythonList ,  
     useCustomDjangoList ,useCustomDjangoRestList, useCustomPhpList , useCustomReactList , useCustomLaravelList , 
-    useCustomGitList , useCustomCmdList ,  useCustomScroolTo0
+    useCustomGitList , useCustomCmdList ,  useCustomScroolTo0 , 
 } from "../../custom/pathCustoms";
 
 export default function Header(props){ 
@@ -22,7 +22,7 @@ export default function Header(props){
         const divElement = searchPhone.current;
         divElement.style.display= "none"
     }
-
+    
     const divRef = useRef(null);
     const location = useLocation();
     

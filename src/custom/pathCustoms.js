@@ -20,8 +20,6 @@ export {default as useCustomScroolTo0}  from './customScroolTo0/useCustomScroolT
 
 export {default as useCustomClickMenuHeader}  from './customClickMenuHeader/useCustomClickMenuHeader';
 
-// export {default as useCustomOpenSearchPhone}  from './customSearchPhone/useCustomOpenSearchPhone';
-// export {default as useCustomCloseSearchPhone}  from './customSearchPhone/useCustomCloseSearchPhone';
 
 // export {default as }  from './';
 
