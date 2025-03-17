@@ -8,14 +8,19 @@ import {
 } from './pathHtml.js';
 import { useDispatch } from 'react-redux';
 import { useCustomScroolTo0 , useCustomHtmlList } from "../../custom/pathCustoms";
+import { useEffect, useRef } from "react";
 
 
 export default function Html(props){  
     const dispatch = useDispatch();
-    useCustomScroolTo0();
+    const AsideRef = useRef();
     
+    useCustomScroolTo0();
     const [html_list] = useCustomHtmlList();
 
+    useEffect(() => {
+        AsideRef.current.scrollTop = localStorage.getItem("html_aside") || 0;
+    }, []);
 
     const arrays = html_list.map(e => <li className="list-group-item">
         <Link  to={`/html/${e.toLowerCase().replace(/\s/g, '-')}`}  onClick={useCustomScroolTo0} >
@@ -28,11 +33,10 @@ export default function Html(props){
     <>
     <main onClick={(event) => {
             props.clickMenuHeader(event,false);
-            //props.closeSearchPhone();
             dispatch({ type: 'FALSE_VISIBILTY_PROFILE' });
         }}
     >
-        <aside className="aside">
+        <aside className="aside"  onScroll={()=>{ localStorage.setItem("html_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
             <ul className="list-group m-0">
                 {arrays}
             </ul>

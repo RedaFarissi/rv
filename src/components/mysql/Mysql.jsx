@@ -2,13 +2,15 @@ import { useCustoScrollYAdd } from "../../custom/pathCustoms";
 import images  from "./imagesMysql"
 import { CodeHighlighter  } from "../path";
 import Footer from "../footer/Footer"
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useDispatch } from 'react-redux';
 import { useCustomSqlList } from "../../custom/pathCustoms";
 import "./Mysql.sass";
 
 export default function Sql(props){
     const dispatch = useDispatch();
+    const AsideRef = useRef();
+    
     const [sql_list] = useCustomSqlList();
     
     const arrays = sql_list.map(e => <li className="list-group-item">
@@ -17,7 +19,10 @@ export default function Sql(props){
         </a>
     </li>)
     
-    
+    useEffect(() => {
+        AsideRef.current.scrollTop = localStorage.getItem("php_aside") || 0;
+    }, []);
+
     // Scroll to the element with the hash on page load or when the hash changes
     useEffect(() => {
         if (window.location.hash) {
@@ -35,10 +40,10 @@ return(
 <main onClick={ 
     (event)=>{ 
         props.clickMenuHeader(event, false); 
-        // props.closeSearchPhone();
-        dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }) }}
+        dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }) 
+    }}
 >
-    <aside className="aside">
+    <aside className="aside"  onScroll={()=>{ localStorage.setItem("sql_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
         <ul className="list-group m-0">
             {arrays}
         </ul>

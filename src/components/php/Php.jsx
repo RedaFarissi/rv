@@ -10,11 +10,18 @@ import {
 import xampp_logo from "../../assests/images/logo/xampp.jpg";
 import { useDispatch } from 'react-redux';
 import { useCustomScroolTo0 , useCustomPhpList } from "../../custom/pathCustoms";
+import { useEffect, useRef } from "react";
 
 export default function Php(props){    
     const dispatch = useDispatch();
-    useCustomScroolTo0();  
+    const AsideRef = useRef();
+
     const [php_list] = useCustomPhpList();
+    useCustomScroolTo0();  
+
+    useEffect(() => {
+        AsideRef.current.scrollTop = localStorage.getItem("php_aside") || 0;
+    }, []);
 
     const matrix = php_list.map( e =>(
         <dl>
@@ -37,10 +44,9 @@ export default function Php(props){
 <>
 <main onClick={ (event)=>{ 
     props.clickMenuHeader(event, false); 
-    // props.closeSearchPhone(); 
     dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }) }}
 >
-    <aside className="aside">
+    <aside className="aside" onScroll={()=>{ localStorage.setItem("php_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
         <ul className="list-group m-0">
             {matrix}
         </ul>

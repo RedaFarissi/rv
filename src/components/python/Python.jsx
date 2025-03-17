@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Routes, Route , Link} from "react-router-dom";
 import {
     Introduction,InstallPython,ExecutePythonInCmd,Indentation,PythonInVisualStudioCode,
@@ -13,10 +13,15 @@ import { useCustomScroolTo0 , useCustomPythonList} from "../../custom/pathCustom
 
 export default function Python(props){ 
     const dispatch = useDispatch();
-    useCustomScroolTo0();
-    const [python_list] = useCustomPythonList(); 
+    const AsideRef = useRef();
     
-
+    const [python_list] = useCustomPythonList(); 
+    useCustomScroolTo0();
+    
+    useEffect(() => {
+        AsideRef.current.scrollTop = localStorage.getItem("python_aside") || 0;
+    }, []);
+    
     const arr = python_list.map(e => <li className="list-group-item">
         <Link to={`/python/${e.toLowerCase().replace(/\s/g, '-')}`} className="p-2" 
             onClick={useCustomScroolTo0}
@@ -33,7 +38,7 @@ export default function Python(props){
             // props.closeSearchPhone(); 
             dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }); }}
     >
-        <aside className="aside">
+        <aside className="aside" onScroll={()=>{ localStorage.setItem("python_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
             <ul className="list-group m-0">
                 {arr}
             </ul>

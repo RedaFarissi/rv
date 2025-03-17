@@ -12,13 +12,19 @@ import {
 } from './pathCss.js';
 import { useDispatch } from 'react-redux';
 import { useCustomScroolTo0 , useCustomCssList} from "../../custom/pathCustoms";
+import { useEffect, useRef } from "react";
 
 
 export default function Css(props){
-    useCustomScroolTo0();
     const dispatch = useDispatch();
+    const AsideRef = useRef();
+
     const [css_list]  =  useCustomCssList();
-    
+    useCustomScroolTo0();
+
+    useEffect(() => {
+        AsideRef.current.scrollTop = localStorage.getItem("css_aside") || 0;
+    }, []);
 
     const arrays = css_list.map(e => <li className="list-group-item">
         <Link  to={`/css/${e.toLowerCase().replace(/\s/g, '-')}`} onClick={useCustomScroolTo0}>
@@ -35,7 +41,7 @@ export default function Css(props){
                 dispatch({ type: 'FALSE_VISIBILTY_PROFILE' });
             }}
     >
-        <aside className="aside">
+        <aside className="aside" onScroll={()=>{ localStorage.setItem("css_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
             <ul className="list-group m-0">
                 {arrays}
             </ul>
