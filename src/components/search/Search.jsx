@@ -9,7 +9,6 @@ import { useCustomScroolTo0 } from "../../custom/pathCustoms";
 export default function Search(props){       
     const  searchResult = useSelector(state => state.search.result ); // Ensure "footer" matches the key in the store
     const dispatch = useDispatch();
-    
     useCustomScroolTo0();
     
     const links = searchResult.map( e => 

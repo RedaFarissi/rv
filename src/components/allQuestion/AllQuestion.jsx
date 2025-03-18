@@ -14,12 +14,10 @@ const AllQuestion = (props) => {
     const [questions, setQuestions] = useState([]); 
 
     useEffect(() => {
-       
-        
         const token = localStorage.getItem("auth_token");
         if (!token) {
             navigate("/login");
-            return;
+            //return;
         }
 
         async function getAllQuestion() {
@@ -62,13 +60,23 @@ const AllQuestion = (props) => {
 
     const allQuestions = questions.map((question) => (
         <Link to={`/question/${question.id}`} style={{ color: "white", textDecoration: "none" }}>
-            <div 
+            <div
                 key={question.id} 
-                style={{ color: "white", backgroundColor: "#171c2c"  }} 
-                className="alert mb-4 d-flex justify-content-between align-items-center"
+                className="card mb-3" 
+                style={{backgroundColor: "#171c2c",border: "1px solid #475065"}}
             >
-               <div> {question.title} </div>
-               <small dir="ltr"> {getFormattedDate(question.created_at)} </small>
+                <div className="card-header" style={{border: "1px solid #475065"}} > اسم المستخدم : {question.username}  </div>
+                <div className="card-body text-light">
+                  <h5 className="card-title">{question.title}</h5>
+                  <p className="card-text">{question.text}</p>
+                </div>
+                <div
+                    style={{border: "1px solid #475065"}}
+                    className="card-footer text-secondary bg-transparent d-flex justify-content-between"
+                > 
+                    <div> {question.language} </div>
+                    <div> {getFormattedDate(question.created_at)} </div>
+                </div>
             </div>
         </Link>
     ));
@@ -76,6 +84,7 @@ const AllQuestion = (props) => {
                     
     return (
         <div onClick={ ()=>{dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }) }}>
+
             <div style={{ marginTop: "200px", marginRight: "8%", marginLeft: "8%" }} className="d-flex justify-content-between">
                 <h2 className="font-bold f-family fs-4">أسئلة المستخدمين</h2>
                 <Link to="/add-question">

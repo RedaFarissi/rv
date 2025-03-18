@@ -1,5 +1,6 @@
 import images from "../../imagesJs"
 import { CodeHighlighter ,  Result , ResultConsole} from "../../../path";
+import { useCustoScrollYAdd  } from "../../../../custom/pathCustoms";
 
 export default function String(){
     const codeExemple1= { 

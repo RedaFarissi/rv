@@ -129,7 +129,7 @@ const MyPage = (props) => {
     
     const   myQuestions = yourQuestions.map(e=>
             <Link to={`/question/${e.id}`} style={{ color: "white", textDecoration: "none" }}>
-                <section  className="container text-end d-flex justify-content-between align-items-center"> 
+                <section  className="my-page-question alert d-flex justify-content-between align-items-center"> 
                     <div>{e.title} </div>
                     <small dir="ltr">{getFormattedDate(e.created_at)}</small>
                 </section> 
@@ -137,9 +137,15 @@ const MyPage = (props) => {
             )
     console.log(yourQuestions)
     return (
-<div onClick={()=>{dispatch({ type: 'FALSE_VISIBILTY_PROFILE' })}}>
-    <h4 className="font-bold f-family col-sm-12" style={{marginTop: "200px", marginRight: "9%"}}>ملف تعريف المستخدم</h4>
-    <section  className="container text-end">
+<div 
+    style={{marginTop: "200px"}}
+    onClick={()=>{dispatch({ type: 'FALSE_VISIBILTY_PROFILE' })}}
+>
+    <h4 
+        className="font-bold f-family col-sm-12" 
+        style={{marginRight: "9%"}}
+    > ملف تعريف المستخدم </h4>
+    <section  className="alert mt-4 my-page-question" >
         <div className="my-page-child row" style={{width: "90%" , margin: "auto"}}>
             <i className="fa-solid fa-address-card col-sm-3 me-4" style={{fontSize:"120px"}}></i>
             <div  className="col-sm-3">
@@ -150,43 +156,45 @@ const MyPage = (props) => {
 
     <br />
     
-    <h4 className="font-bold mb-4 f-family" style={{marginRight: "9%"}}>تغيير كلمة المرور</h4>
-    <section  className="container text-end">
+    <h4 
+        className="font-bold mb-4 f-family" 
+        style={{marginRight: "9%"}}
+    > تغيير كلمة المرور </h4>
+    <section className="alert mt-4 my-page-question">
         <div className="my-page-parent" style={{width: "90%" , margin: "auto"}}>
-            <div className="my-page-child">
-            <form onSubmit={handlePasswordChange} className="mt-2 row">
-        
-                  <strong className="col-sm-3 mt-3">  كلمة المرور الحالية : </strong>
-                  <input
-                      type="password"    value={oldPassword} 
-                      onChange={(e) => setOldPassword(e.target.value)} className="block w-full p-2 border rounded mt-1 col-sm-5"
-                      required
-                  />
-                  <div className="col-sm-3 mt-3">  </div>
+            <div className="my-page-child pt-4">
+                <form onSubmit={handlePasswordChange} className="mt-2 row">
+                      <strong className="col-sm-3 mt-3">  كلمة المرور الحالية : </strong>
+                      <input
+                          type="password"    value={oldPassword} 
+                          onChange={(e) => setOldPassword(e.target.value)} className="block w-full p-2 border rounded mt-1 col-sm-5"
+                          required
+                      />
+                      <div className="col-sm-3 mt-3">  </div>
 
-                  <strong className="col-sm-3 mt-3">كلمة المرور الجديدة :</strong> 
-                  <input
-                      type="password"    value={newPassword}   
-                      onChange={(e) => setNewPassword(e.target.value)} className="block w-full p-2 border rounded mt-2 col-sm-5"
-                      required
-                  />
-                  <div className="col-sm-3 mt-3">  </div>
+                      <strong className="col-sm-3 mt-3">كلمة المرور الجديدة :</strong> 
+                      <input
+                          type="password"    value={newPassword}   
+                          onChange={(e) => setNewPassword(e.target.value)} className="block w-full p-2 border rounded mt-2 col-sm-5"
+                          required
+                      />
+                      <div className="col-sm-3 mt-3">  </div>
 
-                  <strong className="col-sm-3 mt-3">تأكيد كلمة المرور الجديدة :</strong>
-                  <input
-                      type="password"    value={confirmPassword}   
-                      onChange={(e) => setConfirmPassword(e.target.value)}  className="block w-full p-2 border rounded mt-2 col-sm-5"
-                      required
-                  />
-                  <div className="col-sm-3 mt-3">  </div>
-                  <div className="col-sm-3 mt-3">  </div>
-                  <button type="submit" className="btn btn-outline-success mt-2 col-sm-5" >  تحديث كلمة المرور  </button>
-            </form>
-            <div className="text-center mt-4">
-                {message && <p className="mt-2 text-red-500">{message}</p>}
+                      <strong className="col-sm-3 mt-3">تأكيد كلمة المرور الجديدة :</strong>
+                      <input
+                          type="password"    value={confirmPassword}   
+                          onChange={(e) => setConfirmPassword(e.target.value)}  className="block w-full p-2 border rounded mt-2 col-sm-5"
+                          required
+                      />
+                      <div className="col-sm-3 mt-3">  </div>
+                      <div className="col-sm-3 mt-3">  </div>
+                      <button type="submit" className="btn btn-outline-primary mt-2 col-sm-5" >  تحديث كلمة المرور  </button>
+                </form>
+                <div className="text-center mt-4">
+                    {message && <p className="mt-2 text-red-500">{message}</p>}
+                </div>
             </div>
         </div>
-      </div>
     </section>
 
     <br /><br />

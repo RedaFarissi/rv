@@ -1,10 +1,9 @@
-import { useCustoScrollYAdd } from "../../custom/pathCustoms";
+import { useCustomSqlList , useCustoScrollYAdd } from "../../custom/pathCustoms";
 import images  from "./imagesMysql"
 import { CodeHighlighter  } from "../path";
 import Footer from "../footer/Footer"
 import { useEffect, useRef } from "react";
 import { useDispatch } from 'react-redux';
-import { useCustomSqlList } from "../../custom/pathCustoms";
 import "./Mysql.sass";
 
 export default function Sql(props){
@@ -43,7 +42,7 @@ return(
         dispatch({ type: 'FALSE_VISIBILTY_PROFILE' }) 
     }}
 >
-    <aside className="aside"  onScroll={()=>{ localStorage.setItem("sql_aside",AsideRef.current.scrollTop) }} ref={AsideRef}>
+    <aside className="aside"  onScroll={()=>{ localStorage.setItem("sql_aside", AsideRef.current.scrollTop) }} ref={AsideRef}>
         <ul className="list-group m-0">
             {arrays}
         </ul>
@@ -1371,8 +1370,8 @@ VALUES (1, 'Product A', 120),
 
 -- Run the query to retrieve stock status
 SELECT
-    product_name,
-    quantity_in_stock,
+    product_name AS p_name ,
+    quantity_in_stock AS stock,
     CASE
         WHEN quantity_in_stock > 100 THEN 'In Stock'
         WHEN quantity_in_stock > 0 THEN 'Low Stock'
@@ -1382,7 +1381,7 @@ FROM
     products;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
         <table dir="ltr" className="table"> 
             <thead className="bg-secondary">
-                <tr> <th>product_name</th>  <th>quantity_in_stock</th> <th>stock_status</th> </tr>
+                <tr> <th>p_name</th>  <th>stock</th> <th>stock_status</th> </tr>
             </thead>
             <tbody>
                 <tr> <td className="text-start">Product A</td>  <td className="text-start"> 120 </td> <td className="text-start">In Stock</td> </tr>
@@ -1423,26 +1422,34 @@ CREATE TABLE user_profile (
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 -- Insert data into the user table
-INSERT INTO users (user_id, username) VALUES
+INSERT INTO users 
+    (user_id, username) 
+VALUES
     (1, 'reda-eskouni'),
     (2, 'kamal-el');
 
 -- Insert data into the user_profile table
-INSERT INTO user_profile (profile_id, user_id, full_name, email) VALUES
-    (101, 1, 'Reda Eskouni', 'john.doe@example.com'),
-    (102, 2, 'Kamal EL', 'jane.smith@example.com');
+INSERT INTO user_profile 
+    (profile_id, user_id, full_name, email) 
+VALUES
+    (101, 1, 'Reda Eskouni', 'name1@example.com'),
+    (102, 2, 'Kamal EL', 'name2@example.com');
     
     
-SELECT u.user_id, u.username, up.full_name, up.email
+SELECT 
+    u.user_id, 
+    u.username, 
+    up.full_name, 
+    up.email
 FROM users u JOIN user_profile up 
-ON u.user_id = up.user_id;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
+ON u.user_id = up.user_id;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
         <table dir="ltr" className="table"> 
             <thead className="bg-secondary">
                 <tr> <th> user_id </th>  <th>username</th> <th>full_name</th> <th>email</th> </tr>
             </thead>
             <tbody>
-                <tr> <td className="text-start">1</td> <td className="text-start">reda-eskouni</td> <td className="text-start">Reda Eskouni</td>  <td className="text-start">john.doe@example.com</td> </tr>
-                <tr> <td className="text-start">2</td> <td className="text-start">kamal-el</td> <td className="text-start">Kamal EL</td> <td className="text-start">jane.smith@example.com</td> </tr>
+                <tr> <td className="text-start">1</td> <td className="text-start">reda-eskouni</td> <td className="text-start">Reda Eskouni</td>  <td className="text-start">name1@example.com</td> </tr>
+                <tr> <td className="text-start">2</td> <td className="text-start">kamal-el</td> <td className="text-start">Kamal EL</td> <td className="text-start">name2@example.com</td> </tr>
             </tbody>
         </table>
         <h3 className="title-h3">2 - علاقة واحد إلى العديد </h3>
@@ -1485,7 +1492,7 @@ FROM employee e JOIN department d
 ON e.department_id = d.department_id;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>
         <table dir="ltr" className="table"> 
             <thead className="bg-secondary">
-                <tr> <th>employee_id</th>  <th>employee_name</th> <th>department_name</th>  </tr>
+                <tr> <th>employee _id</th>  <th>employee _name</th> <th>department _name</th>  </tr>
             </thead>
             <tbody>
                 <tr> <td className="text-start">101</td> <td className="text-start">Reda Eskouni</td> <td className="text-start">developer</td> </tr>
@@ -1548,16 +1555,16 @@ INSERT INTO enrollment (enrollment_id, student_id, course_id, enrollment_details
 
 -- Retrieve enrollment information with student and course details
 SELECT 
-    e.enrollment_id AS "enrollment ID",
-    s.student_name AS "Student Name",
-    c.course_name AS "Course Name",
+    e.enrollment_id AS "ID",
+    s.student_name AS "Student",
+    c.course_name AS "Course",
     e.enrollment_details AS "Details"
 FROM  enrollment e JOIN student s 
 ON e.student_id = s.student_id JOIN course c 
 ON e.course_id = c.course_id;`} language="sql" addclassName="mt-3 mb-3" copie={true}/>   
         <table dir="ltr" className="table"> 
-            <thead className="bg-secondary">
-                <tr> <th>enrollment ID</th>  <th>Student Name</th> <th>Course Name</th> <th>Details</th> </tr>
+            <thead className="bg-secondary overflowXauto">
+                <tr> <th>ID</th>  <th>Student</th> <th>Course</th> <th>Details</th> </tr>
             </thead>
             <tbody>
                 <tr> <td className="text-start">1001</td> <td className="text-start">Reda Eskouni</td> <td className="text-start">Mathematics</td> <td className="text-start">Fall 2023</td> </tr>

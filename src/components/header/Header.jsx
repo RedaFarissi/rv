@@ -30,7 +30,7 @@ export default function Header(props){
     const  isVisibleProfile = useSelector(state => state.boxProfile.isVisibleProfile );
     
     //**********************************SEARCH  ***********************************//
-    const  searchTitle = useSelector(state => state.search.title ); 
+    const  searchTitle = useSelector( state => state.search.title ); 
     const [html_list] = useCustomHtmlList();
     const [css_list]  =  useCustomCssList();
     const [js_matrix] = useCustomJsList();
@@ -120,7 +120,10 @@ export default function Header(props){
                     js_matrix.forEach((category) => {
                         category.forEach((value) => {
                             if (includesSearchTerm(value)) {
-                                matchingValues.push({ route: `/js/${value.toLowerCase().replace(/\s/g, '-')}`, value: formatResult("JS", value) });
+                                matchingValues.push({ 
+                                    route: `/js/${value.toLowerCase().replace(/\s/g, '-')}`, 
+                                    value: formatResult("JS", value) 
+                                });
                             }
                         });
                     });break;
@@ -271,7 +274,7 @@ export default function Header(props){
     
     const checkAboutRouteHome =()=>{
         const currentPath = location.pathname;        
-        return ( currentPath === "/" || currentPath === "" || currentPath === "/login" ) ? true : false 
+        return ( currentPath === "/" || currentPath === "" || currentPath === "/login" || currentPath === "/paypal-me" || currentPath === "/add-question"  || currentPath === "/all-question" || currentPath === "/my-page" || currentPath ===  "/report-error") ? true : false 
     }
 
     const links = programing.map(e=> 
@@ -331,11 +334,11 @@ export default function Header(props){
                         </div>
                     </>
                 }
-                <Link to='/' className="text-decoration-none text-light ms-4">  
+                <Link to='/' className="text-decoration-none text-light ms-4 me-4">  
                     <i className="fa-solid fa-house fs-5 text-light p-2"></i>
                 </Link> 
             </div>
-          
+            
             <div className="header-search-container">  
                 <form onSubmit={handleSubmitSearch} >
                         <input type="text" name="search" className="search-field"
@@ -352,7 +355,7 @@ export default function Header(props){
                     <i onClick={(event)=>{ props.clickMenuHeader(event , true) }} className={`menu-icon fa-solid fa-bars`}></i>
                 </div>
 
-                <Link  to='/paypal-payment'>
+                <Link  to='/paypal-me'>
                     <i className="fa-brands fa-paypal btn btn-outline-light"></i>
                 </Link>
             </div>
@@ -382,7 +385,7 @@ export default function Header(props){
             </Link>
         }
                                  
-        <Link to='/paypal-payment' className="icons-header-phone">
+        <Link to='/paypal-me' className="icons-header-phone">
             <i className="fa-brands fa-paypal"></i>
         </Link>
 

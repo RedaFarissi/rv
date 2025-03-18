@@ -4,9 +4,9 @@ import { Footer } from "../path";
 import { useCustomScroolTo0  } from "../../custom/pathCustoms";
 
 const PayPalPayment = (props) => {
+
   useCustomScroolTo0();
 
-  
   return (
 <>
     <section className="PayPalPayment-section" onClick={props.boxProfileStyle}>

@@ -28,7 +28,7 @@ function App() {
             <Route path='/laravel/*' element={<Laravel clickMenuHeader={useCustomClickMenuHeader} />} />
             <Route path='/powerShell' element={<Cmd    clickMenuHeader={useCustomClickMenuHeader} />} />
             <Route path='/git' element={<Git           clickMenuHeader={useCustomClickMenuHeader}  />} />
-            <Route path='/paypal-payment' element={<PayPalPayment  />} />
+            <Route path='/paypal-me' element={<PayPalPayment  />} />
             <Route path='/login' element={<Login  url={url} />}  />
             <Route path='/register' element={<CreateAccount url={url}  />} />
             <Route path='/my-page' element={<MyPage url={url}  />} />
