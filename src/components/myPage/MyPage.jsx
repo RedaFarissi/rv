@@ -93,8 +93,8 @@ const MyPage = (props) => {
         fetchMyQuestions();
     }, [navigate]);
 
-    if (loading) return <div className="container" style={{marginTop: "270px"}} > تحميل معلومات المستخدم ...</div>;
-    if (error) return <div className="container" style={{marginTop: "270px"}} >خطأ : {error}</div>;
+    if (loading) return <div className="container fs-3" style={{marginTop: "270px"}} > تحميل معلومات المستخدم ...</div>;
+    if (error) return <div className="container fs-3" style={{marginTop: "270px"}} >فشل تحميل أسئلتك</div>;
 
     const handlePasswordChange = async (e) => {
         e.preventDefault();  

@@ -44,7 +44,7 @@ export default function ResultPrompt(props){
                     </div>
               </div>
             </div>
-            <div className={`add-style-body  ${props.styleAdd}`}>
+            <div className={`add-style-body ${props.styleAdd}`}>
                 <div dir="ltr" className={`alert window-prompt bg-secondary text-light ${(props.displayPrompt)?"d-block":"d-none"}`}>
                     <h6 className="text-center">This page says </h6>
                     <p className="text-center">{props.promptValue}</p>

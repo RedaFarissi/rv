@@ -5,7 +5,7 @@ export default function ResultAlert(props){
     
     return(
         <div className="style-result">
-            <div className="style-result-header overflowXauto">
+            <div className="style-result-header">
               <div className="style-result-header-1">
                     <div className="style-result-header-1-left">
                         <div className="result-header-1-tab"> 

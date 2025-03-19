@@ -42,7 +42,7 @@ export default function ScrollBehavior(props){
         </p>
         <div className="mital"> متال توضيحي تفاعلي  : </div> 
         <InteractivCss 
-            property="font-size" 
+            property="scroll-behavior" 
             value={selectedValue}
             classParent="css-font-size-ex3-parent"
             classChild="css-font-size-ex3"  
