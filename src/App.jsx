@@ -2,7 +2,7 @@ import "./App.sass";
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
 import { 
     Header , Home , Html , Css , Js , React , Mysql , Python , Django , DjangoRestFramework , Cmd ,  Git , Php , Laravel , Login ,
-    Search , CreateAccount , PayPalPayment , MyPage , ReportAnErrorUser , AllQuestion , AddQuestion , QuestionDetail , 
+    Search , CreateAccount , PayPalPayment , MyPage , ReportAnErrorUser , AllQuestion , AddQuestion , QuestionDetail 
 } from './components/path';
 import {  useCustomScrollToHash , useCustomResizeAside , useCustomClickMenuHeader } from "./custom/pathCustoms";
 

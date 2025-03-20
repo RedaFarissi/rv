@@ -19,7 +19,6 @@ const AllQuestion = (props) => {
             navigate("/login");
             //return;
         }
-
         async function getAllQuestion() {
             try {
                 const response = await axios.get(`${props.url}/question/all/`, {
@@ -39,7 +38,7 @@ const AllQuestion = (props) => {
     const getFormattedDate = (createdAt) => {
         const createdDate = new Date(createdAt);
         const now = new Date();
-        const diffMs = now - createdDate; // Difference in milliseconds
+        const diffMs = now - createdDate;               // Difference in milliseconds
         const diffSec = Math.floor(diffMs / 1000);
         const diffMin = Math.floor(diffSec / 60);
         const diffHrs = Math.floor(diffMin / 60);
@@ -59,7 +58,10 @@ const AllQuestion = (props) => {
     };
 
     const allQuestions = questions.map((question) => (
-        <Link to={`/question/${question.id}`} style={{ color: "white", textDecoration: "none" }}>
+        <Link 
+            to={`/question/${question.id}`} 
+            style={{ color: "white", textDecoration: "none" }} 
+        >
             <div
                 key={question.id} 
                 className="card mb-3" 

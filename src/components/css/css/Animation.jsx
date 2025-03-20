@@ -154,6 +154,7 @@ export default function Animation(props){
             <div class="css-animation-ex8" style="animation-timing-function: ease-in-out;"> ease-in-out </div>
        </div>`
     }
+    
     const [selectedValue, setSelectedValue] = useState("normal");
     const resultRef = useRef()
     const inputRef = useRef()
@@ -322,7 +323,7 @@ export default function Animation(props){
         <div class="mital"> متال :</div>
         <CodeHighlighter file_name="index.html"code={codeExemple6.code} head={codeExemple6.head} language="html" is_html={true} title="CSS Animation" addClass="mt-3 mb-3" copie={true}/>
         <Result title='CSS Animation' logo={images.html_logo}  route="file:///C:/Users/SURFACE%20BOOK/Desktop/html/index.html">
-            <div className="css-animation-ex8-box">
+            <div className="css-animation-ex8-box" >
                <div class="css-animation-ex8" style={{animationTimingFunction:"linear"}}>  linear </div>
                <div class="css-animation-ex8" style={{animationTimingFunction:"ease"}}> ease </div>
                <div class="css-animation-ex8" style={{animationTimingFunction:"ease-in"}}> ease-in </div>
