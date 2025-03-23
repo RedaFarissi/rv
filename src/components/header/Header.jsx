@@ -380,9 +380,9 @@ export default function Header(props){
             <Link to='/login' className="icons-header-phone">
                 <i className={`fas fa-user`}></i>
             </Link> : 
-            <Link to='/my-page' className="icons-header-phone">
-                <i className={`fas fa-user`}></i>
-            </Link>
+            <div className="icons-header-phone">
+                <i  onClick={handleToggleProfile} className="fa-solid fa-user ms-4 me-4 p-2" style={{cursor: "pointer"}}></i>
+            </div>
         }
                                  
         <Link to='/paypal-me' className="icons-header-phone">
@@ -421,6 +421,14 @@ export default function Header(props){
             <i className="fa-solid fa-angle-left"></i>
         </button>
     </nav>
+
+
+    <div className="when-login-phone mt-4 border-bottom" dir="rtl" style={{ display: isVisibleProfile ? "block" : "none" }} >
+        <Link to="/my-page"> <i className="fa-solid fa-circle-user ms-2"></i> صفحتي </Link> <br />
+        <Link to="/all-question"> <i class="fa-solid fa-question ms-2"></i>  كل الأسئلة </Link> <br />
+        <Link to="/report-error"> <i className="fa-solid fa-bug ms-2"></i> إبلاغ عن خطأ</Link>  <br />
+        <button className="btn btn-outline-danger m-auto mb-5" onClick={logout}>  <i className="fa-solid fa-right-from-bracket ms-2"></i> تسجيل الخروج   </button> 
+    </div>
 
 </header>
 </>

@@ -83,7 +83,6 @@ return(
         </article>
         <article>
             <h2 className="title-h2" id="install-mysql"> 2 - تثبيت mysql على windows</h2>
-            <ul><li><a href='https://www.youtube.com/watch?v=5OdVJbNCSso' target="_blanck">أول 4 دقائق لتثبيت MYSQL</a></li></ul>
             <h3 className="title-h3">انتقل إلى الرابط <a href="https://www.mysql.com/" target="_blanck"> https://www.mysql.com/ </a> لتثبيت mysql : </h3>
             <img src={images.mysql_install1} className="w-100 mt-2" alt="exemple"/>
             <h3 className="title-h3"> انقر على DOWNLOADS</h3>
