@@ -1,6 +1,7 @@
 export {default as useCustomHtmlList}  from './customLanguagesTitle/useCustomHtmlList';
 export {default as useCustomCssList}  from './customLanguagesTitle/useCustomCssList';
 export {default as useCustomJsList}  from './customLanguagesTitle/useCustomJsList';
+export {default as useCustomTypescriptList}  from './customLanguagesTitle/useCustomTypescriptList';
 export {default as useCustomSqlList}  from './customLanguagesTitle/useCustomSqlList';
 export {default as useCustomPythonList}  from './customLanguagesTitle/useCustomPythonList';
 export {default as useCustomDjangoList}  from './customLanguagesTitle/useCustomDjangoList';

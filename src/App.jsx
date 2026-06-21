@@ -1,10 +1,12 @@
-import "./App.sass";
 import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
 import { 
-    Header , Home , Html , Css , Js , React , Mysql , Python , Django , DjangoRestFramework , Cmd ,  Git , Php , Laravel , Login ,
-    Search , CreateAccount , PayPalPayment , MyPage , ReportAnErrorUser , AllQuestion , AddQuestion , QuestionDetail 
+    Header , Home , Html , Css , Js , Typescript , React , Mysql , Python , Django , DjangoRestFramework , Cmd ,  
+    Git , Php , Laravel , Login ,Search , CreateAccount , PayPalPayment , MyPage , ReportAnErrorUser , AllQuestion , 
+    AddQuestion , QuestionDetail ,  
 } from './components/path';
 import {  useCustomScrollToHash , useCustomResizeAside , useCustomClickMenuHeader } from "./custom/pathCustoms";
+import "./App.sass";
+
 
 function App() {
     const url =  "http://localhost:8000" ;  
@@ -18,12 +20,12 @@ function App() {
             <Route path='/html/*' element={<Html       clickMenuHeader={useCustomClickMenuHeader} />} />
             <Route path='/css/*' element={<Css         clickMenuHeader={useCustomClickMenuHeader} />} />
             <Route path='/js/*' element={<Js           clickMenuHeader={useCustomClickMenuHeader} />} />
+            <Route path='/typescript/*' element={<Typescript clickMenuHeader={useCustomClickMenuHeader} />} />
             <Route path='/react/*' element={<React     clickMenuHeader={useCustomClickMenuHeader} />} />
             <Route path='/mysql/*' element={<Mysql     clickMenuHeader={useCustomClickMenuHeader} />} />
             <Route path='/python/*' element={<Python   clickMenuHeader={useCustomClickMenuHeader} />} />
             <Route path='/django/*' element={<Django   clickMenuHeader={useCustomClickMenuHeader} />} />
-            <Route path='/django-rest-framework/*' 
-                        element={<DjangoRestFramework  clickMenuHeader={useCustomClickMenuHeader} />} />
+            <Route path='/django-rest-framework/*' element={<DjangoRestFramework  clickMenuHeader={useCustomClickMenuHeader} />} />
             <Route path='/php/*' element={<Php         clickMenuHeader={useCustomClickMenuHeader} />}  />
             <Route path='/laravel/*' element={<Laravel clickMenuHeader={useCustomClickMenuHeader} />} />
             <Route path='/powerShell' element={<Cmd    clickMenuHeader={useCustomClickMenuHeader} />} />
@@ -41,6 +43,5 @@ function App() {
     </Router> 
     );
 }
-
 
 export default App;

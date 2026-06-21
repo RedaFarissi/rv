@@ -384,6 +384,7 @@ ModelName::truncate();`}  language="php" number={false} addclassName="mt-3 mb-3"
 
 namespace App\\Http\\Controllers;
 use Illuminate\\Http\\Request;
+use App\\Models\\Product;     #new
 
 class ControllerName extends Controller
 {

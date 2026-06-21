@@ -1,6 +1,7 @@
 import html_logo from '../assests/images/logo/html_logo.png'
 import css_logo from '../assests/images/logo/css_logo.png'
 import js_logo from '../assests/images/logo/js_logo.png'
+import typescript_logo from '../assests/images/typescript/typescript-logo.png'
 import react_logo from '../assests/images/logo/react_logo.svg'
 import vue_logo from '../assests/images/logo/vue_logo.png'
 import php_logo from '../assests/images/logo/php_logo.png'
@@ -14,7 +15,7 @@ import Django_REST from '../assests/images/logo/Django_REST.png'
 import PowerShell_logo from '../assests/images/logo/PowerShell_logo.png'
 
 const images = {
-    html_logo , css_logo , js_logo , react_logo, vue_logo, php_logo , laravel_logo , 
+    html_logo , css_logo , js_logo , typescript_logo ,  react_logo , vue_logo, php_logo , laravel_logo , 
     python_logo , django_logo, Django_REST , git_logo , powershell_log , mysql , PowerShell_logo ,
 }
 

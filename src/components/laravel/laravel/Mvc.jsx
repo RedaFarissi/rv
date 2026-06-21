@@ -131,11 +131,11 @@ Route::get('/route-name/{somthinhg}' , function( $somthinhg ){
               دالة <bdi><b>request()</b></bdi> في <b>Laravel</b> تُستخدم للوصول إلى قيم المتغيرات المرسلة في الطلب <b>HTTP</b>. يمكن استخدامها لاسترداد قيمة معينة مرسلة في الجسم <b>(body)</b> أو في الرأس <b>(header)</b> أو في الوسم <b>(tag)</b> الذي تم إرساله في الطلب.<br/>
               على سبيل المثال، إذا كان لديك طلب <b>POST</b> يحتوي على حقل يُسمى <b>"username"</b>، يمكنك استخدام <bdi><b>request('username')</b></bdi> لاسترداد قيمة هذا الحقل من الطلب.
          </p>
+         <div className="mital"> متال 1 : </div>
          <CodeHighlighter code={`Route::get('/store',function(){
     $variable = request('style') ;
     return '<h2>' . $variable . '</h2>' ;
 });`} file_name="example-app / routes / web.php" language="php" number={false} addclassName="mt-3 mb-3" copie={true}/>
-         <div className="mital"> متال 1 : </div>
          <Result title='Welcome' route="http://localhost:8000/store" url_change="?style=Reda%20Eskouni">
              Reda Eskouni
          </Result>

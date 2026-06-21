@@ -50,9 +50,17 @@ export default function Cmd(props){
 
                     في حين أن إصدارات أحدث من ويندوز قد قدمت PowerShell، وهو واجهة أوامر ولغة سكريبت أقوى، إلا أن واجهة الأوامر CMD تظل أداة أساسية لمديري النظام والمطورين والمستخدمين الذين يفضلون واجهة أوامر بسيطة للتفاعل مع نظام التشغيل ويندوز.<br/><br/>
 
-                    سنتعلم في هذه الفقرة كل الأوامر الأساسية التي تحتاجها لبدء إستخدام Command Pormpt .
+                    سنتعلم في هذه الفقرة كل الأوامر الأساسية التي تحتاجها لبدء إستخدام Command Pormpt . <br /><br />
+                    بنية الأوامر (structure):
+                    <CodeCommand> command [options] [arguments]</CodeCommand>
+                    <ul>
+                        <li><b>command :</b> الأمر التنفيذي أو الأمر الداخلي (مثل: dir, copy, ping, ipconfig).</li>
+                        <li><b>[options] :</b> تُسمى أيضًا switches  أو flags ؛ تعدل طريقة عمل الأمر. عادةً تبدأ بـ / (مثل: <bdi>/?</bdi>, <bdi>/S</bdi>) أو - (مثل: <bdi>-h</bdi>).</li>
+                        <li><b>[arguments] :</b> الوسائط مثل المسارات، أسماء المضيفين، أو المعاملات التي ينفذ عليها الأمر.</li>
+                    </ul>
                 </p>
-            </article>          
+            </article>    
+             
             <article className="mt-5">
                 <h2 className="title-h2"  id="Create_Folder">2 - إنشاء مجلد </h2>
                 <CodeCommand>mkdir folder_name</CodeCommand>

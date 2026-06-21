@@ -3,7 +3,7 @@ import React, { useRef  , useEffect } from 'react';
 import "./Header.sass";
 import { useSelector, useDispatch } from 'react-redux';
 import {
-    useCustomHtmlList , useCustomCssList , useCustomJsList , useCustomSqlList , useCustomPythonList ,  
+    useCustomHtmlList , useCustomCssList , useCustomJsList , useCustomTypescriptList ,  useCustomSqlList , useCustomPythonList ,  
     useCustomDjangoList ,useCustomDjangoRestList, useCustomPhpList , useCustomReactList , useCustomLaravelList , 
     useCustomGitList , useCustomCmdList ,  useCustomScroolTo0 , 
 } from "../../custom/pathCustoms";
@@ -34,6 +34,7 @@ export default function Header(props){
     const [html_list] = useCustomHtmlList();
     const [css_list]  =  useCustomCssList();
     const [js_matrix] = useCustomJsList();
+    //const [useCustomTypescriptList] = useCustomTypescriptList();
     const [sql_list] = useCustomSqlList();
     const [python_list] = useCustomPythonList(); 
     const [django_matrix] = useCustomDjangoList();
@@ -256,8 +257,8 @@ export default function Header(props){
 
 
     const programing = [
-        {name:"HTML",link:"html"}, {name:"CSS",link:"css"}, {name:"JAVASCRIPT",link:"js"}, {name:"REACT.js",link:"react"}, 
-        {name:"MYSQL",link:"mysql"}, {name:"PYTHON",link:"python"}, {name:"DJANGO",link:"django"},
+        {name:"HTML",link:"html"}, {name:"CSS",link:"css"}, {name:"JAVASCRIPT",link:"js"},{name:"TypeScript",link:"typescript"}, 
+        {name:"REACT.js",link:"react"}, {name:"MYSQL",link:"mysql"}, {name:"PYTHON",link:"python"}, {name:"DJANGO",link:"django"},
         {name:"DJANGO REST FRAMEWORK",link:"django-rest-framework"}, {name:"PHP",link:"php"}, {name:"LARAVEL" , link:"laravel"},
         {name:"Git" , link:"git"} , {name:"CMD", link:"powerShell"}
     ];
