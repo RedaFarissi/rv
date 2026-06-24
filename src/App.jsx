@@ -1,4 +1,4 @@
-import { BrowserRouter as Router , Routes, Route} from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import { 
     Header , Home , Html , Css , Js , Typescript , React , Mysql , Python , Django , DjangoRestFramework , Cmd ,  
     Git , Php , Laravel , Login ,Search , CreateAccount , PayPalPayment , MyPage , ReportAnErrorUser , AllQuestion , 
@@ -6,6 +6,9 @@ import {
 } from './components/path';
 import {  useCustomScrollToHash , useCustomResizeAside , useCustomClickMenuHeader } from "./custom/pathCustoms";
 import "./App.sass";
+
+// import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 
 
 function App() {
