@@ -1,9 +1,9 @@
 # 🚀 Reda Eskouni Portfolio
-[![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen?style=for-the-badge)](https://redafarissi.github.io/)  
+[![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen?style=for-the-badge)](https://redafarissi.github.io/login)  
 
 ## 🔗 Live Demo:
 
-➡️ [https://redafarissi.github.io/](https://redafarissi.github.io/) ⬅️ 
+➡️ [https://redafarissi.github.io/](https://redafarissi.github.io/login) ⬅️ 
 
 <img src="screenshot/home.png" />
 <img src="screenshot/html.png" />
