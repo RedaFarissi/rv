@@ -1,3 +1,13 @@
+# 🚀 Reda Eskouni Portfolio
+[![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen?style=for-the-badge)](https://redafarissi.github.io/)  
+
+## 🔗 Live Demo:
+
+➡️ [https://redafarissi.github.io/](https://redafarissi.github.io/) ⬅️ 
+
+<img src="screenshot/home.png" />
+<img src="screenshot/html.png" />
+
 # RV - Programming Learning Platform
 
 RV is a web platform designed for developers and programming learners. It provides programming tutorials, coding questions, search functionality, and a community-driven Q&A system.
