@@ -3,7 +3,7 @@
 
 ## 🔗 Live Demo:
 
-➡️ [https://redafarissi.github.io/](https://redafarissi.github.io/rv/) ⬅️ 
+➡️ [https://redafarissi.github.io/rv/](https://redafarissi.github.io/rv/) ⬅️ 
 
 <img src="screenshot/home.png" />
 <img src="screenshot/html.png" />
